@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-07-18T00:00:00+00:00",
+  "week": 9,
+  "year": 2025,
+  "games": [
+    {
+      "game_id": 401520001,
+      "week": 9,
+      "start_date": "2025-10-25T19:30:00.000Z",
+      "home_team": "Georgia",
+      "away_team": "Alabama",
+      "predicted_score": "Georgia 31 - Alabama 24",
+      "predicted_margin": 6.9,
+      "predicted_total": 54.6,
+      "home_win_prob": "72.4%",
+      "market_spread": -4.5,
+      "market_total": 52.5,
+      "blurb": "Model leans 2.4 pts toward Georgia vs. the market spread; leans over the 52.5 total by 2.1 pts."
+    },
+    {
+      "game_id": 401520002,
+      "week": 9,
+      "start_date": "2025-10-25T16:00:00.000Z",
+      "home_team": "Iowa",
+      "away_team": "Wisconsin",
+      "predicted_score": "Iowa 34 - Wisconsin 16",
+      "predicted_margin": 18.6,
+      "predicted_total": 49.8,
+      "home_win_prob": "87.3%",
+      "market_spread": -13.0,
+      "market_total": 47.0,
+      "blurb": "Model leans 5.6 pts toward Iowa vs. the market spread; close to the posted total."
+    },
+    {
+      "game_id": 401520003,
+      "week": 9,
+      "start_date": "2025-10-25T20:00:00.000Z",
+      "home_team": "Oregon",
+      "away_team": "Penn State",
+      "predicted_score": "Oregon 29 - Penn State 26",
+      "predicted_margin": 2.9,
+      "predicted_total": 55.1,
+      "home_win_prob": "58.9%",
+      "market_spread": -3.0,
+      "market_total": 51.5,
+      "blurb": "Model is close to the market spread; leans over the 51.5 total by 3.6 pts."
+    }
+  ]
+}

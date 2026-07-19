@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-07-18T00:00:00+00:00",
+  "year": 2025,
+  "teams": [
+    {"rank": 1, "team": "Georgia", "power_rating": 24.8, "off_success": 0.512, "def_success": 0.318, "elo": 2041, "talent": 921.4},
+    {"rank": 2, "team": "Ohio State", "power_rating": 23.1, "off_success": 0.498, "def_success": 0.331, "elo": 2018, "talent": 934.2},
+    {"rank": 3, "team": "Oregon", "power_rating": 20.4, "off_success": 0.487, "def_success": 0.352, "elo": 1987, "talent": 872.6},
+    {"rank": 4, "team": "Alabama", "power_rating": 18.9, "off_success": 0.471, "def_success": 0.347, "elo": 1962, "talent": 905.1},
+    {"rank": 5, "team": "Texas", "power_rating": 17.2, "off_success": 0.463, "def_success": 0.359, "elo": 1944, "talent": 888.9},
+    {"rank": 6, "team": "Penn State", "power_rating": 15.6, "off_success": 0.455, "def_success": 0.361, "elo": 1921, "talent": 843.0},
+    {"rank": 7, "team": "Notre Dame", "power_rating": 14.3, "off_success": 0.449, "def_success": 0.366, "elo": 1908, "talent": 861.5},
+    {"rank": 8, "team": "Iowa", "power_rating": 6.1, "off_success": 0.389, "def_success": 0.372, "elo": 1811, "talent": 741.2},
+    {"rank": 9, "team": "Wisconsin", "power_rating": 3.4, "off_success": 0.371, "def_success": 0.388, "elo": 1789, "talent": 722.8}
+  ]
+}

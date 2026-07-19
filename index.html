@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Position | CFB Power Ratings &amp; Matchup Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --field:#0f2818;
+    --field-dark:#0a1c10;
+    --chalk:#f4f0e1;
+    --chalk-dim:#e8e2cd;
+    --ink:#141a12;
+    --gold:#e0a13d;
+    --gold-dim:#a97a2c;
+    --line:#split;
+    --hash:#2c4a34;
+    --muted:#8a9a8b;
+    --good:#5f9e6f;
+    --bad:#b5573f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 120px),
+      linear-gradient(180deg, var(--field) 0%, var(--field-dark) 100%);
+    color:var(--chalk);
+    font-family:'Inter', system-ui, sans-serif;
+    min-height:100vh;
+    padding-bottom:60px;
+  }
+
+  header{
+    padding:36px 24px 24px;
+    max-width:1080px;
+    margin:0 auto;
+    border-bottom:1px solid var(--hash);
+  }
+  .brand{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .brand h1{
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    font-size:2.4rem;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--chalk);
+  }
+  .brand h1 span{color:var(--gold);}
+  .brand .tag{
+    font-size:0.8rem;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .meta-row{
+    margin-top:14px;
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+  }
+  .meta-row b{color:var(--gold);}
+
+  nav{
+    max-width:1080px;
+    margin:0 auto;
+    padding:18px 24px 0;
+    display:flex;
+    gap:8px;
+  }
+  nav button{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-size:0.85rem;
+    font-weight:500;
+    background:transparent;
+    border:1px solid var(--hash);
+    color:var(--muted);
+    padding:9px 20px;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  nav button.active{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:var(--ink);
+  }
+  nav button:not(.active):hover{
+    border-color:var(--gold-dim);
+    color:var(--chalk);
+  }
+
+  main{max-width:1080px; margin:0 auto; padding:28px 24px;}
+  section{display:none;}
+  section.active{display:block;}
+
+  /* --- Rankings table --- */
+  .rank-table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.85rem;
+    background:rgba(244,240,225,0.03);
+  }
+  .rank-table thead th{
+    text-align:left;
+    font-family:'Oswald', sans-serif;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    font-size:0.7rem;
+    color:var(--gold);
+    padding:10px 12px;
+    border-bottom:2px solid var(--gold-dim);
+  }
+  .rank-table td{
+    padding:9px 12px;
+    border-bottom:1px solid rgba(138,154,139,0.15);
+  }
+  .rank-table tbody tr:hover{background:rgba(224,161,61,0.07);}
+  .rank-table td.num{text-align:right; font-variant-numeric:tabular-nums;}
+  .rank-table td.rank{color:var(--gold); font-weight:700; width:36px;}
+  .rank-table td.team{font-family:'Oswald', sans-serif; letter-spacing:0.2px; color:var(--chalk); font-size:0.92rem;}
+  .rank-table td.rating{font-weight:700; color:var(--chalk);}
+
+  /* --- Matchup cards --- */
+  .matchup-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
+    gap:18px;
+  }
+  .card{
+    background:var(--chalk);
+    color:var(--ink);
+    border-radius:2px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  }
+  .card-head{
+    background:var(--field-dark);
+    color:var(--chalk);
+    padding:14px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:'Oswald', sans-serif;
+  }
+  .card-head .teams{font-size:1.05rem; text-transform:uppercase; letter-spacing:0.3px;}
+  .card-head .teams .at{color:var(--muted); font-size:0.8rem; margin:0 4px;}
+  .card-head .wk{font-family:'JetBrains Mono', monospace; font-size:0.68rem; color:var(--gold);}
+
+  .card-score{
+    padding:16px 18px 6px;
+    font-family:'Oswald', sans-serif;
+    font-size:1.3rem;
+    font-weight:600;
+    border-bottom:1px dashed var(--hash);
+  }
+  .card-score .prob{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.68rem;
+    color:var(--gold-dim);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-top:4px;
+  }
+
+  /* tale-of-the-tape axis: model vs market on one line */
+  .tape{padding:14px 18px; border-bottom:1px dashed var(--hash);}
+  .tape-row{margin-bottom:12px;}
+  .tape-row:last-child{margin-bottom:0;}
+  .tape-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.65rem;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:#5c6b5d;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:5px;
+  }
+  .tape-axis{
+    position:relative;
+    height:6px;
+    background:var(--chalk-dim);
+    border-radius:3px;
+  }
+  .tape-tick{
+    position:absolute;
+    top:-4px;
+    width:2px;
+    height:14px;
+  }
+  .tape-tick.market{background:#8a9a8b;}
+  .tape-tick.model{background:var(--bad);}
+  .tape-tick.model.over{background:var(--good);}
+  .tape-legend{
+    display:flex;
+    gap:14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.6rem;
+    color:#5c6b5d;
+    margin-top:6px;
+  }
+  .tape-legend span::before{
+    content:"■ ";
+  }
+  .tape-legend .m::before{color:#8a9a8b;}
+  .tape-legend .p::before{color:var(--bad);}
+
+  .card-blurb{
+    padding:14px 18px 16px;
+    font-size:0.82rem;
+    line-height:1.5;
+    color:#3a3f37;
+  }
+
+  .empty{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--muted);
+    font-size:0.85rem;
+    padding:40px 0;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <h1>FIELD <span>POSITION</span></h1>
+    <div class="tag">power ratings &amp; matchup model — for research &amp; entertainment purposes only</div>
+  </div>
+  <div class="meta-row" id="metaRow">
+    <span>LOADING…</span>
+  </div>
+</header>
+
+<nav>
+  <button id="navRankings" class="active">Power Ratings</button>
+  <button id="navMatchups">Matchup Cards</button>
+</nav>
+
+<main>
+  <section id="rankingsSection" class="active">
+    <table class="rank-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team</th>
+          <th style="text-align:right">Rating</th>
+          <th style="text-align:right">Off</th>
+          <th style="text-align:right">Def</th>
+          <th style="text-align:right">Elo</th>
+          <th style="text-align:right">Talent</th>
+        </tr>
+      </thead>
+      <tbody id="rankingsBody">
+        <tr><td colspan="7" class="empty">Loading rankings…</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="matchupsSection">
+    <div class="matchup-grid" id="matchupGrid">
+      <div class="empty">Loading matchups…</div>
+    </div>
+  </section>
+</main>
+
+<script>
+async function loadJSON(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error('failed to load ' + path);
+  return res.json();
+}
+
+function fmtDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
+}
+
+function renderRankings(data){
+  const body = document.getElementById('rankingsBody');
+  body.innerHTML = '';
+  data.teams.forEach(t => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="rank">${t.rank}</td>
+      <td class="team">${t.team}</td>
+      <td class="num rating">${t.power_rating > 0 ? '+' : ''}${t.power_rating.toFixed(1)}</td>
+      <td class="num">${t.off_success.toFixed(3)}</td>
+      <td class="num">${t.def_success.toFixed(3)}</td>
+      <td class="num">${Math.round(t.elo)}</td>
+      <td class="num">${t.talent.toFixed(0)}</td>
+    `;
+    body.appendChild(tr);
+  });
+}
+
+function tapeRow(label, marketVal, modelVal, unit){
+  // scale to a fixed axis width around the pair of values
+  const vals = [marketVal, modelVal].filter(v => v !== null && v !== undefined);
+  if(vals.length === 0){
+    return `<div class="tape-row"><div class="tape-label"><span>${label}</span><span>n/a</span></div></div>`;
+  }
+  const lo = Math.min(...vals) - 4;
+  const hi = Math.max(...vals) + 4;
+  const pct = v => ((v - lo) / (hi - lo)) * 100;
+
+  let ticks = '';
+  if(marketVal !== null && marketVal !== undefined){
+    ticks += `<div class="tape-tick market" style="left:${pct(marketVal)}%"></div>`;
+  }
+  if(modelVal !== null && modelVal !== undefined){
+    const overClass = (marketVal !== undefined && modelVal > marketVal) ? 'over' : '';
+    ticks += `<div class="tape-tick model ${overClass}" style="left:${pct(modelVal)}%"></div>`;
+  }
+
+  return `
+    <div class="tape-row">
+      <div class="tape-label"><span>${label}</span><span>mkt ${marketVal ?? '—'} / model ${modelVal.toFixed(1)}${unit}</span></div>
+      <div class="tape-axis">${ticks}</div>
+    </div>
+  `;
+}
+
+function renderMatchups(data){
+  const grid = document.getElementById('matchupGrid');
+  grid.innerHTML = '';
+  if(!data.games.length){
+    grid.innerHTML = '<div class="empty">No upcoming games in the current export.</div>';
+    return;
+  }
+  data.games.forEach(g => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    const modelSpread = -g.predicted_margin; // convert margin to spread convention
+    card.innerHTML = `
+      <div class="card-head">
+        <div class="teams">${g.away_team}<span class="at">@</span>${g.home_team}</div>
+        <div class="wk">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
+      </div>
+      <div class="card-score">
+        ${g.predicted_score}
+        <span class="prob">${g.home_team} win prob ${g.home_win_prob}</span>
+      </div>
+      <div class="tape">
+        ${tapeRow('Spread', g.market_spread, modelSpread, '')}
+        ${tapeRow('Total', g.market_total, g.predicted_total, '')}
+        <div class="tape-legend"><span class="m">market</span><span class="p">model</span></div>
+      </div>
+      <div class="card-blurb">${g.blurb}</div>
+    `;
+    grid.appendChild(card);
+  });
+
+  document.getElementById('metaRow').innerHTML =
+    `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
+}
+
+async function init(){
+  try{
+    const [rankings, matchups] = await Promise.all([
+      loadJSON('rankings.json'),
+      loadJSON('matchups.json')
+    ]);
+    renderRankings(rankings);
+    renderMatchups(matchups);
+  }catch(e){
+    document.getElementById('rankingsBody').innerHTML = `<tr><td colspan="7" class="empty">Could not load data: ${e.message}</td></tr>`;
+    document.getElementById('matchupGrid').innerHTML = `<div class="empty">Could not load data: ${e.message}</div>`;
+  }
+}
+
+document.getElementById('navRankings').addEventListener('click', () => {
+  document.getElementById('navRankings').classList.add('active');
+  document.getElementById('navMatchups').classList.remove('active');
+  document.getElementById('rankingsSection').classList.add('active');
+  document.getElementById('matchupsSection').classList.remove('active');
+});
+document.getElementById('navMatchups').addEventListener('click', () => {
+  document.getElementById('navMatchups').classList.add('active');
+  document.getElementById('navRankings').classList.remove('active');
+  document.getElementById('matchupsSection').classList.add('active');
+  document.getElementById('rankingsSection').classList.remove('active');
+});
+
+init();
+</script>
+
+</body>
+</html>
