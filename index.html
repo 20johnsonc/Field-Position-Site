@@ -5,234 +5,350 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Field Position | CFB Power Ratings &amp; Matchup Model</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --field:#0f2818;
-    --field-dark:#0a1c10;
-    --chalk:#f4f0e1;
-    --chalk-dim:#e8e2cd;
-    --ink:#141a12;
-    --gold:#e0a13d;
-    --gold-dim:#a97a2c;
-    --line:#split;
-    --hash:#2c4a34;
-    --muted:#8a9a8b;
-    --good:#5f9e6f;
-    --bad:#b5573f;
+  :root {
+    /* Base Index Colors */
+    --field: #0f2818;
+    --field-dark: #0a1c10;
+    --chalk: #f4f0e1;
+    --chalk-dim: #e8e2cd;
+    --ink: #141a12;
+    --gold: #e0a13d;
+    --gold-dim: #a97a2c;
+    --hash: #2c4a34;
+    --muted: #8a9a8b;
+    --good: #5f9e6f;
+    --bad: #b5573f;
+    
+    /* Matchup Card Specific Colors */
+    --field-line: #1B3A28;
+    --chalk-line: #E1D9BE;
+    --ink-dim: #6B6656;
+    --model: #B8452E;
+    --market: #5E6F63;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
     background:
       repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 120px),
       linear-gradient(180deg, var(--field) 0%, var(--field-dark) 100%);
-    color:var(--chalk);
-    font-family:'Inter', system-ui, sans-serif;
-    min-height:100vh;
-    padding-bottom:60px;
+    color: var(--chalk);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 60px;
   }
 
-  header{
-    padding:36px 24px 24px;
-    max-width:1080px;
-    margin:0 auto;
-    border-bottom:1px solid var(--hash);
+  /* --- Header & Nav --- */
+  header {
+    padding: 36px 24px 24px;
+    max-width: 1180px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--field-line);
   }
-  .brand{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    flex-wrap:wrap;
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
   }
-  .brand h1{
-    font-family:'Oswald', sans-serif;
-    font-weight:700;
-    font-size:2.4rem;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    color:var(--chalk);
+  .brand h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--chalk);
   }
-  .brand h1 span{color:var(--gold);}
-  .brand .tag{
-    font-size:0.8rem;
-    color:var(--muted);
-    letter-spacing:0.3px;
+  .brand h1 span { color: var(--gold); }
+  .brand .tag {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.3px;
   }
-  .meta-row{
-    margin-top:14px;
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:0.5px;
+  .meta-row {
+    margin-top: 14px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
-  .meta-row b{color:var(--gold);}
+  .meta-row b { color: var(--gold); }
 
-  nav{
-    max-width:1080px;
-    margin:0 auto;
-    padding:18px 24px 0;
-    display:flex;
-    gap:8px;
+  nav {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 24px 0;
+    display: flex;
+    gap: 8px;
   }
-  nav button{
-    font-family:'Oswald', sans-serif;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    font-size:0.85rem;
-    font-weight:500;
-    background:transparent;
-    border:1px solid var(--hash);
-    color:var(--muted);
-    padding:9px 20px;
-    cursor:pointer;
-    transition:all .15s ease;
+  nav button {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: transparent;
+    border: 1px solid var(--hash);
+    color: var(--muted);
+    padding: 9px 20px;
+    cursor: pointer;
+    transition: all .15s ease;
   }
-  nav button.active{
-    background:var(--gold);
-    border-color:var(--gold);
-    color:var(--ink);
+  nav button.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
   }
-  nav button:not(.active):hover{
-    border-color:var(--gold-dim);
-    color:var(--chalk);
-  }
-
-  main{max-width:1080px; margin:0 auto; padding:28px 24px;}
-  section{display:none;}
-  section.active{display:block;}
-
-  /* --- Rankings table --- */
-  .rank-table{
-    width:100%;
-    border-collapse:collapse;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.85rem;
-    background:rgba(244,240,225,0.03);
-  }
-  .rank-table thead th{
-    text-align:left;
-    font-family:'Oswald', sans-serif;
-    font-weight:500;
-    text-transform:uppercase;
-    letter-spacing:0.6px;
-    font-size:0.7rem;
-    color:var(--gold);
-    padding:10px 12px;
-    border-bottom:2px solid var(--gold-dim);
-  }
-  .rank-table td{
-    padding:9px 12px;
-    border-bottom:1px solid rgba(138,154,139,0.15);
-  }
-  .rank-table tbody tr:hover{background:rgba(224,161,61,0.07);}
-  .rank-table td.num{text-align:right; font-variant-numeric:tabular-nums;}
-  .rank-table td.rank{color:var(--gold); font-weight:700; width:36px;}
-  .rank-table td.team{font-family:'Oswald', sans-serif; letter-spacing:0.2px; color:var(--chalk); font-size:0.92rem;}
-  .rank-table td.rating{font-weight:700; color:var(--chalk);}
-
-  /* --- Matchup cards --- */
-  .matchup-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
-    gap:18px;
-  }
-  .card{
-    background:var(--chalk);
-    color:var(--ink);
-    border-radius:2px;
-    overflow:hidden;
-    box-shadow:0 8px 24px rgba(0,0,0,0.35);
-  }
-  .card-head{
-    background:var(--field-dark);
-    color:var(--chalk);
-    padding:14px 18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-family:'Oswald', sans-serif;
-  }
-  .card-head .teams{font-size:1.05rem; text-transform:uppercase; letter-spacing:0.3px;}
-  .card-head .teams .at{color:var(--muted); font-size:0.8rem; margin:0 4px;}
-  .card-head .wk{font-family:'JetBrains Mono', monospace; font-size:0.68rem; color:var(--gold);}
-
-  .card-score{
-    padding:16px 18px 6px;
-    font-family:'Oswald', sans-serif;
-    font-size:1.3rem;
-    font-weight:600;
-    border-bottom:1px dashed var(--hash);
-  }
-  .card-score .prob{
-    display:block;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.68rem;
-    color:var(--gold-dim);
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    margin-top:4px;
+  nav button:not(.active):hover {
+    border-color: var(--gold-dim);
+    color: var(--chalk);
   }
 
-  /* tale-of-the-tape axis: model vs market on one line */
-  .tape{padding:14px 18px; border-bottom:1px dashed var(--hash);}
-  .tape-row{margin-bottom:12px;}
-  .tape-row:last-child{margin-bottom:0;}
-  .tape-label{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.65rem;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:#5c6b5d;
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:5px;
-  }
-  .tape-axis{
-    position:relative;
-    height:6px;
-    background:var(--chalk-dim);
-    border-radius:3px;
-  }
-  .tape-tick{
-    position:absolute;
-    top:-4px;
-    width:2px;
-    height:14px;
-  }
-  .tape-tick.market{background:#8a9a8b;}
-  .tape-tick.model{background:var(--bad);}
-  .tape-tick.model.over{background:var(--good);}
-  .tape-legend{
-    display:flex;
-    gap:14px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.6rem;
-    color:#5c6b5d;
-    margin-top:6px;
-  }
-  .tape-legend span::before{
-    content:"■ ";
-  }
-  .tape-legend .m::before{color:#8a9a8b;}
-  .tape-legend .p::before{color:var(--bad);}
+  main { max-width: 1180px; margin: 0 auto; padding: 28px 24px; }
+  section { display: none; }
+  section.active { display: block; }
 
-  .card-blurb{
-    padding:14px 18px 16px;
-    font-size:0.82rem;
-    line-height:1.5;
-    color:#3a3f37;
+  /* --- Rankings Table --- */
+  .rank-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    background: rgba(244,240,225,0.03);
+  }
+  .rank-table thead th {
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-size: 0.7rem;
+    color: var(--gold);
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--gold-dim);
+  }
+  .rank-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid rgba(138,154,139,0.15);
+  }
+  .rank-table tbody tr:hover { background: rgba(224,161,61,0.07); }
+  .rank-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .rank-table td.rank { color: var(--gold); font-weight: 700; width: 36px; }
+  .rank-table td.team { font-family: 'Oswald', sans-serif; letter-spacing: 0.2px; color: var(--chalk); font-size: 0.92rem; }
+  .rank-table td.rating { font-weight: 700; color: var(--chalk); }
+
+  /* --- Matchup Cards (Merged Design) --- */
+  .matchup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 28px;
+  }
+  @media (max-width: 860px) {
+    .matchup-grid { grid-template-columns: 1fr; }
   }
 
-  .empty{
-    font-family:'JetBrains Mono', monospace;
-    color:var(--muted);
-    font-size:0.85rem;
-    padding:40px 0;
-    text-align:center;
+  .card {
+    background: var(--chalk);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px -18px rgba(0,0,0,0.55);
+  }
+  .card-head {
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 46px),
+      var(--field);
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .matchup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .badge {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    flex: none;
+  }
+  .badge.away {
+    background: transparent;
+    border: 1.5px solid rgba(243,238,221,0.45);
+    color: var(--chalk);
+  }
+  .badge.home {
+    background: var(--gold);
+    color: var(--field);
+    border: 1.5px solid var(--gold);
+  }
+  .matchup-names {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: var(--chalk);
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+  .matchup-names .at {
+    color: var(--gold);
+    font-weight: 400;
+    margin: 0 5px;
+    font-size: 12px;
+  }
+  .week-tag {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .card-body { padding: 22px 22px 6px; }
+
+  .score-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .score-line {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+
+  .prob-ring {
+    --pct: 50;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    flex: none;
+    background: conic-gradient(var(--gold) calc(var(--pct)*1%), var(--chalk-line) 0);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .prob-ring::before {
+    content: '';
+    position: absolute;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--chalk);
+  }
+  .prob-ring span {
+    position: relative;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--ink);
+  }
+
+  .prob-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    margin: -10px 0 18px;
+  }
+  .prob-caption b { color: var(--model); }
+
+  /* ---- stat gauge ---- */
+  .stat { margin: 20px 0 26px; }
+  .stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+  }
+  .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .stat-value b { color: var(--model); }
+  .stat-value .na { color: var(--market); }
+
+  .gauge { position: relative; height: 34px; margin: 0 4px 4px; }
+  .gauge-track {
+    position: absolute; top: 14px; left: 0; right: 0;
+    height: 4px; background: var(--chalk-line); border-radius: 2px;
+  }
+  .gauge-fill {
+    position: absolute; top: 14px; height: 4px;
+    background: var(--model); border-radius: 2px;
+    opacity: 0.85;
+  }
+  .gauge-tick {
+    position: absolute; top: 10px; width: 1px; height: 12px;
+    background: var(--chalk-line);
+  }
+  .gauge-tick.zero { background: var(--ink-dim); width: 1.5px; }
+  .gauge-ticklabel {
+    position: absolute; top: 24px; transform: translateX(-50%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px; color: var(--ink-dim);
+  }
+  .gauge-pin {
+    position: absolute; top: -2px; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center;
+    gap: 2px;
+  }
+  .gauge-pin .flag {
+    background: var(--model);
+    color: var(--chalk);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .gauge-pin .stem {
+    width: 2px; height: 8px; background: var(--model);
+  }
+
+  /* ---- verdict ---- */
+  .verdict {
+    border-left: 3px solid var(--gold);
+    padding: 10px 14px;
+    margin: 4px 0 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    color: var(--ink);
+    background: rgba(217,164,65,0.08);
+  }
+  .verdict b { font-weight: 600; }
+
+  .empty {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 40px 0;
+    text-align: center;
+    grid-column: 1 / -1;
   }
 </style>
 </head>
@@ -311,29 +427,39 @@ function renderRankings(data){
   });
 }
 
-function tapeRow(label, marketVal, modelVal, unit){
-  // scale to a fixed axis width around the pair of values
-  const vals = [marketVal, modelVal].filter(v => v !== null && v !== undefined);
-  if(vals.length === 0){
-    return `<div class="tape-row"><div class="tape-label"><span>${label}</span><span>n/a</span></div></div>`;
-  }
-  const lo = Math.min(...vals) - 4;
-  const hi = Math.max(...vals) + 4;
-  const pct = v => ((v - lo) / (hi - lo)) * 100;
+function pct(val, min, max) { 
+  return ((val - min) / (max - min)) * 100; 
+}
 
-  let ticks = '';
-  if(marketVal !== null && marketVal !== undefined){
-    ticks += `<div class="tape-tick market" style="left:${pct(marketVal)}%"></div>`;
-  }
-  if(modelVal !== null && modelVal !== undefined){
-    const overClass = (marketVal !== undefined && modelVal > marketVal) ? 'over' : '';
-    ticks += `<div class="tape-tick model ${overClass}" style="left:${pct(modelVal)}%"></div>`;
-  }
+function gauge({value, min, max, favorTag, unit}) {
+  const zeroPct = unit === "spread" ? pct(0, min, max) : null;
+  const valPct = pct(value, min, max);
+  const isSpread = unit === "spread";
+  const fillLeft = isSpread ? Math.min(zeroPct, valPct) : 0;
+  const fillWidth = isSpread ? Math.abs(valPct - zeroPct) : valPct;
+
+  const ticks = isSpread
+    ? [{p:0,l:min}, {p:50,l:"EVEN"}, {p:100,l:"+"+max}]
+    : [{p:0,l:min}, {p:50,l:(min+max)/2}, {p:100,l:max}];
+
+  const tickHtml = ticks.map(t => `
+    <div class="gauge-tick ${t.l === 'EVEN' ? 'zero' : ''}" style="left:${t.p}%"></div>
+    <div class="gauge-ticklabel" style="left:${t.p}%">${t.l}</div>
+  `).join("");
+
+  const flagLabel = isSpread
+    ? `${favorTag} ${Math.abs(value).toFixed(1)}`
+    : `${value.toFixed(1)}`;
 
   return `
-    <div class="tape-row">
-      <div class="tape-label"><span>${label}</span><span>mkt ${marketVal ?? '—'} / model ${modelVal.toFixed(1)}${unit}</span></div>
-      <div class="tape-axis">${ticks}</div>
+    <div class="gauge">
+      <div class="gauge-track"></div>
+      <div class="gauge-fill" style="left:${fillLeft}%; width:${fillWidth}%;"></div>
+      ${tickHtml}
+      <div class="gauge-pin" style="left:${valPct}%">
+        <div class="flag">${flagLabel}</div>
+        <div class="stem"></div>
+      </div>
     </div>
   `;
 }
@@ -345,25 +471,57 @@ function renderMatchups(data){
     grid.innerHTML = '<div class="empty">No upcoming games in the current export.</div>';
     return;
   }
+  
   data.games.forEach(g => {
     const card = document.createElement('div');
     card.className = 'card';
+    
     const modelSpread = -g.predicted_margin; // convert margin to spread convention
+    const awayTag = g.away_team ? g.away_team.substring(0, 3).toUpperCase() : 'AWY';
+    const homeTag = g.home_team ? g.home_team.substring(0, 3).toUpperCase() : 'HOM';
+    const winProbNum = parseFloat(g.home_win_prob) || 50;
+    
+    const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
+    
+    // Formatting Market Text Display
+    const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
+    const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
+
     card.innerHTML = `
       <div class="card-head">
-        <div class="teams">${g.away_team}<span class="at">@</span>${g.home_team}</div>
-        <div class="wk">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
+        <div class="matchup">
+          <div class="badge away">${awayTag}</div>
+          <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
+        </div>
+        <div class="week-tag">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
       </div>
-      <div class="card-score">
-        ${g.predicted_score}
-        <span class="prob">${g.home_team} win prob ${g.home_win_prob}</span>
+      <div class="card-body">
+        <div class="score-row">
+          <div class="score-line">
+            <span>${g.predicted_score}</span>
+          </div>
+          <div class="prob-ring" style="--pct:${winProbNum}"><span>${winProbNum.toFixed(0)}%</span></div>
+        </div>
+        <div class="prob-caption"><b>${g.home_team.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>
+
+        <div class="stat">
+          <div class="stat-top">
+            <span class="stat-label">Spread</span>
+            <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
+          </div>
+          ${gauge({value: modelSpread, min: -35, max: 35, favorTag: spreadFavor, unit: "spread"})}
+        </div>
+
+        <div class="stat">
+          <div class="stat-top">
+            <span class="stat-label">Total</span>
+            <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${g.predicted_total.toFixed(1)}</b></span>
+          </div>
+          ${gauge({value: g.predicted_total, min: 30, max: 70, unit: "total"})}
+        </div>
+
+        <div class="verdict"><b>${g.blurb || `Model favors ${spreadFavor} by ${Math.abs(modelSpread).toFixed(1)}`}</b></div>
       </div>
-      <div class="tape">
-        ${tapeRow('Spread', g.market_spread, modelSpread, '')}
-        ${tapeRow('Total', g.market_total, g.predicted_total, '')}
-        <div class="tape-legend"><span class="m">market</span><span class="p">model</span></div>
-      </div>
-      <div class="card-blurb">${g.blurb}</div>
     `;
     grid.appendChild(card);
   });
@@ -373,14 +531,14 @@ function renderMatchups(data){
 }
 
 async function init(){
-  try{
+  try {
     const [rankings, matchups] = await Promise.all([
       loadJSON('rankings.json'),
       loadJSON('matchups.json')
     ]);
     renderRankings(rankings);
     renderMatchups(matchups);
-  }catch(e){
+  } catch(e) {
     document.getElementById('rankingsBody').innerHTML = `<tr><td colspan="7" class="empty">Could not load data: ${e.message}</td></tr>`;
     document.getElementById('matchupGrid').innerHTML = `<div class="empty">Could not load data: ${e.message}</div>`;
   }
