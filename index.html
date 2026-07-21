@@ -374,13 +374,13 @@
     <table class="rank-table">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Team</th>
-          <th style="text-align:right">Rating</th>
-          <th style="text-align:right">Off</th>
-          <th style="text-align:right">Def</th>
-          <th style="text-align:right">Elo</th>
-          <th style="text-align:right">Talent</th>
+          <th onclick="sortTable('rank')" style="cursor: pointer;"># ⇕</th>
+          <th onclick="sortTable('team')" style="cursor: pointer;">Team ⇕</th>
+          <th onclick="sortTable('power_rating')" style="text-align: right; cursor: pointer;">Rating ⇕</th>
+          <th onclick="sortTable('adj_off')" style="text-align: right; cursor: pointer;">Off ⇕</th>
+          <th onclick="sortTable('adj_def')" style="text-align: right; cursor: pointer;">Def ⇕</th>
+          <th onclick="sortTable('elo')" style="text-align: right; cursor: pointer;">Elo ⇕</th>
+          <th onclick="sortTable('talent')" style="text-align: right; cursor: pointer;">Talent ⇕</th>
         </tr>
       </thead>
       <tbody id="rankingsBody">
@@ -397,6 +397,10 @@
 </main>
 
 <script>
+let currentSortKey = 'rank';
+let sortAscending = true;
+let globalRankingsData = [];
+
 async function loadJSON(path){
   const res = await fetch(path);
   if(!res.ok) throw new Error('failed to load ' + path);
@@ -410,21 +414,51 @@ function fmtDate(iso){
 }
 
 function renderRankings(data){
+  // Store data array if passed during initial fetch
+  if (data && data.teams) {
+    globalRankingsData = data.teams;
+  }
+
   const body = document.getElementById('rankingsBody');
   body.innerHTML = '';
-  data.teams.forEach(t => {
+
+  globalRankingsData.forEach(t => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td class="rank">${t.rank}</td>
       <td class="team">${t.team}</td>
       <td class="num rating">${t.power_rating > 0 ? '+' : ''}${t.power_rating.toFixed(1)}</td>
-      <td class="num">${t.off_success.toFixed(3)}</td>
-      <td class="num">${t.def_success.toFixed(3)}</td>
+      <td class="num">${t.adj_off.toFixed(3)}</td>
+      <td class="num">${t.adj_def.toFixed(3)}</td>
       <td class="num">${Math.round(t.elo)}</td>
       <td class="num">${t.talent.toFixed(0)}</td>
     `;
     body.appendChild(tr);
   });
+}
+
+function sortTable(key) {
+  if (currentSortKey === key) {
+    sortAscending = !sortAscending;
+  } else {
+    currentSortKey = key;
+    sortAscending = true;
+  }
+
+  globalRankingsData.sort((a, b) => {
+    let valA = a[key];
+    let valB = b[key];
+
+    if (typeof valA === 'string') {
+      return sortAscending 
+        ? valA.localeCompare(valB) 
+        : valB.localeCompare(valA);
+    }
+
+    return sortAscending ? valA - valB : valB - valA;
+  });
+
+  renderRankings();
 }
 
 function pct(val, min, max) { 
@@ -476,14 +510,13 @@ function renderMatchups(data){
     const card = document.createElement('div');
     card.className = 'card';
     
-    const modelSpread = -g.predicted_margin; // convert margin to spread convention
+    const modelSpread = -g.predicted_margin;
     const awayTag = g.away_team ? g.away_team.substring(0, 3).toUpperCase() : 'AWY';
     const homeTag = g.home_team ? g.home_team.substring(0, 3).toUpperCase() : 'HOM';
     const winProbNum = parseFloat(g.home_win_prob) || 50;
     
     const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
     
-    // Formatting Market Text Display
     const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
     const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
 
