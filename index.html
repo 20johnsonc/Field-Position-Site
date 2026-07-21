@@ -429,10 +429,11 @@ function renderRankings(data){
       <td class="rank">${t.rank}</td>
       <td class="team">${t.team}</td>
       <td class="num rating">${t.power_rating > 0 ? '+' : ''}${t.power_rating.toFixed(1)}</td>
-      <td class="num">${t.adj_off.toFixed(3)}</td>
-      <td class="num">${t.adj_def.toFixed(3)}</td>
+      <td class="num">${t.adj_off_ppa.toFixed(3)}</td>
+      <td class="num">${t.adj_def_ppa.toFixed(3)}</td>
       <td class="num">${Math.round(t.elo)}</td>
       <td class="num">${t.talent.toFixed(0)}</td>
+      <td class="num">${t.rp_ratio.toFixed(0)}</td>
     `;
     body.appendChild(tr);
   });
