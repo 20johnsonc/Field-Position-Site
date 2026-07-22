@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Field Position | CFB Power Ratings &amp; Matchup Model</title>
+<title>Field Position | CFB Power Ratings & Matchup Model</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   :root {
     /* Base Index Colors */
@@ -87,6 +88,7 @@
     padding: 18px 24px 0;
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
   }
   nav button {
     font-family: 'Oswald', sans-serif;
@@ -143,6 +145,17 @@
   .rank-table td.rank { color: var(--gold); font-weight: 700; width: 36px; }
   .rank-table td.team { font-family: 'Oswald', sans-serif; letter-spacing: 0.2px; color: var(--chalk); font-size: 0.92rem; }
   .rank-table td.rating { font-weight: 700; color: var(--chalk); }
+
+  /* --- Scatter Chart Section --- */
+  .chart-container {
+    background: rgba(244,240,225,0.03);
+    border: 1px solid var(--field-line);
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    height: 600px;
+    width: 100%;
+  }
 
   /* --- Matchup Cards (Merged Design) --- */
   .matchup-grid {
@@ -217,7 +230,7 @@
     white-space: nowrap;
   }
 
-  .card-body { padding: 22px 22px 6px; }
+  .card-body { padding: 22px 22px 18px; }
 
   .score-row {
     display: flex;
@@ -334,13 +347,76 @@
   .verdict {
     border-left: 3px solid var(--gold);
     padding: 10px 14px;
-    margin: 4px 0 20px;
+    margin: 4px 0 16px;
     font-family: 'Inter', sans-serif;
     font-size: 13.5px;
     color: var(--ink);
     background: rgba(217,164,65,0.08);
   }
   .verdict b { font-weight: 600; }
+
+  .btn-pbp {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: var(--field);
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+  }
+  .btn-pbp:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  /* --- Modal Styles --- */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 28, 16, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-content {
+    background: var(--field-dark);
+    border: 1px solid var(--gold-dim);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .modal-close:hover { color: var(--gold); }
+  .modal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: var(--chalk);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
 
   .empty {
     font-family: 'JetBrains Mono', monospace;
@@ -366,10 +442,12 @@
 
 <nav>
   <button id="navRankings" class="active">Power Ratings</button>
+  <button id="navScatter">Scatter Chart</button>
   <button id="navMatchups">Matchup Cards</button>
 </nav>
 
 <main>
+  <!-- 1. RANKINGS SECTION -->
   <section id="rankingsSection" class="active">
     <table class="rank-table">
       <thead>
@@ -385,11 +463,19 @@
         </tr>
       </thead>
       <tbody id="rankingsBody">
-        <tr><td colspan="7" class="empty">Loading rankings…</td></tr>
+        <tr><td colspan="8" class="empty">Loading rankings…</td></tr>
       </tbody>
     </table>
   </section>
 
+  <!-- 2. SCATTER CHART SECTION -->
+  <section id="scatterSection">
+    <div class="chart-container">
+      <canvas id="kenpomChart"></canvas>
+    </div>
+  </section>
+
+  <!-- 3. MATCHUPS SECTION -->
   <section id="matchupsSection">
     <div class="matchup-grid" id="matchupGrid">
       <div class="empty">Loading matchups…</div>
@@ -397,10 +483,23 @@
   </section>
 </main>
 
+<!-- PBP DRILLDOWN MODAL -->
+<div class="modal-overlay" id="pbpModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-title" id="pbpModalTitle">PPA Tug-of-War</div>
+    <div style="height: 400px; position: relative;">
+      <canvas id="pbpChart"></canvas>
+    </div>
+  </div>
+</div>
+
 <script>
 let currentSortKey = 'rank';
 let sortAscending = true;
 let globalRankingsData = [];
+let kenpomChartInstance = null;
+let pbpChartInstance = null;
 
 async function loadJSON(path){
   const res = await fetch(path);
@@ -415,7 +514,6 @@ function fmtDate(iso){
 }
 
 function renderRankings(data){
-  // Store data array if passed during initial fetch
   if (data && data.teams) {
     globalRankingsData = data.teams;
   }
@@ -463,6 +561,93 @@ function sortTable(key) {
   renderRankings();
 }
 
+/* --- KENPOM SCATTER CHART WITH TRAJECTORY LINES --- */
+function initKenpomChart(teams) {
+  const ctx = document.getElementById('kenpomChart').getContext('2d');
+  
+  const scatterPoints = teams.map(t => ({
+    x: t.adj_off_ppa,
+    y: t.adj_def_ppa,
+    team: t.team,
+    rank: t.rank,
+    trajectory: t.trajectory || []
+  }));
+
+  kenpomChartInstance = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [
+        {
+          label: 'Teams',
+          data: scatterPoints,
+          backgroundColor: '#e0a13d',
+          borderColor: '#a97a2c',
+          pointRadius: 6,
+          pointHoverRadius: 9
+        },
+        {
+          label: 'Trajectory',
+          data: [],
+          type: 'line',
+          borderColor: '#b5573f',
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: '#b5573f',
+          fill: false,
+          showLine: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          title: { display: true, text: 'Adjusted Offense PPA (Higher = Better)', color: '#f4f0e1' },
+          grid: { color: 'rgba(138,154,139,0.15)' },
+          ticks: { color: '#f4f0e1' }
+        },
+        y: {
+          reverse: true, // Defense: lower PPA is better
+          title: { display: true, text: 'Adjusted Defense PPA (Lower = Better)', color: '#f4f0e1' },
+          grid: { color: 'rgba(138,154,139,0.15)' },
+          ticks: { color: '#f4f0e1' }
+        }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const raw = ctx.raw;
+              if (raw.team) {
+                return `#${raw.rank} ${raw.team} (Off: ${raw.x.toFixed(3)}, Def: ${raw.y.toFixed(3)})`;
+              }
+              return `Wk ${raw.week}: Off ${raw.x.toFixed(3)}, Def ${raw.y.toFixed(3)}`;
+            }
+          }
+        }
+      },
+      onClick: (e, elements) => {
+        if (elements.length > 0) {
+          const index = elements[0].index;
+          const selectedTeam = kenpomChartInstance.data.datasets[0].data[index];
+          
+          if (selectedTeam && selectedTeam.trajectory) {
+            const trajPoints = selectedTeam.trajectory.map(p => ({
+              x: p.adj_off_ppa,
+              y: p.adj_def_ppa,
+              week: p.week
+            }));
+            kenpomChartInstance.data.datasets[1].data = trajPoints;
+            kenpomChartInstance.update();
+          }
+        }
+      }
+    }
+  });
+}
+
 function pct(val, min, max) { 
   return ((val - min) / (max - min)) * 100; 
 }
@@ -504,7 +689,7 @@ function renderMatchups(data){
   const grid = document.getElementById('matchupGrid');
   grid.innerHTML = '';
   if(!data.games.length){
-    grid.innerHTML = '<div class="empty">No upcoming games in the current export.</div>';
+    grid.innerHTML = '<div class="empty">No games found in export.</div>';
     return;
   }
   
@@ -512,57 +697,146 @@ function renderMatchups(data){
     const card = document.createElement('div');
     card.className = 'card';
     
-    const modelSpread = -g.predicted_margin;
     const awayTag = g.away_team ? g.away_team.substring(0, 3).toUpperCase() : 'AWY';
     const homeTag = g.home_team ? g.home_team.substring(0, 3).toUpperCase() : 'HOM';
-    const winProbNum = parseFloat(g.home_win_prob) || 50;
-    
-    const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
-    
-    const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
-    const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
+    const isCompleted = g.status === "completed";
 
-    card.innerHTML = `
-      <div class="card-head">
-        <div class="matchup">
-          <div class="badge away">${awayTag}</div>
-          <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
-        </div>
-        <div class="week-tag">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
-      </div>
-      <div class="card-body">
-        <div class="score-row">
-          <div class="score-line">
-            <span>${g.predicted_score}</span>
+    if (isCompleted) {
+      // Completed Game Card Design
+      card.innerHTML = `
+        <div class="card-head">
+          <div class="matchup">
+            <div class="badge away">${awayTag}</div>
+            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
           </div>
-          <div class="prob-ring" style="--pct:${winProbNum}"><span>${winProbNum.toFixed(0)}%</span></div>
+          <div class="week-tag">WK ${g.week ?? '—'} · FINAL</div>
         </div>
-        <div class="prob-caption"><b>${g.home_team.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>
-
-        <div class="stat">
-          <div class="stat-top">
-            <span class="stat-label">Spread</span>
-            <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
+        <div class="card-body">
+          <div class="score-row">
+            <div class="score-line">
+              <span>${g.away_team} ${g.away_points} - ${g.home_points} ${g.home_team}</span>
+            </div>
           </div>
-          ${gauge({value: modelSpread, min: -35, max: 35, favorTag: spreadFavor, unit: "spread"})}
+          <div class="verdict"><b>Final Score:</b> Margin ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin} (${g.home_team})</div>
+          <button class="btn-pbp" onclick="loadPbpModal('${g.game_id}', '${g.home_team}', '${g.away_team}')">View Play-by-Play PPA Tug-of-War</button>
         </div>
+      `;
+    } else {
+      // Upcoming Game Card Design
+      const modelSpread = -g.predicted_margin;
+      const winProbNum = parseFloat(g.home_win_prob) || 50;
+      const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
+      
+      const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
+      const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
 
-        <div class="stat">
-          <div class="stat-top">
-            <span class="stat-label">Total</span>
-            <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${g.predicted_total.toFixed(1)}</b></span>
+      card.innerHTML = `
+        <div class="card-head">
+          <div class="matchup">
+            <div class="badge away">${awayTag}</div>
+            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
           </div>
-          ${gauge({value: g.predicted_total, min: 30, max: 70, unit: "total"})}
+          <div class="week-tag">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
         </div>
+        <div class="card-body">
+          <div class="score-row">
+            <div class="score-line">
+              <span>${g.predicted_score}</span>
+            </div>
+            <div class="prob-ring" style="--pct:${winProbNum}"><span>${winProbNum.toFixed(0)}%</span></div>
+          </div>
+          <div class="prob-caption"><b>${g.home_team.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>
 
-        <div class="verdict"><b>${g.blurb || `Model favors ${spreadFavor} by ${Math.abs(modelSpread).toFixed(1)}`}</b></div>
-      </div>
-    `;
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-label">Spread</span>
+              <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
+            </div>
+            ${gauge({value: modelSpread, min: -35, max: 35, favorTag: spreadFavor, unit: "spread"})}
+          </div>
+
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-label">Total</span>
+              <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${g.predicted_total.toFixed(1)}</b></span>
+            </div>
+            ${gauge({value: g.predicted_total, min: 30, max: 70, unit: "total"})}
+          </div>
+
+          <div class="verdict"><b>${g.blurb || `Model favors ${spreadFavor} by ${Math.abs(modelSpread).toFixed(1)}`}</b></div>
+        </div>
+      `;
+    }
     grid.appendChild(card);
   });
 
   document.getElementById('metaRow').innerHTML =
     `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
+}
+
+/* --- PLAY-BY-PLAY TUG-OF-WAR MODAL --- */
+async function loadPbpModal(gameId, homeTeam, awayTeam) {
+  document.getElementById('pbpModalTitle').innerText = `${awayTeam} @ ${homeTeam} — Cumulative PPA Tug-of-War`;
+  document.getElementById('pbpModal').classList.add('active');
+
+  try {
+    const pbpData = await loadJSON(`pbp/${gameId}.json`);
+    
+    const labels = pbpData.map((_, idx) => `Play ${idx + 1}`);
+    const cumPpa = pbpData.map(p => p.cum_net_ppa);
+
+    const ctx = document.getElementById('pbpChart').getContext('2d');
+    if (pbpChartInstance) pbpChartInstance.destroy();
+
+    pbpChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: `Cumulative PPA (+ = ${homeTeam}, - = ${awayTeam})`,
+          data: cumPpa,
+          borderColor: '#e0a13d',
+          backgroundColor: 'rgba(224, 161, 61, 0.1)',
+          fill: true,
+          tension: 0.1,
+          pointRadius: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: { color: 'rgba(138,154,139,0.15)' },
+            ticks: { color: '#f4f0e1' }
+          },
+          y: {
+            grid: { color: 'rgba(138,154,139,0.15)' },
+            ticks: { color: '#f4f0e1' },
+            title: { display: true, text: `Net Cumulative PPA (Favors ${homeTeam} ↑ / ${awayTeam} ↓)`, color: '#f4f0e1' }
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              afterBody: (items) => {
+                const idx = items[0].dataIndex;
+                const play = pbpData[idx];
+                return `Play: ${play.playText || 'N/A'}\nScore Diff: ${play.score_diff}`;
+              }
+            }
+          }
+        }
+      }
+    });
+  } catch (e) {
+    alert('Play-by-play data not found for this game.');
+    closeModal();
+  }
+}
+
+function closeModal() {
+  document.getElementById('pbpModal').classList.remove('active');
 }
 
 async function init(){
@@ -573,23 +847,48 @@ async function init(){
     ]);
     renderRankings(rankings);
     renderMatchups(matchups);
+    initKenpomChart(rankings.teams);
   } catch(e) {
-    document.getElementById('rankingsBody').innerHTML = `<tr><td colspan="7" class="empty">Could not load data: ${e.message}</td></tr>`;
+    document.getElementById('rankingsBody').innerHTML = `<tr><td colspan="8" class="empty">Could not load data: ${e.message}</td></tr>`;
     document.getElementById('matchupGrid').innerHTML = `<div class="empty">Could not load data: ${e.message}</div>`;
   }
 }
 
-document.getElementById('navRankings').addEventListener('click', () => {
-  document.getElementById('navRankings').classList.add('active');
-  document.getElementById('navMatchups').classList.remove('active');
-  document.getElementById('rankingsSection').classList.add('active');
-  document.getElementById('matchupsSection').classList.remove('active');
+/* --- NAVIGATION LOGIC --- */
+const navRankings = document.getElementById('navRankings');
+const navScatter = document.getElementById('navScatter');
+const navMatchups = document.getElementById('navMatchups');
+
+const rankingsSection = document.getElementById('rankingsSection');
+const scatterSection = document.getElementById('scatterSection');
+const matchupsSection = document.getElementById('matchupsSection');
+
+function hideAllSections() {
+  rankingsSection.classList.remove('active');
+  scatterSection.classList.remove('active');
+  matchupsSection.classList.remove('active');
+  
+  navRankings.classList.remove('active');
+  navScatter.classList.remove('active');
+  navMatchups.classList.remove('active');
+}
+
+navRankings.addEventListener('click', () => {
+  hideAllSections();
+  navRankings.classList.add('active');
+  rankingsSection.classList.add('active');
 });
-document.getElementById('navMatchups').addEventListener('click', () => {
-  document.getElementById('navMatchups').classList.add('active');
-  document.getElementById('navRankings').classList.remove('active');
-  document.getElementById('matchupsSection').classList.add('active');
-  document.getElementById('rankingsSection').classList.remove('active');
+
+navScatter.addEventListener('click', () => {
+  hideAllSections();
+  navScatter.classList.add('active');
+  scatterSection.classList.add('active');
+});
+
+navMatchups.addEventListener('click', () => {
+  hideAllSections();
+  navMatchups.classList.add('active');
+  matchupsSection.classList.add('active');
 });
 
 init();
