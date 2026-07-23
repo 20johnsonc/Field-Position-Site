@@ -365,9 +365,6 @@
       <select id="weekFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
         <option value="">All Weeks</option>
       </select>
-      <select id="confFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
-        <option value="">All Conferences</option>
-      </select>
     </div>
     <div class="matchup-grid" id="matchupGrid">
       <div class="empty">Loading matchups…</div>
@@ -598,34 +595,24 @@ let globalMatchupsData = [];
 
 function populateMatchupFilters(games) {
   const weeks = [...new Set(games.map(g => g.week))].filter(w => w != null).sort((a, b) => a - b);
-  const confs = [...new Set(games.map(g => g.home_conference))].filter(Boolean).sort();
 
   const weekSel = document.getElementById('weekFilter');
-  const confSel = document.getElementById('confFilter');
 
   weeks.forEach(w => {
     const opt = document.createElement('option');
     opt.value = w; opt.textContent = `Week ${w}`;
     weekSel.appendChild(opt);
   });
-  confs.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c; opt.textContent = c;
-    confSel.appendChild(opt);
-  });
 
   weekSel.addEventListener('change', applyMatchupFilters);
-  confSel.addEventListener('change', applyMatchupFilters);
 }
 
 function applyMatchupFilters() {
   const weekVal = document.getElementById('weekFilter').value;
-  const confVal = document.getElementById('confFilter').value;
 
   const filtered = globalMatchupsData.filter(g => {
     const weekMatch = !weekVal || String(g.week) === weekVal;
-    const confMatch = !confVal || g.home_conference === confVal;
-    return weekMatch && confMatch;
+    return weekMatch;
   });
 
   renderMatchupCards(filtered);
