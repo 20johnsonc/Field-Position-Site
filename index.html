@@ -361,6 +361,14 @@
   </section>
 
   <section id="matchupsSection">
+    <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+      <select id="weekFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+        <option value="">All Weeks</option>
+      </select>
+      <select id="confFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+        <option value="">All Conferences</option>
+      </select>
+    </div>
     <div class="matchup-grid" id="matchupGrid">
       <div class="empty">Loading matchups…</div>
     </div>
@@ -586,13 +594,65 @@ function gauge({value, min, max, favorTag, unit}) {
   `;
 }
 
-function renderMatchups(data){
+let globalMatchupsData = [];
+
+function populateMatchupFilters(games) {
+  const weeks = [...new Set(games.map(g => g.week))].filter(w => w != null).sort((a, b) => a - b);
+  const confs = [...new Set(games.map(g => g.home_conference))].filter(Boolean).sort();
+
+  const weekSel = document.getElementById('weekFilter');
+  const confSel = document.getElementById('confFilter');
+
+  weeks.forEach(w => {
+    const opt = document.createElement('option');
+    opt.value = w; opt.textContent = `Week ${w}`;
+    weekSel.appendChild(opt);
+  });
+  confs.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c; opt.textContent = c;
+    confSel.appendChild(opt);
+  });
+
+  weekSel.addEventListener('change', applyMatchupFilters);
+  confSel.addEventListener('change', applyMatchupFilters);
+}
+
+function applyMatchupFilters() {
+  const weekVal = document.getElementById('weekFilter').value;
+  const confVal = document.getElementById('confFilter').value;
+
+  const filtered = globalMatchupsData.filter(g => {
+    const weekMatch = !weekVal || String(g.week) === weekVal;
+    const confMatch = !confVal || g.home_conference === confVal;
+    return weekMatch && confMatch;
+  });
+
+  renderMatchupCards(filtered);
+}
+
+// Rename the existing card-building loop out of renderMatchups into its own function:
+function renderMatchupCards(games) {
   const grid = document.getElementById('matchupGrid');
   grid.innerHTML = '';
-  if(!data.games.length){
-    grid.innerHTML = '<div class="empty">No games found in export.</div>';
+  if (!games.length) {
+    grid.innerHTML = '<div class="empty">No games match these filters.</div>';
     return;
   }
+  games.forEach(g => {
+    // ...exact same card-building code currently inside renderMatchups...
+  });
+}
+
+// renderMatchups now just stores data, populates filters, and does the initial render:
+function renderMatchups(data){
+  globalMatchupsData = data.games;
+  populateMatchupFilters(data.games);
+  renderMatchupCards(data.games);
+
+  document.getElementById('metaRow').innerHTML =
+    `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
+}
 
   data.games.forEach(g => {
     const card = document.createElement('div');
