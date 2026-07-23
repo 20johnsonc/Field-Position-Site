@@ -9,7 +9,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   :root {
-    /* Base Index Colors */
     --field: #0f2818;
     --field-dark: #0a1c10;
     --chalk: #f4f0e1;
@@ -21,17 +20,15 @@
     --muted: #8a9a8b;
     --good: #5f9e6f;
     --bad: #b5573f;
-    
-    /* Matchup Card Specific Colors */
     --field-line: #1B3A28;
     --chalk-line: #E1D9BE;
     --ink-dim: #6B6656;
     --model: #B8452E;
     --market: #5E6F63;
   }
-  
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  
+
   body {
     background:
       repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 120px),
@@ -42,19 +39,13 @@
     padding-bottom: 60px;
   }
 
-  /* --- Header & Nav --- */
   header {
     padding: 36px 24px 24px;
     max-width: 1180px;
     margin: 0 auto;
     border-bottom: 1px solid var(--field-line);
   }
-  .brand {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
+  .brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
   .brand h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
@@ -64,11 +55,7 @@
     color: var(--chalk);
   }
   .brand h1 span { color: var(--gold); }
-  .brand .tag {
-    font-size: 0.8rem;
-    color: var(--muted);
-    letter-spacing: 0.3px;
-  }
+  .brand .tag { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.3px; }
   .meta-row {
     margin-top: 14px;
     display: flex;
@@ -103,21 +90,13 @@
     cursor: pointer;
     transition: all .15s ease;
   }
-  nav button.active {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: var(--ink);
-  }
-  nav button:not(.active):hover {
-    border-color: var(--gold-dim);
-    color: var(--chalk);
-  }
+  nav button.active { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+  nav button:not(.active):hover { border-color: var(--gold-dim); color: var(--chalk); }
 
   main { max-width: 1180px; margin: 0 auto; padding: 28px 24px; }
   section { display: none; }
   section.active { display: block; }
 
-  /* --- Rankings Table --- */
   .rank-table {
     width: 100%;
     border-collapse: collapse;
@@ -136,17 +115,19 @@
     padding: 10px 12px;
     border-bottom: 2px solid var(--gold-dim);
   }
-  .rank-table td {
-    padding: 9px 12px;
-    border-bottom: 1px solid rgba(138,154,139,0.15);
-  }
+  .rank-table td { padding: 9px 12px; border-bottom: 1px solid rgba(138,154,139,0.15); }
   .rank-table tbody tr:hover { background: rgba(224,161,61,0.07); }
   .rank-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
   .rank-table td.rank { color: var(--gold); font-weight: 700; width: 36px; }
   .rank-table td.team { font-family: 'Oswald', sans-serif; letter-spacing: 0.2px; color: var(--chalk); font-size: 0.92rem; }
   .rank-table td.rating { font-weight: 700; color: var(--chalk); }
+  .team-link {
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-decoration-color: var(--gold-dim);
+  }
+  .team-link:hover { color: var(--gold); }
 
-  /* --- Scatter Chart Section --- */
   .chart-container {
     background: rgba(244,240,225,0.03);
     border: 1px solid var(--field-line);
@@ -157,15 +138,12 @@
     width: 100%;
   }
 
-  /* --- Matchup Cards (Merged Design) --- */
   .matchup-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
     gap: 28px;
   }
-  @media (max-width: 860px) {
-    .matchup-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 860px) { .matchup-grid { grid-template-columns: 1fr; } }
 
   .card {
     background: var(--chalk);
@@ -183,11 +161,7 @@
     justify-content: space-between;
     gap: 14px;
   }
-  .matchup {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  .matchup { display: flex; align-items: center; gap: 12px; }
   .badge {
     width: 40px; height: 40px;
     border-radius: 50%;
@@ -198,16 +172,8 @@
     letter-spacing: 0.02em;
     flex: none;
   }
-  .badge.away {
-    background: transparent;
-    border: 1.5px solid rgba(243,238,221,0.45);
-    color: var(--chalk);
-  }
-  .badge.home {
-    background: var(--gold);
-    color: var(--field);
-    border: 1.5px solid var(--gold);
-  }
+  .badge.away { background: transparent; border: 1.5px solid rgba(243,238,221,0.45); color: var(--chalk); }
+  .badge.home { background: var(--gold); color: var(--field); border: 1.5px solid var(--gold); }
   .matchup-names {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -216,36 +182,12 @@
     letter-spacing: 0.03em;
     line-height: 1.2;
   }
-  .matchup-names .at {
-    color: var(--gold);
-    font-weight: 400;
-    margin: 0 5px;
-    font-size: 12px;
-  }
-  .week-tag {
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--gold);
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
-  }
+  .matchup-names .at { color: var(--gold); font-weight: 400; margin: 0 5px; font-size: 12px; }
+  .week-tag { font-family: 'JetBrains Mono', monospace; color: var(--gold); font-size: 12px; letter-spacing: 0.06em; white-space: nowrap; }
 
   .card-body { padding: 22px 22px 18px; }
-
-  .score-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-  .score-line {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--ink);
-    letter-spacing: 0.01em;
-  }
+  .score-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+  .score-line { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 24px; color: var(--ink); letter-spacing: 0.01em; }
 
   .prob-ring {
     --pct: 50;
@@ -256,20 +198,8 @@
     display: flex; align-items: center; justify-content: center;
     position: relative;
   }
-  .prob-ring::before {
-    content: '';
-    position: absolute;
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: var(--chalk);
-  }
-  .prob-ring span {
-    position: relative;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 12.5px;
-    color: var(--ink);
-  }
+  .prob-ring::before { content: ''; position: absolute; width: 44px; height: 44px; border-radius: 50%; background: var(--chalk); }
+  .prob-ring span { position: relative; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12.5px; color: var(--ink); }
 
   .prob-caption {
     font-family: 'JetBrains Mono', monospace;
@@ -281,54 +211,20 @@
   }
   .prob-caption b { color: var(--model); }
 
-  /* ---- stat gauge ---- */
   .stat { margin: 20px 0 26px; }
-  .stat-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 14px;
-  }
-  .stat-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--ink-dim);
-    text-transform: uppercase;
-  }
-  .stat-value {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    color: var(--ink);
-  }
+  .stat-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--ink-dim); text-transform: uppercase; }
+  .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); }
   .stat-value b { color: var(--model); }
   .stat-value .na { color: var(--market); }
 
   .gauge { position: relative; height: 34px; margin: 0 4px 4px; }
-  .gauge-track {
-    position: absolute; top: 14px; left: 0; right: 0;
-    height: 4px; background: var(--chalk-line); border-radius: 2px;
-  }
-  .gauge-fill {
-    position: absolute; top: 14px; height: 4px;
-    background: var(--model); border-radius: 2px;
-    opacity: 0.85;
-  }
-  .gauge-tick {
-    position: absolute; top: 10px; width: 1px; height: 12px;
-    background: var(--chalk-line);
-  }
+  .gauge-track { position: absolute; top: 14px; left: 0; right: 0; height: 4px; background: var(--chalk-line); border-radius: 2px; }
+  .gauge-fill { position: absolute; top: 14px; height: 4px; background: var(--model); border-radius: 2px; opacity: 0.85; }
+  .gauge-tick { position: absolute; top: 10px; width: 1px; height: 12px; background: var(--chalk-line); }
   .gauge-tick.zero { background: var(--ink-dim); width: 1.5px; }
-  .gauge-ticklabel {
-    position: absolute; top: 24px; transform: translateX(-50%);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5px; color: var(--ink-dim);
-  }
-  .gauge-pin {
-    position: absolute; top: -2px; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center;
-    gap: 2px;
-  }
+  .gauge-ticklabel { position: absolute; top: 24px; transform: translateX(-50%); font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--ink-dim); }
+  .gauge-pin { position: absolute; top: -2px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 2px; }
   .gauge-pin .flag {
     background: var(--model);
     color: var(--chalk);
@@ -339,11 +235,8 @@
     border-radius: 3px;
     white-space: nowrap;
   }
-  .gauge-pin .stem {
-    width: 2px; height: 8px; background: var(--model);
-  }
+  .gauge-pin .stem { width: 2px; height: 8px; background: var(--model); }
 
-  /* ---- verdict ---- */
   .verdict {
     border-left: 3px solid var(--gold);
     padding: 10px 14px;
@@ -371,12 +264,8 @@
     border-radius: 4px;
     transition: all 0.15s ease;
   }
-  .btn-pbp:hover {
-    background: var(--gold);
-    color: var(--ink);
-  }
+  .btn-pbp:hover { background: var(--gold); color: var(--ink); }
 
-  /* --- Modal Styles --- */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -435,9 +324,7 @@
     <h1>FIELD <span>POSITION</span></h1>
     <div class="tag">power ratings &amp; matchup model — for research &amp; entertainment purposes only</div>
   </div>
-  <div class="meta-row" id="metaRow">
-    <span>LOADING…</span>
-  </div>
+  <div class="meta-row" id="metaRow"><span>LOADING…</span></div>
 </header>
 
 <nav>
@@ -447,7 +334,6 @@
 </nav>
 
 <main>
-  <!-- 1. RANKINGS SECTION -->
   <section id="rankingsSection" class="active">
     <table class="rank-table">
       <thead>
@@ -468,14 +354,12 @@
     </table>
   </section>
 
-  <!-- 2. SCATTER CHART SECTION -->
   <section id="scatterSection">
     <div class="chart-container">
       <canvas id="kenpomChart"></canvas>
     </div>
   </section>
 
-  <!-- 3. MATCHUPS SECTION -->
   <section id="matchupsSection">
     <div class="matchup-grid" id="matchupGrid">
       <div class="empty">Loading matchups…</div>
@@ -483,7 +367,6 @@
   </section>
 </main>
 
-<!-- PBP DRILLDOWN MODAL -->
 <div class="modal-overlay" id="pbpModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -494,7 +377,6 @@
   </div>
 </div>
 
-<!-- Add alongside the existing pbpModal div -->
 <div class="modal-overlay" id="teamModal">
   <div class="modal-content" style="max-width: 1100px;">
     <button class="modal-close" onclick="closeTeamModal()">&times;</button>
@@ -510,14 +392,15 @@
   </div>
 </div>
 
-
-
 <script>
 let currentSortKey = 'rank';
 let sortAscending = true;
 let globalRankingsData = [];
+let globalLeagueProfile = [];
 let kenpomChartInstance = null;
 let pbpChartInstance = null;
+let teamTrajectoryChartInstance = null;
+let teamProfileChartInstance = null;
 
 async function loadJSON(path){
   const res = await fetch(path);
@@ -525,15 +408,272 @@ async function loadJSON(path){
   return res.json();
 }
 
-let globalLeagueProfile = [];
-let teamTrajectoryChartInstance = null;
-let teamProfileChartInstance = null;
+function fmtDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
+}
 
-// Update renderRankings() — wrap team name in a clickable span:
-// replace: <td class="team">${t.team}</td>
-// with:
-//   <td class="team"><span style="cursor:pointer; text-decoration: underline dotted; text-decoration-color: var(--gold-dim);" onclick="openTeamModal('${t.team}')">${t.team}</span></td>
+function renderRankings(data){
+  if (data && data.teams) {
+    globalRankingsData = data.teams;
+  }
 
+  const body = document.getElementById('rankingsBody');
+  body.innerHTML = '';
+
+  globalRankingsData.forEach(t => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="rank">${t.rank}</td>
+      <td class="team"><span class="team-link" onclick="openTeamModal('${t.team}')">${t.team}</span></td>
+      <td class="num rating">${t.power_rating > 0 ? '+' : ''}${t.power_rating.toFixed(1)}</td>
+      <td class="num">${t.adj_off_ppa.toFixed(3)}</td>
+      <td class="num">${t.adj_def_ppa.toFixed(3)}</td>
+      <td class="num">${Math.round(t.elo)}</td>
+      <td class="num">${t.talent.toFixed(0)}</td>
+      <td class="num">${t.rp_ratio.toFixed(0)}</td>
+    `;
+    body.appendChild(tr);
+  });
+}
+
+function sortTable(key) {
+  if (currentSortKey === key) {
+    sortAscending = !sortAscending;
+  } else {
+    currentSortKey = key;
+    sortAscending = true;
+  }
+
+  globalRankingsData.sort((a, b) => {
+    let valA = a[key];
+    let valB = b[key];
+
+    if (typeof valA === 'string') {
+      return sortAscending
+        ? valA.localeCompare(valB)
+        : valB.localeCompare(valA);
+    }
+
+    return sortAscending ? valA - valB : valB - valA;
+  });
+
+  renderRankings();
+}
+
+/* --- KENPOM SCATTER CHART WITH TRAJECTORY LINES --- */
+function initKenpomChart(teams) {
+  const ctx = document.getElementById('kenpomChart').getContext('2d');
+
+  const scatterPoints = teams.map(t => ({
+    x: t.adj_off_ppa,
+    y: t.adj_def_ppa,
+    team: t.team,
+    rank: t.rank,
+    trajectory: t.trajectory || []
+  }));
+
+  kenpomChartInstance = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [
+        {
+          label: 'Teams',
+          data: scatterPoints,
+          backgroundColor: '#e0a13d',
+          borderColor: '#a97a2c',
+          pointRadius: 6,
+          pointHoverRadius: 9
+        },
+        {
+          label: 'Trajectory',
+          data: [],
+          type: 'line',
+          borderColor: '#b5573f',
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: '#b5573f',
+          fill: false,
+          showLine: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          title: { display: true, text: 'Adjusted Offense PPA (Higher = Better)', color: '#f4f0e1' },
+          grid: { color: 'rgba(138,154,139,0.15)' },
+          ticks: { color: '#f4f0e1' }
+        },
+        y: {
+          reverse: true,
+          title: { display: true, text: 'Adjusted Defense PPA (Lower = Better)', color: '#f4f0e1' },
+          grid: { color: 'rgba(138,154,139,0.15)' },
+          ticks: { color: '#f4f0e1' }
+        }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const raw = ctx.raw;
+              if (raw.team) {
+                return `#${raw.rank} ${raw.team} (Off: ${raw.x.toFixed(3)}, Def: ${raw.y.toFixed(3)})`;
+              }
+              return `Wk ${raw.week}: Off ${raw.x.toFixed(3)}, Def ${raw.y.toFixed(3)}`;
+            }
+          }
+        }
+      },
+      onClick: (e, elements) => {
+        if (elements.length > 0) {
+          const index = elements[0].index;
+          const selectedTeam = kenpomChartInstance.data.datasets[0].data[index];
+
+          if (selectedTeam && selectedTeam.trajectory) {
+            const trajPoints = selectedTeam.trajectory.map(p => ({
+              x: p.adj_off_ppa,
+              y: p.adj_def_ppa,
+              week: p.week
+            }));
+            kenpomChartInstance.data.datasets[1].data = trajPoints;
+            kenpomChartInstance.update();
+          }
+        }
+      }
+    }
+  });
+}
+
+function pct(val, min, max) {
+  return ((val - min) / (max - min)) * 100;
+}
+
+function gauge({value, min, max, favorTag, unit}) {
+  const zeroPct = unit === "spread" ? pct(0, min, max) : null;
+  const valPct = pct(value, min, max);
+  const isSpread = unit === "spread";
+  const fillLeft = isSpread ? Math.min(zeroPct, valPct) : 0;
+  const fillWidth = isSpread ? Math.abs(valPct - zeroPct) : valPct;
+
+  const ticks = isSpread
+    ? [{p:0,l:min}, {p:50,l:"EVEN"}, {p:100,l:"+"+max}]
+    : [{p:0,l:min}, {p:50,l:(min+max)/2}, {p:100,l:max}];
+
+  const tickHtml = ticks.map(t => `
+    <div class="gauge-tick ${t.l === 'EVEN' ? 'zero' : ''}" style="left:${t.p}%"></div>
+    <div class="gauge-ticklabel" style="left:${t.p}%">${t.l}</div>
+  `).join("");
+
+  const flagLabel = isSpread
+    ? `${favorTag} ${Math.abs(value).toFixed(1)}`
+    : `${value.toFixed(1)}`;
+
+  return `
+    <div class="gauge">
+      <div class="gauge-track"></div>
+      <div class="gauge-fill" style="left:${fillLeft}%; width:${fillWidth}%;"></div>
+      ${tickHtml}
+      <div class="gauge-pin" style="left:${valPct}%">
+        <div class="flag">${flagLabel}</div>
+        <div class="stem"></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderMatchups(data){
+  const grid = document.getElementById('matchupGrid');
+  grid.innerHTML = '';
+  if(!data.games.length){
+    grid.innerHTML = '<div class="empty">No games found in export.</div>';
+    return;
+  }
+
+  data.games.forEach(g => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const awayTag = g.away_team ? g.away_team.substring(0, 3).toUpperCase() : 'AWY';
+    const homeTag = g.home_team ? g.home_team.substring(0, 3).toUpperCase() : 'HOM';
+    const isCompleted = g.status === "completed";
+
+    if (isCompleted) {
+      card.innerHTML = `
+        <div class="card-head">
+          <div class="matchup">
+            <div class="badge away">${awayTag}</div>
+            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
+          </div>
+          <div class="week-tag">WK ${g.week ?? '—'} · FINAL</div>
+        </div>
+        <div class="card-body">
+          <div class="score-row">
+            <div class="score-line">
+              <span>${g.away_team} ${g.away_points} - ${g.home_points} ${g.home_team}</span>
+            </div>
+          </div>
+          <div class="verdict"><b>Final Score:</b> Margin ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin} (${g.home_team})</div>
+          <button class="btn-pbp" onclick="loadPbpModal('${g.game_id}', '${g.home_team}', '${g.away_team}')">View Play-by-Play PPA Tug-of-War</button>
+        </div>
+      `;
+    } else {
+      const modelSpread = -g.predicted_margin;
+      const winProbNum = parseFloat(g.home_win_prob) || 50;
+      const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
+
+      const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
+      const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
+
+      card.innerHTML = `
+        <div class="card-head">
+          <div class="matchup">
+            <div class="badge away">${awayTag}</div>
+            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
+          </div>
+          <div class="week-tag">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
+        </div>
+        <div class="card-body">
+          <div class="score-row">
+            <div class="score-line">
+              <span>${g.predicted_score}</span>
+            </div>
+            <div class="prob-ring" style="--pct:${winProbNum}"><span>${winProbNum.toFixed(0)}%</span></div>
+          </div>
+          <div class="prob-caption"><b>${g.home_team.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>
+
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-label">Spread</span>
+              <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
+            </div>
+            ${gauge({value: modelSpread, min: -35, max: 35, favorTag: spreadFavor, unit: "spread"})}
+          </div>
+
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-label">Total</span>
+              <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${g.predicted_total.toFixed(1)}</b></span>
+            </div>
+            ${gauge({value: g.predicted_total, min: 30, max: 70, unit: "total"})}
+          </div>
+
+          <div class="verdict"><b>${g.blurb || `Model favors ${spreadFavor} by ${Math.abs(modelSpread).toFixed(1)}`}</b></div>
+        </div>
+      `;
+    }
+    grid.appendChild(card);
+  });
+
+  document.getElementById('metaRow').innerHTML =
+    `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
+}
+
+/* --- TEAM DRILLDOWN MODAL: trajectory + game log, and league efficiency profile --- */
 function openTeamModal(teamName) {
   const teamData = globalRankingsData.find(t => t.team === teamName);
   if (!teamData) return;
@@ -541,7 +681,6 @@ function openTeamModal(teamName) {
   document.getElementById('teamModalTitle').innerText = `${teamName} — Season Performance`;
   document.getElementById('teamModal').classList.add('active');
 
-  // --- Chart 1: Rating trajectory + game result dots ---
   const trajectory = teamData.trajectory || [];
   const gameLog = teamData.game_log || [];
   const gameByWeek = Object.fromEntries(gameLog.map(g => [g.week, g]));
@@ -605,11 +744,8 @@ function openTeamModal(teamName) {
     },
   });
 
-  // --- Chart 2: Success rate vs. explosiveness, all teams, selected team highlighted ---
   const others = globalLeagueProfile.filter(p => p.team !== teamName);
   const mine = globalLeagueProfile.find(p => p.team === teamName);
-  const meanSucc = globalLeagueProfile.reduce((s, p) => s + p.succ, 0) / globalLeagueProfile.length;
-  const meanExpl = globalLeagueProfile.reduce((s, p) => s + p.expl, 0) / globalLeagueProfile.length;
 
   const ctx2 = document.getElementById('teamProfileChart').getContext('2d');
   if (teamProfileChartInstance) teamProfileChartInstance.destroy();
@@ -651,310 +787,37 @@ function closeTeamModal() {
   document.getElementById('teamModal').classList.remove('active');
 }
 
-// In init(), after loading rankings: globalLeagueProfile = rankings.league_profile || [];
-
-function fmtDate(iso){
-  if(!iso) return '';
-  const d = new Date(iso);
-  return d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
-}
-
-function renderRankings(data){
-  if (data && data.teams) {
-    globalRankingsData = data.teams;
-  }
-
-  const body = document.getElementById('rankingsBody');
-  body.innerHTML = '';
-
-  globalRankingsData.forEach(t => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="rank">${t.rank}</td>
-      <td class="team">${t.team}</td>
-      <td class="num rating">${t.power_rating > 0 ? '+' : ''}${t.power_rating.toFixed(1)}</td>
-      <td class="num">${t.adj_off_ppa.toFixed(3)}</td>
-      <td class="num">${t.adj_def_ppa.toFixed(3)}</td>
-      <td class="num">${Math.round(t.elo)}</td>
-      <td class="num">${t.talent.toFixed(0)}</td>
-      <td class="num">${t.rp_ratio.toFixed(0)}</td>
-    `;
-    body.appendChild(tr);
-  });
-}
-
-function sortTable(key) {
-  if (currentSortKey === key) {
-    sortAscending = !sortAscending;
-  } else {
-    currentSortKey = key;
-    sortAscending = true;
-  }
-
-  globalRankingsData.sort((a, b) => {
-    let valA = a[key];
-    let valB = b[key];
-
-    if (typeof valA === 'string') {
-      return sortAscending 
-        ? valA.localeCompare(valB) 
-        : valB.localeCompare(valA);
-    }
-
-    return sortAscending ? valA - valB : valB - valA;
-  });
-
-  renderRankings();
-}
-
-/* --- KENPOM SCATTER CHART WITH TRAJECTORY LINES --- */
-function initKenpomChart(teams) {
-  const ctx = document.getElementById('kenpomChart').getContext('2d');
-  
-  const scatterPoints = teams.map(t => ({
-    x: t.adj_off_ppa,
-    y: t.adj_def_ppa,
-    team: t.team,
-    rank: t.rank,
-    trajectory: t.trajectory || []
-  }));
-
-  kenpomChartInstance = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      datasets: [
-        {
-          label: 'Teams',
-          data: scatterPoints,
-          backgroundColor: '#e0a13d',
-          borderColor: '#a97a2c',
-          pointRadius: 6,
-          pointHoverRadius: 9
-        },
-        {
-          label: 'Trajectory',
-          data: [],
-          type: 'line',
-          borderColor: '#b5573f',
-          borderWidth: 2,
-          pointRadius: 4,
-          pointBackgroundColor: '#b5573f',
-          fill: false,
-          showLine: true
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          title: { display: true, text: 'Adjusted Offense PPA (Higher = Better)', color: '#f4f0e1' },
-          grid: { color: 'rgba(138,154,139,0.15)' },
-          ticks: { color: '#f4f0e1' }
-        },
-        y: {
-          reverse: true, // Defense: lower PPA is better
-          title: { display: true, text: 'Adjusted Defense PPA (Lower = Better)', color: '#f4f0e1' },
-          grid: { color: 'rgba(138,154,139,0.15)' },
-          ticks: { color: '#f4f0e1' }
-        }
-      },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => {
-              const raw = ctx.raw;
-              if (raw.team) {
-                return `#${raw.rank} ${raw.team} (Off: ${raw.x.toFixed(3)}, Def: ${raw.y.toFixed(3)})`;
-              }
-              return `Wk ${raw.week}: Off ${raw.x.toFixed(3)}, Def ${raw.y.toFixed(3)}`;
-            }
-          }
-        }
-      },
-      onClick: (e, elements) => {
-        if (elements.length > 0) {
-          const index = elements[0].index;
-          const selectedTeam = kenpomChartInstance.data.datasets[0].data[index];
-          
-          if (selectedTeam && selectedTeam.trajectory) {
-            const trajPoints = selectedTeam.trajectory.map(p => ({
-              x: p.adj_off_ppa,
-              y: p.adj_def_ppa,
-              week: p.week
-            }));
-            kenpomChartInstance.data.datasets[1].data = trajPoints;
-            kenpomChartInstance.update();
-          }
-        }
-      }
-    }
-  });
-}
-
-function pct(val, min, max) { 
-  return ((val - min) / (max - min)) * 100; 
-}
-
-function gauge({value, min, max, favorTag, unit}) {
-  const zeroPct = unit === "spread" ? pct(0, min, max) : null;
-  const valPct = pct(value, min, max);
-  const isSpread = unit === "spread";
-  const fillLeft = isSpread ? Math.min(zeroPct, valPct) : 0;
-  const fillWidth = isSpread ? Math.abs(valPct - zeroPct) : valPct;
-
-  const ticks = isSpread
-    ? [{p:0,l:min}, {p:50,l:"EVEN"}, {p:100,l:"+"+max}]
-    : [{p:0,l:min}, {p:50,l:(min+max)/2}, {p:100,l:max}];
-
-  const tickHtml = ticks.map(t => `
-    <div class="gauge-tick ${t.l === 'EVEN' ? 'zero' : ''}" style="left:${t.p}%"></div>
-    <div class="gauge-ticklabel" style="left:${t.p}%">${t.l}</div>
-  `).join("");
-
-  const flagLabel = isSpread
-    ? `${favorTag} ${Math.abs(value).toFixed(1)}`
-    : `${value.toFixed(1)}`;
-
-  return `
-    <div class="gauge">
-      <div class="gauge-track"></div>
-      <div class="gauge-fill" style="left:${fillLeft}%; width:${fillWidth}%;"></div>
-      ${tickHtml}
-      <div class="gauge-pin" style="left:${valPct}%">
-        <div class="flag">${flagLabel}</div>
-        <div class="stem"></div>
-      </div>
-    </div>
-  `;
-}
-
-function renderMatchups(data){
-  const grid = document.getElementById('matchupGrid');
-  grid.innerHTML = '';
-  if(!data.games.length){
-    grid.innerHTML = '<div class="empty">No games found in export.</div>';
-    return;
-  }
-  
-  data.games.forEach(g => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    
-    const awayTag = g.away_team ? g.away_team.substring(0, 3).toUpperCase() : 'AWY';
-    const homeTag = g.home_team ? g.home_team.substring(0, 3).toUpperCase() : 'HOM';
-    const isCompleted = g.status === "completed";
-
-    if (isCompleted) {
-      // Completed Game Card Design
-      card.innerHTML = `
-        <div class="card-head">
-          <div class="matchup">
-            <div class="badge away">${awayTag}</div>
-            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
-          </div>
-          <div class="week-tag">WK ${g.week ?? '—'} · FINAL</div>
-        </div>
-        <div class="card-body">
-          <div class="score-row">
-            <div class="score-line">
-              <span>${g.away_team} ${g.away_points} - ${g.home_points} ${g.home_team}</span>
-            </div>
-          </div>
-          <div class="verdict"><b>Final Score:</b> Margin ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin} (${g.home_team})</div>
-          <button class="btn-pbp" onclick="loadPbpModal('${g.game_id}', '${g.home_team}', '${g.away_team}')">View Play-by-Play PPA Tug-of-War</button>
-        </div>
-      `;
-    } else {
-      // Upcoming Game Card Design
-      const modelSpread = -g.predicted_margin;
-      const winProbNum = parseFloat(g.home_win_prob) || 50;
-      const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
-      
-      const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
-      const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
-
-      card.innerHTML = `
-        <div class="card-head">
-          <div class="matchup">
-            <div class="badge away">${awayTag}</div>
-            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
-          </div>
-          <div class="week-tag">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
-        </div>
-        <div class="card-body">
-          <div class="score-row">
-            <div class="score-line">
-              <span>${g.predicted_score}</span>
-            </div>
-            <div class="prob-ring" style="--pct:${winProbNum}"><span>${winProbNum.toFixed(0)}%</span></div>
-          </div>
-          <div class="prob-caption"><b>${g.home_team.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>
-
-          <div class="stat">
-            <div class="stat-top">
-              <span class="stat-label">Spread</span>
-              <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
-            </div>
-            ${gauge({value: modelSpread, min: -35, max: 35, favorTag: spreadFavor, unit: "spread"})}
-          </div>
-
-          <div class="stat">
-            <div class="stat-top">
-              <span class="stat-label">Total</span>
-              <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${g.predicted_total.toFixed(1)}</b></span>
-            </div>
-            ${gauge({value: g.predicted_total, min: 30, max: 70, unit: "total"})}
-          </div>
-
-          <div class="verdict"><b>${g.blurb || `Model favors ${spreadFavor} by ${Math.abs(modelSpread).toFixed(1)}`}</b></div>
-        </div>
-      `;
-    }
-    grid.appendChild(card);
-  });
-
-  document.getElementById('metaRow').innerHTML =
-    `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
-}
-
-// Custom plugin: draws quarter dividers and top-3 big-play callouts directly on canvas
+/* --- PLAY-BY-PLAY TUG-OF-WAR MODAL --- */
 const tugOfWarAnnotations = {
   id: 'tugOfWarAnnotations',
   afterDatasetsDraw(chart) {
     const { ctx, chartArea, scales } = chart;
-    const { quarterBreaks, bigPlays } = chart.config.options.plugins.tugOfWarAnnotations || {};
-    if (!quarterBreaks && !bigPlays) return;
+    const { quarterBreaks } = chart.config.options.plugins.tugOfWarAnnotations || {};
+    if (!quarterBreaks) return;
 
     ctx.save();
+    quarterBreaks.forEach(({ index, label }) => {
+      const x = scales.x.getPixelForValue(index);
+      ctx.strokeStyle = 'rgba(138,154,139,0.4)';
+      ctx.setLineDash([3, 3]);
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, chartArea.top);
+      ctx.lineTo(x, chartArea.bottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
 
-    // Quarter divider lines
-    if (quarterBreaks) {
-      quarterBreaks.forEach(({ index, label }) => {
-        const x = scales.x.getPixelForValue(index);
-        ctx.strokeStyle = 'rgba(138,154,139,0.4)';
-        ctx.setLineDash([3, 3]);
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(x, chartArea.top);
-        ctx.lineTo(x, chartArea.bottom);
-        ctx.stroke();
-        ctx.setLineDash([]);
-
-        ctx.fillStyle = '#8a9a8b';
-        ctx.font = 'bold 10px JetBrains Mono, monospace';
-        ctx.fillText(label, x + 4, chartArea.top + 12);
-      });
-    }
+      ctx.fillStyle = '#8a9a8b';
+      ctx.font = 'bold 10px JetBrains Mono, monospace';
+      ctx.fillText(label, x + 4, chartArea.top + 12);
+    });
     ctx.restore();
   }
 };
 Chart.register(tugOfWarAnnotations);
-  
+
 const PBP_BASE_URL = 'https://raw.githubusercontent.com/20johnsonc/Field-Position-Site/main/pbp';
-  
+
 async function loadPbpModal(gameId, homeTeam, awayTeam) {
   document.getElementById('pbpModalTitle').innerText = `${awayTeam} @ ${homeTeam} — Cumulative PPA Tug-of-War`;
   document.getElementById('pbpModal').classList.add('active');
@@ -966,7 +829,6 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
     const cumPpa = pbpData.map(p => p.cum_net_ppa);
     const scoreDiff = pbpData.map(p => p.score_diff);
 
-    // Quarter break indices — first play of each new period
     const quarterBreaks = [];
     let lastPeriod = null;
     pbpData.forEach((p, idx) => {
@@ -975,12 +837,6 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
       }
       lastPeriod = p.period;
     });
-
-    // Top 3 plays by absolute PPA
-    const bigPlays = pbpData
-      .map((p, idx) => ({ index: idx, value: p.cum_net_ppa, ppa: p.net_ppa, text: p.playText || `${p.net_ppa >= 0 ? '+' : ''}${p.net_ppa.toFixed(2)} PPA` }))
-      .sort((a, b) => Math.abs(b.ppa) - Math.abs(a.ppa))
-      .slice(0, 3);
 
     const ctx = document.getElementById('pbpChart').getContext('2d');
     if (pbpChartInstance) pbpChartInstance.destroy();
@@ -1033,7 +889,7 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
         },
         plugins: {
           legend: { labels: { color: '#f4f0e1' } },
-          tugOfWarAnnotations: { quarterBreaks, bigPlays },
+          tugOfWarAnnotations: { quarterBreaks },
           tooltip: {
             callbacks: {
               afterBody: (items) => {
@@ -1062,6 +918,7 @@ async function init(){
       loadJSON('rankings.json'),
       loadJSON('matchups.json')
     ]);
+    globalLeagueProfile = rankings.league_profile || [];
     renderRankings(rankings);
     renderMatchups(matchups);
     initKenpomChart(rankings.teams);
@@ -1084,7 +941,7 @@ function hideAllSections() {
   rankingsSection.classList.remove('active');
   scatterSection.classList.remove('active');
   matchupsSection.classList.remove('active');
-  
+
   navRankings.classList.remove('active');
   navScatter.classList.remove('active');
   navMatchups.classList.remove('active');
