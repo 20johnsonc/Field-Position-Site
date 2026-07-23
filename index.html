@@ -494,6 +494,24 @@
   </div>
 </div>
 
+<!-- Add alongside the existing pbpModal div -->
+<div class="modal-overlay" id="teamModal">
+  <div class="modal-content" style="max-width: 1100px;">
+    <button class="modal-close" onclick="closeTeamModal()">&times;</button>
+    <div class="modal-title" id="teamModalTitle">Team Performance</div>
+    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px;">
+      <div style="height: 420px; position: relative;">
+        <canvas id="teamTrajectoryChart"></canvas>
+      </div>
+      <div style="height: 420px; position: relative;">
+        <canvas id="teamProfileChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script>
 let currentSortKey = 'rank';
 let sortAscending = true;
@@ -506,6 +524,134 @@ async function loadJSON(path){
   if(!res.ok) throw new Error('failed to load ' + path);
   return res.json();
 }
+
+let globalLeagueProfile = [];
+let teamTrajectoryChartInstance = null;
+let teamProfileChartInstance = null;
+
+// Update renderRankings() — wrap team name in a clickable span:
+// replace: <td class="team">${t.team}</td>
+// with:
+//   <td class="team"><span style="cursor:pointer; text-decoration: underline dotted; text-decoration-color: var(--gold-dim);" onclick="openTeamModal('${t.team}')">${t.team}</span></td>
+
+function openTeamModal(teamName) {
+  const teamData = globalRankingsData.find(t => t.team === teamName);
+  if (!teamData) return;
+
+  document.getElementById('teamModalTitle').innerText = `${teamName} — Season Performance`;
+  document.getElementById('teamModal').classList.add('active');
+
+  // --- Chart 1: Rating trajectory + game result dots ---
+  const trajectory = teamData.trajectory || [];
+  const gameLog = teamData.game_log || [];
+  const gameByWeek = Object.fromEntries(gameLog.map(g => [g.week, g]));
+
+  const trajLine = trajectory.map(p => ({ x: p.week, y: p.adj_off_ppa }));
+  const gameDots = trajectory
+    .filter(p => gameByWeek[p.week])
+    .map(p => {
+      const g = gameByWeek[p.week];
+      return {
+        x: p.week, y: p.adj_off_ppa,
+        margin: g.margin, opponent: g.opponent, win: g.win,
+      };
+    });
+
+  const ctx1 = document.getElementById('teamTrajectoryChart').getContext('2d');
+  if (teamTrajectoryChartInstance) teamTrajectoryChartInstance.destroy();
+  teamTrajectoryChartInstance = new Chart(ctx1, {
+    type: 'scatter',
+    data: {
+      datasets: [
+        {
+          label: 'Adj. Off PPA (Kalman)',
+          data: trajLine,
+          type: 'line',
+          borderColor: '#e0a13d',
+          backgroundColor: 'transparent',
+          pointRadius: 0,
+          tension: 0.15,
+          order: 2,
+        },
+        {
+          label: 'Game Result',
+          data: gameDots,
+          backgroundColor: gameDots.map(g => g.win ? '#5f9e6f' : '#b5573f'),
+          pointRadius: gameDots.map(g => Math.max(5, Math.min(Math.abs(g.margin) * 0.7, 16))),
+          pointBorderColor: '#141a12',
+          pointBorderWidth: 1,
+          order: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { title: { display: true, text: 'Week', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
+        y: { title: { display: true, text: 'Adj. Off PPA', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
+      },
+      plugins: {
+        legend: { labels: { color: '#f4f0e1' } },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const raw = ctx.raw;
+              if (raw.opponent) return `vs ${raw.opponent}: ${raw.margin > 0 ? '+' : ''}${raw.margin}`;
+              return `Wk ${raw.x}: ${raw.y.toFixed(3)}`;
+            },
+          },
+        },
+      },
+    },
+  });
+
+  // --- Chart 2: Success rate vs. explosiveness, all teams, selected team highlighted ---
+  const others = globalLeagueProfile.filter(p => p.team !== teamName);
+  const mine = globalLeagueProfile.find(p => p.team === teamName);
+  const meanSucc = globalLeagueProfile.reduce((s, p) => s + p.succ, 0) / globalLeagueProfile.length;
+  const meanExpl = globalLeagueProfile.reduce((s, p) => s + p.expl, 0) / globalLeagueProfile.length;
+
+  const ctx2 = document.getElementById('teamProfileChart').getContext('2d');
+  if (teamProfileChartInstance) teamProfileChartInstance.destroy();
+  teamProfileChartInstance = new Chart(ctx2, {
+    type: 'scatter',
+    data: {
+      datasets: [
+        {
+          label: 'All Teams',
+          data: others.map(p => ({ x: p.succ, y: p.expl, team: p.team })),
+          backgroundColor: 'rgba(138,154,139,0.4)',
+          pointRadius: 4,
+        },
+        {
+          label: teamName,
+          data: mine ? [{ x: mine.succ, y: mine.expl, team: teamName }] : [],
+          backgroundColor: '#e0a13d',
+          pointRadius: 9,
+          pointBorderColor: '#141a12',
+          pointBorderWidth: 1.5,
+        },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { title: { display: true, text: 'Success Rate', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
+        y: { title: { display: true, text: 'Explosiveness', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
+      },
+      plugins: {
+        legend: { labels: { color: '#f4f0e1' } },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.raw.team}: succ ${ctx.raw.x.toFixed(3)}, expl ${ctx.raw.y.toFixed(3)}` } },
+      },
+    },
+  });
+}
+
+function closeTeamModal() {
+  document.getElementById('teamModal').classList.remove('active');
+}
+
+// In init(), after loading rankings: globalLeagueProfile = rankings.league_profile || [];
 
 function fmtDate(iso){
   if(!iso) return '';
@@ -806,7 +952,9 @@ const tugOfWarAnnotations = {
   }
 };
 Chart.register(tugOfWarAnnotations);
-
+  
+const PBP_BASE_URL = 'https://raw.githubusercontent.com/20johnsonc/Field-Position-Site/main/pbp';
+  
 async function loadPbpModal(gameId, homeTeam, awayTeam) {
   document.getElementById('pbpModalTitle').innerText = `${awayTeam} @ ${homeTeam} — Cumulative PPA Tug-of-War`;
   document.getElementById('pbpModal').classList.add('active');
