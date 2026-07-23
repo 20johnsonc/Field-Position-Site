@@ -774,16 +774,65 @@ function renderMatchups(data){
     `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
 }
 
-/* --- PLAY-BY-PLAY TUG-OF-WAR MODAL --- */
+// Custom plugin: draws quarter dividers and top-3 big-play callouts directly on canvas
+const tugOfWarAnnotations = {
+  id: 'tugOfWarAnnotations',
+  afterDatasetsDraw(chart) {
+    const { ctx, chartArea, scales } = chart;
+    const { quarterBreaks, bigPlays } = chart.config.options.plugins.tugOfWarAnnotations || {};
+    if (!quarterBreaks && !bigPlays) return;
+
+    ctx.save();
+
+    // Quarter divider lines
+    if (quarterBreaks) {
+      quarterBreaks.forEach(({ index, label }) => {
+        const x = scales.x.getPixelForValue(index);
+        ctx.strokeStyle = 'rgba(138,154,139,0.4)';
+        ctx.setLineDash([3, 3]);
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x, chartArea.top);
+        ctx.lineTo(x, chartArea.bottom);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = '#8a9a8b';
+        ctx.font = 'bold 10px JetBrains Mono, monospace';
+        ctx.fillText(label, x + 4, chartArea.top + 12);
+      });
+    }
+    ctx.restore();
+  }
+};
+Chart.register(tugOfWarAnnotations);
+
 async function loadPbpModal(gameId, homeTeam, awayTeam) {
   document.getElementById('pbpModalTitle').innerText = `${awayTeam} @ ${homeTeam} — Cumulative PPA Tug-of-War`;
   document.getElementById('pbpModal').classList.add('active');
 
   try {
-    const pbpData = await loadJSON(`pbp/${gameId}.json`);
-    
-    const labels = pbpData.map((_, idx) => `Play ${idx + 1}`);
+    const pbpData = await loadJSON(`${PBP_BASE_URL}/${gameId}.json`);
+
+    const labels = pbpData.map((_, idx) => idx + 1);
     const cumPpa = pbpData.map(p => p.cum_net_ppa);
+    const scoreDiff = pbpData.map(p => p.score_diff);
+
+    // Quarter break indices — first play of each new period
+    const quarterBreaks = [];
+    let lastPeriod = null;
+    pbpData.forEach((p, idx) => {
+      if (p.period !== lastPeriod && idx > 0) {
+        quarterBreaks.push({ index: idx, label: `Q${p.period}` });
+      }
+      lastPeriod = p.period;
+    });
+
+    // Top 3 plays by absolute PPA
+    const bigPlays = pbpData
+      .map((p, idx) => ({ index: idx, value: p.cum_net_ppa, ppa: p.net_ppa, text: p.playText || `${p.net_ppa >= 0 ? '+' : ''}${p.net_ppa.toFixed(2)} PPA` }))
+      .sort((a, b) => Math.abs(b.ppa) - Math.abs(a.ppa))
+      .slice(0, 3);
 
     const ctx = document.getElementById('pbpChart').getContext('2d');
     if (pbpChartInstance) pbpChartInstance.destroy();
@@ -791,43 +840,63 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
     pbpChartInstance = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: labels,
-        datasets: [{
-          label: `Cumulative PPA (+ = ${homeTeam}, - = ${awayTeam})`,
-          data: cumPpa,
-          borderColor: '#e0a13d',
-          backgroundColor: 'rgba(224, 161, 61, 0.1)',
-          fill: true,
-          tension: 0.1,
-          pointRadius: 0
-        }]
+        labels,
+        datasets: [
+          {
+            label: `Cumulative PPA (+ ${homeTeam} / − ${awayTeam})`,
+            data: cumPpa,
+            borderColor: '#e0a13d',
+            backgroundColor: 'rgba(224,161,61,0.12)',
+            fill: true,
+            tension: 0.15,
+            pointRadius: 0,
+            yAxisID: 'y',
+          },
+          {
+            label: 'Score Differential',
+            data: scoreDiff,
+            borderColor: '#d62728',
+            borderDash: [4, 2],
+            borderWidth: 2,
+            fill: false,
+            pointRadius: 0,
+            yAxisID: 'y1',
+          },
+        ],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
         scales: {
-          x: {
-            grid: { color: 'rgba(138,154,139,0.15)' },
-            ticks: { color: '#f4f0e1' }
-          },
+          x: { grid: { color: 'rgba(138,154,139,0.1)' }, ticks: { color: '#8a9a8b', maxTicksLimit: 12 } },
           y: {
+            position: 'left',
             grid: { color: 'rgba(138,154,139,0.15)' },
-            ticks: { color: '#f4f0e1' },
-            title: { display: true, text: `Net Cumulative PPA (Favors ${homeTeam} ↑ / ${awayTeam} ↓)`, color: '#f4f0e1' }
-          }
+            ticks: { color: '#e0a13d' },
+            title: { display: true, text: `← ${awayTeam}  |  Net PPA  |  ${homeTeam} →`, color: '#f4f0e1' },
+          },
+          y1: {
+            position: 'right',
+            grid: { drawOnChartArea: false },
+            ticks: { color: '#d62728' },
+            title: { display: true, text: `← ${awayTeam} lead  |  Score  |  ${homeTeam} lead →`, color: '#d62728' },
+          },
         },
         plugins: {
+          legend: { labels: { color: '#f4f0e1' } },
+          tugOfWarAnnotations: { quarterBreaks, bigPlays },
           tooltip: {
             callbacks: {
               afterBody: (items) => {
                 const idx = items[0].dataIndex;
                 const play = pbpData[idx];
-                return `Play: ${play.playText || 'N/A'}\nScore Diff: ${play.score_diff}`;
-              }
-            }
-          }
-        }
-      }
+                return `${play.playText || ''}`;
+              },
+            },
+          },
+        },
+      },
     });
   } catch (e) {
     alert('Play-by-play data not found for this game.');
