@@ -365,6 +365,9 @@
       <select id="weekFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
         <option value="">All Weeks</option>
       </select>
+      <select id="conferenceFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+        <option value="">All Conferences</option>
+      </select>
     </div>
     <div class="matchup-grid" id="matchupGrid">
       <div class="empty">Loading matchups…</div>
@@ -594,10 +597,13 @@ function gauge({value, min, max, favorTag, unit}) {
 
 function populateMatchupFilters(games) {
   const weeks = [...new Set(games.map(g => g.week))].filter(w => w != null).sort((a, b) => a - b);
+  const conferences = [...new Set(games.map(g => g.conference))].filter(w => w != null).sort((a, b) => a - b);
   const weekSel = document.getElementById('weekFilter');
+  const conferenceSel = document.getElementById('conferenceFilter');
   
   // Keep the "All Weeks" default option
   weekSel.innerHTML = '<option value="">All Weeks</option>';
+  conferenceSel.innerHTML = '<option value="">All Conferences</option>';
 
   weeks.forEach(w => {
     const opt = document.createElement('option');
@@ -605,14 +611,23 @@ function populateMatchupFilters(games) {
     weekSel.appendChild(opt);
   });
 
+  conferences.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c; opt.textContent = `${w}`;
+    ConferenceSel.appendChild(opt);
+  });
+
   weekSel.addEventListener('change', applyMatchupFilters);
+  conferenceSel.addEventListener('change', applyMatchupFilters);
 }
 
 function applyMatchupFilters() {
   const weekVal = document.getElementById('weekFilter').value;
+  const conferenceVal = document.getElementById('conferenceFilter').value;
 
   const filtered = globalMatchupsData.filter(g => {
     const weekMatch = !weekVal || String(g.week) === weekVal;
+    weekMatch = != conferenceVal || String(g.conference) === conferenceVal;
     return weekMatch;
   });
 
