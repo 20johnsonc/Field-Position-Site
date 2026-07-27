@@ -597,24 +597,26 @@ function gauge({value, min, max, favorTag, unit}) {
 
 function populateMatchupFilters(games) {
   const weeks = [...new Set(games.map(g => g.week))].filter(w => w != null).sort((a, b) => a - b);
-  const conferences = [...new Set(games.map(g => g.conference))].filter(w => w != null).sort((a, b) => a - b);
+  const conferences = [...new Set(games.map(g => g.conference))].filter(c => c != null).sort();
+
   const weekSel = document.getElementById('weekFilter');
   const conferenceSel = document.getElementById('conferenceFilter');
-  
-  // Keep the "All Weeks" default option
+
   weekSel.innerHTML = '<option value="">All Weeks</option>';
   conferenceSel.innerHTML = '<option value="">All Conferences</option>';
 
   weeks.forEach(w => {
     const opt = document.createElement('option');
-    opt.value = w; opt.textContent = `Week ${w}`;
+    opt.value = w;
+    opt.textContent = `Week ${w}`;
     weekSel.appendChild(opt);
   });
 
   conferences.forEach(c => {
     const opt = document.createElement('option');
-    opt.value = c; opt.textContent = `${w}`;
-    ConferenceSel.appendChild(opt);
+    opt.value = c;
+    opt.textContent = c;
+    conferenceSel.appendChild(opt);
   });
 
   weekSel.addEventListener('change', applyMatchupFilters);
@@ -627,13 +629,13 @@ function applyMatchupFilters() {
 
   const filtered = globalMatchupsData.filter(g => {
     const weekMatch = !weekVal || String(g.week) === weekVal;
-    weekMatch = != conferenceVal || String(g.conference) === conferenceVal;
-    return weekMatch;
+    const confMatch = !conferenceVal || String(g.conference) === conferenceVal;
+    return weekMatch && confMatch;
   });
 
   renderMatchupCards(filtered);
 }
-
+  
 /* --- REFACTORED MATCHUP RENDERING --- */
 function renderMatchups(data) {
   globalMatchupsData = data.games;
