@@ -878,124 +878,162 @@ Chart.register(tugOfWarAnnotations);
 const PBP_BASE_URL = 'https://raw.githubusercontent.com/20johnsonc/Field-Position-Site/main/pbp';
 
 async function loadPbpModal(gameId, homeTeam, awayTeam) {
-  document.getElementById('pbpModalTitle').innerText = `${awayTeam} @ ${homeTeam} — Cumulative PPA Tug-of-War`;
-  document.getElementById('pbpModal').classList.add('active');
+  const modal = document.getElementById('pbpModal');
+  const title = document.getElementById('pbpModalTitle');
+  title.innerText = `${awayTeam} @ ${homeTeam} — Game Flow & Momentum`;
+  modal.classList.add('active');
 
   try {
-    const pbpData = await loadJSON(`${PBP_BASE_URL}/${gameId}.json`);
-
-    const labels = pbpData.map((_, idx) => idx + 1);
-    const cumPpa = pbpData.map(p => p.cum_net_ppa);
-    const scoreDiff = pbpData.map(p => p.score_diff);
-
-    const quarterBreaks = [];
-    let lastPeriod = null;
-    pbpData.forEach((p, idx) => {
-      if (p.period !== lastPeriod && idx > 0) {
-        quarterBreaks.push({ index: idx, label: `Q${p.period}` });
-      }
-      lastPeriod = p.period;
-    });
-
+    const pbpData = await loadJSON(`pbp_${gameId}.json`);
     const ctx = document.getElementById('pbpChart').getContext('2d');
-    if (pbpChartInstance) pbpChartInstance.destroy();
 
-    // Calculate max absolute values to keep both axes centered around 0
-    const maxPpa = Math.max(...pbpData.map(d => Math.abs(d.cum_ppa || 0)), 1);
-    const maxDiff = Math.max(...pbpData.map(d => Math.abs(d.score_diff || 0)), 1);
-    
-    if (pbpChartInstance) pbpChartInstance.destroy();
-    
+    const ppaValues = pbpData.map(d => Number(d.cum_ppa) || 0);
+    const scoreDiffValues = pbpData.map(d => Number(d.score_diff) || 0);
+    const labels = pbpData.map((d, i) => d.play_number || i + 1);
+
+    // Dynamic symmetrical max bounds to keep 0 centered on both axes
+    const maxPpa = Math.max(1, ...ppaValues.map(Math.abs));
+    const maxDiff = Math.max(1, ...scoreDiffValues.map(Math.abs));
+
+    if (pbpChartInstance) {
+      pbpChartInstance.destroy();
+    }
+
     pbpChartInstance = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: pbpData.map((_, index) => index + 1), // Play number
+        labels: labels,
         datasets: [
           {
-            label: 'Cumulative PPA',
-            data: pbpData.map(d => d.cum_ppa),
-            borderColor: '#e0a13d',
-            backgroundColor: 'rgba(224, 161, 61, 0.1)',
-            fill: true,
-            yAxisID: 'y', // Primary axis
-            tension: 0.2
+            label: `${homeTeam} Efficiency (+ PPA)`,
+            data: ppaValues.map(v => v >= 0 ? v : 0),
+            backgroundColor: 'rgba(31, 119, 180, 0.35)', // Home Blue
+            borderColor: 'transparent',
+            fill: 'origin',
+            pointRadius: 0,
+            yAxisID: 'y'
           },
           {
-            label: 'Score Differential',
-            data: pbpData.map(d => d.score_diff),
-            borderColor: '#5f9e6f',
-            borderDash: [5, 5],
+            label: `${awayTeam} Efficiency (- PPA)`,
+            data: ppaValues.map(v => v < 0 ? v : 0),
+            backgroundColor: 'rgba(255, 127, 14, 0.35)', // Away Orange
+            borderColor: 'transparent',
+            fill: 'origin',
+            pointRadius: 0,
+            yAxisID: 'y'
+          },
+          {
+            label: 'Net Momentum Advantage',
+            data: ppaValues,
+            borderColor: '#333333',
+            borderWidth: 2.5,
             fill: false,
-            yAxisID: 'y1', // Secondary axis
-            tension: 0
+            pointRadius: 0,
+            pointHoverRadius: 5,
+            tension: 0.1,
+            yAxisID: 'y'
+          },
+          {
+            label: 'Actual Score Lead',
+            data: scoreDiffValues,
+            borderColor: '#d62728', // Red line
+            borderWidth: 2,
+            borderDash: [6, 4],
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 5,
+            tension: 0,
+            yAxisID: 'y1'
           }
         ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            align: 'center',
+            labels: {
+              color: '#333333',
+              font: { family: 'Inter, sans-serif', size: 12, weight: '500' },
+              padding: 14,
+              usePointStyle: true,
+              // Filter out the two background shade fills from the legend if you want a cleaner look:
+              filter: (item) => !item.text.includes('Efficiency')
+            }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            titleColor: '#111111',
+            bodyColor: '#333333',
+            borderColor: '#cccccc',
+            borderWidth: 1,
+            padding: 10,
+            callbacks: {
+              title: (items) => `Play #${items[0].label}`,
+              label: (context) => {
+                const val = context.raw;
+                if (context.dataset.label === 'Net Momentum Advantage') {
+                  const leader = val >= 0 ? homeTeam : awayTeam;
+                  return `Momentum: ${leader} +${Math.abs(val).toFixed(2)} PPA`;
+                }
+                if (context.dataset.label === 'Actual Score Lead') {
+                  if (val === 0) return `Score: Tied`;
+                  const leader = val > 0 ? homeTeam : awayTeam;
+                  return `Score: ${leader} +${Math.abs(val)} pts`;
+                }
+                return null;
+              }
+            }
+          }
+        },
         scales: {
           x: {
-            title: { display: true, text: 'Play Number', color: '#f4f0e1' },
-            grid: { color: 'rgba(138,154,139,0.15)' },
-            ticks: { color: '#f4f0e1' }
+            title: { display: true, text: 'Play Number (Chronological)', color: '#333333', font: { weight: 'bold' } },
+            grid: { color: '#e5e5e5' },
+            ticks: { color: '#333333' }
           },
           y: {
             type: 'linear',
             position: 'left',
-            // Force 0 to stay in the exact center of the chart height
-            min: -maxPpa * 1.2,
+            min: -(maxPpa * 1.2),
             max: maxPpa * 1.2,
-            title: { display: true, text: 'Cumulative PPA', color: '#e0a13d' },
-            grid: { color: 'rgba(138,154,139,0.2)' },
-            ticks: { color: '#e0a13d' }
+            title: { 
+              display: true, 
+              text: `← ${awayTeam} Advantage  |  Offensive Momentum (PPA)  |  ${homeTeam} Advantage →`, 
+              color: '#333333', 
+              font: { weight: 'bold', size: 12 } 
+            },
+            grid: { color: '#e5e5e5' },
+            ticks: { color: '#333333' }
           },
           y1: {
             type: 'linear',
             position: 'right',
-            // Force 0 to stay in the exact center to align with the primary 'y' axis
-            min: -maxDiff * 1.2,
+            min: -(maxDiff * 1.2),
             max: maxDiff * 1.2,
-            title: { display: true, text: 'Score Differential', color: '#5f9e6f' },
-            grid: { drawOnChartArea: false }, // Prevent overlapping grid lines
-            ticks: { color: '#5f9e6f' }
+            title: { 
+              display: true, 
+              text: `← ${awayTeam} Lead  |  Score Differential (Points)  |  ${homeTeam} Lead →`, 
+              color: '#d62728', 
+              font: { weight: 'bold', size: 12 } 
+            },
+            grid: { drawOnChartArea: false }, // Avoid duplicate grid lines
+            ticks: { color: '#d62728' }
           }
         }
       }
     });
-  } catch (e) {
-    // If the live JSON file isn't available, draw a dummy chart to prevent breaking the UI
-    console.warn('Play-by-play data fetch failed. Drawing demo chart instead.');
-    const ctx = document.getElementById('pbpChart').getContext('2d');
-    if (pbpChartInstance) pbpChartInstance.destroy();
-    
-    pbpChartInstance = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Q1', 'Q2', 'Half', 'Q3', 'Q4'],
-        datasets: [{
-          label: 'Game Flow (Demo Data)',
-          data: [0, 5, -2, 10, 14], 
-          borderColor: '#e0a13d',
-          backgroundColor: 'rgba(224, 161, 61, 0.1)',
-          fill: true,
-          tension: 0.4
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { labels: { color: '#f4f0e1' } } },
-        scales: {
-          x: { ticks: { color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' } },
-          y: { 
-            title: { display: true, text: 'Cumulative Win Probability Added', color: '#f4f0e1' },
-            ticks: { color: '#f4f0e1' }, 
-            grid: { color: 'rgba(138,154,139,0.15)' } 
-          }
-        }
-      }
-    });
+  } catch (err) {
+    console.error(err);
+    document.getElementById('pbpChart').parentNode.innerHTML = 
+      `<div class="empty">Play-by-play data not available for this game.</div>`;
   }
 }
 
