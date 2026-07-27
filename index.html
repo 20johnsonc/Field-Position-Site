@@ -880,18 +880,31 @@ const PBP_BASE_URL = 'https://raw.githubusercontent.com/20johnsonc/Field-Positio
 async function loadPbpModal(gameId, homeTeam, awayTeam) {
   const modal = document.getElementById('pbpModal');
   const title = document.getElementById('pbpModalTitle');
+  const chartContainer = document.getElementById('pbpChart').parentNode;
+  
+  // Re-create canvas element dynamically so previous errors don't break future loads
+  chartContainer.innerHTML = '<canvas id="pbpChart"></canvas>';
+  
   title.innerText = `${awayTeam} @ ${homeTeam} — Game Flow & Momentum`;
   modal.classList.add('active');
 
   try {
-    const pbpData = await loadJSON(`pbp_${gameId}.json`);
+    // Look inside the 'pbp' folder (handles both pbp/pbp_12345.json or pbp/12345.json)
+    let pbpData;
+    try {
+      pbpData = await loadJSON(`pbp/pbp_${gameId}.json`);
+    } catch (e) {
+      pbpData = await loadJSON(`pbp/${gameId}.json`);
+    }
+
     const ctx = document.getElementById('pbpChart').getContext('2d');
 
-    const ppaValues = pbpData.map(d => Number(d.cum_ppa) || 0);
-    const scoreDiffValues = pbpData.map(d => Number(d.score_diff) || 0);
-    const labels = pbpData.map((d, i) => d.play_number || i + 1);
+    // Robust mapping for varying JSON key names
+    const ppaValues = pbpData.map(d => Number(d.cum_ppa ?? d.cum_net_ppa ?? d.net_ppa ?? d.ppa ?? 0));
+    const scoreDiffValues = pbpData.map(d => Number(d.score_diff ?? d.margin ?? 0));
+    const labels = pbpData.map((d, i) => d.play_number || d.play_num || i + 1);
 
-    // Dynamic symmetrical max bounds to keep 0 centered on both axes
+    // Compute symmetrical max bounds to align 0 on both axes precisely in the vertical center
     const maxPpa = Math.max(1, ...ppaValues.map(Math.abs));
     const maxDiff = Math.max(1, ...scoreDiffValues.map(Math.abs));
 
@@ -936,7 +949,7 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
           {
             label: 'Actual Score Lead',
             data: scoreDiffValues,
-            borderColor: '#d62728', // Red line
+            borderColor: '#d62728', // Score diff Red line
             borderWidth: 2,
             borderDash: [6, 4],
             fill: false,
@@ -964,7 +977,6 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
               font: { family: 'Inter, sans-serif', size: 12, weight: '500' },
               padding: 14,
               usePointStyle: true,
-              // Filter out the two background shade fills from the legend if you want a cleaner look:
               filter: (item) => !item.text.includes('Efficiency')
             }
           },
@@ -1024,7 +1036,7 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
               color: '#d62728', 
               font: { weight: 'bold', size: 12 } 
             },
-            grid: { drawOnChartArea: false }, // Avoid duplicate grid lines
+            grid: { drawOnChartArea: false },
             ticks: { color: '#d62728' }
           }
         }
@@ -1032,7 +1044,7 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
     });
   } catch (err) {
     console.error(err);
-    document.getElementById('pbpChart').parentNode.innerHTML = 
+    chartContainer.innerHTML = 
       `<div class="empty">Play-by-play data not available for this game.</div>`;
   }
 }
