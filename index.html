@@ -900,66 +900,68 @@ async function loadPbpModal(gameId, homeTeam, awayTeam) {
     const ctx = document.getElementById('pbpChart').getContext('2d');
     if (pbpChartInstance) pbpChartInstance.destroy();
 
+    // Calculate max absolute values to keep both axes centered around 0
+    const maxPpa = Math.max(...pbpData.map(d => Math.abs(d.cum_ppa || 0)), 1);
+    const maxDiff = Math.max(...pbpData.map(d => Math.abs(d.score_diff || 0)), 1);
+    
+    if (pbpChartInstance) pbpChartInstance.destroy();
+    
     pbpChartInstance = new Chart(ctx, {
       type: 'line',
       data: {
-        labels,
+        labels: pbpData.map((_, index) => index + 1), // Play number
         datasets: [
           {
-            label: `Cumulative PPA (+ ${homeTeam} / − ${awayTeam})`,
-            data: cumPpa,
+            label: 'Cumulative PPA',
+            data: pbpData.map(d => d.cum_ppa),
             borderColor: '#e0a13d',
-            backgroundColor: 'rgba(224,161,61,0.12)',
+            backgroundColor: 'rgba(224, 161, 61, 0.1)',
             fill: true,
-            tension: 0.15,
-            pointRadius: 0,
-            yAxisID: 'y',
+            yAxisID: 'y', // Primary axis
+            tension: 0.2
           },
           {
             label: 'Score Differential',
-            data: scoreDiff,
-            borderColor: '#d62728',
-            borderDash: [4, 2],
-            borderWidth: 2,
+            data: pbpData.map(d => d.score_diff),
+            borderColor: '#5f9e6f',
+            borderDash: [5, 5],
             fill: false,
-            pointRadius: 0,
-            yAxisID: 'y1',
-          },
-        ],
+            yAxisID: 'y1', // Secondary axis
+            tension: 0
+          }
+        ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
         scales: {
-          x: { grid: { color: 'rgba(138,154,139,0.1)' }, ticks: { color: '#8a9a8b', maxTicksLimit: 12 } },
-          y: {
-            position: 'left',
+          x: {
+            title: { display: true, text: 'Play Number', color: '#f4f0e1' },
             grid: { color: 'rgba(138,154,139,0.15)' },
-            ticks: { color: '#e0a13d' },
-            title: { display: true, text: `← ${awayTeam}  |  Net PPA  |  ${homeTeam} →`, color: '#f4f0e1' },
+            ticks: { color: '#f4f0e1' }
+          },
+          y: {
+            type: 'linear',
+            position: 'left',
+            // Force 0 to stay in the exact center of the chart height
+            min: -maxPpa * 1.2,
+            max: maxPpa * 1.2,
+            title: { display: true, text: 'Cumulative PPA', color: '#e0a13d' },
+            grid: { color: 'rgba(138,154,139,0.2)' },
+            ticks: { color: '#e0a13d' }
           },
           y1: {
+            type: 'linear',
             position: 'right',
-            grid: { drawOnChartArea: false },
-            ticks: { color: '#d62728' },
-            title: { display: true, text: `← ${awayTeam} lead  |  Score  |  ${homeTeam} lead →`, color: '#d62728' },
-          },
-        },
-        plugins: {
-          legend: { labels: { color: '#f4f0e1' } },
-          tugOfWarAnnotations: { quarterBreaks },
-          tooltip: {
-            callbacks: {
-              afterBody: (items) => {
-                const idx = items[0].dataIndex;
-                const play = pbpData[idx];
-                return `${play.playText || ''}`;
-              },
-            },
-          },
-        },
-      },
+            // Force 0 to stay in the exact center to align with the primary 'y' axis
+            min: -maxDiff * 1.2,
+            max: maxDiff * 1.2,
+            title: { display: true, text: 'Score Differential', color: '#5f9e6f' },
+            grid: { drawOnChartArea: false }, // Prevent overlapping grid lines
+            ticks: { color: '#5f9e6f' }
+          }
+        }
+      }
     });
   } catch (e) {
     // If the live JSON file isn't available, draw a dummy chart to prevent breaking the UI
