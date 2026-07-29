@@ -335,6 +335,18 @@
 
 <main>
   <section id="rankingsSection" class="active">
+    <div class="controls">
+      <!-- Add Year Filter -->
+      <select id="rankingsYearFilter" onchange="applyRankingsFilters()">
+        <option value="ALL">All Years</option>
+      </select>
+    
+      <!-- Existing Controls -->
+      <input type="text" id="rankingsSearch" placeholder="Search team..." oninput="applyRankingsFilters()" />
+      <select id="rankingsConfFilter" onchange="applyRankingsFilters()">
+        <option value="ALL">All Conferences</option>
+      </select>
+    </div>
     <table class="rank-table">
       <thead>
         <tr>
@@ -360,12 +372,18 @@
   </section>
 
   <section id="matchupsSection">
-    <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
-      <select id="weekFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
-        <option value="">All Weeks</option>
+    <div class="controls">
+      <!-- Add Year Filter -->
+      <select id="matchupYearFilter" onchange="applyMatchupFilters()">
+        <option value="ALL">All Years</option>
       </select>
-      <select id="conferenceFilter" style="background: var(--field); color: var(--chalk); border: 1px solid var(--hash); padding: 8px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
-        <option value="">All Conferences</option>
+    
+      <!-- Existing Controls -->
+      <select id="confFilter" onchange="applyMatchupFilters()">
+        <option value="ALL">All Conferences</option>
+      </select>
+      <select id="weekFilter" onchange="applyMatchupFilters()">
+        <option value="ALL">All Weeks</option>
       </select>
     </div>
     <div class="matchup-grid" id="matchupGrid">
@@ -434,6 +452,147 @@ function renderRankings(data) {
 
   globalRankingsData.forEach(t => {
     // Read exact keys from your JSON schema with safe fallbacks
+    const rank = t["Rank"] ?? t.rank ?? '—';
+    const team = t["Team"] ?? t.team ?? 'Unknown';
+    const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
+    const offRating = Number(t["Offense rating"] ?? t.adj_off ?? 0);
+    const defRating = Number(t["Defense rating"] ?? t.adj_def ?? 0);
+    const tempo = Number(t["Adjusted Tempo"] ?? t.elo ?? 0);
+    const record = t["W-L Record"] ?? t.talent ?? '—';
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="rank">${rank}</td>
+      <td class="team">${team}</td>
+      <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(2)}</td>
+      <td class="num">${offRating.toFixed(1)}</td>
+      <td class="num">${defRating.toFixed(1)}</td>
+      <td class="num">${tempo.toFixed(1)}</td>
+      <td class="num">${record}</td>
+    `;
+    body.appendChild(tr);
+  });
+}
+
+// --- POPULATE YEAR FILTERS ---
+function populateYearFilters() {
+  // Extract unique years from Matchups
+  const matchupYears = new Set();
+  if (window.globalMatchupsData) {
+    window.globalMatchupsData.forEach(g => {
+      const yr = g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : null);
+      if (yr) matchupYears.add(yr);
+    });
+  }
+
+  // Populate Matchup Year Dropdown
+  const mYearSelect = document.getElementById('matchupYearFilter');
+  if (mYearSelect) {
+    const currentVal = mYearSelect.value;
+    mYearSelect.innerHTML = '<option value="ALL">All Years</option>';
+    Array.from(matchupYears).sort((a, b) => b - a).forEach(yr => {
+      const opt = document.createElement('option');
+      opt.value = yr;
+      opt.textContent = yr;
+      mYearSelect.appendChild(opt);
+    });
+    if (currentVal) mYearSelect.value = currentVal;
+  }
+
+  // Extract unique years from Rankings
+  const rankingsYears = new Set();
+  if (window.globalRankingsData) {
+    window.globalRankingsData.forEach(t => {
+      const yr = t["Season"] || t["year"] || t.year || t.season;
+      if (yr) rankingsYears.add(yr);
+    });
+  }
+
+  // Populate Rankings Year Dropdown
+  const rYearSelect = document.getElementById('rankingsYearFilter');
+  if (rYearSelect) {
+    const currentVal = rYearSelect.value;
+    rYearSelect.innerHTML = '<option value="ALL">All Years</option>';
+    Array.from(rankingsYears).sort((a, b) => b - a).forEach(yr => {
+      const opt = document.createElement('option');
+      opt.value = yr;
+      opt.textContent = yr;
+      rYearSelect.appendChild(opt);
+    });
+    if (currentVal) rYearSelect.value = currentVal;
+  }
+}
+
+// --- APPLY MATCHUP FILTERS ---
+function applyMatchupFilters() {
+  const selectedYear = document.getElementById('matchupYearFilter')?.value || 'ALL';
+  const selectedConf = document.getElementById('confFilter')?.value || 'ALL';
+  const selectedWeek = document.getElementById('weekFilter')?.value || 'ALL';
+
+  // Build team-to-conference lookup map
+  const teamConfMap = {};
+  if (window.globalRankingsData && Array.isArray(window.globalRankingsData)) {
+    window.globalRankingsData.forEach(t => {
+      const teamName = t["Team"] || t.team;
+      const confName = t["Conference"] || t.conference;
+      if (teamName && confName) teamConfMap[teamName] = confName;
+    });
+  }
+
+  const filtered = globalMatchupsData.filter(g => {
+    const homeTeam = g.home_team || g.homeTeam;
+    const awayTeam = g.away_team || g.awayTeam;
+
+    const homeConf = g.home_conference || teamConfMap[homeTeam];
+    const awayConf = g.away_conference || teamConfMap[awayTeam];
+
+    const gameYear = String(g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : ''));
+
+    const matchesYear = (selectedYear === 'ALL') || (gameYear === String(selectedYear));
+    const matchesConf = (selectedConf === 'ALL') || (homeConf === selectedConf || awayConf === selectedConf);
+    const matchesWeek = (selectedWeek === 'ALL') || (String(g.week) === String(selectedWeek));
+
+    return matchesYear && matchesConf && matchesWeek;
+  });
+
+  renderMatchupCards(filtered);
+}
+
+// --- APPLY RANKINGS FILTERS ---
+function applyRankingsFilters() {
+  const selectedYear = document.getElementById('rankingsYearFilter')?.value || 'ALL';
+  const selectedConf = document.getElementById('rankingsConfFilter')?.value || 'ALL';
+  const searchQuery = document.getElementById('rankingsSearch')?.value.toLowerCase().trim() || '';
+
+  if (!window.globalRankingsData) return;
+
+  const filtered = window.globalRankingsData.filter(t => {
+    const teamName = (t["Team"] || t.team || '').toLowerCase();
+    const teamConf = t["Conference"] || t.conference || '';
+    const teamYear = String(t["Season"] || t["year"] || t.year || t.season || '');
+
+    const matchesYear = (selectedYear === 'ALL') || (teamYear === String(selectedYear));
+    const matchesConf = (selectedConf === 'ALL') || (teamConf === selectedConf);
+    const matchesSearch = !searchQuery || teamName.includes(searchQuery);
+
+    return matchesYear && matchesConf && matchesSearch;
+  });
+
+  renderRankingsTable(filtered);
+}
+
+// --- RENDER RANKINGS TABLE ---
+function renderRankingsTable(data) {
+  const body = document.getElementById('rankingsBody');
+  if (!body) return;
+  body.innerHTML = '';
+
+  if (!data || !data.length) {
+    body.innerHTML = '<tr><td colspan="7" class="empty">No rankings found matching filters.</td></tr>';
+    return;
+  }
+
+  data.forEach(t => {
     const rank = t["Rank"] ?? t.rank ?? '—';
     const team = t["Team"] ?? t.team ?? 'Unknown';
     const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
@@ -604,44 +763,44 @@ function gauge({value, min, max, favorTag, unit}) {
 }
 
 function populateMatchupFilters(games) {
-  const weeks = [...new Set(games.map(g => g.week))].filter(w => w != null).sort((a, b) => a - b);
-  const conferences = [...new Set(games.map(g => g.conference))].filter(c => c != null).sort();
+  const confSelect = document.getElementById('confFilter');
+  if (!confSelect) return;
 
-  const weekSel = document.getElementById('weekFilter');
-  const conferenceSel = document.getElementById('conferenceFilter');
+  // Build a lookup map of Team Name -> Conference from loaded Rankings data
+  const teamConfMap = {};
+  if (window.globalRankingsData && Array.isArray(window.globalRankingsData)) {
+    window.globalRankingsData.forEach(t => {
+      const teamName = t["Team"] || t.team;
+      const confName = t["Conference"] || t.conference;
+      if (teamName && confName) {
+        teamConfMap[teamName] = confName;
+      }
+    });
+  }
 
-  weekSel.innerHTML = '<option value="">All Weeks</option>';
-  conferenceSel.innerHTML = '<option value="">All Conferences</option>';
+  const conferences = new Set();
 
-  weeks.forEach(w => {
+  games.forEach(g => {
+    const homeTeam = g.home_team || g.homeTeam;
+    const awayTeam = g.away_team || g.awayTeam;
+
+    // Check direct game conference properties first, then check team lookup map
+    const homeConf = g.home_conference || teamConfMap[homeTeam];
+    const awayConf = g.away_conference || teamConfMap[awayTeam];
+
+    if (homeConf) conferences.add(homeConf);
+    if (awayConf) conferences.add(awayConf);
+  });
+
+  // Keep existing "All Conferences" option and append sorted options
+  confSelect.innerHTML = '<option value="ALL">All Conferences</option>';
+  
+  Array.from(conferences).sort().forEach(conf => {
     const opt = document.createElement('option');
-    opt.value = w;
-    opt.textContent = `Week ${w}`;
-    weekSel.appendChild(opt);
+    opt.value = conf;
+    opt.textContent = conf;
+    confSelect.appendChild(opt);
   });
-
-  conferences.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c;
-    opt.textContent = c;
-    conferenceSel.appendChild(opt);
-  });
-
-  weekSel.addEventListener('change', applyMatchupFilters);
-  conferenceSel.addEventListener('change', applyMatchupFilters);
-}
-
-function applyMatchupFilters() {
-  const weekVal = document.getElementById('weekFilter').value;
-  const conferenceVal = document.getElementById('conferenceFilter').value;
-
-  const filtered = globalMatchupsData.filter(g => {
-    const weekMatch = !weekVal || String(g.week) === weekVal;
-    const confMatch = !conferenceVal || String(g.conference) === conferenceVal;
-    return weekMatch && confMatch;
-  });
-
-  renderMatchupCards(filtered);
 }
   
 /* --- REFACTORED MATCHUP RENDERING --- */
@@ -1103,6 +1262,12 @@ async function init(){
     renderRankings(mockRankings);
     renderMatchups(mockMatchups);
     initKenpomChart(mockRankings.teams);
+
+    // Example in your init / fetch complete block:
+    populateMatchupFilters(globalMatchupsData);
+    populateYearFilters();
+    applyMatchupFilters();
+    applyRankingsFilters();
   }
 }
 
