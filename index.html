@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Field Position — Analytics Dashboard</title>
-  
+
   <!-- Google Fonts & Chart.js -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +13,13 @@
 
   <style>
     :root {
-      --bg-dark: #0b0f19;
+      --bg: #0b0f19;
       --card-bg: rgba(22, 30, 46, 0.8);
       --card-border: rgba(255, 255, 255, 0.08);
-      --accent-blue: #3b82f6;
-      --accent-blue-hover: #2563eb;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
       --accent-cyan: #06b6d4;
-      --text-main: #f3f4f6;
+      --text: #f3f4f6;
       --text-muted: #9ca3af;
       --badge-bg: rgba(255, 255, 255, 0.05);
       --input-bg: rgba(15, 23, 42, 0.7);
@@ -33,8 +33,8 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-main);
+      background-color: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -72,7 +72,7 @@
 
     .year-badge {
       background: rgba(59, 130, 246, 0.15);
-      color: var(--accent-blue);
+      color: var(--accent);
       border: 1px solid rgba(59, 130, 246, 0.3);
       padding: 6px 14px;
       border-radius: 20px;
@@ -99,18 +99,18 @@
     }
 
     .tab-btn:hover {
-      color: var(--text-main);
+      color: var(--text);
       border-color: rgba(255, 255, 255, 0.2);
     }
 
     .tab-btn.active {
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      background: linear-gradient(135deg, var(--accent), var(--accent-cyan));
       color: #fff;
       border-color: transparent;
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     }
 
-    /* Controls & Themed Filter Selects */
+    /* Controls & Filter Inputs */
     .controls {
       display: flex;
       flex-wrap: wrap;
@@ -122,41 +122,22 @@
       border: 1px solid var(--card-border);
     }
 
-    /* Styled Select / Filter Inputs */
-    .controls select {
+    .controls select, .controls input {
       background-color: var(--input-bg);
-      color: var(--text-main);
+      color: var(--text);
       border: 1px solid var(--card-border);
-      padding: 10px 36px 10px 14px;
+      padding: 10px 14px;
       border-radius: 8px;
       font-family: inherit;
       font-size: 0.875rem;
       font-weight: 500;
-      cursor: pointer;
       outline: none;
       transition: all 0.2s ease;
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3C9ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
       min-width: 160px;
     }
 
-    .controls select:hover {
-      border-color: rgba(59, 130, 246, 0.5);
-      background-color: rgba(30, 41, 59, 0.8);
-    }
-
-    .controls select:focus {
-      border-color: var(--accent-blue);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-    }
-
-    .controls select option {
-      background-color: #0f172a;
-      color: var(--text-main);
-      padding: 8px;
+    .controls select:focus, .controls input:focus {
+      border-color: var(--accent);
     }
 
     /* Tab Content Panels */
@@ -198,7 +179,7 @@
     }
 
     .rank-table th:hover {
-      color: var(--text-main);
+      color: var(--text);
     }
 
     .rank-table tr:hover td {
@@ -244,6 +225,12 @@
       align-items: center;
     }
 
+    .matchup {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .matchup-names {
       font-weight: 700;
       font-size: 1.05rem;
@@ -285,11 +272,49 @@
       font-weight: 700;
     }
 
+    .prob-ring {
+      font-weight: 700;
+      color: var(--accent-cyan);
+      font-size: 0.9rem;
+    }
+
+    .prob-caption {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: -10px;
+      letter-spacing: 0.05em;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stat-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+    }
+
+    .stat-value {
+      font-weight: 600;
+    }
+
+    .na {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
     .pbp-btn {
       width: 100%;
       background: rgba(59, 130, 246, 0.1);
       border: 1px solid rgba(59, 130, 246, 0.3);
-      color: var(--accent-blue);
+      color: var(--accent);
       padding: 10px;
       border-radius: 8px;
       font-weight: 600;
@@ -298,7 +323,7 @@
     }
 
     .pbp-btn:hover {
-      background: var(--accent-blue);
+      background: var(--accent);
       color: #fff;
     }
 
@@ -451,7 +476,7 @@
     let pbpChartInstance = null;
     let sortDirection = {};
 
-    // Helper: Utility to fetch JSON safely
+    // Helper: Fetch JSON safely
     async function loadJSON(url) {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status} loading ${url}`);
@@ -465,9 +490,9 @@
       return isNaN(d) ? dStr : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
     }
 
-    // Gauge helper
+    // Gauge Component Generator
     function gauge({ value, min, max, favorTag, unit }) {
-      return ''; // Placeholder for visual spread gauge if needed
+      return ''; 
     }
 
     // Navigation Tabs
@@ -490,7 +515,6 @@
         const rankingsData = await loadJSON('rankings.json');
         window.globalRankingsData = rankingsData.teams || [];
         
-        // Header year check
         const yr = rankingsData.year || (rankingsData.generated_at ? new Date(rankingsData.generated_at).getFullYear() : 2026);
         document.getElementById('seasonYear').innerText = `${yr} Season`;
 
@@ -574,7 +598,7 @@
       });
     }
 
-    // Dynamically populates and trims team filter based on selected conference
+    // Populates team filter and trims it based on selected conference
     function populateTeamDropdown() {
       const teamSelect = document.getElementById('rankingsTeamFilter');
       const selectedConf = document.getElementById('rankingsConfFilter')?.value || 'ALL';
@@ -788,6 +812,13 @@
         }
 
         const dateTag = g.start_date ? fmtDate(g.start_date) : '';
+        const winProbNum = parseFloat(g.home_win_prob ?? g.win_prob ?? 50) || 50;
+
+        const mktSpreadText = (g.market_spread !== null && g.market_spread !== undefined) ? g.market_spread : '<span class="na">N/A</span>';
+        const mktTotalText = (g.market_total !== null && g.market_total !== undefined) ? g.market_total : '<span class="na">N/A</span>';
+        const predMargin = Number(g.predicted_margin ?? 0);
+        const modelSpread = -predMargin;
+        const predTotal = Number(g.predicted_total ?? (hasScores ? g.home_points + g.away_points : 0));
 
         card.innerHTML = `
           <div class="card-head">
@@ -802,8 +833,25 @@
               <div class="score-line">
                 <span>${scoreDisplay}</span>
               </div>
-              ${g.home_win_prob ? `<div class="badge">${Math.round(g.home_win_prob)}% Win Prob</div>` : ''}
+              ${g.home_win_prob ? `<div class="prob-ring"><span>${Math.round(winProbNum)}%</span></div>` : ''}
             </div>
+            ${g.home_win_prob ? `<div class="prob-caption"><b>${homeTeam.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>` : ''}
+
+            ${!hasScores && g.predicted_margin !== undefined ? `
+              <div class="stat" style="margin-top: 8px;">
+                <div class="stat-top">
+                  <span class="stat-label">Spread</span>
+                  <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
+                </div>
+              </div>
+
+              <div class="stat">
+                <div class="stat-top">
+                  <span class="stat-label">Total</span>
+                  <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${predTotal.toFixed(1)}</b></span>
+                </div>
+              </div>
+            ` : ''}
 
             <div class="verdict" style="margin-top: 12px; text-align: center;">
               <button class="pbp-btn" onclick="loadPbpModal('${gameId}', '${homeTeam}', '${awayTeam}')">
