@@ -338,14 +338,13 @@
     <table class="rank-table">
       <thead>
         <tr>
-          <th onclick="sortTable('rank')" style="cursor: pointer;"># ⇕</th>
-          <th onclick="sortTable('team')" style="cursor: pointer;">Team ⇕</th>
-          <th onclick="sortTable('power_rating')" style="text-align: right; cursor: pointer;">Rating ⇕</th>
-          <th onclick="sortTable('adj_off_ppa')" style="text-align: right; cursor: pointer;">Off ⇕</th>
-          <th onclick="sortTable('adj_def_ppa')" style="text-align: right; cursor: pointer;">Def ⇕</th>
-          <th onclick="sortTable('elo')" style="text-align: right; cursor: pointer;">Elo ⇕</th>
-          <th onclick="sortTable('talent')" style="text-align: right; cursor: pointer;">Talent ⇕</th>
-          <th onclick="sortTable('rp_ratio')" style="text-align: right; cursor: pointer;">R/P Ratio ⇕</th>
+          <th onclick="sortTable('Rank')" style="cursor: pointer;"># ⇕</th>
+          <th onclick="sortTable('Team')" style="cursor: pointer;">Team ⇕</th>
+          <th onclick="sortTable('Net Rating')" style="text-align: right; cursor: pointer;">Rating ⇕</th>
+          <th onclick="sortTable('Offense rating')" style="text-align: right; cursor: pointer;">Off ⇕</th>
+          <th onclick="sortTable('Defense rating')" style="text-align: right; cursor: pointer;">Def ⇕</th>
+          <th onclick="sortTable('Adjusted Tempo')" style="text-align: right; cursor: pointer;">Tempo ⇕</th>
+          <th onclick="sortTable('W-L Record')" style="text-align: right; cursor: pointer;">Record ⇕</th>
         </tr>
       </thead>
       <tbody id="rankingsBody">
@@ -424,30 +423,39 @@ function fmtDate(iso){
   return d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
 }
 
-function renderRankings(data){
+function renderRankings(data) {
   if (data && data.teams) {
     globalRankingsData = data.teams;
   }
 
   const body = document.getElementById('rankingsBody');
+  if (!body) return;
   body.innerHTML = '';
 
   globalRankingsData.forEach(t => {
+    // Read exact keys from your JSON schema with safe fallbacks
+    const rank = t["Rank"] ?? t.rank ?? '—';
+    const team = t["Team"] ?? t.team ?? 'Unknown';
+    const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
+    const offRating = Number(t["Offense rating"] ?? t.adj_off ?? 0);
+    const defRating = Number(t["Defense rating"] ?? t.adj_def ?? 0);
+    const tempo = Number(t["Adjusted Tempo"] ?? t.elo ?? 0);
+    const record = t["W-L Record"] ?? t.talent ?? '—';
+
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td class="rank">${t.rank}</td>
-      <td class="team"><span class="team-link" onclick="openTeamModal('${t.team}')">${t.team}</span></td>
-      <td class="num rating">${t.power_rating > 0 ? '+' : ''}${t.power_rating.toFixed(1)}</td>
-      <td class="num">${t.adj_off_ppa.toFixed(3)}</td>
-      <td class="num">${t.adj_def_ppa.toFixed(3)}</td>
-      <td class="num">${Math.round(t.elo)}</td>
-      <td class="num">${t.talent.toFixed(0)}</td>
-      <td class="num">${t.rp_ratio.toFixed(0)}</td>
+      <td class="rank">${rank}</td>
+      <td class="team">${team}</td>
+      <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(2)}</td>
+      <td class="num">${offRating.toFixed(1)}</td>
+      <td class="num">${defRating.toFixed(1)}</td>
+      <td class="num">${tempo.toFixed(1)}</td>
+      <td class="num">${record}</td>
     `;
     body.appendChild(tr);
   });
 }
-
+  
 function sortTable(key) {
   if (currentSortKey === key) {
     sortAscending = !sortAscending;
