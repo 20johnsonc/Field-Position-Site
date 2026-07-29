@@ -1,1314 +1,906 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Field Position | CFB Power Ratings & Matchup Model</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style>
-  :root {
-    --field: #0f2818;
-    --field-dark: #0a1c10;
-    --chalk: #f4f0e1;
-    --chalk-dim: #e8e2cd;
-    --ink: #141a12;
-    --gold: #e0a13d;
-    --gold-dim: #a97a2c;
-    --hash: #2c4a34;
-    --muted: #8a9a8b;
-    --good: #5f9e6f;
-    --bad: #b5573f;
-    --field-line: #1B3A28;
-    --chalk-line: #E1D9BE;
-    --ink-dim: #6B6656;
-    --model: #B8452E;
-    --market: #5E6F63;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Position — Analytics Dashboard</title>
+  
+  <!-- Google Fonts & Chart.js -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(22, 30, 46, 0.8);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-blue: #3b82f6;
+      --accent-blue-hover: #2563eb;
+      --accent-cyan: #06b6d4;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --badge-bg: rgba(255, 255, 255, 0.05);
+      --input-bg: rgba(15, 23, 42, 0.7);
+    }
 
-  body {
-    background:
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 120px),
-      linear-gradient(180deg, var(--field) 0%, var(--field-dark) 100%);
-    color: var(--chalk);
-    font-family: 'Inter', system-ui, sans-serif;
-    min-height: 100vh;
-    padding-bottom: 60px;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  header {
-    padding: 36px 24px 24px;
-    max-width: 1180px;
-    margin: 0 auto;
-    border-bottom: 1px solid var(--field-line);
-  }
-  .brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
-  .brand h1 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 2.4rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--chalk);
-  }
-  .brand h1 span { color: var(--gold); }
-  .brand .tag { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.3px; }
-  .meta-row {
-    margin-top: 14px;
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .meta-row b { color: var(--gold); }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
 
-  nav {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 18px 24px 0;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  nav button {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    background: transparent;
-    border: 1px solid var(--hash);
-    color: var(--muted);
-    padding: 9px 20px;
-    cursor: pointer;
-    transition: all .15s ease;
-  }
-  nav button.active { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-  nav button:not(.active):hover { border-color: var(--gold-dim); color: var(--chalk); }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+    }
 
-  main { max-width: 1180px; margin: 0 auto; padding: 28px 24px; }
-  section { display: none; }
-  section.active { display: block; }
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
 
-  .rank-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    background: rgba(244,240,225,0.03);
-  }
-  .rank-table thead th {
-    text-align: left;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    font-size: 0.7rem;
-    color: var(--gold);
-    padding: 10px 12px;
-    border-bottom: 2px solid var(--gold-dim);
-  }
-  .rank-table td { padding: 9px 12px; border-bottom: 1px solid rgba(138,154,139,0.15); }
-  .rank-table tbody tr:hover { background: rgba(224,161,61,0.07); }
-  .rank-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
-  .rank-table td.rank { color: var(--gold); font-weight: 700; width: 36px; }
-  .rank-table td.team { font-family: 'Oswald', sans-serif; letter-spacing: 0.2px; color: var(--chalk); font-size: 0.92rem; }
-  .rank-table td.rating { font-weight: 700; color: var(--chalk); }
-  .team-link {
-    cursor: pointer;
-    text-decoration: underline dotted;
-    text-decoration-color: var(--gold-dim);
-  }
-  .team-link:hover { color: var(--gold); }
+    .logo-area h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-  .chart-container {
-    background: rgba(244,240,225,0.03);
-    border: 1px solid var(--field-line);
-    border-radius: 6px;
-    padding: 20px;
-    position: relative;
-    height: 600px;
-    width: 100%;
-  }
+    .logo-area p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
 
-  .matchup-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-    gap: 28px;
-  }
-  @media (max-width: 860px) { .matchup-grid { grid-template-columns: 1fr; } }
+    .year-badge {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-blue);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
 
-  .card {
-    background: var(--chalk);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 18px 40px -18px rgba(0,0,0,0.55);
-  }
-  .card-head {
-    background:
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 46px),
-      var(--field);
-    padding: 18px 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-  }
-  .matchup { display: flex; align-items: center; gap: 12px; }
-  .badge {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.02em;
-    flex: none;
-  }
-  .badge.away { background: transparent; border: 1.5px solid rgba(243,238,221,0.45); color: var(--chalk); }
-  .badge.home { background: var(--gold); color: var(--field); border: 1.5px solid var(--gold); }
-  .matchup-names {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    color: var(--chalk);
-    font-size: 15px;
-    letter-spacing: 0.03em;
-    line-height: 1.2;
-  }
-  .matchup-names .at { color: var(--gold); font-weight: 400; margin: 0 5px; font-size: 12px; }
-  .week-tag { font-family: 'JetBrains Mono', monospace; color: var(--gold); font-size: 12px; letter-spacing: 0.06em; white-space: nowrap; }
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
 
-  .card-body { padding: 22px 22px 18px; }
-  .score-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-  .score-line { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 24px; color: var(--ink); letter-spacing: 0.01em; }
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
 
-  .prob-ring {
-    --pct: 50;
-    width: 58px; height: 58px;
-    border-radius: 50%;
-    flex: none;
-    background: conic-gradient(var(--gold) calc(var(--pct)*1%), var(--chalk-line) 0);
-    display: flex; align-items: center; justify-content: center;
-    position: relative;
-  }
-  .prob-ring::before { content: ''; position: absolute; width: 44px; height: 44px; border-radius: 50%; background: var(--chalk); }
-  .prob-ring span { position: relative; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12.5px; color: var(--ink); }
+    .tab-btn:hover {
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
 
-  .prob-caption {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    color: var(--ink-dim);
-    text-transform: uppercase;
-    margin: -10px 0 18px;
-  }
-  .prob-caption b { color: var(--model); }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
 
-  .stat { margin: 20px 0 26px; }
-  .stat-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
-  .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--ink-dim); text-transform: uppercase; }
-  .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); }
-  .stat-value b { color: var(--model); }
-  .stat-value .na { color: var(--market); }
+    /* Controls & Themed Filter Selects */
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+    }
 
-  .gauge { position: relative; height: 34px; margin: 0 4px 4px; }
-  .gauge-track { position: absolute; top: 14px; left: 0; right: 0; height: 4px; background: var(--chalk-line); border-radius: 2px; }
-  .gauge-fill { position: absolute; top: 14px; height: 4px; background: var(--model); border-radius: 2px; opacity: 0.85; }
-  .gauge-tick { position: absolute; top: 10px; width: 1px; height: 12px; background: var(--chalk-line); }
-  .gauge-tick.zero { background: var(--ink-dim); width: 1.5px; }
-  .gauge-ticklabel { position: absolute; top: 24px; transform: translateX(-50%); font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--ink-dim); }
-  .gauge-pin { position: absolute; top: -2px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 2px; }
-  .gauge-pin .flag {
-    background: var(--model);
-    color: var(--chalk);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 3px;
-    white-space: nowrap;
-  }
-  .gauge-pin .stem { width: 2px; height: 8px; background: var(--model); }
+    /* Styled Select / Filter Inputs */
+    .controls select {
+      background-color: var(--input-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      padding: 10px 36px 10px 14px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s ease;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3C9ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      min-width: 160px;
+    }
 
-  .verdict {
-    border-left: 3px solid var(--gold);
-    padding: 10px 14px;
-    margin: 4px 0 16px;
-    font-family: 'Inter', sans-serif;
-    font-size: 13.5px;
-    color: var(--ink);
-    background: rgba(217,164,65,0.08);
-  }
-  .verdict b { font-weight: 600; }
+    .controls select:hover {
+      border-color: rgba(59, 130, 246, 0.5);
+      background-color: rgba(30, 41, 59, 0.8);
+    }
 
-  .btn-pbp {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    background: var(--field);
-    color: var(--gold);
-    border: 1px solid var(--gold-dim);
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.85rem;
-    padding: 8px 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.15s ease;
-  }
-  .btn-pbp:hover { background: var(--gold); color: var(--ink); }
+    .controls select:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    }
 
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(10, 28, 16, 0.85);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  .modal-overlay.active { display: flex; }
-  .modal-content {
-    background: var(--field-dark);
-    border: 1px solid var(--gold-dim);
-    border-radius: 6px;
-    width: 100%;
-    max-width: 900px;
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 24px;
-    position: relative;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-  }
-  .modal-close {
-    position: absolute;
-    top: 16px; right: 20px;
-    background: transparent;
-    border: none;
-    color: var(--muted);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-  .modal-close:hover { color: var(--gold); }
-  .modal-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    color: var(--chalk);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
+    .controls select option {
+      background-color: #0f172a;
+      color: var(--text-main);
+      padding: 8px;
+    }
 
-  .empty {
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--muted);
-    font-size: 0.85rem;
-    padding: 40px 0;
-    text-align: center;
-    grid-column: 1 / -1;
-  }
-</style>
+    /* Tab Content Panels */
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* Rankings Table */
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+
+    .rank-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .rank-table th, .rank-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .rank-table th {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      user-select: none;
+    }
+
+    .rank-table th:hover {
+      color: var(--text-main);
+    }
+
+    .rank-table tr:hover td {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .rank-table .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rank-table .rating {
+      font-weight: 700;
+      color: #60a5fa;
+    }
+
+    /* Matchup Cards Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .matchup-names {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .matchup-names .at {
+      color: var(--text-muted);
+      font-weight: 400;
+      margin: 0 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--badge-bg);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .week-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .score-line {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .pbp-btn {
+      width: 100%;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--accent-blue);
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pbp-btn:hover {
+      background: var(--accent-blue);
+      color: #fff;
+    }
+
+    .empty {
+      padding: 32px;
+      text-align: center;
+      color: var(--text-muted);
+      width: 100%;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #111827;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 900px;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      position: relative;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .chart-container {
+      flex: 1;
+      position: relative;
+      min-height: 0;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="brand">
-    <h1>FIELD <span>POSITION</span></h1>
-    <div class="tag">power ratings &amp; matchup model — for research &amp; entertainment purposes only</div>
-  </div>
-  <div class="meta-row" id="metaRow"><span>LOADING…</span></div>
-</header>
-
-<nav>
-  <button id="navRankings" class="active">Power Ratings</button>
-  <button id="navScatter">Scatter Chart</button>
-  <button id="navMatchups">Matchup Cards</button>
-</nav>
-
-<main>
-  <section id="rankingsSection" class="active">
-    <div class="controls">
-      <!-- Add Year Filter -->
-      <select id="rankingsYearFilter" onchange="applyRankingsFilters()">
-        <option value="ALL">All Years</option>
-      </select>
-    
-      <!-- Existing Controls -->
-      <input type="text" id="rankingsSearch" placeholder="Search team..." oninput="applyRankingsFilters()" />
-      <select id="rankingsConfFilter" onchange="applyRankingsFilters()">
-        <option value="ALL">All Conferences</option>
-      </select>
-    </div>
-    <table class="rank-table">
-      <thead>
-        <tr>
-          <th onclick="sortTable('Rank')" style="cursor: pointer;"># ⇕</th>
-          <th onclick="sortTable('Team')" style="cursor: pointer;">Team ⇕</th>
-          <th onclick="sortTable('Net Rating')" style="text-align: right; cursor: pointer;">Rating ⇕</th>
-          <th onclick="sortTable('Offense rating')" style="text-align: right; cursor: pointer;">Off ⇕</th>
-          <th onclick="sortTable('Defense rating')" style="text-align: right; cursor: pointer;">Def ⇕</th>
-          <th onclick="sortTable('Adjusted Tempo')" style="text-align: right; cursor: pointer;">Tempo ⇕</th>
-          <th onclick="sortTable('W-L Record')" style="text-align: right; cursor: pointer;">Record ⇕</th>
-        </tr>
-      </thead>
-      <tbody id="rankingsBody">
-        <tr><td colspan="8" class="empty">Loading rankings…</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="scatterSection">
-    <div class="chart-container">
-      <canvas id="kenpomChart"></canvas>
-    </div>
-  </section>
-
-  <section id="matchupsSection">
-    <div class="controls">
-      <!-- Add Year Filter -->
-      <select id="matchupYearFilter" onchange="applyMatchupFilters()">
-        <option value="ALL">All Years</option>
-      </select>
-    
-      <!-- Existing Controls -->
-      <select id="confFilter" onchange="applyMatchupFilters()">
-        <option value="ALL">All Conferences</option>
-      </select>
-      <select id="weekFilter" onchange="applyMatchupFilters()">
-        <option value="ALL">All Weeks</option>
-      </select>
-    </div>
-    <div class="matchup-grid" id="matchupGrid">
-      <div class="empty">Loading matchups…</div>
-    </div>
-  </section>
-</main>
-
-<div class="modal-overlay" id="pbpModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <div class="modal-title" id="pbpModalTitle">PPA Tug-of-War</div>
-    <div style="height: 400px; position: relative;">
-      <canvas id="pbpChart"></canvas>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="teamModal">
-  <div class="modal-content" style="max-width: 1100px;">
-    <button class="modal-close" onclick="closeTeamModal()">&times;</button>
-    <div class="modal-title" id="teamModalTitle">Team Performance</div>
-    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px;">
-      <div style="height: 420px; position: relative;">
-        <canvas id="teamTrajectoryChart"></canvas>
+  <div class="container">
+    <header>
+      <div class="logo-area">
+        <h1>Field Position</h1>
+        <p>College Football Analytics & Momentum Tracking</p>
       </div>
-      <div style="height: 420px; position: relative;">
-        <canvas id="teamProfileChart"></canvas>
+      <div id="seasonYear" class="year-badge">2026 Season</div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('matchups')">Matchup Slate</button>
+      <button class="tab-btn" onclick="switchTab('rankings')">Power Rankings</button>
+    </div>
+
+    <!-- TAB 1: MATCHUPS -->
+    <div id="matchupsPanel" class="tab-panel active">
+      <div class="controls">
+        <select id="matchupYearFilter" onchange="applyMatchupFilters()">
+          <option value="ALL">All Years</option>
+        </select>
+        <select id="confFilter" onchange="applyMatchupFilters()">
+          <option value="ALL">All Conferences</option>
+        </select>
+        <select id="weekFilter" onchange="applyMatchupFilters()">
+          <option value="ALL">All Weeks</option>
+        </select>
+      </div>
+      <div id="matchupGrid" class="grid">
+        <div class="empty">Loading matchups data…</div>
+      </div>
+    </div>
+
+    <!-- TAB 2: RANKINGS -->
+    <div id="rankingsPanel" class="tab-panel">
+      <div class="controls">
+        <select id="rankingsYearFilter" onchange="applyRankingsFilters()">
+          <option value="ALL">All Years</option>
+        </select>
+        <select id="rankingsConfFilter" onchange="onRankingsConfChange()">
+          <option value="ALL">All Conferences</option>
+        </select>
+        <select id="rankingsTeamFilter" onchange="applyRankingsFilters()">
+          <option value="ALL">All Teams</option>
+        </select>
+      </div>
+
+      <div class="table-container">
+        <table class="rank-table">
+          <thead>
+            <tr>
+              <th onclick="sortTable('Rank')" style="cursor: pointer;"># ⇕</th>
+              <th onclick="sortTable('Team')" style="cursor: pointer;">Team ⇕</th>
+              <th onclick="sortTable('Net Rating')" style="text-align: right; cursor: pointer;">Rating ⇕</th>
+              <th onclick="sortTable('Offense rating')" style="text-align: right; cursor: pointer;">Off ⇕</th>
+              <th onclick="sortTable('Defense rating')" style="text-align: right; cursor: pointer;">Def ⇕</th>
+              <th onclick="sortTable('Adjusted Tempo')" style="text-align: right; cursor: pointer;">Tempo ⇕</th>
+              <th onclick="sortTable('W-L Record')" style="text-align: right; cursor: pointer;">Record ⇕</th>
+            </tr>
+          </thead>
+          <tbody id="rankingsBody">
+            <tr><td colspan="7" class="empty">Loading rankings…</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-let currentSortKey = 'rank';
-let sortAscending = true;
-let globalRankingsData = [];
-let globalLeagueProfile = [];
-let globalMatchupsData = [];
+  <!-- Tug-of-War Modal -->
+  <div id="pbpModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="pbpModalTitle">Game Flow & Momentum</h3>
+        <button class="close-btn" onclick="closePbpModal()">&times;</button>
+      </div>
+      <div class="chart-container">
+        <canvas id="pbpChart"></canvas>
+      </div>
+    </div>
+  </div>
 
-let kenpomChartInstance = null;
-let pbpChartInstance = null;
-let teamTrajectoryChartInstance = null;
-let teamProfileChartInstance = null;
+  <script>
+    // Global State
+    window.globalRankingsData = [];
+    window.globalMatchupsData = [];
+    let pbpChartInstance = null;
+    let sortDirection = {};
 
-async function loadJSON(path){
-  const res = await fetch(path);
-  if(!res.ok) throw new Error('failed to load ' + path);
-  return res.json();
-}
-
-function fmtDate(iso){
-  if(!iso) return '';
-  const d = new Date(iso);
-  return d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
-}
-
-function renderRankings(data) {
-  if (data && data.teams) {
-    globalRankingsData = data.teams;
-  }
-
-  const body = document.getElementById('rankingsBody');
-  if (!body) return;
-  body.innerHTML = '';
-
-  globalRankingsData.forEach(t => {
-    // Read exact keys from your JSON schema with safe fallbacks
-    const rank = t["Rank"] ?? t.rank ?? '—';
-    const team = t["Team"] ?? t.team ?? 'Unknown';
-    const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
-    const offRating = Number(t["Offense rating"] ?? t.adj_off ?? 0);
-    const defRating = Number(t["Defense rating"] ?? t.adj_def ?? 0);
-    const tempo = Number(t["Adjusted Tempo"] ?? t.elo ?? 0);
-    const record = t["W-L Record"] ?? t.talent ?? '—';
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="rank">${rank}</td>
-      <td class="team">${team}</td>
-      <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(2)}</td>
-      <td class="num">${offRating.toFixed(1)}</td>
-      <td class="num">${defRating.toFixed(1)}</td>
-      <td class="num">${tempo.toFixed(1)}</td>
-      <td class="num">${record}</td>
-    `;
-    body.appendChild(tr);
-  });
-}
-
-// --- POPULATE YEAR FILTERS ---
-function populateYearFilters() {
-  // Extract unique years from Matchups
-  const matchupYears = new Set();
-  if (window.globalMatchupsData) {
-    window.globalMatchupsData.forEach(g => {
-      const yr = g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : null);
-      if (yr) matchupYears.add(yr);
-    });
-  }
-
-  // Populate Matchup Year Dropdown
-  const mYearSelect = document.getElementById('matchupYearFilter');
-  if (mYearSelect) {
-    const currentVal = mYearSelect.value;
-    mYearSelect.innerHTML = '<option value="ALL">All Years</option>';
-    Array.from(matchupYears).sort((a, b) => b - a).forEach(yr => {
-      const opt = document.createElement('option');
-      opt.value = yr;
-      opt.textContent = yr;
-      mYearSelect.appendChild(opt);
-    });
-    if (currentVal) mYearSelect.value = currentVal;
-  }
-
-  // Extract unique years from Rankings
-  const rankingsYears = new Set();
-  if (window.globalRankingsData) {
-    window.globalRankingsData.forEach(t => {
-      const yr = t["Season"] || t["year"] || t.year || t.season;
-      if (yr) rankingsYears.add(yr);
-    });
-  }
-
-  // Populate Rankings Year Dropdown
-  const rYearSelect = document.getElementById('rankingsYearFilter');
-  if (rYearSelect) {
-    const currentVal = rYearSelect.value;
-    rYearSelect.innerHTML = '<option value="ALL">All Years</option>';
-    Array.from(rankingsYears).sort((a, b) => b - a).forEach(yr => {
-      const opt = document.createElement('option');
-      opt.value = yr;
-      opt.textContent = yr;
-      rYearSelect.appendChild(opt);
-    });
-    if (currentVal) rYearSelect.value = currentVal;
-  }
-}
-
-// --- APPLY MATCHUP FILTERS ---
-function applyMatchupFilters() {
-  const selectedYear = document.getElementById('matchupYearFilter')?.value || 'ALL';
-  const selectedConf = document.getElementById('confFilter')?.value || 'ALL';
-  const selectedWeek = document.getElementById('weekFilter')?.value || 'ALL';
-
-  // Build team-to-conference lookup map
-  const teamConfMap = {};
-  if (window.globalRankingsData && Array.isArray(window.globalRankingsData)) {
-    window.globalRankingsData.forEach(t => {
-      const teamName = t["Team"] || t.team;
-      const confName = t["Conference"] || t.conference;
-      if (teamName && confName) teamConfMap[teamName] = confName;
-    });
-  }
-
-  const filtered = globalMatchupsData.filter(g => {
-    const homeTeam = g.home_team || g.homeTeam;
-    const awayTeam = g.away_team || g.awayTeam;
-
-    const homeConf = g.home_conference || teamConfMap[homeTeam];
-    const awayConf = g.away_conference || teamConfMap[awayTeam];
-
-    const gameYear = String(g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : ''));
-
-    const matchesYear = (selectedYear === 'ALL') || (gameYear === String(selectedYear));
-    const matchesConf = (selectedConf === 'ALL') || (homeConf === selectedConf || awayConf === selectedConf);
-    const matchesWeek = (selectedWeek === 'ALL') || (String(g.week) === String(selectedWeek));
-
-    return matchesYear && matchesConf && matchesWeek;
-  });
-
-  renderMatchupCards(filtered);
-}
-
-// --- APPLY RANKINGS FILTERS ---
-function applyRankingsFilters() {
-  const selectedYear = document.getElementById('rankingsYearFilter')?.value || 'ALL';
-  const selectedConf = document.getElementById('rankingsConfFilter')?.value || 'ALL';
-  const searchQuery = document.getElementById('rankingsSearch')?.value.toLowerCase().trim() || '';
-
-  if (!window.globalRankingsData) return;
-
-  const filtered = window.globalRankingsData.filter(t => {
-    const teamName = (t["Team"] || t.team || '').toLowerCase();
-    const teamConf = t["Conference"] || t.conference || '';
-    const teamYear = String(t["Season"] || t["year"] || t.year || t.season || '');
-
-    const matchesYear = (selectedYear === 'ALL') || (teamYear === String(selectedYear));
-    const matchesConf = (selectedConf === 'ALL') || (teamConf === selectedConf);
-    const matchesSearch = !searchQuery || teamName.includes(searchQuery);
-
-    return matchesYear && matchesConf && matchesSearch;
-  });
-
-  renderRankingsTable(filtered);
-}
-
-// --- RENDER RANKINGS TABLE ---
-function renderRankingsTable(data) {
-  const body = document.getElementById('rankingsBody');
-  if (!body) return;
-  body.innerHTML = '';
-
-  if (!data || !data.length) {
-    body.innerHTML = '<tr><td colspan="7" class="empty">No rankings found matching filters.</td></tr>';
-    return;
-  }
-
-  data.forEach(t => {
-    const rank = t["Rank"] ?? t.rank ?? '—';
-    const team = t["Team"] ?? t.team ?? 'Unknown';
-    const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
-    const offRating = Number(t["Offense rating"] ?? t.adj_off ?? 0);
-    const defRating = Number(t["Defense rating"] ?? t.adj_def ?? 0);
-    const tempo = Number(t["Adjusted Tempo"] ?? t.elo ?? 0);
-    const record = t["W-L Record"] ?? t.talent ?? '—';
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="rank">${rank}</td>
-      <td class="team">${team}</td>
-      <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(2)}</td>
-      <td class="num">${offRating.toFixed(1)}</td>
-      <td class="num">${defRating.toFixed(1)}</td>
-      <td class="num">${tempo.toFixed(1)}</td>
-      <td class="num">${record}</td>
-    `;
-    body.appendChild(tr);
-  });
-}
-  
-function sortTable(key) {
-  if (currentSortKey === key) {
-    sortAscending = !sortAscending;
-  } else {
-    currentSortKey = key;
-    sortAscending = true;
-  }
-
-  globalRankingsData.sort((a, b) => {
-    let valA = a[key];
-    let valB = b[key];
-
-    if (typeof valA === 'string') {
-      return sortAscending
-        ? valA.localeCompare(valB)
-        : valB.localeCompare(valA);
+    // Helper: Utility to fetch JSON safely
+    async function loadJSON(url) {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status} loading ${url}`);
+      return await res.json();
     }
-    return sortAscending ? valA - valB : valB - valA;
-  });
 
-  renderRankings();
-}
+    // Helper: Date Formatter
+    function fmtDate(dStr) {
+      if (!dStr) return '';
+      const d = new Date(dStr);
+      return isNaN(d) ? dStr : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    }
 
-/* --- KENPOM SCATTER CHART WITH TRAJECTORY LINES --- */
-function initKenpomChart(teams) {
-  const ctx = document.getElementById('kenpomChart').getContext('2d');
+    // Gauge helper
+    function gauge({ value, min, max, favorTag, unit }) {
+      return ''; // Placeholder for visual spread gauge if needed
+    }
 
-  const scatterPoints = teams.map(t => ({
-    x: t.adj_off_ppa,
-    y: t.adj_def_ppa,
-    team: t.team,
-    rank: t.rank,
-    trajectory: t.trajectory || []
-  }));
+    // Navigation Tabs
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
 
-  kenpomChartInstance = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      datasets: [
-        {
-          label: 'Teams',
-          data: scatterPoints,
-          backgroundColor: '#e0a13d',
-          borderColor: '#a97a2c',
-          pointRadius: 6,
-          pointHoverRadius: 9
-        },
-        {
-          label: 'Trajectory',
-          data: [],
+      if (tab === 'matchups') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('matchupsPanel').classList.add('active');
+      } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+        document.getElementById('rankingsPanel').classList.add('active');
+      }
+    }
+
+    // Application Initialization
+    async function init() {
+      try {
+        const rankingsData = await loadJSON('rankings.json');
+        window.globalRankingsData = rankingsData.teams || [];
+        
+        // Header year check
+        const yr = rankingsData.year || (rankingsData.generated_at ? new Date(rankingsData.generated_at).getFullYear() : 2026);
+        document.getElementById('seasonYear').innerText = `${yr} Season`;
+
+        populateRankingsConferences();
+        populateTeamDropdown();
+        applyRankingsFilters();
+      } catch (e) {
+        console.error('Failed to load rankings:', e);
+        document.getElementById('rankingsBody').innerHTML = '<tr><td colspan="7" class="empty">Error loading rankings data.</td></tr>';
+      }
+
+      try {
+        const matchupsData = await loadJSON('matchups.json');
+        window.globalMatchupsData = matchupsData.games || [];
+        populateMatchupFilters(window.globalMatchupsData);
+        populateYearFilters();
+        applyMatchupFilters();
+      } catch (e) {
+        console.error('Failed to load matchups:', e);
+        document.getElementById('matchupGrid').innerHTML = '<div class="empty">Error loading matchup data.</div>';
+      }
+    }
+
+    // --- POPULATE FILTERS ---
+    function populateYearFilters() {
+      const matchupYears = new Set();
+      if (window.globalMatchupsData) {
+        window.globalMatchupsData.forEach(g => {
+          const yr = g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : null);
+          if (yr) matchupYears.add(yr);
+        });
+      }
+
+      const mYearSelect = document.getElementById('matchupYearFilter');
+      if (mYearSelect) {
+        mYearSelect.innerHTML = '<option value="ALL">All Years</option>';
+        Array.from(matchupYears).sort((a, b) => b - a).forEach(yr => {
+          const opt = document.createElement('option');
+          opt.value = yr;
+          opt.textContent = yr;
+          mYearSelect.appendChild(opt);
+        });
+      }
+
+      const rankingsYears = new Set();
+      if (window.globalRankingsData) {
+        window.globalRankingsData.forEach(t => {
+          const yr = t["Season"] || t["year"] || t.year || t.season;
+          if (yr) rankingsYears.add(yr);
+        });
+      }
+
+      const rYearSelect = document.getElementById('rankingsYearFilter');
+      if (rYearSelect) {
+        rYearSelect.innerHTML = '<option value="ALL">All Years</option>';
+        Array.from(rankingsYears).sort((a, b) => b - a).forEach(yr => {
+          const opt = document.createElement('option');
+          opt.value = yr;
+          opt.textContent = yr;
+          rYearSelect.appendChild(opt);
+        });
+      }
+    }
+
+    function populateRankingsConferences() {
+      const confSelect = document.getElementById('rankingsConfFilter');
+      if (!confSelect || !window.globalRankingsData) return;
+
+      const confs = new Set();
+      window.globalRankingsData.forEach(t => {
+        const conf = t["Conference"] || t.conference;
+        if (conf) confs.add(conf);
+      });
+
+      confSelect.innerHTML = '<option value="ALL">All Conferences</option>';
+      Array.from(confs).sort().forEach(conf => {
+        const opt = document.createElement('option');
+        opt.value = conf;
+        opt.textContent = conf;
+        confSelect.appendChild(opt);
+      });
+    }
+
+    // Dynamically populates and trims team filter based on selected conference
+    function populateTeamDropdown() {
+      const teamSelect = document.getElementById('rankingsTeamFilter');
+      const selectedConf = document.getElementById('rankingsConfFilter')?.value || 'ALL';
+      if (!teamSelect || !window.globalRankingsData) return;
+
+      const currentTeam = teamSelect.value;
+      teamSelect.innerHTML = '<option value="ALL">All Teams</option>';
+
+      const filteredTeams = window.globalRankingsData
+        .filter(t => selectedConf === 'ALL' || (t["Conference"] || t.conference) === selectedConf)
+        .map(t => t["Team"] || t.team)
+        .filter(Boolean)
+        .sort();
+
+      filteredTeams.forEach(team => {
+        const opt = document.createElement('option');
+        opt.value = team;
+        opt.textContent = team;
+        teamSelect.appendChild(opt);
+      });
+
+      if (filteredTeams.includes(currentTeam)) {
+        teamSelect.value = currentTeam;
+      }
+    }
+
+    function onRankingsConfChange() {
+      populateTeamDropdown();
+      applyRankingsFilters();
+    }
+
+    function populateMatchupFilters(games) {
+      const confSelect = document.getElementById('confFilter');
+      const weekSelect = document.getElementById('weekFilter');
+      if (!confSelect || !games) return;
+
+      const teamConfMap = {};
+      if (window.globalRankingsData) {
+        window.globalRankingsData.forEach(t => {
+          const teamName = t["Team"] || t.team;
+          const confName = t["Conference"] || t.conference;
+          if (teamName && confName) teamConfMap[teamName] = confName;
+        });
+      }
+
+      const conferences = new Set();
+      const weeks = new Set();
+
+      games.forEach(g => {
+        const homeTeam = g.home_team || g.homeTeam;
+        const awayTeam = g.away_team || g.awayTeam;
+        const homeConf = g.home_conference || teamConfMap[homeTeam];
+        const awayConf = g.away_conference || teamConfMap[awayTeam];
+
+        if (homeConf) conferences.add(homeConf);
+        if (awayConf) conferences.add(awayConf);
+        if (g.week) weeks.add(g.week);
+      });
+
+      confSelect.innerHTML = '<option value="ALL">All Conferences</option>';
+      Array.from(conferences).sort().forEach(conf => {
+        const opt = document.createElement('option');
+        opt.value = conf;
+        opt.textContent = conf;
+        confSelect.appendChild(opt);
+      });
+
+      if (weekSelect) {
+        weekSelect.innerHTML = '<option value="ALL">All Weeks</option>';
+        Array.from(weeks).sort((a, b) => a - b).forEach(wk => {
+          const opt = document.createElement('option');
+          opt.value = wk;
+          opt.textContent = `Week ${wk}`;
+          weekSelect.appendChild(opt);
+        });
+      }
+    }
+
+    // --- FILTER & RENDER RANKINGS ---
+    function applyRankingsFilters() {
+      const selectedYear = document.getElementById('rankingsYearFilter')?.value || 'ALL';
+      const selectedConf = document.getElementById('rankingsConfFilter')?.value || 'ALL';
+      const selectedTeam = document.getElementById('rankingsTeamFilter')?.value || 'ALL';
+
+      if (!window.globalRankingsData) return;
+
+      const filtered = window.globalRankingsData.filter(t => {
+        const teamName = t["Team"] || t.team || '';
+        const teamConf = t["Conference"] || t.conference || '';
+        const teamYear = String(t["Season"] || t["year"] || t.year || t.season || '');
+
+        const matchesYear = (selectedYear === 'ALL') || (teamYear === String(selectedYear));
+        const matchesConf = (selectedConf === 'ALL') || (teamConf === selectedConf);
+        const matchesTeam = (selectedTeam === 'ALL') || (teamName === selectedTeam);
+
+        return matchesYear && matchesConf && matchesTeam;
+      });
+
+      renderRankingsTable(filtered);
+    }
+
+    function renderRankingsTable(data) {
+      const body = document.getElementById('rankingsBody');
+      if (!body) return;
+      body.innerHTML = '';
+
+      if (!data || !data.length) {
+        body.innerHTML = '<tr><td colspan="7" class="empty">No rankings found matching filters.</td></tr>';
+        return;
+      }
+
+      data.forEach(t => {
+        const rank = t["Rank"] ?? t.rank ?? '—';
+        const team = t["Team"] ?? t.team ?? 'Unknown';
+        const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
+        const offRating = Number(t["Offense rating"] ?? t.adj_off ?? 0);
+        const defRating = Number(t["Defense rating"] ?? t.adj_def ?? 0);
+        const tempo = Number(t["Adjusted Tempo"] ?? t.elo ?? 0);
+        const record = t["W-L Record"] ?? t.talent ?? '—';
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="rank">${rank}</td>
+          <td class="team">${team}</td>
+          <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(2)}</td>
+          <td class="num">${offRating.toFixed(1)}</td>
+          <td class="num">${defRating.toFixed(1)}</td>
+          <td class="num">${tempo.toFixed(1)}</td>
+          <td class="num">${record}</td>
+        `;
+        body.appendChild(tr);
+      });
+    }
+
+    function sortTable(key) {
+      if (!window.globalRankingsData) return;
+      sortDirection[key] = !sortDirection[key];
+
+      window.globalRankingsData.sort((a, b) => {
+        let valA = a[key] ?? 0;
+        let valB = b[key] ?? 0;
+        if (typeof valA === 'string') {
+          return sortDirection[key] ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        }
+        return sortDirection[key] ? valA - valB : valB - valA;
+      });
+
+      applyRankingsFilters();
+    }
+
+    // --- FILTER & RENDER MATCHUPS ---
+    function applyMatchupFilters() {
+      const selectedYear = document.getElementById('matchupYearFilter')?.value || 'ALL';
+      const selectedConf = document.getElementById('confFilter')?.value || 'ALL';
+      const selectedWeek = document.getElementById('weekFilter')?.value || 'ALL';
+
+      const teamConfMap = {};
+      if (window.globalRankingsData) {
+        window.globalRankingsData.forEach(t => {
+          const teamName = t["Team"] || t.team;
+          const confName = t["Conference"] || t.conference;
+          if (teamName && confName) teamConfMap[teamName] = confName;
+        });
+      }
+
+      const filtered = window.globalMatchupsData.filter(g => {
+        const homeTeam = g.home_team || g.homeTeam;
+        const awayTeam = g.away_team || g.awayTeam;
+        const homeConf = g.home_conference || teamConfMap[homeTeam];
+        const awayConf = g.away_conference || teamConfMap[awayTeam];
+        const gameYear = String(g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : ''));
+
+        const matchesYear = (selectedYear === 'ALL') || (gameYear === String(selectedYear));
+        const matchesConf = (selectedConf === 'ALL') || (homeConf === selectedConf || awayConf === selectedConf);
+        const matchesWeek = (selectedWeek === 'ALL') || (String(g.week) === String(selectedWeek));
+
+        return matchesYear && matchesConf && matchesWeek;
+      });
+
+      renderMatchupCards(filtered);
+    }
+
+    function renderMatchupCards(games) {
+      const grid = document.getElementById('matchupGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      if (!games || !games.length) {
+        grid.innerHTML = '<div class="empty">No games found for the selected filters.</div>';
+        return;
+      }
+
+      games.forEach(g => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const homeTeam = g.home_team ?? g.homeTeam ?? 'Home';
+        const awayTeam = g.away_team ?? g.awayTeam ?? 'Away';
+        const awayTag = awayTeam.substring(0, 3).toUpperCase();
+        const homeTag = homeTeam.substring(0, 3).toUpperCase();
+        const gameId = g.game_id ?? g.gameId;
+
+        const hasScores = g.home_points !== undefined && g.away_points !== undefined;
+        const isCompleted = g.status === 'completed' || hasScores;
+
+        let scoreDisplay = '—';
+        if (hasScores) {
+          scoreDisplay = `${awayTeam} ${g.away_points} - ${g.home_points} ${homeTeam}`;
+        } else if (g.predicted_score) {
+          scoreDisplay = g.predicted_score;
+        }
+
+        const dateTag = g.start_date ? fmtDate(g.start_date) : '';
+
+        card.innerHTML = `
+          <div class="card-head">
+            <div class="matchup">
+              <div class="badge away">${awayTag}</div>
+              <div class="matchup-names">${awayTeam} <span class="at">@</span> ${homeTeam}</div>
+            </div>
+            <div class="week-tag">WK ${g.week ?? '—'} ${dateTag ? '· ' + dateTag : ''}</div>
+          </div>
+          <div class="card-body">
+            <div class="score-row">
+              <div class="score-line">
+                <span>${scoreDisplay}</span>
+              </div>
+              ${g.home_win_prob ? `<div class="badge">${Math.round(g.home_win_prob)}% Win Prob</div>` : ''}
+            </div>
+
+            <div class="verdict" style="margin-top: 12px; text-align: center;">
+              <button class="pbp-btn" onclick="loadPbpModal('${gameId}', '${homeTeam}', '${awayTeam}')">
+                📊 View Tug-of-War Chart
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Modal Logic
+    async function loadPbpModal(gameId, homeTeam, awayTeam) {
+      const modal = document.getElementById('pbpModal');
+      const title = document.getElementById('pbpModalTitle');
+      const chartContainer = document.getElementById('pbpChart').parentNode;
+      
+      chartContainer.innerHTML = '<canvas id="pbpChart"></canvas>';
+      title.innerText = `${awayTeam} @ ${homeTeam} — Game Flow & Momentum`;
+      modal.classList.add('active');
+
+      try {
+        let pbpData;
+        try {
+          pbpData = await loadJSON(`pbp/pbp_${gameId}.json`);
+        } catch (e) {
+          pbpData = await loadJSON(`pbp/${gameId}.json`);
+        }
+
+        const ctx = document.getElementById('pbpChart').getContext('2d');
+        const ppaValues = pbpData.map(d => Number(d.cum_ppa ?? d.cum_net_ppa ?? d.net_ppa ?? d.ppa ?? 0));
+        const scoreDiffValues = pbpData.map(d => Number(d.score_diff ?? d.margin ?? 0));
+        const labels = pbpData.map((d, i) => d.play_number || d.play_num || i + 1);
+
+        const maxPpa = Math.max(1, ...ppaValues.map(Math.abs));
+        const maxDiff = Math.max(1, ...scoreDiffValues.map(Math.abs));
+
+        if (pbpChartInstance) pbpChartInstance.destroy();
+
+        pbpChartInstance = new Chart(ctx, {
           type: 'line',
-          borderColor: '#b5573f',
-          borderWidth: 2,
-          pointRadius: 4,
-          pointBackgroundColor: '#b5573f',
-          fill: false,
-          showLine: true
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          title: { display: true, text: 'Adjusted Offense PPA (Higher = Better)', color: '#f4f0e1' },
-          grid: { color: 'rgba(138,154,139,0.15)' },
-          ticks: { color: '#f4f0e1' }
-        },
-        y: {
-          reverse: true,
-          title: { display: true, text: 'Adjusted Defense PPA (Lower = Better)', color: '#f4f0e1' },
-          grid: { color: 'rgba(138,154,139,0.15)' },
-          ticks: { color: '#f4f0e1' }
-        }
-      },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => {
-              const raw = ctx.raw;
-              if (raw.team) {
-                return `#${raw.rank} ${raw.team} (Off: ${raw.x.toFixed(3)}, Def: ${raw.y.toFixed(3)})`;
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'Net Momentum Advantage',
+                data: ppaValues,
+                borderColor: '#3b82f6',
+                borderWidth: 2.5,
+                fill: false,
+                tension: 0.1,
+                yAxisID: 'y'
+              },
+              {
+                label: 'Actual Score Lead',
+                data: scoreDiffValues,
+                borderColor: '#ef4444',
+                borderWidth: 2,
+                borderDash: [6, 4],
+                fill: false,
+                tension: 0,
+                yAxisID: 'y1'
               }
-              return `Wk ${raw.week}: Off ${raw.x.toFixed(3)}, Def ${raw.y.toFixed(3)}`;
-            }
-          }
-        }
-      },
-      onClick: (e, elements) => {
-        if (elements.length > 0) {
-          const index = elements[0].index;
-          const selectedTeam = kenpomChartInstance.data.datasets[0].data[index];
-
-          if (selectedTeam && selectedTeam.trajectory) {
-            const trajPoints = selectedTeam.trajectory.map(p => ({
-              x: p.adj_off_ppa,
-              y: p.adj_def_ppa,
-              week: p.week
-            }));
-            kenpomChartInstance.data.datasets[1].data = trajPoints;
-            kenpomChartInstance.update();
-          }
-        }
-      }
-    }
-  });
-}
-
-function pct(val, min, max) {
-  return ((val - min) / (max - min)) * 100;
-}
-
-function gauge({value, min, max, favorTag, unit}) {
-  const zeroPct = unit === "spread" ? pct(0, min, max) : null;
-  const valPct = pct(value, min, max);
-  const isSpread = unit === "spread";
-  const fillLeft = isSpread ? Math.min(zeroPct, valPct) : 0;
-  const fillWidth = isSpread ? Math.abs(valPct - zeroPct) : valPct;
-
-  const ticks = isSpread
-    ? [{p:0,l:min}, {p:50,l:"EVEN"}, {p:100,l:"+"+max}]
-    : [{p:0,l:min}, {p:50,l:(min+max)/2}, {p:100,l:max}];
-
-  const tickHtml = ticks.map(t => `
-    <div class="gauge-tick ${t.l === 'EVEN' ? 'zero' : ''}" style="left:${t.p}%"></div>
-    <div class="gauge-ticklabel" style="left:${t.p}%">${t.l}</div>
-  `).join("");
-
-  const flagLabel = isSpread
-    ? `${favorTag} ${Math.abs(value).toFixed(1)}`
-    : `${value.toFixed(1)}`;
-
-  return `
-    <div class="gauge">
-      <div class="gauge-track"></div>
-      <div class="gauge-fill" style="left:${fillLeft}%; width:${fillWidth}%;"></div>
-      ${tickHtml}
-      <div class="gauge-pin" style="left:${valPct}%">
-        <div class="flag">${flagLabel}</div>
-        <div class="stem"></div>
-      </div>
-    </div>
-  `;
-}
-
-function populateMatchupFilters(games) {
-  const confSelect = document.getElementById('confFilter');
-  if (!confSelect) return;
-
-  // Build a lookup map of Team Name -> Conference from loaded Rankings data
-  const teamConfMap = {};
-  if (window.globalRankingsData && Array.isArray(window.globalRankingsData)) {
-    window.globalRankingsData.forEach(t => {
-      const teamName = t["Team"] || t.team;
-      const confName = t["Conference"] || t.conference;
-      if (teamName && confName) {
-        teamConfMap[teamName] = confName;
-      }
-    });
-  }
-
-  const conferences = new Set();
-
-  games.forEach(g => {
-    const homeTeam = g.home_team || g.homeTeam;
-    const awayTeam = g.away_team || g.awayTeam;
-
-    // Check direct game conference properties first, then check team lookup map
-    const homeConf = g.home_conference || teamConfMap[homeTeam];
-    const awayConf = g.away_conference || teamConfMap[awayTeam];
-
-    if (homeConf) conferences.add(homeConf);
-    if (awayConf) conferences.add(awayConf);
-  });
-
-  // Keep existing "All Conferences" option and append sorted options
-  confSelect.innerHTML = '<option value="ALL">All Conferences</option>';
-  
-  Array.from(conferences).sort().forEach(conf => {
-    const opt = document.createElement('option');
-    opt.value = conf;
-    opt.textContent = conf;
-    confSelect.appendChild(opt);
-  });
-}
-  
-/* --- REFACTORED MATCHUP RENDERING --- */
-function renderMatchups(data) {
-  globalMatchupsData = data.games;
-  populateMatchupFilters(data.games);
-  renderMatchupCards(data.games);
-
-  document.getElementById('metaRow').innerHTML =
-    `<span>Season <b>${data.year}</b></span><span>Week <b>${data.week ?? '—'}</b></span><span>Updated <b>${new Date(data.generated_at).toLocaleString()}</b></span>`;
-}
-
-function renderMatchupCards(games) {
-  const grid = document.getElementById('matchupGrid');
-  grid.innerHTML = '';
-  
-  if (!games.length) {
-    grid.innerHTML = '<div class="empty">No games match these filters.</div>';
-    return;
-  }
-
-  games.forEach(g => {
-    const card = document.createElement('div');
-    card.className = 'card';
-
-    const awayTag = g.away_team ? g.away_team.substring(0, 3).toUpperCase() : 'AWY';
-    const homeTag = g.home_team ? g.home_team.substring(0, 3).toUpperCase() : 'HOM';
-    const isCompleted = g.status === "completed";
-
-    if (isCompleted) {
-      card.innerHTML = `
-        <div class="card-head">
-          <div class="matchup">
-            <div class="badge away">${awayTag}</div>
-            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
-          </div>
-          <div class="week-tag">WK ${g.week ?? '—'} · FINAL</div>
-        </div>
-        <div class="card-body">
-          <div class="score-row">
-            <div class="score-line">
-              <span>${g.away_team} ${g.away_points} - ${g.home_points} ${g.home_team}</span>
-            </div>
-          </div>
-          <div class="verdict"><b>Final Score:</b> Margin ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin} (${g.home_team})</div>
-          <button class="btn-pbp" onclick="loadPbpModal('${g.game_id}', '${g.home_team}', '${g.away_team}')">View Play-by-Play PPA Tug-of-War</button>
-        </div>
-      `;
-    } else {
-      const modelSpread = -g.predicted_margin;
-      const winProbNum = parseFloat(g.home_win_prob) || 50;
-      const spreadFavor = modelSpread < 0 ? homeTag : awayTag;
-
-      const mktSpreadText = g.market_spread !== null && g.market_spread !== undefined ? g.market_spread : '<span class="na">N/A</span>';
-      const mktTotalText = g.market_total !== null && g.market_total !== undefined ? g.market_total : '<span class="na">N/A</span>';
-
-      card.innerHTML = `
-        <div class="card-head">
-          <div class="matchup">
-            <div class="badge away">${awayTag}</div>
-            <div class="matchup-names">${g.away_team}<span class="at">@</span>${g.home_team}</div>
-          </div>
-          <div class="week-tag">WK ${g.week ?? '—'} · ${fmtDate(g.start_date)}</div>
-        </div>
-        <div class="card-body">
-          <div class="score-row">
-            <div class="score-line">
-              <span>${g.predicted_score || 'vs'}</span>
-            </div>
-            <div class="prob-ring" style="--pct:${winProbNum}"><span>${winProbNum.toFixed(0)}%</span></div>
-          </div>
-          <div class="prob-caption"><b>${g.home_team.toUpperCase()}</b> WIN PROBABILITY ${winProbNum.toFixed(1)}%</div>
-
-          <div class="stat">
-            <div class="stat-top">
-              <span class="stat-label">Spread</span>
-              <span class="stat-value">MKT ${mktSpreadText} &nbsp;/&nbsp; MODEL <b>${modelSpread.toFixed(1)}</b></span>
-            </div>
-            ${gauge({value: modelSpread, min: -35, max: 35, favorTag: spreadFavor, unit: "spread"})}
-          </div>
-
-          <div class="stat">
-            <div class="stat-top">
-              <span class="stat-label">Total</span>
-              <span class="stat-value">MKT ${mktTotalText} &nbsp;/&nbsp; MODEL <b>${(g.predicted_total || 55).toFixed(1)}</b></span>
-            </div>
-            ${gauge({value: g.predicted_total || 55, min: 30, max: 70, unit: "total"})}
-          </div>
-
-          <div class="verdict"><b>${g.blurb || `Model favors ${spreadFavor !== 'EVEN' ? spreadFavor : 'Pick Em'} by ${Math.abs(modelSpread).toFixed(1)}`}</b></div>
-          <button class="btn-pbp" style="margin-top: 10px;" onclick="loadPbpModal('${g.game_id}', '${g.home_team}', '${g.away_team}')">Simulate Tug-of-War</button>
-        </div>
-      `;
-    }
-    grid.appendChild(card);
-  });
-}
-
-/* --- TEAM DRILLDOWN MODAL --- */
-function openTeamModal(teamName) {
-  const teamData = globalRankingsData.find(t => t.team === teamName);
-  if (!teamData) return;
-
-  document.getElementById('teamModalTitle').innerText = `${teamName} — Season Performance`;
-  document.getElementById('teamModal').classList.add('active');
-
-  const trajectory = teamData.trajectory || [];
-  const gameLog = teamData.game_log || [];
-  const gameByWeek = Object.fromEntries(gameLog.map(g => [g.week, g]));
-
-  const trajLine = trajectory.map(p => ({ x: p.week, y: p.adj_off_ppa }));
-  const gameDots = trajectory
-    .filter(p => gameByWeek[p.week])
-    .map(p => {
-      const g = gameByWeek[p.week];
-      return {
-        x: p.week, y: p.adj_off_ppa,
-        margin: g.margin, opponent: g.opponent, win: g.win,
-      };
-    });
-
-  const ctx1 = document.getElementById('teamTrajectoryChart').getContext('2d');
-  if (teamTrajectoryChartInstance) teamTrajectoryChartInstance.destroy();
-  teamTrajectoryChartInstance = new Chart(ctx1, {
-    type: 'scatter',
-    data: {
-      datasets: [
-        {
-          label: 'Adj. Off PPA (Kalman)',
-          data: trajLine,
-          type: 'line',
-          borderColor: '#e0a13d',
-          backgroundColor: 'transparent',
-          pointRadius: 0,
-          tension: 0.15,
-          order: 2,
-        },
-        {
-          label: 'Game Result',
-          data: gameDots,
-          backgroundColor: gameDots.map(g => g.win ? '#5f9e6f' : '#b5573f'),
-          pointRadius: gameDots.map(g => Math.max(5, Math.min(Math.abs(g.margin) * 0.7, 16))),
-          pointBorderColor: '#141a12',
-          pointBorderWidth: 1,
-          order: 1,
-        },
-      ],
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { title: { display: true, text: 'Week', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
-        y: { title: { display: true, text: 'Adj. Off PPA', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
-      },
-      plugins: {
-        legend: { labels: { color: '#f4f0e1' } },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => {
-              const raw = ctx.raw;
-              if (raw.opponent) return `vs ${raw.opponent}: ${raw.margin > 0 ? '+' : ''}${raw.margin}`;
-              return `Wk ${raw.x}: ${raw.y.toFixed(3)}`;
-            },
+            ]
           },
-        },
-      },
-    },
-  });
-
-  const others = globalLeagueProfile.filter(p => p.team !== teamName);
-  const mine = globalLeagueProfile.find(p => p.team === teamName);
-
-  const ctx2 = document.getElementById('teamProfileChart').getContext('2d');
-  if (teamProfileChartInstance) teamProfileChartInstance.destroy();
-  teamProfileChartInstance = new Chart(ctx2, {
-    type: 'scatter',
-    data: {
-      datasets: [
-        {
-          label: 'All Teams',
-          data: others.map(p => ({ x: p.succ, y: p.expl, team: p.team })),
-          backgroundColor: 'rgba(138,154,139,0.4)',
-          pointRadius: 4,
-        },
-        {
-          label: teamName,
-          data: mine ? [{ x: mine.succ, y: mine.expl, team: teamName }] : [],
-          backgroundColor: '#e0a13d',
-          pointRadius: 9,
-          pointBorderColor: '#141a12',
-          pointBorderWidth: 1.5,
-        },
-      ],
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { title: { display: true, text: 'Success Rate', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
-        y: { title: { display: true, text: 'Explosiveness', color: '#f4f0e1' }, grid: { color: 'rgba(138,154,139,0.15)' }, ticks: { color: '#f4f0e1' } },
-      },
-      plugins: {
-        legend: { labels: { color: '#f4f0e1' } },
-        tooltip: { callbacks: { label: (ctx) => `${ctx.raw.team}: succ ${ctx.raw.x.toFixed(3)}, expl ${ctx.raw.y.toFixed(3)}` } },
-      },
-    },
-  });
-}
-
-function closeTeamModal() {
-  document.getElementById('teamModal').classList.remove('active');
-}
-
-/* --- PLAY-BY-PLAY TUG-OF-WAR MODAL --- */
-const tugOfWarAnnotations = {
-  id: 'tugOfWarAnnotations',
-  afterDatasetsDraw(chart) {
-    const { ctx, chartArea, scales } = chart;
-    const { quarterBreaks } = chart.config.options.plugins.tugOfWarAnnotations || {};
-    if (!quarterBreaks) return;
-
-    ctx.save();
-    quarterBreaks.forEach(({ index, label }) => {
-      const x = scales.x.getPixelForValue(index);
-      ctx.strokeStyle = 'rgba(138,154,139,0.4)';
-      ctx.setLineDash([3, 3]);
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(x, chartArea.top);
-      ctx.lineTo(x, chartArea.bottom);
-      ctx.stroke();
-      ctx.setLineDash([]);
-
-      ctx.fillStyle = '#8a9a8b';
-      ctx.font = 'bold 10px JetBrains Mono, monospace';
-      ctx.fillText(label, x + 4, chartArea.top + 12);
-    });
-    ctx.restore();
-  }
-};
-Chart.register(tugOfWarAnnotations);
-
-const PBP_BASE_URL = 'https://raw.githubusercontent.com/20johnsonc/Field-Position-Site/main/pbp';
-
-async function loadPbpModal(gameId, homeTeam, awayTeam) {
-  const modal = document.getElementById('pbpModal');
-  const title = document.getElementById('pbpModalTitle');
-  const chartContainer = document.getElementById('pbpChart').parentNode;
-  
-  // Re-create canvas element dynamically so previous errors don't break future loads
-  chartContainer.innerHTML = '<canvas id="pbpChart"></canvas>';
-  
-  title.innerText = `${awayTeam} @ ${homeTeam} — Game Flow & Momentum`;
-  modal.classList.add('active');
-
-  try {
-    // Look inside the 'pbp' folder (handles both pbp/pbp_12345.json or pbp/12345.json)
-    let pbpData;
-    try {
-      pbpData = await loadJSON(`pbp/pbp_${gameId}.json`);
-    } catch (e) {
-      pbpData = await loadJSON(`pbp/${gameId}.json`);
-    }
-
-    const ctx = document.getElementById('pbpChart').getContext('2d');
-
-    // Robust mapping for varying JSON key names
-    const ppaValues = pbpData.map(d => Number(d.cum_ppa ?? d.cum_net_ppa ?? d.net_ppa ?? d.ppa ?? 0));
-    const scoreDiffValues = pbpData.map(d => Number(d.score_diff ?? d.margin ?? 0));
-    const labels = pbpData.map((d, i) => d.play_number || d.play_num || i + 1);
-
-    // Compute symmetrical max bounds to align 0 on both axes precisely in the vertical center
-    const maxPpa = Math.max(1, ...ppaValues.map(Math.abs));
-    const maxDiff = Math.max(1, ...scoreDiffValues.map(Math.abs));
-
-    if (pbpChartInstance) {
-      pbpChartInstance.destroy();
-    }
-
-    pbpChartInstance = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: `${homeTeam} Efficiency (+ PPA)`,
-            data: ppaValues.map(v => v >= 0 ? v : 0),
-            backgroundColor: 'rgba(31, 119, 180, 0.35)', // Home Blue
-            borderColor: 'transparent',
-            fill: 'origin',
-            pointRadius: 0,
-            yAxisID: 'y'
-          },
-          {
-            label: `${awayTeam} Efficiency (- PPA)`,
-            data: ppaValues.map(v => v < 0 ? v : 0),
-            backgroundColor: 'rgba(255, 127, 14, 0.35)', // Away Orange
-            borderColor: 'transparent',
-            fill: 'origin',
-            pointRadius: 0,
-            yAxisID: 'y'
-          },
-          {
-            label: 'Net Momentum Advantage',
-            data: ppaValues,
-            borderColor: '#333333',
-            borderWidth: 2.5,
-            fill: false,
-            pointRadius: 0,
-            pointHoverRadius: 5,
-            tension: 0.1,
-            yAxisID: 'y'
-          },
-          {
-            label: 'Actual Score Lead',
-            data: scoreDiffValues,
-            borderColor: '#d62728', // Score diff Red line
-            borderWidth: 2,
-            borderDash: [6, 4],
-            fill: false,
-            pointRadius: 0,
-            pointHoverRadius: 5,
-            tension: 0,
-            yAxisID: 'y1'
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: {
-          mode: 'index',
-          intersect: false
-        },
-        plugins: {
-          legend: {
-            display: true,
-            position: 'top',
-            align: 'center',
-            labels: {
-              color: '#333333',
-              font: { family: 'Inter, sans-serif', size: 12, weight: '500' },
-              padding: 14,
-              usePointStyle: true,
-              filter: (item) => !item.text.includes('Efficiency')
-            }
-          },
-          tooltip: {
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            titleColor: '#111111',
-            bodyColor: '#333333',
-            borderColor: '#cccccc',
-            borderWidth: 1,
-            padding: 10,
-            callbacks: {
-              title: (items) => `Play #${items[0].label}`,
-              label: (context) => {
-                const val = context.raw;
-                if (context.dataset.label === 'Net Momentum Advantage') {
-                  const leader = val >= 0 ? homeTeam : awayTeam;
-                  return `Momentum: ${leader} +${Math.abs(val).toFixed(2)} PPA`;
-                }
-                if (context.dataset.label === 'Actual Score Lead') {
-                  if (val === 0) return `Score: Tied`;
-                  const leader = val > 0 ? homeTeam : awayTeam;
-                  return `Score: ${leader} +${Math.abs(val)} pts`;
-                }
-                return null;
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                type: 'linear',
+                position: 'left',
+                min: -(maxPpa * 1.2),
+                max: maxPpa * 1.2
+              },
+              y1: {
+                type: 'linear',
+                position: 'right',
+                min: -(maxDiff * 1.2),
+                max: maxDiff * 1.2
               }
             }
           }
-        },
-        scales: {
-          x: {
-            title: { display: true, text: 'Play Number (Chronological)', color: '#333333', font: { weight: 'bold' } },
-            grid: { color: '#e5e5e5' },
-            ticks: { color: '#333333' }
-          },
-          y: {
-            type: 'linear',
-            position: 'left',
-            min: -(maxPpa * 1.2),
-            max: maxPpa * 1.2,
-            title: { 
-              display: true, 
-              text: `← ${awayTeam} Advantage  |  Offensive Momentum (PPA)  |  ${homeTeam} Advantage →`, 
-              color: '#333333', 
-              font: { weight: 'bold', size: 12 } 
-            },
-            grid: { color: '#e5e5e5' },
-            ticks: { color: '#333333' }
-          },
-          y1: {
-            type: 'linear',
-            position: 'right',
-            min: -(maxDiff * 1.2),
-            max: maxDiff * 1.2,
-            title: { 
-              display: true, 
-              text: `← ${awayTeam} Lead  |  Score Differential (Points)  |  ${homeTeam} Lead →`, 
-              color: '#d62728', 
-              font: { weight: 'bold', size: 12 } 
-            },
-            grid: { drawOnChartArea: false },
-            ticks: { color: '#d62728' }
-          }
-        }
+        });
+      } catch (err) {
+        console.error(err);
+        chartContainer.innerHTML = `<div class="empty">Play-by-play data not available for this game.</div>`;
       }
-    });
-  } catch (err) {
-    console.error(err);
-    chartContainer.innerHTML = 
-      `<div class="empty">Play-by-play data not available for this game.</div>`;
-  }
-}
+    }
 
-function closeModal() {
-  document.getElementById('pbpModal').classList.remove('active');
-}
+    function closePbpModal() {
+      document.getElementById('pbpModal').classList.remove('active');
+    }
 
-/* --- INITIALIZATION --- */
-async function init(){
-  try {
-    const [rankings, matchups] = await Promise.all([
-      loadJSON('rankings.json'),
-      loadJSON('matchups.json')
-    ]);
-    globalLeagueProfile = rankings.league_profile || [];
-    renderRankings(rankings);
-    renderMatchups(matchups);
-    initKenpomChart(rankings.teams);
-  } catch(e) {
-    console.warn(`Could not load data via fetch: ${e.message}. Falling back to mock data for demonstration.`);
-    
-    // MOCK DATA FALLBACK (Ensures the file works if you just double-click it in your file explorer)
-    const mockRankings = {
-      year: 2024, week: 1, generated_at: new Date().toISOString(),
-      teams: [
-        { rank: 1, team: "Georgia", power_rating: 28.5, adj_off_ppa: 0.41, adj_def_ppa: 0.12, elo: 2150, talent: 98, rp_ratio: 1.1, trajectory: [{week: 1, adj_off_ppa: 0.41, adj_def_ppa: 0.12}] },
-        { rank: 2, team: "Ohio State", power_rating: 27.8, adj_off_ppa: 0.45, adj_def_ppa: 0.18, elo: 2120, talent: 96, rp_ratio: 0.9, trajectory: [{week: 1, adj_off_ppa: 0.45, adj_def_ppa: 0.18}] },
-        { rank: 3, team: "Texas", power_rating: 24.2, adj_off_ppa: 0.38, adj_def_ppa: 0.16, elo: 1980, talent: 92, rp_ratio: 1.05, trajectory: [{week: 1, adj_off_ppa: 0.38, adj_def_ppa: 0.16}] }
-      ],
-      league_profile: [
-        { team: "Georgia", succ: 0.55, expl: 1.2 },
-        { team: "Ohio State", succ: 0.52, expl: 1.5 },
-        { team: "Texas", succ: 0.49, expl: 1.3 }
-      ]
-    };
-
-    const mockMatchups = {
-      year: 2024, week: 1, generated_at: new Date().toISOString(),
-      games: [
-        { game_id: "101", week: 1, home_team: "Georgia", away_team: "Clemson", home_win_prob: 82.0, predicted_margin: 13.5, predicted_total: 51.5, status: "scheduled", start_date: new Date().toISOString() },
-        { game_id: "102", week: 1, home_team: "Texas", away_team: "Colorado", home_win_prob: 91.0, predicted_margin: 18.0, predicted_total: 62.0, status: "scheduled", start_date: new Date().toISOString() },
-        { game_id: "103", week: 0, home_team: "FSU", away_team: "GT", home_win_prob: 75.0, predicted_margin: -3.0, predicted_total: 45.0, status: "completed", actual_margin: -3, home_points: 21, away_points: 24 }
-      ]
-    };
-
-    globalLeagueProfile = mockRankings.league_profile;
-    renderRankings(mockRankings);
-    renderMatchups(mockMatchups);
-    initKenpomChart(mockRankings.teams);
-
-    // Example in your init / fetch complete block:
-    populateMatchupFilters(globalMatchupsData);
-    populateYearFilters();
-    applyMatchupFilters();
-    applyRankingsFilters();
-  }
-}
-
-/* --- NAVIGATION LOGIC --- */
-const navRankings = document.getElementById('navRankings');
-const navScatter = document.getElementById('navScatter');
-const navMatchups = document.getElementById('navMatchups');
-
-const rankingsSection = document.getElementById('rankingsSection');
-const scatterSection = document.getElementById('scatterSection');
-const matchupsSection = document.getElementById('matchupsSection');
-
-function hideAllSections() {
-  rankingsSection.classList.remove('active');
-  scatterSection.classList.remove('active');
-  matchupsSection.classList.remove('active');
-
-  navRankings.classList.remove('active');
-  navScatter.classList.remove('active');
-  navMatchups.classList.remove('active');
-}
-
-navRankings.addEventListener('click', () => {
-  hideAllSections();
-  navRankings.classList.add('active');
-  rankingsSection.classList.add('active');
-});
-
-navScatter.addEventListener('click', () => {
-  hideAllSections();
-  navScatter.classList.add('active');
-  scatterSection.classList.add('active');
-});
-
-navMatchups.addEventListener('click', () => {
-  hideAllSections();
-  navMatchups.classList.add('active');
-  matchupsSection.classList.add('active');
-});
-
-init();
-</script>
+    // Run Initialization
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </body>
 </html>
