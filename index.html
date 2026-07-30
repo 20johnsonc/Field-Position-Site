@@ -441,11 +441,11 @@
             <tr>
               <th onclick="sortTable('Rank')" style="cursor: pointer;"># ⇕</th>
               <th onclick="sortTable('Team')" style="cursor: pointer;">Team ⇕</th>
-              <th onclick="sortTable('Net Rating')" style="text-align: right; cursor: pointer;">Rating ⇕</th>
-              <th onclick="sortTable('Offense rating')" style="text-align: right; cursor: pointer;">Off ⇕</th>
-              <th onclick="sortTable('Defense rating')" style="text-align: right; cursor: pointer;">Def ⇕</th>
-              <th onclick="sortTable('Adjusted Tempo')" style="text-align: right; cursor: pointer;">Tempo ⇕</th>
-              <th onclick="sortTable('W-L Record')" style="text-align: right; cursor: pointer;">Record ⇕</th>
+              <th onclick="sortTable('Conference')" style="cursor: pointer;">Conf ⇕</th>
+              <th onclick="sortTable('Year')" style="cursor: pointer;">Year ⇕</th>
+              <th onclick="sortTable('Net Rating')" style="text-align: right; cursor: pointer;">Net Rating ⇕</th>
+              <th onclick="sortTable('Offense Rating')" style="text-align: right; cursor: pointer;">Off Rating ⇕</th>
+              <th onclick="sortTable('Defense Rating')" style="text-align: right; cursor: pointer;">Def Rating ⇕</th>
             </tr>
           </thead>
           <tbody id="rankingsBody">
@@ -490,11 +490,6 @@
       return isNaN(d) ? dStr : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
     }
 
-    // Gauge Component Generator
-    function gauge({ value, min, max, favorTag, unit }) {
-      return ''; 
-    }
-
     // Navigation Tabs
     function switchTab(tab) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -513,13 +508,20 @@
     async function init() {
       try {
         const rankingsData = await loadJSON('rankings.json');
-        window.globalRankingsData = rankingsData.teams || [];
+        // Handle all_rankings array or fallback to teams array
+        window.globalRankingsData = rankingsData.all_rankings || rankingsData.teams || [];
         
-        const yr = rankingsData.year || (rankingsData.generated_at ? new Date(rankingsData.generated_at).getFullYear() : 2026);
-        document.getElementById('seasonYear').innerText = `${yr} Season`;
+        // Dynamic Season Badge text
+        const years = window.globalRankingsData.map(t => t.Year || t.year || t.Season || t.season).filter(Boolean);
+        if (years.length) {
+          const minYear = Math.min(...years);
+          const maxYear = Math.max(...years);
+          document.getElementById('seasonYear').innerText = minYear === maxYear ? `${maxYear} Season` : `${minYear}–${maxYear} Seasons`;
+        }
 
         populateRankingsConferences();
         populateTeamDropdown();
+        populateYearFilters();
         applyRankingsFilters();
       } catch (e) {
         console.error('Failed to load rankings:', e);
@@ -562,7 +564,7 @@
       const rankingsYears = new Set();
       if (window.globalRankingsData) {
         window.globalRankingsData.forEach(t => {
-          const yr = t["Season"] || t["year"] || t.year || t.season;
+          const yr = t["Year"] || t["year"] || t["Season"] || t["season"];
           if (yr) rankingsYears.add(yr);
         });
       }
@@ -613,7 +615,8 @@
         .filter(Boolean)
         .sort();
 
-      filteredTeams.forEach(team => {
+      // Deduplicate team names for dropdown
+      Array.from(new Set(filteredTeams)).forEach(team => {
         const opt = document.createElement('option');
         opt.value = team;
         opt.textContent = team;
@@ -688,7 +691,7 @@
       const filtered = window.globalRankingsData.filter(t => {
         const teamName = t["Team"] || t.team || '';
         const teamConf = t["Conference"] || t.conference || '';
-        const teamYear = String(t["Season"] || t["year"] || t.year || t.season || '');
+        const teamYear = String(t["Year"] || t["year"] || t["Season"] || t.season || '');
 
         const matchesYear = (selectedYear === 'ALL') || (teamYear === String(selectedYear));
         const matchesConf = (selectedConf === 'ALL') || (teamConf === selectedConf);
@@ -713,21 +716,21 @@
       data.forEach(t => {
         const rank = t["Rank"] ?? t.rank ?? '—';
         const team = t["Team"] ?? t.team ?? 'Unknown';
-        const netRating = Number(t["Net Rating"] ?? t.power_rating ?? 0);
-        const offRating = Number(t["Offense rating"] ?? t.adj_off ?? 0);
-        const defRating = Number(t["Defense rating"] ?? t.adj_def ?? 0);
-        const tempo = Number(t["Adjusted Tempo"] ?? t.elo ?? 0);
-        const record = t["W-L Record"] ?? t.talent ?? '—';
+        const conf = t["Conference"] ?? t.conference ?? '—';
+        const year = t["Year"] ?? t.year ?? t["Season"] ?? t.season ?? '—';
+        const netRating = Number(t["Net Rating"] ?? t.net_rating ?? t.power_rating ?? 0);
+        const offRating = Number(t["Offense Rating"] ?? t["Offense rating"] ?? t.adj_off ?? 0);
+        const defRating = Number(t["Defense Rating"] ?? t["Defense rating"] ?? t.adj_def ?? 0);
 
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td class="rank">${rank}</td>
           <td class="team">${team}</td>
-          <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(2)}</td>
+          <td>${conf}</td>
+          <td>${year}</td>
+          <td class="num rating">${netRating > 0 ? '+' : ''}${netRating.toFixed(1)}</td>
           <td class="num">${offRating.toFixed(1)}</td>
           <td class="num">${defRating.toFixed(1)}</td>
-          <td class="num">${tempo.toFixed(1)}</td>
-          <td class="num">${record}</td>
         `;
         body.appendChild(tr);
       });
@@ -802,7 +805,6 @@
         const gameId = g.game_id ?? g.gameId;
 
         const hasScores = g.home_points !== undefined && g.away_points !== undefined;
-        const isCompleted = g.status === 'completed' || hasScores;
 
         let scoreDisplay = '—';
         if (hasScores) {
