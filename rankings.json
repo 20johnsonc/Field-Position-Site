@@ -1,4019 +1,4688 @@
 {
-  "generated_at": "2026-07-30T00:45:55.122861+00:00",
+  "generated_at": "2026-07-30T01:32:55.980756+00:00",
   "all_rankings": [
     {
       "Rank": 1,
       "Team": "Georgia",
       "Net Rating": 0.0624597893425787,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 2,
       "Team": "Cincinnati",
       "Net Rating": 0.058823160498700976,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 3,
       "Team": "Ohio State",
       "Net Rating": 0.05491884373383446,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 4,
       "Team": "Pittsburgh",
       "Net Rating": 0.04177492213926226,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 5,
       "Team": "Iowa State",
       "Net Rating": 0.04048122059302831,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 6,
       "Team": "Michigan",
       "Net Rating": 0.04024942099778707,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 7,
       "Team": "Coastal Carolina",
       "Net Rating": 0.035538109907781626,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 8,
       "Team": "Alabama",
       "Net Rating": 0.03360261734802669,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 9,
       "Team": "Western Kentucky",
       "Net Rating": 0.03155073366589442,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 10,
       "Team": "Ole Miss",
       "Net Rating": 0.02997174220711231,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 11,
       "Team": "Liberty",
       "Net Rating": 0.027649957949913248,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 12,
       "Team": "Marshall",
       "Net Rating": 0.026123259968821158,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 13,
       "Team": "Maine",
       "Net Rating": 0.02487548324374996,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 14,
       "Team": "Penn State",
       "Net Rating": 0.02487170639008488,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 15,
       "Team": "Houston",
       "Net Rating": 0.024659244398350377,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 16,
       "Team": "Toledo",
       "Net Rating": 0.024333961187965436,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 17,
       "Team": "Notre Dame",
       "Net Rating": 0.023918197253054108,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 18,
       "Team": "Florida",
       "Net Rating": 0.023024825366502584,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 19,
       "Team": "App State",
       "Net Rating": 0.022355652630234375,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 20,
       "Team": "Florida State",
       "Net Rating": 0.021030437025903986,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 21,
       "Team": "Wisconsin",
       "Net Rating": 0.0207907411294765,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 22,
       "Team": "Arizona State",
       "Net Rating": 0.020643079660538508,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 23,
       "Team": "Arkansas",
       "Net Rating": 0.020473583240173163,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 24,
       "Team": "Boise State",
       "Net Rating": 0.02040164612152688,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 25,
       "Team": "Fresno State",
       "Net Rating": 0.02007875727159667,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 26,
       "Team": "UTSA",
       "Net Rating": 0.019726226218949088,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 27,
       "Team": "Oregon",
       "Net Rating": 0.019169799532315214,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 28,
       "Team": "Nebraska",
       "Net Rating": 0.018870919038263975,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 29,
       "Team": "UTEP",
       "Net Rating": 0.018847380971318724,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 30,
       "Team": "Air Force",
       "Net Rating": 0.018097835632803996,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 31,
       "Team": "Army",
       "Net Rating": 0.01690929891307037,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 32,
       "Team": "Wake Forest",
       "Net Rating": 0.016832062682085973,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 33,
       "Team": "Kentucky",
       "Net Rating": 0.016784950014808134,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 34,
       "Team": "Oklahoma State",
       "Net Rating": 0.016696939110043815,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 35,
       "Team": "NC State",
       "Net Rating": 0.01611618375293286,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 36,
       "Team": "UCF",
       "Net Rating": 0.015706493228135707,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 37,
       "Team": "Auburn",
       "Net Rating": 0.01564148758496868,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 38,
       "Team": "Purdue",
       "Net Rating": 0.015076988803078013,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 39,
       "Team": "Texas A&M",
       "Net Rating": 0.014878688251116295,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 40,
       "Team": "Oregon State",
       "Net Rating": 0.014878190286225217,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 41,
       "Team": "North Carolina",
       "Net Rating": 0.014588511031636695,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 42,
       "Team": "BYU",
       "Net Rating": 0.014499412301147145,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 43,
       "Team": "Colorado State",
       "Net Rating": 0.013652802629541928,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 44,
       "Team": "UAB",
       "Net Rating": 0.013562330954388635,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 45,
       "Team": "Louisville",
       "Net Rating": 0.013390261625916632,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 46,
       "Team": "Tulsa",
       "Net Rating": 0.013180808372971923,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 47,
       "Team": "Tennessee",
       "Net Rating": 0.013134877851114404,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 48,
       "Team": "Louisiana",
       "Net Rating": 0.012125298803342805,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 49,
       "Team": "Texas",
       "Net Rating": 0.011736659690219139,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 50,
       "Team": "Yale",
       "Net Rating": 0.011022261188095947,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 51,
       "Team": "Utah",
       "Net Rating": 0.010461570280758115,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 52,
       "Team": "UCLA",
       "Net Rating": 0.010436894561982768,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 53,
       "Team": "San Diego State",
       "Net Rating": 0.009945462533250524,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 54,
       "Team": "Western Michigan",
       "Net Rating": 0.00991650920130951,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 55,
       "Team": "Baylor",
       "Net Rating": 0.009868656891090545,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 56,
       "Team": "Syracuse",
       "Net Rating": 0.009459738413630488,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 57,
       "Team": "California",
       "Net Rating": 0.009407539311396776,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 58,
       "Team": "Florida Atlantic",
       "Net Rating": 0.009291789905036044,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 59,
       "Team": "Michigan State",
       "Net Rating": 0.008884028071529299,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 60,
       "Team": "Mississippi State",
       "Net Rating": 0.008800782958638412,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 61,
       "Team": "Kansas State",
       "Net Rating": 0.008364293107112945,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 62,
       "Team": "Memphis",
       "Net Rating": 0.007444200903911481,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 63,
       "Team": "Nevada",
       "Net Rating": 0.007202118391850941,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 64,
       "Team": "Virginia",
       "Net Rating": 0.005678298185311561,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 65,
       "Team": "Wyoming",
       "Net Rating": 0.005529112046709926,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 66,
       "Team": "South Alabama",
       "Net Rating": 0.005464043615464272,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 67,
       "Team": "SMU",
       "Net Rating": 0.005088454845006403,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 68,
       "Team": "Tulane",
       "Net Rating": 0.0036827947786087535,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 69,
       "Team": "Clemson",
       "Net Rating": 0.002712758129787461,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 70,
       "Team": "Miami (OH)",
       "Net Rating": 0.0019559548510234854,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 71,
       "Team": "Minnesota",
       "Net Rating": 0.0012689865207504078,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 72,
       "Team": "Utah State",
       "Net Rating": 0.0012458927532818936,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 73,
       "Team": "Iowa",
       "Net Rating": 0.001095242254677339,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 74,
       "Team": "Louisiana Tech",
       "Net Rating": 0.000786561606980915,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 75,
       "Team": "TCU",
       "Net Rating": 0.00040985720721531393,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 76,
       "Team": "LSU",
       "Net Rating": 0.00024735738427822396,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 77,
       "Team": "USC",
       "Net Rating": -0.0013356588701026358,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 78,
       "Team": "Virginia Tech",
       "Net Rating": -0.0017625213522997757,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 79,
       "Team": "Washington",
       "Net Rating": -0.001997610342349316,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 80,
       "Team": "Northern Illinois",
       "Net Rating": -0.002129122698323792,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 81,
       "Team": "Maryland",
       "Net Rating": -0.0031448017617628048,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 82,
       "Team": "East Carolina",
       "Net Rating": -0.003215951133579758,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 83,
       "Team": "Oklahoma",
       "Net Rating": -0.0033271848731852155,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 84,
       "Team": "Central Michigan",
       "Net Rating": -0.0037588285302050696,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 85,
       "Team": "Old Dominion",
       "Net Rating": -0.003811304925144277,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 86,
       "Team": "Wofford",
       "Net Rating": -0.004688968058602274,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 87,
       "Team": "Miami",
       "Net Rating": -0.004755847376524125,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 88,
       "Team": "Texas Tech",
       "Net Rating": -0.005313703767553935,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 89,
       "Team": "Buffalo",
       "Net Rating": -0.00571755153398483,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 90,
       "Team": "Samford",
       "Net Rating": -0.006462623065247627,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 91,
       "Team": "South Carolina",
       "Net Rating": -0.006836015360509774,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 92,
       "Team": "Rutgers",
       "Net Rating": -0.007855740372682024,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 93,
       "Team": "Idaho State",
       "Net Rating": -0.007913498760192449,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 94,
       "Team": "Hawai'i",
       "Net Rating": -0.008153327804622558,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 95,
       "Team": "San Jos\u00e9 State",
       "Net Rating": -0.009710601980871496,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 96,
       "Team": "Boston College",
       "Net Rating": -0.010526865210801015,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 97,
       "Team": "Troy",
       "Net Rating": -0.011435510698875013,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 98,
       "Team": "Washington State",
       "Net Rating": -0.012923777494392892,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 99,
       "Team": "Stanford",
       "Net Rating": -0.013135540458205364,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 100,
       "Team": "Georgia State",
       "Net Rating": -0.013446016623142026,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 101,
       "Team": "Ball State",
       "Net Rating": -0.013595374294822861,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 102,
       "Team": "Eastern Michigan",
       "Net Rating": -0.01450106864845667,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 103,
       "Team": "Tennessee State",
       "Net Rating": -0.015381674730144193,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 104,
       "Team": "Kent State",
       "Net Rating": -0.01560584750611423,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 105,
       "Team": "West Virginia",
       "Net Rating": -0.01616996381437273,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 106,
       "Team": "Ohio",
       "Net Rating": -0.017388715357199082,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 107,
       "Team": "Navy",
       "Net Rating": -0.017572546682730845,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 108,
       "Team": "Georgia Tech",
       "Net Rating": -0.018428045077004337,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 109,
       "Team": "UNLV",
       "Net Rating": -0.018526777368586413,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 110,
       "Team": "Prairie View A&M",
       "Net Rating": -0.018739705219477626,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": NaN
     },
     {
       "Rank": 111,
       "Team": "Middle Tennessee",
       "Net Rating": -0.019036616488216265,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 112,
       "Team": "Bowling Green",
       "Net Rating": -0.02090558424797659,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 113,
       "Team": "Missouri",
       "Net Rating": -0.02099537586084258,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 114,
       "Team": "Indiana",
       "Net Rating": -0.02209190466619558,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 115,
       "Team": "North Texas",
       "Net Rating": -0.024577874951590244,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 116,
       "Team": "Illinois",
       "Net Rating": -0.02570929293165502,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 117,
       "Team": "Texas State",
       "Net Rating": -0.028788137148811108,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 118,
       "Team": "Colorado",
       "Net Rating": -0.029420022794591754,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 119,
       "Team": "Charlotte",
       "Net Rating": -0.02962295021359876,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 120,
       "Team": "New Mexico",
       "Net Rating": -0.0305690747741372,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 121,
       "Team": "South Florida",
       "Net Rating": -0.0322409786376738,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 122,
       "Team": "Rice",
       "Net Rating": -0.03354622626414269,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 123,
       "Team": "Georgia Southern",
       "Net Rating": -0.0339831245470884,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 124,
       "Team": "Southern Miss",
       "Net Rating": -0.036088675146060165,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 125,
       "Team": "UL Monroe",
       "Net Rating": -0.038662731147426715,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 126,
       "Team": "Duke",
       "Net Rating": -0.0395169849229922,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "ACC"
     },
     {
       "Rank": 127,
       "Team": "New Mexico State",
       "Net Rating": -0.04065293733002627,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 128,
       "Team": "Temple",
       "Net Rating": -0.04101265947316943,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 129,
       "Team": "Florida International",
       "Net Rating": -0.041996815427276124,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 130,
       "Team": "Arizona",
       "Net Rating": -0.04275598476421708,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 131,
       "Team": "Northwestern",
       "Net Rating": -0.04279441320982505,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 132,
       "Team": "Vanderbilt",
       "Net Rating": -0.04489883999468939,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "SEC"
     },
     {
       "Rank": 133,
       "Team": "Akron",
       "Net Rating": -0.045845773044200774,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 134,
       "Team": "Massachusetts",
       "Net Rating": -0.04943545724193396,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 135,
       "Team": "Arkansas State",
       "Net Rating": -0.0524618757515265,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 136,
       "Team": "UConn",
       "Net Rating": -0.05898433156891768,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 137,
       "Team": "Kansas",
       "Net Rating": -0.07207122971016978,
-      "Year": 2021
+      "Year": 2021,
+      "Conference": "Big 12"
     },
     {
       "Rank": 1,
       "Team": "Georgia",
       "Net Rating": 0.08072688380377624,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 2,
       "Team": "Ohio State",
       "Net Rating": 0.0686533449540701,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 3,
       "Team": "Alabama",
       "Net Rating": 0.0636676876829075,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 4,
       "Team": "Michigan",
       "Net Rating": 0.05181531416055021,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 5,
       "Team": "USC",
       "Net Rating": 0.04664606422744401,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 6,
       "Team": "Tennessee",
       "Net Rating": 0.043301745629117344,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 7,
       "Team": "LSU",
       "Net Rating": 0.03934377238776704,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 8,
       "Team": "Boise State",
       "Net Rating": 0.03497994037593338,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 9,
       "Team": "Texas",
       "Net Rating": 0.03260466075299501,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 10,
       "Team": "Western Kentucky",
       "Net Rating": 0.03158607706038865,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 11,
       "Team": "Air Force",
       "Net Rating": 0.03148159310495569,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 12,
       "Team": "Mississippi State",
       "Net Rating": 0.030562488407638845,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 13,
       "Team": "Pittsburgh",
       "Net Rating": 0.02926793831770056,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 14,
       "Team": "UCLA",
       "Net Rating": 0.02766840080034959,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 15,
       "Team": "Florida State",
       "Net Rating": 0.026730622600487447,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 16,
       "Team": "BYU",
       "Net Rating": 0.025899922736059282,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 17,
       "Team": "Ole Miss",
       "Net Rating": 0.025767124829723292,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 18,
       "Team": "James Madison",
       "Net Rating": 0.025706729115273396,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 19,
       "Team": "Maryland",
       "Net Rating": 0.023502822653083066,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 20,
       "Team": "Utah",
       "Net Rating": 0.023413527887907667,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 21,
       "Team": "Louisville",
       "Net Rating": 0.022585017677153568,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 22,
       "Team": "Clemson",
       "Net Rating": 0.022581578171479884,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 23,
       "Team": "Wake Forest",
       "Net Rating": 0.021883760405267468,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 24,
       "Team": "Kansas State",
       "Net Rating": 0.01926701164913161,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 25,
       "Team": "Liberty",
       "Net Rating": 0.018869420533917457,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 26,
       "Team": "San Jos\u00e9 State",
       "Net Rating": 0.018834617351755286,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 27,
       "Team": "Cincinnati",
       "Net Rating": 0.018816266519580165,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 28,
       "Team": "UCF",
       "Net Rating": 0.01813670443684793,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 29,
       "Team": "Illinois",
       "Net Rating": 0.017735983686015852,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 30,
       "Team": "Tulane",
       "Net Rating": 0.01746971433089093,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 31,
       "Team": "Penn State",
       "Net Rating": 0.017466636753221992,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 32,
       "Team": "North Carolina",
       "Net Rating": 0.01648804741635174,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 33,
       "Team": "Duke",
       "Net Rating": 0.015703711746384286,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 34,
       "Team": "TCU",
       "Net Rating": 0.015342451139991414,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 35,
       "Team": "Washington State",
       "Net Rating": 0.014673912059403856,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 36,
       "Team": "Wisconsin",
       "Net Rating": 0.01430563601256285,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 37,
       "Team": "Houston",
       "Net Rating": 0.013932920869311027,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 38,
       "Team": "Minnesota",
       "Net Rating": 0.013464039153616242,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 39,
       "Team": "Oregon State",
       "Net Rating": 0.013148608279888112,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 40,
       "Team": "Oregon",
       "Net Rating": 0.013144366090364713,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 41,
       "Team": "Iowa State",
       "Net Rating": 0.01250148724580475,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 42,
       "Team": "Toledo",
       "Net Rating": 0.012281768138446636,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 43,
       "Team": "Auburn",
       "Net Rating": 0.012150907908872612,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 44,
       "Team": "Syracuse",
       "Net Rating": 0.01153831306564693,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 45,
       "Team": "Fresno State",
       "Net Rating": 0.011343571612540312,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 46,
       "Team": "South Alabama",
       "Net Rating": 0.011213057004469227,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 47,
       "Team": "SMU",
       "Net Rating": 0.011117185812219415,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 48,
       "Team": "Troy",
       "Net Rating": 0.010383053996340642,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 49,
       "Team": "Kentucky",
       "Net Rating": 0.010197573897298008,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 50,
       "Team": "Memphis",
       "Net Rating": 0.010113796898535622,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 51,
       "Team": "UTSA",
       "Net Rating": 0.009362296155193064,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 52,
       "Team": "UAB",
       "Net Rating": 0.008047618605157389,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 53,
       "Team": "Coastal Carolina",
       "Net Rating": 0.0073626915988176285,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 54,
       "Team": "Florida",
       "Net Rating": 0.007243077074018868,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 55,
       "Team": "East Carolina",
       "Net Rating": 0.00679689949064865,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 56,
       "Team": "NC State",
       "Net Rating": 0.00626161615503785,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 57,
       "Team": "Washington",
       "Net Rating": 0.0062458692641243485,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 58,
       "Team": "Notre Dame",
       "Net Rating": 0.006111826358888364,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 59,
       "Team": "App State",
       "Net Rating": 0.005282599780539861,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 60,
       "Team": "UNLV",
       "Net Rating": 0.005141918041660719,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 61,
       "Team": "Purdue",
       "Net Rating": 0.002899365439465465,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 62,
       "Team": "Florida Atlantic",
       "Net Rating": 0.002182828818609636,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 63,
       "Team": "Buffalo",
       "Net Rating": 0.00045310311864963856,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 64,
       "Team": "Iowa",
       "Net Rating": 0.0004303712226933973,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 65,
       "Team": "Marshall",
       "Net Rating": -0.0008531981157152216,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 66,
       "Team": "Baylor",
       "Net Rating": -0.0010260182861176574,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 67,
       "Team": "Arkansas",
       "Net Rating": -0.001120567570509004,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 68,
       "Team": "South Carolina",
       "Net Rating": -0.001296657836249597,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 69,
       "Team": "Texas A&M",
       "Net Rating": -0.0013429804949755576,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 70,
       "Team": "Oklahoma",
       "Net Rating": -0.0015327474709785627,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 71,
       "Team": "Texas Tech",
       "Net Rating": -0.0026072689517265754,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 72,
       "Team": "California",
       "Net Rating": -0.004009871633844319,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 73,
       "Team": "Wyoming",
       "Net Rating": -0.004977743061607302,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 74,
       "Team": "Miami",
       "Net Rating": -0.005692720540271545,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 75,
       "Team": "Middle Tennessee",
       "Net Rating": -0.005926106212607425,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 76,
       "Team": "Nevada",
       "Net Rating": -0.0059331487036900915,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 77,
       "Team": "Northern Illinois",
       "Net Rating": -0.006433603121337603,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 78,
       "Team": "Tulsa",
       "Net Rating": -0.0067019278680658925,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 79,
       "Team": "Missouri",
       "Net Rating": -0.00694871770090693,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 80,
       "Team": "Georgia State",
       "Net Rating": -0.00695236518548209,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 81,
       "Team": "Central Michigan",
       "Net Rating": -0.008075572358788953,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 82,
       "Team": "Kansas",
       "Net Rating": -0.008162227997070337,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 83,
       "Team": "Army",
       "Net Rating": -0.008686361918897642,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 84,
       "Team": "Nebraska",
       "Net Rating": -0.009099636090519524,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 85,
       "Team": "Indiana",
       "Net Rating": -0.009296898701615045,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 86,
       "Team": "Utah State",
       "Net Rating": -0.009564795137620236,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 87,
       "Team": "Michigan State",
       "Net Rating": -0.009728860478395284,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 88,
       "Team": "Louisiana",
       "Net Rating": -0.009729806040990378,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 89,
       "Team": "Arizona State",
       "Net Rating": -0.010299113417032497,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 90,
       "Team": "Boston College",
       "Net Rating": -0.010576048201886248,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 91,
       "Team": "Kent State",
       "Net Rating": -0.011020028292043647,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 92,
       "Team": "Old Dominion",
       "Net Rating": -0.011315215882760112,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 93,
       "Team": "San Diego State",
       "Net Rating": -0.01190921439806732,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 94,
       "Team": "Ohio",
       "Net Rating": -0.012299521054666971,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 95,
       "Team": "Stanford",
       "Net Rating": -0.012665920334118112,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 96,
       "Team": "Miami (OH)",
       "Net Rating": -0.013295217708264973,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 97,
       "Team": "Virginia",
       "Net Rating": -0.014942615972848253,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 98,
       "Team": "Virginia Tech",
       "Net Rating": -0.01562970050575343,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 99,
       "Team": "Georgia Southern",
       "Net Rating": -0.016736295259021497,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 100,
       "Team": "Eastern Michigan",
       "Net Rating": -0.017037125697918085,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 101,
       "Team": "Texas State",
       "Net Rating": -0.01720562086907828,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 102,
       "Team": "Bowling Green",
       "Net Rating": -0.017404017483889197,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 103,
       "Team": "West Virginia",
       "Net Rating": -0.017996457548132297,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 104,
       "Team": "Ball State",
       "Net Rating": -0.018287818785006085,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 105,
       "Team": "North Texas",
       "Net Rating": -0.01933339326747345,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 106,
       "Team": "Georgia Tech",
       "Net Rating": -0.019887573203353895,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "ACC"
     },
     {
       "Rank": 107,
       "Team": "Oklahoma State",
       "Net Rating": -0.020178243056737537,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 108,
       "Team": "South Florida",
       "Net Rating": -0.023714057220203838,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 109,
       "Team": "Colorado State",
       "Net Rating": -0.024276279418237623,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 110,
       "Team": "Arizona",
       "Net Rating": -0.02490426054090542,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 111,
       "Team": "Vanderbilt",
       "Net Rating": -0.025638153296365367,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "SEC"
     },
     {
       "Rank": 112,
       "Team": "Western Michigan",
       "Net Rating": -0.026723360045832964,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 113,
       "Team": "Northwestern",
       "Net Rating": -0.027366737658755767,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 114,
       "Team": "UTEP",
       "Net Rating": -0.028464177024523356,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 115,
       "Team": "Louisiana Tech",
       "Net Rating": -0.02989152963539253,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 116,
       "Team": "Southern Miss",
       "Net Rating": -0.030013371121691862,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 117,
       "Team": "Navy",
       "Net Rating": -0.03012157510266049,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 118,
       "Team": "UConn",
       "Net Rating": -0.03188909038135748,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 119,
       "Team": "Temple",
       "Net Rating": -0.03218692579043324,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 120,
       "Team": "UL Monroe",
       "Net Rating": -0.03292357166974061,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 121,
       "Team": "Arkansas State",
       "Net Rating": -0.03321080554298905,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 122,
       "Team": "Rutgers",
       "Net Rating": -0.03348847799091316,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 123,
       "Team": "Rice",
       "Net Rating": -0.03359521481837689,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 124,
       "Team": "New Mexico",
       "Net Rating": -0.035930904007896045,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 125,
       "Team": "Hawai'i",
       "Net Rating": -0.043917331945096394,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 126,
       "Team": "New Mexico State",
       "Net Rating": -0.04657519703567545,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 127,
       "Team": "Massachusetts",
       "Net Rating": -0.04846727069598822,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 128,
       "Team": "Charlotte",
       "Net Rating": -0.05299791603151355,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 129,
       "Team": "Florida International",
       "Net Rating": -0.055526768999838605,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 130,
       "Team": "Colorado",
       "Net Rating": -0.057505662417674394,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Big 12"
     },
     {
       "Rank": 131,
       "Team": "Akron",
       "Net Rating": -0.05975506745328654,
-      "Year": 2022
+      "Year": 2022,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 1,
       "Team": "Ohio State",
       "Net Rating": 0.06165952863833532,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 2,
       "Team": "Michigan",
       "Net Rating": 0.061128925988061605,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 3,
       "Team": "Oklahoma",
       "Net Rating": 0.05800902854385928,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 4,
       "Team": "Oregon",
       "Net Rating": 0.045846955415969365,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 5,
       "Team": "Georgia",
       "Net Rating": 0.043800727366998166,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 6,
       "Team": "Penn State",
       "Net Rating": 0.043792724384419515,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 7,
       "Team": "Notre Dame",
       "Net Rating": 0.04208863340469997,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 8,
       "Team": "Texas",
       "Net Rating": 0.0394143609874828,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 9,
       "Team": "Ole Miss",
       "Net Rating": 0.0378359615082336,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 10,
       "Team": "USC",
       "Net Rating": 0.037518327928673385,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 11,
       "Team": "Florida State",
       "Net Rating": 0.03578467008387152,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 12,
       "Team": "LSU",
       "Net Rating": 0.035503600872454286,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 13,
       "Team": "Washington",
       "Net Rating": 0.034609366449466925,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 14,
       "Team": "Alabama",
       "Net Rating": 0.034238013702201864,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 15,
       "Team": "Miami",
       "Net Rating": 0.03291666224904444,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 16,
       "Team": "Kansas State",
       "Net Rating": 0.032242084117513156,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 17,
       "Team": "SMU",
       "Net Rating": 0.031994970175212696,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 18,
       "Team": "Tennessee",
       "Net Rating": 0.03133342789067518,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 19,
       "Team": "Texas A&M",
       "Net Rating": 0.030978658173508145,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 20,
       "Team": "Louisville",
       "Net Rating": 0.028106889756839143,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 21,
       "Team": "Oregon State",
       "Net Rating": 0.026351359575487482,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 22,
       "Team": "Air Force",
       "Net Rating": 0.025977169041289227,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 23,
       "Team": "Liberty",
       "Net Rating": 0.025878903346856143,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 24,
       "Team": "Memphis",
       "Net Rating": 0.02266786735940708,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 25,
       "Team": "Kansas",
       "Net Rating": 0.022507900745102727,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 26,
       "Team": "TCU",
       "Net Rating": 0.021922246671834896,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 27,
       "Team": "Fresno State",
       "Net Rating": 0.02136662345709712,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 28,
       "Team": "Duke",
       "Net Rating": 0.021246665104623197,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 29,
       "Team": "Toledo",
       "Net Rating": 0.021210098830549105,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 30,
       "Team": "Wisconsin",
       "Net Rating": 0.019714084926817164,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 31,
       "Team": "Troy",
       "Net Rating": 0.019560789290683125,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 32,
       "Team": "North Carolina",
       "Net Rating": 0.016748893926895794,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 33,
       "Team": "Maryland",
       "Net Rating": 0.016670829301450495,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 34,
       "Team": "Missouri",
       "Net Rating": 0.016622925923544044,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 35,
       "Team": "Tulane",
       "Net Rating": 0.016376643138951638,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 36,
       "Team": "James Madison",
       "Net Rating": 0.015285708260242122,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 37,
       "Team": "UCF",
       "Net Rating": 0.01490645723273093,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 38,
       "Team": "South Alabama",
       "Net Rating": 0.014688293330837626,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 39,
       "Team": "Arkansas",
       "Net Rating": 0.014582635887940714,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 40,
       "Team": "Auburn",
       "Net Rating": 0.014429810118306567,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 41,
       "Team": "Kentucky",
       "Net Rating": 0.014036296065659856,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 42,
       "Team": "Nebraska",
       "Net Rating": 0.010466327433672023,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 43,
       "Team": "Ohio",
       "Net Rating": 0.009688322821240393,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 44,
       "Team": "Illinois",
       "Net Rating": 0.008991744356559306,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 45,
       "Team": "Rice",
       "Net Rating": 0.008653119937762375,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 46,
       "Team": "Western Kentucky",
       "Net Rating": 0.00839533246459418,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 47,
       "Team": "Texas Tech",
       "Net Rating": 0.007522962027363664,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 48,
       "Team": "Northern Illinois",
       "Net Rating": 0.005166640219844267,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 49,
       "Team": "UTSA",
       "Net Rating": 0.004521968833740963,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 50,
       "Team": "UCLA",
       "Net Rating": 0.003744215849329921,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 51,
       "Team": "Miami (OH)",
       "Net Rating": 0.002246037190794418,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 52,
       "Team": "Louisiana",
       "Net Rating": 0.0022312958092037434,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 53,
       "Team": "Marshall",
       "Net Rating": 0.0016475286874045418,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 54,
       "Team": "Clemson",
       "Net Rating": 0.0005053511417789022,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 55,
       "Team": "Coastal Carolina",
       "Net Rating": 0.0003584132757819235,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 56,
       "Team": "Oklahoma State",
       "Net Rating": 0.00015375632530750805,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 57,
       "Team": "Syracuse",
       "Net Rating": 0.00010893288258268657,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 58,
       "Team": "New Mexico State",
       "Net Rating": 6.913812874407427e-05,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 59,
       "Team": "Colorado State",
       "Net Rating": -5.5358092100499245e-05,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 60,
       "Team": "Iowa State",
       "Net Rating": -0.0004189030725106069,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 61,
       "Team": "Boston College",
       "Net Rating": -0.0011180851190595656,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 62,
       "Team": "UAB",
       "Net Rating": -0.00153673674777215,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 63,
       "Team": "Washington State",
       "Net Rating": -0.0017022624907823206,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 64,
       "Team": "App State",
       "Net Rating": -0.0018306192646114702,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 65,
       "Team": "Arizona",
       "Net Rating": -0.0019395852251669898,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 66,
       "Team": "Bowling Green",
       "Net Rating": -0.0019880930307928394,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 67,
       "Team": "Old Dominion",
       "Net Rating": -0.002449916490905507,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 68,
       "Team": "West Virginia",
       "Net Rating": -0.002696760484575396,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 69,
       "Team": "Georgia State",
       "Net Rating": -0.0029987573615950086,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 70,
       "Team": "Florida",
       "Net Rating": -0.0030039332308041053,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 71,
       "Team": "Boise State",
       "Net Rating": -0.0031564779021776845,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 72,
       "Team": "Rutgers",
       "Net Rating": -0.0035114517522681996,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 73,
       "Team": "Purdue",
       "Net Rating": -0.004090465931784984,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 74,
       "Team": "UNLV",
       "Net Rating": -0.0042886679716573044,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 75,
       "Team": "Utah State",
       "Net Rating": -0.0045297542203649975,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 76,
       "Team": "Texas State",
       "Net Rating": -0.00454709722860103,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 77,
       "Team": "Cincinnati",
       "Net Rating": -0.006080181372187618,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 78,
       "Team": "Jacksonville State",
       "Net Rating": -0.006771976300188268,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 79,
       "Team": "San Jos\u00e9 State",
       "Net Rating": -0.007510257152633669,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 80,
       "Team": "NC State",
       "Net Rating": -0.00753642368849828,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 81,
       "Team": "Colorado",
       "Net Rating": -0.007729368119822812,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 82,
       "Team": "Louisiana Tech",
       "Net Rating": -0.008430688087797608,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 83,
       "Team": "Minnesota",
       "Net Rating": -0.009316353260524879,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 84,
       "Team": "Mississippi State",
       "Net Rating": -0.009704314235794974,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 85,
       "Team": "South Carolina",
       "Net Rating": -0.009973520604448248,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 86,
       "Team": "Wyoming",
       "Net Rating": -0.010551907047566509,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 87,
       "Team": "Iowa",
       "Net Rating": -0.011484436864923881,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 88,
       "Team": "Northwestern",
       "Net Rating": -0.011581130634201542,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 89,
       "Team": "Utah",
       "Net Rating": -0.01228487841580703,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 90,
       "Team": "Florida International",
       "Net Rating": -0.013023824601865033,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 91,
       "Team": "Middle Tennessee",
       "Net Rating": -0.013081960924527734,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 92,
       "Team": "Buffalo",
       "Net Rating": -0.01352514388393742,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 93,
       "Team": "South Florida",
       "Net Rating": -0.013653937505311735,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 94,
       "Team": "California",
       "Net Rating": -0.014147500022107327,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 95,
       "Team": "Georgia Southern",
       "Net Rating": -0.014167892966264965,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 96,
       "Team": "Pittsburgh",
       "Net Rating": -0.014590887273940055,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 97,
       "Team": "Navy",
       "Net Rating": -0.015338124588345117,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 98,
       "Team": "Houston",
       "Net Rating": -0.016126931585389973,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 99,
       "Team": "Michigan State",
       "Net Rating": -0.016504838022144946,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 100,
       "Team": "Florida Atlantic",
       "Net Rating": -0.017624253759897263,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 101,
       "Team": "Virginia Tech",
       "Net Rating": -0.01780458194858508,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 102,
       "Team": "East Carolina",
       "Net Rating": -0.01899516302963642,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 103,
       "Team": "Baylor",
       "Net Rating": -0.019806541436333584,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 104,
       "Team": "North Texas",
       "Net Rating": -0.020539645623242765,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 105,
       "Team": "Army",
       "Net Rating": -0.021123165127685695,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 106,
       "Team": "Georgia Tech",
       "Net Rating": -0.02193149409331595,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 107,
       "Team": "Sam Houston",
       "Net Rating": -0.022014132056496834,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 108,
       "Team": "BYU",
       "Net Rating": -0.022150191324454456,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 109,
       "Team": "Western Michigan",
       "Net Rating": -0.023409672277144473,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 110,
       "Team": "Charlotte",
       "Net Rating": -0.023866648910469246,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 111,
       "Team": "UConn",
       "Net Rating": -0.02422431977835897,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 112,
       "Team": "Tulsa",
       "Net Rating": -0.02469167988252144,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 113,
       "Team": "UTEP",
       "Net Rating": -0.02520072136219916,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 114,
       "Team": "San Diego State",
       "Net Rating": -0.02560497436593194,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 115,
       "Team": "New Mexico",
       "Net Rating": -0.026874907453435987,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 116,
       "Team": "Arizona State",
       "Net Rating": -0.028183544307849546,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big 12"
     },
     {
       "Rank": 117,
       "Team": "Virginia",
       "Net Rating": -0.02834331064743672,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 118,
       "Team": "Eastern Michigan",
       "Net Rating": -0.028599203824628883,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 119,
       "Team": "Central Michigan",
       "Net Rating": -0.030072075489534167,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 120,
       "Team": "Massachusetts",
       "Net Rating": -0.030252326246628866,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 121,
       "Team": "Temple",
       "Net Rating": -0.030604281157850827,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 122,
       "Team": "Ball State",
       "Net Rating": -0.03096739736923151,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 123,
       "Team": "Indiana",
       "Net Rating": -0.031068214160688355,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 124,
       "Team": "UL Monroe",
       "Net Rating": -0.031573301327884135,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 125,
       "Team": "Southern Miss",
       "Net Rating": -0.03198554921207676,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 126,
       "Team": "Akron",
       "Net Rating": -0.03210000880342925,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 127,
       "Team": "Hawai'i",
       "Net Rating": -0.034098235931985334,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 128,
       "Team": "Wake Forest",
       "Net Rating": -0.0351216528510187,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 129,
       "Team": "Nevada",
       "Net Rating": -0.03524047976570503,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 130,
       "Team": "Vanderbilt",
       "Net Rating": -0.040260426134821885,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "SEC"
     },
     {
       "Rank": 131,
       "Team": "Arkansas State",
       "Net Rating": -0.04292546391016769,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 132,
       "Team": "Stanford",
       "Net Rating": -0.04341069818038383,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "ACC"
     },
     {
       "Rank": 133,
       "Team": "Kent State",
       "Net Rating": -0.045481443757716455,
-      "Year": 2023
+      "Year": 2023,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 1,
       "Team": "Ohio State",
       "Net Rating": 0.07871014044007162,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 2,
       "Team": "Ole Miss",
       "Net Rating": 0.05887101887897844,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 3,
       "Team": "Alabama",
       "Net Rating": 0.05424135786049218,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 4,
       "Team": "Texas",
       "Net Rating": 0.05334168783768048,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 5,
       "Team": "Miami",
       "Net Rating": 0.05184027649180266,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 6,
       "Team": "Penn State",
       "Net Rating": 0.05175903989458401,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 7,
       "Team": "Oregon",
       "Net Rating": 0.04976907077813278,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 8,
       "Team": "Notre Dame",
       "Net Rating": 0.0488777028912632,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 9,
       "Team": "Georgia",
       "Net Rating": 0.04344719180656384,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 10,
       "Team": "Washington",
       "Net Rating": 0.04326180478312213,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 11,
       "Team": "Tennessee",
       "Net Rating": 0.042788561379644284,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 12,
       "Team": "Boise State",
       "Net Rating": 0.03532318033420109,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 13,
       "Team": "Indiana",
       "Net Rating": 0.03480252712792767,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 14,
       "Team": "Army",
       "Net Rating": 0.0343016753065533,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 15,
       "Team": "SMU",
       "Net Rating": 0.03425677830092101,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 16,
       "Team": "Louisville",
       "Net Rating": 0.033393736851704485,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 17,
       "Team": "James Madison",
       "Net Rating": 0.03229309096820242,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 18,
       "Team": "Tulane",
       "Net Rating": 0.029942235370060397,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 19,
       "Team": "Kansas State",
       "Net Rating": 0.028332204189597282,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 20,
       "Team": "Navy",
       "Net Rating": 0.025494182683930833,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 21,
       "Team": "Texas A&M",
       "Net Rating": 0.0248101947640604,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 22,
       "Team": "South Carolina",
       "Net Rating": 0.02427871131497185,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 23,
       "Team": "Arizona State",
       "Net Rating": 0.02408386703992592,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 24,
       "Team": "Iowa State",
       "Net Rating": 0.023904017912438437,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 25,
       "Team": "Northern Illinois",
       "Net Rating": 0.02372521692255249,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 26,
       "Team": "LSU",
       "Net Rating": 0.022877431022018765,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 27,
       "Team": "Texas State",
       "Net Rating": 0.02255079301822838,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 28,
       "Team": "Bowling Green",
       "Net Rating": 0.020162629915999652,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 29,
       "Team": "Arkansas",
       "Net Rating": 0.01996553804436653,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 30,
       "Team": "USC",
       "Net Rating": 0.019098806400090505,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 31,
       "Team": "Liberty",
       "Net Rating": 0.01886950519983891,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 32,
       "Team": "Minnesota",
       "Net Rating": 0.017954626285140426,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 33,
       "Team": "Oklahoma",
       "Net Rating": 0.017625037834319325,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 34,
       "Team": "Washington State",
       "Net Rating": 0.016881319201467886,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 35,
       "Team": "Georgia Tech",
       "Net Rating": 0.014942075103402772,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 36,
       "Team": "Pittsburgh",
       "Net Rating": 0.014722247290726284,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 37,
       "Team": "South Alabama",
       "Net Rating": 0.013329194265965294,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 38,
       "Team": "Colorado",
       "Net Rating": 0.013096201763879475,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 39,
       "Team": "Michigan",
       "Net Rating": 0.012784510956357603,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 40,
       "Team": "Texas Tech",
       "Net Rating": 0.012087167455807273,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 41,
       "Team": "Kentucky",
       "Net Rating": 0.011684472660263314,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 42,
       "Team": "UNLV",
       "Net Rating": 0.010963432288180634,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 43,
       "Team": "BYU",
       "Net Rating": 0.010644904837278021,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 44,
       "Team": "UCF",
       "Net Rating": 0.01057474944443862,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 45,
       "Team": "California",
       "Net Rating": 0.009781431788107007,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 46,
       "Team": "Louisiana",
       "Net Rating": 0.009675667335451773,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 47,
       "Team": "Auburn",
       "Net Rating": 0.009580163200053456,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 48,
       "Team": "Virginia Tech",
       "Net Rating": 0.009237586821480258,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 49,
       "Team": "Old Dominion",
       "Net Rating": 0.008698874184382265,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 50,
       "Team": "Iowa",
       "Net Rating": 0.008186183171496532,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 51,
       "Team": "Maryland",
       "Net Rating": 0.007892545440795366,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 52,
       "Team": "Kansas",
       "Net Rating": 0.007109771072652059,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 53,
       "Team": "San Jos\u00e9 State",
       "Net Rating": 0.006128144291490313,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 54,
       "Team": "Missouri",
       "Net Rating": 0.006031827610304203,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 55,
       "Team": "Ohio",
       "Net Rating": 0.005946996462430226,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 56,
       "Team": "North Carolina",
       "Net Rating": 0.005847686356255894,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 57,
       "Team": "Coastal Carolina",
       "Net Rating": 0.005238700051065991,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 58,
       "Team": "TCU",
       "Net Rating": 0.004640724986550777,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 59,
       "Team": "Miami (OH)",
       "Net Rating": 0.004050187188910939,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 60,
       "Team": "Duke",
       "Net Rating": 0.0029921427332251643,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 61,
       "Team": "Illinois",
       "Net Rating": 0.0025555890795549447,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 62,
       "Team": "Jacksonville State",
       "Net Rating": 0.002345133161845512,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 63,
       "Team": "Florida Atlantic",
       "Net Rating": 0.0019814276026252214,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 64,
       "Team": "Clemson",
       "Net Rating": 0.001073603978855718,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 65,
       "Team": "Sam Houston",
       "Net Rating": 0.0007960175552249905,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 66,
       "Team": "Marshall",
       "Net Rating": 0.0002388724416982832,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 67,
       "Team": "UConn",
       "Net Rating": 5.7216752933807874e-05,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 68,
       "Team": "Memphis",
       "Net Rating": -0.0012803616256854503,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 69,
       "Team": "Nebraska",
       "Net Rating": -0.0016410863992595602,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 70,
       "Team": "Florida",
       "Net Rating": -0.002297743627992857,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 71,
       "Team": "Arizona",
       "Net Rating": -0.0037631806908191984,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 72,
       "Team": "Cincinnati",
       "Net Rating": -0.005093111432798815,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 73,
       "Team": "Toledo",
       "Net Rating": -0.005838882162297762,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 74,
       "Team": "Troy",
       "Net Rating": -0.006028775135694504,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 75,
       "Team": "UL Monroe",
       "Net Rating": -0.006285008384865412,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 76,
       "Team": "Charlotte",
       "Net Rating": -0.006403590809909425,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 77,
       "Team": "Syracuse",
       "Net Rating": -0.006776359489456792,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 78,
       "Team": "Utah",
       "Net Rating": -0.007119833548036299,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 79,
       "Team": "UCLA",
       "Net Rating": -0.007322736476918654,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 80,
       "Team": "North Texas",
       "Net Rating": -0.009140441945596933,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 81,
       "Team": "NC State",
       "Net Rating": -0.009507144989949264,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 82,
       "Team": "Florida International",
       "Net Rating": -0.009919053898194408,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 83,
       "Team": "Baylor",
       "Net Rating": -0.0100781035183609,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 84,
       "Team": "Wisconsin",
       "Net Rating": -0.010307710573964755,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 85,
       "Team": "Oregon State",
       "Net Rating": -0.01035268873367308,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 86,
       "Team": "Vanderbilt",
       "Net Rating": -0.010862794748105455,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 87,
       "Team": "UTSA",
       "Net Rating": -0.010946787246766076,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 88,
       "Team": "UAB",
       "Net Rating": -0.011893603138561984,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 89,
       "Team": "UTEP",
       "Net Rating": -0.011918908751886677,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 90,
       "Team": "Michigan State",
       "Net Rating": -0.012715143234696902,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 91,
       "Team": "Oklahoma State",
       "Net Rating": -0.013495820919540255,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 92,
       "Team": "Fresno State",
       "Net Rating": -0.014171622146150021,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 93,
       "Team": "Boston College",
       "Net Rating": -0.014629953661559147,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 94,
       "Team": "Rutgers",
       "Net Rating": -0.01475007537447915,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 95,
       "Team": "East Carolina",
       "Net Rating": -0.015016139463712259,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 96,
       "Team": "Nevada",
       "Net Rating": -0.015128007737122216,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 97,
       "Team": "Georgia Southern",
       "Net Rating": -0.015185048725757983,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 98,
       "Team": "Virginia",
       "Net Rating": -0.015292487498513526,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 99,
       "Team": "Western Kentucky",
       "Net Rating": -0.015387888937766485,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 100,
       "Team": "Buffalo",
       "Net Rating": -0.01613097646047057,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 101,
       "Team": "Colorado State",
       "Net Rating": -0.016458606227494215,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 102,
       "Team": "Mississippi State",
       "Net Rating": -0.0165497079711222,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "SEC"
     },
     {
       "Rank": 103,
       "Team": "Rice",
       "Net Rating": -0.016750480734221654,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 104,
       "Team": "Central Michigan",
       "Net Rating": -0.018415582316492124,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 105,
       "Team": "Florida State",
       "Net Rating": -0.018634022074271096,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 106,
       "Team": "Houston",
       "Net Rating": -0.018924353615550567,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 107,
       "Team": "Georgia State",
       "Net Rating": -0.01937428138992133,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 108,
       "Team": "South Florida",
       "Net Rating": -0.019790430069760067,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 109,
       "Team": "Utah State",
       "Net Rating": -0.020355019589514807,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 110,
       "Team": "Western Michigan",
       "Net Rating": -0.021260279590459515,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 111,
       "Team": "Hawai'i",
       "Net Rating": -0.022389087235703344,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 112,
       "Team": "Arkansas State",
       "Net Rating": -0.023026006680001654,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 113,
       "Team": "West Virginia",
       "Net Rating": -0.026319902487220114,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big 12"
     },
     {
       "Rank": 114,
       "Team": "Temple",
       "Net Rating": -0.027191004539331723,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 115,
       "Team": "Eastern Michigan",
       "Net Rating": -0.027377158644672328,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 116,
       "Team": "Northwestern",
       "Net Rating": -0.02836865087900714,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 117,
       "Team": "Akron",
       "Net Rating": -0.02851449635658994,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 118,
       "Team": "Air Force",
       "Net Rating": -0.029369778135814633,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 119,
       "Team": "New Mexico",
       "Net Rating": -0.02970002368323487,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 120,
       "Team": "Wake Forest",
       "Net Rating": -0.031167128964616875,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 121,
       "Team": "Stanford",
       "Net Rating": -0.032084845209601226,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "ACC"
     },
     {
       "Rank": 122,
       "Team": "Louisiana Tech",
       "Net Rating": -0.0335465036560949,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 123,
       "Team": "Middle Tennessee",
       "Net Rating": -0.03411943123309849,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 124,
       "Team": "App State",
       "Net Rating": -0.03547783755955978,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 125,
       "Team": "Massachusetts",
       "Net Rating": -0.036432533177635396,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 126,
       "Team": "San Diego State",
       "Net Rating": -0.038090150432941366,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 127,
       "Team": "Kent State",
       "Net Rating": -0.04342109699820812,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 128,
       "Team": "Wyoming",
       "Net Rating": -0.04470076805064139,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 129,
       "Team": "Tulsa",
       "Net Rating": -0.04659038836407248,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 130,
       "Team": "New Mexico State",
       "Net Rating": -0.04678224978916873,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 131,
       "Team": "Kennesaw State",
       "Net Rating": -0.04782979926375361,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 132,
       "Team": "Southern Miss",
       "Net Rating": -0.051937348304782666,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 133,
       "Team": "Ball State",
       "Net Rating": -0.05993266955565634,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 134,
       "Team": "Purdue",
       "Net Rating": -0.06811228082041927,
-      "Year": 2024
+      "Year": 2024,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 1,
       "Team": "Ohio State",
       "Net Rating": 0.06042334044819456,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 2,
       "Team": "Oregon",
       "Net Rating": 0.05782867505241843,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 3,
       "Team": "Indiana",
       "Net Rating": 0.05663220542607285,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 4,
       "Team": "USC",
       "Net Rating": 0.05419242829470302,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 5,
       "Team": "Old Dominion",
       "Net Rating": 0.0447512498043281,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 6,
       "Team": "Alabama",
       "Net Rating": 0.044160941604323184,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 7,
       "Team": "Texas Tech",
       "Net Rating": 0.04399144869736486,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 8,
       "Team": "Notre Dame",
       "Net Rating": 0.04320713617389686,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 9,
       "Team": "Ole Miss",
       "Net Rating": 0.042540532636563134,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 10,
       "Team": "Miami",
       "Net Rating": 0.039825408796075615,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 11,
       "Team": "Utah",
       "Net Rating": 0.03584507465668982,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 12,
       "Team": "Texas A&M",
       "Net Rating": 0.034616886766471906,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 13,
       "Team": "Toledo",
       "Net Rating": 0.03444547322277518,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 14,
       "Team": "Florida State",
       "Net Rating": 0.033796187606060624,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 15,
       "Team": "Tennessee",
       "Net Rating": 0.031565835389873564,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 16,
       "Team": "Vanderbilt",
       "Net Rating": 0.030527370010779584,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 17,
       "Team": "Oklahoma",
       "Net Rating": 0.02994355787116612,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 18,
       "Team": "Arkansas",
       "Net Rating": 0.029556939761323068,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 19,
       "Team": "SMU",
       "Net Rating": 0.029461887143845927,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 20,
       "Team": "Michigan",
       "Net Rating": 0.028598970496312666,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 21,
       "Team": "Missouri",
       "Net Rating": 0.028494739458394522,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 22,
       "Team": "BYU",
       "Net Rating": 0.02803819218672471,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 23,
       "Team": "Washington",
       "Net Rating": 0.02710611165521165,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 24,
       "Team": "Georgia",
       "Net Rating": 0.02427705600880463,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 25,
       "Team": "North Texas",
       "Net Rating": 0.023878774491538163,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 26,
       "Team": "Memphis",
       "Net Rating": 0.0211683001955255,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 27,
       "Team": "Auburn",
       "Net Rating": 0.02081041012043207,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 28,
       "Team": "Texas",
       "Net Rating": 0.02049258047375778,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 29,
       "Team": "James Madison",
       "Net Rating": 0.01962158207441525,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 30,
       "Team": "Penn State",
       "Net Rating": 0.0194420768418216,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 31,
       "Team": "South Florida",
       "Net Rating": 0.018804601201778293,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 32,
       "Team": "Louisville",
       "Net Rating": 0.0186368978437768,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 33,
       "Team": "Tulane",
       "Net Rating": 0.01747767170283383,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 34,
       "Team": "Virginia",
       "Net Rating": 0.01573844292024963,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 35,
       "Team": "Georgia Tech",
       "Net Rating": 0.015713714305017737,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 36,
       "Team": "TCU",
       "Net Rating": 0.014045429859239952,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 37,
       "Team": "East Carolina",
       "Net Rating": 0.013936685295160685,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 38,
       "Team": "Cincinnati",
       "Net Rating": 0.01345863878770381,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 39,
       "Team": "Ohio",
       "Net Rating": 0.013378775665040098,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 40,
       "Team": "Texas State",
       "Net Rating": 0.01271827086726508,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 41,
       "Team": "Louisiana Tech",
       "Net Rating": 0.012396671872355474,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 42,
       "Team": "Wake Forest",
       "Net Rating": 0.010834028846539237,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 43,
       "Team": "LSU",
       "Net Rating": 0.01029527930732466,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 44,
       "Team": "Baylor",
       "Net Rating": 0.00984178419600323,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 45,
       "Team": "Kansas",
       "Net Rating": 0.00951463381427519,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 46,
       "Team": "NC State",
       "Net Rating": 0.009285953667627432,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 47,
       "Team": "Mississippi State",
       "Net Rating": 0.008174347938527608,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 48,
       "Team": "Boise State",
       "Net Rating": 0.008026315303041098,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 49,
       "Team": "Southern Miss",
       "Net Rating": 0.00782775548324861,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 50,
       "Team": "Iowa",
       "Net Rating": 0.007455549429138619,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 51,
       "Team": "Army",
       "Net Rating": 0.007348230018577283,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 52,
       "Team": "South Carolina",
       "Net Rating": 0.006922360982393558,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 53,
       "Team": "Clemson",
       "Net Rating": 0.0065169966073881855,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 54,
       "Team": "Arizona State",
       "Net Rating": 0.006113780452449372,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 55,
       "Team": "Nebraska",
       "Net Rating": 0.005609708501466002,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 56,
       "Team": "Pittsburgh",
       "Net Rating": 0.004862410643176038,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 57,
       "Team": "Duke",
       "Net Rating": 0.0048364834796140455,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 58,
       "Team": "San Diego State",
       "Net Rating": 0.004479498071660117,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 59,
       "Team": "Iowa State",
       "Net Rating": 0.002889669822492714,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 60,
       "Team": "Kennesaw State",
       "Net Rating": 0.002003021610212024,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 61,
       "Team": "Arizona",
       "Net Rating": 0.0017770848254642577,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 62,
       "Team": "UNLV",
       "Net Rating": 0.0015087256298430447,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 63,
       "Team": "Florida",
       "Net Rating": 0.0012864333824018689,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 64,
       "Team": "Illinois",
       "Net Rating": 0.0012603049997017331,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 65,
       "Team": "UCF",
       "Net Rating": 0.000975194507778894,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 66,
       "Team": "Kansas State",
       "Net Rating": 0.00042471318407745484,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 67,
       "Team": "Liberty",
       "Net Rating": 0.0003210240122736435,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 68,
       "Team": "New Mexico",
       "Net Rating": -0.0004707412137543183,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 69,
       "Team": "UTSA",
       "Net Rating": -0.000742699226821724,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 70,
       "Team": "South Alabama",
       "Net Rating": -0.0018729281491042596,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 71,
       "Team": "Western Michigan",
       "Net Rating": -0.001906126837761448,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 72,
       "Team": "Troy",
       "Net Rating": -0.0028743133565527074,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 73,
       "Team": "UConn",
       "Net Rating": -0.0035752314030821145,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "FBS Independents"
     },
     {
       "Rank": 74,
       "Team": "Colorado",
       "Net Rating": -0.004267463005029882,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 75,
       "Team": "Washington State",
       "Net Rating": -0.004853907449685148,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 76,
       "Team": "Maryland",
       "Net Rating": -0.0050167853157192105,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 77,
       "Team": "Utah State",
       "Net Rating": -0.005238328049058905,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 78,
       "Team": "Delaware",
       "Net Rating": -0.005697559718741349,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 79,
       "Team": "Kentucky",
       "Net Rating": -0.005727652825381133,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "SEC"
     },
     {
       "Rank": 80,
       "Team": "Colorado State",
       "Net Rating": -0.006438357676400823,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 81,
       "Team": "Northern Illinois",
       "Net Rating": -0.007770375951063044,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 82,
       "Team": "Miami (OH)",
       "Net Rating": -0.009082066167837646,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 83,
       "Team": "Wisconsin",
       "Net Rating": -0.009709794508253267,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 84,
       "Team": "San Jos\u00e9 State",
       "Net Rating": -0.01016344158168983,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 85,
       "Team": "Bowling Green",
       "Net Rating": -0.01043433745918533,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 86,
       "Team": "Western Kentucky",
       "Net Rating": -0.013173515257694569,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 87,
       "Team": "Temple",
       "Net Rating": -0.013561682158797793,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 88,
       "Team": "UTEP",
       "Net Rating": -0.013800157774231492,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 89,
       "Team": "Marshall",
       "Net Rating": -0.014095646261951046,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 90,
       "Team": "Purdue",
       "Net Rating": -0.014394891487158161,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 91,
       "Team": "Florida International",
       "Net Rating": -0.014811342568709418,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 92,
       "Team": "Florida Atlantic",
       "Net Rating": -0.01503061381632375,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 93,
       "Team": "Jacksonville State",
       "Net Rating": -0.01594103216494305,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 94,
       "Team": "Louisiana",
       "Net Rating": -0.016158726163138654,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 95,
       "Team": "California",
       "Net Rating": -0.01660146267244062,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 96,
       "Team": "Michigan State",
       "Net Rating": -0.016629179279485366,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 97,
       "Team": "Virginia Tech",
       "Net Rating": -0.016790801746132032,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 98,
       "Team": "UCLA",
       "Net Rating": -0.016899909565515816,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 99,
       "Team": "New Mexico State",
       "Net Rating": -0.01789443513794426,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 100,
       "Team": "Houston",
       "Net Rating": -0.01816159120743297,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 101,
       "Team": "Wyoming",
       "Net Rating": -0.018608079073083518,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 102,
       "Team": "Central Michigan",
       "Net Rating": -0.019324063621236724,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 103,
       "Team": "Northwestern",
       "Net Rating": -0.019331831924770428,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 104,
       "Team": "Middle Tennessee",
       "Net Rating": -0.019903337958071032,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 105,
       "Team": "Boston College",
       "Net Rating": -0.019941625034080653,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 106,
       "Team": "Minnesota",
       "Net Rating": -0.02045937491015528,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 107,
       "Team": "Missouri State",
       "Net Rating": -0.020528450009251215,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 108,
       "Team": "Buffalo",
       "Net Rating": -0.020634049583536748,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 109,
       "Team": "Stanford",
       "Net Rating": -0.021044253161597554,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 110,
       "Team": "Georgia State",
       "Net Rating": -0.021145947895871445,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 111,
       "Team": "Coastal Carolina",
       "Net Rating": -0.021594257760283578,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 112,
       "Team": "Oregon State",
       "Net Rating": -0.02254922313647257,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Pac-12"
     },
     {
       "Rank": 113,
       "Team": "UL Monroe",
       "Net Rating": -0.023161123807202685,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 114,
       "Team": "West Virginia",
       "Net Rating": -0.02362853774476204,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 115,
       "Team": "Fresno State",
       "Net Rating": -0.023754662979323354,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 116,
       "Team": "Hawai'i",
       "Net Rating": -0.024181204764123394,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 117,
       "Team": "App State",
       "Net Rating": -0.024287051758538007,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 118,
       "Team": "Syracuse",
       "Net Rating": -0.026827414417900902,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 119,
       "Team": "UAB",
       "Net Rating": -0.027819060523454876,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 120,
       "Team": "Rutgers",
       "Net Rating": -0.028329229284899594,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big Ten"
     },
     {
       "Rank": 121,
       "Team": "North Carolina",
       "Net Rating": -0.02862081836162977,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "ACC"
     },
     {
       "Rank": 122,
       "Team": "Eastern Michigan",
       "Net Rating": -0.029783548550376324,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 123,
       "Team": "Tulsa",
       "Net Rating": -0.03000198520017234,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 124,
       "Team": "Georgia Southern",
       "Net Rating": -0.030065003929927253,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 125,
       "Team": "Arkansas State",
       "Net Rating": -0.03402119692945303,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Sun Belt"
     },
     {
       "Rank": 126,
       "Team": "Rice",
       "Net Rating": -0.03642032022089611,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 127,
       "Team": "Nevada",
       "Net Rating": -0.03826321108246848,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mountain West"
     },
     {
       "Rank": 128,
       "Team": "Ball State",
       "Net Rating": -0.03842478166976586,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 129,
       "Team": "Akron",
       "Net Rating": -0.04125710159606416,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 130,
       "Team": "Kent State",
       "Net Rating": -0.04141473109282911,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 131,
       "Team": "Sam Houston",
       "Net Rating": -0.04700887807010738,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Conference USA"
     },
     {
       "Rank": 132,
       "Team": "Charlotte",
       "Net Rating": -0.04747781891341986,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "American Athletic"
     },
     {
       "Rank": 133,
       "Team": "Massachusetts",
       "Net Rating": -0.05123128933319185,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Mid-American"
     },
     {
       "Rank": 134,
       "Team": "Oklahoma State",
       "Net Rating": -0.07577458285548606,
-      "Year": 2025
+      "Year": 2025,
+      "Conference": "Big 12"
     },
     {
       "Rank": 1,
