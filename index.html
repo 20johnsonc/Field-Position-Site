@@ -394,7 +394,7 @@
         <h1>Field Position</h1>
         <p>College Football Analytics & Momentum Tracking</p>
       </div>
-      <div id="seasonYear" class="year-badge">2026 Season</div>
+      <div id="seasonYear" class="year-badge">Loading...</div>
     </header>
 
     <!-- Navigation Tabs -->
@@ -506,17 +506,29 @@
 
     // Application Initialization
     async function init() {
+      // 1. Load Rankings Data
       try {
         const rankingsData = await loadJSON('rankings.json');
-        // Handle all_rankings array or fallback to teams array
-        window.globalRankingsData = rankingsData.all_rankings || rankingsData.teams || [];
         
-        // Dynamic Season Badge text
+        // Accept all_rankings, fallback to teams or raw array
+        if (Array.isArray(rankingsData)) {
+          window.globalRankingsData = rankingsData;
+        } else if (Array.isArray(rankingsData.all_rankings)) {
+          window.globalRankingsData = rankingsData.all_rankings;
+        } else if (Array.isArray(rankingsData.teams)) {
+          window.globalRankingsData = rankingsData.teams;
+        } else {
+          window.globalRankingsData = [];
+        }
+
+        // Season badge text
         const years = window.globalRankingsData.map(t => t.Year || t.year || t.Season || t.season).filter(Boolean);
         if (years.length) {
           const minYear = Math.min(...years);
           const maxYear = Math.max(...years);
           document.getElementById('seasonYear').innerText = minYear === maxYear ? `${maxYear} Season` : `${minYear}–${maxYear} Seasons`;
+        } else {
+          document.getElementById('seasonYear').innerText = 'Analytics Dashboard';
         }
 
         populateRankingsConferences();
@@ -525,12 +537,13 @@
         applyRankingsFilters();
       } catch (e) {
         console.error('Failed to load rankings:', e);
-        document.getElementById('rankingsBody').innerHTML = '<tr><td colspan="7" class="empty">Error loading rankings data.</td></tr>';
+        document.getElementById('rankingsBody').innerHTML = '<tr><td colspan="7" class="empty">Error loading rankings data. Check console for details.</td></tr>';
       }
 
+      // 2. Load Matchups Data
       try {
         const matchupsData = await loadJSON('matchups.json');
-        window.globalMatchupsData = matchupsData.games || [];
+        window.globalMatchupsData = matchupsData.games || matchupsData || [];
         populateMatchupFilters(window.globalMatchupsData);
         populateYearFilters();
         applyMatchupFilters();
@@ -542,16 +555,17 @@
 
     // --- POPULATE FILTERS ---
     function populateYearFilters() {
+      // Matchup Years
       const matchupYears = new Set();
-      if (window.globalMatchupsData) {
+      if (window.globalMatchupsData && window.globalMatchupsData.length) {
         window.globalMatchupsData.forEach(g => {
           const yr = g.season || g.year || (g.start_date ? new Date(g.start_date).getFullYear() : null);
-          if (yr) matchupYears.add(yr);
+          if (yr) matchupYears.add(Number(yr));
         });
       }
 
       const mYearSelect = document.getElementById('matchupYearFilter');
-      if (mYearSelect) {
+      if (mYearSelect && matchupYears.size > 0) {
         mYearSelect.innerHTML = '<option value="ALL">All Years</option>';
         Array.from(matchupYears).sort((a, b) => b - a).forEach(yr => {
           const opt = document.createElement('option');
@@ -561,16 +575,17 @@
         });
       }
 
+      // Rankings Years
       const rankingsYears = new Set();
-      if (window.globalRankingsData) {
+      if (window.globalRankingsData && window.globalRankingsData.length) {
         window.globalRankingsData.forEach(t => {
-          const yr = t["Year"] || t["year"] || t["Season"] || t["season"];
-          if (yr) rankingsYears.add(yr);
+          const yr = t["Year"] ?? t["year"] ?? t["Season"] ?? t["season"];
+          if (yr) rankingsYears.add(Number(yr));
         });
       }
 
       const rYearSelect = document.getElementById('rankingsYearFilter');
-      if (rYearSelect) {
+      if (rYearSelect && rankingsYears.size > 0) {
         rYearSelect.innerHTML = '<option value="ALL">All Years</option>';
         Array.from(rankingsYears).sort((a, b) => b - a).forEach(yr => {
           const opt = document.createElement('option');
@@ -587,7 +602,7 @@
 
       const confs = new Set();
       window.globalRankingsData.forEach(t => {
-        const conf = t["Conference"] || t.conference;
+        const conf = t["Conference"] || t.conference || t.Conference_Name;
         if (conf) confs.add(conf);
       });
 
@@ -600,7 +615,6 @@
       });
     }
 
-    // Populates team filter and trims it based on selected conference
     function populateTeamDropdown() {
       const teamSelect = document.getElementById('rankingsTeamFilter');
       const selectedConf = document.getElementById('rankingsConfFilter')?.value || 'ALL';
@@ -615,7 +629,6 @@
         .filter(Boolean)
         .sort();
 
-      // Deduplicate team names for dropdown
       Array.from(new Set(filteredTeams)).forEach(team => {
         const opt = document.createElement('option');
         opt.value = team;
@@ -691,7 +704,7 @@
       const filtered = window.globalRankingsData.filter(t => {
         const teamName = t["Team"] || t.team || '';
         const teamConf = t["Conference"] || t.conference || '';
-        const teamYear = String(t["Year"] || t["year"] || t["Season"] || t.season || '');
+        const teamYear = String(t["Year"] ?? t["year"] ?? t["Season"] ?? t.season ?? '');
 
         const matchesYear = (selectedYear === 'ALL') || (teamYear === String(selectedYear));
         const matchesConf = (selectedConf === 'ALL') || (teamConf === selectedConf);
@@ -718,7 +731,7 @@
         const team = t["Team"] ?? t.team ?? 'Unknown';
         const conf = t["Conference"] ?? t.conference ?? '—';
         const year = t["Year"] ?? t.year ?? t["Season"] ?? t.season ?? '—';
-        const netRating = Number(t["Net Rating"] ?? t.net_rating ?? t.power_rating ?? 0);
+        const netRating = Number(t["Net Rating"] ?? t["Net rating"] ?? t.net_rating ?? t.power_rating ?? 0);
         const offRating = Number(t["Offense Rating"] ?? t["Offense rating"] ?? t.adj_off ?? 0);
         const defRating = Number(t["Defense Rating"] ?? t["Defense rating"] ?? t.adj_def ?? 0);
 
