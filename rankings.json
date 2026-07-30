@@ -1,1210 +1,942 @@
 {
-  "generated_at": "2026-07-29T21:17:56.333358+00:00",
+  "generated_at": "2026-07-30T00:38:23.598442+00:00",
   "teams": [
     {
       "Rank": 1,
       "Team": "Notre Dame",
       "Conference": "FBS Independents",
-      "Offense rating": 20.5,
-      "Defense rating": 15.9,
-      "Net Rating": 16.19,
+      "Net Rating": 34.94,
       "Adjusted Tempo": 52.2
     },
     {
       "Rank": 2,
       "Team": "Ohio State",
       "Conference": "Big Ten",
-      "Offense rating": 20.2,
-      "Defense rating": 16.0,
-      "Net Rating": 15.19,
+      "Net Rating": 32.77,
       "Adjusted Tempo": 55.4
     },
     {
       "Rank": 3,
-      "Team": "Indiana",
-      "Conference": "Big Ten",
-      "Offense rating": 22.4,
-      "Defense rating": 16.0,
-      "Net Rating": 14.5,
-      "Adjusted Tempo": 54.6
-    },
-    {
-      "Rank": 4,
       "Team": "Oregon",
       "Conference": "Big Ten",
-      "Offense rating": 19.5,
-      "Defense rating": 15.9,
-      "Net Rating": 13.58,
+      "Net Rating": 29.15,
       "Adjusted Tempo": 55.3
     },
     {
-      "Rank": 5,
+      "Rank": 4,
       "Team": "Georgia",
       "Conference": "SEC",
-      "Offense rating": 21.7,
-      "Defense rating": 16.9,
-      "Net Rating": 12.97,
+      "Net Rating": 28.1,
       "Adjusted Tempo": 66.1
     },
     {
-      "Rank": 6,
-      "Team": "Texas Tech",
-      "Conference": "Big 12",
-      "Offense rating": 20.4,
-      "Defense rating": 16.4,
-      "Net Rating": 11.7,
-      "Adjusted Tempo": 59.4
+      "Rank": 5,
+      "Team": "Indiana",
+      "Conference": "Big Ten",
+      "Net Rating": 27.75,
+      "Adjusted Tempo": 54.6
     },
     {
-      "Rank": 7,
+      "Rank": 6,
       "Team": "Alabama",
       "Conference": "SEC",
-      "Offense rating": 20.4,
-      "Defense rating": 16.5,
-      "Net Rating": 11.5,
+      "Net Rating": 25.14,
       "Adjusted Tempo": 60.8
     },
     {
-      "Rank": 8,
-      "Team": "Ole Miss",
-      "Conference": "SEC",
-      "Offense rating": 20.0,
-      "Defense rating": 17.0,
-      "Net Rating": 10.9,
-      "Adjusted Tempo": 66.8
-    },
-    {
-      "Rank": 9,
-      "Team": "Texas A&M",
-      "Conference": "SEC",
-      "Offense rating": 19.9,
-      "Defense rating": 16.9,
-      "Net Rating": 10.59,
-      "Adjusted Tempo": 64.9
-    },
-    {
-      "Rank": 10,
+      "Rank": 7,
       "Team": "Penn State",
       "Conference": "Big Ten",
-      "Offense rating": 18.1,
-      "Defense rating": 16.7,
-      "Net Rating": 10.47,
+      "Net Rating": 24.92,
       "Adjusted Tempo": 58.0
     },
     {
-      "Rank": 11,
-      "Team": "Utah",
+      "Rank": 8,
+      "Team": "Texas Tech",
       "Conference": "Big 12",
-      "Offense rating": 20.1,
-      "Defense rating": 16.2,
-      "Net Rating": 10.39,
-      "Adjusted Tempo": 62.5
+      "Net Rating": 24.82,
+      "Adjusted Tempo": 59.4
+    },
+    {
+      "Rank": 9,
+      "Team": "Ole Miss",
+      "Conference": "SEC",
+      "Net Rating": 22.17,
+      "Adjusted Tempo": 66.8
+    },
+    {
+      "Rank": 10,
+      "Team": "Texas",
+      "Conference": "SEC",
+      "Net Rating": 21.87,
+      "Adjusted Tempo": 61.0
+    },
+    {
+      "Rank": 11,
+      "Team": "Texas A&M",
+      "Conference": "SEC",
+      "Net Rating": 21.78,
+      "Adjusted Tempo": 64.9
     },
     {
       "Rank": 12,
-      "Team": "SMU",
+      "Team": "Miami",
       "Conference": "ACC",
-      "Offense rating": 20.0,
-      "Defense rating": 16.6,
-      "Net Rating": 9.78,
-      "Adjusted Tempo": 63.9
+      "Net Rating": 21.31,
+      "Adjusted Tempo": 60.0
     },
     {
       "Rank": 13,
-      "Team": "Miami",
-      "Conference": "ACC",
-      "Offense rating": 19.0,
-      "Defense rating": 16.4,
-      "Net Rating": 9.67,
-      "Adjusted Tempo": 60.0
+      "Team": "Utah",
+      "Conference": "Big 12",
+      "Net Rating": 21.04,
+      "Adjusted Tempo": 62.5
     },
     {
       "Rank": 14,
       "Team": "USC",
       "Conference": "Big Ten",
-      "Offense rating": 19.3,
-      "Defense rating": 16.9,
-      "Net Rating": 9.5,
+      "Net Rating": 20.43,
       "Adjusted Tempo": 61.4
     },
     {
       "Rank": 15,
       "Team": "Tennessee",
       "Conference": "SEC",
-      "Offense rating": 20.2,
-      "Defense rating": 16.7,
-      "Net Rating": 9.45,
+      "Net Rating": 19.52,
       "Adjusted Tempo": 65.2
     },
     {
       "Rank": 16,
-      "Team": "Texas",
-      "Conference": "SEC",
-      "Offense rating": 17.5,
-      "Defense rating": 17.3,
-      "Net Rating": 8.57,
-      "Adjusted Tempo": 61.0
+      "Team": "Michigan",
+      "Conference": "Big Ten",
+      "Net Rating": 19.34,
+      "Adjusted Tempo": 61.5
     },
     {
       "Rank": 17,
       "Team": "Iowa",
       "Conference": "Big Ten",
-      "Offense rating": 17.8,
-      "Defense rating": 16.5,
-      "Net Rating": 8.33,
+      "Net Rating": 18.52,
       "Adjusted Tempo": 54.8
     },
     {
       "Rank": 18,
-      "Team": "Clemson",
-      "Conference": "ACC",
-      "Offense rating": 18.8,
-      "Defense rating": 17.3,
-      "Net Rating": 7.8,
-      "Adjusted Tempo": 64.5
+      "Team": "Oklahoma",
+      "Conference": "SEC",
+      "Net Rating": 18.38,
+      "Adjusted Tempo": 62.8
     },
     {
       "Rank": 19,
-      "Team": "Vanderbilt",
-      "Conference": "SEC",
-      "Offense rating": 19.2,
-      "Defense rating": 16.6,
-      "Net Rating": 7.78,
-      "Adjusted Tempo": 56.8
+      "Team": "SMU",
+      "Conference": "ACC",
+      "Net Rating": 17.49,
+      "Adjusted Tempo": 63.9
     },
     {
       "Rank": 20,
-      "Team": "Washington",
-      "Conference": "Big Ten",
-      "Offense rating": 18.8,
-      "Defense rating": 16.4,
-      "Net Rating": 7.72,
-      "Adjusted Tempo": 55.4
+      "Team": "Clemson",
+      "Conference": "ACC",
+      "Net Rating": 15.34,
+      "Adjusted Tempo": 64.5
     },
     {
       "Rank": 21,
       "Team": "James Madison",
       "Conference": "Sun Belt",
-      "Offense rating": 18.7,
-      "Defense rating": 16.7,
-      "Net Rating": 7.65,
+      "Net Rating": 15.34,
       "Adjusted Tempo": 61.3
     },
     {
       "Rank": 22,
-      "Team": "Michigan",
-      "Conference": "Big Ten",
-      "Offense rating": 17.9,
-      "Defense rating": 17.0,
-      "Net Rating": 7.26,
-      "Adjusted Tempo": 61.5
+      "Team": "Vanderbilt",
+      "Conference": "SEC",
+      "Net Rating": 14.87,
+      "Adjusted Tempo": 56.8
     },
     {
       "Rank": 23,
-      "Team": "Oklahoma",
-      "Conference": "SEC",
-      "Offense rating": 19.1,
-      "Defense rating": 17.0,
-      "Net Rating": 7.25,
-      "Adjusted Tempo": 62.8
+      "Team": "Washington",
+      "Conference": "Big Ten",
+      "Net Rating": 14.85,
+      "Adjusted Tempo": 55.4
     },
     {
       "Rank": 24,
-      "Team": "South Carolina",
-      "Conference": "SEC",
-      "Offense rating": 17.5,
-      "Defense rating": 17.0,
-      "Net Rating": 6.42,
-      "Adjusted Tempo": 57.6
-    },
-    {
-      "Rank": 25,
-      "Team": "South Florida",
-      "Conference": "American Athletic",
-      "Offense rating": 19.1,
-      "Defense rating": 16.5,
-      "Net Rating": 6.36,
-      "Adjusted Tempo": 59.6
-    },
-    {
-      "Rank": 26,
-      "Team": "BYU",
-      "Conference": "Big 12",
-      "Offense rating": 17.8,
-      "Defense rating": 17.0,
-      "Net Rating": 6.01,
-      "Adjusted Tempo": 63.1
-    },
-    {
-      "Rank": 27,
       "Team": "Missouri",
       "Conference": "SEC",
-      "Offense rating": 16.7,
-      "Defense rating": 17.0,
-      "Net Rating": 5.94,
+      "Net Rating": 14.45,
       "Adjusted Tempo": 66.7
     },
     {
-      "Rank": 28,
+      "Rank": 25,
+      "Team": "South Carolina",
+      "Conference": "SEC",
+      "Net Rating": 14.11,
+      "Adjusted Tempo": 57.6
+    },
+    {
+      "Rank": 26,
       "Team": "LSU",
       "Conference": "SEC",
-      "Offense rating": 17.7,
-      "Defense rating": 17.1,
-      "Net Rating": 5.85,
+      "Net Rating": 14.07,
       "Adjusted Tempo": 60.1
     },
     {
-      "Rank": 29,
-      "Team": "North Texas",
-      "Conference": "American Athletic",
-      "Offense rating": 18.3,
-      "Defense rating": 17.0,
-      "Net Rating": 5.81,
-      "Adjusted Tempo": 63.3
+      "Rank": 27,
+      "Team": "BYU",
+      "Conference": "Big 12",
+      "Net Rating": 13.41,
+      "Adjusted Tempo": 63.1
     },
     {
-      "Rank": 30,
+      "Rank": 28,
       "Team": "Auburn",
       "Conference": "SEC",
-      "Offense rating": 16.8,
-      "Defense rating": 17.1,
-      "Net Rating": 5.69,
+      "Net Rating": 12.8,
       "Adjusted Tempo": 65.5
     },
     {
-      "Rank": 31,
+      "Rank": 29,
+      "Team": "South Florida",
+      "Conference": "American Athletic",
+      "Net Rating": 12.04,
+      "Adjusted Tempo": 59.6
+    },
+    {
+      "Rank": 30,
       "Team": "UNLV",
       "Conference": "Mountain West",
-      "Offense rating": 18.6,
-      "Defense rating": 17.4,
-      "Net Rating": 5.02,
+      "Net Rating": 10.49,
       "Adjusted Tempo": 62.2
     },
     {
-      "Rank": 32,
-      "Team": "Virginia",
-      "Conference": "ACC",
-      "Offense rating": 19.8,
-      "Defense rating": 17.7,
-      "Net Rating": 4.98,
-      "Adjusted Tempo": 69.0
+      "Rank": 31,
+      "Team": "North Texas",
+      "Conference": "American Athletic",
+      "Net Rating": 10.48,
+      "Adjusted Tempo": 63.3
     },
     {
-      "Rank": 33,
+      "Rank": 32,
       "Team": "Kansas State",
       "Conference": "Big 12",
-      "Offense rating": 17.3,
-      "Defense rating": 17.0,
-      "Net Rating": 4.49,
+      "Net Rating": 10.25,
       "Adjusted Tempo": 62.8
     },
     {
+      "Rank": 33,
+      "Team": "Nebraska",
+      "Conference": "Big Ten",
+      "Net Rating": 9.98,
+      "Adjusted Tempo": 56.2
+    },
+    {
       "Rank": 34,
-      "Team": "Kentucky",
-      "Conference": "SEC",
-      "Offense rating": 17.9,
-      "Defense rating": 17.2,
-      "Net Rating": 4.42,
-      "Adjusted Tempo": 57.7
+      "Team": "Pittsburgh",
+      "Conference": "ACC",
+      "Net Rating": 9.88,
+      "Adjusted Tempo": 60.8
     },
     {
       "Rank": 35,
       "Team": "Florida State",
       "Conference": "ACC",
-      "Offense rating": 17.9,
-      "Defense rating": 17.2,
-      "Net Rating": 4.33,
+      "Net Rating": 9.81,
       "Adjusted Tempo": 62.3
     },
     {
       "Rank": 36,
-      "Team": "Pittsburgh",
-      "Conference": "ACC",
-      "Offense rating": 17.1,
-      "Defense rating": 17.2,
-      "Net Rating": 4.24,
-      "Adjusted Tempo": 60.8
+      "Team": "Arizona State",
+      "Conference": "Big 12",
+      "Net Rating": 9.8,
+      "Adjusted Tempo": 70.6
     },
     {
       "Rank": 37,
-      "Team": "Nebraska",
-      "Conference": "Big Ten",
-      "Offense rating": 16.7,
-      "Defense rating": 17.6,
-      "Net Rating": 4.22,
-      "Adjusted Tempo": 56.2
+      "Team": "Memphis",
+      "Conference": "American Athletic",
+      "Net Rating": 8.71,
+      "Adjusted Tempo": 64.4
     },
     {
       "Rank": 38,
-      "Team": "Toledo",
-      "Conference": "Mid-American",
-      "Offense rating": 18.2,
-      "Defense rating": 16.9,
-      "Net Rating": 3.97,
-      "Adjusted Tempo": 54.9
+      "Team": "Florida",
+      "Conference": "SEC",
+      "Net Rating": 8.59,
+      "Adjusted Tempo": 56.1
     },
     {
       "Rank": 39,
       "Team": "Iowa State",
       "Conference": "Big 12",
-      "Offense rating": 17.4,
-      "Defense rating": 17.5,
-      "Net Rating": 3.94,
+      "Net Rating": 8.3,
       "Adjusted Tempo": 66.3
     },
     {
       "Rank": 40,
-      "Team": "Boise State",
-      "Conference": "Mountain West",
-      "Offense rating": 18.2,
-      "Defense rating": 17.3,
-      "Net Rating": 3.85,
-      "Adjusted Tempo": 64.6
+      "Team": "Louisville",
+      "Conference": "ACC",
+      "Net Rating": 8.2,
+      "Adjusted Tempo": 60.1
     },
     {
       "Rank": 41,
       "Team": "Arizona",
       "Conference": "Big 12",
-      "Offense rating": 18.1,
-      "Defense rating": 17.3,
-      "Net Rating": 3.69,
+      "Net Rating": 8.11,
       "Adjusted Tempo": 63.0
     },
     {
       "Rank": 42,
-      "Team": "Arizona State",
-      "Conference": "Big 12",
-      "Offense rating": 17.4,
-      "Defense rating": 17.8,
-      "Net Rating": 3.66,
-      "Adjusted Tempo": 70.6
-    },
-    {
-      "Rank": 43,
-      "Team": "Florida",
-      "Conference": "SEC",
-      "Offense rating": 15.6,
-      "Defense rating": 17.3,
-      "Net Rating": 3.56,
-      "Adjusted Tempo": 56.1
-    },
-    {
-      "Rank": 44,
-      "Team": "Louisville",
-      "Conference": "ACC",
-      "Offense rating": 17.1,
-      "Defense rating": 17.4,
-      "Net Rating": 3.44,
-      "Adjusted Tempo": 60.1
-    },
-    {
-      "Rank": 45,
-      "Team": "Memphis",
-      "Conference": "American Athletic",
-      "Offense rating": 16.7,
-      "Defense rating": 17.5,
-      "Net Rating": 3.38,
-      "Adjusted Tempo": 64.4
-    },
-    {
-      "Rank": 46,
-      "Team": "Tulane",
-      "Conference": "American Athletic",
-      "Offense rating": 18.3,
-      "Defense rating": 17.5,
-      "Net Rating": 3.36,
-      "Adjusted Tempo": 63.6
-    },
-    {
-      "Rank": 47,
       "Team": "Arkansas",
       "Conference": "SEC",
-      "Offense rating": 17.6,
-      "Defense rating": 17.2,
-      "Net Rating": 3.31,
+      "Net Rating": 7.93,
       "Adjusted Tempo": 59.7
     },
     {
-      "Rank": 48,
+      "Rank": 43,
       "Team": "TCU",
       "Conference": "Big 12",
-      "Offense rating": 16.7,
-      "Defense rating": 17.6,
-      "Net Rating": 3.08,
+      "Net Rating": 7.89,
       "Adjusted Tempo": 66.7
     },
     {
-      "Rank": 49,
-      "Team": "Old Dominion",
-      "Conference": "Sun Belt",
-      "Offense rating": 17.8,
-      "Defense rating": 17.2,
-      "Net Rating": 3.01,
-      "Adjusted Tempo": 55.8
+      "Rank": 44,
+      "Team": "Virginia",
+      "Conference": "ACC",
+      "Net Rating": 7.75,
+      "Adjusted Tempo": 69.0
     },
     {
-      "Rank": 50,
+      "Rank": 45,
+      "Team": "Kentucky",
+      "Conference": "SEC",
+      "Net Rating": 7.48,
+      "Adjusted Tempo": 57.7
+    },
+    {
+      "Rank": 46,
+      "Team": "Toledo",
+      "Conference": "Mid-American",
+      "Net Rating": 7.17,
+      "Adjusted Tempo": 54.9
+    },
+    {
+      "Rank": 47,
       "Team": "Duke",
       "Conference": "ACC",
-      "Offense rating": 17.6,
-      "Defense rating": 18.1,
-      "Net Rating": 2.79,
+      "Net Rating": 6.73,
       "Adjusted Tempo": 66.3
     },
     {
-      "Rank": 51,
-      "Team": "Wake Forest",
-      "Conference": "ACC",
-      "Offense rating": 17.5,
-      "Defense rating": 17.1,
-      "Net Rating": 2.74,
-      "Adjusted Tempo": 61.2
-    },
-    {
-      "Rank": 52,
-      "Team": "Baylor",
-      "Conference": "Big 12",
-      "Offense rating": 18.4,
-      "Defense rating": 17.5,
-      "Net Rating": 2.68,
-      "Adjusted Tempo": 71.3
-    },
-    {
-      "Rank": 53,
-      "Team": "Mississippi State",
-      "Conference": "SEC",
-      "Offense rating": 18.5,
-      "Defense rating": 17.9,
-      "Net Rating": 2.65,
-      "Adjusted Tempo": 66.5
-    },
-    {
-      "Rank": 54,
-      "Team": "UTSA",
-      "Conference": "American Athletic",
-      "Offense rating": 16.6,
-      "Defense rating": 17.3,
-      "Net Rating": 2.58,
-      "Adjusted Tempo": 57.2
-    },
-    {
-      "Rank": 55,
+      "Rank": 48,
       "Team": "Georgia Tech",
       "Conference": "ACC",
-      "Offense rating": 18.3,
-      "Defense rating": 17.7,
-      "Net Rating": 2.5,
+      "Net Rating": 6.54,
       "Adjusted Tempo": 64.5
     },
     {
-      "Rank": 56,
-      "Team": "NC State",
-      "Conference": "ACC",
-      "Offense rating": 18.4,
-      "Defense rating": 17.4,
-      "Net Rating": 2.46,
-      "Adjusted Tempo": 57.8
-    },
-    {
-      "Rank": 57,
-      "Team": "Texas State",
-      "Conference": "Sun Belt",
-      "Offense rating": 17.3,
-      "Defense rating": 18.0,
-      "Net Rating": 2.09,
-      "Adjusted Tempo": 67.8
-    },
-    {
-      "Rank": 58,
-      "Team": "Illinois",
-      "Conference": "Big Ten",
-      "Offense rating": 15.9,
-      "Defense rating": 17.4,
-      "Net Rating": 1.95,
-      "Adjusted Tempo": 58.2
-    },
-    {
-      "Rank": 59,
-      "Team": "San Diego State",
+      "Rank": 49,
+      "Team": "Boise State",
       "Conference": "Mountain West",
-      "Offense rating": 18.0,
-      "Defense rating": 17.2,
-      "Net Rating": 1.91,
-      "Adjusted Tempo": 58.8
+      "Net Rating": 6.1,
+      "Adjusted Tempo": 64.6
     },
     {
-      "Rank": 60,
-      "Team": "UConn",
-      "Conference": "FBS Independents",
-      "Offense rating": 17.1,
-      "Defense rating": 17.8,
-      "Net Rating": 1.9,
-      "Adjusted Tempo": 60.2
-    },
-    {
-      "Rank": 61,
-      "Team": "East Carolina",
+      "Rank": 50,
+      "Team": "UTSA",
       "Conference": "American Athletic",
-      "Offense rating": 18.4,
-      "Defense rating": 17.6,
-      "Net Rating": 1.86,
-      "Adjusted Tempo": 66.5
+      "Net Rating": 5.81,
+      "Adjusted Tempo": 57.2
     },
     {
-      "Rank": 62,
-      "Team": "Cincinnati",
-      "Conference": "Big 12",
-      "Offense rating": 15.8,
-      "Defense rating": 17.0,
-      "Net Rating": 1.71,
-      "Adjusted Tempo": 56.2
+      "Rank": 51,
+      "Team": "Tulane",
+      "Conference": "American Athletic",
+      "Net Rating": 5.8,
+      "Adjusted Tempo": 63.6
     },
     {
-      "Rank": 63,
-      "Team": "Ohio",
-      "Conference": "Mid-American",
-      "Offense rating": 17.1,
-      "Defense rating": 18.1,
-      "Net Rating": 1.64,
-      "Adjusted Tempo": 66.6
-    },
-    {
-      "Rank": 64,
-      "Team": "Kansas",
-      "Conference": "Big 12",
-      "Offense rating": 16.5,
-      "Defense rating": 17.7,
-      "Net Rating": 1.63,
-      "Adjusted Tempo": 58.2
-    },
-    {
-      "Rank": 65,
-      "Team": "Northwestern",
-      "Conference": "Big Ten",
-      "Offense rating": 15.7,
-      "Defense rating": 17.4,
-      "Net Rating": 1.1,
-      "Adjusted Tempo": 60.5
-    },
-    {
-      "Rank": 66,
-      "Team": "Washington State",
-      "Conference": "Pac-12",
-      "Offense rating": 17.6,
-      "Defense rating": 17.3,
-      "Net Rating": 1.05,
-      "Adjusted Tempo": 62.0
-    },
-    {
-      "Rank": 67,
+      "Rank": 52,
       "Team": "Wisconsin",
       "Conference": "Big Ten",
-      "Offense rating": 15.1,
-      "Defense rating": 17.3,
-      "Net Rating": 1.01,
+      "Net Rating": 5.77,
       "Adjusted Tempo": 50.9
     },
     {
-      "Rank": 68,
-      "Team": "Virginia Tech",
-      "Conference": "ACC",
-      "Offense rating": 17.5,
-      "Defense rating": 17.7,
-      "Net Rating": 1.0,
-      "Adjusted Tempo": 59.3
+      "Rank": 53,
+      "Team": "Illinois",
+      "Conference": "Big Ten",
+      "Net Rating": 5.58,
+      "Adjusted Tempo": 58.2
     },
     {
-      "Rank": 69,
+      "Rank": 54,
+      "Team": "Cincinnati",
+      "Conference": "Big 12",
+      "Net Rating": 5.06,
+      "Adjusted Tempo": 56.2
+    },
+    {
+      "Rank": 55,
+      "Team": "Baylor",
+      "Conference": "Big 12",
+      "Net Rating": 4.79,
+      "Adjusted Tempo": 71.3
+    },
+    {
+      "Rank": 56,
+      "Team": "Old Dominion",
+      "Conference": "Sun Belt",
+      "Net Rating": 4.78,
+      "Adjusted Tempo": 55.8
+    },
+    {
+      "Rank": 57,
+      "Team": "Mississippi State",
+      "Conference": "SEC",
+      "Net Rating": 4.45,
+      "Adjusted Tempo": 66.5
+    },
+    {
+      "Rank": 58,
+      "Team": "Northwestern",
+      "Conference": "Big Ten",
+      "Net Rating": 4.13,
+      "Adjusted Tempo": 60.5
+    },
+    {
+      "Rank": 59,
+      "Team": "Wake Forest",
+      "Conference": "ACC",
+      "Net Rating": 3.84,
+      "Adjusted Tempo": 61.2
+    },
+    {
+      "Rank": 60,
+      "Team": "Kansas",
+      "Conference": "Big 12",
+      "Net Rating": 3.63,
+      "Adjusted Tempo": 58.2
+    },
+    {
+      "Rank": 61,
+      "Team": "UConn",
+      "Conference": "FBS Independents",
+      "Net Rating": 3.47,
+      "Adjusted Tempo": 60.2
+    },
+    {
+      "Rank": 62,
+      "Team": "San Diego State",
+      "Conference": "Mountain West",
+      "Net Rating": 3.43,
+      "Adjusted Tempo": 58.8
+    },
+    {
+      "Rank": 63,
+      "Team": "Texas State",
+      "Conference": "Sun Belt",
+      "Net Rating": 3.26,
+      "Adjusted Tempo": 67.8
+    },
+    {
+      "Rank": 64,
       "Team": "Minnesota",
       "Conference": "Big Ten",
-      "Offense rating": 16.3,
-      "Defense rating": 17.6,
-      "Net Rating": 0.86,
+      "Net Rating": 3.09,
       "Adjusted Tempo": 52.4
     },
     {
-      "Rank": 70,
-      "Team": "Houston",
-      "Conference": "Big 12",
-      "Offense rating": 17.0,
-      "Defense rating": 18.1,
-      "Net Rating": 0.76,
-      "Adjusted Tempo": 71.1
+      "Rank": 65,
+      "Team": "NC State",
+      "Conference": "ACC",
+      "Net Rating": 2.77,
+      "Adjusted Tempo": 57.8
     },
     {
-      "Rank": 71,
-      "Team": "Liberty",
-      "Conference": "Conference USA",
-      "Offense rating": 17.5,
-      "Defense rating": 18.3,
-      "Net Rating": 0.72,
-      "Adjusted Tempo": 66.4
+      "Rank": 66,
+      "Team": "Ohio",
+      "Conference": "Mid-American",
+      "Net Rating": 2.74,
+      "Adjusted Tempo": 66.6
     },
     {
-      "Rank": 72,
-      "Team": "Fresno State",
-      "Conference": "Mountain West",
-      "Offense rating": 17.1,
-      "Defense rating": 17.9,
-      "Net Rating": 0.67,
-      "Adjusted Tempo": 61.4
-    },
-    {
-      "Rank": 73,
+      "Rank": 67,
       "Team": "UCF",
       "Conference": "Big 12",
-      "Offense rating": 17.3,
-      "Defense rating": 17.6,
-      "Net Rating": 0.57,
+      "Net Rating": 2.25,
       "Adjusted Tempo": 59.8
     },
     {
-      "Rank": 74,
+      "Rank": 68,
+      "Team": "Houston",
+      "Conference": "Big 12",
+      "Net Rating": 2.11,
+      "Adjusted Tempo": 71.1
+    },
+    {
+      "Rank": 69,
+      "Team": "East Carolina",
+      "Conference": "American Athletic",
+      "Net Rating": 1.67,
+      "Adjusted Tempo": 66.5
+    },
+    {
+      "Rank": 70,
       "Team": "Rutgers",
       "Conference": "Big Ten",
-      "Offense rating": 16.4,
-      "Defense rating": 18.3,
-      "Net Rating": 0.34,
+      "Net Rating": 1.48,
       "Adjusted Tempo": 65.4
     },
     {
+      "Rank": 71,
+      "Team": "Marshall",
+      "Conference": "Sun Belt",
+      "Net Rating": 1.42,
+      "Adjusted Tempo": 65.4
+    },
+    {
+      "Rank": 72,
+      "Team": "Washington State",
+      "Conference": "Pac-12",
+      "Net Rating": 1.31,
+      "Adjusted Tempo": 62.0
+    },
+    {
+      "Rank": 73,
+      "Team": "Fresno State",
+      "Conference": "Mountain West",
+      "Net Rating": 0.76,
+      "Adjusted Tempo": 61.4
+    },
+    {
+      "Rank": 74,
+      "Team": "Jacksonville State",
+      "Conference": "Conference USA",
+      "Net Rating": 0.71,
+      "Adjusted Tempo": 66.8
+    },
+    {
       "Rank": 75,
-      "Team": "Miami (OH)",
-      "Conference": "Mid-American",
-      "Offense rating": 15.7,
-      "Defense rating": 18.0,
-      "Net Rating": -0.11,
+      "Team": "Virginia Tech",
+      "Conference": "ACC",
+      "Net Rating": 0.66,
       "Adjusted Tempo": 59.3
     },
     {
       "Rank": 76,
-      "Team": "Western Kentucky",
+      "Team": "Liberty",
       "Conference": "Conference USA",
-      "Offense rating": 17.5,
-      "Defense rating": 17.9,
-      "Net Rating": -0.13,
-      "Adjusted Tempo": 64.9
+      "Net Rating": 0.45,
+      "Adjusted Tempo": 66.4
     },
     {
       "Rank": 77,
-      "Team": "New Mexico",
-      "Conference": "Mountain West",
-      "Offense rating": 17.3,
-      "Defense rating": 17.5,
-      "Net Rating": -0.18,
-      "Adjusted Tempo": 64.0
+      "Team": "Miami (OH)",
+      "Conference": "Mid-American",
+      "Net Rating": 0.27,
+      "Adjusted Tempo": 59.3
     },
     {
       "Rank": 78,
-      "Team": "Jacksonville State",
-      "Conference": "Conference USA",
-      "Offense rating": 15.9,
-      "Defense rating": 18.2,
-      "Net Rating": -0.25,
-      "Adjusted Tempo": 66.8
-    },
-    {
-      "Rank": 79,
-      "Team": "Marshall",
-      "Conference": "Sun Belt",
-      "Offense rating": 16.7,
-      "Defense rating": 17.7,
-      "Net Rating": -0.3,
-      "Adjusted Tempo": 65.4
-    },
-    {
-      "Rank": 80,
       "Team": "Maryland",
       "Conference": "Big Ten",
-      "Offense rating": 14.8,
-      "Defense rating": 17.8,
-      "Net Rating": -0.43,
+      "Net Rating": 0.11,
       "Adjusted Tempo": 58.8
     },
     {
-      "Rank": 81,
+      "Rank": 79,
       "Team": "North Carolina",
       "Conference": "ACC",
-      "Offense rating": 16.1,
-      "Defense rating": 17.6,
-      "Net Rating": -0.65,
+      "Net Rating": -0.45,
       "Adjusted Tempo": 53.2
     },
     {
-      "Rank": 82,
-      "Team": "UCLA",
-      "Conference": "Big Ten",
-      "Offense rating": 15.2,
-      "Defense rating": 17.3,
-      "Net Rating": -0.71,
-      "Adjusted Tempo": 55.3
-    },
-    {
-      "Rank": 83,
-      "Team": "Western Michigan",
-      "Conference": "Mid-American",
-      "Offense rating": 16.8,
-      "Defense rating": 17.9,
-      "Net Rating": -0.72,
-      "Adjusted Tempo": 60.9
-    },
-    {
-      "Rank": 84,
-      "Team": "Utah State",
-      "Conference": "Mountain West",
-      "Offense rating": 17.2,
-      "Defense rating": 17.8,
-      "Net Rating": -0.74,
-      "Adjusted Tempo": 61.6
-    },
-    {
-      "Rank": 85,
+      "Rank": 80,
       "Team": "Michigan State",
       "Conference": "Big Ten",
-      "Offense rating": 16.4,
-      "Defense rating": 17.5,
-      "Net Rating": -0.96,
+      "Net Rating": -0.67,
       "Adjusted Tempo": 62.3
     },
     {
-      "Rank": 86,
-      "Team": "California",
-      "Conference": "ACC",
-      "Offense rating": 16.4,
-      "Defense rating": 18.5,
-      "Net Rating": -1.12,
-      "Adjusted Tempo": 68.8
-    },
-    {
-      "Rank": 87,
-      "Team": "Stanford",
-      "Conference": "ACC",
-      "Offense rating": 16.1,
-      "Defense rating": 17.7,
+      "Rank": 81,
+      "Team": "Western Michigan",
+      "Conference": "Mid-American",
       "Net Rating": -1.15,
-      "Adjusted Tempo": 59.0
+      "Adjusted Tempo": 60.9
     },
     {
-      "Rank": 88,
+      "Rank": 82,
       "Team": "Colorado",
       "Conference": "Big 12",
-      "Offense rating": 15.5,
-      "Defense rating": 17.7,
-      "Net Rating": -1.54,
+      "Net Rating": -1.55,
       "Adjusted Tempo": 57.8
     },
     {
+      "Rank": 83,
+      "Team": "Utah State",
+      "Conference": "Mountain West",
+      "Net Rating": -1.72,
+      "Adjusted Tempo": 61.6
+    },
+    {
+      "Rank": 84,
+      "Team": "California",
+      "Conference": "ACC",
+      "Net Rating": -1.76,
+      "Adjusted Tempo": 68.8
+    },
+    {
+      "Rank": 85,
+      "Team": "UCLA",
+      "Conference": "Big Ten",
+      "Net Rating": -2.22,
+      "Adjusted Tempo": 55.3
+    },
+    {
+      "Rank": 86,
+      "Team": "West Virginia",
+      "Conference": "Big 12",
+      "Net Rating": -2.24,
+      "Adjusted Tempo": 61.6
+    },
+    {
+      "Rank": 87,
+      "Team": "New Mexico",
+      "Conference": "Mountain West",
+      "Net Rating": -2.37,
+      "Adjusted Tempo": 64.0
+    },
+    {
+      "Rank": 88,
+      "Team": "Western Kentucky",
+      "Conference": "Conference USA",
+      "Net Rating": -2.73,
+      "Adjusted Tempo": 64.9
+    },
+    {
       "Rank": 89,
-      "Team": "South Alabama",
-      "Conference": "Sun Belt",
-      "Offense rating": 17.5,
-      "Defense rating": 18.7,
-      "Net Rating": -1.71,
-      "Adjusted Tempo": 70.4
+      "Team": "Stanford",
+      "Conference": "ACC",
+      "Net Rating": -3.17,
+      "Adjusted Tempo": 59.0
     },
     {
       "Rank": 90,
-      "Team": "Florida International",
+      "Team": "Louisiana Tech",
       "Conference": "Conference USA",
-      "Offense rating": 17.1,
-      "Defense rating": 17.9,
-      "Net Rating": -1.71,
-      "Adjusted Tempo": 61.6
+      "Net Rating": -3.28,
+      "Adjusted Tempo": 62.8
     },
     {
       "Rank": 91,
-      "Team": "Louisiana Tech",
-      "Conference": "Conference USA",
-      "Offense rating": 16.2,
-      "Defense rating": 18.0,
-      "Net Rating": -1.84,
-      "Adjusted Tempo": 62.8
-    },
-    {
-      "Rank": 92,
-      "Team": "Hawai'i",
-      "Conference": "Mountain West",
-      "Offense rating": 16.6,
-      "Defense rating": 17.8,
-      "Net Rating": -1.95,
-      "Adjusted Tempo": 66.7
-    },
-    {
-      "Rank": 93,
       "Team": "Louisiana",
       "Conference": "Sun Belt",
-      "Offense rating": 16.6,
-      "Defense rating": 18.4,
-      "Net Rating": -2.31,
+      "Net Rating": -3.4,
       "Adjusted Tempo": 63.6
     },
     {
+      "Rank": 92,
+      "Team": "South Alabama",
+      "Conference": "Sun Belt",
+      "Net Rating": -3.45,
+      "Adjusted Tempo": 70.4
+    },
+    {
+      "Rank": 93,
+      "Team": "Hawai'i",
+      "Conference": "Mountain West",
+      "Net Rating": -3.47,
+      "Adjusted Tempo": 66.7
+    },
+    {
       "Rank": 94,
-      "Team": "Syracuse",
-      "Conference": "ACC",
-      "Offense rating": 15.9,
-      "Defense rating": 18.2,
-      "Net Rating": -2.57,
-      "Adjusted Tempo": 56.4
-    },
-    {
-      "Rank": 95,
-      "Team": "Arkansas State",
-      "Conference": "Sun Belt",
-      "Offense rating": 16.2,
-      "Defense rating": 18.7,
-      "Net Rating": -2.82,
-      "Adjusted Tempo": 72.7
-    },
-    {
-      "Rank": 96,
-      "Team": "Boston College",
-      "Conference": "ACC",
-      "Offense rating": 15.0,
-      "Defense rating": 18.2,
-      "Net Rating": -2.87,
-      "Adjusted Tempo": 62.8
-    },
-    {
-      "Rank": 97,
-      "Team": "West Virginia",
-      "Conference": "Big 12",
-      "Offense rating": 16.0,
-      "Defense rating": 17.7,
-      "Net Rating": -2.91,
-      "Adjusted Tempo": 61.6
-    },
-    {
-      "Rank": 98,
-      "Team": "Southern Miss",
-      "Conference": "Sun Belt",
-      "Offense rating": 16.4,
-      "Defense rating": 18.0,
-      "Net Rating": -3.0,
-      "Adjusted Tempo": 65.7
-    },
-    {
-      "Rank": 99,
-      "Team": "Missouri State",
-      "Conference": "Conference USA",
-      "Offense rating": 16.6,
-      "Defense rating": 18.2,
-      "Net Rating": -3.02,
-      "Adjusted Tempo": 62.6
-    },
-    {
-      "Rank": 100,
       "Team": "Troy",
       "Conference": "Sun Belt",
-      "Offense rating": 16.3,
-      "Defense rating": 18.6,
-      "Net Rating": -3.1,
+      "Net Rating": -3.63,
       "Adjusted Tempo": 65.6
     },
     {
-      "Rank": 101,
-      "Team": "Nevada",
-      "Conference": "Mountain West",
-      "Offense rating": 15.0,
-      "Defense rating": 17.5,
-      "Net Rating": -3.12,
-      "Adjusted Tempo": 49.9
+      "Rank": 95,
+      "Team": "Boston College",
+      "Conference": "ACC",
+      "Net Rating": -4.51,
+      "Adjusted Tempo": 62.8
     },
     {
-      "Rank": 102,
-      "Team": "Kennesaw State",
+      "Rank": 96,
+      "Team": "Florida International",
       "Conference": "Conference USA",
-      "Offense rating": 17.6,
-      "Defense rating": 18.2,
-      "Net Rating": -3.22,
-      "Adjusted Tempo": 67.1
+      "Net Rating": -4.61,
+      "Adjusted Tempo": 61.6
     },
     {
-      "Rank": 103,
-      "Team": "Oregon State",
-      "Conference": "Pac-12",
-      "Offense rating": 16.6,
-      "Defense rating": 18.4,
-      "Net Rating": -3.44,
-      "Adjusted Tempo": 62.6
-    },
-    {
-      "Rank": 104,
+      "Rank": 97,
       "Team": "Purdue",
       "Conference": "Big Ten",
-      "Offense rating": 15.6,
-      "Defense rating": 17.7,
-      "Net Rating": -3.52,
+      "Net Rating": -4.86,
       "Adjusted Tempo": 56.1
     },
     {
-      "Rank": 105,
-      "Team": "Central Michigan",
-      "Conference": "Mid-American",
-      "Offense rating": 15.6,
-      "Defense rating": 17.4,
-      "Net Rating": -3.59,
-      "Adjusted Tempo": 54.7
+      "Rank": 98,
+      "Team": "Arkansas State",
+      "Conference": "Sun Belt",
+      "Net Rating": -5.72,
+      "Adjusted Tempo": 72.7
     },
     {
-      "Rank": 106,
-      "Team": "Temple",
-      "Conference": "American Athletic",
-      "Offense rating": 15.7,
-      "Defense rating": 17.9,
-      "Net Rating": -3.62,
-      "Adjusted Tempo": 50.7
+      "Rank": 99,
+      "Team": "Syracuse",
+      "Conference": "ACC",
+      "Net Rating": -5.73,
+      "Adjusted Tempo": 56.4
     },
     {
-      "Rank": 107,
-      "Team": "Florida Atlantic",
-      "Conference": "American Athletic",
-      "Offense rating": 15.5,
-      "Defense rating": 17.7,
-      "Net Rating": -3.62,
-      "Adjusted Tempo": 61.8
+      "Rank": 100,
+      "Team": "Southern Miss",
+      "Conference": "Sun Belt",
+      "Net Rating": -5.73,
+      "Adjusted Tempo": 65.7
     },
     {
-      "Rank": 108,
+      "Rank": 101,
       "Team": "Army",
       "Conference": "American Athletic",
-      "Offense rating": 16.9,
-      "Defense rating": 18.4,
-      "Net Rating": -3.8,
+      "Net Rating": -5.77,
       "Adjusted Tempo": 65.7
     },
     {
-      "Rank": 109,
-      "Team": "App State",
-      "Conference": "Sun Belt",
-      "Offense rating": 14.8,
-      "Defense rating": 18.5,
-      "Net Rating": -3.86,
-      "Adjusted Tempo": 66.2
-    },
-    {
-      "Rank": 110,
-      "Team": "Eastern Michigan",
-      "Conference": "Mid-American",
-      "Offense rating": 16.0,
-      "Defense rating": 17.9,
-      "Net Rating": -3.93,
-      "Adjusted Tempo": 64.2
-    },
-    {
-      "Rank": 111,
-      "Team": "Buffalo",
-      "Conference": "Mid-American",
-      "Offense rating": 15.5,
-      "Defense rating": 18.9,
-      "Net Rating": -4.04,
-      "Adjusted Tempo": 65.7
-    },
-    {
-      "Rank": 112,
+      "Rank": 102,
       "Team": "Wyoming",
       "Conference": "Mountain West",
-      "Offense rating": 14.6,
-      "Defense rating": 18.0,
-      "Net Rating": -4.16,
+      "Net Rating": -6.35,
       "Adjusted Tempo": 65.2
     },
     {
-      "Rank": 113,
-      "Team": "Georgia Southern",
+      "Rank": 103,
+      "Team": "Kennesaw State",
+      "Conference": "Conference USA",
+      "Net Rating": -6.42,
+      "Adjusted Tempo": 67.1
+    },
+    {
+      "Rank": 104,
+      "Team": "Missouri State",
+      "Conference": "Conference USA",
+      "Net Rating": -6.42,
+      "Adjusted Tempo": 62.6
+    },
+    {
+      "Rank": 105,
+      "Team": "Florida Atlantic",
+      "Conference": "American Athletic",
+      "Net Rating": -7.12,
+      "Adjusted Tempo": 61.8
+    },
+    {
+      "Rank": 106,
+      "Team": "Nevada",
+      "Conference": "Mountain West",
+      "Net Rating": -7.19,
+      "Adjusted Tempo": 49.9
+    },
+    {
+      "Rank": 107,
+      "Team": "Central Michigan",
+      "Conference": "Mid-American",
+      "Net Rating": -7.25,
+      "Adjusted Tempo": 54.7
+    },
+    {
+      "Rank": 108,
+      "Team": "App State",
       "Conference": "Sun Belt",
-      "Offense rating": 15.2,
-      "Defense rating": 18.3,
-      "Net Rating": -4.27,
-      "Adjusted Tempo": 63.1
+      "Net Rating": -7.35,
+      "Adjusted Tempo": 66.2
     },
     {
-      "Rank": 114,
-      "Team": "Colorado State",
-      "Conference": "Mountain West",
-      "Offense rating": 16.1,
-      "Defense rating": 18.3,
-      "Net Rating": -4.58,
-      "Adjusted Tempo": 58.2
-    },
-    {
-      "Rank": 115,
-      "Team": "Bowling Green",
-      "Conference": "Mid-American",
-      "Offense rating": 14.4,
-      "Defense rating": 18.9,
-      "Net Rating": -4.89,
-      "Adjusted Tempo": 61.1
-    },
-    {
-      "Rank": 116,
-      "Team": "San Jos\u00e9 State",
-      "Conference": "Mountain West",
-      "Offense rating": 16.2,
-      "Defense rating": 17.9,
-      "Net Rating": -4.94,
-      "Adjusted Tempo": 63.8
-    },
-    {
-      "Rank": 117,
-      "Team": "UAB",
-      "Conference": "American Athletic",
-      "Offense rating": 16.2,
-      "Defense rating": 18.2,
-      "Net Rating": -4.97,
-      "Adjusted Tempo": 60.7
-    },
-    {
-      "Rank": 118,
-      "Team": "Northern Illinois",
-      "Conference": "Mid-American",
-      "Offense rating": 14.9,
-      "Defense rating": 18.9,
-      "Net Rating": -5.03,
-      "Adjusted Tempo": 56.3
-    },
-    {
-      "Rank": 119,
-      "Team": "Rice",
-      "Conference": "American Athletic",
-      "Offense rating": 16.2,
-      "Defense rating": 18.4,
-      "Net Rating": -5.45,
-      "Adjusted Tempo": 57.1
-    },
-    {
-      "Rank": 120,
+      "Rank": 109,
       "Team": "Coastal Carolina",
       "Conference": "Sun Belt",
-      "Offense rating": 15.9,
-      "Defense rating": 18.0,
-      "Net Rating": -5.77,
+      "Net Rating": -7.57,
       "Adjusted Tempo": 56.8
     },
     {
-      "Rank": 121,
-      "Team": "Tulsa",
-      "Conference": "American Athletic",
-      "Offense rating": 15.8,
-      "Defense rating": 18.5,
-      "Net Rating": -5.88,
-      "Adjusted Tempo": 74.6
-    },
-    {
-      "Rank": 122,
-      "Team": "UTEP",
-      "Conference": "Conference USA",
-      "Offense rating": 15.8,
-      "Defense rating": 18.8,
-      "Net Rating": -5.99,
-      "Adjusted Tempo": 62.7
-    },
-    {
-      "Rank": 123,
-      "Team": "Oklahoma State",
-      "Conference": "Big 12",
-      "Offense rating": 14.4,
-      "Defense rating": 17.9,
-      "Net Rating": -6.08,
-      "Adjusted Tempo": 57.4
-    },
-    {
-      "Rank": 124,
-      "Team": "Delaware",
-      "Conference": "Conference USA",
-      "Offense rating": 16.5,
-      "Defense rating": 18.8,
-      "Net Rating": -6.16,
-      "Adjusted Tempo": 66.6
-    },
-    {
-      "Rank": 125,
-      "Team": "Georgia State",
-      "Conference": "Sun Belt",
-      "Offense rating": 15.4,
-      "Defense rating": 18.6,
-      "Net Rating": -6.18,
-      "Adjusted Tempo": 63.1
-    },
-    {
-      "Rank": 126,
-      "Team": "Middle Tennessee",
-      "Conference": "Conference USA",
-      "Offense rating": 15.2,
-      "Defense rating": 18.6,
-      "Net Rating": -6.23,
-      "Adjusted Tempo": 67.7
-    },
-    {
-      "Rank": 127,
-      "Team": "Akron",
+      "Rank": 110,
+      "Team": "Buffalo",
       "Conference": "Mid-American",
-      "Offense rating": 16.5,
-      "Defense rating": 18.6,
-      "Net Rating": -6.59,
-      "Adjusted Tempo": 61.9
+      "Net Rating": -7.71,
+      "Adjusted Tempo": 65.7
     },
     {
-      "Rank": 128,
-      "Team": "New Mexico State",
-      "Conference": "Conference USA",
-      "Offense rating": 15.6,
-      "Defense rating": 18.6,
-      "Net Rating": -6.69,
-      "Adjusted Tempo": 68.3
-    },
-    {
-      "Rank": 129,
-      "Team": "UL Monroe",
-      "Conference": "Sun Belt",
-      "Offense rating": 15.3,
-      "Defense rating": 18.2,
-      "Net Rating": -7.65,
-      "Adjusted Tempo": 52.3
-    },
-    {
-      "Rank": 130,
-      "Team": "Ball State",
+      "Rank": 111,
+      "Team": "Northern Illinois",
       "Conference": "Mid-American",
-      "Offense rating": 14.3,
-      "Defense rating": 18.4,
-      "Net Rating": -8.15,
+      "Net Rating": -7.77,
       "Adjusted Tempo": 56.3
     },
     {
-      "Rank": 131,
-      "Team": "Sam Houston",
+      "Rank": 112,
+      "Team": "Georgia Southern",
+      "Conference": "Sun Belt",
+      "Net Rating": -7.93,
+      "Adjusted Tempo": 63.1
+    },
+    {
+      "Rank": 113,
+      "Team": "Eastern Michigan",
+      "Conference": "Mid-American",
+      "Net Rating": -8.08,
+      "Adjusted Tempo": 64.2
+    },
+    {
+      "Rank": 114,
+      "Team": "Oregon State",
+      "Conference": "Pac-12",
+      "Net Rating": -8.75,
+      "Adjusted Tempo": 62.6
+    },
+    {
+      "Rank": 115,
+      "Team": "Colorado State",
+      "Conference": "Mountain West",
+      "Net Rating": -8.81,
+      "Adjusted Tempo": 58.2
+    },
+    {
+      "Rank": 116,
+      "Team": "Bowling Green",
+      "Conference": "Mid-American",
+      "Net Rating": -9.14,
+      "Adjusted Tempo": 61.1
+    },
+    {
+      "Rank": 117,
+      "Team": "Temple",
+      "Conference": "American Athletic",
+      "Net Rating": -9.71,
+      "Adjusted Tempo": 50.7
+    },
+    {
+      "Rank": 118,
+      "Team": "UTEP",
       "Conference": "Conference USA",
-      "Offense rating": 14.3,
-      "Defense rating": 19.1,
-      "Net Rating": -8.46,
+      "Net Rating": -9.73,
+      "Adjusted Tempo": 62.7
+    },
+    {
+      "Rank": 119,
+      "Team": "UAB",
+      "Conference": "American Athletic",
+      "Net Rating": -11.22,
+      "Adjusted Tempo": 60.7
+    },
+    {
+      "Rank": 120,
+      "Team": "San Jos\u00e9 State",
+      "Conference": "Mountain West",
+      "Net Rating": -11.32,
+      "Adjusted Tempo": 63.8
+    },
+    {
+      "Rank": 121,
+      "Team": "Rice",
+      "Conference": "American Athletic",
+      "Net Rating": -11.59,
+      "Adjusted Tempo": 57.1
+    },
+    {
+      "Rank": 122,
+      "Team": "Oklahoma State",
+      "Conference": "Big 12",
+      "Net Rating": -11.65,
       "Adjusted Tempo": 57.4
     },
     {
-      "Rank": 132,
-      "Team": "Kent State",
+      "Rank": 123,
+      "Team": "Tulsa",
+      "Conference": "American Athletic",
+      "Net Rating": -12.22,
+      "Adjusted Tempo": 74.6
+    },
+    {
+      "Rank": 124,
+      "Team": "Georgia State",
+      "Conference": "Sun Belt",
+      "Net Rating": -12.56,
+      "Adjusted Tempo": 63.1
+    },
+    {
+      "Rank": 125,
+      "Team": "Middle Tennessee",
+      "Conference": "Conference USA",
+      "Net Rating": -12.75,
+      "Adjusted Tempo": 67.7
+    },
+    {
+      "Rank": 126,
+      "Team": "New Mexico State",
+      "Conference": "Conference USA",
+      "Net Rating": -13.37,
+      "Adjusted Tempo": 68.3
+    },
+    {
+      "Rank": 127,
+      "Team": "Delaware",
+      "Conference": "Conference USA",
+      "Net Rating": -13.44,
+      "Adjusted Tempo": 66.6
+    },
+    {
+      "Rank": 128,
+      "Team": "Akron",
       "Conference": "Mid-American",
-      "Offense rating": 14.5,
-      "Defense rating": 17.9,
-      "Net Rating": -8.48,
-      "Adjusted Tempo": 49.4
+      "Net Rating": -14.4,
+      "Adjusted Tempo": 61.9
+    },
+    {
+      "Rank": 129,
+      "Team": "Sam Houston",
+      "Conference": "Conference USA",
+      "Net Rating": -16.35,
+      "Adjusted Tempo": 57.4
+    },
+    {
+      "Rank": 130,
+      "Team": "Charlotte",
+      "Conference": "American Athletic",
+      "Net Rating": -16.53,
+      "Adjusted Tempo": 51.6
+    },
+    {
+      "Rank": 131,
+      "Team": "Ball State",
+      "Conference": "Mid-American",
+      "Net Rating": -17.56,
+      "Adjusted Tempo": 56.3
+    },
+    {
+      "Rank": 132,
+      "Team": "UL Monroe",
+      "Conference": "Sun Belt",
+      "Net Rating": -18.02,
+      "Adjusted Tempo": 52.3
     },
     {
       "Rank": 133,
-      "Team": "Charlotte",
-      "Conference": "American Athletic",
-      "Offense rating": 14.2,
-      "Defense rating": 18.2,
-      "Net Rating": -8.6,
-      "Adjusted Tempo": 51.6
+      "Team": "Kent State",
+      "Conference": "Mid-American",
+      "Net Rating": -19.96,
+      "Adjusted Tempo": 49.4
     },
     {
       "Rank": 134,
       "Team": "Massachusetts",
       "Conference": "Mid-American",
-      "Offense rating": 13.3,
-      "Defense rating": 19.3,
-      "Net Rating": -13.89,
+      "Net Rating": -27.7,
       "Adjusted Tempo": 54.4
     }
   ]
