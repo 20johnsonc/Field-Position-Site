@@ -7,6 +7,10 @@ import type {
 } from './types';
 
 function num(value: unknown, fallback = 0): number {
+  if (typeof value === 'string') {
+    // Strip % signs, commas, and whitespace
+    value = value.replace(/[%,\s]/g, '');
+  }
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : fallback;
 }

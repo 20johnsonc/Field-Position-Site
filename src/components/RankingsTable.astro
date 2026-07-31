@@ -16,7 +16,6 @@ const { rankings } = Astro.props;
         <th class="sortable" data-sort-key="rank"># ⇕</th>
         <th class="sortable" data-sort-key="team">Team ⇕</th>
         <th class="sortable" data-sort-key="conference">Conf ⇕</th>
-        <th class="sortable" data-sort-key="year">Year ⇕</th>
         <th class="sortable num" data-sort-key="netRating" style="text-align: right;">Net Rating ⇕</th>
         <th class="sortable num" data-sort-key="offRating" style="text-align: right;">Off Rating ⇕</th>
         <th class="sortable num" data-sort-key="defRating" style="text-align: right;">Def Rating ⇕</th>
@@ -37,7 +36,6 @@ const { rankings } = Astro.props;
             <td class="rank">{row.rank}</td>
             <td class="team">{row.team}</td>
             <td>{row.conference}</td>
-            <td>{row.year}</td>
             <td class="num rating">{formatRating(row.netRating)}</td>
             <td class="num">{row.offRating.toFixed(1)}</td>
             <td class="num">{row.defRating.toFixed(1)}</td>

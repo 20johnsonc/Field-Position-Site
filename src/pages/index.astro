@@ -23,8 +23,8 @@ const filters = buildFilterOptions(rankings, matchups);
 
 <Layout seasonLabel={seasonLabel}>
   <DashboardControls filters={filters}>
-    <MatchupGrid slot="matchups" matchups={matchups} teamConfMap={teamConfMap} />
     <RankingsTable slot="rankings" rankings={rankings} />
+    <MatchupGrid slot="matchups" matchups={matchups} teamConfMap={teamConfMap} />
   </DashboardControls>
 
   <PbpChartModal client:load />

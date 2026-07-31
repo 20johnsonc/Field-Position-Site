@@ -9,47 +9,17 @@ const { filters } = Astro.props;
 ---
 
 <div class="tabs" id="dashboardTabs">
-  <button type="button" class="tab-btn active" data-tab="matchups">Matchup Slate</button>
-  <button type="button" class="tab-btn" data-tab="rankings">Power Rankings</button>
+  <button type="button" class="tab-btn active" data-tab="rankings">Power Rankings</button>
+  <button type="button" class="tab-btn" data-tab="matchups">Matchup Slate</button>
 </div>
 
-<div id="matchupsPanel" class="tab-panel active">
-  <div class="controls">
-    <select id="matchupYearFilter" aria-label="Filter matchups by year">
-      <option value="ALL">All Years</option>
-      {
-        filters.matchupYears.map((year) => (
-          <option value={year}>{year}</option>
-        ))
-      }
-    </select>
-    <select id="confFilter" aria-label="Filter matchups by conference">
-      <option value="ALL">All Conferences</option>
-      {
-        filters.matchupConferences.map((conf) => (
-          <option value={conf}>{conf}</option>
-        ))
-      }
-    </select>
-    <select id="weekFilter" aria-label="Filter matchups by week">
-      <option value="ALL">All Weeks</option>
-      {
-        filters.matchupWeeks.map((week) => (
-          <option value={week}>Week {week}</option>
-        ))
-      }
-    </select>
-  </div>
-  <slot name="matchups" />
-</div>
-
-<div id="rankingsPanel" class="tab-panel">
+<!-- Power Rankings Panel (Default Active) -->
+<div id="rankingsPanel" class="tab-panel active">
   <div class="controls">
     <select id="rankingsYearFilter" aria-label="Filter rankings by year">
-      <option value="ALL">All Years</option>
       {
         filters.rankingYears.map((year) => (
-          <option value={year}>{year}</option>
+          <option value={year} selected={String(year) === "2026"}>{year}</option>
         ))
       }
     </select>
@@ -71,6 +41,36 @@ const { filters } = Astro.props;
     </select>
   </div>
   <slot name="rankings" />
+</div>
+
+<!-- Matchups Panel (Hidden on Load) -->
+<div id="matchupsPanel" class="tab-panel">
+  <div class="controls">
+    <select id="matchupYearFilter" aria-label="Filter matchups by year">
+      {
+        filters.matchupYears.map((year) => (
+          <option value={year} selected={String(year) === "2026"}>{year}</option>
+        ))
+      }
+    </select>
+    <select id="confFilter" aria-label="Filter matchups by conference">
+      <option value="ALL">All Conferences</option>
+      {
+        filters.matchupConferences.map((conf) => (
+          <option value={conf}>{conf}</option>
+        ))
+      }
+    </select>
+    <select id="weekFilter" aria-label="Filter matchups by week">
+      <option value="ALL">All Weeks</option>
+      {
+        filters.matchupWeeks.map((week) => (
+          <option value={week}>Week {week}</option>
+        ))
+      }
+    </select>
+  </div>
+  <slot name="matchups" />
 </div>
 
 <script>

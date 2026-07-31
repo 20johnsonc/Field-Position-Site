@@ -4,14 +4,15 @@ import { fmtDate } from '../lib/data';
 
 interface Props {
   game: Matchup;
-  homeConf: string;
-  awayConf: string;
+  homeConf?: string;
+  awayConf?: string;
 }
 
-const { game, homeConf, awayConf } = Astro.props;
+const { game, homeConf = game.homeConference, awayConf = game.awayConference } = Astro.props;
 
-const awayTag = game.awayTeam.substring(0, 3).toUpperCase();
+// 1. Determine score & completion state using normalized fields
 const hasScores = game.homePoints !== undefined && game.awayPoints !== undefined;
+const isUpcoming = !hasScores;
 
 let scoreDisplay = '—';
 if (hasScores) {
@@ -20,14 +21,26 @@ if (hasScores) {
   scoreDisplay = game.predictedScore;
 }
 
+// 2. Win Probability Calculation (0-100%)
+let winProbNum: number | null = null;
+if (game.homeWinProb != null && !isNaN(game.homeWinProb)) {
+  let raw = game.homeWinProb;
+  // Convert 0-1 decimals (e.g. 0.68) to percentages (68)
+  if (raw <= 1.0 && raw > 0) {
+    raw = raw * 100;
+  }
+  winProbNum = Math.min(Math.max(raw, 0), 100);
+}
+
+// 3. Analytics calculations
+const modelSpread = game.predictedMargin != null ? -game.predictedMargin : null;
+const predTotal = game.predictedTotal ?? (hasScores ? (game.homePoints! + game.awayPoints!) : null);
 const dateTag = fmtDate(game.startDate);
-const winProbNum = game.homeWinProb ?? 0;
-const modelSpread = game.predictedMargin !== undefined ? -game.predictedMargin : null;
-const predTotal =
-  game.predictedTotal ??
-  (hasScores && game.homePoints !== undefined && game.awayPoints !== undefined
-    ? game.homePoints + game.awayPoints
-    : null);
+
+const fmtSpread = (num: number | null) => {
+  if (num === null || isNaN(num)) return 'N/A';
+  return num > 0 ? `+${num.toFixed(1)}` : num.toFixed(1);
+};
 ---
 
 <article
@@ -40,91 +53,112 @@ const predTotal =
   data-home-team={game.homeTeam}
   data-away-team={game.awayTeam}
 >
-  <div class="card-head">
+  <!-- Header -->
+  <header class="card-head">
     <div class="matchup">
-      <div class="badge away">{awayTag}</div>
-      <div class="matchup-names">
-        {game.awayTeam} <span class="at">@</span> {game.homeTeam}
-      </div>
+      <h3 class="matchup-names">
+        <span class="team away-team">{game.awayTeam}</span>
+        <span class="at">@</span>
+        <span class="team home-team">{game.homeTeam}</span>
+      </h3>
     </div>
     <div class="week-tag">
-      WK {game.week}{dateTag ? ` · ${dateTag}` : ''}
+      <span>WK {game.week}</span>
+      {dateTag && <span class="dot-sep">•</span>}
+      {dateTag && <time>{dateTag}</time>}
     </div>
-  </div>
+  </header>
 
+  <!-- Card Body -->
   <div class="card-body">
+    <!-- Score & Probability Gauge Row -->
     <div class="score-row">
       <div class="score-line">
-        <span>{scoreDisplay}</span>
+        <span class="score-text">{scoreDisplay}</span>
       </div>
+
       {
-        game.homeWinProb !== undefined && (
-          <div class="prob-ring">
-            <span>{Math.round(winProbNum)}%</span>
+        winProbNum !== null && (
+          <div 
+            class="prob-gauge" 
+            style={`--prob: ${winProbNum}%;`}
+            title={`${game.homeTeam} Win Probability: ${winProbNum.toFixed(1)}%`}
+          >
+            <div class="gauge-center">
+              <span>{Math.round(winProbNum)}%</span>
+            </div>
           </div>
         )
       }
     </div>
 
     {
-      game.homeWinProb !== undefined && (
+      winProbNum !== null && (
         <div class="prob-caption">
-          <b>{game.homeTeam.toUpperCase()}</b> WIN PROBABILITY {winProbNum.toFixed(1)}%
+          <span class="prob-label">Win Probability</span>
+          <span class="prob-detail">
+            <strong>{game.homeTeam.toUpperCase()}</strong> {winProbNum.toFixed(1)}%
+          </span>
         </div>
       )
     }
 
+    <!-- Analytics Section (Upcoming Games) -->
     {
-      !hasScores && game.predictedMargin !== undefined && (
-        <>
-          <div class="stat" style="margin-top: 8px;">
-            <div class="stat-top">
-              <span class="stat-label">Spread</span>
-              <span class="stat-value">
-                MKT{' '}
-                {
-                  game.marketSpread != null ? (
-                    game.marketSpread
-                  ) : (
-                    <span class="na">N/A</span>
-                  )
-                }{' '}
-                &nbsp;/&nbsp; MODEL <b>{modelSpread?.toFixed(1)}</b>
+      isUpcoming && game.predictedMargin !== undefined && (
+        <div class="analytics-grid">
+          <div class="stat-box">
+            <span class="stat-label">Spread</span>
+            <div class="stat-comparison">
+              <span class="mkt">
+                <small>MKT</small>{' '}
+                {game.marketSpread != null ? game.marketSpread : <span class="na">N/A</span>}
+              </span>
+              <span class="divider">/</span>
+              <span class="model">
+                <small>MODEL</small> <strong>{fmtSpread(modelSpread)}</strong>
               </span>
             </div>
           </div>
 
-          <div class="stat">
-            <div class="stat-top">
-              <span class="stat-label">Total</span>
-              <span class="stat-value">
-                MKT{' '}
-                {
-                  game.marketTotal != null ? (
-                    game.marketTotal
-                  ) : (
-                    <span class="na">N/A</span>
-                  )
-                }{' '}
-                &nbsp;/&nbsp; MODEL <b>{predTotal?.toFixed(1)}</b>
+          <div class="stat-box">
+            <span class="stat-label">Total</span>
+            <div class="stat-comparison">
+              <span class="mkt">
+                <small>MKT</small>{' '}
+                {game.marketTotal != null ? game.marketTotal : <span class="na">N/A</span>}
+              </span>
+              <span class="divider">/</span>
+              <span class="model">
+                <small>MODEL</small> <strong>{predTotal != null ? Number(predTotal).toFixed(1) : 'N/A'}</strong>
               </span>
             </div>
           </div>
-        </>
+        </div>
       )
     }
 
-    <div class="verdict" style="margin-top: 12px; text-align: center;">
-      <button
-        type="button"
-        class="pbp-btn"
-        data-pbp-trigger
-        data-game-id={game.gameId}
-        data-home-team={game.homeTeam}
-        data-away-team={game.awayTeam}
-      >
-        📊 View Tug-of-War Chart
-      </button>
-    </div>
+    <!-- Action Section (Completed Games) -->
+    {
+      !isUpcoming && (
+        <div class="verdict">
+          <button
+            type="button"
+            class="pbp-btn"
+            data-pbp-trigger
+            data-game-id={game.gameId}
+            data-home-team={game.homeTeam}
+            data-away-team={game.awayTeam}
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+            <span>View Play-by-Play Chart</span>
+          </button>
+        </div>
+      )
+    }
   </div>
 </article>

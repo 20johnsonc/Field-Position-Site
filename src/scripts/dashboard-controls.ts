@@ -192,6 +192,7 @@ export function initDashboardControls(): void {
   bindFilters();
   bindSortHeaders();
   populateTeamDropdown();
+  switchTab('rankings');
   applyMatchupFilters();
   applyRankingsFilters();
 }
