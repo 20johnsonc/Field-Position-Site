@@ -1,0 +1,130 @@
+---
+import type { Matchup } from '../lib/types';
+import { fmtDate } from '../lib/data';
+
+interface Props {
+  game: Matchup;
+  homeConf: string;
+  awayConf: string;
+}
+
+const { game, homeConf, awayConf } = Astro.props;
+
+const awayTag = game.awayTeam.substring(0, 3).toUpperCase();
+const hasScores = game.homePoints !== undefined && game.awayPoints !== undefined;
+
+let scoreDisplay = '—';
+if (hasScores) {
+  scoreDisplay = `${game.awayTeam} ${game.awayPoints} - ${game.homePoints} ${game.homeTeam}`;
+} else if (game.predictedScore) {
+  scoreDisplay = game.predictedScore;
+}
+
+const dateTag = fmtDate(game.startDate);
+const winProbNum = game.homeWinProb ?? 0;
+const modelSpread = game.predictedMargin !== undefined ? -game.predictedMargin : null;
+const predTotal =
+  game.predictedTotal ??
+  (hasScores && game.homePoints !== undefined && game.awayPoints !== undefined
+    ? game.homePoints + game.awayPoints
+    : null);
+---
+
+<article
+  class="card matchup-card"
+  data-year={game.year}
+  data-week={game.week}
+  data-home-conf={homeConf}
+  data-away-conf={awayConf}
+  data-game-id={game.gameId}
+  data-home-team={game.homeTeam}
+  data-away-team={game.awayTeam}
+>
+  <div class="card-head">
+    <div class="matchup">
+      <div class="badge away">{awayTag}</div>
+      <div class="matchup-names">
+        {game.awayTeam} <span class="at">@</span> {game.homeTeam}
+      </div>
+    </div>
+    <div class="week-tag">
+      WK {game.week}{dateTag ? ` · ${dateTag}` : ''}
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="score-row">
+      <div class="score-line">
+        <span>{scoreDisplay}</span>
+      </div>
+      {
+        game.homeWinProb !== undefined && (
+          <div class="prob-ring">
+            <span>{Math.round(winProbNum)}%</span>
+          </div>
+        )
+      }
+    </div>
+
+    {
+      game.homeWinProb !== undefined && (
+        <div class="prob-caption">
+          <b>{game.homeTeam.toUpperCase()}</b> WIN PROBABILITY {winProbNum.toFixed(1)}%
+        </div>
+      )
+    }
+
+    {
+      !hasScores && game.predictedMargin !== undefined && (
+        <>
+          <div class="stat" style="margin-top: 8px;">
+            <div class="stat-top">
+              <span class="stat-label">Spread</span>
+              <span class="stat-value">
+                MKT{' '}
+                {
+                  game.marketSpread != null ? (
+                    game.marketSpread
+                  ) : (
+                    <span class="na">N/A</span>
+                  )
+                }{' '}
+                &nbsp;/&nbsp; MODEL <b>{modelSpread?.toFixed(1)}</b>
+              </span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-top">
+              <span class="stat-label">Total</span>
+              <span class="stat-value">
+                MKT{' '}
+                {
+                  game.marketTotal != null ? (
+                    game.marketTotal
+                  ) : (
+                    <span class="na">N/A</span>
+                  )
+                }{' '}
+                &nbsp;/&nbsp; MODEL <b>{predTotal?.toFixed(1)}</b>
+              </span>
+            </div>
+          </div>
+        </>
+      )
+    }
+
+    <div class="verdict" style="margin-top: 12px; text-align: center;">
+      <button
+        type="button"
+        class="pbp-btn"
+        data-pbp-trigger
+        data-game-id={game.gameId}
+        data-home-team={game.homeTeam}
+        data-away-team={game.awayTeam}
+      >
+        📊 View Tug-of-War Chart
+      </button>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DashboardControls from '../components/DashboardControls.astro';
+import MatchupGrid from '../components/MatchupGrid.astro';
+import RankingsTable from '../components/RankingsTable.astro';
+import PbpChartModal from '../components/PbpChartModal.tsx';
+import rankingsRaw from '../data/rankings.json';
+import matchupsRaw from '../data/matchups.json';
+import {
+  buildFilterOptions,
+  buildTeamConferenceMap,
+  getSeasonLabel,
+  normalizeMatchups,
+  normalizeRankings,
+} from '../lib/data';
+
+const rankings = normalizeRankings(rankingsRaw);
+const matchups = normalizeMatchups(matchupsRaw);
+const seasonLabel = getSeasonLabel(rankings);
+const teamConfMap = buildTeamConferenceMap(rankings);
+const filters = buildFilterOptions(rankings, matchups);
+---
+
+<Layout seasonLabel={seasonLabel}>
+  <DashboardControls filters={filters}>
+    <MatchupGrid slot="matchups" matchups={matchups} teamConfMap={teamConfMap} />
+    <RankingsTable slot="rankings" rankings={rankings} />
+  </DashboardControls>
+
+  <PbpChartModal client:load />
+</Layout>

@@ -1,0 +1,80 @@
+---
+import type { FilterOptions } from '../lib/types';
+
+interface Props {
+  filters: FilterOptions;
+}
+
+const { filters } = Astro.props;
+---
+
+<div class="tabs" id="dashboardTabs">
+  <button type="button" class="tab-btn active" data-tab="matchups">Matchup Slate</button>
+  <button type="button" class="tab-btn" data-tab="rankings">Power Rankings</button>
+</div>
+
+<div id="matchupsPanel" class="tab-panel active">
+  <div class="controls">
+    <select id="matchupYearFilter" aria-label="Filter matchups by year">
+      <option value="ALL">All Years</option>
+      {
+        filters.matchupYears.map((year) => (
+          <option value={year}>{year}</option>
+        ))
+      }
+    </select>
+    <select id="confFilter" aria-label="Filter matchups by conference">
+      <option value="ALL">All Conferences</option>
+      {
+        filters.matchupConferences.map((conf) => (
+          <option value={conf}>{conf}</option>
+        ))
+      }
+    </select>
+    <select id="weekFilter" aria-label="Filter matchups by week">
+      <option value="ALL">All Weeks</option>
+      {
+        filters.matchupWeeks.map((week) => (
+          <option value={week}>Week {week}</option>
+        ))
+      }
+    </select>
+  </div>
+  <slot name="matchups" />
+</div>
+
+<div id="rankingsPanel" class="tab-panel">
+  <div class="controls">
+    <select id="rankingsYearFilter" aria-label="Filter rankings by year">
+      <option value="ALL">All Years</option>
+      {
+        filters.rankingYears.map((year) => (
+          <option value={year}>{year}</option>
+        ))
+      }
+    </select>
+    <select id="rankingsConfFilter" aria-label="Filter rankings by conference">
+      <option value="ALL">All Conferences</option>
+      {
+        filters.rankingConferences.map((conf) => (
+          <option value={conf}>{conf}</option>
+        ))
+      }
+    </select>
+    <select id="rankingsTeamFilter" aria-label="Filter rankings by team">
+      <option value="ALL">All Teams</option>
+      {
+        filters.rankingTeams.map((team) => (
+          <option value={team}>{team}</option>
+        ))
+      }
+    </select>
+  </div>
+  <slot name="rankings" />
+</div>
+
+<script>
+  import { initDashboardControls } from '../scripts/dashboard-controls';
+
+  initDashboardControls();
+</script>

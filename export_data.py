@@ -4,8 +4,8 @@
 # have all been built. It reuses those variables directly — nothing is redefined.
 #
 # Produces two files: rankings.json and matchups.json
-# These are the only two files the website reads. Nothing else needs to change
-# on the site side when your models change — as long as these two shapes hold.
+# Upload these to src/data/ in the Astro site repo (replaces the previous
+# root-level JSON files). The site imports them at build time — no runtime fetch.
 # =============================================================================
 
 import json

@@ -1,0 +1,22 @@
+---
+import MatchupCard from './MatchupCard.astro';
+import type { Matchup } from '../lib/types';
+import { resolveMatchupConferences } from '../lib/data';
+
+interface Props {
+  matchups: Matchup[];
+  teamConfMap: Record<string, string>;
+}
+
+const { matchups, teamConfMap } = Astro.props;
+---
+
+<div id="matchupGrid" class="grid">
+  {
+    matchups.map((game) => {
+      const { homeConf, awayConf } = resolveMatchupConferences(game, teamConfMap);
+      return <MatchupCard game={game} homeConf={homeConf} awayConf={awayConf} />;
+    })
+  }
+</div>
+<div id="matchupEmptyState" class="empty empty-state">No games found for the selected filters.</div>
