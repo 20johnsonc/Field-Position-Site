@@ -200,7 +200,7 @@ export function initDashboardControls(): void {
 export function openPbpModal(gameId: string, homeTeam: string, awayTeam: string): void {
   window.dispatchEvent(
     new CustomEvent('open-pbp-modal', {
-      detail: { gameId, homeTeam, awayTeam },
+      detail: { gameId, year, homeTeam, awayTeam },
     }),
   );
 }
