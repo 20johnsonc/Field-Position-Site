@@ -28,8 +28,11 @@ interface ModalDetail {
   awayTeam: string;
 }
 
-async function loadPbpData(gameId: string): Promise<PbpPoint[]> {
-  const candidates = [`/pbp/pbp_${gameId}.json`, `/pbp/${gameId}.json`];
+async function loadPbpData(gameId: string, year: string | number): Promise<PbpPoint[]> {
+  // Update candidate URLs to match the new public path structure
+  const candidates = [
+    `/pbp/${year}/${gameId}.json`,
+  ];
 
   for (const url of candidates) {
     const response = await fetch(url);
@@ -38,7 +41,7 @@ async function loadPbpData(gameId: string): Promise<PbpPoint[]> {
     }
   }
 
-  throw new Error(`Play-by-play data not found for game ${gameId}`);
+  throw new Error(`Play-by-play data not found for game ${gameId} (${year})`);
 }
 
 export default function PbpChartModal() {
