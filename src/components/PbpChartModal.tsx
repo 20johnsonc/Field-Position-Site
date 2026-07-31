@@ -24,6 +24,7 @@ Chart.register(
 
 interface ModalDetail {
   gameId: string;
+  year: string | number;
   homeTeam: string;
   awayTeam: string;
 }
@@ -87,7 +88,7 @@ export default function PbpChartModal() {
       setTitle(`${detail.awayTeam} @ ${detail.homeTeam} — Game Flow & Expected Points`);
 
       try {
-        const pbpData = await loadPbpData(detail.gameId);
+        const pbpData = await loadPbpData(detail.gameId, detail.year);
         setPbpPoints(pbpData);
 
         const canvas = canvasRef.current;
