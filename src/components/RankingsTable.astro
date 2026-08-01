@@ -1,6 +1,6 @@
 ---
 import type { Ranking } from '../lib/types';
-import { formatRating } from '../lib/data';
+import { formatRating, slugifyTeam } from '../lib/data';
 
 interface Props {
   rankings: Ranking[];
@@ -34,7 +34,9 @@ const { rankings } = Astro.props;
             data-def-rating={row.defRating}
           >
             <td class="rank">{row.rank}</td>
-            <td class="team">{row.team}</td>
+            <td class="team">
+              <a href={`/teams/${slugifyTeam(row.team)}/`} class="team-link">{row.team}</a>
+            </td>
             <td>{row.conference}</td>
             <td class="num rating">{formatRating(row.netRating)}</td>
             <td class="num">{row.offRating.toFixed(1)}</td>

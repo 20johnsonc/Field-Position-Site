@@ -38,6 +38,22 @@ export function normalizeRankings(raw: RankingsFile | Record<string, unknown>[])
     netRating: num(row['Net Rating'] ?? row['Net rating'] ?? row.net_rating ?? row.power_rating),
     offRating: num(row['Offense Rating'] ?? row['Offense rating'] ?? row.adj_off),
     defRating: num(row['Defense Rating'] ?? row['Defense rating'] ?? row.adj_def),
+
+    trajectory: Array.isArray(row.trajectory)
+      ? (row.trajectory as Record<string, unknown>[]).map((t) => ({
+          week: num(t.week),
+          adj_off_ppa: num(t.adj_off_ppa),
+          adj_def_ppa: num(t.adj_def_ppa),
+        }))
+      : [],
+    gameLog: Array.isArray(row.game_log)
+      ? (row.game_log as Record<string, unknown>[]).map((g) => ({
+          week: num(g.week),
+          opponent: str(g.opponent),
+          margin: num(g.margin),
+          win: Boolean(g.win),
+        }))
+      : [],
   }));
 }
 
@@ -140,4 +156,38 @@ export function fmtDate(dateStr?: string): string {
 
 export function formatRating(value: number): string {
   return `${value > 0 ? '+' : ''}${value.toFixed(1)}`;
+}
+
+export function slugifyTeam(team: string): string {
+  return team
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function computeRanks(
+  rankings: Ranking[],
+  year: number,
+): Map<string, { overallRank: number; confRank: number }> {
+  const seasonRows = rankings.filter((row) => row.year === year);
+  const byNet = [...seasonRows].sort((a, b) => b.netRating - a.netRating);
+  const map = new Map<string, { overallRank: number; confRank: number }>();
+
+  byNet.forEach((row, i) => {
+    map.set(row.team, { overallRank: i + 1, confRank: 0 });
+  });
+
+  const byConference = new Map<string, Ranking[]>();
+  for (const row of seasonRows) {
+    if (!byConference.has(row.conference)) byConference.set(row.conference, []);
+    byConference.get(row.conference)!.push(row);
+  }
+  for (const teams of byConference.values()) {
+    teams.sort((a, b) => b.netRating - a.netRating).forEach((row, i) => {
+      const entry = map.get(row.team);
+      if (entry) entry.confRank = i + 1;
+    });
+  }
+
+  return map;
 }

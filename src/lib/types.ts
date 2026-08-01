@@ -57,3 +57,28 @@ export interface FilterOptions {
   matchupConferences: string[];
   matchupWeeks: number[];
 }
+
+export interface TrajectoryPoint {
+  week: number;
+  adj_off_ppa: number;
+  adj_def_ppa: number;
+}
+
+export interface GameLogEntry {
+  week: number;
+  opponent: string;
+  margin: number;
+  win: boolean;
+}
+
+export interface Ranking {
+  rank: number | string;
+  team: string;
+  conference: string;
+  year: number;
+  netRating: number;
+  offRating: number;
+  defRating: number;
+  trajectory: TrajectoryPoint[];
+  gameLog: GameLogEntry[];
+}

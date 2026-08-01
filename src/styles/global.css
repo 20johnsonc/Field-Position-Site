@@ -477,3 +477,37 @@ header {
   width: 100% !important;
   height: 100% !important;
 }
+
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.rank-badge {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #60a5fa;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  min-width: 3rem;
+  text-align: center;
+}
+.rank-sub { font-size: 0.7rem; color: #6b7280; margin-top: 0.15rem; }
+
+.section-title { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.1rem; color: #f3f4f6; }
+
+.game-log-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.game-log-table th {
+  text-align: left;
+  color: #9ca3af;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #374151;
+}
+.game-log-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.game-log-table .num { text-align: right; }
+.game-log-table .win { color: #22c55e; font-weight: 700; }
+.game-log-table .loss { color: #ef4444; font-weight: 700; }

@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TeamTrajectoryChart from '../../components/TeamTrajectoryChart.tsx';
+import rankingsRaw from '../../data/rankings.json';
+import { normalizeRankings, slugifyTeam, formatRating, computeRanks } from '../../lib/data';
+
+export function getStaticPaths() {
+  const rankings = normalizeRankings(rankingsRaw as any);
+
+  return rankings.map((row) => {
+    const ranks = computeRanks(rankings, row.year);
+    const totalTeams = rankings.filter((r) => r.year === row.year).length;
+    return {
+      params: { team: slugifyTeam(row.team) },
+      props: { row, ranks: ranks.get(row.team), totalTeams },
+    };
+  });
+}
+
+const { row, ranks, totalTeams } = Astro.props;
+const sortedGameLog = [...row.gameLog].sort((a, b) => a.week - b.week);
+---
+
+<Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
+  <a href="/" class="back-link">&larr; Back to rankings</a>
+
+  <div class="team-header">
+    <div class="rank-badge">#{ranks?.overallRank ?? '—'}</div>
+    <div>
+      <h1>{row.team}</h1>
+      <p class="subtitle">{row.conference} · Conf Rank #{ranks?.confRank ?? '—'} · {row.year} Season</p>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <span class="label">Net Rating</span>
+      <span class="value">{formatRating(row.netRating)}</span>
+      <span class="rank-sub">#{ranks?.overallRank ?? '—'} of {totalTeams}</span>
+    </div>
+    <div class="stat">
+      <span class="label">Off Rating</span>
+      <span class="value">{row.offRating.toFixed(1)}</span>
+    </div>
+    <div class="stat">
+      <span class="label">Def Rating</span>
+      <span class="value">{row.defRating.toFixed(1)}</span>
+    </div>
+  </div>
+
+  <TeamTrajectoryChart client:load team={row.team} trajectory={row.trajectory} gameLog={row.gameLog} />
+
+  <h2 class="section-title">Schedule &amp; Results</h2>
+  <table class="game-log-table">
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Opponent</th>
+        <th>Result</th>
+        <th class="num">Margin</th>
+      </tr>
+    </thead>
+    <tbody>
+      {sortedGameLog.map((g) => {
+        const maxMargin = Math.max(1, ...sortedGameLog.map((x) => Math.abs(x.margin)));
+        const intensity = Math.min(1, Math.abs(g.margin) / maxMargin);
+        const bg = g.win
+          ? `rgba(34, 197, 94, ${0.12 + intensity * 0.28})`
+          : `rgba(239, 68, 68, ${0.12 + intensity * 0.28})`;
+        return (
+          <tr style={{ backgroundColor: bg }}>
+            <td>{g.week}</td>
+            <td>{g.opponent}</td>
+            <td class={g.win ? 'win' : 'loss'}>{g.win ? 'W' : 'L'}</td>
+            <td class="num">{g.margin > 0 ? '+' : ''}{g.margin}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</Layout>

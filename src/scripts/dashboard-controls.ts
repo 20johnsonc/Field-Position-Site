@@ -197,7 +197,7 @@ export function initDashboardControls(): void {
   applyRankingsFilters();
 }
 
-export function openPbpModal(gameId: string, homeTeam: string, awayTeam: string): void {
+export function openPbpModal(gameId: string, year: string, homeTeam: string, awayTeam: string): void {
   window.dispatchEvent(
     new CustomEvent('open-pbp-modal', {
       detail: { gameId, year, homeTeam, awayTeam },
@@ -212,11 +212,12 @@ function bindPbpTriggers(): void {
     if (!button) return;
 
     const gameId = button.dataset.gameId;
+    const year = button.dataset.year;
     const homeTeam = button.dataset.homeTeam;
     const awayTeam = button.dataset.awayTeam;
 
     if (gameId && homeTeam && awayTeam) {
-      openPbpModal(gameId, homeTeam, awayTeam);
+      openPbpModal(gameId, year, homeTeam, awayTeam);
     }
   });
 }
