@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import TeamTrajectoryChart from '../../components/TeamTrajectoryChart.tsx';
 import rankingsRaw from '../../data/rankings.json';
+import gameHistoryRaw from '../../data/game_history.json';
+import trajectoriesRaw from '../../data/trajectories.json';
 import { normalizeRankings, slugifyTeam, formatRating, computeRanks } from '../../lib/data';
 
 export function getStaticPaths() {
@@ -18,7 +20,35 @@ export function getStaticPaths() {
 }
 
 const { row, ranks, totalTeams } = Astro.props;
-const sortedGameLog = [...row.gameLog].sort((a, b) => a.week - b.week);
+
+const gameHistory = gameHistoryRaw as {
+  generated_at: string;
+  year: number;
+  teams: Record<string, Array<{
+    week: number;
+    opponent: string;
+    location: 'Home' | 'Away';
+    actual_margin: number;
+    predicted_margin: number;
+    beat_expectation_by: number;
+    result: 'W' | 'L';
+  }>>;
+};
+
+const trajectories = trajectoriesRaw as {
+  generated_at: string;
+  teams: Record<string, Record<string, Array<{ week: number; adj_off_ppa: number; adj_def_value: number }>>>;
+};
+
+const hasGameHistory = gameHistory.year === row.year && gameHistory.teams[row.team];
+
+const sortedGameLog = hasGameHistory
+  ? [...gameHistory.teams[row.team]].sort((a, b) => a.week - b.week)
+  : [...row.gameLog].sort((a, b) => a.week - b.week);
+
+// trajectories.json nests by team then year (string key) — pull this team-year's series,
+// defaulting to an empty array so the chart component's own empty-state handles it.
+const teamTrajectory = trajectories.teams[row.team]?.[String(row.year)] ?? [];
 ---
 
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
@@ -48,7 +78,13 @@ const sortedGameLog = [...row.gameLog].sort((a, b) => a.week - b.week);
     </div>
   </div>
 
-  <TeamTrajectoryChart client:load team={row.team} trajectory={row.trajectory} gameLog={row.gameLog} />
+  <TeamTrajectoryChart
+    client:load
+    team={row.team}
+    trajectory={teamTrajectory}
+    gameLog={row.gameLog}
+    gameHistory={hasGameHistory ? gameHistory.teams[row.team] : undefined}
+  />
 
   <h2 class="section-title">Schedule &amp; Results</h2>
   <table class="game-log-table">
@@ -58,21 +94,40 @@ const sortedGameLog = [...row.gameLog].sort((a, b) => a.week - b.week);
         <th>Opponent</th>
         <th>Result</th>
         <th class="num">Margin</th>
+        {hasGameHistory && <th class="num">Predicted</th>}
+        {hasGameHistory && <th class="num">Beat Exp.</th>}
       </tr>
     </thead>
     <tbody>
-      {sortedGameLog.map((g) => {
-        const maxMargin = Math.max(1, ...sortedGameLog.map((x) => Math.abs(x.margin)));
-        const intensity = Math.min(1, Math.abs(g.margin) / maxMargin);
-        const bg = g.win
+      {sortedGameLog.map((g: any) => {
+        const margin = hasGameHistory ? g.actual_margin : g.margin;
+        const win = hasGameHistory ? g.result === 'W' : g.win;
+        const opponentLabel = hasGameHistory
+          ? `${g.location === 'Home' ? 'vs' : '@'} ${g.opponent}`
+          : g.opponent;
+
+        const maxMargin = Math.max(1, ...sortedGameLog.map((x: any) =>
+          Math.abs(hasGameHistory ? x.actual_margin : x.margin)
+        ));
+        const intensity = Math.min(1, Math.abs(margin) / maxMargin);
+        const bg = win
           ? `rgba(34, 197, 94, ${0.12 + intensity * 0.28})`
           : `rgba(239, 68, 68, ${0.12 + intensity * 0.28})`;
+
         return (
           <tr style={{ backgroundColor: bg }}>
             <td>{g.week}</td>
-            <td>{g.opponent}</td>
-            <td class={g.win ? 'win' : 'loss'}>{g.win ? 'W' : 'L'}</td>
-            <td class="num">{g.margin > 0 ? '+' : ''}{g.margin}</td>
+            <td>{opponentLabel}</td>
+            <td class={win ? 'win' : 'loss'}>{win ? 'W' : 'L'}</td>
+            <td class="num">{margin > 0 ? '+' : ''}{margin}</td>
+            {hasGameHistory && (
+              <td class="num">{g.predicted_margin > 0 ? '+' : ''}{g.predicted_margin}</td>
+            )}
+            {hasGameHistory && (
+              <td class="num" style={{ color: g.beat_expectation_by >= 0 ? '#4ade80' : '#f87171' }}>
+                {g.beat_expectation_by > 0 ? '+' : ''}{g.beat_expectation_by}
+              </td>
+            )}
           </tr>
         );
       })}

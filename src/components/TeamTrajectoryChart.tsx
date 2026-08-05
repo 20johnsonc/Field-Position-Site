@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import {
   Chart,
   LineController,
@@ -10,58 +10,117 @@ import {
   Tooltip,
   type Plugin,
 } from 'chart.js';
-import type { TrajectoryPoint, GameLogEntry } from '../lib/types';
 
-Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Legend, Tooltip);
+Chart.register(
+  LineController,
+  LineElement,
+  PointElement,
+  LinearScale,
+  CategoryScale,
+  Legend,
+  Tooltip
+);
+
+export interface TrajectoryPoint {
+  week: number;
+  adj_off_ppa: number;
+}
+
+export interface GameHistoryEntry {
+  week: number;
+  opponent: string;
+  location: 'Home' | 'Away';
+  actual_margin: number;
+  predicted_margin: number;
+  beat_expectation_by: number;
+  result: 'W' | 'L';
+}
 
 interface Props {
   team: string;
   trajectory: TrajectoryPoint[];
-  gameLog: GameLogEntry[];
+  gameHistory: GameHistoryEntry[];
 }
 
-export default function TeamTrajectoryChart({ team, trajectory, gameLog }: Props) {
+export default function TeamTrajectoryChart({ team, trajectory = [], gameHistory = [] }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
 
+  const chartData = useMemo(() => {
+    if (!trajectory.length) return null;
+
+    // Sort trajectory to establish the continuous X-axis (including bye weeks)
+    const sortedTrajectory = [...trajectory].sort((a, b) => a.week - b.week);
+    const historyByWeek = new Map(gameHistory.map((g) => [g.week, g]));
+    
+    const maxMargin = Math.max(1, ...gameHistory.map((g) => Math.abs(g.actual_margin)));
+
+    return {
+      labels: sortedTrajectory.map((t) => t.week),
+      offValues: sortedTrajectory.map((t) => t.adj_off_ppa),
+      
+      // Scatter arrays align with trajectory weeks; null if it was a bye week
+      scatterValues: sortedTrajectory.map((t) => {
+        const g = historyByWeek.get(t.week);
+        return g ? g.beat_expectation_by : null;
+      }),
+      colors: sortedTrajectory.map((t) => {
+        const g = historyByWeek.get(t.week);
+        if (!g) return 'transparent';
+        return g.result === 'W' ? 'rgba(34, 197, 94, 0.8)' : 'rgba(239, 68, 68, 0.8)';
+      }),
+      borders: sortedTrajectory.map((t) => {
+        const g = historyByWeek.get(t.week);
+        if (!g) return 'transparent';
+        return g.result === 'W' ? '#15803d' : '#b91c1c';
+      }),
+      radii: sortedTrajectory.map((t) => {
+        const g = historyByWeek.get(t.week);
+        if (!g) return 0;
+        return 5 + (Math.abs(g.actual_margin) / maxMargin) * 13;
+      }),
+      sortedTrajectory,
+      historyByWeek,
+    };
+  }, [trajectory, gameHistory]);
+
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas || !trajectory.length) return;
+    if (!canvas || !chartData) return;
 
-    const sorted = [...trajectory].sort((a, b) => a.week - b.week);
-    const gameByWeek = new Map(gameLog.map((g) => [g.week, g]));
-    const labels = sorted.map((p) => p.week);
-    const offValues = sorted.map((p) => p.adj_off_ppa);
+    const {
+      labels,
+      offValues,
+      scatterValues,
+      colors,
+      borders,
+      radii,
+      sortedTrajectory,
+      historyByWeek
+    } = chartData;
 
-    const maxMargin = Math.max(1, ...gameLog.map((g) => Math.abs(g.margin)));
-    const pointColors = sorted.map((p) => {
-      const g = gameByWeek.get(p.week);
-      if (!g) return 'rgba(59, 130, 246, 0.6)';
-      return g.win ? '#22c55e' : '#ef4444';
-    });
-    const pointRadii = sorted.map((p) => {
-      const g = gameByWeek.get(p.week);
-      if (!g) return 3;
-      return 6 + (Math.abs(g.margin) / maxMargin) * 14;
-    });
-
-    chartRef.current?.destroy();
-    Chart.getChart(canvas)?.destroy();
-
+    // Plugin: Draws the opponent abbreviation and margin directly under the bubble
     const labelPlugin: Plugin<'line'> = {
       id: 'gameLabels',
       afterDatasetsDraw(chartInstance) {
         const { ctx } = chartInstance;
-        const meta = chartInstance.getDatasetMeta(0);
+        const meta = chartInstance.getDatasetMeta(1); // Dataset 1 is the scatter bubbles
+        if (!meta) return;
+
         ctx.save();
-        ctx.font = '600 11px sans-serif';
-        ctx.fillStyle = '#e5e7eb';
+        ctx.font = '500 11px sans-serif';
+        ctx.fillStyle = '#9ca3af'; // Gray text
         ctx.textAlign = 'center';
+
         meta.data.forEach((point, index) => {
-          const g = gameByWeek.get(sorted[index].week);
+          if (scatterValues[index] === null) return; // Skip bye weeks
+          
+          const g = historyByWeek.get(sortedTrajectory[index].week);
           if (!g) return;
-          const label = `${g.opponent} (${g.margin > 0 ? '+' : ''}${g.margin})`;
-          ctx.fillText(label, point.x, point.y - pointRadii[index] - 6);
+          
+          const text = `${g.opponent.substring(0, 3).toUpperCase()} (${g.actual_margin > 0 ? '+' : ''}${g.actual_margin})`;
+          const offset = radii[index] + 12; // Push text below the dynamically sized circle
+          ctx.fillText(text, point.x, point.y + offset);
         });
         ctx.restore();
       },
@@ -73,68 +132,113 @@ export default function TeamTrajectoryChart({ team, trajectory, gameLog }: Props
         labels,
         datasets: [
           {
+            type: 'line',
             label: `${team} Adj Off PPA`,
             data: offValues,
-            borderColor: '#3b82f6',
-            backgroundColor: pointColors,
-            pointBackgroundColor: pointColors,
-            pointBorderColor: pointColors,
-            pointRadius: pointRadii,
-            pointHoverRadius: pointRadii.map((r) => r + 2),
-            borderWidth: 2,
-            tension: 0.25,
+            borderColor: '#3b82f6', // Blue trendline
+            borderWidth: 3,
+            tension: 0.3, // Smooth curve
             fill: false,
+            pointRadius: 0, // Hide points on this line so bubbles stand out
+            pointHoverRadius: 0,
+            yAxisID: 'y',
+            order: 2,
+          },
+          {
+            type: 'line',
+            label: 'Beat Expectation By',
+            data: scatterValues,
+            showLine: false, // Scatter plot style
+            pointStyle: 'circle',
+            pointBackgroundColor: colors,
+            pointBorderColor: borders,
+            pointBorderWidth: 2,
+            pointRadius: radii,
+            pointHoverRadius: radii.map((r) => (r > 0 ? r + 3 : 0)),
+            yAxisID: 'y1',
+            order: 1,
           },
         ],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        layout: { padding: { top: 40 } },
+        layout: {
+          padding: { top: 20, bottom: 20 },
+        },
         plugins: {
-          legend: { labels: { color: '#9ca3af', font: { family: 'sans-serif', size: 12 } } },
+          legend: { 
+            labels: { color: '#9ca3af', font: { family: 'sans-serif', size: 12 } } 
+          },
           tooltip: {
             backgroundColor: '#1f2937',
             titleColor: '#f3f4f6',
             bodyColor: '#e5e7eb',
             borderColor: '#374151',
             borderWidth: 1,
-            padding: 10,
+            padding: 12,
             callbacks: {
               title: (items) => `Week ${items[0].label}`,
               label: (context) => {
-                const g = gameByWeek.get(sorted[context.dataIndex].week);
-                const base = `Adj Off PPA: ${offValues[context.dataIndex].toFixed(3)}`;
-                return g ? [base, `vs ${g.opponent} (${g.win ? 'W' : 'L'} ${g.margin > 0 ? '+' : ''}${g.margin})`] : base;
+                const index = context.dataIndex;
+                
+                // If hovering over the trendline
+                if (context.datasetIndex === 0) {
+                  return `Adj Off PPA: ${offValues[index].toFixed(3)}`;
+                }
+                
+                // If hovering over a game bubble
+                const g = historyByWeek.get(sortedTrajectory[index].week);
+                if (!g) return '';
+
+                return [
+                  `${g.result} vs ${g.opponent}`,
+                  `Actual Margin: ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`,
+                  `Expected Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`,
+                  `Performance vs Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`
+                ];
               },
             },
           },
         },
         scales: {
+          y: {
+            type: 'linear',
+            position: 'left',
+            title: { display: true, text: 'Opponent-Adjusted EPA / Rating', color: '#9ca3af' },
+            grid: { color: '#374151' },
+            ticks: { color: '#9ca3af' },
+          },
+          y1: {
+            type: 'linear',
+            position: 'right',
+            title: { display: true, text: 'Points vs. Expectation', color: '#9ca3af' },
+            grid: {
+              drawOnChartArea: false, // Prevents overlapping grid lines from the two axes
+            },
+            ticks: { color: '#9ca3af' },
+          },
           x: {
             title: { display: true, text: 'Week', color: '#9ca3af' },
-            grid: { color: 'rgba(255,255,255,0.05)' },
-            ticks: { color: '#6b7280' },
-          },
-          y: {
-            title: { display: true, text: 'Opponent-Adjusted EPA / Rating', color: '#9ca3af' },
-            grid: { color: (c) => (c.tick.value === 0 ? 'rgba(255,255,255,0.25)' : 'rgba(255,255,255,0.05)') },
-            ticks: { color: '#6b7280' },
+            grid: { color: '#374151' },
+            ticks: { color: '#9ca3af' },
           },
         },
       },
       plugins: [labelPlugin],
     });
 
-    return () => chartRef.current?.destroy();
-  }, [team, trajectory, gameLog]);
+    return () => {
+      chartRef.current?.destroy();
+    };
+  }, [team, chartData]);
 
   if (!trajectory.length) {
-    return <div className="empty">No weekly trajectory data available for {team}.</div>;
+    return <div className="empty text-gray-500">No trajectory data available for {team}.</div>;
   }
 
   return (
-    <div className="chart-container" style={{ position: 'relative', height: '420px' }}>
+    <div className="chart-container w-full" style={{ position: 'relative', height: '420px' }}>
       <canvas ref={canvasRef} />
     </div>
   );
