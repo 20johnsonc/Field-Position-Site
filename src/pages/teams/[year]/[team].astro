@@ -1,10 +1,31 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import TeamTrajectoryChart from '../../components/TeamTrajectoryChart.tsx';
-import rankingsRaw from '../../data/rankings.json';
-import gameHistoryRaw from '../../data/game_history.json';
-import trajectoriesRaw from '../../data/trajectories.json';
-import { normalizeRankings, slugifyTeam, formatRating, computeRanks } from '../../lib/data';
+import Layout from '../../../layouts/Layout.astro';
+import TeamTrajectoryChart from '../../../components/TeamTrajectoryChart.tsx';
+import rankingsRaw from '../../../data/rankings.json';
+import gameHistoryRaw from '../../../data/game_history.json';
+import trajectoriesRaw from '../../../data/trajectories.json';
+import { normalizeRankings, slugifyTeam, formatRating, computeRanks } from '../../../lib/data';
+
+interface GameLogEntry {
+  week: number;
+  opponent: string;
+  location: 'Home' | 'Away';
+  actual_margin: number;
+  predicted_margin: number;
+  beat_expectation_by: number;
+  result: 'W' | 'L';
+}
+
+interface GameHistoryData {
+  generated_at: string;
+  year: number;
+  teams: Record<string, GameLogEntry[]>;
+}
+
+interface TrajectoriesData {
+  generated_at: string;
+  teams: Record<string, Record<string, Array<{ week: number; adj_off_ppa: number; adj_def_value: number }>>>;
+}
 
 export function getStaticPaths() {
   const rankings = normalizeRankings(rankingsRaw as any);
@@ -13,7 +34,10 @@ export function getStaticPaths() {
     const ranks = computeRanks(rankings, row.year);
     const totalTeams = rankings.filter((r) => r.year === row.year).length;
     return {
-      params: { team: slugifyTeam(row.team) },
+      params: { 
+        year: String(row.year), 
+        team: slugifyTeam(row.team) 
+      },
       props: { row, ranks: ranks.get(row.team), totalTeams },
     };
   });
@@ -21,33 +45,15 @@ export function getStaticPaths() {
 
 const { row, ranks, totalTeams } = Astro.props;
 
-const gameHistory = gameHistoryRaw as {
-  generated_at: string;
-  year: number;
-  teams: Record<string, Array<{
-    week: number;
-    opponent: string;
-    location: 'Home' | 'Away';
-    actual_margin: number;
-    predicted_margin: number;
-    beat_expectation_by: number;
-    result: 'W' | 'L';
-  }>>;
-};
+const gameHistory = gameHistoryRaw as GameHistoryData;
+const trajectories = trajectoriesRaw as TrajectoriesData;
 
-const trajectories = trajectoriesRaw as {
-  generated_at: string;
-  teams: Record<string, Record<string, Array<{ week: number; adj_off_ppa: number; adj_def_value: number }>>>;
-};
-
-const hasGameHistory = gameHistory.year === row.year && gameHistory.teams[row.team];
+const hasGameHistory = gameHistory.year === row.year && Boolean(gameHistory.teams[row.team]);
 
 const sortedGameLog = hasGameHistory
   ? [...gameHistory.teams[row.team]].sort((a, b) => a.week - b.week)
   : [...row.gameLog].sort((a, b) => a.week - b.week);
 
-// trajectories.json nests by team then year (string key) — pull this team-year's series,
-// defaulting to an empty array so the chart component's own empty-state handles it.
 const teamTrajectory = trajectories.teams[row.team]?.[String(row.year)] ?? [];
 ---
 

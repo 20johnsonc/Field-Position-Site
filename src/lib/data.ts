@@ -33,27 +33,15 @@ export function normalizeRankings(raw: RankingsFile | Record<string, unknown>[])
   return rows.map((row) => ({
     rank: row.Rank ?? row.rank ?? '—',
     team: str(row.Team ?? row.team, 'Unknown'),
-    conference: str(row.Conference ?? row.conference ?? row.Conference_Name, '—'),
-    year: num(row.Year ?? row.year ?? row.Season ?? row.season),
-    netRating: num(row['Net Rating'] ?? row['Net rating'] ?? row.net_rating ?? row.power_rating),
-    offRating: num(row['Offense Rating'] ?? row['Offense rating'] ?? row.adj_off),
-    defRating: num(row['Defense Rating'] ?? row['Defense rating'] ?? row.adj_def),
+    conference: str(row.Conference ?? row.conference ?? row.Conference_Name ?? row.conf, '—'),
+    year: num(row.Year ?? row.year ?? row.Season ?? row.season, 2026),
+    netRating: num(row['Net Rating'] ?? row.net_rating ?? row.power_rating ?? row.net_ppa),
+    record: str(row.Record ?? row.record ?? row.w_l, '0-0'),
+    sos: num(row.SOS ?? row.sos ?? row.strength_of_schedule),
+    sor: num(row.SOR ?? row.sor ?? row.strength_of_record),
 
-    trajectory: Array.isArray(row.trajectory)
-      ? (row.trajectory as Record<string, unknown>[]).map((t) => ({
-          week: num(t.week),
-          adj_off_ppa: num(t.adj_off_ppa),
-          adj_def_ppa: num(t.adj_def_ppa),
-        }))
-      : [],
-    gameLog: Array.isArray(row.game_log)
-      ? (row.game_log as Record<string, unknown>[]).map((g) => ({
-          week: num(g.week),
-          opponent: str(g.opponent),
-          margin: num(g.margin),
-          win: Boolean(g.win),
-        }))
-      : [],
+    trajectory: Array.isArray(row.trajectory) ? (row.trajectory as any[]) : [],
+    gameLog: Array.isArray(row.game_log) ? (row.game_log as any[]) : [],
   }));
 }
 

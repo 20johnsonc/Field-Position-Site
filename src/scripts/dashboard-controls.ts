@@ -118,10 +118,11 @@ const sortKeyToDataset: Record<string, keyof DOMStringMap> = {
   rank: 'rank',
   team: 'team',
   conference: 'conference',
+  record: 'record',
   year: 'year',
   netRating: 'netRating',
-  offRating: 'offRating',
-  defRating: 'defRating',
+  sos: 'sos',
+  sor: 'sor'
 };
 
 function sortRankingsTable(key: string): void {

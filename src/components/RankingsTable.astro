@@ -16,9 +16,10 @@ const { rankings } = Astro.props;
         <th class="sortable" data-sort-key="rank"># ⇕</th>
         <th class="sortable" data-sort-key="team">Team ⇕</th>
         <th class="sortable" data-sort-key="conference">Conf ⇕</th>
+        <th class="sortable num" data-sort-key="record" style="text-align: right;">Record ⇕</th>
         <th class="sortable num" data-sort-key="netRating" style="text-align: right;">Net Rating ⇕</th>
-        <th class="sortable num" data-sort-key="offRating" style="text-align: right;">Off Rating ⇕</th>
-        <th class="sortable num" data-sort-key="defRating" style="text-align: right;">Def Rating ⇕</th>
+        <th class="sortable num" data-sort-key="sos" style="text-align: right;">SOS ⇕</th>
+        <th class="sortable num" data-sort-key="sor" style="text-align: right;">SOR ⇕</th>
       </tr>
     </thead>
     <tbody id="rankingsBody">
@@ -29,18 +30,22 @@ const { rankings } = Astro.props;
             data-conference={row.conference}
             data-team={row.team}
             data-rank={row.rank}
+            data-record={row.record}
             data-net-rating={row.netRating}
-            data-off-rating={row.offRating}
-            data-def-rating={row.defRating}
+            data-sos={row.sos}
+            data-sor={row.sor}
           >
             <td class="rank">{row.rank}</td>
             <td class="team">
-              <a href={`/teams/${slugifyTeam(row.team)}/`} class="team-link">{row.team}</a>
+              <a href={`/teams/${row.year}/${slugifyTeam(row.team)}/`} class="team-link">
+                {row.team}
+              </a>
             </td>
             <td>{row.conference}</td>
+            <td class="num">{row.record}</td>
             <td class="num rating">{formatRating(row.netRating)}</td>
-            <td class="num">{row.offRating.toFixed(1)}</td>
-            <td class="num">{row.defRating.toFixed(1)}</td>
+            <td class="num">{row.sos}</td>
+            <td class="num">{row.sor}</td>
           </tr>
         ))
       }
@@ -48,3 +53,15 @@ const { rankings } = Astro.props;
   </table>
 </div>
 <div id="rankingsEmptyState" class="empty empty-state">No rankings found matching filters.</div>
+
+<style>
+  .team-link,
+  .team-link:visited {
+    color: #60a5fa; /* Bright blue for dark mode */
+    text-decoration: underline;
+  }
+
+  .team-link:hover {
+    color: #93c5fd; /* Slightly lighter blue on hover */
+  }
+</style>
