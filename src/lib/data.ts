@@ -142,8 +142,11 @@ export function fmtDate(dateStr?: string): string {
     : date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 }
 
-export function formatRating(value: number): string {
-  return `${value > 0 ? '+' : ''}${value.toFixed(1)}`;
+export function formatRating(val: number | null | undefined): string {
+  if (val === undefined || val === null || Number.isNaN(val)) {
+    return 'N/A';
+  }
+  return val > 0 ? `+${val.toFixed(1)}` : val.toFixed(1);
 }
 
 export function slugifyTeam(team: string): string {
@@ -178,4 +181,43 @@ export function computeRanks(
   }
 
   return map;
+}
+
+export function computeEfficiencyRange(
+  trajectories: {
+    teams: Record<string, Record<string, { adj_off_ppa: number; adj_def_value: number }[]>>;
+  }
+): { min: number; max: number } {
+  let min = Infinity;
+  let max = -Infinity;
+  for (const teamData of Object.values(trajectories.teams)) {
+    for (const yearData of Object.values(teamData)) {
+      for (const entry of yearData) {
+        const eff = entry.adj_off_ppa + entry.adj_def_value;
+        if (eff < min) min = eff;
+        if (eff > max) max = eff;
+      }
+    }
+  }
+  return { min, max };
+}
+
+export function normalizeGameMargins<
+  T extends {
+    location: 'Home' | 'Away';
+    actual_margin: number;
+    predicted_margin: number;
+    beat_expectation_by: number;
+  },
+>(entries: T[]): T[] {
+  return entries.map((g) =>
+    g.location === 'Home'
+      ? {
+          ...g,
+          actual_margin: -g.actual_margin,
+          predicted_margin: -g.predicted_margin,
+          beat_expectation_by: -g.beat_expectation_by,
+        }
+      : g
+  );
 }

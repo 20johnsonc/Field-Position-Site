@@ -4,7 +4,7 @@ import TeamTrajectoryChart from '../../../components/TeamTrajectoryChart.tsx';
 import rankingsRaw from '../../../data/rankings.json';
 import gameHistoryRaw from '../../../data/game_history.json';
 import trajectoriesRaw from '../../../data/trajectories.json';
-import { normalizeRankings, slugifyTeam, formatRating, computeRanks } from '../../../lib/data';
+import { normalizeRankings, slugifyTeam, formatRating, computeRanks, computeEfficiencyRange, normalizeGameMargins } from '../../../lib/data';
 
 interface GameLogEntry {
   week: number;
@@ -18,13 +18,24 @@ interface GameLogEntry {
 
 interface GameHistoryData {
   generated_at: string;
-  year: number;
-  teams: Record<string, GameLogEntry[]>;
+  years: number[];
+  teams: Record<string, Record<string, GameLogEntry[]>>;
+}
+
+interface TrajectoryGameEntry {
+  week: number;
+  opponent: string;
+  location: 'Home' | 'Away';
+  actual_margin: number;
+  predicted_margin: number;
+  beat_expectation_by: number;
+  result: 'W' | 'L';
 }
 
 interface TrajectoriesData {
   generated_at: string;
-  teams: Record<string, Record<string, Array<{ week: number; adj_off_ppa: number; adj_def_value: number }>>>;
+  years: number[];
+  teams: Record<string, Record<string, TrajectoryGameEntry[]>>;
 }
 
 export function getStaticPaths() {
@@ -48,13 +59,18 @@ const { row, ranks, totalTeams } = Astro.props;
 const gameHistory = gameHistoryRaw as GameHistoryData;
 const trajectories = trajectoriesRaw as TrajectoriesData;
 
-const hasGameHistory = gameHistory.year === row.year && Boolean(gameHistory.teams[row.team]);
+const hasGameHistory =
+  gameHistory.years.includes(row.year) && Boolean(gameHistory.teams[row.team]?.[String(row.year)]);
 
-const sortedGameLog = hasGameHistory
-  ? [...gameHistory.teams[row.team]].sort((a, b) => a.week - b.week)
-  : [...row.gameLog].sort((a, b) => a.week - b.week);
+const rawLogs = hasGameHistory
+  ? normalizeGameMargins(gameHistory.teams[row.team]?.[String(row.year)] ?? [])
+  : (row.gameLog ?? []);
 
-const teamTrajectory = trajectories.teams[row.team]?.[String(row.year)] ?? [];
+const sortedGameLog = [...rawLogs].sort((a, b) => a.week - b.week);
+
+const teamTrajectory = trajectories.teams?.[row.team]?.[String(row.year)] ?? [];
+
+const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
 ---
 
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
@@ -75,21 +91,22 @@ const teamTrajectory = trajectories.teams[row.team]?.[String(row.year)] ?? [];
       <span class="rank-sub">#{ranks?.overallRank ?? '—'} of {totalTeams}</span>
     </div>
     <div class="stat">
-      <span class="label">Off Rating</span>
-      <span class="value">{row.offRating.toFixed(1)}</span>
+      <span class="label">Strength of Schedule</span>
+      <span class="value">#{row.sos ?? '—'}</span>
     </div>
     <div class="stat">
-      <span class="label">Def Rating</span>
-      <span class="value">{row.defRating.toFixed(1)}</span>
+      <span class="label">Strength of Record</span>
+      <span class="value">#{row.sor ?? '—'}</span>
     </div>
   </div>
 
-  <TeamTrajectoryChart
+    <TeamTrajectoryChart
     client:load
     team={row.team}
     trajectory={teamTrajectory}
-    gameLog={row.gameLog}
-    gameHistory={hasGameHistory ? gameHistory.teams[row.team] : undefined}
+    games={hasGameHistory ? sortedGameLog : []}
+    yMin={effMin}
+    yMax={effMax}
   />
 
   <h2 class="section-title">Schedule &amp; Results</h2>
@@ -99,39 +116,48 @@ const teamTrajectory = trajectories.teams[row.team]?.[String(row.year)] ?? [];
         <th>Week</th>
         <th>Opponent</th>
         <th>Result</th>
-        <th class="num">Margin</th>
-        {hasGameHistory && <th class="num">Predicted</th>}
-        {hasGameHistory && <th class="num">Beat Exp.</th>}
+        {hasGameHistory && <th class="num">vs Expectation</th>}
       </tr>
     </thead>
     <tbody>
       {sortedGameLog.map((g: any) => {
-        const margin = hasGameHistory ? g.actual_margin : g.margin;
+        const margin = (hasGameHistory ? g.actual_margin : g.margin) ?? 0;
         const win = hasGameHistory ? g.result === 'W' : g.win;
         const opponentLabel = hasGameHistory
           ? `${g.location === 'Home' ? 'vs' : '@'} ${g.opponent}`
           : g.opponent;
+        const scoreLabel = g.team_score != null && g.opponent_score != null
+          ? `${g.team_score}–${g.opponent_score}`
+          : `${margin > 0 ? '+' : ''}${margin}`;
 
-        const maxMargin = Math.max(1, ...sortedGameLog.map((x: any) =>
-          Math.abs(hasGameHistory ? x.actual_margin : x.margin)
-        ));
-        const intensity = Math.min(1, Math.abs(margin) / maxMargin);
-        const bg = win
-          ? `rgba(34, 197, 94, ${0.12 + intensity * 0.28})`
-          : `rgba(239, 68, 68, ${0.12 + intensity * 0.28})`;
+        const beatExp = g.beat_expectation_by != null ? Number(g.beat_expectation_by) : null;
+        const maxAbsBeatExp = Math.max(1, ...sortedGameLog.map((x: any) => Math.abs(x.beat_expectation_by ?? 0)));
+        const barPct = beatExp != null ? Math.min(100, (Math.abs(beatExp) / maxAbsBeatExp) * 100) : 0;
 
         return (
-          <tr style={{ backgroundColor: bg }}>
+          <tr>
             <td>{g.week}</td>
             <td>{opponentLabel}</td>
-            <td class={win ? 'win' : 'loss'}>{win ? 'W' : 'L'}</td>
-            <td class="num">{margin > 0 ? '+' : ''}{margin}</td>
+            <td class={win ? 'win' : 'loss'}>
+              {win ? 'W' : 'L'} {scoreLabel}
+            </td>
             {hasGameHistory && (
-              <td class="num">{g.predicted_margin > 0 ? '+' : ''}{g.predicted_margin}</td>
-            )}
-            {hasGameHistory && (
-              <td class="num" style={{ color: g.beat_expectation_by >= 0 ? '#4ade80' : '#f87171' }}>
-                {g.beat_expectation_by > 0 ? '+' : ''}{g.beat_expectation_by}
+              <td class="num" title={`Predicted: ${g.predicted_margin > 0 ? '+' : ''}${Number(g.predicted_margin).toFixed(1)}`}>
+                <div class="beat-exp-bar-wrap">
+                  <span class="beat-exp-value" style={{ color: (beatExp ?? 0) >= 0 ? '#4ade80' : '#f87171' }}>
+                    {beatExp != null ? `${beatExp > 0 ? '+' : ''}${beatExp.toFixed(1)}` : '—'}
+                  </span>
+                  <div class="beat-exp-bar">
+                    <div
+                      class="beat-exp-fill"
+                      style={{
+                        width: `${barPct}%`,
+                        marginLeft: (beatExp ?? 0) >= 0 ? '50%' : `${50 - barPct}%`,
+                        backgroundColor: (beatExp ?? 0) >= 0 ? '#22c55e' : '#ef4444',
+                      }}
+                    />
+                  </div>
+                </div>
               </td>
             )}
           </tr>
