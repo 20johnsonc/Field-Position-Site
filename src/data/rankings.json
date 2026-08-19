@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T19:55:19.578507+00:00",
+  "generated_at": "2026-08-19T20:12:37.213818+00:00",
   "all_rankings": [
     {
       "Rank": 1,
@@ -7289,7 +7289,7 @@
       "Conference": "FBS Independents",
       "Net Rating": 22.1,
       "Year": 2026,
-      "sos": 55,
+      "sos": 31,
       "sor": 1,
       "record": "0-0"
     },
@@ -7299,7 +7299,7 @@
       "Conference": "SEC",
       "Net Rating": 21.6,
       "Year": 2026,
-      "sos": 4,
+      "sos": 6,
       "sor": 10,
       "record": "0-0"
     },
@@ -7309,7 +7309,7 @@
       "Conference": "Big Ten",
       "Net Rating": 20.3,
       "Year": 2026,
-      "sos": 54,
+      "sos": 58,
       "sor": 9,
       "record": "0-0"
     },
@@ -7319,7 +7319,7 @@
       "Conference": "Big Ten",
       "Net Rating": 19.4,
       "Year": 2026,
-      "sos": 3,
+      "sos": 2,
       "sor": 4,
       "record": "0-0"
     },
@@ -7339,7 +7339,7 @@
       "Conference": "Big Ten",
       "Net Rating": 18.6,
       "Year": 2026,
-      "sos": 12,
+      "sos": 49,
       "sor": 5,
       "record": "0-0"
     },
@@ -7349,7 +7349,7 @@
       "Conference": "SEC",
       "Net Rating": 18.1,
       "Year": 2026,
-      "sos": 2,
+      "sos": 4,
       "sor": 19,
       "record": "0-0"
     },
@@ -7359,7 +7359,7 @@
       "Conference": "SEC",
       "Net Rating": 17.9,
       "Year": 2026,
-      "sos": 19,
+      "sos": 27,
       "sor": 17,
       "record": "0-0"
     },
@@ -7369,7 +7369,7 @@
       "Conference": "Big 12",
       "Net Rating": 17.4,
       "Year": 2026,
-      "sos": 46,
+      "sos": 57,
       "sor": 2,
       "record": "0-0"
     },
@@ -7379,7 +7379,7 @@
       "Conference": "ACC",
       "Net Rating": 17.1,
       "Year": 2026,
-      "sos": 52,
+      "sos": 60,
       "sor": 6,
       "record": "0-0"
     },
@@ -7399,7 +7399,7 @@
       "Conference": "Big Ten",
       "Net Rating": 16.1,
       "Year": 2026,
-      "sos": 42,
+      "sos": 37,
       "sor": 7,
       "record": "0-0"
     },
@@ -7409,7 +7409,7 @@
       "Conference": "SEC",
       "Net Rating": 15.5,
       "Year": 2026,
-      "sos": 59,
+      "sos": 44,
       "sor": 36,
       "record": "0-0"
     },
@@ -7419,7 +7419,7 @@
       "Conference": "Big 12",
       "Net Rating": 15.3,
       "Year": 2026,
-      "sos": 56,
+      "sos": 32,
       "sor": 11,
       "record": "0-0"
     },
@@ -7429,7 +7429,7 @@
       "Conference": "SEC",
       "Net Rating": 14.9,
       "Year": 2026,
-      "sos": 47,
+      "sos": 55,
       "sor": 32,
       "record": "0-0"
     },
@@ -7439,7 +7439,7 @@
       "Conference": "SEC",
       "Net Rating": 14.0,
       "Year": 2026,
-      "sos": 32,
+      "sos": 41,
       "sor": 37,
       "record": "0-0"
     },
@@ -7449,7 +7449,7 @@
       "Conference": "Big Ten",
       "Net Rating": 13.8,
       "Year": 2026,
-      "sos": 29,
+      "sos": 15,
       "sor": 27,
       "record": "0-0"
     },
@@ -7459,8 +7459,8 @@
       "Conference": "SEC",
       "Net Rating": 13.6,
       "Year": 2026,
-      "sos": 40,
-      "sor": 51,
+      "sos": 14,
+      "sor": 50,
       "record": "0-0"
     },
     {
@@ -7469,8 +7469,8 @@
       "Conference": "SEC",
       "Net Rating": 13.4,
       "Year": 2026,
-      "sos": 20,
-      "sor": 49,
+      "sos": 19,
+      "sor": 48,
       "record": "0-0"
     },
     {
@@ -7479,7 +7479,7 @@
       "Conference": "ACC",
       "Net Rating": 13.2,
       "Year": 2026,
-      "sos": 30,
+      "sos": 38,
       "sor": 16,
       "record": "0-0"
     },
@@ -7489,8 +7489,8 @@
       "Conference": "SEC",
       "Net Rating": 13.2,
       "Year": 2026,
-      "sos": 15,
-      "sor": 52,
+      "sos": 24,
+      "sor": 51,
       "record": "0-0"
     },
     {
@@ -7499,7 +7499,7 @@
       "Conference": "Big Ten",
       "Net Rating": 13.1,
       "Year": 2026,
-      "sos": 6,
+      "sos": 5,
       "sor": 42,
       "record": "0-0"
     },
@@ -7509,7 +7509,7 @@
       "Conference": "Big Ten",
       "Net Rating": 13.1,
       "Year": 2026,
-      "sos": 31,
+      "sos": 40,
       "sor": 18,
       "record": "0-0"
     },
@@ -7529,8 +7529,8 @@
       "Conference": "SEC",
       "Net Rating": 12.8,
       "Year": 2026,
-      "sos": 58,
-      "sor": 54,
+      "sos": 53,
+      "sor": 53,
       "record": "0-0"
     },
     {
@@ -7539,7 +7539,7 @@
       "Conference": "Big Ten",
       "Net Rating": 12.0,
       "Year": 2026,
-      "sos": 28,
+      "sos": 25,
       "sor": 38,
       "record": "0-0"
     },
@@ -7549,8 +7549,8 @@
       "Conference": "SEC",
       "Net Rating": 11.9,
       "Year": 2026,
-      "sos": 77,
-      "sor": 76,
+      "sos": 91,
+      "sor": 71,
       "record": "0-0"
     },
     {
@@ -7559,7 +7559,7 @@
       "Conference": "Big 12",
       "Net Rating": 10.5,
       "Year": 2026,
-      "sos": 14,
+      "sos": 23,
       "sor": 43,
       "record": "0-0"
     },
@@ -7579,7 +7579,7 @@
       "Conference": "ACC",
       "Net Rating": 10.0,
       "Year": 2026,
-      "sos": 95,
+      "sos": 71,
       "sor": 31,
       "record": "0-0"
     },
@@ -7589,7 +7589,7 @@
       "Conference": "Big 12",
       "Net Rating": 10.0,
       "Year": 2026,
-      "sos": 39,
+      "sos": 10,
       "sor": 33,
       "record": "0-0"
     },
@@ -7599,8 +7599,8 @@
       "Conference": "SEC",
       "Net Rating": 9.8,
       "Year": 2026,
-      "sos": 36,
-      "sor": 200,
+      "sos": 45,
+      "sor": 160,
       "record": "0-0"
     },
     {
@@ -7609,7 +7609,7 @@
       "Conference": "American Athletic",
       "Net Rating": 9.8,
       "Year": 2026,
-      "sos": 43,
+      "sos": 52,
       "sor": 8,
       "record": "0-0"
     },
@@ -7619,8 +7619,8 @@
       "Conference": "Big 12",
       "Net Rating": 9.4,
       "Year": 2026,
-      "sos": 23,
-      "sor": 53,
+      "sos": 11,
+      "sor": 52,
       "record": "0-0"
     },
     {
@@ -7629,7 +7629,7 @@
       "Conference": "Big 12",
       "Net Rating": 9.2,
       "Year": 2026,
-      "sos": 113,
+      "sos": 117,
       "sor": 45,
       "record": "0-0"
     },
@@ -7639,7 +7639,7 @@
       "Conference": "Pac-12",
       "Net Rating": 9.1,
       "Year": 2026,
-      "sos": 127,
+      "sos": 134,
       "sor": 24,
       "record": "0-0"
     },
@@ -7649,7 +7649,7 @@
       "Conference": "Sun Belt",
       "Net Rating": 8.5,
       "Year": 2026,
-      "sos": 105,
+      "sos": 108,
       "sor": 12,
       "record": "0-0"
     },
@@ -7659,7 +7659,7 @@
       "Conference": "Big 12",
       "Net Rating": 8.4,
       "Year": 2026,
-      "sos": 24,
+      "sos": 13,
       "sor": 46,
       "record": "0-0"
     },
@@ -7669,8 +7669,8 @@
       "Conference": "ACC",
       "Net Rating": 8.4,
       "Year": 2026,
-      "sos": 37,
-      "sor": 89,
+      "sos": 43,
+      "sor": 77,
       "record": "0-0"
     },
     {
@@ -7679,7 +7679,7 @@
       "Conference": "Conference USA",
       "Net Rating": 8.2,
       "Year": 2026,
-      "sos": 121,
+      "sos": 129,
       "sor": 3,
       "record": "0-0"
     },
@@ -7689,8 +7689,8 @@
       "Conference": "Big Ten",
       "Net Rating": 7.9,
       "Year": 2026,
-      "sos": 8,
-      "sor": 79,
+      "sos": 16,
+      "sor": 74,
       "record": "0-0"
     },
     {
@@ -7699,8 +7699,8 @@
       "Conference": "SEC",
       "Net Rating": 7.9,
       "Year": 2026,
-      "sos": 49,
-      "sor": 205,
+      "sos": 36,
+      "sor": 170,
       "record": "0-0"
     },
     {
@@ -7709,8 +7709,8 @@
       "Conference": "SEC",
       "Net Rating": 7.7,
       "Year": 2026,
-      "sos": 21,
-      "sor": 208,
+      "sos": 18,
+      "sor": 181,
       "record": "0-0"
     },
     {
@@ -7719,7 +7719,7 @@
       "Conference": "ACC",
       "Net Rating": 7.6,
       "Year": 2026,
-      "sos": 5,
+      "sos": 3,
       "sor": 35,
       "record": "0-0"
     },
@@ -7729,7 +7729,7 @@
       "Conference": "ACC",
       "Net Rating": 7.6,
       "Year": 2026,
-      "sos": 16,
+      "sos": 21,
       "sor": 40,
       "record": "0-0"
     },
@@ -7739,8 +7739,8 @@
       "Conference": "ACC",
       "Net Rating": 7.5,
       "Year": 2026,
-      "sos": 25,
-      "sor": 78,
+      "sos": 20,
+      "sor": 73,
       "record": "0-0"
     },
     {
@@ -7749,7 +7749,7 @@
       "Conference": "ACC",
       "Net Rating": 7.4,
       "Year": 2026,
-      "sos": 53,
+      "sos": 59,
       "sor": 41,
       "record": "0-0"
     },
@@ -7759,8 +7759,8 @@
       "Conference": "ACC",
       "Net Rating": 7.3,
       "Year": 2026,
-      "sos": 84,
-      "sor": 57,
+      "sos": 94,
+      "sor": 56,
       "record": "0-0"
     },
     {
@@ -7769,8 +7769,8 @@
       "Conference": "Big 12",
       "Net Rating": 7.3,
       "Year": 2026,
-      "sos": 108,
-      "sor": 94,
+      "sos": 125,
+      "sor": 78,
       "record": "0-0"
     },
     {
@@ -7779,7 +7779,7 @@
       "Conference": "American Athletic",
       "Net Rating": 7.3,
       "Year": 2026,
-      "sos": 116,
+      "sos": 128,
       "sor": 25,
       "record": "0-0"
     },
@@ -7789,8 +7789,8 @@
       "Conference": "Big 12",
       "Net Rating": 7.1,
       "Year": 2026,
-      "sos": 17,
-      "sor": 67,
+      "sos": 22,
+      "sor": 63,
       "record": "0-0"
     },
     {
@@ -7799,7 +7799,7 @@
       "Conference": "Mountain West",
       "Net Rating": 6.8,
       "Year": 2026,
-      "sos": 82,
+      "sos": 90,
       "sor": 14,
       "record": "0-0"
     },
@@ -7809,8 +7809,8 @@
       "Conference": "Big 12",
       "Net Rating": 6.4,
       "Year": 2026,
-      "sos": 89,
-      "sor": 58,
+      "sos": 88,
+      "sor": 57,
       "record": "0-0"
     },
     {
@@ -7819,8 +7819,8 @@
       "Conference": "Big Ten",
       "Net Rating": 6.3,
       "Year": 2026,
-      "sos": 44,
-      "sor": 113,
+      "sos": 50,
+      "sor": 82,
       "record": "0-0"
     },
     {
@@ -7829,7 +7829,7 @@
       "Conference": "American Athletic",
       "Net Rating": 6.2,
       "Year": 2026,
-      "sos": 118,
+      "sos": 131,
       "sor": 29,
       "record": "0-0"
     },
@@ -7839,8 +7839,8 @@
       "Conference": "Big Ten",
       "Net Rating": 6.2,
       "Year": 2026,
-      "sos": 33,
-      "sor": 194,
+      "sos": 35,
+      "sor": 134,
       "record": "0-0"
     },
     {
@@ -7849,8 +7849,8 @@
       "Conference": "Big Ten",
       "Net Rating": 6.1,
       "Year": 2026,
-      "sos": 111,
-      "sor": 84,
+      "sos": 115,
+      "sor": 76,
       "record": "0-0"
     },
     {
@@ -7859,8 +7859,8 @@
       "Conference": "Big 12",
       "Net Rating": 6.0,
       "Year": 2026,
-      "sos": 60,
-      "sor": 70,
+      "sos": 34,
+      "sor": 67,
       "record": "0-0"
     },
     {
@@ -7869,7 +7869,7 @@
       "Conference": "American Athletic",
       "Net Rating": 5.9,
       "Year": 2026,
-      "sos": 100,
+      "sos": 104,
       "sor": 23,
       "record": "0-0"
     },
@@ -7879,7 +7879,7 @@
       "Conference": "American Athletic",
       "Net Rating": 5.7,
       "Year": 2026,
-      "sos": 93,
+      "sos": 76,
       "sor": 30,
       "record": "0-0"
     },
@@ -7889,8 +7889,8 @@
       "Conference": "Big Ten",
       "Net Rating": 5.6,
       "Year": 2026,
-      "sos": 38,
-      "sor": 175,
+      "sos": 47,
+      "sor": 103,
       "record": "0-0"
     },
     {
@@ -7899,8 +7899,8 @@
       "Conference": "American Athletic",
       "Net Rating": 5.5,
       "Year": 2026,
-      "sos": 131,
-      "sor": 47,
+      "sos": 159,
+      "sor": 69,
       "record": "0-0"
     },
     {
@@ -7909,8 +7909,8 @@
       "Conference": "Big 12",
       "Net Rating": 5.5,
       "Year": 2026,
-      "sos": 22,
-      "sor": 179,
+      "sos": 30,
+      "sor": 106,
       "record": "0-0"
     },
     {
@@ -7920,7 +7920,7 @@
       "Net Rating": 5.3,
       "Year": 2026,
       "sos": 7,
-      "sor": 62,
+      "sor": 61,
       "record": "0-0"
     },
     {
@@ -7929,8 +7929,8 @@
       "Conference": "ACC",
       "Net Rating": 5.1,
       "Year": 2026,
-      "sos": 70,
-      "sor": 80,
+      "sos": 80,
+      "sor": 75,
       "record": "0-0"
     },
     {
@@ -7939,8 +7939,8 @@
       "Conference": "Pac-12",
       "Net Rating": 5.0,
       "Year": 2026,
-      "sos": 64,
-      "sor": 56,
+      "sos": 61,
+      "sor": 55,
       "record": "0-0"
     },
     {
@@ -7949,7 +7949,7 @@
       "Conference": "Mid-American",
       "Net Rating": 4.8,
       "Year": 2026,
-      "sos": 35,
+      "sos": 42,
       "sor": 13,
       "record": "0-0"
     },
@@ -7959,8 +7959,8 @@
       "Conference": "Big 12",
       "Net Rating": 4.8,
       "Year": 2026,
-      "sos": 104,
-      "sor": 195,
+      "sos": 110,
+      "sor": 144,
       "record": "0-0"
     },
     {
@@ -7969,8 +7969,8 @@
       "Conference": "Big Ten",
       "Net Rating": 4.5,
       "Year": 2026,
-      "sos": 48,
-      "sor": 193,
+      "sos": 56,
+      "sor": 133,
       "record": "0-0"
     },
     {
@@ -7979,8 +7979,8 @@
       "Conference": "Pac-12",
       "Net Rating": 3.9,
       "Year": 2026,
-      "sos": 132,
-      "sor": 50,
+      "sos": 135,
+      "sor": 49,
       "record": "0-0"
     },
     {
@@ -7989,8 +7989,8 @@
       "Conference": "Big Ten",
       "Net Rating": 3.8,
       "Year": 2026,
-      "sos": 57,
-      "sor": 215,
+      "sos": 33,
+      "sor": 201,
       "record": "0-0"
     },
     {
@@ -7999,7 +7999,7 @@
       "Conference": "FBS Independents",
       "Net Rating": 3.7,
       "Year": 2026,
-      "sos": 10,
+      "sos": 17,
       "sor": 26,
       "record": "0-0"
     },
@@ -8009,8 +8009,8 @@
       "Conference": "ACC",
       "Net Rating": 3.7,
       "Year": 2026,
-      "sos": 97,
-      "sor": 186,
+      "sos": 112,
+      "sor": 122,
       "record": "0-0"
     },
     {
@@ -8019,7 +8019,7 @@
       "Conference": "American Athletic",
       "Net Rating": 3.7,
       "Year": 2026,
-      "sos": 94,
+      "sos": 70,
       "sor": 44,
       "record": "0-0"
     },
@@ -8029,8 +8029,8 @@
       "Conference": "Pac-12",
       "Net Rating": 3.6,
       "Year": 2026,
-      "sos": 61,
-      "sor": 65,
+      "sos": 62,
+      "sor": 62,
       "record": "0-0"
     },
     {
@@ -8039,8 +8039,8 @@
       "Conference": "ACC",
       "Net Rating": 3.5,
       "Year": 2026,
-      "sos": 45,
-      "sor": 192,
+      "sos": 39,
+      "sor": 132,
       "record": "0-0"
     },
     {
@@ -8049,8 +8049,8 @@
       "Conference": "Big Ten",
       "Net Rating": 3.2,
       "Year": 2026,
-      "sos": 41,
-      "sor": 204,
+      "sos": 48,
+      "sor": 168,
       "record": "0-0"
     },
     {
@@ -8059,8 +8059,8 @@
       "Conference": "ACC",
       "Net Rating": 3.2,
       "Year": 2026,
-      "sos": 110,
-      "sor": 221,
+      "sos": 121,
+      "sor": 214,
       "record": "0-0"
     },
     {
@@ -8069,8 +8069,8 @@
       "Conference": "Big Ten",
       "Net Rating": 3.0,
       "Year": 2026,
-      "sos": 34,
-      "sor": 203,
+      "sos": 46,
+      "sor": 166,
       "record": "0-0"
     },
     {
@@ -8079,8 +8079,8 @@
       "Conference": "ACC",
       "Net Rating": 2.8,
       "Year": 2026,
-      "sos": 71,
-      "sor": 212,
+      "sos": 81,
+      "sor": 196,
       "record": "0-0"
     },
     {
@@ -8089,7 +8089,7 @@
       "Conference": "Sun Belt",
       "Net Rating": 2.5,
       "Year": 2026,
-      "sos": 107,
+      "sos": 123,
       "sor": 34,
       "record": "0-0"
     },
@@ -8099,8 +8099,8 @@
       "Conference": "Big 12",
       "Net Rating": 2.5,
       "Year": 2026,
-      "sos": 11,
-      "sor": 209,
+      "sos": 12,
+      "sor": 184,
       "record": "0-0"
     },
     {
@@ -8109,8 +8109,8 @@
       "Conference": "ACC",
       "Net Rating": 2.4,
       "Year": 2026,
-      "sos": 87,
-      "sor": 213,
+      "sos": 99,
+      "sor": 199,
       "record": "0-0"
     },
     {
@@ -8119,7 +8119,7 @@
       "Conference": "Mid-American",
       "Net Rating": 1.9,
       "Year": 2026,
-      "sos": 109,
+      "sos": 122,
       "sor": 28,
       "record": "0-0"
     },
@@ -8129,8 +8129,8 @@
       "Conference": "American Athletic",
       "Net Rating": 1.7,
       "Year": 2026,
-      "sos": 103,
-      "sor": 102,
+      "sos": 111,
+      "sor": 80,
       "record": "0-0"
     },
     {
@@ -8139,7 +8139,7 @@
       "Conference": "Conference USA",
       "Net Rating": 1.6,
       "Year": 2026,
-      "sos": 67,
+      "sos": 119,
       "sor": 22,
       "record": "0-0"
     },
@@ -8149,8 +8149,8 @@
       "Conference": "Pac-12",
       "Net Rating": 1.1,
       "Year": 2026,
-      "sos": 63,
-      "sor": 191,
+      "sos": 64,
+      "sor": 129,
       "record": "0-0"
     },
     {
@@ -8159,8 +8159,8 @@
       "Conference": "Mountain West",
       "Net Rating": 0.8,
       "Year": 2026,
-      "sos": 122,
-      "sor": 48,
+      "sos": 127,
+      "sor": 47,
       "record": "0-0"
     },
     {
@@ -8169,8 +8169,8 @@
       "Conference": "Conference USA",
       "Net Rating": 0.7,
       "Year": 2026,
-      "sos": 138,
-      "sor": 73,
+      "sos": 184,
+      "sor": 102,
       "record": "0-0"
     },
     {
@@ -8179,8 +8179,8 @@
       "Conference": "Sun Belt",
       "Net Rating": 0.6,
       "Year": 2026,
-      "sos": 69,
-      "sor": 61,
+      "sos": 79,
+      "sor": 60,
       "record": "0-0"
     },
     {
@@ -8189,7 +8189,7 @@
       "Conference": "ACC",
       "Net Rating": 0.4,
       "Year": 2026,
-      "sos": 91,
+      "sos": 113,
       "sor": 226,
       "record": "0-0"
     },
@@ -8199,8 +8199,8 @@
       "Conference": "Big Ten",
       "Net Rating": 0.2,
       "Year": 2026,
-      "sos": 18,
-      "sor": 231,
+      "sos": 8,
+      "sor": 235,
       "record": "0-0"
     },
     {
@@ -8209,8 +8209,8 @@
       "Conference": "Sun Belt",
       "Net Rating": 0.1,
       "Year": 2026,
-      "sos": 85,
-      "sor": 74,
+      "sos": 89,
+      "sor": 70,
       "record": "0-0"
     },
     {
@@ -8219,8 +8219,8 @@
       "Conference": "Sun Belt",
       "Net Rating": 0.1,
       "Year": 2026,
-      "sos": 90,
-      "sor": 59,
+      "sos": 107,
+      "sor": 58,
       "record": "0-0"
     },
     {
@@ -8229,8 +8229,8 @@
       "Conference": "Mountain West",
       "Net Rating": 0.0,
       "Year": 2026,
-      "sos": 125,
-      "sor": 66,
+      "sos": 165,
+      "sor": 95,
       "record": "0-0"
     },
     {
@@ -8239,8 +8239,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -0.1,
       "Year": 2026,
-      "sos": 126,
-      "sor": 75,
+      "sos": 168,
+      "sor": 104,
       "record": "0-0"
     },
     {
@@ -8249,7 +8249,7 @@
       "Conference": "Big 12",
       "Net Rating": -0.1,
       "Year": 2026,
-      "sos": 99,
+      "sos": 101,
       "sor": 224,
       "record": "0-0"
     },
@@ -8260,7 +8260,7 @@
       "Net Rating": -0.2,
       "Year": 2026,
       "sos": 65,
-      "sor": 77,
+      "sor": 72,
       "record": "0-0"
     },
     {
@@ -8269,8 +8269,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -0.4,
       "Year": 2026,
-      "sos": 75,
-      "sor": 182,
+      "sos": 83,
+      "sor": 114,
       "record": "0-0"
     },
     {
@@ -8279,8 +8279,8 @@
       "Conference": "Mountain West",
       "Net Rating": -0.5,
       "Year": 2026,
-      "sos": 27,
-      "sor": 68,
+      "sos": 29,
+      "sor": 64,
       "record": "0-0"
     },
     {
@@ -8289,8 +8289,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -0.5,
       "Year": 2026,
-      "sos": 68,
-      "sor": 101,
+      "sos": 78,
+      "sor": 79,
       "record": "0-0"
     },
     {
@@ -8299,8 +8299,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -0.7,
       "Year": 2026,
-      "sos": 81,
-      "sor": 185,
+      "sos": 66,
+      "sor": 121,
       "record": "0-0"
     },
     {
@@ -8309,8 +8309,8 @@
       "Conference": "Conference USA",
       "Net Rating": -0.8,
       "Year": 2026,
-      "sos": 115,
-      "sor": 60,
+      "sos": 130,
+      "sor": 59,
       "record": "0-0"
     },
     {
@@ -8319,8 +8319,8 @@
       "Conference": "Pac-12",
       "Net Rating": -1.4,
       "Year": 2026,
-      "sos": 124,
-      "sor": 217,
+      "sos": 133,
+      "sor": 204,
       "record": "0-0"
     },
     {
@@ -8329,8 +8329,8 @@
       "Conference": "American Athletic",
       "Net Rating": -1.6,
       "Year": 2026,
-      "sos": 78,
-      "sor": 199,
+      "sos": 84,
+      "sor": 158,
       "record": "0-0"
     },
     {
@@ -8339,8 +8339,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -1.7,
       "Year": 2026,
-      "sos": 101,
-      "sor": 172,
+      "sos": 102,
+      "sor": 100,
       "record": "0-0"
     },
     {
@@ -8349,8 +8349,8 @@
       "Conference": "Mid-American",
       "Net Rating": -1.7,
       "Year": 2026,
-      "sos": 76,
-      "sor": 55,
+      "sos": 86,
+      "sor": 54,
       "record": "0-0"
     },
     {
@@ -8359,8 +8359,8 @@
       "Conference": "Mountain West",
       "Net Rating": -2.0,
       "Year": 2026,
-      "sos": 106,
-      "sor": 112,
+      "sos": 116,
+      "sor": 81,
       "record": "0-0"
     },
     {
@@ -8369,8 +8369,8 @@
       "Conference": "American Athletic",
       "Net Rating": -2.2,
       "Year": 2026,
-      "sos": 13,
-      "sor": 219,
+      "sos": 28,
+      "sor": 208,
       "record": "0-0"
     },
     {
@@ -8379,8 +8379,8 @@
       "Conference": "Mountain West",
       "Net Rating": -2.3,
       "Year": 2026,
-      "sos": 120,
-      "sor": 157,
+      "sos": 77,
+      "sor": 94,
       "record": "0-0"
     },
     {
@@ -8389,8 +8389,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -2.6,
       "Year": 2026,
-      "sos": 80,
-      "sor": 196,
+      "sos": 97,
+      "sor": 153,
       "record": "0-0"
     },
     {
@@ -8399,8 +8399,8 @@
       "Conference": "Conference USA",
       "Net Rating": -2.6,
       "Year": 2026,
-      "sos": 102,
-      "sor": 202,
+      "sos": 105,
+      "sor": 164,
       "record": "0-0"
     },
     {
@@ -8409,8 +8409,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -2.8,
       "Year": 2026,
-      "sos": 98,
-      "sor": 207,
+      "sos": 100,
+      "sor": 174,
       "record": "0-0"
     },
     {
@@ -8420,7 +8420,7 @@
       "Net Rating": -2.8,
       "Year": 2026,
       "sos": 72,
-      "sor": 69,
+      "sor": 65,
       "record": "0-0"
     },
     {
@@ -8429,8 +8429,8 @@
       "Conference": "American Athletic",
       "Net Rating": -2.9,
       "Year": 2026,
-      "sos": 96,
-      "sor": 198,
+      "sos": 106,
+      "sor": 157,
       "record": "0-0"
     },
     {
@@ -8439,8 +8439,8 @@
       "Conference": "Mid-American",
       "Net Rating": -3.0,
       "Year": 2026,
-      "sos": 123,
-      "sor": 71,
+      "sos": 114,
+      "sor": 68,
       "record": "0-0"
     },
     {
@@ -8449,8 +8449,8 @@
       "Conference": "Pac-12",
       "Net Rating": -3.1,
       "Year": 2026,
-      "sos": 62,
-      "sor": 222,
+      "sos": 63,
+      "sor": 219,
       "record": "0-0"
     },
     {
@@ -8459,8 +8459,8 @@
       "Conference": "Mid-American",
       "Net Rating": -3.2,
       "Year": 2026,
-      "sos": 128,
-      "sor": 83,
+      "sos": 170,
+      "sor": 112,
       "record": "0-0"
     },
     {
@@ -8469,8 +8469,8 @@
       "Conference": "American Athletic",
       "Net Rating": -3.3,
       "Year": 2026,
-      "sos": 50,
-      "sor": 216,
+      "sos": 54,
+      "sor": 203,
       "record": "0-0"
     },
     {
@@ -8479,8 +8479,8 @@
       "Conference": "Mid-American",
       "Net Rating": -3.3,
       "Year": 2026,
-      "sos": 88,
-      "sor": 188,
+      "sos": 87,
+      "sor": 126,
       "record": "0-0"
     },
     {
@@ -8489,8 +8489,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -3.5,
       "Year": 2026,
-      "sos": 73,
-      "sor": 197,
+      "sos": 68,
+      "sor": 156,
       "record": "0-0"
     },
     {
@@ -8499,8 +8499,8 @@
       "Conference": "Conference USA",
       "Net Rating": -4.2,
       "Year": 2026,
-      "sos": 133,
-      "sor": 206,
+      "sos": 175,
+      "sor": 213,
       "record": "0-0"
     },
     {
@@ -8509,8 +8509,8 @@
       "Conference": "Conference USA",
       "Net Rating": -4.2,
       "Year": 2026,
-      "sos": 74,
-      "sor": 201,
+      "sos": 82,
+      "sor": 162,
       "record": "0-0"
     },
     {
@@ -8519,8 +8519,8 @@
       "Conference": "Mountain West",
       "Net Rating": -4.3,
       "Year": 2026,
-      "sos": 86,
-      "sor": 211,
+      "sos": 98,
+      "sor": 195,
       "record": "0-0"
     },
     {
@@ -8529,8 +8529,8 @@
       "Conference": "Mid-American",
       "Net Rating": -4.4,
       "Year": 2026,
-      "sos": 114,
-      "sor": 183,
+      "sos": 124,
+      "sor": 115,
       "record": "0-0"
     },
     {
@@ -8539,8 +8539,8 @@
       "Conference": "Mountain West",
       "Net Rating": -4.5,
       "Year": 2026,
-      "sos": 137,
-      "sor": 210,
+      "sos": 146,
+      "sor": 190,
       "record": "0-0"
     },
     {
@@ -8549,8 +8549,8 @@
       "Conference": "Conference USA",
       "Net Rating": -4.7,
       "Year": 2026,
-      "sos": 112,
-      "sor": 218,
+      "sos": 118,
+      "sor": 207,
       "record": "0-0"
     },
     {
@@ -8559,8 +8559,8 @@
       "Conference": "American Athletic",
       "Net Rating": -5.0,
       "Year": 2026,
-      "sos": 79,
-      "sor": 228,
+      "sos": 85,
+      "sor": 230,
       "record": "0-0"
     },
     {
@@ -8569,8 +8569,8 @@
       "Conference": "American Athletic",
       "Net Rating": -5.4,
       "Year": 2026,
-      "sos": 119,
-      "sor": 230,
+      "sos": 75,
+      "sor": 234,
       "record": "0-0"
     },
     {
@@ -8579,8 +8579,8 @@
       "Conference": "Conference USA",
       "Net Rating": -5.7,
       "Year": 2026,
-      "sos": 134,
-      "sor": 220,
+      "sos": 177,
+      "sor": 223,
       "record": "0-0"
     },
     {
@@ -8589,8 +8589,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 207,
-      "sor": 189,
+      "sos": 217,
+      "sor": 210,
       "record": "0-0"
     },
     {
@@ -8599,8 +8599,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 241,
+      "sor": 240,
       "record": "0-0"
     },
     {
@@ -8609,8 +8609,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 188,
-      "sor": 88,
+      "sos": 231,
+      "sor": 197,
       "record": "0-0"
     },
     {
@@ -8619,8 +8619,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 171,
-      "sor": 72,
+      "sos": 141,
+      "sor": 66,
       "record": "0-0"
     },
     {
@@ -8629,8 +8629,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 173,
-      "sor": 167,
+      "sos": 228,
+      "sor": 218,
       "record": "0-0"
     },
     {
@@ -8639,8 +8639,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 177,
-      "sor": 110,
+      "sos": 67,
+      "sor": 85,
       "record": "0-0"
     },
     {
@@ -8649,8 +8649,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 190,
-      "sor": 91,
+      "sos": 194,
+      "sor": 113,
       "record": "0-0"
     },
     {
@@ -8660,7 +8660,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 172,
-      "sor": 106,
+      "sor": 127,
       "record": "0-0"
     },
     {
@@ -8669,8 +8669,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 239,
+      "sor": 238,
       "record": "0-0"
     },
     {
@@ -8679,8 +8679,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 209,
+      "sor": 161,
       "record": "0-0"
     },
     {
@@ -8689,8 +8689,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 176,
-      "sor": 145,
+      "sos": 154,
+      "sor": 148,
       "record": "0-0"
     },
     {
@@ -8699,8 +8699,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 175,
-      "sor": 150,
+      "sos": 92,
+      "sor": 96,
       "record": "0-0"
     },
     {
@@ -8709,8 +8709,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 162,
-      "sor": 105,
+      "sos": 205,
+      "sor": 169,
       "record": "0-0"
     },
     {
@@ -8719,8 +8719,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 160,
-      "sor": 161,
+      "sos": 179,
+      "sor": 150,
       "record": "0-0"
     },
     {
@@ -8729,8 +8729,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 170,
-      "sor": 144,
+      "sos": 140,
+      "sor": 89,
       "record": "0-0"
     },
     {
@@ -8739,8 +8739,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 165,
-      "sor": 184,
+      "sos": 142,
+      "sor": 117,
       "record": "0-0"
     },
     {
@@ -8749,8 +8749,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 164,
-      "sor": 171,
+      "sos": 185,
+      "sor": 152,
       "record": "0-0"
     },
     {
@@ -8759,8 +8759,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 141,
-      "sor": 120,
+      "sos": 186,
+      "sor": 128,
       "record": "0-0"
     },
     {
@@ -8769,8 +8769,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 144,
-      "sor": 115,
+      "sos": 225,
+      "sor": 212,
       "record": "0-0"
     },
     {
@@ -8779,8 +8779,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 143,
-      "sor": 146,
+      "sos": 109,
+      "sor": 93,
       "record": "0-0"
     },
     {
@@ -8789,8 +8789,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 140,
-      "sor": 139,
+      "sos": 155,
+      "sor": 145,
       "record": "0-0"
     },
     {
@@ -8799,8 +8799,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 142,
-      "sor": 140,
+      "sos": 216,
+      "sor": 177,
       "record": "0-0"
     },
     {
@@ -8809,8 +8809,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 139,
-      "sor": 131,
+      "sos": 220,
+      "sor": 217,
       "record": "0-0"
     },
     {
@@ -8819,8 +8819,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 166,
-      "sor": 98,
+      "sos": 200,
+      "sor": 167,
       "record": "0-0"
     },
     {
@@ -8829,8 +8829,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 167,
-      "sor": 137,
+      "sos": 218,
+      "sor": 178,
       "record": "0-0"
     },
     {
@@ -8839,8 +8839,8 @@
       "Conference": "Mountain West",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 92,
-      "sor": 214,
+      "sos": 103,
+      "sor": 200,
       "record": "0-0"
     },
     {
@@ -8849,8 +8849,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 168,
-      "sor": 142,
+      "sos": 157,
+      "sor": 147,
       "record": "0-0"
     },
     {
@@ -8859,8 +8859,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 158,
-      "sor": 181,
+      "sos": 148,
+      "sor": 110,
       "record": "0-0"
     },
     {
@@ -8869,8 +8869,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 169,
-      "sor": 100,
+      "sos": 152,
+      "sor": 131,
       "record": "0-0"
     },
     {
@@ -8879,8 +8879,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 159,
-      "sor": 141,
+      "sos": 158,
+      "sor": 146,
       "record": "0-0"
     },
     {
@@ -8889,8 +8889,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 145,
-      "sor": 64,
+      "sos": 233,
+      "sor": 216,
       "record": "0-0"
     },
     {
@@ -8899,8 +8899,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 153,
-      "sor": 158,
+      "sos": 147,
+      "sor": 92,
       "record": "0-0"
     },
     {
@@ -8909,8 +8909,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 163,
-      "sor": 174,
+      "sos": 95,
+      "sor": 105,
       "record": "0-0"
     },
     {
@@ -8919,8 +8919,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 150,
-      "sor": 82,
+      "sos": 230,
+      "sor": 194,
       "record": "0-0"
     },
     {
@@ -8929,8 +8929,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 155,
-      "sor": 124,
+      "sos": 236,
+      "sor": 227,
       "record": "0-0"
     },
     {
@@ -8939,8 +8939,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 161,
-      "sor": 151,
+      "sos": 198,
+      "sor": 192,
       "record": "0-0"
     },
     {
@@ -8949,8 +8949,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 156,
-      "sor": 123,
+      "sos": 206,
+      "sor": 182,
       "record": "0-0"
     },
     {
@@ -8959,8 +8959,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 201,
+      "sor": 159,
       "record": "0-0"
     },
     {
@@ -8969,8 +8969,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 154,
-      "sor": 170,
+      "sos": 199,
+      "sor": 193,
       "record": "0-0"
     },
     {
@@ -8979,8 +8979,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 146,
-      "sor": 95,
+      "sos": 173,
+      "sor": 119,
       "record": "0-0"
     },
     {
@@ -8989,8 +8989,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 152,
-      "sor": 122,
+      "sos": 93,
+      "sor": 87,
       "record": "0-0"
     },
     {
@@ -8999,8 +8999,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 151,
-      "sor": 135,
+      "sos": 202,
+      "sor": 180,
       "record": "0-0"
     },
     {
@@ -9009,8 +9009,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 149,
-      "sor": 133,
+      "sos": 195,
+      "sor": 187,
       "record": "0-0"
     },
     {
@@ -9019,8 +9019,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 147,
-      "sor": 86,
+      "sos": 174,
+      "sor": 116,
       "record": "0-0"
     },
     {
@@ -9029,8 +9029,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 148,
-      "sor": 81,
+      "sos": 176,
+      "sor": 111,
       "record": "0-0"
     },
     {
@@ -9039,8 +9039,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 157,
-      "sor": 107,
+      "sos": 207,
+      "sor": 171,
       "record": "0-0"
     },
     {
@@ -9049,8 +9049,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 174,
-      "sor": 160,
+      "sos": 208,
+      "sor": 188,
       "record": "0-0"
     },
     {
@@ -9059,8 +9059,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 230,
-      "sor": 130,
+      "sos": 166,
+      "sor": 143,
       "record": "0-0"
     },
     {
@@ -9069,8 +9069,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 218,
-      "sor": 99,
+      "sos": 151,
+      "sor": 130,
       "record": "0-0"
     },
     {
@@ -9079,8 +9079,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 202,
-      "sor": 114,
+      "sos": 150,
+      "sor": 140,
       "record": "0-0"
     },
     {
@@ -9089,8 +9089,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 203,
-      "sor": 125,
+      "sos": 120,
+      "sor": 88,
       "record": "0-0"
     },
     {
@@ -9099,8 +9099,8 @@
       "Conference": "Mid-American",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 129,
-      "sor": 190,
+      "sos": 163,
+      "sor": 173,
       "record": "0-0"
     },
     {
@@ -9109,8 +9109,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 181,
-      "sor": 169,
+      "sos": 197,
+      "sor": 198,
       "record": "0-0"
     },
     {
@@ -9119,8 +9119,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 204,
-      "sor": 153,
+      "sos": 164,
+      "sor": 149,
       "record": "0-0"
     },
     {
@@ -9129,8 +9129,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 205,
-      "sor": 96,
+      "sos": 183,
+      "sor": 109,
       "record": "0-0"
     },
     {
@@ -9139,8 +9139,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 183,
-      "sor": 111,
+      "sos": 222,
+      "sor": 215,
       "record": "0-0"
     },
     {
@@ -9149,8 +9149,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 178,
-      "sor": 180,
+      "sos": 238,
+      "sor": 236,
       "record": "0-0"
     },
     {
@@ -9159,8 +9159,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 179,
-      "sor": 121,
+      "sos": 229,
+      "sor": 211,
       "record": "0-0"
     },
     {
@@ -9169,8 +9169,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 180,
-      "sor": 147,
+      "sos": 187,
+      "sor": 139,
       "record": "0-0"
     },
     {
@@ -9179,8 +9179,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 206,
-      "sor": 103,
+      "sos": 180,
+      "sor": 125,
       "record": "0-0"
     },
     {
@@ -9189,8 +9189,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 182,
-      "sor": 156,
+      "sos": 226,
+      "sor": 220,
       "record": "0-0"
     },
     {
@@ -9199,8 +9199,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 199,
-      "sor": 176,
+      "sos": 182,
+      "sor": 155,
       "record": "0-0"
     },
     {
@@ -9209,8 +9209,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 227,
+      "sor": 202,
       "record": "0-0"
     },
     {
@@ -9219,8 +9219,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 197,
-      "sor": 166,
+      "sos": 145,
+      "sor": 97,
       "record": "0-0"
     },
     {
@@ -9229,8 +9229,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 192,
-      "sor": 109,
+      "sos": 213,
+      "sor": 172,
       "record": "0-0"
     },
     {
@@ -9239,8 +9239,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 187,
-      "sor": 162,
+      "sos": 219,
+      "sor": 186,
       "record": "0-0"
     },
     {
@@ -9249,8 +9249,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 193,
-      "sor": 159,
+      "sos": 126,
+      "sor": 98,
       "record": "0-0"
     },
     {
@@ -9259,8 +9259,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 189,
-      "sor": 164,
+      "sos": 232,
+      "sor": 233,
       "record": "0-0"
     },
     {
@@ -9269,8 +9269,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 186,
-      "sor": 87,
+      "sos": 224,
+      "sor": 206,
       "record": "0-0"
     },
     {
@@ -9279,8 +9279,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 195,
-      "sor": 119,
+      "sos": 196,
+      "sor": 183,
       "record": "0-0"
     },
     {
@@ -9289,8 +9289,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 196,
-      "sor": 134,
+      "sos": 192,
+      "sor": 135,
       "record": "0-0"
     },
     {
@@ -9299,8 +9299,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 201,
-      "sor": 63,
+      "sos": 178,
+      "sor": 86,
       "record": "0-0"
     },
     {
@@ -9309,8 +9309,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 194,
-      "sor": 85,
+      "sos": 169,
+      "sor": 118,
       "record": "0-0"
     },
     {
@@ -9319,7 +9319,7 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 198,
+      "sos": 193,
       "sor": 138,
       "record": "0-0"
     },
@@ -9329,8 +9329,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 200,
-      "sor": 148,
+      "sos": 234,
+      "sor": 228,
       "record": "0-0"
     },
     {
@@ -9339,8 +9339,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 184,
-      "sor": 149,
+      "sos": 191,
+      "sor": 141,
       "record": "0-0"
     },
     {
@@ -9349,8 +9349,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 185,
-      "sor": 173,
+      "sos": 237,
+      "sor": 232,
       "record": "0-0"
     },
     {
@@ -9359,8 +9359,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 221,
+      "sor": 205,
       "record": "0-0"
     },
     {
@@ -9369,8 +9369,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 191,
-      "sor": 136,
+      "sos": 136,
+      "sor": 91,
       "record": "0-0"
     },
     {
@@ -9379,8 +9379,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 232,
-      "sor": 127,
+      "sos": 181,
+      "sor": 137,
       "record": "0-0"
     },
     {
@@ -9389,8 +9389,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 227,
-      "sor": 117,
+      "sos": 210,
+      "sor": 175,
       "record": "0-0"
     },
     {
@@ -9399,8 +9399,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 221,
-      "sor": 152,
+      "sos": 212,
+      "sor": 185,
       "record": "0-0"
     },
     {
@@ -9409,8 +9409,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 209,
-      "sor": 155,
+      "sos": 137,
+      "sor": 90,
       "record": "0-0"
     },
     {
@@ -9419,8 +9419,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 208,
-      "sor": 108,
+      "sos": 69,
+      "sor": 83,
       "record": "0-0"
     },
     {
@@ -9429,8 +9429,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 214,
-      "sor": 178,
+      "sos": 149,
+      "sor": 99,
       "record": "0-0"
     },
     {
@@ -9439,8 +9439,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 213,
-      "sor": 116,
+      "sos": 190,
+      "sor": 124,
       "record": "0-0"
     },
     {
@@ -9449,8 +9449,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 235,
+      "sor": 221,
       "record": "0-0"
     },
     {
@@ -9459,8 +9459,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 212,
-      "sor": 165,
+      "sos": 171,
+      "sor": 154,
       "record": "0-0"
     },
     {
@@ -9469,8 +9469,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 999,
-      "sor": 999,
+      "sos": 240,
+      "sor": 241,
       "record": "0-0"
     },
     {
@@ -9479,8 +9479,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 211,
-      "sor": 177,
+      "sos": 160,
+      "sor": 163,
       "record": "0-0"
     },
     {
@@ -9489,8 +9489,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 210,
-      "sor": 97,
+      "sos": 161,
+      "sor": 120,
       "record": "0-0"
     },
     {
@@ -9499,8 +9499,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 217,
-      "sor": 163,
+      "sos": 211,
+      "sor": 191,
       "record": "0-0"
     },
     {
@@ -9509,8 +9509,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 216,
-      "sor": 143,
+      "sos": 153,
+      "sor": 151,
       "record": "0-0"
     },
     {
@@ -9519,8 +9519,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 215,
-      "sor": 104,
+      "sos": 223,
+      "sor": 209,
       "record": "0-0"
     },
     {
@@ -9529,8 +9529,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 226,
-      "sor": 168,
+      "sos": 132,
+      "sor": 101,
       "record": "0-0"
     },
     {
@@ -9539,8 +9539,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 233,
-      "sor": 128,
+      "sos": 162,
+      "sor": 142,
       "record": "0-0"
     },
     {
@@ -9549,8 +9549,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 231,
-      "sor": 92,
+      "sos": 189,
+      "sor": 107,
       "record": "0-0"
     },
     {
@@ -9559,8 +9559,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 220,
-      "sor": 126,
+      "sos": 215,
+      "sor": 176,
       "record": "0-0"
     },
     {
@@ -9569,8 +9569,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 219,
-      "sor": 93,
+      "sos": 188,
+      "sor": 108,
       "record": "0-0"
     },
     {
@@ -9579,8 +9579,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 222,
-      "sor": 154,
+      "sos": 203,
+      "sor": 189,
       "record": "0-0"
     },
     {
@@ -9589,8 +9589,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 223,
-      "sor": 132,
+      "sos": 214,
+      "sor": 179,
       "record": "0-0"
     },
     {
@@ -9599,8 +9599,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 224,
-      "sor": 187,
+      "sos": 144,
+      "sor": 123,
       "record": "0-0"
     },
     {
@@ -9609,8 +9609,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 225,
-      "sor": 118,
+      "sos": 167,
+      "sor": 136,
       "record": "0-0"
     },
     {
@@ -9619,8 +9619,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 228,
-      "sor": 90,
+      "sos": 204,
+      "sor": 165,
       "record": "0-0"
     },
     {
@@ -9629,8 +9629,8 @@
       "Conference": "Independent",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 229,
-      "sor": 129,
+      "sos": 143,
+      "sor": 84,
       "record": "0-0"
     },
     {
@@ -9639,8 +9639,8 @@
       "Conference": "Sun Belt",
       "Net Rating": -7.1,
       "Year": 2026,
-      "sos": 117,
-      "sor": 229,
+      "sos": 73,
+      "sor": 231,
       "record": "0-0"
     },
     {
@@ -9649,8 +9649,8 @@
       "Conference": "Conference USA",
       "Net Rating": -7.8,
       "Year": 2026,
-      "sos": 83,
-      "sor": 227,
+      "sos": 96,
+      "sor": 229,
       "record": "0-0"
     },
     {
@@ -9659,8 +9659,8 @@
       "Conference": "Mid-American",
       "Net Rating": -8.2,
       "Year": 2026,
-      "sos": 136,
-      "sor": 223,
+      "sos": 139,
+      "sor": 222,
       "record": "0-0"
     },
     {
@@ -9669,7 +9669,7 @@
       "Conference": "Mid-American",
       "Net Rating": -8.9,
       "Year": 2026,
-      "sos": 135,
+      "sos": 138,
       "sor": 225,
       "record": "0-0"
     },
@@ -9679,8 +9679,8 @@
       "Conference": "Mid-American",
       "Net Rating": -13.4,
       "Year": 2026,
-      "sos": 130,
-      "sor": 232,
+      "sos": 156,
+      "sor": 237,
       "record": "0-0"
     },
     {
@@ -9689,8 +9689,8 @@
       "Conference": "Mid-American",
       "Net Rating": -14.2,
       "Year": 2026,
-      "sos": 66,
-      "sor": 233,
+      "sos": 74,
+      "sor": 239,
       "record": "0-0"
     }
   ]
