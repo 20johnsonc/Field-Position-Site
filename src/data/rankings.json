@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T21:26:47.130465+00:00",
+  "generated_at": "2026-08-19T21:46:38.618537+00:00",
   "all_rankings": [
     {
       "Rank": 1,
@@ -10,7 +10,7 @@
       "Year": 2021,
       "sos": 3,
       "sor": 2,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "14-1"
     },
     {
@@ -22,7 +22,7 @@
       "Year": 2021,
       "sos": 41,
       "sor": 9,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -34,7 +34,7 @@
       "Year": 2021,
       "sos": 1,
       "sor": 1,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-2"
     },
     {
@@ -46,7 +46,7 @@
       "Year": 2021,
       "sos": 18,
       "sor": 7,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -58,7 +58,7 @@
       "Year": 2021,
       "sos": 15,
       "sor": 6,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -70,7 +70,7 @@
       "Year": 2021,
       "sos": 71,
       "sor": 5,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -82,7 +82,7 @@
       "Year": 2021,
       "sos": 49,
       "sor": 10,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -94,7 +94,7 @@
       "Year": 2021,
       "sos": 11,
       "sor": 16,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -106,7 +106,7 @@
       "Year": 2021,
       "sos": 39,
       "sor": 42,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -118,7 +118,7 @@
       "Year": 2021,
       "sos": 7,
       "sor": 22,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -130,7 +130,7 @@
       "Year": 2021,
       "sos": 23,
       "sor": 11,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -142,7 +142,7 @@
       "Year": 2021,
       "sos": 55,
       "sor": 28,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-4"
     },
     {
@@ -154,7 +154,7 @@
       "Year": 2021,
       "sos": 37,
       "sor": 17,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -166,7 +166,7 @@
       "Year": 2021,
       "sos": 16,
       "sor": 20,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -178,7 +178,7 @@
       "Year": 2021,
       "sos": 27,
       "sor": 8,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -190,7 +190,7 @@
       "Year": 2021,
       "sos": 47,
       "sor": 51,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -202,7 +202,7 @@
       "Year": 2021,
       "sos": 43,
       "sor": 72,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -214,7 +214,7 @@
       "Year": 2021,
       "sos": 46,
       "sor": 60,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -226,7 +226,7 @@
       "Year": 2021,
       "sos": 65,
       "sor": 23,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -238,7 +238,7 @@
       "Year": 2021,
       "sos": 5,
       "sor": 49,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -250,7 +250,7 @@
       "Year": 2021,
       "sos": 45,
       "sor": 32,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-4"
     },
     {
@@ -262,7 +262,7 @@
       "Year": 2021,
       "sos": 130,
       "sor": 31,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -274,7 +274,7 @@
       "Year": 2021,
       "sos": 34,
       "sor": 70,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -286,7 +286,7 @@
       "Year": 2021,
       "sos": 61,
       "sor": 24,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -298,7 +298,7 @@
       "Year": 2021,
       "sos": 68,
       "sor": 19,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -310,7 +310,7 @@
       "Year": 2021,
       "sos": 30,
       "sor": 48,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -322,7 +322,7 @@
       "Year": 2021,
       "sos": 58,
       "sor": 43,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -334,7 +334,7 @@
       "Year": 2021,
       "sos": 48,
       "sor": 71,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -346,7 +346,7 @@
       "Year": 2021,
       "sos": 110,
       "sor": 14,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -358,7 +358,7 @@
       "Year": 2021,
       "sos": 114,
       "sor": 68,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -370,7 +370,7 @@
       "Year": 2021,
       "sos": 28,
       "sor": 52,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -382,7 +382,7 @@
       "Year": 2021,
       "sos": 69,
       "sor": 56,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-5"
     },
     {
@@ -394,7 +394,7 @@
       "Year": 2021,
       "sos": 26,
       "sor": 44,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -406,7 +406,7 @@
       "Year": 2021,
       "sos": 59,
       "sor": 25,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-3"
     },
     {
@@ -418,7 +418,7 @@
       "Year": 2021,
       "sos": 64,
       "sor": 13,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -430,7 +430,7 @@
       "Year": 2021,
       "sos": 10,
       "sor": 94,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -442,7 +442,7 @@
       "Year": 2021,
       "sos": 9,
       "sor": 54,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -454,7 +454,7 @@
       "Year": 2021,
       "sos": 54,
       "sor": 63,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -466,7 +466,7 @@
       "Year": 2021,
       "sos": 6,
       "sor": 12,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -478,7 +478,7 @@
       "Year": 2021,
       "sos": 60,
       "sor": 29,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -490,7 +490,7 @@
       "Year": 2021,
       "sos": 14,
       "sor": 15,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -502,7 +502,7 @@
       "Year": 2021,
       "sos": 126,
       "sor": 77,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -514,7 +514,7 @@
       "Year": 2021,
       "sos": 62,
       "sor": 88,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -526,7 +526,7 @@
       "Year": 2021,
       "sos": 21,
       "sor": 4,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -538,7 +538,7 @@
       "Year": 2021,
       "sos": 22,
       "sor": 27,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -550,7 +550,7 @@
       "Year": 2021,
       "sos": 20,
       "sor": 80,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -562,7 +562,7 @@
       "Year": 2021,
       "sos": 82,
       "sor": 38,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -574,7 +574,7 @@
       "Year": 2021,
       "sos": 112,
       "sor": 21,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -586,7 +586,7 @@
       "Year": 2021,
       "sos": 52,
       "sor": 36,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -598,7 +598,7 @@
       "Year": 2021,
       "sos": 104,
       "sor": 75,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -610,7 +610,7 @@
       "Year": 2021,
       "sos": 40,
       "sor": 39,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-5"
     },
     {
@@ -622,7 +622,7 @@
       "Year": 2021,
       "sos": 42,
       "sor": 59,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -634,7 +634,7 @@
       "Year": 2021,
       "sos": 83,
       "sor": 45,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-4"
     },
     {
@@ -646,7 +646,7 @@
       "Year": 2021,
       "sos": 87,
       "sor": 37,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -658,7 +658,7 @@
       "Year": 2021,
       "sos": 32,
       "sor": 69,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -670,7 +670,7 @@
       "Year": 2021,
       "sos": 56,
       "sor": 86,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -682,7 +682,7 @@
       "Year": 2021,
       "sos": 73,
       "sor": 40,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -694,7 +694,7 @@
       "Year": 2021,
       "sos": 31,
       "sor": 65,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -706,7 +706,7 @@
       "Year": 2021,
       "sos": 66,
       "sor": 73,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -718,7 +718,7 @@
       "Year": 2021,
       "sos": 99,
       "sor": 66,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -730,7 +730,7 @@
       "Year": 2021,
       "sos": 117,
       "sor": 33,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -742,7 +742,7 @@
       "Year": 2021,
       "sos": 19,
       "sor": 3,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -754,7 +754,7 @@
       "Year": 2021,
       "sos": 119,
       "sor": 64,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -766,7 +766,7 @@
       "Year": 2021,
       "sos": 33,
       "sor": 74,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -778,7 +778,7 @@
       "Year": 2021,
       "sos": 77,
       "sor": 55,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-5"
     },
     {
@@ -790,7 +790,7 @@
       "Year": 2021,
       "sos": 125,
       "sor": 18,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -802,7 +802,7 @@
       "Year": 2021,
       "sos": 91,
       "sor": 78,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -814,7 +814,7 @@
       "Year": 2021,
       "sos": 128,
       "sor": 87,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -826,7 +826,7 @@
       "Year": 2021,
       "sos": 78,
       "sor": 67,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -838,7 +838,7 @@
       "Year": 2021,
       "sos": 12,
       "sor": 34,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -850,7 +850,7 @@
       "Year": 2021,
       "sos": 105,
       "sor": 79,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -862,7 +862,7 @@
       "Year": 2021,
       "sos": 102,
       "sor": 35,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -874,7 +874,7 @@
       "Year": 2021,
       "sos": 108,
       "sor": 26,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -886,7 +886,7 @@
       "Year": 2021,
       "sos": 115,
       "sor": 41,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -898,7 +898,7 @@
       "Year": 2021,
       "sos": 93,
       "sor": 101,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-7"
     },
     {
@@ -910,7 +910,7 @@
       "Year": 2021,
       "sos": 90,
       "sor": 46,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -922,7 +922,7 @@
       "Year": 2021,
       "sos": 101,
       "sor": 119,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -934,7 +934,7 @@
       "Year": 2021,
       "sos": 113,
       "sor": 82,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -946,7 +946,7 @@
       "Year": 2021,
       "sos": 2,
       "sor": 90,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -958,7 +958,7 @@
       "Year": 2021,
       "sos": 44,
       "sor": 50,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -970,7 +970,7 @@
       "Year": 2021,
       "sos": 72,
       "sor": 57,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -982,7 +982,7 @@
       "Year": 2021,
       "sos": 80,
       "sor": 58,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -994,7 +994,7 @@
       "Year": 2021,
       "sos": 8,
       "sor": 92,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1006,7 +1006,7 @@
       "Year": 2021,
       "sos": 51,
       "sor": 84,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1018,7 +1018,7 @@
       "Year": 2021,
       "sos": 74,
       "sor": 62,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -1030,7 +1030,7 @@
       "Year": 2021,
       "sos": 63,
       "sor": 106,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1042,7 +1042,7 @@
       "Year": 2021,
       "sos": 50,
       "sor": 76,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1054,7 +1054,7 @@
       "Year": 2021,
       "sos": 13,
       "sor": 83,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1066,7 +1066,7 @@
       "Year": 2021,
       "sos": 85,
       "sor": 96,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1078,7 +1078,7 @@
       "Year": 2021,
       "sos": 29,
       "sor": 47,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -1090,7 +1090,7 @@
       "Year": 2021,
       "sos": 118,
       "sor": 100,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1102,7 +1102,7 @@
       "Year": 2021,
       "sos": 116,
       "sor": 85,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -1114,7 +1114,7 @@
       "Year": 2021,
       "sos": 24,
       "sor": 61,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1126,7 +1126,7 @@
       "Year": 2021,
       "sos": 53,
       "sor": 81,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -1138,7 +1138,7 @@
       "Year": 2021,
       "sos": 70,
       "sor": 53,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -1150,7 +1150,7 @@
       "Year": 2021,
       "sos": 97,
       "sor": 120,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1162,7 +1162,7 @@
       "Year": 2021,
       "sos": 4,
       "sor": 104,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1174,7 +1174,7 @@
       "Year": 2021,
       "sos": 38,
       "sor": 116,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1186,7 +1186,7 @@
       "Year": 2021,
       "sos": 79,
       "sor": 113,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1198,7 +1198,7 @@
       "Year": 2021,
       "sos": 107,
       "sor": 109,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1210,7 +1210,7 @@
       "Year": 2021,
       "sos": 98,
       "sor": 98,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1222,7 +1222,7 @@
       "Year": 2021,
       "sos": 100,
       "sor": 95,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1234,7 +1234,7 @@
       "Year": 2021,
       "sos": 103,
       "sor": 97,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1246,7 +1246,7 @@
       "Year": 2021,
       "sos": 106,
       "sor": 122,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1258,7 +1258,7 @@
       "Year": 2021,
       "sos": 92,
       "sor": 30,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -1270,7 +1270,7 @@
       "Year": 2021,
       "sos": 111,
       "sor": 102,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1282,7 +1282,7 @@
       "Year": 2021,
       "sos": 17,
       "sor": 123,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -1294,7 +1294,7 @@
       "Year": 2021,
       "sos": 109,
       "sor": 99,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1306,7 +1306,7 @@
       "Year": 2021,
       "sos": 120,
       "sor": 93,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1318,7 +1318,7 @@
       "Year": 2021,
       "sos": 124,
       "sor": 110,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1330,7 +1330,7 @@
       "Year": 2021,
       "sos": 129,
       "sor": 89,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -1342,7 +1342,7 @@
       "Year": 2021,
       "sos": 57,
       "sor": 117,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1354,7 +1354,7 @@
       "Year": 2021,
       "sos": 25,
       "sor": 114,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1366,7 +1366,7 @@
       "Year": 2021,
       "sos": 86,
       "sor": 126,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1378,7 +1378,7 @@
       "Year": 2021,
       "sos": 36,
       "sor": 91,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1390,7 +1390,7 @@
       "Year": 2021,
       "sos": 67,
       "sor": 111,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1402,7 +1402,7 @@
       "Year": 2021,
       "sos": 127,
       "sor": 103,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -1414,7 +1414,7 @@
       "Year": 2021,
       "sos": 35,
       "sor": 112,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1426,7 +1426,7 @@
       "Year": 2021,
       "sos": 122,
       "sor": 118,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1438,7 +1438,7 @@
       "Year": 2021,
       "sos": 81,
       "sor": 105,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1450,7 +1450,7 @@
       "Year": 2021,
       "sos": 84,
       "sor": 107,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1462,7 +1462,7 @@
       "Year": 2021,
       "sos": 88,
       "sor": 125,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1474,7 +1474,7 @@
       "Year": 2021,
       "sos": 76,
       "sor": 124,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1486,7 +1486,7 @@
       "Year": 2021,
       "sos": 121,
       "sor": 130,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -1498,7 +1498,7 @@
       "Year": 2021,
       "sos": 89,
       "sor": 115,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1510,7 +1510,7 @@
       "Year": 2021,
       "sos": 94,
       "sor": 121,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -1522,7 +1522,7 @@
       "Year": 2021,
       "sos": 75,
       "sor": 108,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -1534,7 +1534,7 @@
       "Year": 2021,
       "sos": 123,
       "sor": 127,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -1546,7 +1546,7 @@
       "Year": 2021,
       "sos": 95,
       "sor": 128,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -1558,7 +1558,7 @@
       "Year": 2021,
       "sos": 96,
       "sor": 129,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -1570,7 +1570,7 @@
       "Year": 2022,
       "sos": 18,
       "sor": 7,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -1582,7 +1582,7 @@
       "Year": 2022,
       "sos": 20,
       "sor": 4,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -1594,7 +1594,7 @@
       "Year": 2022,
       "sos": 30,
       "sor": 1,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "15-0"
     },
     {
@@ -1606,7 +1606,7 @@
       "Year": 2022,
       "sos": 59,
       "sor": 3,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -1618,7 +1618,7 @@
       "Year": 2022,
       "sos": 54,
       "sor": 15,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -1630,7 +1630,7 @@
       "Year": 2022,
       "sos": 25,
       "sor": 6,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -1642,7 +1642,7 @@
       "Year": 2022,
       "sos": 37,
       "sor": 9,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -1654,7 +1654,7 @@
       "Year": 2022,
       "sos": 9,
       "sor": 24,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -1666,7 +1666,7 @@
       "Year": 2022,
       "sos": 45,
       "sor": 22,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -1678,7 +1678,7 @@
       "Year": 2022,
       "sos": 4,
       "sor": 10,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -1690,7 +1690,7 @@
       "Year": 2022,
       "sos": 15,
       "sor": 5,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -1702,7 +1702,7 @@
       "Year": 2022,
       "sos": 49,
       "sor": 14,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -1714,7 +1714,7 @@
       "Year": 2022,
       "sos": 57,
       "sor": 8,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -1726,7 +1726,7 @@
       "Year": 2022,
       "sos": 12,
       "sor": 18,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -1738,7 +1738,7 @@
       "Year": 2022,
       "sos": 64,
       "sor": 20,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -1750,7 +1750,7 @@
       "Year": 2022,
       "sos": 16,
       "sor": 17,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -1762,7 +1762,7 @@
       "Year": 2022,
       "sos": 23,
       "sor": 11,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -1774,7 +1774,7 @@
       "Year": 2022,
       "sos": 33,
       "sor": 12,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -1786,7 +1786,7 @@
       "Year": 2022,
       "sos": 83,
       "sor": 37,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -1798,7 +1798,7 @@
       "Year": 2022,
       "sos": 105,
       "sor": 70,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -1810,7 +1810,7 @@
       "Year": 2022,
       "sos": 43,
       "sor": 32,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -1822,7 +1822,7 @@
       "Year": 2022,
       "sos": 39,
       "sor": 78,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1834,7 +1834,7 @@
       "Year": 2022,
       "sos": 69,
       "sor": 13,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -1846,7 +1846,7 @@
       "Year": 2022,
       "sos": 7,
       "sor": 2,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-2"
     },
     {
@@ -1858,7 +1858,7 @@
       "Year": 2022,
       "sos": 19,
       "sor": 39,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -1870,7 +1870,7 @@
       "Year": 2022,
       "sos": 73,
       "sor": 33,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -1882,7 +1882,7 @@
       "Year": 2022,
       "sos": 75,
       "sor": 44,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -1894,7 +1894,7 @@
       "Year": 2022,
       "sos": 5,
       "sor": 52,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1906,7 +1906,7 @@
       "Year": 2022,
       "sos": 50,
       "sor": 40,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -1918,7 +1918,7 @@
       "Year": 2022,
       "sos": 21,
       "sor": 65,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -1930,7 +1930,7 @@
       "Year": 2022,
       "sos": 79,
       "sor": 29,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -1942,7 +1942,7 @@
       "Year": 2022,
       "sos": 27,
       "sor": 23,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -1954,7 +1954,7 @@
       "Year": 2022,
       "sos": 51,
       "sor": 38,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -1966,7 +1966,7 @@
       "Year": 2022,
       "sos": 48,
       "sor": 57,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -1978,7 +1978,7 @@
       "Year": 2022,
       "sos": 124,
       "sor": 26,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -1990,7 +1990,7 @@
       "Year": 2022,
       "sos": 24,
       "sor": 42,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-6"
     },
     {
@@ -2002,7 +2002,7 @@
       "Year": 2022,
       "sos": 40,
       "sor": 61,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2014,7 +2014,7 @@
       "Year": 2022,
       "sos": 32,
       "sor": 28,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2026,7 +2026,7 @@
       "Year": 2022,
       "sos": 74,
       "sor": 62,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2038,7 +2038,7 @@
       "Year": 2022,
       "sos": 56,
       "sor": 36,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -2050,7 +2050,7 @@
       "Year": 2022,
       "sos": 2,
       "sor": 35,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2062,7 +2062,7 @@
       "Year": 2022,
       "sos": 68,
       "sor": 56,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -2074,7 +2074,7 @@
       "Year": 2022,
       "sos": 61,
       "sor": 73,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2086,7 +2086,7 @@
       "Year": 2022,
       "sos": 29,
       "sor": 47,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2098,7 +2098,7 @@
       "Year": 2022,
       "sos": 31,
       "sor": 27,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2110,7 +2110,7 @@
       "Year": 2022,
       "sos": 8,
       "sor": 16,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -2122,7 +2122,7 @@
       "Year": 2022,
       "sos": 36,
       "sor": 89,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2134,7 +2134,7 @@
       "Year": 2022,
       "sos": 60,
       "sor": 50,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2146,7 +2146,7 @@
       "Year": 2022,
       "sos": 88,
       "sor": 21,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -2158,7 +2158,7 @@
       "Year": 2022,
       "sos": 22,
       "sor": 30,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2170,7 +2170,7 @@
       "Year": 2022,
       "sos": 65,
       "sor": 31,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -2182,7 +2182,7 @@
       "Year": 2022,
       "sos": 42,
       "sor": 48,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2194,7 +2194,7 @@
       "Year": 2022,
       "sos": 98,
       "sor": 100,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -2206,7 +2206,7 @@
       "Year": 2022,
       "sos": 41,
       "sor": 54,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2218,7 +2218,7 @@
       "Year": 2022,
       "sos": 107,
       "sor": 85,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -2230,7 +2230,7 @@
       "Year": 2022,
       "sos": 78,
       "sor": 45,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -2242,7 +2242,7 @@
       "Year": 2022,
       "sos": 11,
       "sor": 59,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2254,7 +2254,7 @@
       "Year": 2022,
       "sos": 38,
       "sor": 102,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2266,7 +2266,7 @@
       "Year": 2022,
       "sos": 52,
       "sor": 41,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2278,7 +2278,7 @@
       "Year": 2022,
       "sos": 85,
       "sor": 99,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-7"
     },
     {
@@ -2290,7 +2290,7 @@
       "Year": 2022,
       "sos": 80,
       "sor": 80,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2302,7 +2302,7 @@
       "Year": 2022,
       "sos": 93,
       "sor": 79,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2314,7 +2314,7 @@
       "Year": 2022,
       "sos": 89,
       "sor": 19,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -2326,7 +2326,7 @@
       "Year": 2022,
       "sos": 46,
       "sor": 69,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -2338,7 +2338,7 @@
       "Year": 2022,
       "sos": 47,
       "sor": 95,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2350,7 +2350,7 @@
       "Year": 2022,
       "sos": 63,
       "sor": 83,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2362,7 +2362,7 @@
       "Year": 2022,
       "sos": 103,
       "sor": 46,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -2374,7 +2374,7 @@
       "Year": 2022,
       "sos": 34,
       "sor": 67,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2386,7 +2386,7 @@
       "Year": 2022,
       "sos": 62,
       "sor": 43,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2398,7 +2398,7 @@
       "Year": 2022,
       "sos": 13,
       "sor": 72,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -2410,7 +2410,7 @@
       "Year": 2022,
       "sos": 113,
       "sor": 25,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -2422,7 +2422,7 @@
       "Year": 2022,
       "sos": 44,
       "sor": 51,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2434,7 +2434,7 @@
       "Year": 2022,
       "sos": 120,
       "sor": 63,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -2446,7 +2446,7 @@
       "Year": 2022,
       "sos": 66,
       "sor": 97,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-7"
     },
     {
@@ -2458,7 +2458,7 @@
       "Year": 2022,
       "sos": 35,
       "sor": 82,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2470,7 +2470,7 @@
       "Year": 2022,
       "sos": 87,
       "sor": 77,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2482,7 +2482,7 @@
       "Year": 2022,
       "sos": 77,
       "sor": 60,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2494,7 +2494,7 @@
       "Year": 2022,
       "sos": 119,
       "sor": 75,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-5"
     },
     {
@@ -2506,7 +2506,7 @@
       "Year": 2022,
       "sos": 86,
       "sor": 87,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -2518,7 +2518,7 @@
       "Year": 2022,
       "sos": 118,
       "sor": 55,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -2530,7 +2530,7 @@
       "Year": 2022,
       "sos": 130,
       "sor": 84,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -2542,7 +2542,7 @@
       "Year": 2022,
       "sos": 3,
       "sor": 93,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2554,7 +2554,7 @@
       "Year": 2022,
       "sos": 92,
       "sor": 76,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2566,7 +2566,7 @@
       "Year": 2022,
       "sos": 101,
       "sor": 98,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2578,7 +2578,7 @@
       "Year": 2022,
       "sos": 90,
       "sor": 106,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -2590,7 +2590,7 @@
       "Year": 2022,
       "sos": 17,
       "sor": 123,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -2602,7 +2602,7 @@
       "Year": 2022,
       "sos": 26,
       "sor": 74,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2614,7 +2614,7 @@
       "Year": 2022,
       "sos": 72,
       "sor": 88,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2626,7 +2626,7 @@
       "Year": 2022,
       "sos": 10,
       "sor": 53,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2638,7 +2638,7 @@
       "Year": 2022,
       "sos": 14,
       "sor": 64,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2650,7 +2650,7 @@
       "Year": 2022,
       "sos": 102,
       "sor": 49,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -2662,7 +2662,7 @@
       "Year": 2022,
       "sos": 125,
       "sor": 58,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -2674,7 +2674,7 @@
       "Year": 2022,
       "sos": 128,
       "sor": 71,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2686,7 +2686,7 @@
       "Year": 2022,
       "sos": 94,
       "sor": 113,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2698,7 +2698,7 @@
       "Year": 2022,
       "sos": 6,
       "sor": 68,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2710,7 +2710,7 @@
       "Year": 2022,
       "sos": 122,
       "sor": 127,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2722,7 +2722,7 @@
       "Year": 2022,
       "sos": 115,
       "sor": 107,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2734,7 +2734,7 @@
       "Year": 2022,
       "sos": 126,
       "sor": 91,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2746,7 +2746,7 @@
       "Year": 2022,
       "sos": 82,
       "sor": 117,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-8"
     },
     {
@@ -2758,7 +2758,7 @@
       "Year": 2022,
       "sos": 100,
       "sor": 112,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2770,7 +2770,7 @@
       "Year": 2022,
       "sos": 116,
       "sor": 66,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -2782,7 +2782,7 @@
       "Year": 2022,
       "sos": 70,
       "sor": 92,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2794,7 +2794,7 @@
       "Year": 2022,
       "sos": 28,
       "sor": 81,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2806,7 +2806,7 @@
       "Year": 2022,
       "sos": 97,
       "sor": 126,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2818,7 +2818,7 @@
       "Year": 2022,
       "sos": 127,
       "sor": 101,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2830,7 +2830,7 @@
       "Year": 2022,
       "sos": 53,
       "sor": 111,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2842,7 +2842,7 @@
       "Year": 2022,
       "sos": 108,
       "sor": 104,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -2854,7 +2854,7 @@
       "Year": 2022,
       "sos": 55,
       "sor": 130,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -2866,7 +2866,7 @@
       "Year": 2022,
       "sos": 123,
       "sor": 114,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2878,7 +2878,7 @@
       "Year": 2022,
       "sos": 76,
       "sor": 118,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2890,7 +2890,7 @@
       "Year": 2022,
       "sos": 84,
       "sor": 96,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2902,7 +2902,7 @@
       "Year": 2022,
       "sos": 99,
       "sor": 128,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -2914,7 +2914,7 @@
       "Year": 2022,
       "sos": 109,
       "sor": 121,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -2926,7 +2926,7 @@
       "Year": 2022,
       "sos": 58,
       "sor": 108,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -2938,7 +2938,7 @@
       "Year": 2022,
       "sos": 112,
       "sor": 34,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-3"
     },
     {
@@ -2950,7 +2950,7 @@
       "Year": 2022,
       "sos": 106,
       "sor": 86,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -2962,7 +2962,7 @@
       "Year": 2022,
       "sos": 96,
       "sor": 129,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -2974,7 +2974,7 @@
       "Year": 2022,
       "sos": 110,
       "sor": 109,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -2986,7 +2986,7 @@
       "Year": 2022,
       "sos": 91,
       "sor": 124,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-10"
     },
     {
@@ -2998,7 +2998,7 @@
       "Year": 2022,
       "sos": 114,
       "sor": 120,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -3010,7 +3010,7 @@
       "Year": 2022,
       "sos": 71,
       "sor": 110,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -3022,7 +3022,7 @@
       "Year": 2022,
       "sos": 67,
       "sor": 105,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -3034,7 +3034,7 @@
       "Year": 2022,
       "sos": 117,
       "sor": 103,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -3046,7 +3046,7 @@
       "Year": 2022,
       "sos": 95,
       "sor": 122,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -3058,7 +3058,7 @@
       "Year": 2022,
       "sos": 111,
       "sor": 119,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -3070,7 +3070,7 @@
       "Year": 2022,
       "sos": 1,
       "sor": 116,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -3082,7 +3082,7 @@
       "Year": 2022,
       "sos": 104,
       "sor": 94,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -3094,7 +3094,7 @@
       "Year": 2022,
       "sos": 81,
       "sor": 125,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -3106,7 +3106,7 @@
       "Year": 2022,
       "sos": 131,
       "sor": 90,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3118,7 +3118,7 @@
       "Year": 2022,
       "sos": 129,
       "sor": 115,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -3130,7 +3130,7 @@
       "Year": 2022,
       "sos": 121,
       "sor": 131,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -3142,7 +3142,7 @@
       "Year": 2023,
       "sos": 21,
       "sor": 7,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -3154,7 +3154,7 @@
       "Year": 2023,
       "sos": 54,
       "sor": 10,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -3166,7 +3166,7 @@
       "Year": 2023,
       "sos": 13,
       "sor": 9,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -3178,7 +3178,7 @@
       "Year": 2023,
       "sos": 3,
       "sor": 3,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -3190,7 +3190,7 @@
       "Year": 2023,
       "sos": 30,
       "sor": 13,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -3202,7 +3202,7 @@
       "Year": 2023,
       "sos": 12,
       "sor": 2,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "15-0"
     },
     {
@@ -3214,7 +3214,7 @@
       "Year": 2023,
       "sos": 64,
       "sor": 14,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -3226,7 +3226,7 @@
       "Year": 2023,
       "sos": 51,
       "sor": 12,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -3238,7 +3238,7 @@
       "Year": 2023,
       "sos": 5,
       "sor": 8,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -3250,7 +3250,7 @@
       "Year": 2023,
       "sos": 35,
       "sor": 16,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -3262,7 +3262,7 @@
       "Year": 2023,
       "sos": 42,
       "sor": 31,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3274,7 +3274,7 @@
       "Year": 2023,
       "sos": 2,
       "sor": 1,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "14-1"
     },
     {
@@ -3286,7 +3286,7 @@
       "Year": 2023,
       "sos": 108,
       "sor": 32,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -3298,7 +3298,7 @@
       "Year": 2023,
       "sos": 36,
       "sor": 17,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3310,7 +3310,7 @@
       "Year": 2023,
       "sos": 49,
       "sor": 44,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3322,7 +3322,7 @@
       "Year": 2023,
       "sos": 50,
       "sor": 27,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3334,7 +3334,7 @@
       "Year": 2023,
       "sos": 20,
       "sor": 25,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3346,7 +3346,7 @@
       "Year": 2023,
       "sos": 25,
       "sor": 33,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3358,7 +3358,7 @@
       "Year": 2023,
       "sos": 65,
       "sor": 55,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3370,7 +3370,7 @@
       "Year": 2023,
       "sos": 52,
       "sor": 5,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -3382,7 +3382,7 @@
       "Year": 2023,
       "sos": 1,
       "sor": 4,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -3394,7 +3394,7 @@
       "Year": 2023,
       "sos": 48,
       "sor": 30,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -3406,7 +3406,7 @@
       "Year": 2023,
       "sos": 14,
       "sor": 35,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3418,7 +3418,7 @@
       "Year": 2023,
       "sos": 28,
       "sor": 65,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -3430,7 +3430,7 @@
       "Year": 2023,
       "sos": 8,
       "sor": 6,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -3442,7 +3442,7 @@
       "Year": 2023,
       "sos": 53,
       "sor": 15,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -3454,7 +3454,7 @@
       "Year": 2023,
       "sos": 115,
       "sor": 11,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -3466,7 +3466,7 @@
       "Year": 2023,
       "sos": 7,
       "sor": 57,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -3478,7 +3478,7 @@
       "Year": 2023,
       "sos": 104,
       "sor": 46,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3490,7 +3490,7 @@
       "Year": 2023,
       "sos": 22,
       "sor": 41,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3502,7 +3502,7 @@
       "Year": 2023,
       "sos": 37,
       "sor": 53,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3514,7 +3514,7 @@
       "Year": 2023,
       "sos": 71,
       "sor": 76,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-6"
     },
     {
@@ -3526,7 +3526,7 @@
       "Year": 2023,
       "sos": 127,
       "sor": 88,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3538,7 +3538,7 @@
       "Year": 2023,
       "sos": 63,
       "sor": 56,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3550,7 +3550,7 @@
       "Year": 2023,
       "sos": 45,
       "sor": 22,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3562,7 +3562,7 @@
       "Year": 2023,
       "sos": 118,
       "sor": 64,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -3574,7 +3574,7 @@
       "Year": 2023,
       "sos": 58,
       "sor": 82,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -3586,7 +3586,7 @@
       "Year": 2023,
       "sos": 10,
       "sor": 61,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -3598,7 +3598,7 @@
       "Year": 2023,
       "sos": 62,
       "sor": 83,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -3610,7 +3610,7 @@
       "Year": 2023,
       "sos": 43,
       "sor": 29,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3622,7 +3622,7 @@
       "Year": 2023,
       "sos": 16,
       "sor": 51,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -3634,7 +3634,7 @@
       "Year": 2023,
       "sos": 57,
       "sor": 40,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3646,7 +3646,7 @@
       "Year": 2023,
       "sos": 39,
       "sor": 28,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3658,7 +3658,7 @@
       "Year": 2023,
       "sos": 74,
       "sor": 75,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3670,7 +3670,7 @@
       "Year": 2023,
       "sos": 87,
       "sor": 24,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -3682,7 +3682,7 @@
       "Year": 2023,
       "sos": 83,
       "sor": 26,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -3694,7 +3694,7 @@
       "Year": 2023,
       "sos": 40,
       "sor": 52,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3706,7 +3706,7 @@
       "Year": 2023,
       "sos": 29,
       "sor": 49,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3718,7 +3718,7 @@
       "Year": 2023,
       "sos": 24,
       "sor": 34,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3730,7 +3730,7 @@
       "Year": 2023,
       "sos": 128,
       "sor": 37,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -3742,7 +3742,7 @@
       "Year": 2023,
       "sos": 46,
       "sor": 70,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -3754,7 +3754,7 @@
       "Year": 2023,
       "sos": 55,
       "sor": 19,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3766,7 +3766,7 @@
       "Year": 2023,
       "sos": 34,
       "sor": 23,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -3778,7 +3778,7 @@
       "Year": 2023,
       "sos": 77,
       "sor": 21,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -3790,7 +3790,7 @@
       "Year": 2023,
       "sos": 119,
       "sor": 47,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -3802,7 +3802,7 @@
       "Year": 2023,
       "sos": 41,
       "sor": 80,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -3814,7 +3814,7 @@
       "Year": 2023,
       "sos": 61,
       "sor": 58,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3826,7 +3826,7 @@
       "Year": 2023,
       "sos": 15,
       "sor": 85,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -3838,7 +3838,7 @@
       "Year": 2023,
       "sos": 56,
       "sor": 78,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -3850,7 +3850,7 @@
       "Year": 2023,
       "sos": 93,
       "sor": 68,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3862,7 +3862,7 @@
       "Year": 2023,
       "sos": 99,
       "sor": 50,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -3874,7 +3874,7 @@
       "Year": 2023,
       "sos": 94,
       "sor": 54,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -3886,7 +3886,7 @@
       "Year": 2023,
       "sos": 67,
       "sor": 79,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3898,7 +3898,7 @@
       "Year": 2023,
       "sos": 19,
       "sor": 18,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -3910,7 +3910,7 @@
       "Year": 2023,
       "sos": 66,
       "sor": 116,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -3922,7 +3922,7 @@
       "Year": 2023,
       "sos": 11,
       "sor": 60,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -3934,7 +3934,7 @@
       "Year": 2023,
       "sos": 17,
       "sor": 95,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -3946,7 +3946,7 @@
       "Year": 2023,
       "sos": 116,
       "sor": 67,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-5"
     },
     {
@@ -3958,7 +3958,7 @@
       "Year": 2023,
       "sos": 33,
       "sor": 43,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -3970,7 +3970,7 @@
       "Year": 2023,
       "sos": 32,
       "sor": 62,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -3982,7 +3982,7 @@
       "Year": 2023,
       "sos": 38,
       "sor": 108,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -3994,7 +3994,7 @@
       "Year": 2023,
       "sos": 59,
       "sor": 42,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -4006,7 +4006,7 @@
       "Year": 2023,
       "sos": 133,
       "sor": 38,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -4018,7 +4018,7 @@
       "Year": 2023,
       "sos": 103,
       "sor": 20,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -4030,7 +4030,7 @@
       "Year": 2023,
       "sos": 47,
       "sor": 111,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4042,7 +4042,7 @@
       "Year": 2023,
       "sos": 18,
       "sor": 98,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4054,7 +4054,7 @@
       "Year": 2023,
       "sos": 44,
       "sor": 117,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4066,7 +4066,7 @@
       "Year": 2023,
       "sos": 132,
       "sor": 87,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -4078,7 +4078,7 @@
       "Year": 2023,
       "sos": 126,
       "sor": 105,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4090,7 +4090,7 @@
       "Year": 2023,
       "sos": 6,
       "sor": 69,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4102,7 +4102,7 @@
       "Year": 2023,
       "sos": 101,
       "sor": 84,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4114,7 +4114,7 @@
       "Year": 2023,
       "sos": 113,
       "sor": 45,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4126,7 +4126,7 @@
       "Year": 2023,
       "sos": 80,
       "sor": 39,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4138,7 +4138,7 @@
       "Year": 2023,
       "sos": 95,
       "sor": 114,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4150,7 +4150,7 @@
       "Year": 2023,
       "sos": 122,
       "sor": 93,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4162,7 +4162,7 @@
       "Year": 2023,
       "sos": 26,
       "sor": 90,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4174,7 +4174,7 @@
       "Year": 2023,
       "sos": 114,
       "sor": 36,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -4186,7 +4186,7 @@
       "Year": 2023,
       "sos": 84,
       "sor": 106,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4198,7 +4198,7 @@
       "Year": 2023,
       "sos": 90,
       "sor": 92,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4210,7 +4210,7 @@
       "Year": 2023,
       "sos": 69,
       "sor": 66,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -4222,7 +4222,7 @@
       "Year": 2023,
       "sos": 31,
       "sor": 77,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4234,7 +4234,7 @@
       "Year": 2023,
       "sos": 72,
       "sor": 89,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4246,7 +4246,7 @@
       "Year": 2023,
       "sos": 23,
       "sor": 59,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4258,7 +4258,7 @@
       "Year": 2023,
       "sos": 76,
       "sor": 107,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4270,7 +4270,7 @@
       "Year": 2023,
       "sos": 79,
       "sor": 73,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -4282,7 +4282,7 @@
       "Year": 2023,
       "sos": 4,
       "sor": 81,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4294,7 +4294,7 @@
       "Year": 2023,
       "sos": 105,
       "sor": 63,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -4306,7 +4306,7 @@
       "Year": 2023,
       "sos": 60,
       "sor": 99,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4318,7 +4318,7 @@
       "Year": 2023,
       "sos": 125,
       "sor": 101,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4330,7 +4330,7 @@
       "Year": 2023,
       "sos": 82,
       "sor": 71,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -4342,7 +4342,7 @@
       "Year": 2023,
       "sos": 92,
       "sor": 97,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4354,7 +4354,7 @@
       "Year": 2023,
       "sos": 98,
       "sor": 110,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4366,7 +4366,7 @@
       "Year": 2023,
       "sos": 107,
       "sor": 103,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4378,7 +4378,7 @@
       "Year": 2023,
       "sos": 124,
       "sor": 129,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4390,7 +4390,7 @@
       "Year": 2023,
       "sos": 129,
       "sor": 48,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4402,7 +4402,7 @@
       "Year": 2023,
       "sos": 73,
       "sor": 127,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -4414,7 +4414,7 @@
       "Year": 2023,
       "sos": 123,
       "sor": 102,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4426,7 +4426,7 @@
       "Year": 2023,
       "sos": 120,
       "sor": 74,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -4438,7 +4438,7 @@
       "Year": 2023,
       "sos": 106,
       "sor": 118,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4450,7 +4450,7 @@
       "Year": 2023,
       "sos": 88,
       "sor": 112,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4462,7 +4462,7 @@
       "Year": 2023,
       "sos": 75,
       "sor": 96,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4474,7 +4474,7 @@
       "Year": 2023,
       "sos": 89,
       "sor": 94,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4486,7 +4486,7 @@
       "Year": 2023,
       "sos": 81,
       "sor": 122,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4498,7 +4498,7 @@
       "Year": 2023,
       "sos": 27,
       "sor": 119,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -4510,7 +4510,7 @@
       "Year": 2023,
       "sos": 121,
       "sor": 128,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4522,7 +4522,7 @@
       "Year": 2023,
       "sos": 91,
       "sor": 125,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4534,7 +4534,7 @@
       "Year": 2023,
       "sos": 86,
       "sor": 113,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4546,7 +4546,7 @@
       "Year": 2023,
       "sos": 100,
       "sor": 72,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -4558,7 +4558,7 @@
       "Year": 2023,
       "sos": 131,
       "sor": 104,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4570,7 +4570,7 @@
       "Year": 2023,
       "sos": 78,
       "sor": 124,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4582,7 +4582,7 @@
       "Year": 2023,
       "sos": 97,
       "sor": 123,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4594,7 +4594,7 @@
       "Year": 2023,
       "sos": 9,
       "sor": 86,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4606,7 +4606,7 @@
       "Year": 2023,
       "sos": 85,
       "sor": 121,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4618,7 +4618,7 @@
       "Year": 2023,
       "sos": 102,
       "sor": 131,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -4630,7 +4630,7 @@
       "Year": 2023,
       "sos": 68,
       "sor": 100,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4642,7 +4642,7 @@
       "Year": 2023,
       "sos": 110,
       "sor": 109,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -4654,7 +4654,7 @@
       "Year": 2023,
       "sos": 130,
       "sor": 132,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -4666,7 +4666,7 @@
       "Year": 2023,
       "sos": 112,
       "sor": 120,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4678,7 +4678,7 @@
       "Year": 2023,
       "sos": 109,
       "sor": 126,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -4690,7 +4690,7 @@
       "Year": 2023,
       "sos": 117,
       "sor": 115,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -4702,7 +4702,7 @@
       "Year": 2023,
       "sos": 96,
       "sor": 91,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4714,7 +4714,7 @@
       "Year": 2023,
       "sos": 111,
       "sor": 133,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -4726,7 +4726,7 @@
       "Year": 2023,
       "sos": 70,
       "sor": 130,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -4738,7 +4738,7 @@
       "Year": 2024,
       "sos": 3,
       "sor": 1,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "14-2"
     },
     {
@@ -4750,7 +4750,7 @@
       "Year": 2024,
       "sos": 23,
       "sor": 5,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "14-2"
     },
     {
@@ -4762,7 +4762,7 @@
       "Year": 2024,
       "sos": 22,
       "sor": 2,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-1"
     },
     {
@@ -4774,7 +4774,7 @@
       "Year": 2024,
       "sos": 9,
       "sor": 4,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-3"
     },
     {
@@ -4786,7 +4786,7 @@
       "Year": 2024,
       "sos": 11,
       "sor": 21,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4798,7 +4798,7 @@
       "Year": 2024,
       "sos": 1,
       "sor": 3,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -4810,7 +4810,7 @@
       "Year": 2024,
       "sos": 15,
       "sor": 6,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-3"
     },
     {
@@ -4822,7 +4822,7 @@
       "Year": 2024,
       "sos": 36,
       "sor": 8,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -4834,7 +4834,7 @@
       "Year": 2024,
       "sos": 42,
       "sor": 17,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -4846,7 +4846,7 @@
       "Year": 2024,
       "sos": 66,
       "sor": 30,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -4858,7 +4858,7 @@
       "Year": 2024,
       "sos": 34,
       "sor": 25,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -4870,7 +4870,7 @@
       "Year": 2024,
       "sos": 52,
       "sor": 19,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -4882,7 +4882,7 @@
       "Year": 2024,
       "sos": 82,
       "sor": 60,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -4894,7 +4894,7 @@
       "Year": 2024,
       "sos": 4,
       "sor": 16,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -4906,7 +4906,7 @@
       "Year": 2024,
       "sos": 12,
       "sor": 13,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4918,7 +4918,7 @@
       "Year": 2024,
       "sos": 14,
       "sor": 18,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4930,7 +4930,7 @@
       "Year": 2024,
       "sos": 8,
       "sor": 42,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -4942,7 +4942,7 @@
       "Year": 2024,
       "sos": 17,
       "sor": 41,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -4954,7 +4954,7 @@
       "Year": 2024,
       "sos": 35,
       "sor": 86,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -4966,7 +4966,7 @@
       "Year": 2024,
       "sos": 38,
       "sor": 20,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -4978,7 +4978,7 @@
       "Year": 2024,
       "sos": 21,
       "sor": 24,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -4990,7 +4990,7 @@
       "Year": 2024,
       "sos": 16,
       "sor": 27,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5002,7 +5002,7 @@
       "Year": 2024,
       "sos": 46,
       "sor": 44,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5014,7 +5014,7 @@
       "Year": 2024,
       "sos": 56,
       "sor": 7,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -5026,7 +5026,7 @@
       "Year": 2024,
       "sos": 63,
       "sor": 39,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -5038,7 +5038,7 @@
       "Year": 2024,
       "sos": 50,
       "sor": 33,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -5050,7 +5050,7 @@
       "Year": 2024,
       "sos": 2,
       "sor": 11,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5062,7 +5062,7 @@
       "Year": 2024,
       "sos": 96,
       "sor": 68,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5074,7 +5074,7 @@
       "Year": 2024,
       "sos": 39,
       "sor": 14,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -5086,7 +5086,7 @@
       "Year": 2024,
       "sos": 72,
       "sor": 9,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -5098,7 +5098,7 @@
       "Year": 2024,
       "sos": 18,
       "sor": 48,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5110,7 +5110,7 @@
       "Year": 2024,
       "sos": 55,
       "sor": 47,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5122,7 +5122,7 @@
       "Year": 2024,
       "sos": 44,
       "sor": 10,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -5134,7 +5134,7 @@
       "Year": 2024,
       "sos": 57,
       "sor": 38,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -5146,7 +5146,7 @@
       "Year": 2024,
       "sos": 26,
       "sor": 40,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5158,7 +5158,7 @@
       "Year": 2024,
       "sos": 71,
       "sor": 91,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5170,7 +5170,7 @@
       "Year": 2024,
       "sos": 87,
       "sor": 100,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5182,7 +5182,7 @@
       "Year": 2024,
       "sos": 97,
       "sor": 43,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -5194,7 +5194,7 @@
       "Year": 2024,
       "sos": 40,
       "sor": 23,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -5206,7 +5206,7 @@
       "Year": 2024,
       "sos": 30,
       "sor": 64,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5218,7 +5218,7 @@
       "Year": 2024,
       "sos": 25,
       "sor": 56,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5230,7 +5230,7 @@
       "Year": 2024,
       "sos": 58,
       "sor": 110,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5242,7 +5242,7 @@
       "Year": 2024,
       "sos": 105,
       "sor": 62,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5254,7 +5254,7 @@
       "Year": 2024,
       "sos": 47,
       "sor": 12,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -5266,7 +5266,7 @@
       "Year": 2024,
       "sos": 134,
       "sor": 52,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-4"
     },
     {
@@ -5278,7 +5278,7 @@
       "Year": 2024,
       "sos": 13,
       "sor": 66,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5290,7 +5290,7 @@
       "Year": 2024,
       "sos": 24,
       "sor": 45,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5302,7 +5302,7 @@
       "Year": 2024,
       "sos": 43,
       "sor": 49,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5314,7 +5314,7 @@
       "Year": 2024,
       "sos": 89,
       "sor": 80,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5326,7 +5326,7 @@
       "Year": 2024,
       "sos": 110,
       "sor": 26,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -5338,7 +5338,7 @@
       "Year": 2024,
       "sos": 124,
       "sor": 50,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -5350,7 +5350,7 @@
       "Year": 2024,
       "sos": 48,
       "sor": 81,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5362,7 +5362,7 @@
       "Year": 2024,
       "sos": 84,
       "sor": 31,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -5374,7 +5374,7 @@
       "Year": 2024,
       "sos": 67,
       "sor": 82,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5386,7 +5386,7 @@
       "Year": 2024,
       "sos": 29,
       "sor": 36,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5398,7 +5398,7 @@
       "Year": 2024,
       "sos": 106,
       "sor": 55,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -5410,7 +5410,7 @@
       "Year": 2024,
       "sos": 128,
       "sor": 70,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -5422,7 +5422,7 @@
       "Year": 2024,
       "sos": 45,
       "sor": 46,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5434,7 +5434,7 @@
       "Year": 2024,
       "sos": 53,
       "sor": 32,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -5446,7 +5446,7 @@
       "Year": 2024,
       "sos": 7,
       "sor": 53,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5458,7 +5458,7 @@
       "Year": 2024,
       "sos": 60,
       "sor": 73,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5470,7 +5470,7 @@
       "Year": 2024,
       "sos": 121,
       "sor": 37,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -5482,7 +5482,7 @@
       "Year": 2024,
       "sos": 68,
       "sor": 95,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5494,7 +5494,7 @@
       "Year": 2024,
       "sos": 54,
       "sor": 115,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -5506,7 +5506,7 @@
       "Year": 2024,
       "sos": 125,
       "sor": 75,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5518,7 +5518,7 @@
       "Year": 2024,
       "sos": 61,
       "sor": 72,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5530,7 +5530,7 @@
       "Year": 2024,
       "sos": 41,
       "sor": 71,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5542,7 +5542,7 @@
       "Year": 2024,
       "sos": 49,
       "sor": 92,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5554,7 +5554,7 @@
       "Year": 2024,
       "sos": 59,
       "sor": 28,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -5566,7 +5566,7 @@
       "Year": 2024,
       "sos": 115,
       "sor": 76,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5578,7 +5578,7 @@
       "Year": 2024,
       "sos": 78,
       "sor": 29,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -5590,7 +5590,7 @@
       "Year": 2024,
       "sos": 99,
       "sor": 65,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5602,7 +5602,7 @@
       "Year": 2024,
       "sos": 19,
       "sor": 34,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5614,7 +5614,7 @@
       "Year": 2024,
       "sos": 70,
       "sor": 58,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5626,7 +5626,7 @@
       "Year": 2024,
       "sos": 6,
       "sor": 101,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -5638,7 +5638,7 @@
       "Year": 2024,
       "sos": 90,
       "sor": 113,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5650,7 +5650,7 @@
       "Year": 2024,
       "sos": 126,
       "sor": 15,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -5662,7 +5662,7 @@
       "Year": 2024,
       "sos": 104,
       "sor": 97,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5674,7 +5674,7 @@
       "Year": 2024,
       "sos": 94,
       "sor": 77,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-6"
     },
     {
@@ -5686,7 +5686,7 @@
       "Year": 2024,
       "sos": 101,
       "sor": 59,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5698,7 +5698,7 @@
       "Year": 2024,
       "sos": 65,
       "sor": 79,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-6"
     },
     {
@@ -5710,7 +5710,7 @@
       "Year": 2024,
       "sos": 51,
       "sor": 90,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5722,7 +5722,7 @@
       "Year": 2024,
       "sos": 93,
       "sor": 112,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5734,7 +5734,7 @@
       "Year": 2024,
       "sos": 98,
       "sor": 96,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5746,7 +5746,7 @@
       "Year": 2024,
       "sos": 10,
       "sor": 109,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -5758,7 +5758,7 @@
       "Year": 2024,
       "sos": 122,
       "sor": 74,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5770,7 +5770,7 @@
       "Year": 2024,
       "sos": 119,
       "sor": 78,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5782,7 +5782,7 @@
       "Year": 2024,
       "sos": 62,
       "sor": 108,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5794,7 +5794,7 @@
       "Year": 2024,
       "sos": 32,
       "sor": 69,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5806,7 +5806,7 @@
       "Year": 2024,
       "sos": 33,
       "sor": 85,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5818,7 +5818,7 @@
       "Year": 2024,
       "sos": 64,
       "sor": 67,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5830,7 +5830,7 @@
       "Year": 2024,
       "sos": 114,
       "sor": 83,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -5842,7 +5842,7 @@
       "Year": 2024,
       "sos": 28,
       "sor": 61,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5854,7 +5854,7 @@
       "Year": 2024,
       "sos": 120,
       "sor": 35,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -5866,7 +5866,7 @@
       "Year": 2024,
       "sos": 130,
       "sor": 54,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -5878,7 +5878,7 @@
       "Year": 2024,
       "sos": 27,
       "sor": 87,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5890,7 +5890,7 @@
       "Year": 2024,
       "sos": 107,
       "sor": 57,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5902,7 +5902,7 @@
       "Year": 2024,
       "sos": 112,
       "sor": 122,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -5914,7 +5914,7 @@
       "Year": 2024,
       "sos": 74,
       "sor": 84,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5926,7 +5926,7 @@
       "Year": 2024,
       "sos": 83,
       "sor": 127,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -5938,7 +5938,7 @@
       "Year": 2024,
       "sos": 37,
       "sor": 88,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -5950,7 +5950,7 @@
       "Year": 2024,
       "sos": 88,
       "sor": 63,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -5962,7 +5962,7 @@
       "Year": 2024,
       "sos": 111,
       "sor": 93,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5974,7 +5974,7 @@
       "Year": 2024,
       "sos": 116,
       "sor": 104,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -5986,7 +5986,7 @@
       "Year": 2024,
       "sos": 86,
       "sor": 103,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -5998,7 +5998,7 @@
       "Year": 2024,
       "sos": 85,
       "sor": 131,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-10"
     },
     {
@@ -6010,7 +6010,7 @@
       "Year": 2024,
       "sos": 20,
       "sor": 98,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6022,7 +6022,7 @@
       "Year": 2024,
       "sos": 102,
       "sor": 125,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6034,7 +6034,7 @@
       "Year": 2024,
       "sos": 133,
       "sor": 118,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6046,7 +6046,7 @@
       "Year": 2024,
       "sos": 127,
       "sor": 51,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6058,7 +6058,7 @@
       "Year": 2024,
       "sos": 5,
       "sor": 111,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -6070,7 +6070,7 @@
       "Year": 2024,
       "sos": 76,
       "sor": 22,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -6082,7 +6082,7 @@
       "Year": 2024,
       "sos": 80,
       "sor": 119,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6094,7 +6094,7 @@
       "Year": 2024,
       "sos": 132,
       "sor": 117,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -6106,7 +6106,7 @@
       "Year": 2024,
       "sos": 75,
       "sor": 94,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6118,7 +6118,7 @@
       "Year": 2024,
       "sos": 77,
       "sor": 130,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -6130,7 +6130,7 @@
       "Year": 2024,
       "sos": 31,
       "sor": 102,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6142,7 +6142,7 @@
       "Year": 2024,
       "sos": 129,
       "sor": 105,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6154,7 +6154,7 @@
       "Year": 2024,
       "sos": 100,
       "sor": 114,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6166,7 +6166,7 @@
       "Year": 2024,
       "sos": 92,
       "sor": 99,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6178,7 +6178,7 @@
       "Year": 2024,
       "sos": 118,
       "sor": 106,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6190,7 +6190,7 @@
       "Year": 2024,
       "sos": 69,
       "sor": 89,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6202,7 +6202,7 @@
       "Year": 2024,
       "sos": 95,
       "sor": 121,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6214,7 +6214,7 @@
       "Year": 2024,
       "sos": 103,
       "sor": 120,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6226,7 +6226,7 @@
       "Year": 2024,
       "sos": 117,
       "sor": 132,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -6238,7 +6238,7 @@
       "Year": 2024,
       "sos": 79,
       "sor": 107,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6250,7 +6250,7 @@
       "Year": 2024,
       "sos": 131,
       "sor": 129,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6262,7 +6262,7 @@
       "Year": 2024,
       "sos": 109,
       "sor": 116,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6274,7 +6274,7 @@
       "Year": 2024,
       "sos": 113,
       "sor": 126,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6286,7 +6286,7 @@
       "Year": 2024,
       "sos": 91,
       "sor": 123,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6298,7 +6298,7 @@
       "Year": 2024,
       "sos": 108,
       "sor": 124,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6310,7 +6310,7 @@
       "Year": 2024,
       "sos": 73,
       "sor": 133,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -6322,7 +6322,7 @@
       "Year": 2024,
       "sos": 123,
       "sor": 128,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -6334,7 +6334,7 @@
       "Year": 2024,
       "sos": 81,
       "sor": 134,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "0-12"
     },
     {
@@ -6346,7 +6346,7 @@
       "Year": 2025,
       "sos": 49,
       "sor": 13,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-2"
     },
     {
@@ -6358,7 +6358,7 @@
       "Year": 2025,
       "sos": 28,
       "sor": 4,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -6370,7 +6370,7 @@
       "Year": 2025,
       "sos": 14,
       "sor": 2,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-2"
     },
     {
@@ -6382,7 +6382,7 @@
       "Year": 2025,
       "sos": 15,
       "sor": 1,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "16-0"
     },
     {
@@ -6394,7 +6394,7 @@
       "Year": 2025,
       "sos": 11,
       "sor": 3,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -6406,7 +6406,7 @@
       "Year": 2025,
       "sos": 20,
       "sor": 37,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -6418,7 +6418,7 @@
       "Year": 2025,
       "sos": 9,
       "sor": 7,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -6430,7 +6430,7 @@
       "Year": 2025,
       "sos": 29,
       "sor": 6,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-2"
     },
     {
@@ -6442,7 +6442,7 @@
       "Year": 2025,
       "sos": 53,
       "sor": 14,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-2"
     },
     {
@@ -6454,7 +6454,7 @@
       "Year": 2025,
       "sos": 6,
       "sor": 12,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-4"
     },
     {
@@ -6466,7 +6466,7 @@
       "Year": 2025,
       "sos": 62,
       "sor": 10,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -6478,7 +6478,7 @@
       "Year": 2025,
       "sos": 23,
       "sor": 20,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6490,7 +6490,7 @@
       "Year": 2025,
       "sos": 5,
       "sor": 5,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "13-3"
     },
     {
@@ -6502,7 +6502,7 @@
       "Year": 2025,
       "sos": 46,
       "sor": 35,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -6514,7 +6514,7 @@
       "Year": 2025,
       "sos": 107,
       "sor": 21,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -6526,7 +6526,7 @@
       "Year": 2025,
       "sos": 48,
       "sor": 22,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6538,7 +6538,7 @@
       "Year": 2025,
       "sos": 22,
       "sor": 23,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6550,7 +6550,7 @@
       "Year": 2025,
       "sos": 19,
       "sor": 9,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -6562,7 +6562,7 @@
       "Year": 2025,
       "sos": 30,
       "sor": 17,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6574,7 +6574,7 @@
       "Year": 2025,
       "sos": 21,
       "sor": 15,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -6586,7 +6586,7 @@
       "Year": 2025,
       "sos": 67,
       "sor": 32,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6598,7 +6598,7 @@
       "Year": 2025,
       "sos": 75,
       "sor": 33,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6610,7 +6610,7 @@
       "Year": 2025,
       "sos": 47,
       "sor": 60,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -6622,7 +6622,7 @@
       "Year": 2025,
       "sos": 27,
       "sor": 64,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6634,7 +6634,7 @@
       "Year": 2025,
       "sos": 108,
       "sor": 54,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -6646,7 +6646,7 @@
       "Year": 2025,
       "sos": 72,
       "sor": 18,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -6658,7 +6658,7 @@
       "Year": 2025,
       "sos": 12,
       "sor": 8,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -6670,7 +6670,7 @@
       "Year": 2025,
       "sos": 36,
       "sor": 11,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "12-2"
     },
     {
@@ -6682,7 +6682,7 @@
       "Year": 2025,
       "sos": 42,
       "sor": 30,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -6694,7 +6694,7 @@
       "Year": 2025,
       "sos": 59,
       "sor": 82,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6706,7 +6706,7 @@
       "Year": 2025,
       "sos": 35,
       "sor": 47,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -6718,7 +6718,7 @@
       "Year": 2025,
       "sos": 57,
       "sor": 34,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6730,7 +6730,7 @@
       "Year": 2025,
       "sos": 58,
       "sor": 67,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-6"
     },
     {
@@ -6742,7 +6742,7 @@
       "Year": 2025,
       "sos": 64,
       "sor": 29,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6754,7 +6754,7 @@
       "Year": 2025,
       "sos": 16,
       "sor": 49,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -6766,7 +6766,7 @@
       "Year": 2025,
       "sos": 13,
       "sor": 74,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6778,7 +6778,7 @@
       "Year": 2025,
       "sos": 77,
       "sor": 69,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -6790,7 +6790,7 @@
       "Year": 2025,
       "sos": 4,
       "sor": 101,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -6802,7 +6802,7 @@
       "Year": 2025,
       "sos": 128,
       "sor": 73,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -6814,7 +6814,7 @@
       "Year": 2025,
       "sos": 70,
       "sor": 66,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -6826,7 +6826,7 @@
       "Year": 2025,
       "sos": 132,
       "sor": 58,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6838,7 +6838,7 @@
       "Year": 2025,
       "sos": 52,
       "sor": 28,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6850,7 +6850,7 @@
       "Year": 2025,
       "sos": 39,
       "sor": 44,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -6862,7 +6862,7 @@
       "Year": 2025,
       "sos": 56,
       "sor": 31,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-4"
     },
     {
@@ -6874,7 +6874,7 @@
       "Year": 2025,
       "sos": 101,
       "sor": 65,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -6886,7 +6886,7 @@
       "Year": 2025,
       "sos": 7,
       "sor": 57,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6898,7 +6898,7 @@
       "Year": 2025,
       "sos": 2,
       "sor": 62,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -6910,7 +6910,7 @@
       "Year": 2025,
       "sos": 37,
       "sor": 76,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6922,7 +6922,7 @@
       "Year": 2025,
       "sos": 79,
       "sor": 25,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -6934,7 +6934,7 @@
       "Year": 2025,
       "sos": 120,
       "sor": 39,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -6946,7 +6946,7 @@
       "Year": 2025,
       "sos": 60,
       "sor": 42,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -6958,7 +6958,7 @@
       "Year": 2025,
       "sos": 54,
       "sor": 40,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -6970,7 +6970,7 @@
       "Year": 2025,
       "sos": 44,
       "sor": 80,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -6982,7 +6982,7 @@
       "Year": 2025,
       "sos": 61,
       "sor": 59,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -6994,7 +6994,7 @@
       "Year": 2025,
       "sos": 40,
       "sor": 27,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7006,7 +7006,7 @@
       "Year": 2025,
       "sos": 18,
       "sor": 68,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -7018,7 +7018,7 @@
       "Year": 2025,
       "sos": 25,
       "sor": 16,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7030,7 +7030,7 @@
       "Year": 2025,
       "sos": 32,
       "sor": 36,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -7042,7 +7042,7 @@
       "Year": 2025,
       "sos": 55,
       "sor": 19,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -7054,7 +7054,7 @@
       "Year": 2025,
       "sos": 106,
       "sor": 86,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7066,7 +7066,7 @@
       "Year": 2025,
       "sos": 90,
       "sor": 46,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7078,7 +7078,7 @@
       "Year": 2025,
       "sos": 68,
       "sor": 26,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "11-3"
     },
     {
@@ -7090,7 +7090,7 @@
       "Year": 2025,
       "sos": 43,
       "sor": 51,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7102,7 +7102,7 @@
       "Year": 2025,
       "sos": 76,
       "sor": 24,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-3"
     },
     {
@@ -7114,7 +7114,7 @@
       "Year": 2025,
       "sos": 119,
       "sor": 116,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7126,7 +7126,7 @@
       "Year": 2025,
       "sos": 34,
       "sor": 109,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7138,7 +7138,7 @@
       "Year": 2025,
       "sos": 100,
       "sor": 45,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7150,7 +7150,7 @@
       "Year": 2025,
       "sos": 63,
       "sor": 94,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7162,7 +7162,7 @@
       "Year": 2025,
       "sos": 81,
       "sor": 95,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -7174,7 +7174,7 @@
       "Year": 2025,
       "sos": 86,
       "sor": 91,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7186,7 +7186,7 @@
       "Year": 2025,
       "sos": 17,
       "sor": 53,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7198,7 +7198,7 @@
       "Year": 2025,
       "sos": 130,
       "sor": 71,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-5"
     },
     {
@@ -7210,7 +7210,7 @@
       "Year": 2025,
       "sos": 45,
       "sor": 63,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7222,7 +7222,7 @@
       "Year": 2025,
       "sos": 69,
       "sor": 41,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7234,7 +7234,7 @@
       "Year": 2025,
       "sos": 50,
       "sor": 38,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -7246,7 +7246,7 @@
       "Year": 2025,
       "sos": 111,
       "sor": 43,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -7258,7 +7258,7 @@
       "Year": 2025,
       "sos": 71,
       "sor": 79,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7270,7 +7270,7 @@
       "Year": 2025,
       "sos": 114,
       "sor": 52,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7282,7 +7282,7 @@
       "Year": 2025,
       "sos": 26,
       "sor": 83,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7294,7 +7294,7 @@
       "Year": 2025,
       "sos": 51,
       "sor": 90,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7306,7 +7306,7 @@
       "Year": 2025,
       "sos": 85,
       "sor": 110,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7318,7 +7318,7 @@
       "Year": 2025,
       "sos": 110,
       "sor": 103,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -7330,7 +7330,7 @@
       "Year": 2025,
       "sos": 129,
       "sor": 70,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-5"
     },
     {
@@ -7342,7 +7342,7 @@
       "Year": 2025,
       "sos": 3,
       "sor": 61,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7354,7 +7354,7 @@
       "Year": 2025,
       "sos": 105,
       "sor": 55,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7366,7 +7366,7 @@
       "Year": 2025,
       "sos": 41,
       "sor": 121,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -7378,7 +7378,7 @@
       "Year": 2025,
       "sos": 96,
       "sor": 113,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7390,7 +7390,7 @@
       "Year": 2025,
       "sos": 122,
       "sor": 88,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7402,7 +7402,7 @@
       "Year": 2025,
       "sos": 102,
       "sor": 100,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-7"
     },
     {
@@ -7414,7 +7414,7 @@
       "Year": 2025,
       "sos": 1,
       "sor": 72,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7426,7 +7426,7 @@
       "Year": 2025,
       "sos": 95,
       "sor": 78,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7438,7 +7438,7 @@
       "Year": 2025,
       "sos": 93,
       "sor": 112,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7450,7 +7450,7 @@
       "Year": 2025,
       "sos": 124,
       "sor": 56,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7462,7 +7462,7 @@
       "Year": 2025,
       "sos": 89,
       "sor": 50,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "9-4"
     },
     {
@@ -7474,7 +7474,7 @@
       "Year": 2025,
       "sos": 8,
       "sor": 96,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -7486,7 +7486,7 @@
       "Year": 2025,
       "sos": 99,
       "sor": 93,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7498,7 +7498,7 @@
       "Year": 2025,
       "sos": 91,
       "sor": 75,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7510,7 +7510,7 @@
       "Year": 2025,
       "sos": 83,
       "sor": 81,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7522,7 +7522,7 @@
       "Year": 2025,
       "sos": 94,
       "sor": 48,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "10-4"
     },
     {
@@ -7534,7 +7534,7 @@
       "Year": 2025,
       "sos": 118,
       "sor": 85,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7546,7 +7546,7 @@
       "Year": 2025,
       "sos": 112,
       "sor": 87,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7558,7 +7558,7 @@
       "Year": 2025,
       "sos": 117,
       "sor": 119,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7570,7 +7570,7 @@
       "Year": 2025,
       "sos": 88,
       "sor": 99,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "6-7"
     },
     {
@@ -7582,7 +7582,7 @@
       "Year": 2025,
       "sos": 103,
       "sor": 108,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7594,7 +7594,7 @@
       "Year": 2025,
       "sos": 87,
       "sor": 84,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "8-6"
     },
     {
@@ -7606,7 +7606,7 @@
       "Year": 2025,
       "sos": 24,
       "sor": 92,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7618,7 +7618,7 @@
       "Year": 2025,
       "sos": 38,
       "sor": 111,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7630,7 +7630,7 @@
       "Year": 2025,
       "sos": 104,
       "sor": 125,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7642,7 +7642,7 @@
       "Year": 2025,
       "sos": 33,
       "sor": 97,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7654,7 +7654,7 @@
       "Year": 2025,
       "sos": 109,
       "sor": 118,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -7666,7 +7666,7 @@
       "Year": 2025,
       "sos": 80,
       "sor": 124,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -7678,7 +7678,7 @@
       "Year": 2025,
       "sos": 74,
       "sor": 129,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -7690,7 +7690,7 @@
       "Year": 2025,
       "sos": 92,
       "sor": 77,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7702,7 +7702,7 @@
       "Year": 2025,
       "sos": 82,
       "sor": 102,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7714,7 +7714,7 @@
       "Year": 2025,
       "sos": 66,
       "sor": 133,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -7726,7 +7726,7 @@
       "Year": 2025,
       "sos": 10,
       "sor": 104,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7738,7 +7738,7 @@
       "Year": 2025,
       "sos": 78,
       "sor": 122,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7750,7 +7750,7 @@
       "Year": 2025,
       "sos": 125,
       "sor": 126,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7762,7 +7762,7 @@
       "Year": 2025,
       "sos": 127,
       "sor": 132,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -7774,7 +7774,7 @@
       "Year": 2025,
       "sos": 133,
       "sor": 105,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7786,7 +7786,7 @@
       "Year": 2025,
       "sos": 131,
       "sor": 127,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7798,7 +7798,7 @@
       "Year": 2025,
       "sos": 116,
       "sor": 89,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "7-6"
     },
     {
@@ -7810,7 +7810,7 @@
       "Year": 2025,
       "sos": 123,
       "sor": 120,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7822,7 +7822,7 @@
       "Year": 2025,
       "sos": 31,
       "sor": 128,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -7834,7 +7834,7 @@
       "Year": 2025,
       "sos": 121,
       "sor": 114,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7846,7 +7846,7 @@
       "Year": 2025,
       "sos": 126,
       "sor": 117,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7858,7 +7858,7 @@
       "Year": 2025,
       "sos": 73,
       "sor": 106,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-8"
     },
     {
@@ -7870,7 +7870,7 @@
       "Year": 2025,
       "sos": 134,
       "sor": 107,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7882,7 +7882,7 @@
       "Year": 2025,
       "sos": 65,
       "sor": 130,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "1-11"
     },
     {
@@ -7894,7 +7894,7 @@
       "Year": 2025,
       "sos": 98,
       "sor": 115,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "4-8"
     },
     {
@@ -7906,7 +7906,7 @@
       "Year": 2025,
       "sos": 113,
       "sor": 98,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "5-7"
     },
     {
@@ -7918,7 +7918,7 @@
       "Year": 2025,
       "sos": 84,
       "sor": 123,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "3-9"
     },
     {
@@ -7930,7 +7930,7 @@
       "Year": 2025,
       "sos": 97,
       "sor": 131,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "2-10"
     },
     {
@@ -7942,7 +7942,7 @@
       "Year": 2025,
       "sos": 115,
       "sor": 134,
-      "Expected Wins": NaN,
+      "Expected Wins": null,
       "record": "0-12"
     },
     {
@@ -7952,7 +7952,7 @@
       "Net Rating": 22.1,
       "Year": 2026,
       "sos": 31,
-      "sor": 1,
+      "sor": null,
       "Expected Wins": 10.19,
       "record": "0-0"
     },
@@ -7963,7 +7963,7 @@
       "Net Rating": 21.6,
       "Year": 2026,
       "sos": 6,
-      "sor": 10,
+      "sor": null,
       "Expected Wins": 8.89,
       "record": "0-0"
     },
@@ -7974,7 +7974,7 @@
       "Net Rating": 20.3,
       "Year": 2026,
       "sos": 58,
-      "sor": 9,
+      "sor": null,
       "Expected Wins": 8.73,
       "record": "0-0"
     },
@@ -7985,7 +7985,7 @@
       "Net Rating": 19.4,
       "Year": 2026,
       "sos": 2,
-      "sor": 4,
+      "sor": null,
       "Expected Wins": 9.23,
       "record": "0-0"
     },
@@ -7996,7 +7996,7 @@
       "Net Rating": 18.9,
       "Year": 2026,
       "sos": 51,
-      "sor": 20,
+      "sor": null,
       "Expected Wins": 7.76,
       "record": "0-0"
     },
@@ -8007,7 +8007,7 @@
       "Net Rating": 18.6,
       "Year": 2026,
       "sos": 49,
-      "sor": 5,
+      "sor": null,
       "Expected Wins": 9.0,
       "record": "0-0"
     },
@@ -8018,7 +8018,7 @@
       "Net Rating": 18.1,
       "Year": 2026,
       "sos": 4,
-      "sor": 19,
+      "sor": null,
       "Expected Wins": 7.99,
       "record": "0-0"
     },
@@ -8029,7 +8029,7 @@
       "Net Rating": 17.9,
       "Year": 2026,
       "sos": 27,
-      "sor": 17,
+      "sor": null,
       "Expected Wins": 7.91,
       "record": "0-0"
     },
@@ -8040,7 +8040,7 @@
       "Net Rating": 17.4,
       "Year": 2026,
       "sos": 57,
-      "sor": 2,
+      "sor": null,
       "Expected Wins": 9.55,
       "record": "0-0"
     },
@@ -8051,7 +8051,7 @@
       "Net Rating": 17.1,
       "Year": 2026,
       "sos": 60,
-      "sor": 6,
+      "sor": null,
       "Expected Wins": 9.0,
       "record": "0-0"
     },
@@ -8062,7 +8062,7 @@
       "Net Rating": 17.1,
       "Year": 2026,
       "sos": 26,
-      "sor": 21,
+      "sor": null,
       "Expected Wins": 7.73,
       "record": "0-0"
     },
@@ -8073,7 +8073,7 @@
       "Net Rating": 16.1,
       "Year": 2026,
       "sos": 37,
-      "sor": 7,
+      "sor": null,
       "Expected Wins": 8.94,
       "record": "0-0"
     },
@@ -8084,7 +8084,7 @@
       "Net Rating": 15.5,
       "Year": 2026,
       "sos": 44,
-      "sor": 36,
+      "sor": null,
       "Expected Wins": 7.1,
       "record": "0-0"
     },
@@ -8095,7 +8095,7 @@
       "Net Rating": 15.3,
       "Year": 2026,
       "sos": 32,
-      "sor": 11,
+      "sor": null,
       "Expected Wins": 8.64,
       "record": "0-0"
     },
@@ -8106,7 +8106,7 @@
       "Net Rating": 14.9,
       "Year": 2026,
       "sos": 55,
-      "sor": 32,
+      "sor": null,
       "Expected Wins": 7.23,
       "record": "0-0"
     },
@@ -8117,7 +8117,7 @@
       "Net Rating": 14.0,
       "Year": 2026,
       "sos": 41,
-      "sor": 37,
+      "sor": null,
       "Expected Wins": 7.07,
       "record": "0-0"
     },
@@ -8128,7 +8128,7 @@
       "Net Rating": 13.8,
       "Year": 2026,
       "sos": 15,
-      "sor": 27,
+      "sor": null,
       "Expected Wins": 7.4,
       "record": "0-0"
     },
@@ -8139,7 +8139,7 @@
       "Net Rating": 13.6,
       "Year": 2026,
       "sos": 14,
-      "sor": 50,
+      "sor": null,
       "Expected Wins": 6.71,
       "record": "0-0"
     },
@@ -8150,7 +8150,7 @@
       "Net Rating": 13.4,
       "Year": 2026,
       "sos": 19,
-      "sor": 48,
+      "sor": null,
       "Expected Wins": 6.72,
       "record": "0-0"
     },
@@ -8161,7 +8161,7 @@
       "Net Rating": 13.2,
       "Year": 2026,
       "sos": 38,
-      "sor": 16,
+      "sor": null,
       "Expected Wins": 8.02,
       "record": "0-0"
     },
@@ -8172,7 +8172,7 @@
       "Net Rating": 13.2,
       "Year": 2026,
       "sos": 24,
-      "sor": 51,
+      "sor": null,
       "Expected Wins": 6.66,
       "record": "0-0"
     },
@@ -8183,7 +8183,7 @@
       "Net Rating": 13.1,
       "Year": 2026,
       "sos": 5,
-      "sor": 42,
+      "sor": null,
       "Expected Wins": 7.1,
       "record": "0-0"
     },
@@ -8194,7 +8194,7 @@
       "Net Rating": 13.1,
       "Year": 2026,
       "sos": 40,
-      "sor": 18,
+      "sor": null,
       "Expected Wins": 7.83,
       "record": "0-0"
     },
@@ -8205,7 +8205,7 @@
       "Net Rating": 12.8,
       "Year": 2026,
       "sos": 9,
-      "sor": 15,
+      "sor": null,
       "Expected Wins": 8.21,
       "record": "0-0"
     },
@@ -8216,7 +8216,7 @@
       "Net Rating": 12.8,
       "Year": 2026,
       "sos": 53,
-      "sor": 53,
+      "sor": null,
       "Expected Wins": 6.62,
       "record": "0-0"
     },
@@ -8227,7 +8227,7 @@
       "Net Rating": 12.0,
       "Year": 2026,
       "sos": 25,
-      "sor": 38,
+      "sor": null,
       "Expected Wins": 7.03,
       "record": "0-0"
     },
@@ -8238,7 +8238,7 @@
       "Net Rating": 11.9,
       "Year": 2026,
       "sos": 91,
-      "sor": 71,
+      "sor": null,
       "Expected Wins": 6.04,
       "record": "0-0"
     },
@@ -8249,7 +8249,7 @@
       "Net Rating": 10.5,
       "Year": 2026,
       "sos": 23,
-      "sor": 43,
+      "sor": null,
       "Expected Wins": 6.88,
       "record": "0-0"
     },
@@ -8260,7 +8260,7 @@
       "Net Rating": 10.4,
       "Year": 2026,
       "sos": 1,
-      "sor": 39,
+      "sor": null,
       "Expected Wins": 7.19,
       "record": "0-0"
     },
@@ -8271,7 +8271,7 @@
       "Net Rating": 10.0,
       "Year": 2026,
       "sos": 71,
-      "sor": 31,
+      "sor": null,
       "Expected Wins": 7.03,
       "record": "0-0"
     },
@@ -8282,7 +8282,7 @@
       "Net Rating": 10.0,
       "Year": 2026,
       "sos": 10,
-      "sor": 33,
+      "sor": null,
       "Expected Wins": 7.23,
       "record": "0-0"
     },
@@ -8293,7 +8293,7 @@
       "Net Rating": 9.8,
       "Year": 2026,
       "sos": 45,
-      "sor": 160,
+      "sor": null,
       "Expected Wins": 5.37,
       "record": "0-0"
     },
@@ -8304,7 +8304,7 @@
       "Net Rating": 9.8,
       "Year": 2026,
       "sos": 52,
-      "sor": 8,
+      "sor": null,
       "Expected Wins": 8.73,
       "record": "0-0"
     },
@@ -8315,7 +8315,7 @@
       "Net Rating": 9.4,
       "Year": 2026,
       "sos": 11,
-      "sor": 52,
+      "sor": null,
       "Expected Wins": 6.64,
       "record": "0-0"
     },
@@ -8326,7 +8326,7 @@
       "Net Rating": 9.2,
       "Year": 2026,
       "sos": 117,
-      "sor": 45,
+      "sor": null,
       "Expected Wins": 6.56,
       "record": "0-0"
     },
@@ -8337,7 +8337,7 @@
       "Net Rating": 9.1,
       "Year": 2026,
       "sos": 134,
-      "sor": 24,
+      "sor": null,
       "Expected Wins": 6.79,
       "record": "0-0"
     },
@@ -8348,7 +8348,7 @@
       "Net Rating": 8.5,
       "Year": 2026,
       "sos": 108,
-      "sor": 12,
+      "sor": null,
       "Expected Wins": 8.28,
       "record": "0-0"
     },
@@ -8359,7 +8359,7 @@
       "Net Rating": 8.4,
       "Year": 2026,
       "sos": 13,
-      "sor": 46,
+      "sor": null,
       "Expected Wins": 6.76,
       "record": "0-0"
     },
@@ -8370,7 +8370,7 @@
       "Net Rating": 8.4,
       "Year": 2026,
       "sos": 43,
-      "sor": 77,
+      "sor": null,
       "Expected Wins": 6.17,
       "record": "0-0"
     },
@@ -8381,7 +8381,7 @@
       "Net Rating": 8.2,
       "Year": 2026,
       "sos": 129,
-      "sor": 3,
+      "sor": null,
       "Expected Wins": 8.97,
       "record": "0-0"
     },
@@ -8392,7 +8392,7 @@
       "Net Rating": 7.9,
       "Year": 2026,
       "sos": 16,
-      "sor": 74,
+      "sor": null,
       "Expected Wins": 6.21,
       "record": "0-0"
     },
@@ -8403,7 +8403,7 @@
       "Net Rating": 7.9,
       "Year": 2026,
       "sos": 36,
-      "sor": 170,
+      "sor": null,
       "Expected Wins": 5.23,
       "record": "0-0"
     },
@@ -8414,7 +8414,7 @@
       "Net Rating": 7.7,
       "Year": 2026,
       "sos": 18,
-      "sor": 181,
+      "sor": null,
       "Expected Wins": 5.11,
       "record": "0-0"
     },
@@ -8425,7 +8425,7 @@
       "Net Rating": 7.6,
       "Year": 2026,
       "sos": 3,
-      "sor": 35,
+      "sor": null,
       "Expected Wins": 7.32,
       "record": "0-0"
     },
@@ -8436,7 +8436,7 @@
       "Net Rating": 7.6,
       "Year": 2026,
       "sos": 21,
-      "sor": 40,
+      "sor": null,
       "Expected Wins": 6.95,
       "record": "0-0"
     },
@@ -8447,7 +8447,7 @@
       "Net Rating": 7.5,
       "Year": 2026,
       "sos": 20,
-      "sor": 73,
+      "sor": null,
       "Expected Wins": 6.22,
       "record": "0-0"
     },
@@ -8458,7 +8458,7 @@
       "Net Rating": 7.4,
       "Year": 2026,
       "sos": 59,
-      "sor": 41,
+      "sor": null,
       "Expected Wins": 6.92,
       "record": "0-0"
     },
@@ -8469,7 +8469,7 @@
       "Net Rating": 7.3,
       "Year": 2026,
       "sos": 94,
-      "sor": 56,
+      "sor": null,
       "Expected Wins": 6.32,
       "record": "0-0"
     },
@@ -8480,7 +8480,7 @@
       "Net Rating": 7.3,
       "Year": 2026,
       "sos": 125,
-      "sor": 78,
+      "sor": null,
       "Expected Wins": 5.95,
       "record": "0-0"
     },
@@ -8491,7 +8491,7 @@
       "Net Rating": 7.3,
       "Year": 2026,
       "sos": 128,
-      "sor": 25,
+      "sor": null,
       "Expected Wins": 7.34,
       "record": "0-0"
     },
@@ -8502,7 +8502,7 @@
       "Net Rating": 7.1,
       "Year": 2026,
       "sos": 22,
-      "sor": 63,
+      "sor": null,
       "Expected Wins": 6.35,
       "record": "0-0"
     },
@@ -8513,7 +8513,7 @@
       "Net Rating": 6.8,
       "Year": 2026,
       "sos": 90,
-      "sor": 14,
+      "sor": null,
       "Expected Wins": 8.09,
       "record": "0-0"
     },
@@ -8524,7 +8524,7 @@
       "Net Rating": 6.4,
       "Year": 2026,
       "sos": 88,
-      "sor": 57,
+      "sor": null,
       "Expected Wins": 6.32,
       "record": "0-0"
     },
@@ -8535,7 +8535,7 @@
       "Net Rating": 6.3,
       "Year": 2026,
       "sos": 50,
-      "sor": 82,
+      "sor": null,
       "Expected Wins": 6.08,
       "record": "0-0"
     },
@@ -8546,7 +8546,7 @@
       "Net Rating": 6.2,
       "Year": 2026,
       "sos": 131,
-      "sor": 29,
+      "sor": null,
       "Expected Wins": 7.09,
       "record": "0-0"
     },
@@ -8557,7 +8557,7 @@
       "Net Rating": 6.2,
       "Year": 2026,
       "sos": 35,
-      "sor": 134,
+      "sor": null,
       "Expected Wins": 5.61,
       "record": "0-0"
     },
@@ -8568,7 +8568,7 @@
       "Net Rating": 6.1,
       "Year": 2026,
       "sos": 115,
-      "sor": 76,
+      "sor": null,
       "Expected Wins": 5.98,
       "record": "0-0"
     },
@@ -8579,7 +8579,7 @@
       "Net Rating": 6.0,
       "Year": 2026,
       "sos": 34,
-      "sor": 67,
+      "sor": null,
       "Expected Wins": 6.32,
       "record": "0-0"
     },
@@ -8590,7 +8590,7 @@
       "Net Rating": 5.9,
       "Year": 2026,
       "sos": 104,
-      "sor": 23,
+      "sor": null,
       "Expected Wins": 7.46,
       "record": "0-0"
     },
@@ -8601,7 +8601,7 @@
       "Net Rating": 5.7,
       "Year": 2026,
       "sos": 76,
-      "sor": 30,
+      "sor": null,
       "Expected Wins": 7.04,
       "record": "0-0"
     },
@@ -8612,7 +8612,7 @@
       "Net Rating": 5.6,
       "Year": 2026,
       "sos": 47,
-      "sor": 103,
+      "sor": null,
       "Expected Wins": 5.84,
       "record": "0-0"
     },
@@ -8623,7 +8623,7 @@
       "Net Rating": 5.5,
       "Year": 2026,
       "sos": 159,
-      "sor": 69,
+      "sor": null,
       "Expected Wins": 6.43,
       "record": "0-0"
     },
@@ -8634,7 +8634,7 @@
       "Net Rating": 5.5,
       "Year": 2026,
       "sos": 30,
-      "sor": 106,
+      "sor": null,
       "Expected Wins": 5.78,
       "record": "0-0"
     },
@@ -8645,7 +8645,7 @@
       "Net Rating": 5.3,
       "Year": 2026,
       "sos": 7,
-      "sor": 61,
+      "sor": null,
       "Expected Wins": 6.05,
       "record": "0-0"
     },
@@ -8656,7 +8656,7 @@
       "Net Rating": 5.1,
       "Year": 2026,
       "sos": 80,
-      "sor": 75,
+      "sor": null,
       "Expected Wins": 6.0,
       "record": "0-0"
     },
@@ -8667,7 +8667,7 @@
       "Net Rating": 5.0,
       "Year": 2026,
       "sos": 61,
-      "sor": 55,
+      "sor": null,
       "Expected Wins": 5.99,
       "record": "0-0"
     },
@@ -8678,7 +8678,7 @@
       "Net Rating": 4.8,
       "Year": 2026,
       "sos": 42,
-      "sor": 13,
+      "sor": null,
       "Expected Wins": 8.31,
       "record": "0-0"
     },
@@ -8689,7 +8689,7 @@
       "Net Rating": 4.8,
       "Year": 2026,
       "sos": 110,
-      "sor": 144,
+      "sor": null,
       "Expected Wins": 5.32,
       "record": "0-0"
     },
@@ -8700,7 +8700,7 @@
       "Net Rating": 4.5,
       "Year": 2026,
       "sos": 56,
-      "sor": 133,
+      "sor": null,
       "Expected Wins": 5.61,
       "record": "0-0"
     },
@@ -8711,7 +8711,7 @@
       "Net Rating": 3.9,
       "Year": 2026,
       "sos": 135,
-      "sor": 49,
+      "sor": null,
       "Expected Wins": 5.9,
       "record": "0-0"
     },
@@ -8722,7 +8722,7 @@
       "Net Rating": 3.8,
       "Year": 2026,
       "sos": 33,
-      "sor": 201,
+      "sor": null,
       "Expected Wins": 4.93,
       "record": "0-0"
     },
@@ -8733,7 +8733,7 @@
       "Net Rating": 3.7,
       "Year": 2026,
       "sos": 17,
-      "sor": 26,
+      "sor": null,
       "Expected Wins": 7.45,
       "record": "0-0"
     },
@@ -8744,7 +8744,7 @@
       "Net Rating": 3.7,
       "Year": 2026,
       "sos": 112,
-      "sor": 122,
+      "sor": null,
       "Expected Wins": 5.47,
       "record": "0-0"
     },
@@ -8755,7 +8755,7 @@
       "Net Rating": 3.7,
       "Year": 2026,
       "sos": 70,
-      "sor": 44,
+      "sor": null,
       "Expected Wins": 6.6,
       "record": "0-0"
     },
@@ -8766,7 +8766,7 @@
       "Net Rating": 3.6,
       "Year": 2026,
       "sos": 62,
-      "sor": 62,
+      "sor": null,
       "Expected Wins": 5.77,
       "record": "0-0"
     },
@@ -8777,7 +8777,7 @@
       "Net Rating": 3.5,
       "Year": 2026,
       "sos": 39,
-      "sor": 132,
+      "sor": null,
       "Expected Wins": 5.61,
       "record": "0-0"
     },
@@ -8788,7 +8788,7 @@
       "Net Rating": 3.2,
       "Year": 2026,
       "sos": 48,
-      "sor": 168,
+      "sor": null,
       "Expected Wins": 5.25,
       "record": "0-0"
     },
@@ -8799,7 +8799,7 @@
       "Net Rating": 3.2,
       "Year": 2026,
       "sos": 121,
-      "sor": 214,
+      "sor": null,
       "Expected Wins": 4.56,
       "record": "0-0"
     },
@@ -8810,7 +8810,7 @@
       "Net Rating": 3.0,
       "Year": 2026,
       "sos": 46,
-      "sor": 166,
+      "sor": null,
       "Expected Wins": 5.27,
       "record": "0-0"
     },
@@ -8821,7 +8821,7 @@
       "Net Rating": 2.8,
       "Year": 2026,
       "sos": 81,
-      "sor": 196,
+      "sor": null,
       "Expected Wins": 4.73,
       "record": "0-0"
     },
@@ -8832,7 +8832,7 @@
       "Net Rating": 2.5,
       "Year": 2026,
       "sos": 123,
-      "sor": 34,
+      "sor": null,
       "Expected Wins": 6.92,
       "record": "0-0"
     },
@@ -8843,7 +8843,7 @@
       "Net Rating": 2.5,
       "Year": 2026,
       "sos": 12,
-      "sor": 184,
+      "sor": null,
       "Expected Wins": 5.09,
       "record": "0-0"
     },
@@ -8854,7 +8854,7 @@
       "Net Rating": 2.4,
       "Year": 2026,
       "sos": 99,
-      "sor": 199,
+      "sor": null,
       "Expected Wins": 4.72,
       "record": "0-0"
     },
@@ -8865,7 +8865,7 @@
       "Net Rating": 1.9,
       "Year": 2026,
       "sos": 122,
-      "sor": 28,
+      "sor": null,
       "Expected Wins": 7.14,
       "record": "0-0"
     },
@@ -8876,7 +8876,7 @@
       "Net Rating": 1.7,
       "Year": 2026,
       "sos": 111,
-      "sor": 80,
+      "sor": null,
       "Expected Wins": 5.91,
       "record": "0-0"
     },
@@ -8887,7 +8887,7 @@
       "Net Rating": 1.6,
       "Year": 2026,
       "sos": 119,
-      "sor": 22,
+      "sor": null,
       "Expected Wins": 7.52,
       "record": "0-0"
     },
@@ -8898,7 +8898,7 @@
       "Net Rating": 1.1,
       "Year": 2026,
       "sos": 64,
-      "sor": 129,
+      "sor": null,
       "Expected Wins": 5.03,
       "record": "0-0"
     },
@@ -8909,7 +8909,7 @@
       "Net Rating": 0.8,
       "Year": 2026,
       "sos": 127,
-      "sor": 47,
+      "sor": null,
       "Expected Wins": 6.53,
       "record": "0-0"
     },
@@ -8920,7 +8920,7 @@
       "Net Rating": 0.7,
       "Year": 2026,
       "sos": 184,
-      "sor": 102,
+      "sor": null,
       "Expected Wins": 5.76,
       "record": "0-0"
     },
@@ -8931,7 +8931,7 @@
       "Net Rating": 0.6,
       "Year": 2026,
       "sos": 79,
-      "sor": 60,
+      "sor": null,
       "Expected Wins": 6.26,
       "record": "0-0"
     },
@@ -8942,7 +8942,7 @@
       "Net Rating": 0.4,
       "Year": 2026,
       "sos": 113,
-      "sor": 226,
+      "sor": null,
       "Expected Wins": 4.11,
       "record": "0-0"
     },
@@ -8953,7 +8953,7 @@
       "Net Rating": 0.2,
       "Year": 2026,
       "sos": 8,
-      "sor": 235,
+      "sor": null,
       "Expected Wins": 3.96,
       "record": "0-0"
     },
@@ -8964,7 +8964,7 @@
       "Net Rating": 0.1,
       "Year": 2026,
       "sos": 89,
-      "sor": 70,
+      "sor": null,
       "Expected Wins": 6.08,
       "record": "0-0"
     },
@@ -8975,7 +8975,7 @@
       "Net Rating": 0.1,
       "Year": 2026,
       "sos": 107,
-      "sor": 58,
+      "sor": null,
       "Expected Wins": 6.31,
       "record": "0-0"
     },
@@ -8986,7 +8986,7 @@
       "Net Rating": 0.0,
       "Year": 2026,
       "sos": 165,
-      "sor": 95,
+      "sor": null,
       "Expected Wins": 6.05,
       "record": "0-0"
     },
@@ -8997,7 +8997,7 @@
       "Net Rating": -0.1,
       "Year": 2026,
       "sos": 168,
-      "sor": 104,
+      "sor": null,
       "Expected Wins": 5.95,
       "record": "0-0"
     },
@@ -9008,7 +9008,7 @@
       "Net Rating": -0.1,
       "Year": 2026,
       "sos": 101,
-      "sor": 224,
+      "sor": null,
       "Expected Wins": 4.14,
       "record": "0-0"
     },
@@ -9019,7 +9019,7 @@
       "Net Rating": -0.2,
       "Year": 2026,
       "sos": 65,
-      "sor": 72,
+      "sor": null,
       "Expected Wins": 6.63,
       "record": "0-0"
     },
@@ -9030,7 +9030,7 @@
       "Net Rating": -0.4,
       "Year": 2026,
       "sos": 83,
-      "sor": 114,
+      "sor": null,
       "Expected Wins": 5.53,
       "record": "0-0"
     },
@@ -9041,7 +9041,7 @@
       "Net Rating": -0.5,
       "Year": 2026,
       "sos": 29,
-      "sor": 64,
+      "sor": null,
       "Expected Wins": 6.35,
       "record": "0-0"
     },
@@ -9052,7 +9052,7 @@
       "Net Rating": -0.5,
       "Year": 2026,
       "sos": 78,
-      "sor": 79,
+      "sor": null,
       "Expected Wins": 5.92,
       "record": "0-0"
     },
@@ -9063,7 +9063,7 @@
       "Net Rating": -0.7,
       "Year": 2026,
       "sos": 66,
-      "sor": 121,
+      "sor": null,
       "Expected Wins": 5.47,
       "record": "0-0"
     },
@@ -9074,7 +9074,7 @@
       "Net Rating": -0.8,
       "Year": 2026,
       "sos": 130,
-      "sor": 59,
+      "sor": null,
       "Expected Wins": 6.28,
       "record": "0-0"
     },
@@ -9085,7 +9085,7 @@
       "Net Rating": -1.4,
       "Year": 2026,
       "sos": 133,
-      "sor": 204,
+      "sor": null,
       "Expected Wins": 4.07,
       "record": "0-0"
     },
@@ -9096,7 +9096,7 @@
       "Net Rating": -1.6,
       "Year": 2026,
       "sos": 84,
-      "sor": 158,
+      "sor": null,
       "Expected Wins": 5.16,
       "record": "0-0"
     },
@@ -9107,7 +9107,7 @@
       "Net Rating": -1.7,
       "Year": 2026,
       "sos": 102,
-      "sor": 100,
+      "sor": null,
       "Expected Wins": 5.64,
       "record": "0-0"
     },
@@ -9118,7 +9118,7 @@
       "Net Rating": -1.7,
       "Year": 2026,
       "sos": 86,
-      "sor": 54,
+      "sor": null,
       "Expected Wins": 6.4,
       "record": "0-0"
     },
@@ -9129,7 +9129,7 @@
       "Net Rating": -2.0,
       "Year": 2026,
       "sos": 116,
-      "sor": 81,
+      "sor": null,
       "Expected Wins": 5.87,
       "record": "0-0"
     },
@@ -9140,7 +9140,7 @@
       "Net Rating": -2.2,
       "Year": 2026,
       "sos": 28,
-      "sor": 208,
+      "sor": null,
       "Expected Wins": 4.85,
       "record": "0-0"
     },
@@ -9151,7 +9151,7 @@
       "Net Rating": -2.3,
       "Year": 2026,
       "sos": 77,
-      "sor": 94,
+      "sor": null,
       "Expected Wins": 5.71,
       "record": "0-0"
     },
@@ -9162,7 +9162,7 @@
       "Net Rating": -2.6,
       "Year": 2026,
       "sos": 97,
-      "sor": 153,
+      "sor": null,
       "Expected Wins": 5.23,
       "record": "0-0"
     },
@@ -9173,7 +9173,7 @@
       "Net Rating": -2.6,
       "Year": 2026,
       "sos": 105,
-      "sor": 164,
+      "sor": null,
       "Expected Wins": 5.11,
       "record": "0-0"
     },
@@ -9184,7 +9184,7 @@
       "Net Rating": -2.8,
       "Year": 2026,
       "sos": 100,
-      "sor": 174,
+      "sor": null,
       "Expected Wins": 4.96,
       "record": "0-0"
     },
@@ -9195,7 +9195,7 @@
       "Net Rating": -2.8,
       "Year": 2026,
       "sos": 72,
-      "sor": 65,
+      "sor": null,
       "Expected Wins": 6.13,
       "record": "0-0"
     },
@@ -9206,7 +9206,7 @@
       "Net Rating": -2.9,
       "Year": 2026,
       "sos": 106,
-      "sor": 157,
+      "sor": null,
       "Expected Wins": 5.16,
       "record": "0-0"
     },
@@ -9217,7 +9217,7 @@
       "Net Rating": -3.0,
       "Year": 2026,
       "sos": 114,
-      "sor": 68,
+      "sor": null,
       "Expected Wins": 6.11,
       "record": "0-0"
     },
@@ -9228,7 +9228,7 @@
       "Net Rating": -3.1,
       "Year": 2026,
       "sos": 63,
-      "sor": 219,
+      "sor": null,
       "Expected Wins": 4.01,
       "record": "0-0"
     },
@@ -9239,7 +9239,7 @@
       "Net Rating": -3.2,
       "Year": 2026,
       "sos": 170,
-      "sor": 112,
+      "sor": null,
       "Expected Wins": 5.88,
       "record": "0-0"
     },
@@ -9250,7 +9250,7 @@
       "Net Rating": -3.3,
       "Year": 2026,
       "sos": 54,
-      "sor": 203,
+      "sor": null,
       "Expected Wins": 4.9,
       "record": "0-0"
     },
@@ -9261,7 +9261,7 @@
       "Net Rating": -3.3,
       "Year": 2026,
       "sos": 87,
-      "sor": 126,
+      "sor": null,
       "Expected Wins": 5.45,
       "record": "0-0"
     },
@@ -9272,7 +9272,7 @@
       "Net Rating": -3.5,
       "Year": 2026,
       "sos": 68,
-      "sor": 156,
+      "sor": null,
       "Expected Wins": 5.19,
       "record": "0-0"
     },
@@ -9283,7 +9283,7 @@
       "Net Rating": -4.2,
       "Year": 2026,
       "sos": 175,
-      "sor": 213,
+      "sor": null,
       "Expected Wins": 4.91,
       "record": "0-0"
     },
@@ -9294,7 +9294,7 @@
       "Net Rating": -4.2,
       "Year": 2026,
       "sos": 82,
-      "sor": 162,
+      "sor": null,
       "Expected Wins": 5.15,
       "record": "0-0"
     },
@@ -9305,7 +9305,7 @@
       "Net Rating": -4.3,
       "Year": 2026,
       "sos": 98,
-      "sor": 195,
+      "sor": null,
       "Expected Wins": 4.76,
       "record": "0-0"
     },
@@ -9316,7 +9316,7 @@
       "Net Rating": -4.4,
       "Year": 2026,
       "sos": 124,
-      "sor": 115,
+      "sor": null,
       "Expected Wins": 5.53,
       "record": "0-0"
     },
@@ -9327,7 +9327,7 @@
       "Net Rating": -4.5,
       "Year": 2026,
       "sos": 146,
-      "sor": 190,
+      "sor": null,
       "Expected Wins": 4.6,
       "record": "0-0"
     },
@@ -9338,7 +9338,7 @@
       "Net Rating": -4.7,
       "Year": 2026,
       "sos": 118,
-      "sor": 207,
+      "sor": null,
       "Expected Wins": 4.66,
       "record": "0-0"
     },
@@ -9349,7 +9349,7 @@
       "Net Rating": -5.0,
       "Year": 2026,
       "sos": 85,
-      "sor": 230,
+      "sor": null,
       "Expected Wins": 4.01,
       "record": "0-0"
     },
@@ -9360,7 +9360,7 @@
       "Net Rating": -5.4,
       "Year": 2026,
       "sos": 75,
-      "sor": 234,
+      "sor": null,
       "Expected Wins": 3.82,
       "record": "0-0"
     },
@@ -9371,7 +9371,7 @@
       "Net Rating": -5.7,
       "Year": 2026,
       "sos": 177,
-      "sor": 223,
+      "sor": null,
       "Expected Wins": 4.49,
       "record": "0-0"
     },
@@ -9382,7 +9382,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 217,
-      "sor": 210,
+      "sor": null,
       "Expected Wins": 5.24,
       "record": "0-0"
     },
@@ -9393,7 +9393,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 241,
-      "sor": 240,
+      "sor": null,
       "Expected Wins": 4.0,
       "record": "0-0"
     },
@@ -9404,7 +9404,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 231,
-      "sor": 197,
+      "sor": null,
       "Expected Wins": 5.86,
       "record": "0-0"
     },
@@ -9415,7 +9415,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 141,
-      "sor": 66,
+      "sor": null,
       "Expected Wins": 5.91,
       "record": "0-0"
     },
@@ -9426,7 +9426,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 228,
-      "sor": 218,
+      "sor": null,
       "Expected Wins": 5.39,
       "record": "0-0"
     },
@@ -9437,7 +9437,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 67,
-      "sor": 85,
+      "sor": null,
       "Expected Wins": 5.82,
       "record": "0-0"
     },
@@ -9448,7 +9448,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 194,
-      "sor": 113,
+      "sor": null,
       "Expected Wins": 5.82,
       "record": "0-0"
     },
@@ -9459,7 +9459,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 172,
-      "sor": 127,
+      "sor": null,
       "Expected Wins": 5.93,
       "record": "0-0"
     },
@@ -9470,7 +9470,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 239,
-      "sor": 238,
+      "sor": null,
       "Expected Wins": 5.07,
       "record": "0-0"
     },
@@ -9481,7 +9481,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 209,
-      "sor": 161,
+      "sor": null,
       "Expected Wins": 6.0,
       "record": "0-0"
     },
@@ -9492,7 +9492,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 154,
-      "sor": 148,
+      "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
     },
@@ -9503,7 +9503,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 92,
-      "sor": 96,
+      "sor": null,
       "Expected Wins": 5.7,
       "record": "0-0"
     },
@@ -9514,7 +9514,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 205,
-      "sor": 169,
+      "sor": null,
       "Expected Wins": 5.72,
       "record": "0-0"
     },
@@ -9525,7 +9525,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 179,
-      "sor": 150,
+      "sor": null,
       "Expected Wins": 5.01,
       "record": "0-0"
     },
@@ -9536,7 +9536,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 140,
-      "sor": 89,
+      "sor": null,
       "Expected Wins": 5.54,
       "record": "0-0"
     },
@@ -9547,7 +9547,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 142,
-      "sor": 117,
+      "sor": null,
       "Expected Wins": 5.3,
       "record": "0-0"
     },
@@ -9558,7 +9558,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 185,
-      "sor": 152,
+      "sor": null,
       "Expected Wins": 5.55,
       "record": "0-0"
     },
@@ -9569,7 +9569,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 186,
-      "sor": 128,
+      "sor": null,
       "Expected Wins": 5.71,
       "record": "0-0"
     },
@@ -9580,7 +9580,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 225,
-      "sor": 212,
+      "sor": null,
       "Expected Wins": 5.61,
       "record": "0-0"
     },
@@ -9591,7 +9591,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 109,
-      "sor": 93,
+      "sor": null,
       "Expected Wins": 5.72,
       "record": "0-0"
     },
@@ -9602,7 +9602,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 155,
-      "sor": 145,
+      "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
     },
@@ -9613,7 +9613,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 216,
-      "sor": 177,
+      "sor": null,
       "Expected Wins": 5.58,
       "record": "0-0"
     },
@@ -9624,7 +9624,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 220,
-      "sor": 217,
+      "sor": null,
       "Expected Wins": 5.82,
       "record": "0-0"
     },
@@ -9635,7 +9635,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 200,
-      "sor": 167,
+      "sor": null,
       "Expected Wins": 6.04,
       "record": "0-0"
     },
@@ -9646,7 +9646,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 218,
-      "sor": 178,
+      "sor": null,
       "Expected Wins": 5.41,
       "record": "0-0"
     },
@@ -9657,7 +9657,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 103,
-      "sor": 200,
+      "sor": null,
       "Expected Wins": 4.72,
       "record": "0-0"
     },
@@ -9668,7 +9668,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 157,
-      "sor": 147,
+      "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
     },
@@ -9679,7 +9679,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 148,
-      "sor": 110,
+      "sor": null,
       "Expected Wins": 5.34,
       "record": "0-0"
     },
@@ -9690,7 +9690,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 152,
-      "sor": 131,
+      "sor": null,
       "Expected Wins": 5.35,
       "record": "0-0"
     },
@@ -9701,7 +9701,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 158,
-      "sor": 146,
+      "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
     },
@@ -9712,7 +9712,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 233,
-      "sor": 216,
+      "sor": null,
       "Expected Wins": 5.83,
       "record": "0-0"
     },
@@ -9723,7 +9723,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 147,
-      "sor": 92,
+      "sor": null,
       "Expected Wins": 5.52,
       "record": "0-0"
     },
@@ -9734,7 +9734,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 95,
-      "sor": 105,
+      "sor": null,
       "Expected Wins": 5.6,
       "record": "0-0"
     },
@@ -9745,7 +9745,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 230,
-      "sor": 194,
+      "sor": null,
       "Expected Wins": 5.74,
       "record": "0-0"
     },
@@ -9756,7 +9756,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 236,
-      "sor": 227,
+      "sor": null,
       "Expected Wins": 5.19,
       "record": "0-0"
     },
@@ -9767,7 +9767,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 198,
-      "sor": 192,
+      "sor": null,
       "Expected Wins": 5.84,
       "record": "0-0"
     },
@@ -9778,7 +9778,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 206,
-      "sor": 182,
+      "sor": null,
       "Expected Wins": 5.59,
       "record": "0-0"
     },
@@ -9789,7 +9789,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 201,
-      "sor": 159,
+      "sor": null,
       "Expected Wins": 5.85,
       "record": "0-0"
     },
@@ -9800,7 +9800,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 199,
-      "sor": 193,
+      "sor": null,
       "Expected Wins": 5.48,
       "record": "0-0"
     },
@@ -9811,7 +9811,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 173,
-      "sor": 119,
+      "sor": null,
       "Expected Wins": 5.84,
       "record": "0-0"
     },
@@ -9822,7 +9822,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 93,
-      "sor": 87,
+      "sor": null,
       "Expected Wins": 5.77,
       "record": "0-0"
     },
@@ -9833,7 +9833,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 202,
-      "sor": 180,
+      "sor": null,
       "Expected Wins": 5.6,
       "record": "0-0"
     },
@@ -9844,7 +9844,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 195,
-      "sor": 187,
+      "sor": null,
       "Expected Wins": 5.75,
       "record": "0-0"
     },
@@ -9855,7 +9855,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 174,
-      "sor": 116,
+      "sor": null,
       "Expected Wins": 5.86,
       "record": "0-0"
     },
@@ -9866,7 +9866,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 176,
-      "sor": 111,
+      "sor": null,
       "Expected Wins": 5.89,
       "record": "0-0"
     },
@@ -9877,7 +9877,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 207,
-      "sor": 171,
+      "sor": null,
       "Expected Wins": 5.71,
       "record": "0-0"
     },
@@ -9888,7 +9888,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 208,
-      "sor": 188,
+      "sor": null,
       "Expected Wins": 5.66,
       "record": "0-0"
     },
@@ -9899,7 +9899,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 166,
-      "sor": 143,
+      "sor": null,
       "Expected Wins": 5.68,
       "record": "0-0"
     },
@@ -9910,7 +9910,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 151,
-      "sor": 130,
+      "sor": null,
       "Expected Wins": 5.96,
       "record": "0-0"
     },
@@ -9921,7 +9921,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 150,
-      "sor": 140,
+      "sor": null,
       "Expected Wins": 5.91,
       "record": "0-0"
     },
@@ -9932,7 +9932,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 120,
-      "sor": 88,
+      "sor": null,
       "Expected Wins": 5.76,
       "record": "0-0"
     },
@@ -9943,7 +9943,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 163,
-      "sor": 173,
+      "sor": null,
       "Expected Wins": 5.33,
       "record": "0-0"
     },
@@ -9954,7 +9954,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 197,
-      "sor": 198,
+      "sor": null,
       "Expected Wins": 5.63,
       "record": "0-0"
     },
@@ -9965,7 +9965,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 164,
-      "sor": 149,
+      "sor": null,
       "Expected Wins": 5.62,
       "record": "0-0"
     },
@@ -9976,7 +9976,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 183,
-      "sor": 109,
+      "sor": null,
       "Expected Wins": 5.69,
       "record": "0-0"
     },
@@ -9987,7 +9987,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 222,
-      "sor": 215,
+      "sor": null,
       "Expected Wins": 5.77,
       "record": "0-0"
     },
@@ -9998,7 +9998,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 238,
-      "sor": 236,
+      "sor": null,
       "Expected Wins": 5.28,
       "record": "0-0"
     },
@@ -10009,7 +10009,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 229,
-      "sor": 211,
+      "sor": null,
       "Expected Wins": 5.71,
       "record": "0-0"
     },
@@ -10020,7 +10020,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 187,
-      "sor": 139,
+      "sor": null,
       "Expected Wins": 5.49,
       "record": "0-0"
     },
@@ -10031,7 +10031,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 180,
-      "sor": 125,
+      "sor": null,
       "Expected Wins": 5.2,
       "record": "0-0"
     },
@@ -10042,7 +10042,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 226,
-      "sor": 220,
+      "sor": null,
       "Expected Wins": 5.57,
       "record": "0-0"
     },
@@ -10053,7 +10053,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 182,
-      "sor": 155,
+      "sor": null,
       "Expected Wins": 5.34,
       "record": "0-0"
     },
@@ -10064,7 +10064,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 227,
-      "sor": 202,
+      "sor": null,
       "Expected Wins": 5.35,
       "record": "0-0"
     },
@@ -10075,7 +10075,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 145,
-      "sor": 97,
+      "sor": null,
       "Expected Wins": 5.46,
       "record": "0-0"
     },
@@ -10086,7 +10086,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 213,
-      "sor": 172,
+      "sor": null,
       "Expected Wins": 5.71,
       "record": "0-0"
     },
@@ -10097,7 +10097,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 219,
-      "sor": 186,
+      "sor": null,
       "Expected Wins": 4.94,
       "record": "0-0"
     },
@@ -10108,7 +10108,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 126,
-      "sor": 98,
+      "sor": null,
       "Expected Wins": 5.67,
       "record": "0-0"
     },
@@ -10119,7 +10119,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 232,
-      "sor": 233,
+      "sor": null,
       "Expected Wins": 5.8,
       "record": "0-0"
     },
@@ -10130,7 +10130,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 224,
-      "sor": 206,
+      "sor": null,
       "Expected Wins": 6.01,
       "record": "0-0"
     },
@@ -10141,7 +10141,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 196,
-      "sor": 183,
+      "sor": null,
       "Expected Wins": 5.8,
       "record": "0-0"
     },
@@ -10152,7 +10152,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 192,
-      "sor": 135,
+      "sor": null,
       "Expected Wins": 5.67,
       "record": "0-0"
     },
@@ -10163,7 +10163,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 178,
-      "sor": 86,
+      "sor": null,
       "Expected Wins": 5.53,
       "record": "0-0"
     },
@@ -10174,7 +10174,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 169,
-      "sor": 118,
+      "sor": null,
       "Expected Wins": 5.84,
       "record": "0-0"
     },
@@ -10185,7 +10185,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 193,
-      "sor": 138,
+      "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
     },
@@ -10196,7 +10196,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 234,
-      "sor": 228,
+      "sor": null,
       "Expected Wins": 5.42,
       "record": "0-0"
     },
@@ -10207,7 +10207,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 191,
-      "sor": 141,
+      "sor": null,
       "Expected Wins": 5.48,
       "record": "0-0"
     },
@@ -10218,7 +10218,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 237,
-      "sor": 232,
+      "sor": null,
       "Expected Wins": 5.0,
       "record": "0-0"
     },
@@ -10229,7 +10229,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 221,
-      "sor": 205,
+      "sor": null,
       "Expected Wins": 6.07,
       "record": "0-0"
     },
@@ -10240,7 +10240,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 136,
-      "sor": 91,
+      "sor": null,
       "Expected Wins": 5.13,
       "record": "0-0"
     },
@@ -10251,7 +10251,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 181,
-      "sor": 137,
+      "sor": null,
       "Expected Wins": 5.11,
       "record": "0-0"
     },
@@ -10262,7 +10262,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 210,
-      "sor": 175,
+      "sor": null,
       "Expected Wins": 5.8,
       "record": "0-0"
     },
@@ -10273,7 +10273,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 212,
-      "sor": 185,
+      "sor": null,
       "Expected Wins": 5.55,
       "record": "0-0"
     },
@@ -10284,7 +10284,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 137,
-      "sor": 90,
+      "sor": null,
       "Expected Wins": 5.54,
       "record": "0-0"
     },
@@ -10295,7 +10295,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 69,
-      "sor": 83,
+      "sor": null,
       "Expected Wins": 5.86,
       "record": "0-0"
     },
@@ -10306,7 +10306,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 149,
-      "sor": 99,
+      "sor": null,
       "Expected Wins": 5.23,
       "record": "0-0"
     },
@@ -10317,7 +10317,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 190,
-      "sor": 124,
+      "sor": null,
       "Expected Wins": 5.75,
       "record": "0-0"
     },
@@ -10328,7 +10328,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 235,
-      "sor": 221,
+      "sor": null,
       "Expected Wins": 6.0,
       "record": "0-0"
     },
@@ -10339,7 +10339,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 171,
-      "sor": 154,
+      "sor": null,
       "Expected Wins": 5.57,
       "record": "0-0"
     },
@@ -10350,7 +10350,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 240,
-      "sor": 241,
+      "sor": null,
       "Expected Wins": 5.35,
       "record": "0-0"
     },
@@ -10361,7 +10361,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 160,
-      "sor": 163,
+      "sor": null,
       "Expected Wins": 5.45,
       "record": "0-0"
     },
@@ -10372,7 +10372,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 161,
-      "sor": 120,
+      "sor": null,
       "Expected Wins": 5.83,
       "record": "0-0"
     },
@@ -10383,7 +10383,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 211,
-      "sor": 191,
+      "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
     },
@@ -10394,7 +10394,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 153,
-      "sor": 151,
+      "sor": null,
       "Expected Wins": 5.22,
       "record": "0-0"
     },
@@ -10405,7 +10405,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 223,
-      "sor": 209,
+      "sor": null,
       "Expected Wins": 5.8,
       "record": "0-0"
     },
@@ -10416,7 +10416,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 132,
-      "sor": 101,
+      "sor": null,
       "Expected Wins": 5.64,
       "record": "0-0"
     },
@@ -10427,7 +10427,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 162,
-      "sor": 142,
+      "sor": null,
       "Expected Wins": 5.68,
       "record": "0-0"
     },
@@ -10438,7 +10438,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 189,
-      "sor": 107,
+      "sor": null,
       "Expected Wins": 5.71,
       "record": "0-0"
     },
@@ -10449,7 +10449,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 215,
-      "sor": 176,
+      "sor": null,
       "Expected Wins": 5.58,
       "record": "0-0"
     },
@@ -10460,7 +10460,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 188,
-      "sor": 108,
+      "sor": null,
       "Expected Wins": 5.85,
       "record": "0-0"
     },
@@ -10471,7 +10471,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 203,
-      "sor": 189,
+      "sor": null,
       "Expected Wins": 5.11,
       "record": "0-0"
     },
@@ -10482,7 +10482,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 214,
-      "sor": 179,
+      "sor": null,
       "Expected Wins": 5.6,
       "record": "0-0"
     },
@@ -10493,7 +10493,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 144,
-      "sor": 123,
+      "sor": null,
       "Expected Wins": 5.26,
       "record": "0-0"
     },
@@ -10504,7 +10504,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 167,
-      "sor": 136,
+      "sor": null,
       "Expected Wins": 5.72,
       "record": "0-0"
     },
@@ -10515,7 +10515,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 204,
-      "sor": 165,
+      "sor": null,
       "Expected Wins": 5.93,
       "record": "0-0"
     },
@@ -10526,7 +10526,7 @@
       "Net Rating": -6.1,
       "Year": 2026,
       "sos": 143,
-      "sor": 84,
+      "sor": null,
       "Expected Wins": 5.61,
       "record": "0-0"
     },
@@ -10537,7 +10537,7 @@
       "Net Rating": -7.1,
       "Year": 2026,
       "sos": 73,
-      "sor": 231,
+      "sor": null,
       "Expected Wins": 3.99,
       "record": "0-0"
     },
@@ -10548,7 +10548,7 @@
       "Net Rating": -7.8,
       "Year": 2026,
       "sos": 96,
-      "sor": 229,
+      "sor": null,
       "Expected Wins": 4.02,
       "record": "0-0"
     },
@@ -10559,7 +10559,7 @@
       "Net Rating": -8.2,
       "Year": 2026,
       "sos": 139,
-      "sor": 222,
+      "sor": null,
       "Expected Wins": 4.14,
       "record": "0-0"
     },
@@ -10570,7 +10570,7 @@
       "Net Rating": -8.9,
       "Year": 2026,
       "sos": 138,
-      "sor": 225,
+      "sor": null,
       "Expected Wins": 3.91,
       "record": "0-0"
     },
@@ -10581,7 +10581,7 @@
       "Net Rating": -13.4,
       "Year": 2026,
       "sos": 156,
-      "sor": 237,
+      "sor": null,
       "Expected Wins": 3.5,
       "record": "0-0"
     },
@@ -10592,7 +10592,7 @@
       "Net Rating": -14.2,
       "Year": 2026,
       "sos": 74,
-      "sor": 239,
+      "sor": null,
       "Expected Wins": 2.89,
       "record": "0-0"
     }
