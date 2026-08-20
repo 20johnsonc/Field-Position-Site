@@ -41,17 +41,22 @@ interface TrajectoriesData {
   teams: Record<string, Record<string, TrajectoryGameEntry[]>>;
 }
 
-interface MatchupEntry {
+interface MatchupGameEntry {
+  game_id: number;
   week: number;
-  opponent: string;
-  location: 'Home' | 'Away';
-  predicted_margin: number;
+  year: number;
+  status: 'completed' | 'scheduled';
+  home_team: string;
+  away_team: string;
+  home_points: number | null;
+  away_points: number | null;
+  actual_margin: number | null;
+  predicted_margin: number | null;
 }
 
 interface MatchupsData {
   generated_at: string;
-  years: number[];
-  teams: Record<string, Record<string, MatchupEntry[]>>;
+  games: MatchupGameEntry[];
 }
 
 export function getStaticPaths() {
@@ -76,6 +81,10 @@ const gameHistory = gameHistoryRaw as GameHistoryData;
 const trajectories = trajectoriesRaw as TrajectoriesData;
 const matchups = matchupsRaw as MatchupsData;
 
+// Build a lookup set of valid team/year pages to make opponent links safe
+const allRankings = normalizeRankings(rankingsRaw as any);
+const validTeamYears = new Set(allRankings.map(r => `${r.year}-${slugifyTeam(r.team)}`));
+
 // 1. Pull completed game history if available for this team/year
 const completedRaw = gameHistory.years?.includes(row.year) 
   ? (gameHistory.teams[row.team]?.[String(row.year)] ?? [])
@@ -85,27 +94,39 @@ const completedGames = normalizeGameMargins(completedRaw).map(g => ({
   isCompleted: true,
 }));
 
-// 2. Pull scheduled matchups from matchup.json as the fallback/upcoming layer
-const scheduledMatchups = matchups.teams?.[row.team]?.[String(row.year)] ?? [];
+// 2. Filter the flat matchups.json list for this specific team and year
+const teamMatchups = matchups.games?.filter((g: any) => 
+  g.year === row.year && (g.home_team === row.team || g.away_team === row.team)
+) ?? [];
 
 // 3. Find which weeks already have completed game results logged
 const completedWeeks = new Set(completedGames.map(g => g.week));
 
-// 4. Map remaining unplayed weeks from matchup.json
-const upcomingGames = scheduledMatchups
-  .filter(m => !completedWeeks.has(m.week))
-  .map(m => ({
-    week: m.week,
-    opponent: m.opponent,
-    location: m.location,
-    team_score: null,
-    opponent_score: null,
-    actual_margin: null,
-    predicted_margin: m.predicted_margin,
-    beat_expectation_by: null,
-    result: null,
-    isCompleted: false,
-  }));
+// 4. Map upcoming/scheduled games from the flat list
+const upcomingGames = teamMatchups
+  .filter((g: any) => !completedWeeks.has(g.week))
+  .map((g: any) => {
+    const isHome = g.home_team === row.team;
+    const opponent = isHome ? g.away_team : g.home_team;
+    
+    // Adjust predicted margin perspective if team is away
+    const predMargin = isHome 
+      ? g.predicted_margin 
+      : (g.predicted_margin != null ? -g.predicted_margin : null);
+
+    return {
+      week: g.week,
+      opponent: opponent,
+      location: isHome ? 'Home' : 'Away',
+      team_score: null,
+      opponent_score: null,
+      actual_margin: null,
+      predicted_margin: predMargin,
+      beat_expectation_by: null,
+      result: null,
+      isCompleted: false,
+    };
+  });
 
 // 5. Merge and sort chronologically by week
 const sortedGameLog = [...completedGames, ...upcomingGames].sort((a, b) => a.week - b.week);
@@ -163,7 +184,9 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
     </thead>
     <tbody>
       {sortedGameLog.map((g: any) => {
-        const opponentLabel = `${g.location === 'Home' ? 'vs' : '@'} ${g.opponent}`;
+        const opponentSlug = slugifyTeam(g.opponent);
+        const hasPage = validTeamYears.has(`${row.year}-${opponentSlug}`);
+        const prefix = g.location === 'Home' ? 'vs ' : '@ ';
         
         // Handle label formatting for completed vs upcoming games
         const scoreLabel = g.isCompleted
@@ -184,7 +207,16 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
         return (
           <tr>
             <td>{g.week}</td>
-            <td>{opponentLabel}</td>
+            <td>
+              {prefix}
+              {hasPage ? (
+                <a href={`/teams/${row.year}/${opponentSlug}`} class="opponent-link">
+                  {g.opponent}
+                </a>
+              ) : (
+                g.opponent
+              )}
+            </td>
             <td class={g.isCompleted ? (g.result === 'W' ? 'win' : 'loss') : 'upcoming'}>
               {g.isCompleted ? `${g.result} ` : ''}{scoreLabel}
             </td>
@@ -215,3 +247,14 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
     </tbody>
   </table>
 </Layout>
+
+<style>
+  .opponent-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .opponent-link:hover {
+    text-decoration: underline;
+  }
+</style>
