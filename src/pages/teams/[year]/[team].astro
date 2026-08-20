@@ -4,12 +4,15 @@ import TeamTrajectoryChart from '../../../components/TeamTrajectoryChart.tsx';
 import rankingsRaw from '../../../data/rankings.json';
 import gameHistoryRaw from '../../../data/game_history.json';
 import trajectoriesRaw from '../../../data/trajectories.json';
+import matchupsRaw from '../../../data/matchups.json';
 import { normalizeRankings, slugifyTeam, formatRating, computeRanks, computeEfficiencyRange, normalizeGameMargins } from '../../../lib/data';
 
 interface GameLogEntry {
   week: number;
   opponent: string;
   location: 'Home' | 'Away';
+  team_score?: number;
+  opponent_score?: number;
   actual_margin: number;
   predicted_margin: number;
   beat_expectation_by: number;
@@ -38,6 +41,19 @@ interface TrajectoriesData {
   teams: Record<string, Record<string, TrajectoryGameEntry[]>>;
 }
 
+interface MatchupEntry {
+  week: number;
+  opponent: string;
+  location: 'Home' | 'Away';
+  predicted_margin: number;
+}
+
+interface MatchupsData {
+  generated_at: string;
+  years: number[];
+  teams: Record<string, Record<string, MatchupEntry[]>>;
+}
+
 export function getStaticPaths() {
   const rankings = normalizeRankings(rankingsRaw as any);
 
@@ -58,15 +74,41 @@ const { row, ranks, totalTeams } = Astro.props;
 
 const gameHistory = gameHistoryRaw as GameHistoryData;
 const trajectories = trajectoriesRaw as TrajectoriesData;
+const matchups = matchupsRaw as MatchupsData;
 
-const hasGameHistory =
-  gameHistory.years.includes(row.year) && Boolean(gameHistory.teams[row.team]?.[String(row.year)]);
+// 1. Pull completed game history if available for this team/year
+const completedRaw = gameHistory.years?.includes(row.year) 
+  ? (gameHistory.teams[row.team]?.[String(row.year)] ?? [])
+  : [];
+const completedGames = normalizeGameMargins(completedRaw).map(g => ({
+  ...g,
+  isCompleted: true,
+}));
 
-const rawLogs = hasGameHistory
-  ? normalizeGameMargins(gameHistory.teams[row.team]?.[String(row.year)] ?? [])
-  : (row.gameLog ?? []);
+// 2. Pull scheduled matchups from matchup.json as the fallback/upcoming layer
+const scheduledMatchups = matchups.teams?.[row.team]?.[String(row.year)] ?? [];
 
-const sortedGameLog = [...rawLogs].sort((a, b) => a.week - b.week);
+// 3. Find which weeks already have completed game results logged
+const completedWeeks = new Set(completedGames.map(g => g.week));
+
+// 4. Map remaining unplayed weeks from matchup.json
+const upcomingGames = scheduledMatchups
+  .filter(m => !completedWeeks.has(m.week))
+  .map(m => ({
+    week: m.week,
+    opponent: m.opponent,
+    location: m.location,
+    team_score: null,
+    opponent_score: null,
+    actual_margin: null,
+    predicted_margin: m.predicted_margin,
+    beat_expectation_by: null,
+    result: null,
+    isCompleted: false,
+  }));
+
+// 5. Merge and sort chronologically by week
+const sortedGameLog = [...completedGames, ...upcomingGames].sort((a, b) => a.week - b.week);
 
 const teamTrajectory = trajectories.teams?.[row.team]?.[String(row.year)] ?? [];
 
@@ -100,11 +142,11 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
     </div>
   </div>
 
-    <TeamTrajectoryChart
+  <TeamTrajectoryChart
     client:load
     team={row.team}
     trajectory={teamTrajectory}
-    games={hasGameHistory ? sortedGameLog : []}
+    games={completedGames}
     yMin={effMin}
     yMax={effMax}
   />
@@ -115,51 +157,58 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
       <tr>
         <th>Week</th>
         <th>Opponent</th>
-        <th>Result</th>
-        {hasGameHistory && <th class="num">vs Expectation</th>}
+        <th>Result / Prediction</th>
+        <th class="num">vs Expectation</th>
       </tr>
     </thead>
     <tbody>
       {sortedGameLog.map((g: any) => {
-        const margin = (hasGameHistory ? g.actual_margin : g.margin) ?? 0;
-        const win = hasGameHistory ? g.result === 'W' : g.win;
-        const opponentLabel = hasGameHistory
-          ? `${g.location === 'Home' ? 'vs' : '@'} ${g.opponent}`
-          : g.opponent;
-        const scoreLabel = g.team_score != null && g.opponent_score != null
-          ? `${g.team_score}–${g.opponent_score}`
-          : `${margin > 0 ? '+' : ''}${margin}`;
+        const opponentLabel = `${g.location === 'Home' ? 'vs' : '@'} ${g.opponent}`;
+        
+        // Handle label formatting for completed vs upcoming games
+        const scoreLabel = g.isCompleted
+          ? (g.team_score != null && g.opponent_score != null 
+              ? `${g.team_score}–${g.opponent_score}` 
+              : `${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`)
+          : `Proj: ${g.predicted_margin > 0 ? '+' : ''}${Number(g.predicted_margin).toFixed(1)}`;
 
-        const beatExp = g.beat_expectation_by != null ? Number(g.beat_expectation_by) : null;
-        const maxAbsBeatExp = Math.max(1, ...sortedGameLog.map((x: any) => Math.abs(x.beat_expectation_by ?? 0)));
+        const beatExp = g.isCompleted && g.beat_expectation_by != null ? Number(g.beat_expectation_by) : null;
+        
+        // Compute max absolute beat expectation for scaling the variance bars safely
+        const completedWithBeatExp = sortedGameLog.filter((x: any) => x.isCompleted && x.beat_expectation_by != null);
+        const maxAbsBeatExp = completedWithBeatExp.length > 0 
+          ? Math.max(1, ...completedWithBeatExp.map((x: any) => Math.abs(x.beat_expectation_by))) 
+          : 1;
         const barPct = beatExp != null ? Math.min(100, (Math.abs(beatExp) / maxAbsBeatExp) * 100) : 0;
 
         return (
           <tr>
             <td>{g.week}</td>
             <td>{opponentLabel}</td>
-            <td class={win ? 'win' : 'loss'}>
-              {win ? 'W' : 'L'} {scoreLabel}
+            <td class={g.isCompleted ? (g.result === 'W' ? 'win' : 'loss') : 'upcoming'}>
+              {g.isCompleted ? `${g.result} ` : ''}{scoreLabel}
             </td>
-            {hasGameHistory && (
-              <td class="num" title={`Predicted: ${g.predicted_margin > 0 ? '+' : ''}${Number(g.predicted_margin).toFixed(1)}`}>
+            <td class="num">
+              {g.isCompleted && beatExp != null ? (
                 <div class="beat-exp-bar-wrap">
-                  <span class="beat-exp-value" style={{ color: (beatExp ?? 0) >= 0 ? '#4ade80' : '#f87171' }}>
-                    {beatExp != null ? `${beatExp > 0 ? '+' : ''}${beatExp.toFixed(1)}` : '—'}
+                  <span class="beat-exp-value" style={{ color: beatExp >= 0 ? '#4ade80' : '#f87171' }}>
+                    {beatExp > 0 ? '+' : ''}{beatExp.toFixed(1)}
                   </span>
                   <div class="beat-exp-bar">
                     <div
                       class="beat-exp-fill"
                       style={{
                         width: `${barPct}%`,
-                        marginLeft: (beatExp ?? 0) >= 0 ? '50%' : `${50 - barPct}%`,
-                        backgroundColor: (beatExp ?? 0) >= 0 ? '#22c55e' : '#ef4444',
+                        marginLeft: beatExp >= 0 ? '50%' : `${50 - barPct}%`,
+                        backgroundColor: beatExp >= 0 ? '#22c55e' : '#ef4444',
                       }}
                     />
                   </div>
                 </div>
-              </td>
-            )}
+              ) : (
+                <span class="text-muted">—</span>
+              )}
+            </td>
           </tr>
         );
       })}
