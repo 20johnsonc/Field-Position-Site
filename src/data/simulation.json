@@ -1,0 +1,3809 @@
+{
+  "generated_at": "2026-08-23T12:28:34.469763+00:00",
+  "prediction_year": 2026,
+  "n_simulations": 20000,
+  "teams": {
+    "Air Force": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 7.0,
+      "ccg_appearance_odds_pct": 15.8,
+      "cfp_appearance_odds_pct": 1.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.0,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Akron": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 3.5,
+      "ccg_appearance_odds_pct": 8.7,
+      "cfp_appearance_odds_pct": 0.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.3,
+        "Quarterfinal": 0.2,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Alabama": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 12.8,
+      "ccg_appearance_odds_pct": 23.5,
+      "cfp_appearance_odds_pct": 37.2,
+      "cfp_seed_distribution_pct": {
+        "1": 4.4,
+        "2": 3.4,
+        "3": 2.1,
+        "4": 1.3,
+        "5": 4.0,
+        "6": 4.1,
+        "7": 3.8,
+        "8": 3.5,
+        "9": 3.3,
+        "10": 3.0,
+        "11": 3.0,
+        "12": 1.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 11.7,
+        "Quarterfinal": 11.7,
+        "Semifinal": 6.3,
+        "Championship": 3.5,
+        "National Champion": 4.0
+      },
+      "national_championship_odds_pct": 4.0
+    },
+    "App State": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 3.4,
+      "ccg_appearance_odds_pct": 7.8,
+      "cfp_appearance_odds_pct": 1.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Arizona": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 4.4,
+      "ccg_appearance_odds_pct": 9.0,
+      "cfp_appearance_odds_pct": 7.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.6,
+        "3": 0.6,
+        "4": 0.8,
+        "5": 0.3,
+        "6": 0.4,
+        "7": 0.5,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.8,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.6,
+        "Quarterfinal": 2.4,
+        "Semifinal": 1.0,
+        "Championship": 0.6,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Arizona State": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 5.2,
+      "ccg_appearance_odds_pct": 11.0,
+      "cfp_appearance_odds_pct": 7.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.6,
+        "3": 0.8,
+        "4": 0.8,
+        "5": 0.3,
+        "6": 0.5,
+        "7": 0.6,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.8,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.7,
+        "Quarterfinal": 2.8,
+        "Semifinal": 1.2,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Arkansas": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 2.0,
+      "ccg_appearance_odds_pct": 4.8,
+      "cfp_appearance_odds_pct": 6.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.3,
+        "3": 0.4,
+        "4": 0.3,
+        "5": 0.4,
+        "6": 0.4,
+        "7": 0.9,
+        "8": 0.7,
+        "9": 0.7,
+        "10": 0.7,
+        "11": 0.9,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.7,
+        "Quarterfinal": 2.0,
+        "Semifinal": 0.9,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Arkansas State": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 5.2,
+      "ccg_appearance_odds_pct": 13.2,
+      "cfp_appearance_odds_pct": 1.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.6,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Army": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 5.1,
+      "ccg_appearance_odds_pct": 11.8,
+      "cfp_appearance_odds_pct": 2.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.4,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.0,
+        "8": 0.2,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.9,
+        "Quarterfinal": 0.9,
+        "Semifinal": 0.4,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Auburn": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 4.3,
+      "ccg_appearance_odds_pct": 9.3,
+      "cfp_appearance_odds_pct": 13.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.9,
+        "2": 0.9,
+        "3": 0.8,
+        "4": 0.7,
+        "5": 1.0,
+        "6": 1.3,
+        "7": 1.4,
+        "8": 1.4,
+        "9": 1.5,
+        "10": 1.5,
+        "11": 1.5,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.3,
+        "Quarterfinal": 4.2,
+        "Semifinal": 2.0,
+        "Championship": 1.0,
+        "National Champion": 1.0
+      },
+      "national_championship_odds_pct": 1.0
+    },
+    "BYU": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 7.4,
+      "ccg_appearance_odds_pct": 14.8,
+      "cfp_appearance_odds_pct": 13.3,
+      "cfp_seed_distribution_pct": {
+        "1": 1.0,
+        "2": 1.1,
+        "3": 1.2,
+        "4": 1.1,
+        "5": 0.7,
+        "6": 1.0,
+        "7": 1.2,
+        "8": 1.1,
+        "9": 1.2,
+        "10": 1.2,
+        "11": 1.4,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 4.6,
+        "Quarterfinal": 4.7,
+        "Semifinal": 2.0,
+        "Championship": 1.1,
+        "National Champion": 0.9
+      },
+      "national_championship_odds_pct": 0.9
+    },
+    "Ball State": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 2.6,
+      "ccg_appearance_odds_pct": 6.7,
+      "cfp_appearance_odds_pct": 0.3,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.1,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.1,
+        "Quarterfinal": 0.1,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Baylor": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 4.0,
+      "ccg_appearance_odds_pct": 8.8,
+      "cfp_appearance_odds_pct": 5.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.5,
+        "3": 0.6,
+        "4": 0.6,
+        "5": 0.2,
+        "6": 0.3,
+        "7": 0.4,
+        "8": 0.4,
+        "9": 0.5,
+        "10": 0.5,
+        "11": 0.6,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.0,
+        "Quarterfinal": 2.0,
+        "Semifinal": 0.9,
+        "Championship": 0.4,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Boise State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 18.6,
+      "ccg_appearance_odds_pct": 34.9,
+      "cfp_appearance_odds_pct": 8.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.8,
+        "3": 1.2,
+        "4": 1.8,
+        "5": 0.2,
+        "6": 0.2,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.4,
+        "10": 0.5,
+        "11": 0.6,
+        "12": 1.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.7,
+        "Quarterfinal": 3.2,
+        "Semifinal": 1.5,
+        "Championship": 0.6,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Boston College": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 1.3,
+      "ccg_appearance_odds_pct": 2.7,
+      "cfp_appearance_odds_pct": 1.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Bowling Green": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 4.8,
+      "ccg_appearance_odds_pct": 11.1,
+      "cfp_appearance_odds_pct": 1.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.4,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Buffalo": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 5.5,
+      "ccg_appearance_odds_pct": 12.2,
+      "cfp_appearance_odds_pct": 1.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "California": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 2.1,
+      "ccg_appearance_odds_pct": 5.5,
+      "cfp_appearance_odds_pct": 2.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.8,
+        "Quarterfinal": 0.8,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Central Michigan": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 8.1,
+      "ccg_appearance_odds_pct": 17.0,
+      "cfp_appearance_odds_pct": 2.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.5,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.9,
+        "Quarterfinal": 0.9,
+        "Semifinal": 0.3,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Charlotte": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 0.7,
+      "ccg_appearance_odds_pct": 1.9,
+      "cfp_appearance_odds_pct": 0.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "12": 0.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.1,
+        "Quarterfinal": 0.1,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Cincinnati": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 3.9,
+      "ccg_appearance_odds_pct": 8.0,
+      "cfp_appearance_odds_pct": 5.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.4,
+        "3": 0.6,
+        "4": 0.7,
+        "5": 0.2,
+        "6": 0.3,
+        "7": 0.4,
+        "8": 0.5,
+        "9": 0.4,
+        "10": 0.7,
+        "11": 0.6,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.9,
+        "Quarterfinal": 2.2,
+        "Semifinal": 0.9,
+        "Championship": 0.4,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Clemson": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 9.5,
+      "ccg_appearance_odds_pct": 17.8,
+      "cfp_appearance_odds_pct": 16.8,
+      "cfp_seed_distribution_pct": {
+        "1": 1.2,
+        "2": 1.5,
+        "3": 1.5,
+        "4": 1.4,
+        "5": 1.0,
+        "6": 1.2,
+        "7": 1.3,
+        "8": 1.5,
+        "9": 1.6,
+        "10": 1.4,
+        "11": 1.7,
+        "12": 1.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.9,
+        "Quarterfinal": 5.7,
+        "Semifinal": 2.7,
+        "Championship": 1.3,
+        "National Champion": 1.2
+      },
+      "national_championship_odds_pct": 1.2
+    },
+    "Coastal Carolina": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 3.6,
+      "ccg_appearance_odds_pct": 8.2,
+      "cfp_appearance_odds_pct": 1.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Colorado": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 1.4,
+      "ccg_appearance_odds_pct": 3.5,
+      "cfp_appearance_odds_pct": 1.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Colorado State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 4.5,
+      "ccg_appearance_odds_pct": 11.2,
+      "cfp_appearance_odds_pct": 0.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Delaware": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 4.5,
+      "ccg_appearance_odds_pct": 10.4,
+      "cfp_appearance_odds_pct": 0.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.2,
+        "Quarterfinal": 0.2,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Duke": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 3.5,
+      "ccg_appearance_odds_pct": 7.7,
+      "cfp_appearance_odds_pct": 4.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.3,
+        "3": 0.4,
+        "4": 0.5,
+        "5": 0.1,
+        "6": 0.3,
+        "7": 0.3,
+        "8": 0.3,
+        "9": 0.4,
+        "10": 0.5,
+        "11": 0.5,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.7,
+        "Quarterfinal": 1.6,
+        "Semifinal": 0.6,
+        "Championship": 0.4,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "East Carolina": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 9.5,
+      "ccg_appearance_odds_pct": 19.9,
+      "cfp_appearance_odds_pct": 6.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.6,
+        "3": 0.8,
+        "4": 1.2,
+        "5": 0.2,
+        "6": 0.3,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.4,
+        "10": 0.5,
+        "11": 0.5,
+        "12": 1.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.1,
+        "Quarterfinal": 2.4,
+        "Semifinal": 1.1,
+        "Championship": 0.5,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Eastern Michigan": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 7.6,
+      "ccg_appearance_odds_pct": 16.4,
+      "cfp_appearance_odds_pct": 1.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.3,
+        "4": 0.4,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.8,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Florida": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 2.2,
+      "ccg_appearance_odds_pct": 5.2,
+      "cfp_appearance_odds_pct": 7.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.4,
+        "3": 0.4,
+        "4": 0.3,
+        "5": 0.5,
+        "6": 0.7,
+        "7": 0.7,
+        "8": 0.8,
+        "9": 0.9,
+        "10": 0.9,
+        "11": 0.9,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.0,
+        "Quarterfinal": 2.3,
+        "Semifinal": 1.0,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Florida Atlantic": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 3.3,
+      "ccg_appearance_odds_pct": 7.5,
+      "cfp_appearance_odds_pct": 1.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.1,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Florida International": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 10.8,
+      "ccg_appearance_odds_pct": 21.9,
+      "cfp_appearance_odds_pct": 2.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.2,
+        "4": 0.5,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.6,
+        "Quarterfinal": 0.8,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Florida State": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 5.8,
+      "ccg_appearance_odds_pct": 10.8,
+      "cfp_appearance_odds_pct": 11.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.7,
+        "2": 0.9,
+        "3": 1.1,
+        "4": 0.9,
+        "5": 0.7,
+        "6": 0.8,
+        "7": 0.9,
+        "8": 1.1,
+        "9": 1.2,
+        "10": 1.1,
+        "11": 1.2,
+        "12": 0.9
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 4.2,
+        "Quarterfinal": 4.0,
+        "Semifinal": 1.8,
+        "Championship": 0.8,
+        "National Champion": 0.7
+      },
+      "national_championship_odds_pct": 0.7
+    },
+    "Fresno State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 10.9,
+      "ccg_appearance_odds_pct": 22.4,
+      "cfp_appearance_odds_pct": 3.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.3,
+        "3": 0.5,
+        "4": 0.8,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.2,
+        "Quarterfinal": 1.4,
+        "Semifinal": 0.5,
+        "Championship": 0.2,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Georgia": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 15.1,
+      "ccg_appearance_odds_pct": 26.9,
+      "cfp_appearance_odds_pct": 41.6,
+      "cfp_seed_distribution_pct": {
+        "1": 5.5,
+        "2": 4.0,
+        "3": 2.4,
+        "4": 1.4,
+        "5": 4.5,
+        "6": 4.9,
+        "7": 4.1,
+        "8": 4.2,
+        "9": 3.7,
+        "10": 3.1,
+        "11": 2.7,
+        "12": 1.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 12.6,
+        "Quarterfinal": 12.8,
+        "Semifinal": 7.6,
+        "Championship": 4.0,
+        "National Champion": 4.6
+      },
+      "national_championship_odds_pct": 4.6
+    },
+    "Georgia Southern": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 3.4,
+      "ccg_appearance_odds_pct": 7.7,
+      "cfp_appearance_odds_pct": 1.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Georgia State": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 2.2,
+      "ccg_appearance_odds_pct": 5.3,
+      "cfp_appearance_odds_pct": 0.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.2,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Georgia Tech": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 4.6,
+      "ccg_appearance_odds_pct": 10.0,
+      "cfp_appearance_odds_pct": 7.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.5,
+        "3": 0.7,
+        "4": 0.8,
+        "5": 0.4,
+        "6": 0.5,
+        "7": 0.6,
+        "8": 0.7,
+        "9": 0.7,
+        "10": 0.7,
+        "11": 0.7,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.8,
+        "Quarterfinal": 2.6,
+        "Semifinal": 1.2,
+        "Championship": 0.5,
+        "National Champion": 0.5
+      },
+      "national_championship_odds_pct": 0.5
+    },
+    "Hawai'i": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 10.9,
+      "ccg_appearance_odds_pct": 21.8,
+      "cfp_appearance_odds_pct": 2.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.4,
+        "4": 0.5,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 1.0,
+        "Semifinal": 0.4,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Houston": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 3.4,
+      "ccg_appearance_odds_pct": 7.9,
+      "cfp_appearance_odds_pct": 4.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.3,
+        "3": 0.5,
+        "4": 0.5,
+        "5": 0.2,
+        "6": 0.2,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.4,
+        "10": 0.6,
+        "11": 0.5,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.7,
+        "Quarterfinal": 1.7,
+        "Semifinal": 0.6,
+        "Championship": 0.4,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Illinois": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 2.3,
+      "ccg_appearance_odds_pct": 6.1,
+      "cfp_appearance_odds_pct": 5.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.3,
+        "3": 0.4,
+        "4": 0.3,
+        "5": 0.3,
+        "6": 0.4,
+        "7": 0.6,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.7,
+        "11": 0.7,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.1,
+        "Quarterfinal": 1.9,
+        "Semifinal": 0.8,
+        "Championship": 0.4,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Indiana": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 17.1,
+      "ccg_appearance_odds_pct": 30.6,
+      "cfp_appearance_odds_pct": 47.8,
+      "cfp_seed_distribution_pct": {
+        "1": 7.4,
+        "2": 4.0,
+        "3": 2.4,
+        "4": 1.4,
+        "5": 6.3,
+        "6": 5.5,
+        "7": 5.0,
+        "8": 4.1,
+        "9": 4.0,
+        "10": 3.6,
+        "11": 2.9,
+        "12": 1.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 14.6,
+        "Quarterfinal": 14.1,
+        "Semifinal": 8.5,
+        "Championship": 4.7,
+        "National Champion": 5.8
+      },
+      "national_championship_odds_pct": 5.8
+    },
+    "Iowa": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 7.7,
+      "ccg_appearance_odds_pct": 16.3,
+      "cfp_appearance_odds_pct": 22.2,
+      "cfp_seed_distribution_pct": {
+        "1": 2.2,
+        "2": 1.7,
+        "3": 1.2,
+        "4": 1.0,
+        "5": 2.1,
+        "6": 2.1,
+        "7": 2.3,
+        "8": 2.4,
+        "9": 2.2,
+        "10": 2.1,
+        "11": 1.9,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 7.7,
+        "Quarterfinal": 7.0,
+        "Semifinal": 3.6,
+        "Championship": 1.9,
+        "National Champion": 2.0
+      },
+      "national_championship_odds_pct": 2.0
+    },
+    "Iowa State": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 4.9,
+      "ccg_appearance_odds_pct": 10.9,
+      "cfp_appearance_odds_pct": 7.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.6,
+        "3": 0.8,
+        "4": 0.8,
+        "5": 0.2,
+        "6": 0.4,
+        "7": 0.6,
+        "8": 0.6,
+        "9": 0.6,
+        "10": 0.7,
+        "11": 0.7,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.5,
+        "Quarterfinal": 2.5,
+        "Semifinal": 1.1,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Jacksonville State": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 19.6,
+      "ccg_appearance_odds_pct": 36.2,
+      "cfp_appearance_odds_pct": 5.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.5,
+        "3": 0.9,
+        "4": 1.2,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.2,
+        "11": 0.4,
+        "12": 1.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.9,
+        "Quarterfinal": 2.2,
+        "Semifinal": 0.9,
+        "Championship": 0.4,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "James Madison": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 26.8,
+      "ccg_appearance_odds_pct": 42.0,
+      "cfp_appearance_odds_pct": 22.7,
+      "cfp_seed_distribution_pct": {
+        "1": 2.2,
+        "2": 2.9,
+        "3": 3.5,
+        "4": 3.6,
+        "5": 0.5,
+        "6": 0.8,
+        "7": 0.9,
+        "8": 1.2,
+        "9": 1.3,
+        "10": 1.4,
+        "11": 1.4,
+        "12": 3.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 6.2,
+        "Quarterfinal": 8.6,
+        "Semifinal": 4.3,
+        "Championship": 2.0,
+        "National Champion": 1.6
+      },
+      "national_championship_odds_pct": 1.6
+    },
+    "Kansas": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 3.8,
+      "ccg_appearance_odds_pct": 8.6,
+      "cfp_appearance_odds_pct": 5.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.4,
+        "3": 0.6,
+        "4": 0.5,
+        "5": 0.2,
+        "6": 0.3,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.5,
+        "10": 0.6,
+        "11": 0.6,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.9,
+        "Quarterfinal": 1.8,
+        "Semifinal": 0.9,
+        "Championship": 0.3,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Kansas State": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 6.3,
+      "ccg_appearance_odds_pct": 14.2,
+      "cfp_appearance_odds_pct": 8.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.8,
+        "3": 0.9,
+        "4": 1.0,
+        "5": 0.4,
+        "6": 0.6,
+        "7": 0.6,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.9,
+        "12": 0.9
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.0,
+        "Quarterfinal": 2.9,
+        "Semifinal": 1.6,
+        "Championship": 0.7,
+        "National Champion": 0.5
+      },
+      "national_championship_odds_pct": 0.5
+    },
+    "Kennesaw State": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 10.3,
+      "ccg_appearance_odds_pct": 21.2,
+      "cfp_appearance_odds_pct": 2.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.2,
+        "4": 0.4,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.2,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.9,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.4,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Kent State": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 2.8,
+      "ccg_appearance_odds_pct": 6.7,
+      "cfp_appearance_odds_pct": 0.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.2,
+        "Quarterfinal": 0.1,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Kentucky": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 1.5,
+      "ccg_appearance_odds_pct": 3.6,
+      "cfp_appearance_odds_pct": 5.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.3,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.3,
+        "6": 0.4,
+        "7": 0.5,
+        "8": 0.5,
+        "9": 0.6,
+        "10": 0.7,
+        "11": 0.7,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.2,
+        "Quarterfinal": 1.6,
+        "Semifinal": 0.7,
+        "Championship": 0.3,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "LSU": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 3.6,
+      "ccg_appearance_odds_pct": 7.7,
+      "cfp_appearance_odds_pct": 10.3,
+      "cfp_seed_distribution_pct": {
+        "1": 0.7,
+        "2": 0.7,
+        "3": 0.6,
+        "4": 0.5,
+        "5": 0.6,
+        "6": 0.9,
+        "7": 0.9,
+        "8": 1.2,
+        "9": 1.3,
+        "10": 1.1,
+        "11": 1.2,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.9,
+        "Quarterfinal": 3.4,
+        "Semifinal": 1.6,
+        "Championship": 0.8,
+        "National Champion": 0.7
+      },
+      "national_championship_odds_pct": 0.7
+    },
+    "Liberty": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 17.6,
+      "ccg_appearance_odds_pct": 33.0,
+      "cfp_appearance_odds_pct": 4.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.4,
+        "3": 0.6,
+        "4": 1.0,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.3,
+        "12": 1.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.5,
+        "Quarterfinal": 1.7,
+        "Semifinal": 0.7,
+        "Championship": 0.3,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Louisiana": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 5.9,
+      "ccg_appearance_odds_pct": 14.8,
+      "cfp_appearance_odds_pct": 1.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.3,
+        "4": 0.4,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.2,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Louisiana Tech": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 6.9,
+      "ccg_appearance_odds_pct": 15.3,
+      "cfp_appearance_odds_pct": 3.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.4,
+        "4": 0.6,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.3,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.0,
+        "Quarterfinal": 1.1,
+        "Semifinal": 0.5,
+        "Championship": 0.2,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Louisville": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 6.8,
+      "ccg_appearance_odds_pct": 14.2,
+      "cfp_appearance_odds_pct": 8.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.8,
+        "3": 0.9,
+        "4": 1.0,
+        "5": 0.3,
+        "6": 0.5,
+        "7": 0.6,
+        "8": 0.7,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.7,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.9,
+        "Quarterfinal": 3.1,
+        "Semifinal": 1.4,
+        "Championship": 0.6,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Marshall": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 11.8,
+      "ccg_appearance_odds_pct": 22.2,
+      "cfp_appearance_odds_pct": 6.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.5,
+        "3": 0.8,
+        "4": 1.4,
+        "5": 0.2,
+        "6": 0.2,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.5,
+        "10": 0.4,
+        "11": 0.6,
+        "12": 1.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.3,
+        "Quarterfinal": 2.7,
+        "Semifinal": 1.0,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Maryland": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 0.8,
+      "ccg_appearance_odds_pct": 2.7,
+      "cfp_appearance_odds_pct": 1.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.2,
+        "10": 0.3,
+        "11": 0.2,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.6,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Massachusetts": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 0.7,
+      "ccg_appearance_odds_pct": 2.4,
+      "cfp_appearance_odds_pct": 0.0,
+      "cfp_seed_distribution_pct": {
+        "12": 0.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.0,
+        "Quarterfinal": 0.0,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Memphis": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 12.3,
+      "ccg_appearance_odds_pct": 23.4,
+      "cfp_appearance_odds_pct": 10.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.7,
+        "2": 1.1,
+        "3": 1.4,
+        "4": 1.6,
+        "5": 0.2,
+        "6": 0.4,
+        "7": 0.5,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.8,
+        "12": 1.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.4,
+        "Quarterfinal": 4.1,
+        "Semifinal": 1.7,
+        "Championship": 0.9,
+        "National Champion": 0.6
+      },
+      "national_championship_odds_pct": 0.6
+    },
+    "Miami": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 22.3,
+      "ccg_appearance_odds_pct": 36.2,
+      "cfp_appearance_odds_pct": 35.4,
+      "cfp_seed_distribution_pct": {
+        "1": 4.4,
+        "2": 4.5,
+        "3": 4.1,
+        "4": 3.1,
+        "5": 2.0,
+        "6": 2.7,
+        "7": 2.4,
+        "8": 2.7,
+        "9": 2.7,
+        "10": 2.5,
+        "11": 2.2,
+        "12": 2.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 9.9,
+        "Quarterfinal": 12.2,
+        "Semifinal": 6.7,
+        "Championship": 3.2,
+        "National Champion": 3.4
+      },
+      "national_championship_odds_pct": 3.4
+    },
+    "Miami (OH)": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 13.8,
+      "ccg_appearance_odds_pct": 26.7,
+      "cfp_appearance_odds_pct": 5.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.5,
+        "3": 0.8,
+        "4": 1.3,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.4,
+        "11": 0.4,
+        "12": 1.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.8,
+        "Quarterfinal": 2.2,
+        "Semifinal": 1.0,
+        "Championship": 0.4,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Michigan": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 6.4,
+      "ccg_appearance_odds_pct": 12.8,
+      "cfp_appearance_odds_pct": 23.1,
+      "cfp_seed_distribution_pct": {
+        "1": 1.9,
+        "2": 1.5,
+        "3": 1.1,
+        "4": 0.8,
+        "5": 2.0,
+        "6": 2.7,
+        "7": 2.6,
+        "8": 2.5,
+        "9": 2.6,
+        "10": 2.4,
+        "11": 2.2,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 8.5,
+        "Quarterfinal": 7.1,
+        "Semifinal": 3.8,
+        "Championship": 1.9,
+        "National Champion": 1.8
+      },
+      "national_championship_odds_pct": 1.8
+    },
+    "Michigan State": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 0.8,
+      "ccg_appearance_odds_pct": 2.5,
+      "cfp_appearance_odds_pct": 2.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.3,
+        "9": 0.3,
+        "10": 0.3,
+        "11": 0.4,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.9,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Middle Tennessee": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 6.8,
+      "ccg_appearance_odds_pct": 15.2,
+      "cfp_appearance_odds_pct": 0.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Minnesota": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 0.8,
+      "ccg_appearance_odds_pct": 2.6,
+      "cfp_appearance_odds_pct": 2.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.3,
+        "9": 0.3,
+        "10": 0.2,
+        "11": 0.3,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.9,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Mississippi State": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 1.0,
+      "ccg_appearance_odds_pct": 2.8,
+      "cfp_appearance_odds_pct": 2.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.2,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.2,
+        "7": 0.2,
+        "8": 0.3,
+        "9": 0.2,
+        "10": 0.4,
+        "11": 0.4,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.1,
+        "Quarterfinal": 0.9,
+        "Semifinal": 0.4,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Missouri": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 4.9,
+      "ccg_appearance_odds_pct": 10.8,
+      "cfp_appearance_odds_pct": 14.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.9,
+        "2": 1.2,
+        "3": 0.9,
+        "4": 0.6,
+        "5": 1.0,
+        "6": 1.4,
+        "7": 1.5,
+        "8": 1.7,
+        "9": 1.5,
+        "10": 1.6,
+        "11": 1.6,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.7,
+        "Quarterfinal": 4.4,
+        "Semifinal": 2.2,
+        "Championship": 1.2,
+        "National Champion": 1.0
+      },
+      "national_championship_odds_pct": 1.0
+    },
+    "Missouri State": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 8.3,
+      "ccg_appearance_odds_pct": 16.8,
+      "cfp_appearance_odds_pct": 1.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.6,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.0,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "NC State": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 4.5,
+      "ccg_appearance_odds_pct": 11.0,
+      "cfp_appearance_odds_pct": 4.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.4,
+        "3": 0.5,
+        "4": 0.7,
+        "5": 0.2,
+        "6": 0.1,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.5,
+        "10": 0.5,
+        "11": 0.5,
+        "12": 0.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.9,
+        "Quarterfinal": 1.8,
+        "Semifinal": 0.7,
+        "Championship": 0.3,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Navy": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 4.4,
+      "ccg_appearance_odds_pct": 11.9,
+      "cfp_appearance_odds_pct": 1.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.2,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Nebraska": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 2.0,
+      "ccg_appearance_odds_pct": 4.8,
+      "cfp_appearance_odds_pct": 6.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.4,
+        "3": 0.3,
+        "4": 0.3,
+        "5": 0.5,
+        "6": 0.5,
+        "7": 0.7,
+        "8": 0.7,
+        "9": 0.8,
+        "10": 0.8,
+        "11": 0.9,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.9,
+        "Quarterfinal": 2.1,
+        "Semifinal": 1.0,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Nevada": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 8.0,
+      "ccg_appearance_odds_pct": 17.5,
+      "cfp_appearance_odds_pct": 1.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "New Mexico": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 14.6,
+      "ccg_appearance_odds_pct": 28.0,
+      "cfp_appearance_odds_pct": 4.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.5,
+        "3": 0.6,
+        "4": 0.9,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.4,
+        "12": 1.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.5,
+        "Quarterfinal": 1.8,
+        "Semifinal": 0.6,
+        "Championship": 0.3,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "New Mexico State": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 5.0,
+      "ccg_appearance_odds_pct": 11.2,
+      "cfp_appearance_odds_pct": 0.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.2,
+        "Quarterfinal": 0.2,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "North Carolina": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 1.8,
+      "ccg_appearance_odds_pct": 4.2,
+      "cfp_appearance_odds_pct": 2.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.2,
+        "9": 0.2,
+        "10": 0.3,
+        "11": 0.3,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.0,
+        "Quarterfinal": 0.9,
+        "Semifinal": 0.4,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "North Dakota State": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 0.0,
+      "ccg_appearance_odds_pct": 2.3,
+      "cfp_appearance_odds_pct": 0.0,
+      "cfp_seed_distribution_pct": {},
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.0,
+        "Quarterfinal": 0.0,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "North Texas": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 16.6,
+      "ccg_appearance_odds_pct": 31.4,
+      "cfp_appearance_odds_pct": 14.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.9,
+        "2": 1.5,
+        "3": 2.0,
+        "4": 2.2,
+        "5": 0.4,
+        "6": 0.7,
+        "7": 0.7,
+        "8": 0.7,
+        "9": 0.8,
+        "10": 0.9,
+        "11": 1.1,
+        "12": 2.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 4.3,
+        "Quarterfinal": 5.5,
+        "Semifinal": 2.5,
+        "Championship": 1.1,
+        "National Champion": 0.8
+      },
+      "national_championship_odds_pct": 0.8
+    },
+    "Northern Illinois": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 8.1,
+      "ccg_appearance_odds_pct": 17.6,
+      "cfp_appearance_odds_pct": 1.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Northwestern": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 1.2,
+      "ccg_appearance_odds_pct": 3.2,
+      "cfp_appearance_odds_pct": 4.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.2,
+        "5": 0.2,
+        "6": 0.4,
+        "7": 0.4,
+        "8": 0.5,
+        "9": 0.5,
+        "10": 0.7,
+        "11": 0.5,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.7,
+        "Quarterfinal": 1.4,
+        "Semifinal": 0.6,
+        "Championship": 0.3,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Notre Dame": {
+      "conference": "FBS Independents",
+      "conference_championship_odds_pct": 0.0,
+      "ccg_appearance_odds_pct": 0.0,
+      "cfp_appearance_odds_pct": 59.8,
+      "cfp_seed_distribution_pct": {
+        "5": 22.6,
+        "6": 11.2,
+        "7": 8.0,
+        "8": 5.7,
+        "9": 4.3,
+        "10": 3.8,
+        "11": 3.4,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 20.8,
+        "Quarterfinal": 14.6,
+        "Semifinal": 10.9,
+        "Championship": 5.1,
+        "National Champion": 8.4
+      },
+      "national_championship_odds_pct": 8.4
+    },
+    "Ohio": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 13.2,
+      "ccg_appearance_odds_pct": 25.4,
+      "cfp_appearance_odds_pct": 5.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.4,
+        "3": 0.8,
+        "4": 1.0,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.2,
+        "11": 0.4,
+        "12": 1.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.7,
+        "Quarterfinal": 1.9,
+        "Semifinal": 0.8,
+        "Championship": 0.4,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Ohio State": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 17.5,
+      "ccg_appearance_odds_pct": 29.1,
+      "cfp_appearance_odds_pct": 53.4,
+      "cfp_seed_distribution_pct": {
+        "1": 8.4,
+        "2": 4.3,
+        "3": 2.2,
+        "4": 1.3,
+        "5": 8.3,
+        "6": 6.6,
+        "7": 5.5,
+        "8": 4.6,
+        "9": 4.0,
+        "10": 3.8,
+        "11": 3.3,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 15.5,
+        "Quarterfinal": 15.4,
+        "Semifinal": 9.6,
+        "Championship": 5.6,
+        "National Champion": 7.3
+      },
+      "national_championship_odds_pct": 7.3
+    },
+    "Oklahoma": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 7.3,
+      "ccg_appearance_odds_pct": 14.6,
+      "cfp_appearance_odds_pct": 21.3,
+      "cfp_seed_distribution_pct": {
+        "1": 1.7,
+        "2": 1.7,
+        "3": 1.3,
+        "4": 1.0,
+        "5": 1.7,
+        "6": 2.1,
+        "7": 2.4,
+        "8": 2.1,
+        "9": 2.3,
+        "10": 2.0,
+        "11": 2.0,
+        "12": 0.9
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 7.5,
+        "Quarterfinal": 6.7,
+        "Semifinal": 3.5,
+        "Championship": 1.9,
+        "National Champion": 1.6
+      },
+      "national_championship_odds_pct": 1.6
+    },
+    "Oklahoma State": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 0.6,
+      "ccg_appearance_odds_pct": 2.0,
+      "cfp_appearance_odds_pct": 0.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.2,
+        "Quarterfinal": 0.2,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Old Dominion": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 12.8,
+      "ccg_appearance_odds_pct": 23.2,
+      "cfp_appearance_odds_pct": 8.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.5,
+        "2": 0.9,
+        "3": 1.1,
+        "4": 1.4,
+        "5": 0.2,
+        "6": 0.3,
+        "7": 0.4,
+        "8": 0.4,
+        "9": 0.5,
+        "10": 0.5,
+        "11": 0.6,
+        "12": 1.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.7,
+        "Quarterfinal": 3.0,
+        "Semifinal": 1.4,
+        "Championship": 0.6,
+        "National Champion": 0.5
+      },
+      "national_championship_odds_pct": 0.5
+    },
+    "Ole Miss": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 8.9,
+      "ccg_appearance_odds_pct": 17.6,
+      "cfp_appearance_odds_pct": 25.0,
+      "cfp_seed_distribution_pct": {
+        "1": 2.4,
+        "2": 2.0,
+        "3": 1.6,
+        "4": 1.1,
+        "5": 2.2,
+        "6": 2.5,
+        "7": 2.6,
+        "8": 2.5,
+        "9": 2.5,
+        "10": 2.3,
+        "11": 2.3,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 8.4,
+        "Quarterfinal": 8.0,
+        "Semifinal": 4.3,
+        "Championship": 2.0,
+        "National Champion": 2.3
+      },
+      "national_championship_odds_pct": 2.3
+    },
+    "Oregon": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 17.3,
+      "ccg_appearance_odds_pct": 30.6,
+      "cfp_appearance_odds_pct": 47.9,
+      "cfp_seed_distribution_pct": {
+        "1": 7.3,
+        "2": 4.2,
+        "3": 2.6,
+        "4": 1.6,
+        "5": 5.9,
+        "6": 6.2,
+        "7": 4.6,
+        "8": 4.3,
+        "9": 3.9,
+        "10": 3.3,
+        "11": 2.8,
+        "12": 1.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 13.8,
+        "Quarterfinal": 14.8,
+        "Semifinal": 8.7,
+        "Championship": 4.7,
+        "National Champion": 5.9
+      },
+      "national_championship_odds_pct": 5.9
+    },
+    "Oregon State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 6.2,
+      "ccg_appearance_odds_pct": 15.0,
+      "cfp_appearance_odds_pct": 1.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.6,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Penn State": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 11.1,
+      "ccg_appearance_odds_pct": 24.6,
+      "cfp_appearance_odds_pct": 28.2,
+      "cfp_seed_distribution_pct": {
+        "1": 2.9,
+        "2": 2.5,
+        "3": 2.0,
+        "4": 1.4,
+        "5": 2.4,
+        "6": 2.9,
+        "7": 2.6,
+        "8": 2.6,
+        "9": 2.5,
+        "10": 2.4,
+        "11": 2.7,
+        "12": 1.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 9.1,
+        "Quarterfinal": 9.1,
+        "Semifinal": 5.0,
+        "Championship": 2.6,
+        "National Champion": 2.5
+      },
+      "national_championship_odds_pct": 2.5
+    },
+    "Pittsburgh": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 7.0,
+      "ccg_appearance_odds_pct": 14.2,
+      "cfp_appearance_odds_pct": 9.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.6,
+        "2": 0.8,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 0.3,
+        "6": 0.5,
+        "7": 0.7,
+        "8": 0.8,
+        "9": 0.8,
+        "10": 0.8,
+        "11": 0.8,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.1,
+        "Quarterfinal": 3.3,
+        "Semifinal": 1.6,
+        "Championship": 0.6,
+        "National Champion": 0.5
+      },
+      "national_championship_odds_pct": 0.5
+    },
+    "Purdue": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 0.7,
+      "ccg_appearance_odds_pct": 1.7,
+      "cfp_appearance_odds_pct": 1.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.1,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.6,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Rice": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 1.5,
+      "ccg_appearance_odds_pct": 3.8,
+      "cfp_appearance_odds_pct": 0.6,
+      "cfp_seed_distribution_pct": {
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.3,
+        "Quarterfinal": 0.2,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Rutgers": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 1.1,
+      "ccg_appearance_odds_pct": 3.0,
+      "cfp_appearance_odds_pct": 2.4,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.4,
+        "11": 0.4,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.1,
+        "Quarterfinal": 0.8,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "SMU": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 13.2,
+      "ccg_appearance_odds_pct": 25.8,
+      "cfp_appearance_odds_pct": 18.6,
+      "cfp_seed_distribution_pct": {
+        "1": 1.6,
+        "2": 2.0,
+        "3": 2.2,
+        "4": 2.0,
+        "5": 0.9,
+        "6": 1.1,
+        "7": 1.4,
+        "8": 1.4,
+        "9": 1.4,
+        "10": 1.5,
+        "11": 1.5,
+        "12": 1.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.6,
+        "Quarterfinal": 7.0,
+        "Semifinal": 3.1,
+        "Championship": 1.5,
+        "National Champion": 1.5
+      },
+      "national_championship_odds_pct": 1.5
+    },
+    "Sacramento State": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 0.0,
+      "ccg_appearance_odds_pct": 1.2,
+      "cfp_appearance_odds_pct": 0.0,
+      "cfp_seed_distribution_pct": {},
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.0,
+        "Quarterfinal": 0.0,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Sam Houston": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 3.2,
+      "ccg_appearance_odds_pct": 7.6,
+      "cfp_appearance_odds_pct": 0.3,
+      "cfp_seed_distribution_pct": {
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "7": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.1,
+        "Quarterfinal": 0.1,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "San Diego State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 18.6,
+      "ccg_appearance_odds_pct": 35.1,
+      "cfp_appearance_odds_pct": 8.3,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.7,
+        "3": 1.3,
+        "4": 1.8,
+        "5": 0.1,
+        "6": 0.2,
+        "7": 0.3,
+        "8": 0.4,
+        "9": 0.4,
+        "10": 0.5,
+        "11": 0.5,
+        "12": 1.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.6,
+        "Quarterfinal": 3.2,
+        "Semifinal": 1.4,
+        "Championship": 0.6,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "San Jos\u00e9 State": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 8.4,
+      "ccg_appearance_odds_pct": 18.8,
+      "cfp_appearance_odds_pct": 1.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "South Alabama": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 7.0,
+      "ccg_appearance_odds_pct": 15.2,
+      "cfp_appearance_odds_pct": 2.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.4,
+        "4": 0.6,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.1,
+        "Quarterfinal": 1.0,
+        "Semifinal": 0.5,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "South Carolina": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 4.7,
+      "ccg_appearance_odds_pct": 10.5,
+      "cfp_appearance_odds_pct": 15.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.9,
+        "2": 1.1,
+        "3": 0.9,
+        "4": 0.6,
+        "5": 1.1,
+        "6": 1.5,
+        "7": 1.6,
+        "8": 1.7,
+        "9": 1.8,
+        "10": 1.6,
+        "11": 1.5,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.5,
+        "Quarterfinal": 5.1,
+        "Semifinal": 2.3,
+        "Championship": 1.2,
+        "National Champion": 0.9
+      },
+      "national_championship_odds_pct": 0.9
+    },
+    "South Florida": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 21.3,
+      "ccg_appearance_odds_pct": 35.6,
+      "cfp_appearance_odds_pct": 21.3,
+      "cfp_seed_distribution_pct": {
+        "1": 1.9,
+        "2": 2.4,
+        "3": 3.0,
+        "4": 3.2,
+        "5": 0.6,
+        "6": 1.0,
+        "7": 1.2,
+        "8": 1.2,
+        "9": 1.4,
+        "10": 1.5,
+        "11": 1.4,
+        "12": 2.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.9,
+        "Quarterfinal": 8.3,
+        "Semifinal": 3.7,
+        "Championship": 1.8,
+        "National Champion": 1.6
+      },
+      "national_championship_odds_pct": 1.6
+    },
+    "Southern Miss": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 4.9,
+      "ccg_appearance_odds_pct": 10.3,
+      "cfp_appearance_odds_pct": 2.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.3,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.8,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.4,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Stanford": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 2.0,
+      "ccg_appearance_odds_pct": 4.9,
+      "cfp_appearance_odds_pct": 2.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.2,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.3,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.8,
+        "Quarterfinal": 0.8,
+        "Semifinal": 0.3,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Syracuse": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 0.9,
+      "ccg_appearance_odds_pct": 2.2,
+      "cfp_appearance_odds_pct": 0.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.0,
+        "11": 0.1,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.2,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "TCU": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 4.7,
+      "ccg_appearance_odds_pct": 10.0,
+      "cfp_appearance_odds_pct": 7.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.7,
+        "3": 0.7,
+        "4": 0.7,
+        "5": 0.4,
+        "6": 0.4,
+        "7": 0.6,
+        "8": 0.6,
+        "9": 0.8,
+        "10": 0.7,
+        "11": 0.8,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.7,
+        "Quarterfinal": 2.6,
+        "Semifinal": 1.2,
+        "Championship": 0.6,
+        "National Champion": 0.5
+      },
+      "national_championship_odds_pct": 0.5
+    },
+    "Temple": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 2.1,
+      "ccg_appearance_odds_pct": 5.4,
+      "cfp_appearance_odds_pct": 0.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "Tennessee": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 9.1,
+      "ccg_appearance_odds_pct": 18.2,
+      "cfp_appearance_odds_pct": 26.9,
+      "cfp_seed_distribution_pct": {
+        "1": 2.6,
+        "2": 2.3,
+        "3": 1.6,
+        "4": 1.0,
+        "5": 2.6,
+        "6": 3.1,
+        "7": 2.8,
+        "8": 2.6,
+        "9": 2.5,
+        "10": 2.5,
+        "11": 2.5,
+        "12": 0.9
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 9.1,
+        "Quarterfinal": 8.6,
+        "Semifinal": 4.6,
+        "Championship": 2.3,
+        "National Champion": 2.4
+      },
+      "national_championship_odds_pct": 2.4
+    },
+    "Texas": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 7.0,
+      "ccg_appearance_odds_pct": 13.9,
+      "cfp_appearance_odds_pct": 21.3,
+      "cfp_seed_distribution_pct": {
+        "1": 2.0,
+        "2": 1.7,
+        "3": 1.2,
+        "4": 0.8,
+        "5": 1.8,
+        "6": 1.9,
+        "7": 2.3,
+        "8": 2.4,
+        "9": 2.1,
+        "10": 2.1,
+        "11": 2.2,
+        "12": 0.9
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 7.7,
+        "Quarterfinal": 6.8,
+        "Semifinal": 3.3,
+        "Championship": 1.7,
+        "National Champion": 1.8
+      },
+      "national_championship_odds_pct": 1.8
+    },
+    "Texas A&M": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 9.2,
+      "ccg_appearance_odds_pct": 17.6,
+      "cfp_appearance_odds_pct": 28.0,
+      "cfp_seed_distribution_pct": {
+        "1": 2.8,
+        "2": 2.2,
+        "3": 1.6,
+        "4": 1.0,
+        "5": 2.8,
+        "6": 2.8,
+        "7": 3.0,
+        "8": 2.9,
+        "9": 2.8,
+        "10": 2.5,
+        "11": 2.6,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 9.5,
+        "Quarterfinal": 8.6,
+        "Semifinal": 4.9,
+        "Championship": 2.4,
+        "National Champion": 2.5
+      },
+      "national_championship_odds_pct": 2.5
+    },
+    "Texas State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 17.7,
+      "ccg_appearance_odds_pct": 33.4,
+      "cfp_appearance_odds_pct": 7.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.8,
+        "3": 1.1,
+        "4": 1.4,
+        "5": 0.1,
+        "6": 0.2,
+        "7": 0.2,
+        "8": 0.4,
+        "9": 0.5,
+        "10": 0.4,
+        "11": 0.5,
+        "12": 1.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.5,
+        "Quarterfinal": 3.1,
+        "Semifinal": 1.1,
+        "Championship": 0.7,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Texas Tech": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 26.2,
+      "ccg_appearance_odds_pct": 45.3,
+      "cfp_appearance_odds_pct": 39.3,
+      "cfp_seed_distribution_pct": {
+        "1": 5.7,
+        "2": 5.2,
+        "3": 5.0,
+        "4": 3.5,
+        "5": 2.5,
+        "6": 2.6,
+        "7": 2.7,
+        "8": 2.6,
+        "9": 2.4,
+        "10": 2.5,
+        "11": 2.4,
+        "12": 2.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 9.8,
+        "Quarterfinal": 13.8,
+        "Semifinal": 7.2,
+        "Championship": 3.8,
+        "National Champion": 4.6
+      },
+      "national_championship_odds_pct": 4.6
+    },
+    "Toledo": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 26.1,
+      "ccg_appearance_odds_pct": 44.0,
+      "cfp_appearance_odds_pct": 14.1,
+      "cfp_seed_distribution_pct": {
+        "1": 0.9,
+        "2": 1.7,
+        "3": 2.1,
+        "4": 2.7,
+        "5": 0.2,
+        "6": 0.4,
+        "7": 0.5,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.7,
+        "11": 0.8,
+        "12": 2.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 4.3,
+        "Quarterfinal": 5.4,
+        "Semifinal": 2.4,
+        "Championship": 1.0,
+        "National Champion": 1.0
+      },
+      "national_championship_odds_pct": 1.0
+    },
+    "Troy": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 4.9,
+      "ccg_appearance_odds_pct": 11.1,
+      "cfp_appearance_odds_pct": 1.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.4,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.6,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Tulane": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 12.0,
+      "ccg_appearance_odds_pct": 22.0,
+      "cfp_appearance_odds_pct": 10.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.6,
+        "2": 1.0,
+        "3": 1.5,
+        "4": 1.7,
+        "5": 0.3,
+        "6": 0.4,
+        "7": 0.5,
+        "8": 0.7,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.9,
+        "12": 1.6
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.3,
+        "Quarterfinal": 4.1,
+        "Semifinal": 1.7,
+        "Championship": 0.8,
+        "National Champion": 0.7
+      },
+      "national_championship_odds_pct": 0.7
+    },
+    "Tulsa": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 2.4,
+      "ccg_appearance_odds_pct": 6.6,
+      "cfp_appearance_odds_pct": 0.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.2,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.1,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.3,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "UAB": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 1.6,
+      "ccg_appearance_odds_pct": 4.0,
+      "cfp_appearance_odds_pct": 0.6,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.2
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.3,
+        "Quarterfinal": 0.2,
+        "Semifinal": 0.1,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "UCF": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 2.8,
+      "ccg_appearance_odds_pct": 7.2,
+      "cfp_appearance_odds_pct": 3.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.4,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.3,
+        "11": 0.3,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.2,
+        "Quarterfinal": 1.1,
+        "Semifinal": 0.4,
+        "Championship": 0.2,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "UCLA": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 0.9,
+      "ccg_appearance_odds_pct": 2.5,
+      "cfp_appearance_odds_pct": 1.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.1,
+        "4": 0.1,
+        "5": 0.1,
+        "6": 0.2,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.2,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.7,
+        "Quarterfinal": 0.5,
+        "Semifinal": 0.2,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "UConn": {
+      "conference": "FBS Independents",
+      "conference_championship_odds_pct": 0.0,
+      "ccg_appearance_odds_pct": 0.0,
+      "cfp_appearance_odds_pct": 3.0,
+      "cfp_seed_distribution_pct": {
+        "5": 0.3,
+        "6": 0.3,
+        "7": 0.4,
+        "8": 0.5,
+        "9": 0.4,
+        "10": 0.5,
+        "11": 0.5,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.5,
+        "Quarterfinal": 0.8,
+        "Semifinal": 0.4,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "UL Monroe": {
+      "conference": "Sun Belt",
+      "conference_championship_odds_pct": 1.3,
+      "ccg_appearance_odds_pct": 3.7,
+      "cfp_appearance_odds_pct": 0.2,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.0,
+        "6": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.1,
+        "Quarterfinal": 0.1,
+        "Semifinal": 0.0,
+        "Championship": 0.0,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "UNLV": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 27.1,
+      "ccg_appearance_odds_pct": 43.0,
+      "cfp_appearance_odds_pct": 12.5,
+      "cfp_seed_distribution_pct": {
+        "1": 0.8,
+        "2": 1.6,
+        "3": 1.9,
+        "4": 2.5,
+        "5": 0.1,
+        "6": 0.3,
+        "7": 0.4,
+        "8": 0.5,
+        "9": 0.5,
+        "10": 0.7,
+        "11": 0.9,
+        "12": 2.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.7,
+        "Quarterfinal": 4.8,
+        "Semifinal": 2.3,
+        "Championship": 1.0,
+        "National Champion": 0.8
+      },
+      "national_championship_odds_pct": 0.8
+    },
+    "USC": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 5.8,
+      "ccg_appearance_odds_pct": 11.6,
+      "cfp_appearance_odds_pct": 19.7,
+      "cfp_seed_distribution_pct": {
+        "1": 1.4,
+        "2": 1.3,
+        "3": 1.0,
+        "4": 0.9,
+        "5": 1.9,
+        "6": 2.2,
+        "7": 2.1,
+        "8": 2.1,
+        "9": 2.1,
+        "10": 2.1,
+        "11": 1.8,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 7.1,
+        "Quarterfinal": 6.4,
+        "Semifinal": 3.1,
+        "Championship": 1.6,
+        "National Champion": 1.6
+      },
+      "national_championship_odds_pct": 1.6
+    },
+    "UTEP": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 6.6,
+      "ccg_appearance_odds_pct": 15.3,
+      "cfp_appearance_odds_pct": 0.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.1,
+        "4": 0.2,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.1,
+        "11": 0.1,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.4,
+        "Quarterfinal": 0.3,
+        "Semifinal": 0.1,
+        "Championship": 0.1,
+        "National Champion": 0.0
+      },
+      "national_championship_odds_pct": 0.0
+    },
+    "UTSA": {
+      "conference": "American Athletic",
+      "conference_championship_odds_pct": 7.2,
+      "ccg_appearance_odds_pct": 14.8,
+      "cfp_appearance_odds_pct": 4.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.4,
+        "3": 0.6,
+        "4": 0.8,
+        "5": 0.1,
+        "6": 0.2,
+        "7": 0.3,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.3,
+        "11": 0.5,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.8,
+        "Quarterfinal": 1.8,
+        "Semifinal": 0.7,
+        "Championship": 0.3,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Utah": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 19.0,
+      "ccg_appearance_odds_pct": 33.6,
+      "cfp_appearance_odds_pct": 32.1,
+      "cfp_seed_distribution_pct": {
+        "1": 3.9,
+        "2": 3.9,
+        "3": 3.4,
+        "4": 2.8,
+        "5": 2.1,
+        "6": 2.4,
+        "7": 2.4,
+        "8": 2.3,
+        "9": 2.4,
+        "10": 2.5,
+        "11": 2.3,
+        "12": 1.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 9.2,
+        "Quarterfinal": 11.0,
+        "Semifinal": 5.7,
+        "Championship": 3.2,
+        "National Champion": 3.1
+      },
+      "national_championship_odds_pct": 3.1
+    },
+    "Utah State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 9.3,
+      "ccg_appearance_odds_pct": 19.8,
+      "cfp_appearance_odds_pct": 3.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.3,
+        "3": 0.5,
+        "4": 0.6,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.2,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.0,
+        "Quarterfinal": 1.2,
+        "Semifinal": 0.5,
+        "Championship": 0.2,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Vanderbilt": {
+      "conference": "SEC",
+      "conference_championship_odds_pct": 6.3,
+      "ccg_appearance_odds_pct": 13.0,
+      "cfp_appearance_odds_pct": 17.7,
+      "cfp_seed_distribution_pct": {
+        "1": 1.3,
+        "2": 1.4,
+        "3": 1.1,
+        "4": 0.9,
+        "5": 1.2,
+        "6": 1.7,
+        "7": 1.8,
+        "8": 2.0,
+        "9": 1.7,
+        "10": 1.9,
+        "11": 1.8,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 6.3,
+        "Quarterfinal": 5.8,
+        "Semifinal": 2.7,
+        "Championship": 1.6,
+        "National Champion": 1.3
+      },
+      "national_championship_odds_pct": 1.3
+    },
+    "Virginia": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 7.1,
+      "ccg_appearance_odds_pct": 15.8,
+      "cfp_appearance_odds_pct": 8.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.5,
+        "2": 0.7,
+        "3": 1.1,
+        "4": 1.0,
+        "5": 0.4,
+        "6": 0.5,
+        "7": 0.6,
+        "8": 0.7,
+        "9": 0.7,
+        "10": 0.8,
+        "11": 0.8,
+        "12": 1.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 3.0,
+        "Quarterfinal": 3.2,
+        "Semifinal": 1.4,
+        "Championship": 0.7,
+        "National Champion": 0.5
+      },
+      "national_championship_odds_pct": 0.5
+    },
+    "Virginia Tech": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 3.0,
+      "ccg_appearance_odds_pct": 6.7,
+      "cfp_appearance_odds_pct": 3.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.3,
+        "3": 0.4,
+        "4": 0.4,
+        "5": 0.1,
+        "6": 0.2,
+        "7": 0.3,
+        "8": 0.3,
+        "9": 0.4,
+        "10": 0.4,
+        "11": 0.4,
+        "12": 0.5
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.4,
+        "Quarterfinal": 1.4,
+        "Semifinal": 0.6,
+        "Championship": 0.3,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Wake Forest": {
+      "conference": "ACC",
+      "conference_championship_odds_pct": 4.7,
+      "ccg_appearance_odds_pct": 10.3,
+      "cfp_appearance_odds_pct": 6.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.4,
+        "2": 0.5,
+        "3": 0.7,
+        "4": 0.7,
+        "5": 0.3,
+        "6": 0.4,
+        "7": 0.6,
+        "8": 0.6,
+        "9": 0.7,
+        "10": 0.7,
+        "11": 0.7,
+        "12": 0.8
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.4,
+        "Quarterfinal": 2.4,
+        "Semifinal": 1.1,
+        "Championship": 0.5,
+        "National Champion": 0.4
+      },
+      "national_championship_odds_pct": 0.4
+    },
+    "Washington": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 4.7,
+      "ccg_appearance_odds_pct": 10.0,
+      "cfp_appearance_odds_pct": 14.8,
+      "cfp_seed_distribution_pct": {
+        "1": 1.2,
+        "2": 1.0,
+        "3": 0.7,
+        "4": 0.6,
+        "5": 1.1,
+        "6": 1.4,
+        "7": 1.6,
+        "8": 1.5,
+        "9": 1.7,
+        "10": 1.7,
+        "11": 1.6,
+        "12": 0.7
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 5.6,
+        "Quarterfinal": 4.6,
+        "Semifinal": 2.4,
+        "Championship": 1.2,
+        "National Champion": 1.1
+      },
+      "national_championship_odds_pct": 1.1
+    },
+    "Washington State": {
+      "conference": "Pac-12",
+      "conference_championship_odds_pct": 14.2,
+      "ccg_appearance_odds_pct": 28.2,
+      "cfp_appearance_odds_pct": 6.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.3,
+        "2": 0.5,
+        "3": 0.9,
+        "4": 1.1,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.3,
+        "8": 0.3,
+        "9": 0.3,
+        "10": 0.4,
+        "11": 0.5,
+        "12": 1.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 2.0,
+        "Quarterfinal": 2.3,
+        "Semifinal": 1.0,
+        "Championship": 0.4,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "West Virginia": {
+      "conference": "Big 12",
+      "conference_championship_odds_pct": 2.0,
+      "ccg_appearance_odds_pct": 5.3,
+      "cfp_appearance_odds_pct": 2.9,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.2,
+        "3": 0.3,
+        "4": 0.3,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.2,
+        "8": 0.3,
+        "9": 0.4,
+        "10": 0.4,
+        "11": 0.3,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.2,
+        "Quarterfinal": 1.1,
+        "Semifinal": 0.4,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    },
+    "Western Kentucky": {
+      "conference": "Conference USA",
+      "conference_championship_odds_pct": 13.9,
+      "ccg_appearance_odds_pct": 26.5,
+      "cfp_appearance_odds_pct": 3.8,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.3,
+        "3": 0.6,
+        "4": 0.8,
+        "5": 0.0,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.2,
+        "11": 0.2,
+        "12": 1.0
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.3,
+        "Quarterfinal": 1.5,
+        "Semifinal": 0.6,
+        "Championship": 0.2,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Western Michigan": {
+      "conference": "Mid-American",
+      "conference_championship_odds_pct": 11.3,
+      "ccg_appearance_odds_pct": 21.6,
+      "cfp_appearance_odds_pct": 4.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.2,
+        "2": 0.4,
+        "3": 0.7,
+        "4": 0.8,
+        "5": 0.1,
+        "6": 0.1,
+        "7": 0.1,
+        "8": 0.2,
+        "9": 0.3,
+        "10": 0.3,
+        "11": 0.3,
+        "12": 1.1
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.6,
+        "Quarterfinal": 1.7,
+        "Semifinal": 0.8,
+        "Championship": 0.3,
+        "National Champion": 0.3
+      },
+      "national_championship_odds_pct": 0.3
+    },
+    "Wisconsin": {
+      "conference": "Big Ten",
+      "conference_championship_odds_pct": 1.8,
+      "ccg_appearance_odds_pct": 5.3,
+      "cfp_appearance_odds_pct": 4.0,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.3,
+        "3": 0.2,
+        "4": 0.2,
+        "5": 0.2,
+        "6": 0.3,
+        "7": 0.4,
+        "8": 0.4,
+        "9": 0.4,
+        "10": 0.5,
+        "11": 0.6,
+        "12": 0.3
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 1.7,
+        "Quarterfinal": 1.3,
+        "Semifinal": 0.5,
+        "Championship": 0.3,
+        "National Champion": 0.2
+      },
+      "national_championship_odds_pct": 0.2
+    },
+    "Wyoming": {
+      "conference": "Mountain West",
+      "conference_championship_odds_pct": 9.2,
+      "ccg_appearance_odds_pct": 19.9,
+      "cfp_appearance_odds_pct": 1.7,
+      "cfp_seed_distribution_pct": {
+        "1": 0.1,
+        "2": 0.1,
+        "3": 0.2,
+        "4": 0.4,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.1,
+        "9": 0.1,
+        "10": 0.1,
+        "11": 0.2,
+        "12": 0.4
+      },
+      "cfp_round_reached_pct": {
+        "CFP First Round": 0.5,
+        "Quarterfinal": 0.7,
+        "Semifinal": 0.3,
+        "Championship": 0.1,
+        "National Champion": 0.1
+      },
+      "national_championship_odds_pct": 0.1
+    }
+  }
+}
