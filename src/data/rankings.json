@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T21:30:09.243940+00:00",
+  "generated_at": "2026-08-23T12:25:04.857129+00:00",
   "all_rankings": [
     {
       "Rank": 1,
@@ -1794,7 +1794,7 @@
       "Team": "Air Force",
       "Conference": "Mountain West",
       "Record": "9-3",
-      "Net Rating": 11.0,
+      "Net Rating": 10.9,
       "Year": 2022,
       "sos": 124,
       "sor": 27,
@@ -2012,7 +2012,7 @@
       "Record": "10-3",
       "Net Rating": 6.8,
       "Year": 2022,
-      "sos": 87,
+      "sos": 86,
       "sor": 23,
       "Expected Wins": null,
       "record": "11-3"
@@ -2181,7 +2181,7 @@
       "Net Rating": 4.1,
       "Year": 2022,
       "sos": 118,
-      "sor": 80,
+      "sor": 81,
       "Expected Wins": null,
       "record": "6-6"
     },
@@ -2216,7 +2216,7 @@
       "Record": "11-2",
       "Net Rating": 1.3,
       "Year": 2022,
-      "sos": 80,
+      "sos": 81,
       "sor": 18,
       "Expected Wins": null,
       "record": "12-2"
@@ -2300,7 +2300,7 @@
       "Record": "8-4",
       "Net Rating": -0.1,
       "Year": 2022,
-      "sos": 81,
+      "sos": 80,
       "sor": 46,
       "Expected Wins": null,
       "record": "9-4"
@@ -2325,7 +2325,7 @@
       "Net Rating": -0.6,
       "Year": 2022,
       "sos": 77,
-      "sor": 81,
+      "sor": 80,
       "Expected Wins": null,
       "record": "7-6"
     },
@@ -2466,7 +2466,7 @@
       "Team": "San Jos\u00e9 State",
       "Conference": "Mountain West",
       "Record": "6-5",
-      "Net Rating": -3.3,
+      "Net Rating": -3.4,
       "Year": 2022,
       "sos": 128,
       "sor": 76,
@@ -2502,7 +2502,7 @@
       "Team": "Kansas",
       "Conference": "Big 12",
       "Record": "5-7",
-      "Net Rating": -3.8,
+      "Net Rating": -3.7,
       "Year": 2022,
       "sos": 14,
       "sor": 72,
@@ -3078,7 +3078,7 @@
       "Team": "Colorado",
       "Conference": "Big 12",
       "Record": "1-11",
-      "Net Rating": -18.6,
+      "Net Rating": -18.7,
       "Year": 2022,
       "sos": 2,
       "sor": 119,
@@ -3092,7 +3092,7 @@
       "Record": "1-10",
       "Net Rating": -20.9,
       "Year": 2022,
-      "sos": 86,
+      "sos": 87,
       "sor": 127,
       "Expected Wins": null,
       "record": "2-10"
@@ -3260,7 +3260,7 @@
       "Record": "6-6",
       "Net Rating": 18.4,
       "Year": 2023,
-      "sos": 44,
+      "sos": 43,
       "sor": 48,
       "Expected Wins": null,
       "record": "7-6"
@@ -3285,7 +3285,7 @@
       "Net Rating": 16.8,
       "Year": 2023,
       "sos": 34,
-      "sor": 29,
+      "sor": 28,
       "Expected Wins": null,
       "record": "9-4"
     },
@@ -3342,7 +3342,7 @@
       "Team": "Missouri",
       "Conference": "SEC",
       "Record": "10-2",
-      "Net Rating": 12.7,
+      "Net Rating": 12.8,
       "Year": 2023,
       "sos": 3,
       "sor": 4,
@@ -3356,7 +3356,7 @@
       "Record": "8-4",
       "Net Rating": 12.4,
       "Year": 2023,
-      "sos": 43,
+      "sos": 44,
       "sor": 26,
       "Expected Wins": null,
       "record": "9-4"
@@ -3402,7 +3402,7 @@
       "Team": "TCU",
       "Conference": "Big 12",
       "Record": "4-7",
-      "Net Rating": 9.2,
+      "Net Rating": 9.3,
       "Year": 2023,
       "sos": 29,
       "sor": 62,
@@ -3560,7 +3560,7 @@
       "Record": "6-6",
       "Net Rating": 6.1,
       "Year": 2023,
-      "sos": 25,
+      "sos": 26,
       "sor": 45,
       "Expected Wins": null,
       "record": "7-6"
@@ -3717,7 +3717,7 @@
       "Net Rating": 3.1,
       "Year": 2023,
       "sos": 42,
-      "sor": 28,
+      "sor": 29,
       "Expected Wins": null,
       "record": "8-5"
     },
@@ -3800,7 +3800,7 @@
       "Record": "6-6",
       "Net Rating": 0.8,
       "Year": 2023,
-      "sos": 14,
+      "sos": 12,
       "sor": 41,
       "Expected Wins": null,
       "record": "7-6"
@@ -3836,7 +3836,7 @@
       "Record": "9-4",
       "Net Rating": 0.6,
       "Year": 2023,
-      "sos": 12,
+      "sos": 13,
       "sor": 16,
       "Expected Wins": null,
       "record": "10-4"
@@ -3927,22 +3927,10 @@
     },
     {
       "Rank": 67,
-      "Team": "UNLV",
-      "Conference": "Mountain West",
-      "Record": "8-5",
-      "Net Rating": -1.2,
-      "Year": 2023,
-      "sos": 103,
-      "sor": 49,
-      "Expected Wins": null,
-      "record": "9-5"
-    },
-    {
-      "Rank": 68,
       "Team": "Northwestern",
       "Conference": "Big Ten",
       "Record": "7-5",
-      "Net Rating": -1.2,
+      "Net Rating": -1.1,
       "Year": 2023,
       "sos": 60,
       "sor": 42,
@@ -3950,7 +3938,7 @@
       "record": "8-5"
     },
     {
-      "Rank": 69,
+      "Rank": 68,
       "Team": "Coastal Carolina",
       "Conference": "Sun Belt",
       "Record": "7-5",
@@ -3960,6 +3948,18 @@
       "sor": 64,
       "Expected Wins": null,
       "record": "8-5"
+    },
+    {
+      "Rank": 69,
+      "Team": "UNLV",
+      "Conference": "Mountain West",
+      "Record": "8-5",
+      "Net Rating": -1.2,
+      "Year": 2023,
+      "sos": 103,
+      "sor": 49,
+      "Expected Wins": null,
+      "record": "9-5"
     },
     {
       "Rank": 70,
@@ -4196,7 +4196,7 @@
       "Record": "2-9",
       "Net Rating": -5.8,
       "Year": 2023,
-      "sos": 23,
+      "sos": 24,
       "sor": 117,
       "Expected Wins": null,
       "record": "3-9"
@@ -4364,7 +4364,7 @@
       "Record": "4-7",
       "Net Rating": -9.1,
       "Year": 2023,
-      "sos": 26,
+      "sos": 25,
       "sor": 74,
       "Expected Wins": null,
       "record": "5-7"
@@ -4425,7 +4425,7 @@
       "Net Rating": -9.3,
       "Year": 2023,
       "sos": 118,
-      "sor": 101,
+      "sor": 100,
       "Expected Wins": null,
       "record": "5-7"
     },
@@ -4508,7 +4508,7 @@
       "Record": "3-8",
       "Net Rating": -11.6,
       "Year": 2023,
-      "sos": 13,
+      "sos": 14,
       "sor": 90,
       "Expected Wins": null,
       "record": "3-9"
@@ -4556,7 +4556,7 @@
       "Record": "1-10",
       "Net Rating": -13.1,
       "Year": 2023,
-      "sos": 24,
+      "sos": 23,
       "sor": 119,
       "Expected Wins": null,
       "record": "2-10"
@@ -4581,7 +4581,7 @@
       "Net Rating": -14.4,
       "Year": 2023,
       "sos": 70,
-      "sor": 100,
+      "sor": 101,
       "Expected Wins": null,
       "record": "4-8"
     },
@@ -6903,15 +6903,15 @@
     },
     {
       "Rank": 48,
-      "Team": "Old Dominion",
-      "Conference": "Sun Belt",
-      "Record": "9-3",
+      "Team": "Boise State",
+      "Conference": "Mountain West",
+      "Record": "7-5",
       "Net Rating": 3.1,
       "Year": 2025,
-      "sos": 75,
-      "sor": 25,
+      "sos": 61,
+      "sor": 47,
       "Expected Wins": null,
-      "record": "10-3"
+      "record": "9-5"
     },
     {
       "Rank": 49,
@@ -6927,15 +6927,15 @@
     },
     {
       "Rank": 50,
-      "Team": "Boise State",
-      "Conference": "Mountain West",
-      "Record": "7-5",
-      "Net Rating": 3.1,
+      "Team": "Old Dominion",
+      "Conference": "Sun Belt",
+      "Record": "9-3",
+      "Net Rating": 3.0,
       "Year": 2025,
-      "sos": 61,
-      "sor": 47,
+      "sos": 75,
+      "sor": 25,
       "Expected Wins": null,
-      "record": "9-5"
+      "record": "10-3"
     },
     {
       "Rank": 51,
@@ -7148,7 +7148,7 @@
       "Record": "6-6",
       "Net Rating": -0.3,
       "Year": 2025,
-      "sos": 80,
+      "sos": 79,
       "sor": 74,
       "Expected Wins": null,
       "record": "7-6"
@@ -7916,7 +7916,7 @@
       "Record": "2-9",
       "Net Rating": -21.3,
       "Year": 2025,
-      "sos": 79,
+      "sos": 80,
       "sor": 123,
       "Expected Wins": null,
       "record": "3-9"
@@ -7949,11 +7949,11 @@
       "Rank": 1,
       "Team": "Notre Dame",
       "Conference": "FBS Independents",
-      "Net Rating": 18.7,
+      "Net Rating": 18.5,
       "Year": 2026,
-      "sos": 18,
+      "sos": 36,
       "sor": null,
-      "Expected Wins": 10.16,
+      "Expected Wins": 10.12,
       "record": "0-0"
     },
     {
@@ -7962,7 +7962,7 @@
       "Conference": "SEC",
       "Net Rating": 18.5,
       "Year": 2026,
-      "sos": 1,
+      "sos": 5,
       "sor": null,
       "Expected Wins": 8.95,
       "record": "0-0"
@@ -7973,7 +7973,7 @@
       "Conference": "Big Ten",
       "Net Rating": 17.4,
       "Year": 2026,
-      "sos": 32,
+      "sos": 40,
       "sor": null,
       "Expected Wins": 8.8,
       "record": "0-0"
@@ -7984,13 +7984,24 @@
       "Conference": "Big Ten",
       "Net Rating": 15.7,
       "Year": 2026,
-      "sos": 44,
+      "sos": 54,
       "sor": null,
       "Expected Wins": 9.0,
       "record": "0-0"
     },
     {
       "Rank": 5,
+      "Team": "Texas",
+      "Conference": "SEC",
+      "Net Rating": 15.5,
+      "Year": 2026,
+      "sos": 26,
+      "sor": null,
+      "Expected Wins": 7.76,
+      "record": "0-0"
+    },
+    {
+      "Rank": 6,
       "Team": "Indiana",
       "Conference": "Big Ten",
       "Net Rating": 15.5,
@@ -8001,23 +8012,12 @@
       "record": "0-0"
     },
     {
-      "Rank": 6,
-      "Team": "Texas",
-      "Conference": "SEC",
-      "Net Rating": 15.5,
-      "Year": 2026,
-      "sos": 60,
-      "sor": null,
-      "Expected Wins": 7.76,
-      "record": "0-0"
-    },
-    {
       "Rank": 7,
       "Team": "Alabama",
       "Conference": "SEC",
       "Net Rating": 14.6,
       "Year": 2026,
-      "sos": 15,
+      "sos": 23,
       "sor": null,
       "Expected Wins": 7.86,
       "record": "0-0"
@@ -8028,7 +8028,7 @@
       "Conference": "SEC",
       "Net Rating": 14.4,
       "Year": 2026,
-      "sos": 2,
+      "sos": 4,
       "sor": null,
       "Expected Wins": 7.84,
       "record": "0-0"
@@ -8039,7 +8039,7 @@
       "Conference": "ACC",
       "Net Rating": 14.1,
       "Year": 2026,
-      "sos": 20,
+      "sos": 9,
       "sor": null,
       "Expected Wins": 8.94,
       "record": "0-0"
@@ -8050,7 +8050,7 @@
       "Conference": "SEC",
       "Net Rating": 13.9,
       "Year": 2026,
-      "sos": 49,
+      "sos": 39,
       "sor": null,
       "Expected Wins": 7.68,
       "record": "0-0"
@@ -8061,7 +8061,7 @@
       "Conference": "Big 12",
       "Net Rating": 13.5,
       "Year": 2026,
-      "sos": 58,
+      "sos": 12,
       "sor": null,
       "Expected Wins": 9.43,
       "record": "0-0"
@@ -8072,7 +8072,7 @@
       "Conference": "Big Ten",
       "Net Rating": 13.3,
       "Year": 2026,
-      "sos": 28,
+      "sos": 47,
       "sor": null,
       "Expected Wins": 9.03,
       "record": "0-0"
@@ -8083,7 +8083,7 @@
       "Conference": "SEC",
       "Net Rating": 12.0,
       "Year": 2026,
-      "sos": 33,
+      "sos": 32,
       "sor": null,
       "Expected Wins": 7.05,
       "record": "0-0"
@@ -8094,7 +8094,7 @@
       "Conference": "Big 12",
       "Net Rating": 11.6,
       "Year": 2026,
-      "sos": 11,
+      "sos": 22,
       "sor": null,
       "Expected Wins": 8.54,
       "record": "0-0"
@@ -8105,7 +8105,7 @@
       "Conference": "SEC",
       "Net Rating": 11.5,
       "Year": 2026,
-      "sos": 25,
+      "sos": 58,
       "sor": null,
       "Expected Wins": 7.14,
       "record": "0-0"
@@ -8116,7 +8116,7 @@
       "Conference": "Big Ten",
       "Net Rating": 10.6,
       "Year": 2026,
-      "sos": 23,
+      "sos": 24,
       "sor": null,
       "Expected Wins": 7.41,
       "record": "0-0"
@@ -8127,7 +8127,7 @@
       "Conference": "Big Ten",
       "Net Rating": 10.4,
       "Year": 2026,
-      "sos": 3,
+      "sos": 2,
       "sor": null,
       "Expected Wins": 7.22,
       "record": "0-0"
@@ -8138,7 +8138,7 @@
       "Conference": "ACC",
       "Net Rating": 10.3,
       "Year": 2026,
-      "sos": 36,
+      "sos": 43,
       "sor": null,
       "Expected Wins": 7.99,
       "record": "0-0"
@@ -8149,7 +8149,7 @@
       "Conference": "SEC",
       "Net Rating": 10.2,
       "Year": 2026,
-      "sos": 8,
+      "sos": 38,
       "sor": null,
       "Expected Wins": 6.59,
       "record": "0-0"
@@ -8160,7 +8160,7 @@
       "Conference": "SEC",
       "Net Rating": 10.1,
       "Year": 2026,
-      "sos": 16,
+      "sos": 25,
       "sor": null,
       "Expected Wins": 6.65,
       "record": "0-0"
@@ -8171,7 +8171,7 @@
       "Conference": "SEC",
       "Net Rating": 10.0,
       "Year": 2026,
-      "sos": 51,
+      "sos": 55,
       "sor": null,
       "Expected Wins": 6.8,
       "record": "0-0"
@@ -8182,7 +8182,7 @@
       "Conference": "SEC",
       "Net Rating": 9.9,
       "Year": 2026,
-      "sos": 12,
+      "sos": 35,
       "sor": null,
       "Expected Wins": 6.62,
       "record": "0-0"
@@ -8193,7 +8193,7 @@
       "Conference": "Big Ten",
       "Net Rating": 9.8,
       "Year": 2026,
-      "sos": 47,
+      "sos": 11,
       "sor": null,
       "Expected Wins": 7.72,
       "record": "0-0"
@@ -8204,7 +8204,7 @@
       "Conference": "ACC",
       "Net Rating": 9.4,
       "Year": 2026,
-      "sos": 42,
+      "sos": 17,
       "sor": null,
       "Expected Wins": 8.06,
       "record": "0-0"
@@ -8215,7 +8215,7 @@
       "Conference": "SEC",
       "Net Rating": 9.3,
       "Year": 2026,
-      "sos": 14,
+      "sos": 16,
       "sor": null,
       "Expected Wins": 6.47,
       "record": "0-0"
@@ -8226,7 +8226,7 @@
       "Conference": "SEC",
       "Net Rating": 8.7,
       "Year": 2026,
-      "sos": 101,
+      "sos": 102,
       "sor": null,
       "Expected Wins": 5.97,
       "record": "0-0"
@@ -8237,7 +8237,7 @@
       "Conference": "Big Ten",
       "Net Rating": 8.5,
       "Year": 2026,
-      "sos": 26,
+      "sos": 37,
       "sor": null,
       "Expected Wins": 6.91,
       "record": "0-0"
@@ -8248,9 +8248,9 @@
       "Conference": "Big 12",
       "Net Rating": 6.7,
       "Year": 2026,
-      "sos": 46,
+      "sos": 33,
       "sor": null,
-      "Expected Wins": 6.78,
+      "Expected Wins": 6.79,
       "record": "0-0"
     },
     {
@@ -8259,7 +8259,7 @@
       "Conference": "Big 12",
       "Net Rating": 6.7,
       "Year": 2026,
-      "sos": 4,
+      "sos": 3,
       "sor": null,
       "Expected Wins": 7.03,
       "record": "0-0"
@@ -8270,7 +8270,7 @@
       "Conference": "ACC",
       "Net Rating": 6.6,
       "Year": 2026,
-      "sos": 120,
+      "sos": 90,
       "sor": null,
       "Expected Wins": 6.84,
       "record": "0-0"
@@ -8281,7 +8281,7 @@
       "Conference": "American Athletic",
       "Net Rating": 6.4,
       "Year": 2026,
-      "sos": 57,
+      "sos": 18,
       "sor": null,
       "Expected Wins": 8.54,
       "record": "0-0"
@@ -8292,7 +8292,7 @@
       "Conference": "Big 12",
       "Net Rating": 6.3,
       "Year": 2026,
-      "sos": 24,
+      "sos": 45,
       "sor": null,
       "Expected Wins": 7.12,
       "record": "0-0"
@@ -8303,7 +8303,7 @@
       "Conference": "SEC",
       "Net Rating": 6.1,
       "Year": 2026,
-      "sos": 45,
+      "sos": 41,
       "sor": null,
       "Expected Wins": 5.17,
       "record": "0-0"
@@ -8314,7 +8314,7 @@
       "Conference": "ACC",
       "Net Rating": 5.8,
       "Year": 2026,
-      "sos": 31,
+      "sos": 27,
       "sor": null,
       "Expected Wins": 6.22,
       "record": "0-0"
@@ -8325,7 +8325,7 @@
       "Conference": "Big 12",
       "Net Rating": 5.7,
       "Year": 2026,
-      "sos": 85,
+      "sos": 123,
       "sor": null,
       "Expected Wins": 6.45,
       "record": "0-0"
@@ -8336,7 +8336,7 @@
       "Conference": "Big 12",
       "Net Rating": 5.5,
       "Year": 2026,
-      "sos": 37,
+      "sos": 57,
       "sor": null,
       "Expected Wins": 6.46,
       "record": "0-0"
@@ -8347,7 +8347,7 @@
       "Conference": "Conference USA",
       "Net Rating": 5.3,
       "Year": 2026,
-      "sos": 75,
+      "sos": 122,
       "sor": null,
       "Expected Wins": 8.92,
       "record": "0-0"
@@ -8358,7 +8358,7 @@
       "Conference": "Sun Belt",
       "Net Rating": 5.0,
       "Year": 2026,
-      "sos": 78,
+      "sos": 114,
       "sor": null,
       "Expected Wins": 8.04,
       "record": "0-0"
@@ -8369,7 +8369,7 @@
       "Conference": "Big Ten",
       "Net Rating": 4.9,
       "Year": 2026,
-      "sos": 52,
+      "sos": 21,
       "sor": null,
       "Expected Wins": 6.15,
       "record": "0-0"
@@ -8380,7 +8380,7 @@
       "Conference": "Big 12",
       "Net Rating": 4.6,
       "Year": 2026,
-      "sos": 41,
+      "sos": 14,
       "sor": null,
       "Expected Wins": 6.57,
       "record": "0-0"
@@ -8391,7 +8391,7 @@
       "Conference": "SEC",
       "Net Rating": 4.5,
       "Year": 2026,
-      "sos": 9,
+      "sos": 20,
       "sor": null,
       "Expected Wins": 5.09,
       "record": "0-0"
@@ -8402,31 +8402,31 @@
       "Conference": "ACC",
       "Net Rating": 4.4,
       "Year": 2026,
-      "sos": 35,
+      "sos": 15,
       "sor": null,
       "Expected Wins": 6.12,
       "record": "0-0"
     },
     {
       "Rank": 43,
-      "Team": "Kentucky",
-      "Conference": "SEC",
-      "Net Rating": 4.3,
-      "Year": 2026,
-      "sos": 55,
-      "sor": null,
-      "Expected Wins": 4.95,
-      "record": "0-0"
-    },
-    {
-      "Rank": 44,
       "Team": "NC State",
       "Conference": "ACC",
       "Net Rating": 4.3,
       "Year": 2026,
-      "sos": 34,
+      "sos": 42,
       "sor": null,
       "Expected Wins": 6.78,
+      "record": "0-0"
+    },
+    {
+      "Rank": 44,
+      "Team": "Kentucky",
+      "Conference": "SEC",
+      "Net Rating": 4.3,
+      "Year": 2026,
+      "sos": 28,
+      "sor": null,
+      "Expected Wins": 4.95,
       "record": "0-0"
     },
     {
@@ -8435,7 +8435,7 @@
       "Conference": "ACC",
       "Net Rating": 4.2,
       "Year": 2026,
-      "sos": 5,
+      "sos": 1,
       "sor": null,
       "Expected Wins": 7.14,
       "record": "0-0"
@@ -8446,7 +8446,7 @@
       "Conference": "ACC",
       "Net Rating": 3.9,
       "Year": 2026,
-      "sos": 54,
+      "sos": 19,
       "sor": null,
       "Expected Wins": 6.67,
       "record": "0-0"
@@ -8457,7 +8457,7 @@
       "Conference": "ACC",
       "Net Rating": 3.9,
       "Year": 2026,
-      "sos": 96,
+      "sos": 94,
       "sor": null,
       "Expected Wins": 6.11,
       "record": "0-0"
@@ -8468,7 +8468,7 @@
       "Conference": "Big 12",
       "Net Rating": 3.6,
       "Year": 2026,
-      "sos": 102,
+      "sos": 119,
       "sor": null,
       "Expected Wins": 5.74,
       "record": "0-0"
@@ -8479,7 +8479,7 @@
       "Conference": "American Athletic",
       "Net Rating": 3.6,
       "Year": 2026,
-      "sos": 107,
+      "sos": 67,
       "sor": null,
       "Expected Wins": 7.06,
       "record": "0-0"
@@ -8490,24 +8490,13 @@
       "Conference": "Big 12",
       "Net Rating": 3.6,
       "Year": 2026,
-      "sos": 30,
+      "sos": 44,
       "sor": null,
       "Expected Wins": 6.19,
       "record": "0-0"
     },
     {
       "Rank": 51,
-      "Team": "Washington State",
-      "Conference": "Pac-12",
-      "Net Rating": 3.5,
-      "Year": 2026,
-      "sos": 125,
-      "sor": null,
-      "Expected Wins": 6.14,
-      "record": "0-0"
-    },
-    {
-      "Rank": 52,
       "Team": "UNLV",
       "Conference": "Mountain West",
       "Net Rating": 3.5,
@@ -8518,12 +8507,23 @@
       "record": "0-0"
     },
     {
+      "Rank": 52,
+      "Team": "Washington State",
+      "Conference": "Pac-12",
+      "Net Rating": 3.5,
+      "Year": 2026,
+      "sos": 126,
+      "sor": null,
+      "Expected Wins": 6.14,
+      "record": "0-0"
+    },
+    {
       "Rank": 53,
       "Team": "Wisconsin",
       "Conference": "Big Ten",
-      "Net Rating": 3.1,
+      "Net Rating": 3.2,
       "Year": 2026,
-      "sos": 99,
+      "sos": 121,
       "sor": null,
       "Expected Wins": 5.91,
       "record": "0-0"
@@ -8534,7 +8534,7 @@
       "Conference": "American Athletic",
       "Net Rating": 2.9,
       "Year": 2026,
-      "sos": 118,
+      "sos": 106,
       "sor": null,
       "Expected Wins": 7.04,
       "record": "0-0"
@@ -8545,31 +8545,31 @@
       "Conference": "Big Ten",
       "Net Rating": 2.9,
       "Year": 2026,
-      "sos": 59,
+      "sos": 31,
       "sor": null,
       "Expected Wins": 5.87,
       "record": "0-0"
     },
     {
       "Rank": 56,
-      "Team": "Houston",
-      "Conference": "Big 12",
-      "Net Rating": 2.8,
-      "Year": 2026,
-      "sos": 108,
-      "sor": null,
-      "Expected Wins": 6.18,
-      "record": "0-0"
-    },
-    {
-      "Rank": 57,
       "Team": "Northwestern",
       "Conference": "Big Ten",
       "Net Rating": 2.8,
       "Year": 2026,
-      "sos": 39,
+      "sos": 46,
       "sor": null,
       "Expected Wins": 5.5,
+      "record": "0-0"
+    },
+    {
+      "Rank": 57,
+      "Team": "Houston",
+      "Conference": "Big 12",
+      "Net Rating": 2.8,
+      "Year": 2026,
+      "sos": 91,
+      "sor": null,
+      "Expected Wins": 6.18,
       "record": "0-0"
     },
     {
@@ -8589,7 +8589,7 @@
       "Conference": "American Athletic",
       "Net Rating": 2.4,
       "Year": 2026,
-      "sos": 69,
+      "sos": 99,
       "sor": null,
       "Expected Wins": 6.85,
       "record": "0-0"
@@ -8600,7 +8600,7 @@
       "Conference": "American Athletic",
       "Net Rating": 2.4,
       "Year": 2026,
-      "sos": 116,
+      "sos": 71,
       "sor": null,
       "Expected Wins": 7.23,
       "record": "0-0"
@@ -8611,7 +8611,7 @@
       "Conference": "Big Ten",
       "Net Rating": 2.3,
       "Year": 2026,
-      "sos": 19,
+      "sos": 51,
       "sor": null,
       "Expected Wins": 5.63,
       "record": "0-0"
@@ -8622,7 +8622,7 @@
       "Conference": "Big 12",
       "Net Rating": 2.3,
       "Year": 2026,
-      "sos": 43,
+      "sos": 60,
       "sor": null,
       "Expected Wins": 6.12,
       "record": "0-0"
@@ -8640,35 +8640,35 @@
     },
     {
       "Rank": 64,
-      "Team": "Cincinnati",
-      "Conference": "Big 12",
-      "Net Rating": 1.7,
-      "Year": 2026,
-      "sos": 17,
-      "sor": null,
-      "Expected Wins": 5.56,
-      "record": "0-0"
-    },
-    {
-      "Rank": 65,
       "Team": "Toledo",
       "Conference": "Mid-American",
       "Net Rating": 1.7,
       "Year": 2026,
-      "sos": 53,
+      "sos": 34,
       "sor": null,
       "Expected Wins": 7.93,
       "record": "0-0"
     },
     {
-      "Rank": 66,
+      "Rank": 65,
       "Team": "Wake Forest",
       "Conference": "ACC",
       "Net Rating": 1.7,
       "Year": 2026,
-      "sos": 71,
+      "sos": 80,
       "sor": null,
       "Expected Wins": 5.79,
+      "record": "0-0"
+    },
+    {
+      "Rank": 66,
+      "Team": "Cincinnati",
+      "Conference": "Big 12",
+      "Net Rating": 1.7,
+      "Year": 2026,
+      "sos": 50,
+      "sor": null,
+      "Expected Wins": 5.56,
       "record": "0-0"
     },
     {
@@ -8677,7 +8677,7 @@
       "Conference": "Pac-12",
       "Net Rating": 1.5,
       "Year": 2026,
-      "sos": 62,
+      "sos": 63,
       "sor": null,
       "Expected Wins": 5.84,
       "record": "0-0"
@@ -8688,7 +8688,7 @@
       "Conference": "Big 12",
       "Net Rating": 1.4,
       "Year": 2026,
-      "sos": 90,
+      "sos": 96,
       "sor": null,
       "Expected Wins": 5.21,
       "record": "0-0"
@@ -8699,7 +8699,7 @@
       "Conference": "American Athletic",
       "Net Rating": 1.3,
       "Year": 2026,
-      "sos": 97,
+      "sos": 74,
       "sor": null,
       "Expected Wins": 6.64,
       "record": "0-0"
@@ -8710,7 +8710,7 @@
       "Conference": "Big Ten",
       "Net Rating": 1.2,
       "Year": 2026,
-      "sos": 38,
+      "sos": 10,
       "sor": null,
       "Expected Wins": 5.42,
       "record": "0-0"
@@ -8721,7 +8721,7 @@
       "Conference": "ACC",
       "Net Rating": 0.8,
       "Year": 2026,
-      "sos": 66,
+      "sos": 73,
       "sor": null,
       "Expected Wins": 5.39,
       "record": "0-0"
@@ -8732,7 +8732,7 @@
       "Conference": "Pac-12",
       "Net Rating": 0.6,
       "Year": 2026,
-      "sos": 63,
+      "sos": 61,
       "sor": null,
       "Expected Wins": 5.78,
       "record": "0-0"
@@ -8743,7 +8743,7 @@
       "Conference": "Big Ten",
       "Net Rating": 0.5,
       "Year": 2026,
-      "sos": 48,
+      "sos": 8,
       "sor": null,
       "Expected Wins": 4.89,
       "record": "0-0"
@@ -8754,7 +8754,7 @@
       "Conference": "Pac-12",
       "Net Rating": 0.4,
       "Year": 2026,
-      "sos": 126,
+      "sos": 124,
       "sor": null,
       "Expected Wins": 5.76,
       "record": "0-0"
@@ -8765,7 +8765,7 @@
       "Conference": "ACC",
       "Net Rating": 0.3,
       "Year": 2026,
-      "sos": 22,
+      "sos": 30,
       "sor": null,
       "Expected Wins": 5.42,
       "record": "0-0"
@@ -8776,9 +8776,9 @@
       "Conference": "ACC",
       "Net Rating": 0.2,
       "Year": 2026,
-      "sos": 88,
+      "sos": 66,
       "sor": null,
-      "Expected Wins": 4.5,
+      "Expected Wins": 4.51,
       "record": "0-0"
     },
     {
@@ -8787,7 +8787,7 @@
       "Conference": "Big Ten",
       "Net Rating": -0.1,
       "Year": 2026,
-      "sos": 50,
+      "sos": 29,
       "sor": null,
       "Expected Wins": 5.31,
       "record": "0-0"
@@ -8798,31 +8798,31 @@
       "Conference": "Sun Belt",
       "Net Rating": -0.3,
       "Year": 2026,
-      "sos": 77,
+      "sos": 104,
       "sor": null,
       "Expected Wins": 6.82,
       "record": "0-0"
     },
     {
       "Rank": 79,
-      "Team": "Stanford",
-      "Conference": "ACC",
-      "Net Rating": -0.3,
-      "Year": 2026,
-      "sos": 86,
-      "sor": null,
-      "Expected Wins": 4.61,
-      "record": "0-0"
-    },
-    {
-      "Rank": 80,
       "Team": "Maryland",
       "Conference": "Big Ten",
       "Net Rating": -0.3,
       "Year": 2026,
-      "sos": 21,
+      "sos": 59,
       "sor": null,
       "Expected Wins": 5.1,
+      "record": "0-0"
+    },
+    {
+      "Rank": 80,
+      "Team": "Stanford",
+      "Conference": "ACC",
+      "Net Rating": -0.3,
+      "Year": 2026,
+      "sos": 76,
+      "sor": null,
+      "Expected Wins": 4.61,
       "record": "0-0"
     },
     {
@@ -8831,7 +8831,7 @@
       "Conference": "FBS Independents",
       "Net Rating": -0.6,
       "Year": 2026,
-      "sos": 56,
+      "sos": 48,
       "sor": null,
       "Expected Wins": 6.95,
       "record": "0-0"
@@ -8842,7 +8842,7 @@
       "Conference": "Mid-American",
       "Net Rating": -0.7,
       "Year": 2026,
-      "sos": 111,
+      "sos": 110,
       "sor": null,
       "Expected Wins": 7.05,
       "record": "0-0"
@@ -8853,7 +8853,7 @@
       "Conference": "Big 12",
       "Net Rating": -0.8,
       "Year": 2026,
-      "sos": 29,
+      "sos": 52,
       "sor": null,
       "Expected Wins": 4.95,
       "record": "0-0"
@@ -8864,7 +8864,7 @@
       "Conference": "ACC",
       "Net Rating": -1.0,
       "Year": 2026,
-      "sos": 110,
+      "sos": 69,
       "sor": null,
       "Expected Wins": 4.49,
       "record": "0-0"
@@ -8875,7 +8875,7 @@
       "Conference": "Conference USA",
       "Net Rating": -1.2,
       "Year": 2026,
-      "sos": 105,
+      "sos": 93,
       "sor": null,
       "Expected Wins": 7.4,
       "record": "0-0"
@@ -8886,7 +8886,7 @@
       "Conference": "American Athletic",
       "Net Rating": -2.0,
       "Year": 2026,
-      "sos": 82,
+      "sos": 103,
       "sor": null,
       "Expected Wins": 5.62,
       "record": "0-0"
@@ -8897,7 +8897,7 @@
       "Conference": "Mountain West",
       "Net Rating": -2.3,
       "Year": 2026,
-      "sos": 13,
+      "sos": 56,
       "sor": null,
       "Expected Wins": 6.46,
       "record": "0-0"
@@ -8908,24 +8908,13 @@
       "Conference": "Sun Belt",
       "Net Rating": -2.4,
       "Year": 2026,
-      "sos": 104,
+      "sos": 86,
       "sor": null,
       "Expected Wins": 6.07,
       "record": "0-0"
     },
     {
       "Rank": 89,
-      "Team": "Syracuse",
-      "Conference": "ACC",
-      "Net Rating": -2.5,
-      "Year": 2026,
-      "sos": 81,
-      "sor": null,
-      "Expected Wins": 4.04,
-      "record": "0-0"
-    },
-    {
-      "Rank": 90,
       "Team": "Western Kentucky",
       "Conference": "Conference USA",
       "Net Rating": -2.5,
@@ -8936,12 +8925,23 @@
       "record": "0-0"
     },
     {
+      "Rank": 90,
+      "Team": "Syracuse",
+      "Conference": "ACC",
+      "Net Rating": -2.5,
+      "Year": 2026,
+      "sos": 115,
+      "sor": null,
+      "Expected Wins": 4.05,
+      "record": "0-0"
+    },
+    {
       "Rank": 91,
       "Team": "Louisiana",
       "Conference": "Sun Belt",
       "Net Rating": -2.6,
       "Year": 2026,
-      "sos": 103,
+      "sos": 75,
       "sor": null,
       "Expected Wins": 6.22,
       "record": "0-0"
@@ -8952,7 +8952,7 @@
       "Conference": "Sun Belt",
       "Net Rating": -2.8,
       "Year": 2026,
-      "sos": 70,
+      "sos": 85,
       "sor": null,
       "Expected Wins": 5.9,
       "record": "0-0"
@@ -8963,20 +8963,20 @@
       "Conference": "Big Ten",
       "Net Rating": -3.0,
       "Year": 2026,
-      "sos": 10,
+      "sos": 13,
       "sor": null,
-      "Expected Wins": 3.79,
+      "Expected Wins": 3.8,
       "record": "0-0"
     },
     {
       "Rank": 94,
-      "Team": "Hawai'i",
-      "Conference": "Mountain West",
+      "Team": "South Alabama",
+      "Conference": "Sun Belt",
       "Net Rating": -3.2,
       "Year": 2026,
-      "sos": 73,
+      "sos": 109,
       "sor": null,
-      "Expected Wins": 6.04,
+      "Expected Wins": 5.8,
       "record": "0-0"
     },
     {
@@ -8985,20 +8985,20 @@
       "Conference": "Sun Belt",
       "Net Rating": -3.2,
       "Year": 2026,
-      "sos": 133,
+      "sos": 136,
       "sor": null,
       "Expected Wins": 5.93,
       "record": "0-0"
     },
     {
       "Rank": 96,
-      "Team": "South Alabama",
-      "Conference": "Sun Belt",
+      "Team": "Hawai'i",
+      "Conference": "Mountain West",
       "Net Rating": -3.2,
       "Year": 2026,
-      "sos": 114,
+      "sos": 89,
       "sor": null,
-      "Expected Wins": 5.8,
+      "Expected Wins": 6.04,
       "record": "0-0"
     },
     {
@@ -9007,7 +9007,7 @@
       "Conference": "Big 12",
       "Net Rating": -3.4,
       "Year": 2026,
-      "sos": 80,
+      "sos": 77,
       "sor": null,
       "Expected Wins": 3.99,
       "record": "0-0"
@@ -9018,7 +9018,7 @@
       "Conference": "Sun Belt",
       "Net Rating": -3.4,
       "Year": 2026,
-      "sos": 83,
+      "sos": 95,
       "sor": null,
       "Expected Wins": 5.34,
       "record": "0-0"
@@ -9029,7 +9029,7 @@
       "Conference": "Sun Belt",
       "Net Rating": -3.5,
       "Year": 2026,
-      "sos": 122,
+      "sos": 117,
       "sor": null,
       "Expected Wins": 5.38,
       "record": "0-0"
@@ -9040,7 +9040,7 @@
       "Conference": "Conference USA",
       "Net Rating": -3.8,
       "Year": 2026,
-      "sos": 92,
+      "sos": 78,
       "sor": null,
       "Expected Wins": 6.2,
       "record": "0-0"
@@ -9051,7 +9051,7 @@
       "Conference": "Pac-12",
       "Net Rating": -3.8,
       "Year": 2026,
-      "sos": 64,
+      "sos": 62,
       "sor": null,
       "Expected Wins": 4.58,
       "record": "0-0"
@@ -9062,7 +9062,7 @@
       "Conference": "Mountain West",
       "Net Rating": -4.0,
       "Year": 2026,
-      "sos": 132,
+      "sos": 131,
       "sor": null,
       "Expected Wins": 5.76,
       "record": "0-0"
@@ -9080,24 +9080,24 @@
     },
     {
       "Rank": 104,
-      "Team": "Miami (OH)",
-      "Conference": "Mid-American",
-      "Net Rating": -4.6,
-      "Year": 2026,
-      "sos": 121,
-      "sor": null,
-      "Expected Wins": 6.27,
-      "record": "0-0"
-    },
-    {
-      "Rank": 105,
       "Team": "App State",
       "Conference": "Sun Belt",
       "Net Rating": -4.6,
       "Year": 2026,
-      "sos": 106,
+      "sos": 101,
       "sor": null,
       "Expected Wins": 5.48,
+      "record": "0-0"
+    },
+    {
+      "Rank": 105,
+      "Team": "Miami (OH)",
+      "Conference": "Mid-American",
+      "Net Rating": -4.6,
+      "Year": 2026,
+      "sos": 98,
+      "sor": null,
+      "Expected Wins": 6.27,
       "record": "0-0"
     },
     {
@@ -9106,7 +9106,7 @@
       "Conference": "American Athletic",
       "Net Rating": -5.0,
       "Year": 2026,
-      "sos": 27,
+      "sos": 49,
       "sor": null,
       "Expected Wins": 5.07,
       "record": "0-0"
@@ -9117,7 +9117,7 @@
       "Conference": "Pac-12",
       "Net Rating": -5.1,
       "Year": 2026,
-      "sos": 124,
+      "sos": 125,
       "sor": null,
       "Expected Wins": 3.88,
       "record": "0-0"
@@ -9128,7 +9128,7 @@
       "Conference": "American Athletic",
       "Net Rating": -5.1,
       "Year": 2026,
-      "sos": 93,
+      "sos": 81,
       "sor": null,
       "Expected Wins": 4.83,
       "record": "0-0"
@@ -9139,97 +9139,97 @@
       "Conference": "Sun Belt",
       "Net Rating": -5.2,
       "Year": 2026,
-      "sos": 68,
+      "sos": 108,
       "sor": null,
       "Expected Wins": 5.19,
       "record": "0-0"
     },
     {
       "Rank": 110,
-      "Team": "Wyoming",
-      "Conference": "Mountain West",
-      "Net Rating": -5.7,
-      "Year": 2026,
-      "sos": 84,
-      "sor": null,
-      "Expected Wins": 5.45,
-      "record": "0-0"
-    },
-    {
-      "Rank": 111,
       "Team": "Temple",
       "Conference": "American Athletic",
       "Net Rating": -5.7,
       "Year": 2026,
-      "sos": 40,
+      "sos": 53,
       "sor": null,
       "Expected Wins": 4.56,
       "record": "0-0"
     },
     {
-      "Rank": 112,
-      "Team": "Old Dominion",
-      "Conference": "Sun Belt",
-      "Net Rating": -5.8,
+      "Rank": 111,
+      "Team": "Wyoming",
+      "Conference": "Mountain West",
+      "Net Rating": -5.7,
       "Year": 2026,
-      "sos": 112,
+      "sos": 82,
       "sor": null,
-      "Expected Wins": 4.81,
+      "Expected Wins": 5.45,
       "record": "0-0"
     },
     {
-      "Rank": 113,
+      "Rank": 112,
       "Team": "Nevada",
       "Conference": "Mountain West",
       "Net Rating": -5.8,
       "Year": 2026,
-      "sos": 87,
+      "sos": 118,
       "sor": null,
       "Expected Wins": 5.32,
       "record": "0-0"
     },
     {
-      "Rank": 114,
-      "Team": "Buffalo",
-      "Conference": "Mid-American",
-      "Net Rating": -6.0,
+      "Rank": 113,
+      "Team": "Old Dominion",
+      "Conference": "Sun Belt",
+      "Net Rating": -5.8,
       "Year": 2026,
-      "sos": 91,
+      "sos": 111,
       "sor": null,
-      "Expected Wins": 5.66,
+      "Expected Wins": 4.81,
       "record": "0-0"
     },
     {
-      "Rank": 115,
+      "Rank": 114,
       "Team": "Bowling Green",
       "Conference": "Mid-American",
       "Net Rating": -6.0,
       "Year": 2026,
-      "sos": 89,
+      "sos": 113,
       "sor": null,
       "Expected Wins": 5.13,
       "record": "0-0"
     },
     {
-      "Rank": 116,
-      "Team": "Eastern Michigan",
+      "Rank": 115,
+      "Team": "Buffalo",
       "Conference": "Mid-American",
-      "Net Rating": -6.1,
+      "Net Rating": -6.0,
       "Year": 2026,
-      "sos": 76,
+      "sos": 100,
       "sor": null,
-      "Expected Wins": 5.69,
+      "Expected Wins": 5.66,
       "record": "0-0"
     },
     {
-      "Rank": 117,
+      "Rank": 116,
       "Team": "Tulsa",
       "Conference": "American Athletic",
       "Net Rating": -6.1,
       "Year": 2026,
-      "sos": 119,
+      "sos": 92,
       "sor": null,
       "Expected Wins": 4.95,
+      "record": "0-0"
+    },
+    {
+      "Rank": 117,
+      "Team": "Eastern Michigan",
+      "Conference": "Mid-American",
+      "Net Rating": -6.1,
+      "Year": 2026,
+      "sos": 72,
+      "sor": null,
+      "Expected Wins": 5.69,
       "record": "0-0"
     },
     {
@@ -9238,7 +9238,7 @@
       "Conference": "Conference USA",
       "Net Rating": -6.2,
       "Year": 2026,
-      "sos": 98,
+      "sos": 116,
       "sor": null,
       "Expected Wins": 4.84,
       "record": "0-0"
@@ -9249,7 +9249,7 @@
       "Conference": "Mid-American",
       "Net Rating": -6.2,
       "Year": 2026,
-      "sos": 131,
+      "sos": 133,
       "sor": null,
       "Expected Wins": 5.65,
       "record": "0-0"
@@ -9260,7 +9260,7 @@
       "Conference": "Sun Belt",
       "Net Rating": -6.3,
       "Year": 2026,
-      "sos": 95,
+      "sos": 97,
       "sor": null,
       "Expected Wins": 5.03,
       "record": "0-0"
@@ -9271,7 +9271,7 @@
       "Conference": "Pac-12",
       "Net Rating": -6.4,
       "Year": 2026,
-      "sos": 61,
+      "sos": 64,
       "sor": null,
       "Expected Wins": 3.99,
       "record": "0-0"
@@ -9282,7 +9282,7 @@
       "Conference": "Mid-American",
       "Net Rating": -6.8,
       "Year": 2026,
-      "sos": 74,
+      "sos": 84,
       "sor": null,
       "Expected Wins": 5.33,
       "record": "0-0"
@@ -9293,7 +9293,7 @@
       "Conference": "Mountain West",
       "Net Rating": -7.0,
       "Year": 2026,
-      "sos": 127,
+      "sos": 128,
       "sor": null,
       "Expected Wins": 4.51,
       "record": "0-0"
@@ -9304,7 +9304,7 @@
       "Conference": "Mountain West",
       "Net Rating": -7.3,
       "Year": 2026,
-      "sos": 113,
+      "sos": 70,
       "sor": null,
       "Expected Wins": 4.58,
       "record": "0-0"
@@ -9315,7 +9315,7 @@
       "Conference": "American Athletic",
       "Net Rating": -7.4,
       "Year": 2026,
-      "sos": 117,
+      "sos": 88,
       "sor": null,
       "Expected Wins": 4.0,
       "record": "0-0"
@@ -9326,7 +9326,7 @@
       "Conference": "Conference USA",
       "Net Rating": -7.5,
       "Year": 2026,
-      "sos": 67,
+      "sos": 107,
       "sor": null,
       "Expected Wins": 4.96,
       "record": "0-0"
@@ -9337,31 +9337,31 @@
       "Conference": "Conference USA",
       "Net Rating": -7.7,
       "Year": 2026,
-      "sos": 135,
+      "sos": 137,
       "sor": null,
       "Expected Wins": 4.83,
       "record": "0-0"
     },
     {
       "Rank": 128,
-      "Team": "Delaware",
-      "Conference": "Conference USA",
-      "Net Rating": -8.9,
-      "Year": 2026,
-      "sos": 94,
-      "sor": null,
-      "Expected Wins": 4.21,
-      "record": "0-0"
-    },
-    {
-      "Rank": 129,
       "Team": "Charlotte",
       "Conference": "American Athletic",
       "Net Rating": -8.9,
       "Year": 2026,
-      "sos": 72,
+      "sos": 112,
       "sor": null,
       "Expected Wins": 3.53,
+      "record": "0-0"
+    },
+    {
+      "Rank": 129,
+      "Team": "Delaware",
+      "Conference": "Conference USA",
+      "Net Rating": -8.9,
+      "Year": 2026,
+      "sos": 87,
+      "sor": null,
+      "Expected Wins": 4.21,
       "record": "0-0"
     },
     {
@@ -9370,7 +9370,7 @@
       "Conference": "Conference USA",
       "Net Rating": -9.3,
       "Year": 2026,
-      "sos": 136,
+      "sos": 132,
       "sor": null,
       "Expected Wins": 4.45,
       "record": "0-0"
@@ -9381,7 +9381,7 @@
       "Conference": "Sun Belt",
       "Net Rating": -10.0,
       "Year": 2026,
-      "sos": 100,
+      "sos": 68,
       "sor": null,
       "Expected Wins": 3.84,
       "record": "0-0"
@@ -9392,7 +9392,7 @@
       "Conference": "Conference USA",
       "Net Rating": -11.0,
       "Year": 2026,
-      "sos": 123,
+      "sos": 120,
       "sor": null,
       "Expected Wins": 3.85,
       "record": "0-0"
@@ -9414,7 +9414,7 @@
       "Conference": "Mid-American",
       "Net Rating": -12.0,
       "Year": 2026,
-      "sos": 128,
+      "sos": 127,
       "sor": null,
       "Expected Wins": 3.52,
       "record": "0-0"
@@ -9425,7 +9425,7 @@
       "Conference": "Mid-American",
       "Net Rating": -16.4,
       "Year": 2026,
-      "sos": 137,
+      "sos": 135,
       "sor": null,
       "Expected Wins": 3.27,
       "record": "0-0"
@@ -9436,7 +9436,7 @@
       "Conference": "Mid-American",
       "Net Rating": -16.8,
       "Year": 2026,
-      "sos": 115,
+      "sos": 83,
       "sor": null,
       "Expected Wins": 2.79,
       "record": "0-0"
