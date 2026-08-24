@@ -45,6 +45,7 @@ interface MatchupGameEntry {
   game_id: number;
   week: number;
   year: number;
+  start_date?: string;
   status: 'completed' | 'scheduled';
   home_team: string;
   away_team: string;
@@ -52,6 +53,7 @@ interface MatchupGameEntry {
   away_points: number | null;
   actual_margin: number | null;
   predicted_margin: number | null;
+  home_win_prob?: number | null;
 }
 
 interface MatchupsData {
@@ -114,14 +116,23 @@ const upcomingGames = teamMatchups
       ? g.predicted_margin 
       : (g.predicted_margin != null ? -g.predicted_margin : null);
 
+    // Calculate win probability from the current team's perspective
+    let teamWinProb = null;
+    if (g.home_win_prob != null) {
+      const rawProb = isHome ? g.home_win_prob : (1 - g.home_win_prob);
+      teamWinProb = Math.round(rawProb * 100);
+    }
+
     return {
       week: g.week,
+      startDate: g.start_date,
       opponent: opponent,
       location: isHome ? 'Home' : 'Away',
       team_score: null,
       opponent_score: null,
       actual_margin: null,
       predicted_margin: predMargin,
+      winProb: teamWinProb,
       beat_expectation_by: null,
       result: null,
       isCompleted: false,
@@ -188,7 +199,22 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
         const hasPage = validTeamYears.has(`${row.year}-${opponentSlug}`);
         const prefix = g.location === 'Home' ? 'vs ' : '@ ';
         
-        // Handle label formatting for completed vs upcoming games
+        let formattedDate = '';
+        if (g.startDate) {
+          try {
+            const dateObj = new Date(g.startDate);
+            if (!isNaN(dateObj.getTime())) {
+              formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+            }
+          } catch (e) {
+            // fallback if parsing fails
+          }
+        }
+
+        const winProb = g.winProb;
+        const isFavored = winProb != null && winProb >= 50;
+        const probColor = isFavored ? '#4ade80' : '#f87171';
+
         const scoreLabel = g.isCompleted
           ? (g.team_score != null && g.opponent_score != null 
               ? `${g.team_score}–${g.opponent_score}` 
@@ -197,7 +223,6 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
 
         const beatExp = g.isCompleted && g.beat_expectation_by != null ? Number(g.beat_expectation_by) : null;
         
-        // Compute max absolute beat expectation for scaling the variance bars safely
         const completedWithBeatExp = sortedGameLog.filter((x: any) => x.isCompleted && x.beat_expectation_by != null);
         const maxAbsBeatExp = completedWithBeatExp.length > 0 
           ? Math.max(1, ...completedWithBeatExp.map((x: any) => Math.abs(x.beat_expectation_by))) 
@@ -206,7 +231,12 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
 
         return (
           <tr>
-            <td>{g.week}</td>
+            <td>
+              <div class="week-cell">
+                <span class="week-num">Wk {g.week}</span>
+                {formattedDate && <span class="game-date">{formattedDate}</span>}
+              </div>
+            </td>
             <td>
               {prefix}
               {hasPage ? (
@@ -218,7 +248,13 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
               )}
             </td>
             <td class={g.isCompleted ? (g.result === 'W' ? 'win' : 'loss') : 'upcoming'}>
-              {g.isCompleted ? `${g.result} ` : ''}{scoreLabel}
+              {g.isCompleted ? `${g.result} ` : ''}
+              {scoreLabel}
+              {!g.isCompleted && winProb != null && (
+                <span class="win-prob-tag" style={{ color: probColor, marginLeft: '12px' }}>
+                  {' '}{winProb}%
+                </span>
+              )}
             </td>
             <td class="num">
               {g.isCompleted && beatExp != null ? (
@@ -249,6 +285,20 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
 </Layout>
 
 <style>
+  .week-cell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .week-num {
+    font-weight: 600;
+  }
+
+  .game-date {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
   .opponent-link {
     color: inherit;
     text-decoration: none;

@@ -1,0 +1,499 @@
+---
+import Layout from '../layouts/Layout.astro';
+import simulationData from '../data/simulation.json';
+import { slugifyTeam } from '../lib/data';
+
+const { prediction_year, n_simulations, teams } = simulationData;
+
+// Convert teams object to array
+const teamsArray = Object.entries(teams).map(([name, stats]) => ({
+  name,
+  ...stats,
+}));
+
+// Initial server-side sort
+teamsArray.sort((a, b) => b.conference_championship_odds_pct - a.conference_championship_odds_pct);
+
+// Get unique conferences for the pills
+const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
+---
+
+<Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year}>
+  <div class="futures-container">
+    
+    <div class="page-header">
+      <h1>Futures</h1>
+      <p>Conference title and CFP probabilities from {n_simulations.toLocaleString()} simulated seasons.</p>
+    </div>
+
+    <!-- Main View Toggle -->
+    <div class="view-toggle" id="mainViewToggle">
+      <button class="view-btn active" data-target="conf">
+        Conf. Futures
+      </button>
+      <button class="view-btn" data-target="cfp">
+        CFP Futures
+      </button>
+    </div>
+
+    <!-- Section Header & Pills -->
+    <div class="sub-header">
+      <h2 id="sectionTitle">Conference Futures</h2>
+      <p id="sectionDesc">Simulated CCG appearance and conference title probabilities</p>
+      
+      <div class="conf-pills" id="confPillContainer">
+        <button class="pill all-pill active" data-conf="ALL">ALL</button>
+        {conferences.map(conf => (
+          <button class={`pill ${conf === 'FBS Independents' ? 'indie-pill' : ''}`} data-conf={conf}>{conf}</button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="table-wrapper">
+      <div class="table-top-bar">
+        <span id="activeConfLabel">All Conferences</span>
+        <span id="teamCountLabel">{teamsArray.length} teams</span>
+      </div>
+      
+      <table class="futures-table" id="futuresTable">
+        <thead>
+          <tr>
+            <th style="width: 40px;">RK</th>
+            <th class="text-left">TEAM</th>
+            <th class="text-left conf-col">CONF</th>
+            
+            <!-- Conference View Columns -->
+            <th class="view-conf sortable" data-sort="exp_wins">PROJ W</th>
+            <th class="view-conf sortable" data-sort="ccg">CCG%</th>
+            <th class="view-conf sortable active-sort" data-sort="champ">TITLE%</th>
+            
+            <!-- CFP View Columns -->
+            <th class="view-cfp sortable hidden" data-sort="cfp">CFP%</th>
+            <th class="view-cfp sortable hidden" data-sort="natty">NATTY%</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          {teamsArray.map((team, index) => (
+            <tr class="team-row" data-conf={team.conference}>
+              <td class="rank-num text-muted">{index + 1}</td>
+              <td class="text-left team-name-cell">
+                <a href={`/teams/${prediction_year}/${slugifyTeam(team.name)}/`} class="team-link">
+                  <strong>{team.name}</strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
+                </a>
+              </td>
+              <td class="text-left text-muted conf-col" style="font-size: 0.85rem;">{team.conference}</td>
+              
+              <!-- Conf Data -->
+              <td class="view-conf num-cell" data-val={team.expected_wins ?? 0}>
+                <span class="tabular-num">{team.expected_wins != null ? team.expected_wins.toFixed(1) : '—'}</span>
+              </td>
+              <td class="view-conf num-cell" data-val={team.ccg_appearance_odds_pct}>
+                <div class="bar-wrap">
+                  <div class="bar-bg"><div class="bar-fill orange" style={`width: ${team.ccg_appearance_odds_pct}%`}></div></div>
+                  <span>{team.ccg_appearance_odds_pct.toFixed(1)}%</span>
+                </div>
+              </td>
+              <td class="view-conf num-cell" data-val={team.conference_championship_odds_pct}>
+                <div class="bar-wrap">
+                  <div class="bar-bg"><div class="bar-fill green" style={`width: ${team.conference_championship_odds_pct}%`}></div></div>
+                  <span>{team.conference_championship_odds_pct.toFixed(1)}%</span>
+                </div>
+              </td>
+
+              <!-- CFP Data -->
+              <td class="view-cfp num-cell hidden" data-val={team.cfp_appearance_odds_pct}>
+                <div class="bar-wrap">
+                  <div class="bar-bg"><div class="bar-fill blue" style={`width: ${team.cfp_appearance_odds_pct}%`}></div></div>
+                  <span>{team.cfp_appearance_odds_pct.toFixed(1)}%</span>
+                </div>
+              </td>
+              <td class="view-cfp num-cell hidden" data-val={team.national_championship_odds_pct}>
+                <div class="bar-wrap">
+                  <div class="bar-bg"><div class="bar-fill purple" style={`width: ${team.national_championship_odds_pct}%`}></div></div>
+                  <span>{team.national_championship_odds_pct.toFixed(1)}%</span>
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</Layout>
+
+<style>
+  /* Scoped Component Styles */
+  .futures-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    color: #f8fafc;
+  }
+
+  .page-header {
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+  }
+  
+  .page-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+
+  /* Main Toggles */
+  .view-toggle {
+    display: flex;
+    border-bottom: 1px solid #1e293b;
+    margin-bottom: 2rem;
+  }
+  
+  .view-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #94a3b8;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .view-btn:hover {
+    color: #e2e8f0;
+    background: rgba(255,255,255,0.02);
+  }
+  
+  .view-btn.active {
+    color: #eab308;
+    border-bottom-color: #eab308;
+  }
+
+  /* Sub Header & Pills */
+  .sub-header h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .sub-header p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .conf-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .pill {
+    background: #1f2937;
+    border: 1px solid transparent;
+    color: #d1d5db;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .pill:hover {
+    background: #374151;
+  }
+  
+  .pill.active {
+    background: rgba(234, 179, 8, 0.15);
+    border-color: #eab308;
+    color: #facc15;
+  }
+
+  /* Table Container */
+  .table-wrapper {
+    background: #0f1115;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .table-top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #11141a;
+    border-bottom: 1px solid #1e293b;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .futures-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .futures-table th {
+    background: #0f1115;
+    color: #9ca3af;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 20px;
+    border-bottom: 1px solid #1e293b;
+    text-align: right;
+  }
+  
+  .futures-table th.text-left {
+    text-align: left;
+  }
+  
+  .futures-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #1e293b;
+    vertical-align: middle;
+    text-align: right;
+  }
+
+  .futures-table td.text-left {
+    text-align: left;
+  }
+
+  .futures-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .team-link {
+    color: #f8fafc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .team-link:hover {
+    color: #60a5fa;
+  }
+
+  .text-muted { color: #64748b; }
+  .hidden { display: none !important; }
+  .tabular-num { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  /* Sortable Headers */
+  th.sortable {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  th.sortable:hover {
+    color: #f8fafc;
+  }
+  
+  th.active-sort {
+    color: #eab308;
+  }
+
+  /* Bar Charts */
+  .bar-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .bar-wrap span {
+    min-width: 48px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+
+  .bar-bg {
+    width: 40px;
+    height: 4px;
+    background: #334155;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+  }
+  
+  .bar-fill.orange { background: #f59e0b; }
+  .bar-fill.green { background: #22c55e; }
+  .bar-fill.blue { background: #3b82f6; }
+  .bar-fill.purple { background: #a855f7; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const viewBtns = document.querySelectorAll('.view-btn');
+    const pills = document.querySelectorAll('.pill');
+    const rows = Array.from(document.querySelectorAll('.team-row'));
+    const activeConfLabel = document.getElementById('activeConfLabel');
+    const teamCountLabel = document.getElementById('teamCountLabel');
+    const sectionTitle = document.getElementById('sectionTitle');
+    const sectionDesc = document.getElementById('sectionDesc');
+    const confCols = document.querySelectorAll('.conf-col');
+    
+    const allPill = document.querySelector('.all-pill');
+    const indiePill = document.querySelector('.indie-pill');
+
+    let currentView = 'conf'; // 'conf' or 'cfp'
+    let currentConf = 'ALL';
+    let currentSort = { column: 'champ', asc: false };
+
+    // --- VIEW TOGGLE LOGIC ---
+    viewBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        viewBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        currentView = btn.dataset.target;
+
+        if (currentView === 'conf') {
+          sectionTitle.textContent = 'Conference Futures';
+          sectionDesc.textContent = 'Simulated CCG appearance and conference title probabilities';
+          document.querySelectorAll('.view-conf').forEach(el => el.classList.remove('hidden'));
+          document.querySelectorAll('.view-cfp').forEach(el => el.classList.add('hidden'));
+          currentSort = { column: 'champ', asc: false };
+
+          if (allPill) allPill.classList.add('hidden');
+          if (indiePill) indiePill.classList.add('hidden');
+
+          if (currentConf === 'ALL' || currentConf === 'FBS Independents') {
+            const firstValidPill = Array.from(pills).find(p => !p.classList.contains('hidden'));
+            if (firstValidPill) {
+              firstValidPill.click(); 
+              return; 
+            }
+          }
+        } else {
+          sectionTitle.textContent = 'CFP & National Championship';
+          sectionDesc.textContent = 'Simulated College Football Playoff and National Title probabilities';
+          document.querySelectorAll('.view-conf').forEach(el => el.classList.add('hidden'));
+          document.querySelectorAll('.view-cfp').forEach(el => el.classList.remove('hidden'));
+          currentSort = { column: 'natty', asc: false };
+
+          if (allPill) allPill.classList.remove('hidden');
+          if (indiePill) indiePill.classList.remove('hidden');
+        }
+
+        updateSortHeaders();
+        filterAndSortTable();
+      });
+    });
+
+    // --- CONFERENCE FILTER LOGIC ---
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentConf = pill.dataset.conf;
+        activeConfLabel.textContent = currentConf === 'ALL' ? 'All Conferences' : currentConf;
+        
+        if (currentConf === 'ALL') {
+          confCols.forEach(col => col.classList.remove('hidden'));
+        } else {
+          confCols.forEach(col => col.classList.add('hidden'));
+        }
+        
+        filterAndSortTable();
+      });
+    });
+
+    // --- SORTING LOGIC ---
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const column = th.dataset.sort;
+        if (currentSort.column === column) {
+          currentSort.asc = !currentSort.asc;
+        } else {
+          currentSort.column = column;
+          // Default ascending for expected wins, descending for odds/percentages
+          currentSort.asc = (column === 'exp_wins' ? false : false); 
+        }
+        updateSortHeaders();
+        filterAndSortTable();
+      });
+    });
+
+    function updateSortHeaders() {
+      document.querySelectorAll('th.sortable').forEach(th => {
+        th.classList.toggle('active-sort', th.dataset.sort === currentSort.column);
+      });
+    }
+
+    // --- MASTER RENDER LOGIC ---
+    function filterAndSortTable() {
+      let visibleCount = 0;
+
+      const filteredRows = rows.filter(row => {
+        const matches = currentConf === 'ALL' || row.dataset.conf === currentConf;
+        if (!matches) {
+          row.style.display = 'none';
+        } else {
+          row.style.display = '';
+        }
+        return matches;
+      });
+
+      filteredRows.sort((a, b) => {
+        const getCellVal = (row, col) => {
+           let cellIndex;
+           switch(col) {
+             case 'exp_wins': cellIndex = 3; break;
+             case 'ccg': cellIndex = 4; break;
+             case 'champ': cellIndex = 5; break;
+             case 'cfp': cellIndex = 6; break;
+             case 'natty': cellIndex = 7; break;
+             default: cellIndex = 5;
+           }
+           const cell = row.querySelectorAll('td')[cellIndex];
+           return parseFloat(cell?.getAttribute('data-val')) || 0;
+        };
+
+        const valA = getCellVal(a, currentSort.column);
+        const valB = getCellVal(b, currentSort.column);
+
+        return currentSort.asc ? valA - valB : valB - valA;
+      });
+
+      const tbody = document.getElementById('tableBody');
+      filteredRows.forEach((row, index) => {
+        row.querySelector('.rank-num').textContent = index + 1;
+        tbody.appendChild(row);
+        visibleCount++;
+      });
+
+      teamCountLabel.textContent = `${visibleCount} teams`;
+    }
+
+    // Initialize UI on load
+    const activeStartBtn = document.querySelector('.view-btn.active');
+    if (activeStartBtn) activeStartBtn.click();
+  });
+</script>

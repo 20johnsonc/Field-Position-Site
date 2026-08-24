@@ -232,3 +232,4 @@ declare global {
 }
 
 window.openPbpModal = openPbpModal;
+

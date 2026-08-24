@@ -19,10 +19,14 @@ const matchups = normalizeMatchups(matchupsRaw);
 const seasonLabel = getSeasonLabel(rankings);
 const teamConfMap = buildTeamConferenceMap(rankings);
 const filters = buildFilterOptions(rankings, matchups);
+
+// 1. Extract unique, sorted conferences for the pills
+const conferences = [...new Set(Object.values(teamConfMap))].filter(Boolean).sort();
 ---
 
 <Layout seasonLabel={seasonLabel}>
-  <DashboardControls filters={filters}>
+  <!-- 2. Pass the conferences array into your dashboard controls component -->
+  <DashboardControls filters={filters} conferences={conferences}>
     <RankingsTable slot="rankings" rankings={rankings} />
     <MatchupGrid slot="matchups" matchups={matchups} teamConfMap={teamConfMap} />
   </DashboardControls>

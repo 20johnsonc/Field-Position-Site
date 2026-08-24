@@ -13,13 +13,13 @@ const { rankings } = Astro.props;
   <table class="rank-table" id="rankingsTable">
     <thead>
       <tr>
-        <th class="sortable" data-sort-key="rank"># ⇕</th>
-        <th class="sortable" data-sort-key="team">Team ⇕</th>
-        <th class="sortable" data-sort-key="conference">Conf ⇕</th>
-        <th class="sortable num" data-sort-key="record" style="text-align: right;">Record ⇕</th>
-        <th class="sortable num" data-sort-key="netRating" style="text-align: right;">Net Rating ⇕</th>
-        <th class="sortable num" data-sort-key="sos" style="text-align: right;">SOS ⇕</th>
-        <th class="sortable num" data-sort-key="sor" style="text-align: right;">SOR ⇕</th>
+        <th class="sortable" data-sort-key="rank">Rk ⇕</th>
+        <th class="sortable" data-sort-key="team">Team</th>
+        <th class="sortable num" data-sort-key="netRating" style="text-align: right;">Net Rating</th>
+        <th class="sortable num" data-sort-key="record" style="text-align: right;">Record</th>
+        <th class="sortable num" data-sort-key="sos" style="text-align: right;">SOS</th>
+        <th class="sortable num" data-sort-key="sor" style="text-align: right;">SOR</th>
+        <th class="sortable" data-sort-key="conference">Conf</th>
       </tr>
     </thead>
     <tbody id="rankingsBody">
@@ -27,25 +27,26 @@ const { rankings } = Astro.props;
         rankings.map((row) => (
           <tr
             data-year={row.year}
-            data-conference={row.conference}
             data-team={row.team}
             data-rank={row.rank}
             data-record={row.record}
             data-net-rating={row.netRating}
             data-sos={row.sos}
             data-sor={row.sor}
+            data-conference={row.conference}
           >
             <td class="rank">{row.rank}</td>
             <td class="team">
               <a href={`/teams/${row.year}/${slugifyTeam(row.team)}/`} class="team-link">
                 {row.team}
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
               </a>
             </td>
-            <td>{row.conference}</td>
-            <td class="num">{row.record}</td>
             <td class="num rating">{formatRating(row.netRating)}</td>
+            <td class="num">{row.record}</td>
             <td class="num">{row.sos}</td>
             <td class="num">{row.sor}</td>
+            <td>{row.conference}</td>
           </tr>
         ))
       }
@@ -57,11 +58,11 @@ const { rankings } = Astro.props;
 <style>
   .team-link,
   .team-link:visited {
-    color: #60a5fa; /* Bright blue for dark mode */
-    text-decoration: underline;
+    color: #ffffff; 
+    text-decoration: none;
   }
 
   .team-link:hover {
-    color: #93c5fd; /* Slightly lighter blue on hover */
+    color: #93c5fd; 
   }
 </style>

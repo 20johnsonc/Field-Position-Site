@@ -92,17 +92,6 @@ const fmtSpread = (num: number | null) => {
       }
     </div>
 
-    {
-      winProbNum !== null && (
-        <div class="prob-caption">
-          <span class="prob-label">Win Probability</span>
-          <span class="prob-detail">
-            <strong>{game.homeTeam.toUpperCase()}</strong> {winProbNum.toFixed(1)}%
-          </span>
-        </div>
-      )
-    }
-
     <!-- Analytics Section (Upcoming Games) -->
     {
       isUpcoming && game.predictedMargin !== undefined && (

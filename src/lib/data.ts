@@ -15,6 +15,7 @@ function num(value: unknown, fallback = 0): number {
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
+
 function str(value: unknown, fallback = ''): string {
   return value != null && value !== '' ? String(value) : fallback;
 }
@@ -214,9 +215,9 @@ export function normalizeGameMargins<
     g.location === 'Home'
       ? {
           ...g,
-          actual_margin: -g.actual_margin,
-          predicted_margin: -g.predicted_margin,
-          beat_expectation_by: -g.beat_expectation_by,
+          actual_margin: g.actual_margin,
+          predicted_margin: g.predicted_margin,
+          beat_expectation_by: g.beat_expectation_by,
         }
       : g
   );

@@ -25,13 +25,25 @@ const { title = 'Field Position — Analytics Dashboard', seasonLabel } = Astro.
   <body>
     <div class="container">
       <header>
-        <div class="logo-area">
-          <h1>Field Position</h1>
-          <p>College Football Analytics &amp; Momentum Tracking</p>
-        </div>
+        <!-- Wrapped logo-area in an anchor tag pointing to "/" -->
+        <a href="/" class="logo-link">
+          <div class="logo-area">
+            <h1>Field Position</h1>
+            <p>College Football Analytics &amp; Momentum Tracking</p>
+          </div>
+        </a>
         <div class="year-badge">{seasonLabel}</div>
       </header>
       <slot />
     </div>
   </body>
 </html>
+
+<style>
+  /* Prevents the browser from underlining the link or changing its color */
+  .logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensures the click target takes up the full area */
+  }
+</style>

@@ -5,12 +5,15 @@ interface Props {
   filters: FilterOptions;
 }
 
-const { filters } = Astro.props;
+const { filters, conferences = [] } = Astro.props;
 ---
 
 <div class="tabs" id="dashboardTabs">
   <button type="button" class="tab-btn active" data-tab="rankings">Power Rankings</button>
   <button type="button" class="tab-btn" data-tab="matchups">Matchup Slate</button>
+  <a href="/futures" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center;">
+    2026 Futures
+  </a>
 </div>
 
 <!-- Power Rankings Panel (Default Active) -->
@@ -23,22 +26,22 @@ const { filters } = Astro.props;
         ))
       }
     </select>
-    <select id="rankingsConfFilter" aria-label="Filter rankings by conference">
-      <option value="ALL">All Conferences</option>
-      {
-        filters.rankingConferences.map((conf) => (
-          <option value={conf}>{conf}</option>
-        ))
-      }
+
+    <!-- HIDDEN SELECT: Keeps dashboard-controls.ts happy and functional -->
+    <select id="rankingsConfFilter" style="display: none;" aria-hidden="true">
+      <option value="ALL">ALL</option>
+      {conferences.map(conf => (
+        <option value={conf}>{conf}</option>
+      ))}
     </select>
-    <select id="rankingsTeamFilter" aria-label="Filter rankings by team">
-      <option value="ALL">All Teams</option>
-      {
-        filters.rankingTeams.map((team) => (
-          <option value={team}>{team}</option>
-        ))
-      }
-    </select>
+
+    <!-- Visual Conference Pills -->
+    <div class="conf-pills" id="indexConfPills">
+      <button class="pill active" data-conf="ALL">ALL</button>
+      {conferences.map(conf => (
+        <button class="pill" data-conf={conf}>{conf}</button>
+      ))}
+    </div>
   </div>
   <slot name="rankings" />
 </div>
@@ -77,4 +80,25 @@ const { filters } = Astro.props;
   import { initDashboardControls } from '../scripts/dashboard-controls';
 
   initDashboardControls();
+
+  // Bridge the visual pills to your dashboard controls logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const pills = document.querySelectorAll('#indexConfPills .pill');
+    const hiddenSelect = document.getElementById('rankingsConfFilter') as HTMLSelectElement | null;
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const selectedConf = pill.dataset.conf || 'ALL';
+
+        if (hiddenSelect) {
+          hiddenSelect.value = selectedConf;
+          // Dispatch a change event so dashboard-controls.ts catches it and filters the table
+          hiddenSelect.dispatchEvent(new Event('change'));
+        }
+      });
+    });
+  });
 </script>
