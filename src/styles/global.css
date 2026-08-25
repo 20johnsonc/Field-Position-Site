@@ -646,14 +646,14 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pill {
   background: #1f2937;
   border: 1px solid transparent;
   color: #d1d5db;
-  padding: 6px 14px;
+  padding: 6px 10px;
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 500;

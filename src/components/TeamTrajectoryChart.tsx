@@ -22,8 +22,14 @@ Chart.register(
 
 export interface WeeklyEfficiencyEntry {
   week: number;
-  adj_off_ppa: number;
-  adj_def_value: number;
+  adj_off_ppa?: number;
+  adj_def_value?: number;
+  raw_off_ppa: number;
+  raw_def_ppa: number;
+  fbs_avg_ppa?: number;
+  is_playoff?: boolean;
+  round_name?: string | null;
+  bowl_name?: string | null;
 }
 
 export interface GameLogEntry {
@@ -34,6 +40,9 @@ export interface GameLogEntry {
   predicted_margin: number;
   beat_expectation_by: number;
   result: 'W' | 'L';
+  is_playoff?: boolean;
+  round_name?: string | null;
+  bowl_name?: string | null;
 }
 
 interface Props {
@@ -51,40 +60,92 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
   const chartData = useMemo(() => {
     if (!trajectory.length) return null;
 
+    const maxRegularWeek = Math.max(...trajectory.map(w => w.week), 12);
+
+    // Normalize weeks for trajectory entries (pushing mislabelled week 1 postseason games to the end)
     const sortedWeeks = [...trajectory].sort((a, b) => a.week - b.week);
-    const efficiencyByWeek = new Map<number, number>();
-    sortedWeeks.forEach((w) => {
-      efficiencyByWeek.set(w.week, w.adj_off_ppa + w.adj_def_value);
+    
+    // Find highest regular week to shift postseason week 1s correctly
+    let currentPostWeek = maxRegularWeek + 1;
+
+    const processedWeeks = sortedWeeks.map((w) => {
+      const isPost = (w.is_playoff || w.bowl_name || w.round_name) && w.week === 1;
+      const effectiveWeek = isPost ? currentPostWeek++ : w.week;
+      return { ...w, effectiveWeek };
     });
 
-    const linePoints = sortedWeeks.map((w) => ({
-      x: w.week,
-      y: w.adj_off_ppa + w.adj_def_value,
-    }));
+    const efficiencyByWeek = new Map<number, number>();
+    processedWeeks.forEach((w) => {
+      // Corrected net metric: Offense minus Defense allowed
+      efficiencyByWeek.set(w.effectiveWeek, w.raw_off_ppa - w.raw_def_ppa);
+    });
+
+    const adjLinePoints = processedWeeks
+      .filter((w) => w.adj_off_ppa != null && w.adj_def_value != null)
+      .map((w) => ({
+        x: w.effectiveWeek,
+        y: (w.adj_off_ppa ?? 0) - (w.adj_def_value ?? 0),
+      }));
+
+    const fbsLinePoints = processedWeeks
+      .filter((w) => w.fbs_avg_ppa != null)
+      .map((w) => ({
+        x: w.effectiveWeek,
+        y: w.fbs_avg_ppa ?? 0,
+      }));
+
+    // Map games to their corresponding effective weeks
+    let gamePostWeek = maxRegularWeek + 1;
+    const gameWeekMap = new Map<number, number>();
+    games.forEach((g) => {
+      const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week === 1;
+      if (isPost) {
+        gameWeekMap.set(JSON.stringify({ week: g.week, opp: g.opponent }), gamePostWeek++);
+      }
+    });
 
     const maxBeatExp = Math.max(1, ...games.map((g) => Math.abs(g.beat_expectation_by ?? 0)));
 
-    // Only plot games whose week exists in the efficiency trajectory
     const gameBubbles = games
-      .filter((g) => efficiencyByWeek.has(g.week))
       .map((g) => {
+        const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week === 1;
+        const effWeek = isPost ? (gameWeekMap.get(JSON.stringify({ week: g.week, opp: g.opponent })) ?? g.week) : g.week;
+        
+        if (!efficiencyByWeek.has(effWeek)) return null;
+
         const mag = Math.abs(g.beat_expectation_by ?? 0);
         return {
           game: g,
-          x: g.week,
-          y: efficiencyByWeek.get(g.week)!,
+          x: effWeek,
+          y: efficiencyByWeek.get(effWeek)!,
           r: 5 + (mag / maxBeatExp) * 16,
         };
-      });
+      })
+      .filter(Boolean) as { game: GameLogEntry; x: number; y: number; r: number }[];
 
-    return { linePoints, gameBubbles };
-  }, [trajectory, games]);
+    // Calculate dynamic bounds including lines AND game bubbles so nothing clips out of view
+    const allValues: number[] = [
+      ...adjLinePoints.map(p => p.y),
+      ...fbsLinePoints.map(p => p.y),
+      ...gameBubbles.map(b => b.y),
+      yMin,
+      yMax
+    ];
+    const dynamicMin = Math.min(...allValues);
+    const dynamicMax = Math.max(...allValues);
+    const padding = Math.max(0.15, (dynamicMax - dynamicMin) * 0.15);
+
+    const chartYMin = dynamicMin - padding;
+    const chartYMax = dynamicMax + padding;
+
+    return { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax };
+  }, [trajectory, games, yMin, yMax]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas || !chartData) return;
 
-    const { linePoints, gameBubbles } = chartData;
+    const { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax } = chartData;
 
     chartRef.current = new Chart(canvas, {
       type: 'line',
@@ -92,15 +153,29 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
         datasets: [
           {
             type: 'line',
-            label: 'Efficiency (Off PPA + Def PPA)',
-            data: linePoints,
-            borderColor: '#3b82f6',
-            borderWidth: 2,
+            label: 'Adjusted PPA',
+            data: adjLinePoints,
+            borderColor: '#a855f7',
+            borderWidth: 2.5,
             tension: 0.2,
             fill: false,
             pointRadius: 0,
             pointHoverRadius: 0,
             order: 2,
+            parsing: false,
+          },
+          {
+            type: 'line',
+            label: 'FBS Average',
+            data: fbsLinePoints,
+            borderColor: '#9ca3af',
+            borderWidth: 1.5,
+            borderDash: [4, 4],
+            tension: 0.2,
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            order: 3,
             parsing: false,
           },
           {
@@ -132,14 +207,15 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
             callbacks: {
               title: (items) => {
                 const idx = items[0].dataIndex;
-                if (items[0].datasetIndex === 1) {
+                if (items[0].datasetIndex === 2) {
                   const g = gameBubbles[idx].game;
-                  return `Week ${g.week}: vs ${g.opponent}`;
+                  const label = g.bowl_name || g.round_name || (g.is_playoff ? 'Playoff Game' : `Week ${g.week}`);
+                  return `${label}: vs ${g.opponent}`;
                 }
-                return `Week ${linePoints[idx].x}`;
+                return `Week ${items[0].parsed.x}`;
               },
               label: (context) => {
-                if (context.datasetIndex === 1) {
+                if (context.datasetIndex === 2) {
                   const g = gameBubbles[context.dataIndex].game;
                   return [
                     `Result: ${g.result} (${g.location})`,
@@ -148,18 +224,18 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
                     `Beat Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`,
                   ];
                 }
-                return `Efficiency: ${context.parsed.y.toFixed(3)}`;
+                return `${context.dataset.label}: ${context.parsed.y.toFixed(3)}`;
               },
             },
           },
         },
         scales: {
           y: {
-            min: yMin - (yMax -yMin) * 0.05,
-            max: yMax + (yMax - yMin) * 0.05,
+            min: chartYMin,
+            max: chartYMax,
             grid: { color: '#374151' },
             ticks: { color: '#9ca3af' },
-            title: { display: true, text: 'Efficiency (Adj Off PPA + Adj Def PPA)', color: '#9ca3af' },
+            title: { display: true, text: 'Net PPA (Off - Def)', color: '#9ca3af' },
           },
           x: {
             type: 'linear',

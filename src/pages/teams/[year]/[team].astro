@@ -17,6 +17,9 @@ interface GameLogEntry {
   predicted_margin: number;
   beat_expectation_by: number;
   result: 'W' | 'L';
+  is_playoff?: boolean;
+  round_name?: string | null;
+  bowl_name?: string | null;
 }
 
 interface GameHistoryData {
@@ -54,6 +57,9 @@ interface MatchupGameEntry {
   actual_margin: number | null;
   predicted_margin: number | null;
   home_win_prob?: number | null;
+  is_playoff?: boolean;
+  round_name?: string | null;
+  bowl_name?: string | null;
 }
 
 interface MatchupsData {
@@ -136,15 +142,36 @@ const upcomingGames = teamMatchups
       beat_expectation_by: null,
       result: null,
       isCompleted: false,
+      is_playoff: g.is_playoff ?? false,
+      round_name: g.round_name ?? null,
+      bowl_name: g.bowl_name ?? null,
     };
   });
 
-// 5. Merge and sort chronologically by week
-const sortedGameLog = [...completedGames, ...upcomingGames].sort((a, b) => a.week - b.week);
+// 5. Merge and sort chronologically (pushing postseason games to the end if they share week 1)
+const sortedGameLog = [...completedGames, ...upcomingGames].sort((a, b) => {
+  const aIsPost = (a.is_playoff || a.bowl_name || a.round_name) && a.week === 1;
+  const bIsPost = (b.is_playoff || b.bowl_name || b.round_name) && b.week === 1;
+  
+  if (aIsPost && !bIsPost) return 1;
+  if (!aIsPost && bIsPost) return -1;
+  
+  return a.week - b.week;
+});
 
 const teamTrajectory = trajectories.teams?.[row.team]?.[String(row.year)] ?? [];
-
 const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
+
+// Helper function to format postseason labels cleanly with capitalization
+function formatPostseasonLabel(g: any) {
+  if (g.bowl_name) return g.bowl_name;
+  if (g.round_name) {
+    const clean = g.round_name.replace(/_/g, ' ');
+    return clean.charAt(0).toUpperCase() + clean.slice(1);
+  }
+  if (g.is_playoff) return 'Playoff Game';
+  return null;
+}
 ---
 
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
@@ -229,12 +256,26 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
           : 1;
         const barPct = beatExp != null ? Math.min(100, (Math.abs(beatExp) / maxAbsBeatExp) * 100) : 0;
 
+        const eventLabel = g.bowl_name || g.round_name || (g.is_playoff ? 'Playoff Game' : null);
+        const postLabel = formatPostseasonLabel(g);
+        const isPostseason = g.is_playoff || g.bowl_name || g.round_name;
+
         return (
           <tr>
             <td>
               <div class="week-cell">
-                <span class="week-num">Wk {g.week}</span>
-                {formattedDate && <span class="game-date">{formattedDate}</span>}
+                {isPostseason ? (
+                  <>
+                    <span class="week-num post-num">{postLabel}</span>
+                    {formattedDate && <span class="game-date">{formattedDate}</span>}
+                  </>
+                ) : (
+                  <>
+                    <span class="week-num">Wk {g.week}</span>
+                    {formattedDate && <span class="game-date">{formattedDate}</span>}
+                    {eventLabel && <span class="badge-tag">{eventLabel}</span>}
+                  </>
+                )}
               </div>
             </td>
             <td>
@@ -294,9 +335,26 @@ const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
     font-weight: 600;
   }
 
+  .post-num {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
   .game-date {
     font-size: 0.75rem;
     color: #94a3b8;
+  }
+
+  .badge-tag {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #38bdf8;
+    background-color: rgba(56, 189, 248, 0.1);
+    padding: 1px 4px;
+    border-radius: 4px;
+    width: max-content;
+    margin-top: 2px;
   }
 
   .opponent-link {
