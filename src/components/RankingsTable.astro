@@ -7,6 +7,19 @@ interface Props {
 }
 
 const { rankings } = Astro.props;
+
+// Helper to convert "10-2" into a numeric value for accurate sorting
+const getRecordSortValue = (record: string) => {
+  if (!record || !record.includes('-')) return 0;
+  
+  const [wins, losses] = record.split('-').map(Number);
+  const total = wins + losses;
+  
+  if (total === 0) return 0;
+  
+  // Win Percentage + tiny tiebreaker for total wins
+  return (wins / total) + (wins * 0.0001);
+};
 ---
 
 <div class="table-container">
@@ -29,7 +42,8 @@ const { rankings } = Astro.props;
             data-year={row.year}
             data-team={row.team}
             data-rank={row.rank}
-            data-record={row.record}
+            {/* Update this line to use the sort helper! */}
+            data-record={getRecordSortValue(row.record)}
             data-net-rating={row.netRating}
             data-sos={row.sos}
             data-sor={row.sor}

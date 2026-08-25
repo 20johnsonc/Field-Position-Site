@@ -98,7 +98,13 @@ const { filters, conferences = [] } = Astro.props;
     // 1. Initialize core dashboard controls
     initDashboardControls();
 
-    // 2. Bridge pill clicks to the hidden selects
+    const rankingsYear = document.getElementById('rankingsYearFilter') as HTMLSelectElement | null;
+    const matchupYear = document.getElementById('matchupYearFilter') as HTMLSelectElement | null;
+    const week = document.getElementById('weekFilter') as HTMLSelectElement | null;
+    const rankingsConf = document.getElementById('rankingsConfFilter') as HTMLSelectElement | null;
+    const matchupConf = document.getElementById('confFilter') as HTMLSelectElement | null;
+
+    // 2. Bridge pill clicks to the hidden selects, and sync URL on any change
     const setupPillBridge = (pillContainerId: string, hiddenSelectId: string) => {
       const pills = document.querySelectorAll(`#${pillContainerId} .pill`);
       const hiddenSelect = document.getElementById(hiddenSelectId) as HTMLSelectElement | null;
@@ -120,5 +126,67 @@ const { filters, conferences = [] } = Astro.props;
 
     setupPillBridge('indexConfPills', 'rankingsConfFilter');
     setupPillBridge('matchupConfPills', 'confFilter');
+
+    // 3. Apply filter state from the URL on load
+    const params = new URLSearchParams(window.location.search);
+    const yr = params.get('year');
+    const conf = params.get('conference');
+    const wk = params.get('week');
+    const tab = params.get('tab');
+
+    function setAndFire(el: HTMLSelectElement | null, value: string) {
+      if (!el) return;
+      el.value = value;
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    if (yr) {
+      setAndFire(rankingsYear, yr);
+      setAndFire(matchupYear, yr);
+    }
+    if (wk) setAndFire(week, wk);
+
+    if (conf) {
+      const applyConfToPills = (containerId: string, hiddenSelect: HTMLSelectElement | null) => {
+        document.querySelectorAll(`#${containerId} .pill`).forEach(p => {
+          p.classList.toggle('active', (p as HTMLElement).dataset.conf === conf);
+        });
+        setAndFire(hiddenSelect, conf);
+      };
+      applyConfToPills('indexConfPills', rankingsConf);
+      applyConfToPills('matchupConfPills', matchupConf);
+    }
+
+    if (tab === 'matchups') {
+      document.querySelector<HTMLButtonElement>('[data-tab="rankings"]')?.classList.remove('active');
+      document.querySelector<HTMLButtonElement>('[data-tab="matchups"]')?.classList.add('active');
+      document.getElementById('rankingsPanel')?.classList.remove('active');
+      document.getElementById('matchupsPanel')?.classList.add('active');
+    }
+
+    // 4. Push current filter state to the URL (used for the back-link and shareability)
+    function syncURL() {
+      const activeTab = document.getElementById('matchupsPanel')?.classList.contains('active') ? 'matchups' : 'rankings';
+      const newParams = new URLSearchParams();
+
+      const currentYear = activeTab === 'matchups' ? matchupYear?.value : rankingsYear?.value;
+      const currentConf = activeTab === 'matchups' ? matchupConf?.value : rankingsConf?.value;
+
+      if (currentYear) newParams.set('year', currentYear);
+      if (currentConf && currentConf !== 'ALL') newParams.set('conference', currentConf);
+      if (activeTab === 'matchups' && week?.value) newParams.set('week', week.value);
+      if (activeTab === 'matchups') newParams.set('tab', 'matchups');
+
+      const qs = newParams.toString();
+      window.history.replaceState({}, '', qs ? `?${qs}` : window.location.pathname);
+    }
+
+    [rankingsYear, matchupYear, week, rankingsConf, matchupConf].forEach(el => {
+      el?.addEventListener('change', syncURL);
+    });
+
+    document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
+      btn.addEventListener('click', syncURL);
+    });
   });
 </script>

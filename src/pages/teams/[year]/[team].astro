@@ -172,10 +172,11 @@ function formatPostseasonLabel(g: any) {
   if (g.is_playoff) return 'Playoff Game';
   return null;
 }
+
 ---
 
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
-  <a href="/" class="back-link">&larr; Back to rankings</a>
+  <a href="/" class="back-link" id="backLink">&larr; Return</a>
 
   <div class="team-header">
     <div class="rank-badge">#{ranks?.overallRank ?? '—'}</div>
@@ -324,6 +325,21 @@ function formatPostseasonLabel(g: any) {
     </tbody>
   </table>
 </Layout>
+
+<script>
+  document.getElementById('backLink')?.addEventListener('click', (e) => {
+    if (document.referrer) {
+      try {
+        if (new URL(document.referrer).origin === window.location.origin) {
+          e.preventDefault();
+          window.history.back();
+        }
+      } catch {
+        // malformed referrer, just fall through to href="/"
+      }
+    }
+  });
+</script>
 
 <style>
   .week-cell {
