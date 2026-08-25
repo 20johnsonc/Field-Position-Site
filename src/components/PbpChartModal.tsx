@@ -202,7 +202,7 @@ export default function PbpChartModal() {
             labels,
             datasets: [
               {
-                label: 'Cumulative EPA',
+                label: 'Cumulative PPA',
                 data: ppaValues,
                 borderColor: '#3b82f6',
                 backgroundColor: '#3b82f6',

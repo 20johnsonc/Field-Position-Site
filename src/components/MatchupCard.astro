@@ -33,7 +33,7 @@ if (game.homeWinProb != null && !isNaN(game.homeWinProb)) {
 }
 
 // 3. Analytics calculations
-const modelSpread = game.predictedMargin != null ? -game.predictedMargin : null;
+const modelSpread = game.predictedMargin != null ? game.predictedMargin : null;
 const predTotal = game.predictedTotal ?? (hasScores ? (game.homePoints! + game.awayPoints!) : null);
 const dateTag = fmtDate(game.startDate);
 

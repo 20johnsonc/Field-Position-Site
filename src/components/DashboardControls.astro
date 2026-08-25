@@ -3,6 +3,7 @@ import type { FilterOptions } from '../lib/types';
 
 interface Props {
   filters: FilterOptions;
+  conferences?: string[];
 }
 
 const { filters, conferences = [] } = Astro.props;
@@ -56,7 +57,9 @@ const { filters, conferences = [] } = Astro.props;
         ))
       }
     </select>
-    <select id="confFilter" aria-label="Filter matchups by conference">
+
+    <!-- HIDDEN SELECT: Keeps dashboard-controls.ts happy and functional for matchups -->
+    <select id="confFilter" style="display: none;" aria-hidden="true">
       <option value="ALL">All Conferences</option>
       {
         filters.matchupConferences.map((conf) => (
@@ -64,14 +67,26 @@ const { filters, conferences = [] } = Astro.props;
         ))
       }
     </select>
+
     <select id="weekFilter" aria-label="Filter matchups by week">
-      <option value="ALL">All Weeks</option>
       {
         filters.matchupWeeks.map((week) => (
-          <option value={week}>Week {week}</option>
+          <option value={week} selected={String(week) === "0"}>
+            Week {week}
+          </option>
         ))
       }
     </select>
+
+    <!-- Visual Conference Pills for Matchups -->
+    <div class="conf-pills" id="matchupConfPills">
+      <button class="pill active" data-conf="ALL">ALL</button>
+      {
+        filters.matchupConferences.map((conf) => (
+          <button class="pill" data-conf={conf}>{conf}</button>
+        ))
+      }
+    </div>
   </div>
   <slot name="matchups" />
 </div>
