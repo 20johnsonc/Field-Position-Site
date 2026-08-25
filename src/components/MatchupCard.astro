@@ -8,7 +8,11 @@ interface Props {
   awayConf?: string;
 }
 
-const { game, homeConf = game.homeConference, awayConf = game.awayConference } = Astro.props;
+const { 
+  game, 
+  homeConf = (game as any).home_conference || game.homeConference || 'Other', 
+  awayConf = (game as any).away_conference || game.awayConference || 'Other' 
+} = Astro.props;
 
 // 1. Determine score & completion state using normalized fields
 const hasScores = game.homePoints !== undefined && game.awayPoints !== undefined;
