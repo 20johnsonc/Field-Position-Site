@@ -200,6 +200,23 @@ function formatPostseasonLabel(g: any) {
       <span class="label">Strength of Record</span>
       <span class="value">#{row.sor ?? '—'}</span>
     </div>
+    {/* Style Tags Section */}
+    {row.tags && row.tags.length > 0 && (
+      <div class="team-tags">
+        {row.tags.map((tag: string) => {
+          const lower = tag.toLowerCase();
+          const isDef = lower.includes('defense') || lower.includes('stout') || lower.includes('break');
+          const isOff = lower.includes('offense') || lower.includes('explosive') || lower.includes('run');
+          
+          const tagClass = isDef ? 'tag-defense' : (isOff ? 'tag-offense' : 'tag-neutral');
+          return (
+            <span class={`style-tag ${tagClass}`}>
+              {tag}
+            </span>
+          );
+        })}
+      </div>
+    )}
   </div>
 
   <TeamTrajectoryChart
@@ -381,4 +398,43 @@ function formatPostseasonLabel(g: any) {
   .opponent-link:hover {
     text-decoration: underline;
   }
+
+  .team-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  .style-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  /* Offense Theme: Vibrant Teal / Cyan */
+  .tag-offense {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(13, 148, 136, 0.25));
+    color: #2dd4bf;
+    border: 1px solid rgba(45, 212, 191, 0.4);
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.15);
+  }
+
+  /* Defense Theme: Sharp Amber / Gold */
+  .tag-defense {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.25));
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.15);
+  }
+
+  .tag-neutral {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(147, 51, 234, 0.25));
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.4);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
 </style>

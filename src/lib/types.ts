@@ -20,6 +20,7 @@ export interface Ranking {
   record: string;
   sos: number;
   sor: number;
+  tags?: string[];
   trajectory?: TrajectoryPoint[];
   gameLog?: GameLogEntry[];
 }
