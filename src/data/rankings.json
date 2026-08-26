@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T20:05:57.359280+00:00",
+  "generated_at": "2026-08-26T20:47:02.813117+00:00",
   "all_rankings": [
     {
       "Rank": 1,
@@ -9,14 +9,14 @@
       "Net Rating": 33.4,
       "Year": 2021,
       "tags": [
-        "Explosive Offense",
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 39,
       "sor": 8,
@@ -34,10 +34,8 @@
       "Net Rating": 33.1,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense",
         "Blue-Blood Talent"
@@ -58,14 +56,12 @@
       "Net Rating": 30.2,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense"
       ],
       "sos": 3,
       "sor": 2,
@@ -83,8 +79,6 @@
       "Net Rating": 20.2,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
         "Run-Heavy Identity",
         "Stout Defense",
         "Disruptive Defense"
@@ -123,10 +117,7 @@
       "Net Rating": 18.8,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 67,
       "sor": 4,
@@ -145,7 +136,8 @@
       "Year": 2021,
       "tags": [
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 46,
       "sor": 27,
@@ -201,7 +193,6 @@
       "Net Rating": 15.9,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Blue-Blood Talent"
@@ -222,7 +213,6 @@
       "Net Rating": 15.5,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
         "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
@@ -242,11 +232,7 @@
       "Net Rating": 15.2,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 40,
       "sor": 57,
@@ -266,7 +252,8 @@
       "tags": [
         "Air-Raid Tendency",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense"
       ],
       "sos": 36,
       "sor": 13,
@@ -285,8 +272,7 @@
       "Year": 2021,
       "tags": [
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 21,
       "sor": 42,
@@ -304,11 +290,9 @@
       "Net Rating": 13.0,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Up-Tempo Offense"
       ],
       "sos": 12,
       "sor": 11,
@@ -326,10 +310,9 @@
       "Net Rating": 12.5,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 4,
       "sor": 45,
@@ -347,11 +330,10 @@
       "Net Rating": 12.5,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 37,
       "sor": 38,
@@ -409,9 +391,9 @@
       "Net Rating": 11.3,
       "Year": 2021,
       "tags": [
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 70,
       "sor": 23,
@@ -447,7 +429,8 @@
       "Net Rating": 10.3,
       "Year": 2021,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Boom-or-Bust Offense"
       ],
       "sos": 58,
       "sor": 24,
@@ -465,7 +448,6 @@
       "Net Rating": 10.3,
       "Year": 2021,
       "tags": [
-        "Standard-Downs Grinder",
         "Blue-Blood Talent"
       ],
       "sos": 31,
@@ -487,7 +469,8 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
       ],
       "sos": 130,
       "sor": 29,
@@ -505,9 +488,8 @@
       "Net Rating": 10.1,
       "Year": 2021,
       "tags": [
-        "Passing-Downs Weapon",
         "Stout Defense",
-        "Disruptive Defense"
+        "Up-Tempo Offense"
       ],
       "sos": 63,
       "sor": 58,
@@ -525,8 +507,8 @@
       "Net Rating": 10.1,
       "Year": 2021,
       "tags": [
-        "Standard-Downs Grinder",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 23,
       "sor": 5,
@@ -546,7 +528,8 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense"
       ],
       "sos": 51,
       "sor": 36,
@@ -567,7 +550,8 @@
         "Efficient Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Balanced Attack"
       ],
       "sos": 60,
       "sor": 20,
@@ -606,7 +590,8 @@
       "tags": [
         "Air-Raid Tendency",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 7,
       "sor": 54,
@@ -625,10 +610,7 @@
       "Year": 2021,
       "tags": [
         "Explosive Offense",
-        "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "High-Powered Offense"
       ],
       "sos": 52,
       "sor": 75,
@@ -646,8 +628,6 @@
       "Net Rating": 9.1,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense"
       ],
       "sos": 61,
@@ -666,7 +646,6 @@
       "Net Rating": 8.7,
       "Year": 2021,
       "tags": [
-        "Passing-Downs Weapon",
         "Stout Defense"
       ],
       "sos": 5,
@@ -686,9 +665,7 @@
       "Year": 2021,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 16,
       "sor": 47,
@@ -726,7 +703,6 @@
       "Year": 2021,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
       "sos": 96,
@@ -803,8 +779,10 @@
       "Net Rating": 7.5,
       "Year": 2021,
       "tags": [
+        "Efficient Offense",
         "Run-Heavy Identity",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 104,
       "sor": 12,
@@ -824,7 +802,8 @@
       "tags": [
         "Passing-Downs Weapon",
         "Run-Heavy Identity",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 99,
       "sor": 16,
@@ -860,8 +839,7 @@
       "Net Rating": 6.7,
       "Year": 2021,
       "tags": [
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 54,
       "sor": 31,
@@ -915,10 +893,7 @@
       "Record": "8-5",
       "Net Rating": 5.6,
       "Year": 2021,
-      "tags": [
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
-      ],
+      "tags": [],
       "sos": 47,
       "sor": 40,
       "Actual Wins": null,
@@ -953,7 +928,8 @@
       "Net Rating": 5.2,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Boom-or-Bust Offense"
       ],
       "sos": 42,
       "sor": 67,
@@ -992,7 +968,8 @@
       "Year": 2021,
       "tags": [
         "Passing-Downs Weapon",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 78,
       "sor": 37,
@@ -1010,7 +987,8 @@
       "Net Rating": 3.7,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 11,
       "sor": 7,
@@ -1028,7 +1006,8 @@
       "Net Rating": 3.2,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 81,
       "sor": 34,
@@ -1047,7 +1026,9 @@
       "Year": 2021,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense",
+        "Balanced Attack"
       ],
       "sos": 49,
       "sor": 59,
@@ -1065,7 +1046,8 @@
       "Net Rating": 2.9,
       "Year": 2021,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 102,
       "sor": 30,
@@ -1121,7 +1103,9 @@
       "Record": "7-6",
       "Net Rating": 2.2,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 56,
       "sor": 61,
       "Actual Wins": null,
@@ -1138,8 +1122,8 @@
       "Net Rating": 2.2,
       "Year": 2021,
       "tags": [
-        "Explosive Offense",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Boom-or-Bust Offense"
       ],
       "sos": 75,
       "sor": 35,
@@ -1157,7 +1141,9 @@
       "Net Rating": 2.1,
       "Year": 2021,
       "tags": [
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 91,
       "sor": 60,
@@ -1177,7 +1163,8 @@
       "tags": [
         "Explosive Offense",
         "Stout Defense",
-        "Boom-or-Bust Offense"
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 129,
       "sor": 79,
@@ -1212,7 +1199,9 @@
       "Record": "12-2",
       "Net Rating": 1.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 110,
       "sor": 22,
       "Actual Wins": null,
@@ -1247,7 +1236,8 @@
       "Net Rating": 1.0,
       "Year": 2021,
       "tags": [
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
       ],
       "sos": 29,
       "sor": 66,
@@ -1269,6 +1259,7 @@
         "Run-Heavy Identity",
         "Disruptive Defense",
         "Underdog Roster",
+        "Clock-Control Tempo",
         "Overachiever"
       ],
       "sos": 84,
@@ -1302,7 +1293,9 @@
       "Record": "7-5",
       "Net Rating": 0.7,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder"
+      ],
       "sos": 73,
       "sor": 52,
       "Actual Wins": null,
@@ -1339,7 +1332,10 @@
       "Record": "6-6",
       "Net Rating": -0.4,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense",
+        "Track Meet Offense"
+      ],
       "sos": 92,
       "sor": 83,
       "Actual Wins": null,
@@ -1372,7 +1368,8 @@
       "Net Rating": -0.8,
       "Year": 2021,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Boom-or-Bust Offense"
       ],
       "sos": 14,
       "sor": 46,
@@ -1390,7 +1387,10 @@
       "Net Rating": -1.0,
       "Year": 2021,
       "tags": [
-        "Standard-Downs Grinder"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo",
+        "Balanced Attack"
       ],
       "sos": 45,
       "sor": 48,
@@ -1448,7 +1448,9 @@
       "Year": 2021,
       "tags": [
         "Explosive Offense",
+        "Passing-Downs Weapon",
         "Disruptive Defense",
+        "Clock-Control Tempo",
         "Boom-or-Bust Offense"
       ],
       "sos": 118,
@@ -1484,7 +1486,9 @@
       "Record": "7-6",
       "Net Rating": -2.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 68,
       "sor": 49,
       "Actual Wins": null,
@@ -1500,7 +1504,9 @@
       "Record": "5-7",
       "Net Rating": -2.7,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 48,
       "sor": 82,
       "Actual Wins": null,
@@ -1517,7 +1523,8 @@
       "Net Rating": -3.0,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 100,
       "sor": 92,
@@ -1536,7 +1543,9 @@
       "Year": 2021,
       "tags": [
         "Explosive Offense",
-        "Boom-or-Bust Offense"
+        "Up-Tempo Offense",
+        "Boom-or-Bust Offense",
+        "Track Meet Offense"
       ],
       "sos": 34,
       "sor": 115,
@@ -1554,6 +1563,7 @@
       "Net Rating": -3.4,
       "Year": 2021,
       "tags": [
+        "Efficient Offense",
         "Passing-Downs Weapon",
         "Run-Heavy Identity",
         "Disruptive Defense"
@@ -1574,7 +1584,9 @@
       "Net Rating": -3.8,
       "Year": 2021,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 87,
       "sor": 33,
@@ -1591,7 +1603,10 @@
       "Record": "5-7",
       "Net Rating": -3.9,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense",
+        "Clock-Control Tempo"
+      ],
       "sos": 41,
       "sor": 74,
       "Actual Wins": null,
@@ -1645,7 +1660,12 @@
       "Net Rating": -5.0,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Ball-Control Passing Attack"
       ],
       "sos": 82,
       "sor": 50,
@@ -1662,7 +1682,10 @@
       "Record": "3-9",
       "Net Rating": -5.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense"
+      ],
       "sos": 57,
       "sor": 106,
       "Actual Wins": null,
@@ -1680,7 +1703,9 @@
       "Year": 2021,
       "tags": [
         "Efficient Offense",
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 27,
       "sor": 53,
@@ -1729,7 +1754,10 @@
       "Record": "3-9",
       "Net Rating": -5.9,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Explosive Offense",
+        "Standard-Downs Grinder"
+      ],
       "sos": 6,
       "sor": 105,
       "Actual Wins": null,
@@ -1745,7 +1773,10 @@
       "Record": "3-9",
       "Net Rating": -6.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
+      ],
       "sos": 24,
       "sor": 94,
       "Actual Wins": null,
@@ -1779,7 +1810,10 @@
       "Record": "7-6",
       "Net Rating": -6.9,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon"
+      ],
       "sos": 125,
       "sor": 77,
       "Actual Wins": null,
@@ -1796,7 +1830,8 @@
       "Net Rating": -7.3,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 116,
       "sor": 78,
@@ -1814,7 +1849,9 @@
       "Net Rating": -7.5,
       "Year": 2021,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Balanced Attack"
       ],
       "sos": 109,
       "sor": 89,
@@ -1832,7 +1869,8 @@
       "Net Rating": -7.5,
       "Year": 2021,
       "tags": [
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 117,
       "sor": 104,
@@ -1849,7 +1887,9 @@
       "Record": "5-7",
       "Net Rating": -7.7,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 108,
       "sor": 98,
       "Actual Wins": null,
@@ -1865,7 +1905,10 @@
       "Record": "6-7",
       "Net Rating": -8.4,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense",
+        "Up-Tempo Offense"
+      ],
       "sos": 107,
       "sor": 97,
       "Actual Wins": null,
@@ -1882,7 +1925,8 @@
       "Net Rating": -8.6,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 101,
       "sor": 102,
@@ -1900,7 +1944,8 @@
       "Net Rating": -9.1,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 103,
       "sor": 96,
@@ -1918,7 +1963,9 @@
       "Net Rating": -9.3,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Efficient Offense",
+        "Run-Heavy Identity",
+        "Disruptive Defense"
       ],
       "sos": 124,
       "sor": 124,
@@ -1939,7 +1986,8 @@
         "Explosive Offense",
         "Air-Raid Tendency",
         "Underdog Roster",
-        "Boom-or-Bust Offense"
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 127,
       "sor": 81,
@@ -1957,7 +2005,8 @@
       "Net Rating": -9.4,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 98,
       "sor": 93,
@@ -1975,7 +2024,8 @@
       "Net Rating": -9.7,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 121,
       "sor": 90,
@@ -1992,7 +2042,9 @@
       "Record": "3-9",
       "Net Rating": -10.1,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 76,
       "sor": 117,
       "Actual Wins": null,
@@ -2009,6 +2061,7 @@
       "Net Rating": -10.5,
       "Year": 2021,
       "tags": [
+        "Efficient Offense",
         "Run-Heavy Identity"
       ],
       "sos": 105,
@@ -2027,6 +2080,7 @@
       "Net Rating": -10.6,
       "Year": 2021,
       "tags": [
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 123,
@@ -2045,9 +2099,11 @@
       "Net Rating": -11.0,
       "Year": 2021,
       "tags": [
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Disruptive Defense",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Smashmouth Identity"
       ],
       "sos": 38,
       "sor": 95,
@@ -2064,7 +2120,9 @@
       "Record": "1-11",
       "Net Rating": -11.1,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 28,
       "sor": 126,
       "Actual Wins": null,
@@ -2081,7 +2139,10 @@
       "Net Rating": -11.8,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Disruptive Defense",
+        "Smashmouth Identity"
       ],
       "sos": 89,
       "sor": 56,
@@ -2098,7 +2159,9 @@
       "Record": "2-10",
       "Net Rating": -12.4,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 72,
       "sor": 125,
       "Actual Wins": null,
@@ -2114,7 +2177,11 @@
       "Record": "2-10",
       "Net Rating": -12.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 53,
       "sor": 120,
       "Actual Wins": null,
@@ -2131,6 +2198,8 @@
       "Net Rating": -13.2,
       "Year": 2021,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 128,
@@ -2149,6 +2218,8 @@
       "Net Rating": -15.6,
       "Year": 2021,
       "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
         "Run-Heavy Identity"
       ],
       "sos": 122,
@@ -2168,6 +2239,9 @@
       "Year": 2021,
       "tags": [
         "Explosive Offense",
+        "Passing-Downs Weapon",
+        "Disruptive Defense",
+        "Clock-Control Tempo",
         "Boom-or-Bust Offense"
       ],
       "sos": 50,
@@ -2186,8 +2260,10 @@
       "Net Rating": -17.0,
       "Year": 2021,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Clock-Control Tempo",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 86,
       "sor": 127,
@@ -2205,7 +2281,8 @@
       "Net Rating": -17.6,
       "Year": 2021,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 71,
       "sor": 114,
@@ -2222,7 +2299,9 @@
       "Record": "3-9",
       "Net Rating": -17.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 80,
       "sor": 113,
       "Actual Wins": null,
@@ -2238,7 +2317,11 @@
       "Record": "2-10",
       "Net Rating": -18.1,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 18,
       "sor": 110,
       "Actual Wins": null,
@@ -2255,7 +2338,9 @@
       "Net Rating": -18.3,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 79,
       "sor": 107,
@@ -2289,7 +2374,8 @@
       "Net Rating": -19.7,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 115,
       "sor": 109,
@@ -2308,6 +2394,7 @@
       "Year": 2021,
       "tags": [
         "Explosive Offense",
+        "Passing-Downs Weapon",
         "Underdog Roster",
         "Boom-or-Bust Offense"
       ],
@@ -2326,7 +2413,9 @@
       "Record": "3-9",
       "Net Rating": -21.9,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense"
+      ],
       "sos": 85,
       "sor": 118,
       "Actual Wins": null,
@@ -2343,6 +2432,7 @@
       "Net Rating": -24.1,
       "Year": 2021,
       "tags": [
+        "Clock-Control Tempo",
         "Boom-or-Bust Offense"
       ],
       "sos": 119,
@@ -2360,7 +2450,10 @@
       "Record": "2-10",
       "Net Rating": -24.6,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
+      ],
       "sos": 90,
       "sor": 122,
       "Actual Wins": null,
@@ -2377,8 +2470,10 @@
       "Net Rating": -25.5,
       "Year": 2021,
       "tags": [
+        "Efficient Offense",
         "Air-Raid Tendency",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Up-Tempo Offense"
       ],
       "sos": 95,
       "sor": 123,
@@ -2396,8 +2491,12 @@
       "Net Rating": -27.9,
       "Year": 2021,
       "tags": [
+        "Explosive Offense",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Up-Tempo Offense",
+        "Boom-or-Bust Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 93,
       "sor": 129,
@@ -2439,7 +2538,6 @@
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 12,
@@ -2461,9 +2559,7 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 29,
@@ -2482,12 +2578,12 @@
       "Net Rating": 28.6,
       "Year": 2022,
       "tags": [
-        "Explosive Offense",
-        "Efficient Offense",
         "Passing-Downs Weapon",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Bend-Dont-Break Defense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 25,
       "sor": 5,
@@ -2508,8 +2604,7 @@
         "Efficient Offense",
         "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 49,
       "sor": 4,
@@ -2527,11 +2622,8 @@
       "Net Rating": 21.4,
       "Year": 2022,
       "tags": [
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 18,
       "sor": 7,
@@ -2549,11 +2641,7 @@
       "Net Rating": 20.4,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 13,
@@ -2575,7 +2663,9 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Balanced Attack"
       ],
       "sos": 24,
       "sor": 6,
@@ -2613,11 +2703,8 @@
       "Net Rating": 16.9,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 34,
       "sor": 17,
@@ -2635,10 +2722,10 @@
       "Net Rating": 16.3,
       "Year": 2022,
       "tags": [
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense"
       ],
       "sos": 48,
       "sor": 14,
@@ -2657,10 +2744,7 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 55,
@@ -2682,7 +2766,7 @@
         "Explosive Offense",
         "Passing-Downs Weapon",
         "Stout Defense",
-        "Disruptive Defense"
+        "Boom-or-Bust Offense"
       ],
       "sos": 6,
       "sor": 11,
@@ -2700,9 +2784,7 @@
       "Net Rating": 15.4,
       "Year": 2022,
       "tags": [
-        "Explosive Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Explosive Offense"
       ],
       "sos": 5,
       "sor": 2,
@@ -2743,13 +2825,9 @@
       "Net Rating": 13.8,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 2,
@@ -2773,7 +2851,8 @@
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense"
       ],
       "sos": 38,
       "sor": 13,
@@ -2790,10 +2869,7 @@
       "Record": "9-4",
       "Net Rating": 10.4,
       "Year": 2022,
-      "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon"
-      ],
+      "tags": [],
       "sos": 67,
       "sor": 27,
       "Actual Wins": null,
@@ -2811,7 +2887,8 @@
       "Year": 2022,
       "tags": [
         "Efficient Offense",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense"
       ],
       "sos": 40,
       "sor": 34,
@@ -2830,7 +2907,9 @@
       "Year": 2022,
       "tags": [
         "Run-Heavy Identity",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense",
+        "Defense-Carried Team"
       ],
       "sos": 22,
       "sor": 23,
@@ -2848,9 +2927,8 @@
       "Net Rating": 10.3,
       "Year": 2022,
       "tags": [
-        "Passing-Downs Weapon",
         "Stout Defense",
-        "Disruptive Defense"
+        "Boom-or-Bust Offense"
       ],
       "sos": 42,
       "sor": 39,
@@ -2889,7 +2967,8 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 69,
       "sor": 30,
@@ -2909,7 +2988,8 @@
       "tags": [
         "Efficient Offense",
         "Standard-Downs Grinder",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense"
       ],
       "sos": 23,
       "sor": 65,
@@ -2927,7 +3007,6 @@
       "Net Rating": 9.8,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
         "Stout Defense"
       ],
       "sos": 47,
@@ -2946,7 +3025,8 @@
       "Net Rating": 9.7,
       "Year": 2022,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 73,
       "sor": 36,
@@ -2982,9 +3062,9 @@
       "Net Rating": 9.7,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 14,
       "sor": 12,
@@ -3002,8 +3082,6 @@
       "Net Rating": 9.4,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 33,
@@ -3024,8 +3102,9 @@
       "tags": [
         "Efficient Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Balanced Attack"
       ],
       "sos": 63,
       "sor": 10,
@@ -3044,7 +3123,8 @@
       "Year": 2022,
       "tags": [
         "Passing-Downs Weapon",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 102,
       "sor": 51,
@@ -3063,7 +3143,8 @@
       "Year": 2022,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
       ],
       "sos": 26,
       "sor": 53,
@@ -3083,8 +3164,7 @@
       "tags": [
         "Explosive Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Disruptive Defense"
+        "Boom-or-Bust Offense"
       ],
       "sos": 10,
       "sor": 49,
@@ -3103,7 +3183,8 @@
       "Year": 2022,
       "tags": [
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 65,
       "sor": 28,
@@ -3121,7 +3202,8 @@
       "Net Rating": 7.6,
       "Year": 2022,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 46,
       "sor": 55,
@@ -3179,8 +3261,7 @@
       "tags": [
         "Efficient Offense",
         "Standard-Downs Grinder",
-        "Air-Raid Tendency",
-        "Disruptive Defense"
+        "Air-Raid Tendency"
       ],
       "sos": 72,
       "sor": 62,
@@ -3201,7 +3282,11 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Offense-Carried Team"
       ],
       "sos": 52,
       "sor": 47,
@@ -3235,7 +3320,7 @@
       "Net Rating": 6.6,
       "Year": 2022,
       "tags": [
-        "Efficient Offense"
+        "Up-Tempo Offense"
       ],
       "sos": 57,
       "sor": 44,
@@ -3253,7 +3338,7 @@
       "Net Rating": 6.5,
       "Year": 2022,
       "tags": [
-        "Explosive Offense"
+        "Boom-or-Bust Offense"
       ],
       "sos": 1,
       "sor": 48,
@@ -3273,7 +3358,6 @@
       "tags": [
         "Efficient Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 83,
@@ -3293,7 +3377,8 @@
       "Year": 2022,
       "tags": [
         "Standard-Downs Grinder",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 30,
       "sor": 21,
@@ -3311,7 +3396,8 @@
       "Net Rating": 6.2,
       "Year": 2022,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 32,
       "sor": 43,
@@ -3347,8 +3433,8 @@
       "Net Rating": 5.9,
       "Year": 2022,
       "tags": [
-        "Passing-Downs Weapon",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 117,
       "sor": 68,
@@ -3383,9 +3469,7 @@
       "Record": "11-3",
       "Net Rating": 4.8,
       "Year": 2022,
-      "tags": [
-        "Efficient Offense"
-      ],
+      "tags": [],
       "sos": 91,
       "sor": 24,
       "Actual Wins": null,
@@ -3402,6 +3486,7 @@
       "Net Rating": 4.8,
       "Year": 2022,
       "tags": [
+        "Efficient Offense",
         "Disruptive Defense"
       ],
       "sos": 82,
@@ -3420,7 +3505,9 @@
       "Net Rating": 4.6,
       "Year": 2022,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 16,
       "sor": 26,
@@ -3454,6 +3541,8 @@
       "Net Rating": 3.0,
       "Year": 2022,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 7,
@@ -3477,6 +3566,7 @@
         "Run-Heavy Identity",
         "Disruptive Defense",
         "Underdog Roster",
+        "Clock-Control Tempo",
         "Smashmouth Identity",
         "Overachiever"
       ],
@@ -3495,7 +3585,9 @@
       "Record": "7-6",
       "Net Rating": 2.3,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 31,
       "sor": 46,
       "Actual Wins": null,
@@ -3530,7 +3622,10 @@
       "Record": "4-8",
       "Net Rating": 1.9,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense"
+      ],
       "sos": 37,
       "sor": 93,
       "Actual Wins": null,
@@ -3548,7 +3643,9 @@
       "Year": 2022,
       "tags": [
         "Run-Heavy Identity",
-        "Stout Defense"
+        "Stout Defense",
+        "Clock-Control Tempo",
+        "Defense-Carried Team"
       ],
       "sos": 89,
       "sor": 41,
@@ -3603,7 +3700,11 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 58,
       "sor": 72,
@@ -3620,7 +3721,9 @@
       "Record": "7-6",
       "Net Rating": 0.2,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 103,
       "sor": 80,
       "Actual Wins": null,
@@ -3656,7 +3759,6 @@
       "Net Rating": -0.1,
       "Year": 2022,
       "tags": [
-        "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
       "sos": 80,
@@ -3674,7 +3776,9 @@
       "Record": "7-6",
       "Net Rating": -0.6,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 75,
       "sor": 79,
       "Actual Wins": null,
@@ -3710,7 +3814,9 @@
       "Net Rating": -0.7,
       "Year": 2022,
       "tags": [
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 60,
       "sor": 42,
@@ -3727,7 +3833,9 @@
       "Record": "7-6",
       "Net Rating": -0.9,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 35,
       "sor": 52,
       "Actual Wins": null,
@@ -3743,7 +3851,10 @@
       "Record": "3-9",
       "Net Rating": -1.1,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
+      ],
       "sos": 54,
       "sor": 113,
       "Actual Wins": null,
@@ -3777,7 +3888,9 @@
       "Record": "9-5",
       "Net Rating": -1.5,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 115,
       "sor": 59,
       "Actual Wins": null,
@@ -3794,7 +3907,8 @@
       "Net Rating": -2.0,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Up-Tempo Offense"
       ],
       "sos": 20,
       "sor": 69,
@@ -3812,7 +3926,8 @@
       "Net Rating": -2.1,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Up-Tempo Offense"
       ],
       "sos": 100,
       "sor": 96,
@@ -3829,7 +3944,9 @@
       "Record": "8-5",
       "Net Rating": -2.2,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 76,
       "sor": 63,
       "Actual Wins": null,
@@ -3882,7 +3999,6 @@
       "tags": [
         "Explosive Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder"
       ],
       "sos": 9,
@@ -3902,7 +4018,9 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 96,
       "sor": 95,
@@ -3920,8 +4038,10 @@
       "Net Rating": -3.4,
       "Year": 2022,
       "tags": [
+        "Explosive Offense",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 53,
       "sor": 90,
@@ -3959,8 +4079,10 @@
       "Net Rating": -3.6,
       "Year": 2022,
       "tags": [
+        "Efficient Offense",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 107,
       "sor": 54,
@@ -3978,6 +4100,7 @@
       "Net Rating": -3.7,
       "Year": 2022,
       "tags": [
+        "Efficient Offense",
         "Passing-Downs Weapon",
         "Run-Heavy Identity",
         "Disruptive Defense"
@@ -3998,7 +4121,8 @@
       "Net Rating": -4.2,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Up-Tempo Offense"
       ],
       "sos": 4,
       "sor": 75,
@@ -4017,7 +4141,10 @@
       "Year": 2022,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 43,
       "sor": 77,
@@ -4052,7 +4179,10 @@
       "Record": "3-7",
       "Net Rating": -4.8,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
+      ],
       "sos": 66,
       "sor": 100,
       "Actual Wins": null,
@@ -4068,7 +4198,9 @@
       "Record": "1-11",
       "Net Rating": -5.5,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 8,
       "sor": 118,
       "Actual Wins": null,
@@ -4085,7 +4217,9 @@
       "Net Rating": -6.1,
       "Year": 2022,
       "tags": [
-        "Passing-Downs Weapon"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder"
       ],
       "sos": 79,
       "sor": 105,
@@ -4103,7 +4237,9 @@
       "Net Rating": -6.2,
       "Year": 2022,
       "tags": [
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 116,
       "sor": 106,
@@ -4121,7 +4257,8 @@
       "Net Rating": -6.3,
       "Year": 2022,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 121,
       "sor": 74,
@@ -4138,7 +4275,9 @@
       "Record": "5-7",
       "Net Rating": -6.4,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 15,
       "sor": 60,
       "Actual Wins": null,
@@ -4170,7 +4309,10 @@
       "Record": "6-7",
       "Net Rating": -6.9,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense",
+        "Clock-Control Tempo"
+      ],
       "sos": 98,
       "sor": 89,
       "Actual Wins": null,
@@ -4186,7 +4328,9 @@
       "Record": "6-7",
       "Net Rating": -7.0,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 111,
       "sor": 104,
       "Actual Wins": null,
@@ -4223,6 +4367,7 @@
       "Net Rating": -7.1,
       "Year": 2022,
       "tags": [
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 88,
@@ -4240,7 +4385,10 @@
       "Record": "7-6",
       "Net Rating": -7.2,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
+      ],
       "sos": 125,
       "sor": 91,
       "Actual Wins": null,
@@ -4257,7 +4405,9 @@
       "Net Rating": -7.3,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Identity"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Disruptive Defense"
       ],
       "sos": 122,
       "sor": 125,
@@ -4274,7 +4424,9 @@
       "Record": "3-8",
       "Net Rating": -7.6,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 70,
       "sor": 112,
       "Actual Wins": null,
@@ -4290,7 +4442,11 @@
       "Record": "9-4",
       "Net Rating": -8.2,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
+      ],
       "sos": 127,
       "sor": 57,
       "Actual Wins": null,
@@ -4306,7 +4462,9 @@
       "Record": "3-9",
       "Net Rating": -8.3,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 11,
       "sor": 94,
       "Actual Wins": null,
@@ -4323,9 +4481,11 @@
       "Net Rating": -8.5,
       "Year": 2022,
       "tags": [
+        "Passing-Downs Weapon",
         "Run-Heavy Identity",
         "Disruptive Defense",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 61,
       "sor": 107,
@@ -4376,7 +4536,9 @@
       "Record": "4-8",
       "Net Rating": -8.8,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 17,
       "sor": 76,
       "Actual Wins": null,
@@ -4392,7 +4554,11 @@
       "Record": "5-7",
       "Net Rating": -9.1,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Balanced Attack"
+      ],
       "sos": 71,
       "sor": 83,
       "Actual Wins": null,
@@ -4410,7 +4576,8 @@
       "Year": 2022,
       "tags": [
         "Run-Heavy Identity",
-        "Boom-or-Bust Offense"
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 77,
       "sor": 124,
@@ -4430,7 +4597,9 @@
       "tags": [
         "Explosive Offense",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Clock-Control Tempo",
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 50,
       "sor": 109,
@@ -4465,6 +4634,7 @@
       "Year": 2022,
       "tags": [
         "Air-Raid Tendency",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 129,
@@ -4482,7 +4652,10 @@
       "Record": "5-7",
       "Net Rating": -11.2,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
+      ],
       "sos": 90,
       "sor": 99,
       "Actual Wins": null,
@@ -4567,8 +4740,10 @@
       "Net Rating": -13.1,
       "Year": 2022,
       "tags": [
+        "Explosive Offense",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Chunk-Play Passing Attack"
       ],
       "sos": 95,
       "sor": 119,
@@ -4588,7 +4763,8 @@
       "tags": [
         "Explosive Offense",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 78,
       "sor": 114,
@@ -4621,7 +4797,12 @@
       "Record": "1-11",
       "Net Rating": -14.5,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
+      ],
       "sos": 56,
       "sor": 130,
       "Actual Wins": null,
@@ -4638,7 +4819,8 @@
       "Net Rating": -14.7,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 113,
       "sor": 102,
@@ -4656,8 +4838,8 @@
       "Net Rating": -15.4,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Identity",
-        "Boom-or-Bust Offense"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity"
       ],
       "sos": 106,
       "sor": 120,
@@ -4674,7 +4856,10 @@
       "Record": "4-8",
       "Net Rating": -15.9,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 64,
       "sor": 98,
       "Actual Wins": null,
@@ -4690,7 +4875,10 @@
       "Record": "2-10",
       "Net Rating": -16.1,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Clock-Control Tempo"
+      ],
       "sos": 85,
       "sor": 127,
       "Actual Wins": null,
@@ -4726,7 +4914,11 @@
       "Net Rating": -17.5,
       "Year": 2022,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 92,
       "sor": 126,
@@ -4744,6 +4936,7 @@
       "Net Rating": -17.9,
       "Year": 2022,
       "tags": [
+        "Efficient Offense",
         "Run-Heavy Identity"
       ],
       "sos": 81,
@@ -4762,7 +4955,10 @@
       "Net Rating": -18.8,
       "Year": 2022,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Disruptive Defense"
       ],
       "sos": 114,
       "sor": 123,
@@ -4832,7 +5028,8 @@
       "Year": 2022,
       "tags": [
         "Air-Raid Tendency",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 118,
       "sor": 131,
@@ -4849,7 +5046,9 @@
       "Record": "4-8",
       "Net Rating": -26.9,
       "Year": 2022,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 130,
       "sor": 117,
       "Actual Wins": null,
@@ -4868,11 +5067,12 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 20,
       "sor": 2,
@@ -4890,9 +5090,7 @@
       "Net Rating": 27.1,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
         "Blue-Blood Talent"
@@ -4916,9 +5114,7 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 32,
@@ -4961,11 +5157,9 @@
       "Net Rating": 23.0,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "Passing-Downs Weapon",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 1,
@@ -4984,14 +5178,14 @@
       "Net Rating": 22.6,
       "Year": 2023,
       "tags": [
-        "Explosive Offense",
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 28,
       "sor": 12,
@@ -5009,12 +5203,8 @@
       "Net Rating": 22.2,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 57,
@@ -5033,10 +5223,10 @@
       "Net Rating": 21.5,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 56,
       "sor": 14,
@@ -5054,7 +5244,6 @@
       "Net Rating": 21.2,
       "Year": 2023,
       "tags": [
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Blue-Blood Talent"
       ],
@@ -5075,11 +5264,9 @@
       "Year": 2023,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense"
       ],
       "sos": 33,
       "sor": 16,
@@ -5097,10 +5284,7 @@
       "Net Rating": 17.9,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 29,
       "sor": 28,
@@ -5118,7 +5302,6 @@
       "Net Rating": 16.9,
       "Year": 2023,
       "tags": [
-        "Passing-Downs Weapon",
         "Run-Heavy Identity",
         "Stout Defense"
       ],
@@ -5140,9 +5323,8 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Balanced Attack"
       ],
       "sos": 2,
       "sor": 1,
@@ -5160,7 +5342,6 @@
       "Net Rating": 16.1,
       "Year": 2023,
       "tags": [
-        "Passing-Downs Weapon",
         "Stout Defense",
         "Blue-Blood Talent"
       ],
@@ -5180,9 +5361,12 @@
       "Net Rating": 15.0,
       "Year": 2023,
       "tags": [
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Boom-or-Bust Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 102,
       "sor": 23,
@@ -5223,10 +5407,7 @@
       "Net Rating": 14.1,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense"
       ],
       "sos": 19,
@@ -5245,10 +5426,8 @@
       "Net Rating": 13.7,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense"
+        "Up-Tempo Offense"
       ],
       "sos": 43,
       "sor": 17,
@@ -5266,7 +5445,6 @@
       "Net Rating": 13.3,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "Air-Raid Tendency",
         "Stout Defense",
         "Blue-Blood Talent",
@@ -5289,10 +5467,8 @@
       "Year": 2023,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense"
+        "Clock-Control Tempo"
       ],
       "sos": 39,
       "sor": 21,
@@ -5310,9 +5486,6 @@
       "Net Rating": 12.1,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 3,
@@ -5332,9 +5505,8 @@
       "Year": 2023,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 50,
       "sor": 15,
@@ -5352,9 +5524,9 @@
       "Net Rating": 10.1,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 66,
       "sor": 55,
@@ -5372,8 +5544,7 @@
       "Net Rating": 9.3,
       "Year": 2023,
       "tags": [
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Clock-Control Tempo"
       ],
       "sos": 9,
       "sor": 5,
@@ -5410,9 +5581,8 @@
       "Net Rating": 8.6,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 22,
       "sor": 64,
@@ -5430,12 +5600,10 @@
       "Net Rating": 7.6,
       "Year": 2023,
       "tags": [
-        "Explosive Offense",
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Disruptive Defense"
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 63,
       "sor": 77,
@@ -5453,7 +5621,9 @@
       "Net Rating": 7.4,
       "Year": 2023,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 62,
       "sor": 41,
@@ -5471,8 +5641,8 @@
       "Net Rating": 7.1,
       "Year": 2023,
       "tags": [
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 60,
       "sor": 59,
@@ -5490,8 +5660,7 @@
       "Net Rating": 6.6,
       "Year": 2023,
       "tags": [
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Boom-or-Bust Offense"
       ],
       "sos": 27,
       "sor": 50,
@@ -5509,7 +5678,8 @@
       "Net Rating": 6.3,
       "Year": 2023,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 25,
       "sor": 54,
@@ -5547,8 +5717,7 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Standard-Downs Grinder"
       ],
       "sos": 44,
       "sor": 24,
@@ -5565,9 +5734,7 @@
       "Record": "8-6",
       "Net Rating": 6.0,
       "Year": 2023,
-      "tags": [
-        "Efficient Offense"
-      ],
+      "tags": [],
       "sos": 71,
       "sor": 74,
       "Actual Wins": null,
@@ -5636,7 +5803,6 @@
       "Net Rating": 5.3,
       "Year": 2023,
       "tags": [
-        "Explosive Offense",
         "Stout Defense",
         "Boom-or-Bust Offense"
       ],
@@ -5674,11 +5840,11 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Disruptive Defense",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Smashmouth Identity"
       ],
       "sos": 125,
       "sor": 11,
@@ -5696,7 +5862,9 @@
       "Net Rating": 5.2,
       "Year": 2023,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Clock-Control Tempo",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 45,
       "sor": 25,
@@ -5714,7 +5882,8 @@
       "Net Rating": 5.0,
       "Year": 2023,
       "tags": [
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 21,
       "sor": 45,
@@ -5733,7 +5902,8 @@
       "Year": 2023,
       "tags": [
         "Passing-Downs Weapon",
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Boom-or-Bust Offense"
       ],
       "sos": 116,
       "sor": 81,
@@ -5750,7 +5920,9 @@
       "Record": "7-6",
       "Net Rating": 4.6,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 51,
       "sor": 57,
       "Actual Wins": null,
@@ -5787,7 +5959,9 @@
       "Year": 2023,
       "tags": [
         "Run-Heavy Identity",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense",
+        "Defense-Carried Team"
       ],
       "sos": 38,
       "sor": 19,
@@ -5825,7 +5999,8 @@
       "Net Rating": 4.3,
       "Year": 2023,
       "tags": [
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 110,
       "sor": 43,
@@ -5882,7 +6057,9 @@
         "Efficient Offense",
         "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 42,
       "sor": 22,
@@ -5916,7 +6093,8 @@
       "Net Rating": 2.0,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 76,
       "sor": 72,
@@ -5933,7 +6111,9 @@
       "Record": "5-7",
       "Net Rating": 1.5,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 64,
       "sor": 86,
       "Actual Wins": null,
@@ -5950,6 +6130,7 @@
       "Net Rating": 1.5,
       "Year": 2023,
       "tags": [
+        "Passing-Downs Weapon",
         "Disruptive Defense"
       ],
       "sos": 123,
@@ -5967,7 +6148,9 @@
       "Record": "5-7",
       "Net Rating": 1.4,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 48,
       "sor": 71,
       "Actual Wins": null,
@@ -5984,7 +6167,9 @@
       "Net Rating": 1.2,
       "Year": 2023,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Balanced Attack"
       ],
       "sos": 54,
       "sor": 85,
@@ -6001,7 +6186,9 @@
       "Record": "7-6",
       "Net Rating": 1.2,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Efficient Offense"
+      ],
       "sos": 67,
       "sor": 67,
       "Actual Wins": null,
@@ -6033,7 +6220,9 @@
       "Record": "4-8",
       "Net Rating": 0.8,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Efficient Offense"
+      ],
       "sos": 17,
       "sor": 89,
       "Actual Wins": null,
@@ -6050,7 +6239,8 @@
       "Net Rating": 0.8,
       "Year": 2023,
       "tags": [
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 13,
       "sor": 18,
@@ -6068,7 +6258,10 @@
       "Net Rating": -0.9,
       "Year": 2023,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 101,
       "sor": 52,
@@ -6086,7 +6279,8 @@
       "Net Rating": -0.9,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 11,
       "sor": 60,
@@ -6103,7 +6297,10 @@
       "Record": "6-7",
       "Net Rating": -0.9,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 46,
       "sor": 68,
       "Actual Wins": null,
@@ -6121,7 +6318,9 @@
       "Year": 2023,
       "tags": [
         "Explosive Offense",
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 41,
       "sor": 51,
@@ -6139,7 +6338,8 @@
       "Net Rating": -1.2,
       "Year": 2023,
       "tags": [
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Boom-or-Bust Offense"
       ],
       "sos": 87,
       "sor": 63,
@@ -6173,7 +6373,8 @@
       "Net Rating": -1.4,
       "Year": 2023,
       "tags": [
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 23,
       "sor": 40,
@@ -6209,7 +6410,9 @@
       "Record": "8-5",
       "Net Rating": -1.6,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 61,
       "sor": 49,
       "Actual Wins": null,
@@ -6225,7 +6428,9 @@
       "Record": "4-8",
       "Net Rating": -2.1,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense"
+      ],
       "sos": 37,
       "sor": 95,
       "Actual Wins": null,
@@ -6262,6 +6467,7 @@
       "Net Rating": -2.3,
       "Year": 2023,
       "tags": [
+        "Efficient Offense",
         "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
@@ -6281,7 +6487,8 @@
       "Net Rating": -2.4,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 124,
       "sor": 62,
@@ -6300,7 +6507,10 @@
       "Year": 2023,
       "tags": [
         "Explosive Offense",
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 96,
       "sor": 53,
@@ -6317,7 +6527,9 @@
       "Record": "11-3",
       "Net Rating": -2.9,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 120,
       "sor": 34,
       "Actual Wins": null,
@@ -6335,7 +6547,8 @@
       "Year": 2023,
       "tags": [
         "Run-Heavy Identity",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Up-Tempo Offense"
       ],
       "sos": 118,
       "sor": 46,
@@ -6352,7 +6565,12 @@
       "Record": "3-9",
       "Net Rating": -3.2,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Disruptive Defense",
+        "Balanced Attack"
+      ],
       "sos": 65,
       "sor": 121,
       "Actual Wins": null,
@@ -6368,7 +6586,9 @@
       "Record": "6-7",
       "Net Rating": -3.2,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 75,
       "sor": 84,
       "Actual Wins": null,
@@ -6388,6 +6608,7 @@
         "Run-Heavy Identity",
         "Disruptive Defense",
         "Underdog Roster",
+        "Clock-Control Tempo",
         "Overachiever"
       ],
       "sos": 127,
@@ -6406,6 +6627,7 @@
       "Net Rating": -3.7,
       "Year": 2023,
       "tags": [
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 40,
@@ -6440,7 +6662,9 @@
       "Net Rating": -4.5,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Identity"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Smashmouth Identity"
       ],
       "sos": 133,
       "sor": 88,
@@ -6458,6 +6682,8 @@
       "Net Rating": -4.5,
       "Year": 2023,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 14,
@@ -6491,7 +6717,10 @@
       "Record": "4-8",
       "Net Rating": -4.9,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
+      ],
       "sos": 55,
       "sor": 93,
       "Actual Wins": null,
@@ -6508,7 +6737,9 @@
       "Net Rating": -5.0,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Identity"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Smashmouth Identity"
       ],
       "sos": 97,
       "sor": 87,
@@ -6525,7 +6756,9 @@
       "Record": "9-4",
       "Net Rating": -5.5,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 78,
       "sor": 38,
       "Actual Wins": null,
@@ -6557,7 +6790,9 @@
       "Record": "6-7",
       "Net Rating": -5.7,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 109,
       "sor": 99,
       "Actual Wins": null,
@@ -6575,7 +6810,10 @@
       "Year": 2023,
       "tags": [
         "Explosive Offense",
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Disruptive Defense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 68,
       "sor": 69,
@@ -6611,7 +6849,9 @@
       "tags": [
         "Explosive Offense",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 89,
       "sor": 90,
@@ -6629,6 +6869,7 @@
       "Net Rating": -6.1,
       "Year": 2023,
       "tags": [
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 91,
@@ -6647,7 +6888,11 @@
       "Net Rating": -6.3,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Explosive Offense",
+        "Air-Raid Tendency",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 86,
       "sor": 101,
@@ -6680,7 +6925,9 @@
       "Record": "6-7",
       "Net Rating": -6.8,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 115,
       "sor": 102,
       "Actual Wins": null,
@@ -6697,7 +6944,13 @@
       "Net Rating": -6.8,
       "Year": 2023,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Balanced Attack"
       ],
       "sos": 117,
       "sor": 97,
@@ -6715,7 +6968,9 @@
       "Net Rating": -7.5,
       "Year": 2023,
       "tags": [
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 4,
       "sor": 83,
@@ -6751,7 +7006,10 @@
       "Net Rating": -7.8,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Identity"
+        "Explosive Offense",
+        "Run-Heavy Identity",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 84,
       "sor": 100,
@@ -6769,7 +7027,8 @@
       "Net Rating": -8.0,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Disruptive Defense"
       ],
       "sos": 77,
       "sor": 73,
@@ -6786,7 +7045,12 @@
       "Record": "4-8",
       "Net Rating": -8.0,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense"
+      ],
       "sos": 79,
       "sor": 106,
       "Actual Wins": null,
@@ -6805,7 +7069,8 @@
       "tags": [
         "Efficient Offense",
         "Passing-Downs Weapon",
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Up-Tempo Offense"
       ],
       "sos": 107,
       "sor": 66,
@@ -6823,7 +7088,12 @@
       "Net Rating": -9.2,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Identity"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 81,
       "sor": 114,
@@ -6841,8 +7111,7 @@
       "Net Rating": -9.5,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Identity",
-        "Boom-or-Bust Offense"
+        "Run-Heavy Identity"
       ],
       "sos": 85,
       "sor": 70,
@@ -6860,7 +7129,8 @@
       "Net Rating": -9.7,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 119,
       "sor": 107,
@@ -6878,7 +7148,8 @@
       "Net Rating": -10.6,
       "Year": 2023,
       "tags": [
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 126,
       "sor": 128,
@@ -6896,7 +7167,10 @@
       "Net Rating": -10.6,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Identity"
+        "Passing-Downs Weapon",
+        "Run-Heavy Identity",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 104,
       "sor": 116,
@@ -6913,7 +7187,10 @@
       "Record": "3-9",
       "Net Rating": -10.7,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
+      ],
       "sos": 7,
       "sor": 94,
       "Actual Wins": null,
@@ -6931,6 +7208,7 @@
       "Year": 2023,
       "tags": [
         "Air-Raid Tendency",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 121,
@@ -6948,7 +7226,10 @@
       "Record": "7-6",
       "Net Rating": -11.6,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
+      ],
       "sos": 105,
       "sor": 78,
       "Actual Wins": null,
@@ -6983,8 +7264,7 @@
       "Net Rating": -12.0,
       "Year": 2023,
       "tags": [
-        "Explosive Offense",
-        "Boom-or-Bust Offense"
+        "Explosive Offense"
       ],
       "sos": 24,
       "sor": 118,
@@ -7001,7 +7281,9 @@
       "Record": "4-8",
       "Net Rating": -12.2,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 103,
       "sor": 108,
       "Actual Wins": null,
@@ -7018,9 +7300,12 @@
       "Net Rating": -12.5,
       "Year": 2023,
       "tags": [
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Disruptive Defense",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 113,
       "sor": 76,
@@ -7038,7 +7323,8 @@
       "Net Rating": -12.8,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 90,
       "sor": 122,
@@ -7056,7 +7342,11 @@
       "Net Rating": -12.9,
       "Year": 2023,
       "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 92,
@@ -7108,7 +7398,9 @@
       "Record": "2-10",
       "Net Rating": -14.5,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 108,
       "sor": 131,
       "Actual Wins": null,
@@ -7126,7 +7418,8 @@
       "Year": 2023,
       "tags": [
         "Run-Heavy Identity",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 94,
       "sor": 82,
@@ -7143,7 +7436,9 @@
       "Record": "3-9",
       "Net Rating": -15.2,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 73,
       "sor": 120,
       "Actual Wins": null,
@@ -7159,7 +7454,10 @@
       "Record": "4-8",
       "Net Rating": -15.5,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
+      ],
       "sos": 69,
       "sor": 96,
       "Actual Wins": null,
@@ -7175,7 +7473,11 @@
       "Record": "4-8",
       "Net Rating": -15.9,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
+      ],
       "sos": 93,
       "sor": 111,
       "Actual Wins": null,
@@ -7192,7 +7494,8 @@
       "Net Rating": -16.9,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Disruptive Defense"
       ],
       "sos": 100,
       "sor": 124,
@@ -7210,6 +7513,7 @@
       "Net Rating": -17.1,
       "Year": 2023,
       "tags": [
+        "Efficient Offense",
         "Air-Raid Tendency"
       ],
       "sos": 112,
@@ -7260,7 +7564,10 @@
       "Net Rating": -18.4,
       "Year": 2023,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 88,
       "sor": 119,
@@ -7277,7 +7584,11 @@
       "Record": "3-9",
       "Net Rating": -18.5,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Up-Tempo Offense",
+        "Balanced Attack"
+      ],
       "sos": 111,
       "sor": 127,
       "Actual Wins": null,
@@ -7294,6 +7605,7 @@
       "Net Rating": -19.3,
       "Year": 2023,
       "tags": [
+        "Explosive Offense",
         "Underdog Roster",
         "Boom-or-Bust Offense"
       ],
@@ -7331,11 +7643,10 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Clock-Control Tempo"
       ],
       "sos": 5,
       "sor": 1,
@@ -7353,12 +7664,8 @@
       "Net Rating": 27.4,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 20,
@@ -7378,14 +7685,11 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 11,
       "sor": 14,
@@ -7403,12 +7707,11 @@
       "Net Rating": 24.2,
       "Year": 2024,
       "tags": [
-        "Explosive Offense",
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense",
+        "Track Meet Offense"
       ],
       "sos": 9,
       "sor": 5,
@@ -7429,7 +7732,6 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense",
         "Blue-Blood Talent"
@@ -7450,10 +7752,7 @@
       "Net Rating": 22.5,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 2,
@@ -7473,7 +7772,6 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
         "Disruptive Defense",
@@ -7496,11 +7794,12 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense",
+        "Track Meet Offense"
       ],
       "sos": 45,
       "sor": 13,
@@ -7518,9 +7817,8 @@
       "Net Rating": 19.1,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon",
         "Stout Defense",
-        "Disruptive Defense"
+        "Up-Tempo Offense"
       ],
       "sos": 39,
       "sor": 8,
@@ -7542,7 +7840,8 @@
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Balanced Attack"
       ],
       "sos": 64,
       "sor": 27,
@@ -7563,7 +7862,11 @@
         "Explosive Offense",
         "Passing-Downs Weapon",
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Boom-or-Bust Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 55,
       "sor": 23,
@@ -7581,11 +7884,9 @@
       "Net Rating": 14.8,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Air-Raid Tendency",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 32,
@@ -7604,8 +7905,9 @@
       "Net Rating": 14.7,
       "Year": 2024,
       "tags": [
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Clock-Control Tempo",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 16,
       "sor": 17,
@@ -7625,7 +7927,6 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
@@ -7663,10 +7964,7 @@
       "Net Rating": 13.5,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 75,
       "sor": 51,
@@ -7684,7 +7982,6 @@
       "Net Rating": 13.3,
       "Year": 2024,
       "tags": [
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense",
         "Blue-Blood Talent"
@@ -7706,10 +8003,10 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
-        "Passing-Downs Weapon",
         "Air-Raid Tendency",
         "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 12,
       "sor": 16,
@@ -7727,8 +8024,7 @@
       "Net Rating": 12.1,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon"
+        "Efficient Offense"
       ],
       "sos": 8,
       "sor": 39,
@@ -7746,8 +8042,6 @@
       "Net Rating": 11.8,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense"
       ],
@@ -7767,10 +8061,8 @@
       "Net Rating": 11.5,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Disruptive Defense"
+        "Passing-Downs Weapon"
       ],
       "sos": 21,
       "sor": 24,
@@ -7789,7 +8081,9 @@
       "Year": 2024,
       "tags": [
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Clock-Control Tempo",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 13,
       "sor": 41,
@@ -7808,7 +8102,7 @@
       "Year": 2024,
       "tags": [
         "Run-Heavy Identity",
-        "Disruptive Defense"
+        "Clock-Control Tempo"
       ],
       "sos": 41,
       "sor": 44,
@@ -7826,10 +8120,7 @@
       "Net Rating": 10.5,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 36,
       "sor": 22,
@@ -7848,8 +8139,7 @@
       "Year": 2024,
       "tags": [
         "High-Powered Offense",
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Standard-Downs Grinder"
       ],
       "sos": 73,
       "sor": 10,
@@ -7869,7 +8159,6 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Disruptive Defense"
       ],
@@ -7923,7 +8212,6 @@
       "Net Rating": 8.5,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon",
         "Run-Heavy Identity",
         "Stout Defense",
         "Disruptive Defense"
@@ -7944,8 +8232,6 @@
       "Net Rating": 8.2,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
         "Stout Defense"
       ],
       "sos": 22,
@@ -7964,7 +8250,8 @@
       "Net Rating": 7.2,
       "Year": 2024,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 35,
       "sor": 67,
@@ -7982,9 +8269,8 @@
       "Net Rating": 7.1,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 60,
       "sor": 38,
@@ -8021,7 +8307,8 @@
       "Net Rating": 6.7,
       "Year": 2024,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 53,
       "sor": 87,
@@ -8039,7 +8326,6 @@
       "Net Rating": 6.6,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
         "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
@@ -8059,8 +8345,6 @@
       "Net Rating": 6.4,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Bend-Dont-Break Defense"
       ],
@@ -8115,7 +8399,8 @@
         "Efficient Offense",
         "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 52,
       "sor": 46,
@@ -8189,7 +8474,6 @@
       "Net Rating": 4.7,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon",
         "Disruptive Defense"
       ],
       "sos": 24,
@@ -8243,9 +8527,10 @@
       "Net Rating": 4.5,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
         "Standard-Downs Grinder",
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 115,
       "sor": 71,
@@ -8262,7 +8547,9 @@
       "Record": "6-7",
       "Net Rating": 4.0,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 79,
       "sor": 100,
       "Actual Wins": null,
@@ -8278,7 +8565,9 @@
       "Record": "10-3",
       "Net Rating": 3.6,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 47,
       "sor": 11,
       "Actual Wins": null,
@@ -8296,7 +8585,9 @@
       "Year": 2024,
       "tags": [
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 50,
       "sor": 31,
@@ -8313,7 +8604,9 @@
       "Record": "8-5",
       "Net Rating": 3.4,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 54,
       "sor": 50,
       "Actual Wins": null,
@@ -8365,7 +8658,9 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
-        "Disruptive Defense"
+        "Standard-Downs Grinder",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 95,
       "sor": 65,
@@ -8400,7 +8695,9 @@
       "Record": "7-6",
       "Net Rating": 2.6,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 46,
       "sor": 48,
       "Actual Wins": null,
@@ -8417,9 +8714,11 @@
       "Net Rating": 2.1,
       "Year": 2024,
       "tags": [
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Disruptive Defense",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Up-Tempo Offense"
       ],
       "sos": 128,
       "sor": 70,
@@ -8473,6 +8772,7 @@
       "Net Rating": 1.0,
       "Year": 2024,
       "tags": [
+        "Efficient Offense",
         "Run-Heavy Identity"
       ],
       "sos": 134,
@@ -8510,7 +8810,9 @@
       "Record": "9-5",
       "Net Rating": 0.7,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 110,
       "sor": 57,
       "Actual Wins": null,
@@ -8607,6 +8909,7 @@
       "tags": [
         "Air-Raid Tendency",
         "Stout Defense",
+        "Up-Tempo Offense",
         "Bend-Dont-Break Defense"
       ],
       "sos": 65,
@@ -8625,6 +8928,7 @@
       "Net Rating": 0.1,
       "Year": 2024,
       "tags": [
+        "Passing-Downs Weapon",
         "Run-Heavy Identity"
       ],
       "sos": 122,
@@ -8659,7 +8963,8 @@
       "Net Rating": -0.6,
       "Year": 2024,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 85,
       "sor": 26,
@@ -8677,7 +8982,9 @@
       "Net Rating": -1.2,
       "Year": 2024,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense"
       ],
       "sos": 61,
       "sor": 30,
@@ -8695,7 +9002,8 @@
       "Net Rating": -1.3,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 30,
       "sor": 81,
@@ -8712,7 +9020,13 @@
       "Record": "7-6",
       "Net Rating": -1.6,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Balanced Attack"
+      ],
       "sos": 59,
       "sor": 69,
       "Actual Wins": null,
@@ -8728,7 +9042,10 @@
       "Record": "6-7",
       "Net Rating": -1.8,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo",
+        "Boom-or-Bust Offense"
+      ],
       "sos": 104,
       "sor": 98,
       "Actual Wins": null,
@@ -8762,7 +9079,9 @@
       "Record": "7-6",
       "Net Rating": -2.2,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 89,
       "sor": 63,
       "Actual Wins": null,
@@ -8779,7 +9098,8 @@
       "Net Rating": -2.3,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 113,
       "sor": 88,
@@ -8815,7 +9135,9 @@
       "Net Rating": -2.7,
       "Year": 2024,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Passing-Downs Weapon",
+        "Disruptive Defense"
       ],
       "sos": 57,
       "sor": 106,
@@ -8833,7 +9155,9 @@
       "Net Rating": -2.9,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 123,
       "sor": 74,
@@ -8850,7 +9174,9 @@
       "Record": "7-6",
       "Net Rating": -2.9,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 116,
       "sor": 77,
       "Actual Wins": null,
@@ -8868,7 +9194,8 @@
       "Year": 2024,
       "tags": [
         "Run-Heavy Identity",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 68,
       "sor": 96,
@@ -8905,7 +9232,10 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Balanced Attack"
       ],
       "sos": 51,
       "sor": 116,
@@ -8923,7 +9253,11 @@
       "Net Rating": -3.7,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 92,
       "sor": 73,
@@ -8974,7 +9308,9 @@
       "Record": "8-5",
       "Net Rating": -4.0,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 124,
       "sor": 76,
       "Actual Wins": null,
@@ -8990,7 +9326,11 @@
       "Record": "2-10",
       "Net Rating": -4.1,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
+      ],
       "sos": 7,
       "sor": 94,
       "Actual Wins": null,
@@ -9029,7 +9369,9 @@
       "Record": "5-7",
       "Net Rating": -4.4,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 27,
       "sor": 72,
       "Actual Wins": null,
@@ -9046,7 +9388,8 @@
       "Net Rating": -4.6,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 129,
       "sor": 49,
@@ -9080,7 +9423,9 @@
       "Net Rating": -5.0,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Clock-Control Tempo"
       ],
       "sos": 120,
       "sor": 36,
@@ -9098,7 +9443,13 @@
       "Net Rating": -5.1,
       "Year": 2024,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Balanced Attack"
       ],
       "sos": 93,
       "sor": 97,
@@ -9132,7 +9483,9 @@
       "Net Rating": -5.6,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
       ],
       "sos": 94,
       "sor": 111,
@@ -9149,7 +9502,12 @@
       "Record": "4-8",
       "Net Rating": -6.2,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Balanced Attack"
+      ],
       "sos": 42,
       "sor": 95,
       "Actual Wins": null,
@@ -9165,7 +9523,11 @@
       "Record": "5-7",
       "Net Rating": -6.6,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 76,
       "sor": 90,
       "Actual Wins": null,
@@ -9182,7 +9544,10 @@
       "Net Rating": -6.7,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 67,
       "sor": 78,
@@ -9216,6 +9581,7 @@
       "Net Rating": -6.8,
       "Year": 2024,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
       "sos": 102,
@@ -9253,6 +9619,7 @@
       "Net Rating": -9.3,
       "Year": 2024,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
       "sos": 86,
@@ -9271,7 +9638,12 @@
       "Net Rating": -9.7,
       "Year": 2024,
       "tags": [
-        "Run-Heavy Identity"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 114,
       "sor": 91,
@@ -9304,7 +9676,11 @@
       "Record": "3-9",
       "Net Rating": -10.2,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
+      ],
       "sos": 101,
       "sor": 125,
       "Actual Wins": null,
@@ -9321,7 +9697,9 @@
       "Net Rating": -10.2,
       "Year": 2024,
       "tags": [
-        "Passing-Downs Weapon"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder"
       ],
       "sos": 118,
       "sor": 108,
@@ -9338,7 +9716,9 @@
       "Record": "3-9",
       "Net Rating": -10.4,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense"
+      ],
       "sos": 19,
       "sor": 103,
       "Actual Wins": null,
@@ -9354,7 +9734,9 @@
       "Record": "3-10",
       "Net Rating": -10.5,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 77,
       "sor": 128,
       "Actual Wins": null,
@@ -9389,7 +9771,8 @@
       "Net Rating": -11.3,
       "Year": 2024,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 88,
       "sor": 114,
@@ -9407,7 +9790,10 @@
       "Net Rating": -11.7,
       "Year": 2024,
       "tags": [
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Disruptive Defense",
+        "Up-Tempo Offense"
       ],
       "sos": 91,
       "sor": 55,
@@ -9444,6 +9830,7 @@
       "Year": 2024,
       "tags": [
         "Run-Heavy Identity",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 112,
@@ -9462,8 +9849,10 @@
       "Net Rating": -12.1,
       "Year": 2024,
       "tags": [
+        "Passing-Downs Weapon",
         "Underdog Roster",
-        "Boom-or-Bust Offense"
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 131,
       "sor": 47,
@@ -9481,6 +9870,7 @@
       "Net Rating": -12.1,
       "Year": 2024,
       "tags": [
+        "Disruptive Defense",
         "Boom-or-Bust Offense"
       ],
       "sos": 82,
@@ -9498,7 +9888,11 @@
       "Record": "1-11",
       "Net Rating": -13.2,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
+      ],
       "sos": 4,
       "sor": 113,
       "Actual Wins": null,
@@ -9516,7 +9910,10 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
-        "Air-Raid Tendency"
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Clock-Control Tempo",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 72,
       "sor": 93,
@@ -9533,7 +9930,11 @@
       "Record": "5-7",
       "Net Rating": -13.5,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Clock-Control Tempo"
+      ],
       "sos": 132,
       "sor": 107,
       "Actual Wins": null,
@@ -9568,7 +9969,9 @@
       "Net Rating": -14.7,
       "Year": 2024,
       "tags": [
+        "Explosive Offense",
         "Underdog Roster",
+        "Clock-Control Tempo",
         "Boom-or-Bust Offense"
       ],
       "sos": 70,
@@ -9587,8 +9990,10 @@
       "Net Rating": -15.6,
       "Year": 2024,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Clock-Control Tempo",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 126,
       "sor": 129,
@@ -9605,7 +10010,9 @@
       "Record": "4-8",
       "Net Rating": -16.3,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense"
+      ],
       "sos": 84,
       "sor": 101,
       "Actual Wins": null,
@@ -9622,7 +10029,10 @@
       "Net Rating": -16.3,
       "Year": 2024,
       "tags": [
-        "Run-Heavy Identity"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Clock-Control Tempo",
+        "Smashmouth Identity"
       ],
       "sos": 117,
       "sor": 118,
@@ -9640,6 +10050,7 @@
       "Net Rating": -16.4,
       "Year": 2024,
       "tags": [
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 99,
@@ -9711,7 +10122,10 @@
       "Record": "3-9",
       "Net Rating": -17.5,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder"
+      ],
       "sos": 96,
       "sor": 121,
       "Actual Wins": null,
@@ -9729,7 +10143,8 @@
       "Year": 2024,
       "tags": [
         "Air-Raid Tendency",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 107,
       "sor": 126,
@@ -9778,7 +10193,9 @@
       "Record": "3-9",
       "Net Rating": -22.7,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 125,
       "sor": 131,
       "Actual Wins": null,
@@ -9797,6 +10214,7 @@
       "tags": [
         "Explosive Offense",
         "Underdog Roster",
+        "Clock-Control Tempo",
         "Boom-or-Bust Offense"
       ],
       "sos": 81,
@@ -9819,9 +10237,7 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 46,
@@ -9840,13 +10256,10 @@
       "Net Rating": 28.5,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Clock-Control Tempo"
       ],
       "sos": 27,
       "sor": 7,
@@ -9864,7 +10277,6 @@
       "Net Rating": 26.5,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Standard-Downs Grinder",
         "Stout Defense",
@@ -9890,10 +10302,9 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense"
+        "Clock-Control Tempo"
       ],
       "sos": 14,
       "sor": 1,
@@ -9914,8 +10325,8 @@
         "Efficient Offense",
         "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Clock-Control Tempo"
       ],
       "sos": 16,
       "sor": 4,
@@ -9933,8 +10344,9 @@
       "Net Rating": 22.1,
       "Year": 2025,
       "tags": [
-        "Passing-Downs Weapon",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 61,
       "sor": 12,
@@ -9952,12 +10364,9 @@
       "Net Rating": 21.8,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 4,
@@ -9976,13 +10385,12 @@
       "Net Rating": 19.7,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense"
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 51,
       "sor": 15,
@@ -10000,11 +10408,8 @@
       "Net Rating": 19.5,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 24,
@@ -10044,10 +10449,10 @@
       "Net Rating": 18.5,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 25,
       "sor": 5,
@@ -10065,10 +10470,9 @@
       "Net Rating": 18.4,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 6,
       "sor": 3,
@@ -10109,9 +10513,9 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Up-Tempo Offense",
+        "Balanced Attack"
       ],
       "sos": 42,
       "sor": 34,
@@ -10129,9 +10533,10 @@
       "Net Rating": 15.7,
       "Year": 2025,
       "tags": [
-        "Passing-Downs Weapon",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 18,
       "sor": 11,
@@ -10154,7 +10559,9 @@
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo",
+        "Balanced Attack"
       ],
       "sos": 22,
       "sor": 14,
@@ -10172,8 +10579,6 @@
       "Net Rating": 14.7,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
         "Disruptive Defense",
@@ -10195,9 +10600,13 @@
       "Net Rating": 14.3,
       "Year": 2025,
       "tags": [
-        "Explosive Offense",
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 64,
       "sor": 38,
@@ -10217,7 +10626,8 @@
       "tags": [
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 29,
       "sor": 16,
@@ -10253,9 +10663,6 @@
       "Net Rating": 13.0,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense"
       ],
       "sos": 45,
@@ -10276,8 +10683,8 @@
       "tags": [
         "Run-Heavy Identity",
         "Stout Defense",
-        "Disruptive Defense",
         "Underdog Roster",
+        "Clock-Control Tempo",
         "Overachiever"
       ],
       "sos": 79,
@@ -10296,11 +10703,8 @@
       "Net Rating": 11.4,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 37,
       "sor": 29,
@@ -10319,10 +10723,9 @@
       "Year": 2025,
       "tags": [
         "Explosive Offense",
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 78,
       "sor": 32,
@@ -10360,9 +10763,8 @@
       "Net Rating": 10.9,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "Stout Defense",
-        "Disruptive Defense"
+        "Clock-Control Tempo"
       ],
       "sos": 34,
       "sor": 10,
@@ -10384,7 +10786,10 @@
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Balanced Attack"
       ],
       "sos": 109,
       "sor": 23,
@@ -10402,7 +10807,8 @@
       "Net Rating": 9.8,
       "Year": 2025,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 12,
       "sor": 73,
@@ -10420,7 +10826,8 @@
       "Net Rating": 9.5,
       "Year": 2025,
       "tags": [
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 19,
       "sor": 57,
@@ -10440,7 +10847,8 @@
       "tags": [
         "Air-Raid Tendency",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 11,
       "sor": 33,
@@ -10460,7 +10868,6 @@
       "tags": [
         "Efficient Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 48,
@@ -10479,8 +10886,7 @@
       "Net Rating": 7.0,
       "Year": 2025,
       "tags": [
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 126,
       "sor": 66,
@@ -10516,7 +10922,8 @@
       "Net Rating": 6.8,
       "Year": 2025,
       "tags": [
-        "Explosive Offense"
+        "Explosive Offense",
+        "Boom-or-Bust Offense"
       ],
       "sos": 54,
       "sor": 64,
@@ -10536,7 +10943,8 @@
       "tags": [
         "Efficient Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Standard-Downs Grinder",
+        "Balanced Attack"
       ],
       "sos": 106,
       "sor": 53,
@@ -10593,7 +11001,6 @@
       "Net Rating": 6.2,
       "Year": 2025,
       "tags": [
-        "Standard-Downs Grinder",
         "Stout Defense"
       ],
       "sos": 50,
@@ -10628,8 +11035,7 @@
       "Net Rating": 5.5,
       "Year": 2025,
       "tags": [
-        "Explosive Offense",
-        "Passing-Downs Weapon"
+        "Explosive Offense"
       ],
       "sos": 58,
       "sor": 35,
@@ -10733,7 +11139,9 @@
       "Record": "9-4",
       "Net Rating": 4.1,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 40,
       "sor": 28,
       "Actual Wins": null,
@@ -10766,9 +11174,9 @@
       "Net Rating": 3.7,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
         "Passing-Downs Weapon",
         "Run-Heavy Identity",
+        "Up-Tempo Offense",
         "Overachiever"
       ],
       "sos": 80,
@@ -10787,7 +11195,8 @@
       "Net Rating": 3.6,
       "Year": 2025,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Balanced Attack"
       ],
       "sos": 26,
       "sor": 18,
@@ -10807,7 +11216,9 @@
       "tags": [
         "Efficient Offense",
         "Passing-Downs Weapon",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Balanced Attack"
       ],
       "sos": 68,
       "sor": 70,
@@ -10842,7 +11253,8 @@
       "Year": 2025,
       "tags": [
         "Passing-Downs Weapon",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 39,
       "sor": 88,
@@ -10876,7 +11288,10 @@
       "Net Rating": 2.8,
       "Year": 2025,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 59,
       "sor": 60,
@@ -10984,7 +11399,9 @@
       "Record": "5-8",
       "Net Rating": 1.0,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 17,
       "sor": 77,
       "Actual Wins": null,
@@ -11001,9 +11418,13 @@
       "Net Rating": 0.9,
       "Year": 2025,
       "tags": [
+        "Efficient Offense",
         "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 108,
       "sor": 89,
@@ -11021,7 +11442,6 @@
       "Net Rating": 0.7,
       "Year": 2025,
       "tags": [
-        "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
       "sos": 132,
@@ -11039,7 +11459,10 @@
       "Record": "7-6",
       "Net Rating": 0.6,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense",
+        "Clock-Control Tempo"
+      ],
       "sos": 47,
       "sor": 47,
       "Actual Wins": null,
@@ -11056,6 +11479,7 @@
       "Net Rating": -0.2,
       "Year": 2025,
       "tags": [
+        "Clock-Control Tempo",
         "Boom-or-Bust Offense"
       ],
       "sos": 3,
@@ -11073,7 +11497,9 @@
       "Record": "7-6",
       "Net Rating": -0.2,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 55,
       "sor": 62,
       "Actual Wins": null,
@@ -11090,7 +11516,8 @@
       "Net Rating": -0.4,
       "Year": 2025,
       "tags": [
-        "Passing-Downs Weapon"
+        "Passing-Downs Weapon",
+        "Up-Tempo Offense"
       ],
       "sos": 90,
       "sor": 48,
@@ -11108,7 +11535,9 @@
       "Net Rating": -0.8,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Disruptive Defense",
+        "Clock-Control Tempo"
       ],
       "sos": 115,
       "sor": 40,
@@ -11160,7 +11589,9 @@
       "Record": "8-5",
       "Net Rating": -1.6,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 52,
       "sor": 31,
       "Actual Wins": null,
@@ -11195,7 +11626,12 @@
       "Record": "5-7",
       "Net Rating": -1.9,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Balanced Attack"
+      ],
       "sos": 20,
       "sor": 61,
       "Actual Wins": null,
@@ -11211,7 +11647,10 @@
       "Record": "3-9",
       "Net Rating": -2.3,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon"
+      ],
       "sos": 33,
       "sor": 112,
       "Actual Wins": null,
@@ -11228,6 +11667,8 @@
       "Net Rating": -3.0,
       "Year": 2025,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 118,
@@ -11247,7 +11688,11 @@
       "Year": 2025,
       "tags": [
         "Explosive Offense",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense",
+        "Boom-or-Bust Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 56,
       "sor": 102,
@@ -11281,7 +11726,8 @@
       "Net Rating": -3.4,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Disruptive Defense"
       ],
       "sos": 131,
       "sor": 72,
@@ -11298,7 +11744,10 @@
       "Record": "6-7",
       "Net Rating": -3.4,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense",
+        "Track Meet Offense"
+      ],
       "sos": 77,
       "sor": 90,
       "Actual Wins": null,
@@ -11315,7 +11764,8 @@
       "Net Rating": -3.5,
       "Year": 2025,
       "tags": [
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 89,
       "sor": 43,
@@ -11348,7 +11798,9 @@
       "Record": "9-4",
       "Net Rating": -4.2,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 110,
       "sor": 55,
       "Actual Wins": null,
@@ -11381,7 +11833,8 @@
       "Net Rating": -5.4,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 112,
       "sor": 51,
@@ -11417,6 +11870,7 @@
       "Net Rating": -5.7,
       "Year": 2025,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency",
         "Disruptive Defense"
       ],
@@ -11436,7 +11890,8 @@
       "Net Rating": -5.7,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Up-Tempo Offense"
       ],
       "sos": 31,
       "sor": 96,
@@ -11471,7 +11926,10 @@
       "Record": "4-8",
       "Net Rating": -5.8,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense",
+        "Clock-Control Tempo"
+      ],
       "sos": 75,
       "sor": 115,
       "Actual Wins": null,
@@ -11489,7 +11947,7 @@
       "Year": 2025,
       "tags": [
         "Explosive Offense",
-        "Boom-or-Bust Offense"
+        "Passing-Downs Weapon"
       ],
       "sos": 43,
       "sor": 116,
@@ -11541,6 +11999,7 @@
       "Net Rating": -6.6,
       "Year": 2025,
       "tags": [
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Disruptive Defense"
       ],
@@ -11578,7 +12037,9 @@
       "Net Rating": -7.0,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Smashmouth Identity"
       ],
       "sos": 107,
       "sor": 97,
@@ -11595,7 +12056,9 @@
       "Record": "7-6",
       "Net Rating": -7.2,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 127,
       "sor": 94,
       "Actual Wins": null,
@@ -11611,7 +12074,11 @@
       "Record": "2-10",
       "Net Rating": -7.7,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Disruptive Defense"
+      ],
       "sos": 8,
       "sor": 99,
       "Actual Wins": null,
@@ -11628,7 +12095,11 @@
       "Net Rating": -7.9,
       "Year": 2025,
       "tags": [
-        "Underdog Roster"
+        "Passing-Downs Weapon",
+        "Disruptive Defense",
+        "Underdog Roster",
+        "Up-Tempo Offense",
+        "Track Meet Offense"
       ],
       "sos": 93,
       "sor": 39,
@@ -11648,7 +12119,8 @@
       "tags": [
         "Run-Heavy Identity",
         "Disruptive Defense",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Clock-Control Tempo"
       ],
       "sos": 104,
       "sor": 86,
@@ -11699,7 +12171,10 @@
       "Year": 2025,
       "tags": [
         "Explosive Offense",
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense",
+        "Track Meet Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 92,
       "sor": 114,
@@ -11733,7 +12208,8 @@
       "Net Rating": -8.7,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 114,
       "sor": 79,
@@ -11754,7 +12230,7 @@
         "Explosive Offense",
         "Air-Raid Tendency",
         "Underdog Roster",
-        "Boom-or-Bust Offense"
+        "Chunk-Play Passing Attack"
       ],
       "sos": 91,
       "sor": 76,
@@ -11772,7 +12248,8 @@
       "Net Rating": -10.0,
       "Year": 2025,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 111,
       "sor": 91,
@@ -11789,7 +12266,12 @@
       "Record": "4-8",
       "Net Rating": -10.1,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 119,
       "sor": 120,
       "Actual Wins": null,
@@ -11806,6 +12288,7 @@
       "Net Rating": -10.5,
       "Year": 2025,
       "tags": [
+        "Efficient Offense",
         "Air-Raid Tendency"
       ],
       "sos": 74,
@@ -11823,7 +12306,10 @@
       "Record": "5-7",
       "Net Rating": -10.8,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Clock-Control Tempo"
+      ],
       "sos": 97,
       "sor": 100,
       "Actual Wins": null,
@@ -11840,7 +12326,9 @@
       "Net Rating": -10.8,
       "Year": 2025,
       "tags": [
-        "Passing-Downs Weapon"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Disruptive Defense"
       ],
       "sos": 85,
       "sor": 71,
@@ -11874,7 +12362,8 @@
       "Net Rating": -10.9,
       "Year": 2025,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 116,
       "sor": 110,
@@ -11891,7 +12380,9 @@
       "Record": "3-9",
       "Net Rating": -11.2,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 76,
       "sor": 122,
       "Actual Wins": null,
@@ -11907,7 +12398,9 @@
       "Record": "6-7",
       "Net Rating": -11.3,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 86,
       "sor": 98,
       "Actual Wins": null,
@@ -11924,7 +12417,10 @@
       "Net Rating": -11.5,
       "Year": 2025,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 94,
       "sor": 125,
@@ -11941,7 +12437,9 @@
       "Record": "5-7",
       "Net Rating": -11.9,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 134,
       "sor": 105,
       "Actual Wins": null,
@@ -11957,7 +12455,9 @@
       "Record": "2-10",
       "Net Rating": -12.1,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense"
+      ],
       "sos": 73,
       "sor": 123,
       "Actual Wins": null,
@@ -11974,7 +12474,8 @@
       "Net Rating": -12.1,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Disruptive Defense"
       ],
       "sos": 123,
       "sor": 126,
@@ -11991,7 +12492,9 @@
       "Record": "4-8",
       "Net Rating": -13.5,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder"
+      ],
       "sos": 83,
       "sor": 106,
       "Actual Wins": null,
@@ -12007,7 +12510,9 @@
       "Record": "4-8",
       "Net Rating": -13.7,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Up-Tempo Offense"
+      ],
       "sos": 128,
       "sor": 119,
       "Actual Wins": null,
@@ -12024,7 +12529,9 @@
       "Net Rating": -13.8,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo",
+        "Boom-or-Bust Offense"
       ],
       "sos": 125,
       "sor": 117,
@@ -12042,6 +12549,9 @@
       "Net Rating": -14.1,
       "Year": 2025,
       "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 130,
@@ -12060,8 +12570,11 @@
       "Net Rating": -14.3,
       "Year": 2025,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Underdog Roster"
+        "Underdog Roster",
+        "Up-Tempo Offense"
       ],
       "sos": 121,
       "sor": 93,
@@ -12079,7 +12592,8 @@
       "Net Rating": -14.5,
       "Year": 2025,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Up-Tempo Offense"
       ],
       "sos": 124,
       "sor": 131,
@@ -12097,7 +12611,8 @@
       "Net Rating": -15.1,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Identity"
+        "Run-Heavy Identity",
+        "Clock-Control Tempo"
       ],
       "sos": 87,
       "sor": 107,
@@ -12134,7 +12649,10 @@
       "Net Rating": -15.4,
       "Year": 2025,
       "tags": [
-        "Air-Raid Tendency"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Air-Raid Tendency",
+        "Disruptive Defense"
       ],
       "sos": 65,
       "sor": 132,
@@ -12203,7 +12721,7 @@
       "Year": 2025,
       "tags": [
         "Explosive Offense",
-        "Boom-or-Bust Offense"
+        "Clock-Control Tempo"
       ],
       "sos": 82,
       "sor": 121,
@@ -12220,7 +12738,9 @@
       "Record": "4-8",
       "Net Rating": -20.6,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Clock-Control Tempo"
+      ],
       "sos": 96,
       "sor": 113,
       "Actual Wins": null,
@@ -12255,8 +12775,9 @@
       "Net Rating": -20.9,
       "Year": 2025,
       "tags": [
-        "Underdog Roster",
-        "Boom-or-Bust Offense"
+        "Explosive Offense",
+        "Standard-Downs Grinder",
+        "Underdog Roster"
       ],
       "sos": 102,
       "sor": 84,
@@ -12295,9 +12816,7 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 129,
@@ -12340,7 +12859,6 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense",
@@ -12363,7 +12881,6 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense",
@@ -12387,7 +12904,9 @@
         "Explosive Offense",
         "Passing-Downs Weapon",
         "Stout Defense",
-        "Blue-Blood Talent"
+        "Blue-Blood Talent",
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 17,
       "sor": null,
@@ -12404,12 +12923,9 @@
       "Net Rating": 19.9,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 28,
@@ -12429,7 +12945,6 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense",
@@ -12450,9 +12965,9 @@
       "Net Rating": 19.4,
       "Year": 2026,
       "tags": [
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 137,
       "sor": null,
@@ -12469,9 +12984,6 @@
       "Net Rating": 19.2,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Stout Defense",
         "Disruptive Defense"
       ],
@@ -12490,13 +13002,10 @@
       "Net Rating": 18.9,
       "Year": 2026,
       "tags": [
-        "Explosive Offense",
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 38,
       "sor": null,
@@ -12513,8 +13022,7 @@
       "Net Rating": 18.3,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon"
+        "Efficient Offense"
       ],
       "sos": 80,
       "sor": null,
@@ -12532,13 +13040,11 @@
       "Year": 2026,
       "tags": [
         "Explosive Offense",
-        "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 117,
       "sor": null,
@@ -12558,8 +13064,7 @@
         "Efficient Offense",
         "High-Powered Offense",
         "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Standard-Downs Grinder"
       ],
       "sos": 55,
       "sor": null,
@@ -12593,6 +13098,8 @@
       "Net Rating": 16.4,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Blue-Blood Talent"
       ],
@@ -12611,8 +13118,6 @@
       "Net Rating": 16.1,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Stout Defense",
         "Disruptive Defense",
@@ -12635,9 +13140,8 @@
       "tags": [
         "Efficient Offense",
         "High-Powered Offense",
-        "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Balanced Attack"
       ],
       "sos": 40,
       "sor": null,
@@ -12654,7 +13158,6 @@
       "Net Rating": 14.4,
       "Year": 2026,
       "tags": [
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Blue-Blood Talent"
       ],
@@ -12677,7 +13180,7 @@
         "High-Powered Offense",
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
-        "Disruptive Defense"
+        "Balanced Attack"
       ],
       "sos": 43,
       "sor": null,
@@ -12695,10 +13198,11 @@
       "Year": 2026,
       "tags": [
         "Explosive Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Air-Raid Tendency",
-        "Stout Defense"
+        "Stout Defense",
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 121,
       "sor": null,
@@ -12735,9 +13239,9 @@
       "Year": 2026,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
-        "Stout Defense"
+        "Stout Defense",
+        "Bend-Dont-Break Defense",
+        "Balanced Attack"
       ],
       "sos": 62,
       "sor": null,
@@ -12754,12 +13258,8 @@
       "Net Rating": 13.3,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 33,
       "sor": null,
@@ -12775,10 +13275,7 @@
       "Conference": "SEC",
       "Net Rating": 13.0,
       "Year": 2026,
-      "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder"
-      ],
+      "tags": [],
       "sos": 31,
       "sor": null,
       "Actual Wins": 0.0,
@@ -12831,9 +13328,7 @@
       "Net Rating": 12.0,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
         "Stout Defense",
-        "Disruptive Defense",
         "Blue-Blood Talent"
       ],
       "sos": 22,
@@ -12851,11 +13346,8 @@
       "Net Rating": 10.1,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
         "High-Powered Offense",
-        "Standard-Downs Grinder",
-        "Stout Defense",
-        "Disruptive Defense"
+        "Stout Defense"
       ],
       "sos": 79,
       "sor": null,
@@ -12872,7 +13364,6 @@
       "Net Rating": 9.1,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
         "Passing-Downs Weapon",
         "Run-Heavy Identity"
       ],
@@ -12907,8 +13398,8 @@
       "Year": 2026,
       "tags": [
         "Explosive Offense",
-        "Standard-Downs Grinder",
         "Stout Defense",
+        "Boom-or-Bust Offense",
         "Bend-Dont-Break Defense"
       ],
       "sos": 116,
@@ -12942,8 +13433,7 @@
       "Year": 2026,
       "tags": [
         "Efficient Offense",
-        "Passing-Downs Weapon",
-        "Standard-Downs Grinder"
+        "Passing-Downs Weapon"
       ],
       "sos": 18,
       "sor": null,
@@ -12977,7 +13467,9 @@
       "tags": [
         "Explosive Offense",
         "Passing-Downs Weapon",
-        "Stout Defense"
+        "Stout Defense",
+        "Boom-or-Bust Offense",
+        "Bend-Dont-Break Defense"
       ],
       "sos": 90,
       "sor": null,
@@ -13008,7 +13500,10 @@
       "Conference": "Big Ten",
       "Net Rating": 7.2,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Balanced Attack"
+      ],
       "sos": 71,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13059,7 +13554,9 @@
       "Net Rating": 6.0,
       "Year": 2026,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 125,
       "sor": null,
@@ -13076,7 +13573,6 @@
       "Net Rating": 5.9,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
         "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
@@ -13126,10 +13622,7 @@
       "Conference": "SEC",
       "Net Rating": 5.7,
       "Year": 2026,
-      "tags": [
-        "Efficient Offense",
-        "Passing-Downs Weapon"
-      ],
+      "tags": [],
       "sos": 34,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13160,6 +13653,8 @@
       "Net Rating": 5.3,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 228,
@@ -13177,8 +13672,6 @@
       "Net Rating": 5.2,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
-        "Standard-Downs Grinder",
         "Stout Defense"
       ],
       "sos": 126,
@@ -13211,7 +13704,6 @@
       "Net Rating": 5.0,
       "Year": 2026,
       "tags": [
-        "Efficient Offense",
         "Standard-Downs Grinder"
       ],
       "sos": 105,
@@ -13228,7 +13720,9 @@
       "Conference": "Mountain West",
       "Net Rating": 4.9,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder"
+      ],
       "sos": 213,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13244,6 +13738,7 @@
       "Net Rating": 4.8,
       "Year": 2026,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency"
       ],
       "sos": 99,
@@ -13282,7 +13777,8 @@
         "Passing-Downs Weapon",
         "Standard-Downs Grinder",
         "Run-Heavy Identity",
-        "Disruptive Defense"
+        "Disruptive Defense",
+        "Offense-Carried Team"
       ],
       "sos": 132,
       "sor": null,
@@ -13315,7 +13811,10 @@
       "Conference": "Big Ten",
       "Net Rating": 4.2,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Balanced Attack"
+      ],
       "sos": 86,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13332,6 +13831,7 @@
       "Year": 2026,
       "tags": [
         "Run-Heavy Identity",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 176,
@@ -13506,9 +14006,7 @@
       "Conference": "Big 12",
       "Net Rating": 2.6,
       "Year": 2026,
-      "tags": [
-        "Standard-Downs Grinder"
-      ],
+      "tags": [],
       "sos": 100,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13554,7 +14052,10 @@
       "Net Rating": 2.1,
       "Year": 2026,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Balanced Attack"
       ],
       "sos": 95,
       "sor": null,
@@ -13570,9 +14071,7 @@
       "Conference": "ACC",
       "Net Rating": 1.8,
       "Year": 2026,
-      "tags": [
-        "Passing-Downs Weapon"
-      ],
+      "tags": [],
       "sos": 102,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13587,7 +14086,9 @@
       "Conference": "Big Ten",
       "Net Rating": 1.7,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Efficient Offense"
+      ],
       "sos": 51,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13618,7 +14119,9 @@
       "Net Rating": 1.0,
       "Year": 2026,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 91,
       "sor": null,
@@ -13651,7 +14154,9 @@
       "Conference": "ACC",
       "Net Rating": 0.6,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 54,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13802,6 +14307,9 @@
       "Net Rating": -2.1,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 227,
@@ -13867,7 +14375,10 @@
       "Conference": "Big Ten",
       "Net Rating": -2.9,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon"
+      ],
       "sos": 56,
       "sor": null,
       "Actual Wins": 0.0,
@@ -13883,9 +14394,10 @@
       "Net Rating": -3.3,
       "Year": 2026,
       "tags": [
+        "Passing-Downs Weapon",
         "Air-Raid Tendency",
         "Disruptive Defense",
-        "Boom-or-Bust Offense"
+        "Chunk-Play Passing Attack"
       ],
       "sos": 194,
       "sor": null,
@@ -13966,6 +14478,7 @@
       "Net Rating": -4.2,
       "Year": 2026,
       "tags": [
+        "Explosive Offense",
         "Boom-or-Bust Offense"
       ],
       "sos": 154,
@@ -13982,7 +14495,10 @@
       "Conference": "Sun Belt",
       "Net Rating": -4.2,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Disruptive Defense"
+      ],
       "sos": 157,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14016,6 +14532,7 @@
       "Year": 2026,
       "tags": [
         "Underdog Roster",
+        "Boom-or-Bust Offense",
         "Overachiever"
       ],
       "sos": 204,
@@ -14033,6 +14550,8 @@
       "Net Rating": -4.5,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 179,
@@ -14064,7 +14583,9 @@
       "Conference": "Pac-12",
       "Net Rating": -4.5,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Boom-or-Bust Offense"
+      ],
       "sos": 120,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14080,6 +14601,7 @@
       "Net Rating": -4.7,
       "Year": 2026,
       "tags": [
+        "Standard-Downs Grinder",
         "Run-Heavy Identity"
       ],
       "sos": 200,
@@ -14096,7 +14618,9 @@
       "Conference": "Mid-American",
       "Net Rating": -4.9,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Disruptive Defense"
+      ],
       "sos": 222,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14127,7 +14651,11 @@
       "Net Rating": -5.0,
       "Year": 2026,
       "tags": [
-        "Run-Heavy Identity"
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Disruptive Defense"
       ],
       "sos": 202,
       "sor": null,
@@ -14162,7 +14690,9 @@
       "Net Rating": -5.4,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
         "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
         "Disruptive Defense"
       ],
@@ -14200,7 +14730,8 @@
       "tags": [
         "Explosive Offense",
         "Air-Raid Tendency",
-        "Boom-or-Bust Offense"
+        "Boom-or-Bust Offense",
+        "Chunk-Play Passing Attack"
       ],
       "sos": 161,
       "sor": null,
@@ -14216,7 +14747,9 @@
       "Conference": "Mid-American",
       "Net Rating": -6.2,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon"
+      ],
       "sos": 214,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14231,7 +14764,10 @@
       "Conference": "Sun Belt",
       "Net Rating": -6.3,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Passing-Downs Weapon",
+        "Disruptive Defense"
+      ],
       "sos": 183,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14247,7 +14783,9 @@
       "Net Rating": -6.6,
       "Year": 2026,
       "tags": [
+        "Standard-Downs Grinder",
         "Run-Heavy Identity",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 226,
@@ -14311,7 +14849,10 @@
       "Conference": "Mid-American",
       "Net Rating": -7.0,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder",
+        "Disruptive Defense"
+      ],
       "sos": 207,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14326,7 +14867,9 @@
       "Conference": "American Athletic",
       "Net Rating": -7.0,
       "Year": 2026,
-      "tags": [],
+      "tags": [
+        "Standard-Downs Grinder"
+      ],
       "sos": 152,
       "sor": null,
       "Actual Wins": 0.0,
@@ -14342,6 +14885,7 @@
       "Net Rating": -7.1,
       "Year": 2026,
       "tags": [
+        "Passing-Downs Weapon",
         "Run-Heavy Identity"
       ],
       "sos": 169,
@@ -14359,7 +14903,10 @@
       "Net Rating": -7.2,
       "Year": 2026,
       "tags": [
-        "Run-Heavy Identity"
+        "Efficient Offense",
+        "Standard-Downs Grinder",
+        "Run-Heavy Identity",
+        "Disruptive Defense"
       ],
       "sos": 174,
       "sor": null,
@@ -14408,6 +14955,8 @@
       "Net Rating": -8.0,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 165,
@@ -14425,7 +14974,8 @@
       "Net Rating": -8.0,
       "Year": 2026,
       "tags": [
-        "Air-Raid Tendency"
+        "Air-Raid Tendency",
+        "Disruptive Defense"
       ],
       "sos": 195,
       "sor": null,
@@ -14445,7 +14995,7 @@
         "Explosive Offense",
         "Air-Raid Tendency",
         "Underdog Roster",
-        "Boom-or-Bust Offense"
+        "Chunk-Play Passing Attack"
       ],
       "sos": 167,
       "sor": null,
@@ -14462,6 +15012,9 @@
       "Net Rating": -8.6,
       "Year": 2026,
       "tags": [
+        "Efficient Offense",
+        "Passing-Downs Weapon",
+        "Standard-Downs Grinder",
         "Air-Raid Tendency"
       ],
       "sos": 215,
@@ -14480,6 +15033,7 @@
       "Year": 2026,
       "tags": [
         "Run-Heavy Identity",
+        "Disruptive Defense",
         "Underdog Roster"
       ],
       "sos": 163,
@@ -14600,6 +15154,7 @@
       "Net Rating": -13.1,
       "Year": 2026,
       "tags": [
+        "Standard-Downs Grinder",
         "Air-Raid Tendency",
         "Underdog Roster"
       ],
@@ -14619,8 +15174,7 @@
       "Year": 2026,
       "tags": [
         "Explosive Offense",
-        "Underdog Roster",
-        "Boom-or-Bust Offense"
+        "Underdog Roster"
       ],
       "sos": 181,
       "sor": null,
