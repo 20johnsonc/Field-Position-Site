@@ -65,7 +65,7 @@ const getRecordSortValue = (record: string) => {
             <td class="text-right">
               {row.tags && row.tags.length > 0 ? (
                 <div class="table-tags">
-                  {row.tags.slice(0, 2).map((tag: string) => {
+                  {row.tags.slice(0, 3).map((tag: string) => {
                     const lower = tag.toLowerCase();
                     const isDef = lower.includes('defense') || lower.includes('stout') || lower.includes('break');
                     const isOff = lower.includes('offense') || lower.includes('explosive') || lower.includes('run');
