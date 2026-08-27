@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T19:22:10.097535+00:00",
+  "generated_at": "2026-08-27T19:57:11.941847+00:00",
   "years": [
     2021,
     2022,
@@ -179,7 +179,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Iowa State",
           "location": "Away",
           "team_score": 20,
@@ -373,11 +373,11 @@
           "beat_expectation_by": 22.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Subway ACC Championship",
+          "round_name": "Subway Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Tennessee",
           "location": "Home",
           "team_score": 14,
@@ -561,7 +561,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Kentucky",
           "location": "Away",
           "team_score": 38,
@@ -571,8 +571,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2024": [
@@ -755,11 +755,11 @@
           "beat_expectation_by": 5.4,
           "result": "W",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": "Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 16,
           "opponent": "Texas",
           "location": "Away",
           "team_score": 24,
@@ -769,7 +769,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ],
@@ -943,7 +943,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Penn State",
           "location": "Home",
           "team_score": 10,
@@ -1299,7 +1299,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Maryland",
           "location": "Home",
           "team_score": 12,
@@ -1309,8 +1309,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2023": [
@@ -1483,7 +1483,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Kansas State",
           "location": "Away",
           "team_score": 19,
@@ -1667,7 +1667,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "East Carolina",
           "location": "Home",
           "team_score": 21,
@@ -1851,7 +1851,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Memphis",
           "location": "Home",
           "team_score": 31,
@@ -2233,7 +2233,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 16,
           "opponent": "Missouri",
           "location": "Home",
           "team_score": 24,
@@ -2771,7 +2771,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 17,
           "opponent": "Louisiana Tech",
           "location": "Home",
           "team_score": 27,
@@ -2955,7 +2955,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 17,
           "opponent": "UConn",
           "location": "Home",
           "team_score": 41,
@@ -3407,7 +3407,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "New Mexico State",
           "location": "Home",
           "team_score": 19,
@@ -3591,7 +3591,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Minnesota",
           "location": "Away",
           "team_score": 24,
@@ -3775,7 +3775,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Arkansas State",
           "location": "Home",
           "team_score": 31,
@@ -4131,7 +4131,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "Louisiana",
           "location": "Home",
           "team_score": 21,
@@ -4315,7 +4315,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 13,
           "opponent": "UConn",
           "location": "Away",
           "team_score": 28,
@@ -4499,7 +4499,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 14,
           "opponent": "UTSA",
           "location": "Home",
           "team_score": 17,
@@ -4509,8 +4509,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
-          "bowl_name": "Scooter's Coffee Frisco Bowl"
+          "round_name": "Scooter'S Coffee Frisco Bowl",
+          "bowl_name": "Scooter'S Coffee Frisco Bowl"
         }
       ],
       "2024": [
@@ -5379,7 +5379,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Rice",
           "location": "Away",
           "team_score": 45,
@@ -5389,8 +5389,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2024": [
@@ -5563,7 +5563,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 15,
           "opponent": "North Texas",
           "location": "Home",
           "team_score": 30,
@@ -5573,8 +5573,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2025": [
@@ -5747,7 +5747,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Rice",
           "location": "Home",
           "team_score": 41,
@@ -5933,7 +5933,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Mississippi State",
           "location": "Home",
           "team_score": 34,
@@ -5943,8 +5943,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2022": [
@@ -6117,7 +6117,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Ole Miss",
           "location": "Away",
           "team_score": 42,
@@ -6127,8 +6127,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
-          "bowl_name": "TaxAct Texas Bowl"
+          "round_name": "Taxact Texas Bowl",
+          "bowl_name": "Taxact Texas Bowl"
         }
       ],
       "2023": [
@@ -6301,7 +6301,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "California",
           "location": "Home",
           "team_score": 34,
@@ -6485,7 +6485,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Arkansas",
           "location": "Away",
           "team_score": 26,
@@ -6495,8 +6495,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2025": [
@@ -6683,7 +6683,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 16,
           "opponent": "Oregon",
           "location": "Home",
           "team_score": 0,
@@ -6693,7 +6693,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ]
@@ -7443,7 +7443,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "Utah",
           "location": "Home",
           "team_score": 14,
@@ -7453,8 +7453,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2024": [
@@ -7797,7 +7797,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Central Michigan",
           "location": "Home",
           "team_score": 34,
@@ -7807,8 +7807,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
-          "bowl_name": "GameAbove Sports Bowl"
+          "round_name": "Gameabove Sports Bowl",
+          "bowl_name": "Gameabove Sports Bowl"
         }
       ]
     },
@@ -8167,7 +8167,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "USC",
           "location": "Away",
           "team_score": 46,
@@ -8365,7 +8365,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Virginia Tech",
           "location": "Home",
           "team_score": 20,
@@ -8375,8 +8375,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Military Bowl Presented by GoBowling.com",
-          "bowl_name": "Military Bowl Presented by GoBowling.com"
+          "round_name": "Com",
+          "bowl_name": "Com"
         }
       ],
       "2024": [
@@ -8563,7 +8563,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Florida",
           "location": "Away",
           "team_score": 8,
@@ -8761,7 +8761,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Ole Miss",
           "location": "Away",
           "team_score": 10,
@@ -8771,7 +8771,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ]
@@ -9785,7 +9785,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 14,
           "opponent": "Kansas State",
           "location": "Away",
           "team_score": 20,
@@ -9795,8 +9795,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
-          "bowl_name": "TaxAct Texas Bowl"
+          "round_name": "Taxact Texas Bowl",
+          "bowl_name": "Taxact Texas Bowl"
         }
       ],
       "2022": [
@@ -9979,11 +9979,11 @@
           "beat_expectation_by": -4.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship Game",
+          "round_name": "Sec Championship Game",
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Purdue",
           "location": "Away",
           "team_score": 63,
@@ -10167,7 +10167,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Wisconsin",
           "location": "Home",
           "team_score": 35,
@@ -10177,8 +10177,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ],
       "2024": [
@@ -10351,7 +10351,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Baylor",
           "location": "Home",
           "team_score": 44,
@@ -10361,8 +10361,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
-          "bowl_name": "Kinder's Texas Bowl"
+          "round_name": "Kinder'S Texas Bowl",
+          "bowl_name": "Kinder'S Texas Bowl"
         }
       ],
       "2025": [
@@ -10535,7 +10535,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Houston",
           "location": "Away",
           "team_score": 35,
@@ -10545,8 +10545,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
-          "bowl_name": "Kinder's Texas Bowl"
+          "round_name": "Kinder'S Texas Bowl",
+          "bowl_name": "Kinder'S Texas Bowl"
         }
       ]
     },
@@ -10785,7 +10785,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "San Diego State",
           "location": "Away",
           "team_score": 24,
@@ -10979,11 +10979,11 @@
           "beat_expectation_by": 11.1,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 15,
           "opponent": "Troy",
           "location": "Away",
           "team_score": 12,
@@ -11167,7 +11167,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 14,
           "opponent": "Marshall",
           "location": "Away",
           "team_score": 35,
@@ -11177,8 +11177,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
-          "bowl_name": "Scooter's Coffee Frisco Bowl"
+          "round_name": "Scooter'S Coffee Frisco Bowl",
+          "bowl_name": "Scooter'S Coffee Frisco Bowl"
         }
       ],
       "2024": [
@@ -11351,7 +11351,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Coastal Carolina",
           "location": "Home",
           "team_score": 44,
@@ -11535,7 +11535,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Florida International",
           "location": "Home",
           "team_score": 57,
@@ -11545,8 +11545,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ]
     },
@@ -11721,7 +11721,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "UCF",
           "location": "Home",
           "team_score": 17,
@@ -11905,7 +11905,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Oregon State",
           "location": "Away",
           "team_score": 3,
@@ -11915,8 +11915,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2023": [
@@ -12259,7 +12259,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Tulane",
           "location": "Home",
           "team_score": 33,
@@ -12757,7 +12757,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Louisiana",
           "location": "Away",
           "team_score": 34,
@@ -12951,11 +12951,11 @@
           "beat_expectation_by": 30.6,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 16,
           "opponent": "Ohio",
           "location": "Home",
           "team_score": 27,
@@ -12965,8 +12965,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
-          "bowl_name": "StaffDNA Cure Bowl"
+          "round_name": "Staffdna Cure Bowl",
+          "bowl_name": "Staffdna Cure Bowl"
         }
       ],
       "2025": [
@@ -13149,11 +13149,11 @@
           "beat_expectation_by": -11.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 16,
           "opponent": "Troy",
           "location": "Home",
           "team_score": 17,
@@ -13163,8 +13163,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
-          "bowl_name": "IS4S Salute to Veterans Bowl"
+          "round_name": "Is4S Salute To Veterans Bowl",
+          "bowl_name": "Is4S Salute To Veterans Bowl"
         }
       ]
     },
@@ -13353,7 +13353,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Coastal Carolina",
           "location": "Away",
           "team_score": 41,
@@ -13707,7 +13707,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Arkansas State",
           "location": "Home",
           "team_score": 21,
@@ -13891,7 +13891,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Fresno State",
           "location": "Away",
           "team_score": 28,
@@ -14521,7 +14521,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Washington State",
           "location": "Home",
           "team_score": 24,
@@ -14531,8 +14531,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2022": [
@@ -15215,7 +15215,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Northwestern",
           "location": "Away",
           "team_score": 7,
@@ -15225,8 +15225,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
-          "bowl_name": "GameAbove Sports Bowl"
+          "round_name": "Gameabove Sports Bowl",
+          "bowl_name": "Gameabove Sports Bowl"
         }
       ]
     },
@@ -15497,7 +15497,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "UAB",
           "location": "Home",
           "team_score": 28,
@@ -15681,7 +15681,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "SMU",
           "location": "Home",
           "team_score": 24,
@@ -16035,7 +16035,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Colorado",
           "location": "Away",
           "team_score": 36,
@@ -16233,7 +16233,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 16,
           "opponent": "Georgia Tech",
           "location": "Home",
           "team_score": 25,
@@ -16589,7 +16589,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Rice",
           "location": "Home",
           "team_score": 38,
@@ -16599,8 +16599,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "LendingTree Bowl",
-          "bowl_name": "LendingTree Bowl"
+          "round_name": "Lendingtree Bowl",
+          "bowl_name": "Lendingtree Bowl"
         }
       ],
       "2023": [
@@ -17113,7 +17113,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "Western Kentucky",
           "location": "Home",
           "team_score": 16,
@@ -17313,7 +17313,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Rutgers",
           "location": "Away",
           "team_score": 38,
@@ -17323,8 +17323,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2022": [
@@ -17497,7 +17497,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Missouri",
           "location": "Away",
           "team_score": 27,
@@ -18021,7 +18021,7 @@
           "bowl_name": null
         },
         {
-          "week": 36,
+          "week": 15,
           "opponent": "Mississippi State",
           "location": "Away",
           "team_score": 43,
@@ -18031,8 +18031,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ]
     },
@@ -18289,7 +18289,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Wake Forest",
           "location": "Home",
           "team_score": 10,
@@ -18299,8 +18299,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2022": [
@@ -18643,7 +18643,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Miami",
           "location": "Away",
           "team_score": 31,
@@ -18827,7 +18827,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Kansas State",
           "location": "Away",
           "team_score": 41,
@@ -19693,7 +19693,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Kansas",
           "location": "Home",
           "team_score": 36,
@@ -19891,7 +19891,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 16,
           "opponent": "California",
           "location": "Home",
           "team_score": 24,
@@ -19901,8 +19901,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Art of Sport LA Bowl",
-          "bowl_name": "Art of Sport LA Bowl"
+          "round_name": "Art Of Sport La Bowl",
+          "bowl_name": "Art Of Sport La Bowl"
         }
       ],
       "2025": [
@@ -20089,7 +20089,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Ohio",
           "location": "Away",
           "team_score": 10,
@@ -20099,8 +20099,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
-          "bowl_name": "Scooter's Coffee Frisco Bowl"
+          "round_name": "Scooter'S Coffee Frisco Bowl",
+          "bowl_name": "Scooter'S Coffee Frisco Bowl"
         }
       ]
     },
@@ -20275,7 +20275,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Maryland",
           "location": "Home",
           "team_score": 10,
@@ -20615,7 +20615,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Tulane",
           "location": "Away",
           "team_score": 41,
@@ -20625,8 +20625,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Military Bowl Presented by GoBowling.com",
-          "bowl_name": "Military Bowl Presented by GoBowling.com"
+          "round_name": "Com",
+          "bowl_name": "Com"
         }
       ],
       "2024": [
@@ -20799,7 +20799,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Minnesota",
           "location": "Home",
           "team_score": 10,
@@ -20809,8 +20809,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2025": [
@@ -22159,7 +22159,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 15,
           "opponent": "Western Kentucky",
           "location": "Home",
           "team_score": 38,
@@ -22169,8 +22169,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
-          "bowl_name": "RoofClaim.com Boca Raton Bowl"
+          "round_name": "Com Boca Raton Bowl",
+          "bowl_name": "Com Boca Raton Bowl"
         }
       ],
       "2022": [
@@ -22527,7 +22527,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 15,
           "opponent": "Miami (OH)",
           "location": "Home",
           "team_score": 13,
@@ -22867,7 +22867,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Georgia Southern",
           "location": "Home",
           "team_score": 10,
@@ -22877,8 +22877,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "JLab Birmingham Bowl",
-          "bowl_name": "JLab Birmingham Bowl"
+          "round_name": "Jlab Birmingham Bowl",
+          "bowl_name": "Jlab Birmingham Bowl"
         }
       ]
     },
@@ -23477,7 +23477,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Utah State",
           "location": "Away",
           "team_score": 38,
@@ -23487,8 +23487,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2023": [
@@ -23661,7 +23661,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Iowa State",
           "location": "Away",
           "team_score": 36,
@@ -23671,8 +23671,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2024": [
@@ -23845,7 +23845,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 15,
           "opponent": "West Virginia",
           "location": "Away",
           "team_score": 42,
@@ -23855,8 +23855,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
-          "bowl_name": "Scooter's Coffee Frisco Bowl"
+          "round_name": "Scooter'S Coffee Frisco Bowl",
+          "bowl_name": "Scooter'S Coffee Frisco Bowl"
         }
       ],
       "2025": [
@@ -24029,7 +24029,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "NC State",
           "location": "Away",
           "team_score": 7,
@@ -24311,7 +24311,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 14,
           "opponent": "LSU",
           "location": "Home",
           "team_score": 42,
@@ -24321,8 +24321,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
-          "bowl_name": "TaxAct Texas Bowl"
+          "round_name": "Taxact Texas Bowl",
+          "bowl_name": "Taxact Texas Bowl"
         }
       ],
       "2022": [
@@ -24509,7 +24509,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Alabama",
           "location": "Home",
           "team_score": 20,
@@ -24693,7 +24693,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "NC State",
           "location": "Home",
           "team_score": 28,
@@ -24877,7 +24877,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Rutgers",
           "location": "Home",
           "team_score": 44,
@@ -26099,7 +26099,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Michigan State",
           "location": "Away",
           "team_score": 21,
@@ -26109,8 +26109,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
-          "bowl_name": "Chick-fil-A Peach Bowl"
+          "round_name": "Chick-Fil-A Peach Bowl",
+          "bowl_name": "Chick-Fil-A Peach Bowl"
         }
       ],
       "2022": [
@@ -26283,7 +26283,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "UCLA",
           "location": "Away",
           "team_score": 37,
@@ -26293,8 +26293,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2023": [
@@ -26637,7 +26637,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Toledo",
           "location": "Away",
           "team_score": 46,
@@ -26647,8 +26647,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
-          "bowl_name": "GameAbove Sports Bowl"
+          "round_name": "Gameabove Sports Bowl",
+          "bowl_name": "Gameabove Sports Bowl"
         }
       ],
       "2025": [
@@ -26821,7 +26821,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "East Carolina",
           "location": "Away",
           "team_score": 17,
@@ -27155,7 +27155,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Clemson",
           "location": "Home",
           "team_score": 13,
@@ -27509,7 +27509,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Memphis",
           "location": "Home",
           "team_score": 26,
@@ -27519,8 +27519,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2024": [
@@ -27707,7 +27707,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Miami",
           "location": "Away",
           "team_score": 42,
@@ -28785,7 +28785,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "California",
           "location": "Home",
           "team_score": 35,
@@ -28795,8 +28795,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Sheraton Hawai\u02bbi Bowl",
-          "bowl_name": "Sheraton Hawai\u02bbi Bowl"
+          "round_name": "Sheraton Hawai\u02bbI Bowl",
+          "bowl_name": "Sheraton Hawai\u02bbI Bowl"
         }
       ]
     },
@@ -28971,7 +28971,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "UTEP",
           "location": "Home",
           "team_score": 31,
@@ -28981,8 +28981,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "PUBG Mobile New Mexico Bowl",
-          "bowl_name": "PUBG Mobile New Mexico Bowl"
+          "round_name": "Pubg Mobile New Mexico Bowl",
+          "bowl_name": "Pubg Mobile New Mexico Bowl"
         }
       ],
       "2022": [
@@ -29169,7 +29169,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 15,
           "opponent": "Washington State",
           "location": "Home",
           "team_score": 29,
@@ -29179,8 +29179,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
-          "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
+          "round_name": "Jimmy Kimmel La Bowl Presented By Stifel",
+          "bowl_name": "Jimmy Kimmel La Bowl Presented By Stifel"
         }
       ],
       "2023": [
@@ -29353,7 +29353,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "New Mexico State",
           "location": "Home",
           "team_score": 37,
@@ -29537,7 +29537,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Northern Illinois",
           "location": "Home",
           "team_score": 20,
@@ -29721,7 +29721,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Miami (OH)",
           "location": "Home",
           "team_score": 18,
@@ -30223,7 +30223,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Central Michigan",
           "location": "Away",
           "team_score": 21,
@@ -30233,8 +30233,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2022": [
@@ -30407,7 +30407,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 15,
           "opponent": "Fresno State",
           "location": "Away",
           "team_score": 6,
@@ -30417,8 +30417,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
-          "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
+          "round_name": "Jimmy Kimmel La Bowl Presented By Stifel",
+          "bowl_name": "Jimmy Kimmel La Bowl Presented By Stifel"
         }
       ],
       "2023": [
@@ -30761,7 +30761,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Syracuse",
           "location": "Home",
           "team_score": 35,
@@ -30771,8 +30771,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "DirecTV Holiday Bowl",
-          "bowl_name": "DirecTV Holiday Bowl"
+          "round_name": "Directv Holiday Bowl",
+          "bowl_name": "Directv Holiday Bowl"
         }
       ],
       "2025": [
@@ -30945,7 +30945,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Utah State",
           "location": "Away",
           "team_score": 34,
@@ -31641,7 +31641,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Miami (OH)",
           "location": "Home",
           "team_score": 17,
@@ -31997,7 +31997,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 14,
           "opponent": "Ball State",
           "location": "Away",
           "team_score": 51,
@@ -32007,8 +32007,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxAct Camellia Bowl",
-          "bowl_name": "TaxAct Camellia Bowl"
+          "round_name": "Taxact Camellia Bowl",
+          "bowl_name": "Taxact Camellia Bowl"
         }
       ],
       "2022": [
@@ -32351,7 +32351,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Utah State",
           "location": "Away",
           "team_score": 45,
@@ -32987,7 +32987,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Auburn",
           "location": "Away",
           "team_score": 17,
@@ -32997,8 +32997,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
-          "bowl_name": "TicketSmarter Birmingham Bowl"
+          "round_name": "Ticketsmarter Birmingham Bowl",
+          "bowl_name": "Ticketsmarter Birmingham Bowl"
         }
       ],
       "2022": [
@@ -33171,7 +33171,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Louisiana",
           "location": "Home",
           "team_score": 23,
@@ -33695,7 +33695,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "LSU",
           "location": "Home",
           "team_score": 38,
@@ -33705,8 +33705,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
-          "bowl_name": "Kinder's Texas Bowl"
+          "round_name": "Kinder'S Texas Bowl",
+          "bowl_name": "Kinder'S Texas Bowl"
         }
       ]
     },
@@ -34051,7 +34051,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Bowling Green",
           "location": "Away",
           "team_score": 24,
@@ -34259,11 +34259,11 @@
           "beat_expectation_by": -2.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Fresno State",
           "location": "Away",
           "team_score": 10,
@@ -34899,7 +34899,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 14,
           "opponent": "Tulsa",
           "location": "Away",
           "team_score": 17,
@@ -34909,8 +34909,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl Pres. by TaxAct",
-          "bowl_name": "Myrtle Beach Bowl Pres. by TaxAct"
+          "round_name": " By Taxact",
+          "bowl_name": " By Taxact"
         }
       ],
       "2022": [
@@ -35253,7 +35253,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "Western Kentucky",
           "location": "Home",
           "team_score": 35,
@@ -35607,7 +35607,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 15,
           "opponent": "South Florida",
           "location": "Away",
           "team_score": 24,
@@ -35617,8 +35617,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
-          "bowl_name": "StaffDNA Cure Bowl"
+          "round_name": "Staffdna Cure Bowl",
+          "bowl_name": "Staffdna Cure Bowl"
         }
       ]
     },
@@ -36133,7 +36133,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "UCF",
           "location": "Away",
           "team_score": 30,
@@ -36317,7 +36317,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Vanderbilt",
           "location": "Away",
           "team_score": 27,
@@ -36501,7 +36501,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 16,
           "opponent": "BYU",
           "location": "Away",
           "team_score": 21,
@@ -37431,11 +37431,11 @@
           "beat_expectation_by": -10.1,
           "result": "L",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": "Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Missouri",
           "location": "Away",
           "team_score": 13,
@@ -37445,8 +37445,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ]
     },
@@ -38149,7 +38149,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Boston College",
           "location": "Home",
           "team_score": 20,
@@ -38333,7 +38333,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "Utah",
           "location": "Away",
           "team_score": 22,
@@ -38343,8 +38343,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ]
     },
@@ -38583,7 +38583,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Arkansas State",
           "location": "Away",
           "team_score": 28,
@@ -38783,7 +38783,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Oklahoma",
           "location": "Away",
           "team_score": 32,
@@ -38967,7 +38967,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "North Carolina",
           "location": "Away",
           "team_score": 28,
@@ -39165,7 +39165,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Liberty",
           "location": "Home",
           "team_score": 45,
@@ -39363,7 +39363,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 16,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 21,
@@ -39373,7 +39373,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ],
@@ -39547,7 +39547,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 15,
           "opponent": "James Madison",
           "location": "Home",
           "team_score": 51,
@@ -39557,11 +39557,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 16,
           "opponent": "Texas Tech",
           "location": "Away",
           "team_score": 23,
@@ -39571,11 +39571,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 38,
+          "week": 17,
           "opponent": "Indiana",
           "location": "Away",
           "team_score": 22,
@@ -39585,7 +39585,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ]
@@ -39775,7 +39775,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "Marshall",
           "location": "Away",
           "team_score": 36,
@@ -39959,7 +39959,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Houston",
           "location": "Away",
           "team_score": 16,
@@ -40143,7 +40143,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Jacksonville State",
           "location": "Home",
           "team_score": 31,
@@ -40341,7 +40341,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "TCU",
           "location": "Away",
           "team_score": 3,
@@ -40525,7 +40525,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 15,
           "opponent": "Delaware",
           "location": "Away",
           "team_score": 13,
@@ -40725,7 +40725,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "Wyoming",
           "location": "Away",
           "team_score": 38,
@@ -42097,7 +42097,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "Syracuse",
           "location": "Away",
           "team_score": 45,
@@ -42107,8 +42107,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
-          "bowl_name": "RoofClaim.com Boca Raton Bowl"
+          "round_name": "Com Boca Raton Bowl",
+          "bowl_name": "Com Boca Raton Bowl"
         }
       ],
       "2024": [
@@ -42281,7 +42281,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "San Jos\u00e9 State",
           "location": "Away",
           "team_score": 41,
@@ -42291,8 +42291,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Hawai\u02bbi Bowl",
-          "bowl_name": "Hawai\u02bbi Bowl"
+          "round_name": "Hawai\u02bbI Bowl",
+          "bowl_name": "Hawai\u02bbI Bowl"
         }
       ],
       "2025": [
@@ -42465,7 +42465,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 15,
           "opponent": "Old Dominion",
           "location": "Home",
           "team_score": 10,
@@ -42475,8 +42475,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
-          "bowl_name": "StaffDNA Cure Bowl"
+          "round_name": "Staffdna Cure Bowl",
+          "bowl_name": "Staffdna Cure Bowl"
         }
       ]
     },
@@ -42651,7 +42651,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 14,
           "opponent": "Georgia State",
           "location": "Home",
           "team_score": 20,
@@ -42661,8 +42661,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxAct Camellia Bowl",
-          "bowl_name": "TaxAct Camellia Bowl"
+          "round_name": "Taxact Camellia Bowl",
+          "bowl_name": "Taxact Camellia Bowl"
         }
       ],
       "2022": [
@@ -43517,7 +43517,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Northern Illinois",
           "location": "Home",
           "team_score": 47,
@@ -43701,7 +43701,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "East Carolina",
           "location": "Away",
           "team_score": 29,
@@ -43711,8 +43711,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
-          "bowl_name": "TicketSmarter Birmingham Bowl"
+          "round_name": "Ticketsmarter Birmingham Bowl",
+          "bowl_name": "Ticketsmarter Birmingham Bowl"
         }
       ],
       "2023": [
@@ -43885,7 +43885,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "San Jos\u00e9 State",
           "location": "Away",
           "team_score": 24,
@@ -43895,8 +43895,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "EasyPost Hawai\u02bbi Bowl",
-          "bowl_name": "EasyPost Hawai\u02bbi Bowl"
+          "round_name": "Easypost Hawai\u02bbI Bowl",
+          "bowl_name": "Easypost Hawai\u02bbI Bowl"
         }
       ],
       "2024": [
@@ -44069,7 +44069,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "UTSA",
           "location": "Away",
           "team_score": 15,
@@ -44253,7 +44253,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Louisiana Tech",
           "location": "Away",
           "team_score": 14,
@@ -44715,11 +44715,11 @@
           "beat_expectation_by": -8.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Wyoming",
           "location": "Away",
           "team_score": 30,
@@ -44903,7 +44903,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Georgia Southern",
           "location": "Home",
           "team_score": 41,
@@ -45097,11 +45097,11 @@
           "beat_expectation_by": 35.7,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 16,
           "opponent": "Jacksonville State",
           "location": "Away",
           "team_score": 30,
@@ -45111,8 +45111,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
-          "bowl_name": "StaffDNA Cure Bowl"
+          "round_name": "Staffdna Cure Bowl",
+          "bowl_name": "Staffdna Cure Bowl"
         }
       ],
       "2025": [
@@ -45285,7 +45285,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "UNLV",
           "location": "Home",
           "team_score": 17,
@@ -45295,8 +45295,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
-          "bowl_name": "Scooter's Coffee Frisco Bowl"
+          "round_name": "Scooter'S Coffee Frisco Bowl",
+          "bowl_name": "Scooter'S Coffee Frisco Bowl"
         }
       ]
     },
@@ -45859,7 +45859,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "UCF",
           "location": "Home",
           "team_score": 30,
@@ -45869,8 +45869,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Military Bowl Presented by Peraton",
-          "bowl_name": "Military Bowl Presented by Peraton"
+          "round_name": "Military Bowl Presented By Peraton",
+          "bowl_name": "Military Bowl Presented By Peraton"
         }
       ],
       "2023": [
@@ -46043,7 +46043,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Troy",
           "location": "Home",
           "team_score": 17,
@@ -46227,7 +46227,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 15,
           "opponent": "Ole Miss",
           "location": "Away",
           "team_score": 20,
@@ -46237,8 +46237,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2025": [
@@ -46421,11 +46421,11 @@
           "beat_expectation_by": 10.1,
           "result": "W",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": "Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Arizona State",
           "location": "Home",
           "team_score": 42,
@@ -46435,8 +46435,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ]
     },
@@ -46863,7 +46863,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Minnesota",
           "location": "Away",
           "team_score": 20,
@@ -47047,7 +47047,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "South Florida",
           "location": "Home",
           "team_score": 0,
@@ -47057,8 +47057,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
-          "bowl_name": "RoofClaim.com Boca Raton Bowl"
+          "round_name": "Com Boca Raton Bowl",
+          "bowl_name": "Com Boca Raton Bowl"
         }
       ],
       "2024": [
@@ -47231,7 +47231,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Washington State",
           "location": "Away",
           "team_score": 52,
@@ -47241,8 +47241,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "DirecTV Holiday Bowl",
-          "bowl_name": "DirecTV Holiday Bowl"
+          "round_name": "Directv Holiday Bowl",
+          "bowl_name": "Directv Holiday Bowl"
         }
       ],
       "2025": [
@@ -47815,11 +47815,11 @@
           "beat_expectation_by": 11.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 16,
           "opponent": "Western Michigan",
           "location": "Away",
           "team_score": 6,
@@ -48151,7 +48151,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Tennessee",
           "location": "Home",
           "team_score": 48,
@@ -48161,8 +48161,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2022": [
@@ -48349,7 +48349,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "LSU",
           "location": "Home",
           "team_score": 7,
@@ -49045,7 +49045,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Virginia Tech",
           "location": "Away",
           "team_score": 54,
@@ -49229,7 +49229,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "NC State",
           "location": "Away",
           "team_score": 16,
@@ -49239,8 +49239,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2023": [
@@ -49413,7 +49413,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Auburn",
           "location": "Home",
           "team_score": 31,
@@ -49423,8 +49423,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2024": [
@@ -50873,7 +50873,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "South Carolina",
           "location": "Away",
           "team_score": 21,
@@ -50883,8 +50883,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2022": [
@@ -51067,11 +51067,11 @@
           "beat_expectation_by": -22.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Subway ACC Championship",
+          "round_name": "Subway Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Oregon",
           "location": "Home",
           "team_score": 27,
@@ -51255,7 +51255,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 14,
           "opponent": "West Virginia",
           "location": "Away",
           "team_score": 10,
@@ -51265,8 +51265,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2024": [
@@ -51439,7 +51439,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "UConn",
           "location": "Home",
           "team_score": 14,
@@ -51795,7 +51795,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Oregon",
           "location": "Home",
           "team_score": 47,
@@ -51979,7 +51979,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Florida State",
           "location": "Away",
           "team_score": 32,
@@ -52163,7 +52163,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Arizona",
           "location": "Home",
           "team_score": 24,
@@ -52347,7 +52347,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 17,
           "opponent": "Navy",
           "location": "Away",
           "team_score": 20,
@@ -52531,7 +52531,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Alabama",
           "location": "Home",
           "team_score": 24,
@@ -52541,7 +52541,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ]
@@ -52731,7 +52731,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Cincinnati",
           "location": "Home",
           "team_score": 27,
@@ -52741,11 +52741,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Georgia",
           "location": "Home",
           "team_score": 18,
@@ -52755,7 +52755,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -52929,7 +52929,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Kansas State",
           "location": "Away",
           "team_score": 45,
@@ -53123,11 +53123,11 @@
           "beat_expectation_by": 6.1,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": "Sec Championship",
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 20,
@@ -53137,7 +53137,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -53311,7 +53311,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 13,
@@ -53321,8 +53321,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ],
       "2025": [
@@ -53505,11 +53505,11 @@
           "beat_expectation_by": -20.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": "Sec Championship",
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Oklahoma",
           "location": "Away",
           "team_score": 34,
@@ -53519,11 +53519,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 16,
           "opponent": "Indiana",
           "location": "Away",
           "team_score": 3,
@@ -53533,7 +53533,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ]
@@ -53709,7 +53709,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Pittsburgh",
           "location": "Home",
           "team_score": 31,
@@ -53719,8 +53719,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
-          "bowl_name": "Chick-fil-A Peach Bowl"
+          "round_name": "Chick-Fil-A Peach Bowl",
+          "bowl_name": "Chick-Fil-A Peach Bowl"
         }
       ],
       "2022": [
@@ -54657,7 +54657,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "West Virginia",
           "location": "Home",
           "team_score": 18,
@@ -54841,7 +54841,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Syracuse",
           "location": "Home",
           "team_score": 28,
@@ -55025,7 +55025,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Bowling Green",
           "location": "Home",
           "team_score": 30,
@@ -55209,7 +55209,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Virginia Tech",
           "location": "Away",
           "team_score": 24,
@@ -55219,8 +55219,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2025": [
@@ -55393,7 +55393,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "New Mexico",
           "location": "Home",
           "team_score": 20,
@@ -55579,7 +55579,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Louisville",
           "location": "Away",
           "team_score": 31,
@@ -55589,8 +55589,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2022": [
@@ -55763,7 +55763,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Baylor",
           "location": "Home",
           "team_score": 30,
@@ -55947,7 +55947,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "James Madison",
           "location": "Home",
           "team_score": 31,
@@ -56721,7 +56721,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Fresno State",
           "location": "Away",
           "team_score": 24,
@@ -56731,8 +56731,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "PUBG Mobile New Mexico Bowl",
-          "bowl_name": "PUBG Mobile New Mexico Bowl"
+          "round_name": "Pubg Mobile New Mexico Bowl",
+          "bowl_name": "Pubg Mobile New Mexico Bowl"
         }
       ],
       "2022": [
@@ -57927,7 +57927,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Texas Tech",
           "location": "Away",
           "team_score": 14,
@@ -58111,7 +58111,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 16,
           "opponent": "UNLV",
           "location": "Away",
           "team_score": 13,
@@ -58121,8 +58121,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Art of Sport LA Bowl",
-          "bowl_name": "Art of Sport LA Bowl"
+          "round_name": "Art Of Sport La Bowl",
+          "bowl_name": "Art Of Sport La Bowl"
         }
       ],
       "2025": [
@@ -58295,7 +58295,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Hawai'i",
           "location": "Away",
           "team_score": 31,
@@ -58305,8 +58305,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Sheraton Hawai\u02bbi Bowl",
-          "bowl_name": "Sheraton Hawai\u02bbi Bowl"
+          "round_name": "Sheraton Hawai\u02bbI Bowl",
+          "bowl_name": "Sheraton Hawai\u02bbI Bowl"
         }
       ]
     },
@@ -58871,7 +58871,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Oklahoma",
           "location": "Away",
           "team_score": 38,
@@ -59225,7 +59225,7 @@
           "bowl_name": null
         },
         {
-          "week": 36,
+          "week": 15,
           "opponent": "SMU",
           "location": "Away",
           "team_score": 19,
@@ -59595,7 +59595,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 15,
           "opponent": "North Texas",
           "location": "Home",
           "team_score": 35,
@@ -59605,8 +59605,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Frisco Bowl Presented by SERVPRO",
-          "bowl_name": "Frisco Bowl Presented by SERVPRO"
+          "round_name": "Frisco Bowl Presented By Servpro",
+          "bowl_name": "Frisco Bowl Presented By Servpro"
         }
       ],
       "2023": [
@@ -59793,7 +59793,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 15,
           "opponent": "UCLA",
           "location": "Home",
           "team_score": 22,
@@ -59803,8 +59803,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Starco Brands LA Bowl",
-          "bowl_name": "Starco Brands LA Bowl"
+          "round_name": "Starco Brands La Bowl",
+          "bowl_name": "Starco Brands La Bowl"
         }
       ],
       "2024": [
@@ -59991,7 +59991,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 16,
           "opponent": "Penn State",
           "location": "Home",
           "team_score": 14,
@@ -60001,7 +60001,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ],
@@ -60189,7 +60189,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 15,
           "opponent": "Washington",
           "location": "Away",
           "team_score": 10,
@@ -60199,8 +60199,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Bucked Up LA Bowl",
-          "bowl_name": "Bucked Up LA Bowl"
+          "round_name": "Bucked Up La Bowl",
+          "bowl_name": "Bucked Up La Bowl"
         }
       ]
     },
@@ -60545,7 +60545,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Buffalo",
           "location": "Away",
           "team_score": 21,
@@ -60729,7 +60729,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Ohio",
           "location": "Away",
           "team_score": 21,
@@ -60913,7 +60913,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Sam Houston",
           "location": "Away",
           "team_score": 26,
@@ -61097,7 +61097,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "App State",
           "location": "Away",
           "team_score": 29,
@@ -61107,8 +61107,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "JLab Birmingham Bowl",
-          "bowl_name": "JLab Birmingham Bowl"
+          "round_name": "Jlab Birmingham Bowl",
+          "bowl_name": "Jlab Birmingham Bowl"
         }
       ]
     },
@@ -61283,7 +61283,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Minnesota",
           "location": "Away",
           "team_score": 6,
@@ -61637,7 +61637,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 14,
           "opponent": "North Carolina",
           "location": "Home",
           "team_score": 30,
@@ -61647,8 +61647,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2024": [
@@ -61821,7 +61821,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 15,
           "opponent": "Memphis",
           "location": "Home",
           "team_score": 37,
@@ -61831,8 +61831,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
-          "bowl_name": "Scooter's Coffee Frisco Bowl"
+          "round_name": "Scooter'S Coffee Frisco Bowl",
+          "bowl_name": "Scooter'S Coffee Frisco Bowl"
         }
       ],
       "2025": [
@@ -62177,7 +62177,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Utah",
           "location": "Home",
           "team_score": 48,
@@ -62187,8 +62187,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Rose Bowl Game Pres. by Capital One Venture X",
-          "bowl_name": "Rose Bowl Game Pres. by Capital One Venture X"
+          "round_name": " By Capital One Venture X",
+          "bowl_name": " By Capital One Venture X"
         }
       ],
       "2022": [
@@ -62361,7 +62361,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Georgia",
           "location": "Away",
           "team_score": 41,
@@ -62371,7 +62371,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -62545,7 +62545,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Missouri",
           "location": "Home",
           "team_score": 3,
@@ -62729,7 +62729,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 15,
           "opponent": "Tennessee",
           "location": "Home",
           "team_score": 42,
@@ -62739,11 +62739,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 16,
           "opponent": "Oregon",
           "location": "Away",
           "team_score": 41,
@@ -62753,11 +62753,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 37,
+          "week": 18,
           "opponent": "Texas",
           "location": "Away",
           "team_score": 28,
@@ -62767,11 +62767,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 38,
+          "week": 18,
           "opponent": "Notre Dame",
           "location": "Away",
           "team_score": 34,
@@ -62781,7 +62781,7 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -62969,7 +62969,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 16,
           "opponent": "Miami",
           "location": "Home",
           "team_score": 14,
@@ -62979,7 +62979,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ]
@@ -63173,7 +63173,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Toledo",
           "location": "Away",
           "team_score": 31,
@@ -63357,7 +63357,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 14,
           "opponent": "San Diego State",
           "location": "Away",
           "team_score": 25,
@@ -63367,8 +63367,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "EasyPost Hawai'i Bowl",
-          "bowl_name": "EasyPost Hawai'i Bowl"
+          "round_name": "Easypost Hawai'I Bowl",
+          "bowl_name": "Easypost Hawai'I Bowl"
         }
       ],
       "2023": [
@@ -64067,7 +64067,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "UTSA",
           "location": "Home",
           "team_score": 38,
@@ -64251,7 +64251,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 14,
           "opponent": "Middle Tennessee",
           "location": "Home",
           "team_score": 23,
@@ -64261,8 +64261,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "EasyPost Hawai'i Bowl",
-          "bowl_name": "EasyPost Hawai'i Bowl"
+          "round_name": "Easypost Hawai'I Bowl",
+          "bowl_name": "Easypost Hawai'I Bowl"
         }
       ],
       "2023": [
@@ -64775,7 +64775,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "North Texas",
           "location": "Home",
           "team_score": 47,
@@ -65195,7 +65195,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 13,
           "opponent": "Marshall",
           "location": "Home",
           "team_score": 14,
@@ -65549,7 +65549,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "North Carolina",
           "location": "Away",
           "team_score": 27,
@@ -65733,7 +65733,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 17,
           "opponent": "Army",
           "location": "Away",
           "team_score": 16,
@@ -66089,7 +66089,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Georgia Southern",
           "location": "Home",
           "team_score": 23,
@@ -66443,7 +66443,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Liberty",
           "location": "Away",
           "team_score": 26,
@@ -66453,8 +66453,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Bahamas Bowl Presented by Atlantis Resorts",
-          "bowl_name": "Bahamas Bowl Presented by Atlantis Resorts"
+          "round_name": "Bahamas Bowl Presented By Atlantis Resorts",
+          "bowl_name": "Bahamas Bowl Presented By Atlantis Resorts"
         }
       ],
       "2025": [
@@ -66983,7 +66983,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Tulane",
           "location": "Home",
           "team_score": 45,
@@ -67167,7 +67167,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 13,
           "opponent": "Louisville",
           "location": "Home",
           "team_score": 42,
@@ -67177,8 +67177,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "DIRECTV Holiday Bowl",
-          "bowl_name": "DIRECTV Holiday Bowl"
+          "round_name": "Directv Holiday Bowl",
+          "bowl_name": "Directv Holiday Bowl"
         }
       ],
       "2024": [
@@ -67351,7 +67351,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Texas A&M",
           "location": "Home",
           "team_score": 35,
@@ -67361,8 +67361,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2025": [
@@ -67535,7 +67535,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "TCU",
           "location": "Away",
           "team_score": 27,
@@ -67817,7 +67817,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "Utah State",
           "location": "Home",
           "team_score": 13,
@@ -67827,8 +67827,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
-          "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
+          "round_name": "Jimmy Kimmel La Bowl Presented By Stifel",
+          "bowl_name": "Jimmy Kimmel La Bowl Presented By Stifel"
         }
       ],
       "2022": [
@@ -68001,7 +68001,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Florida",
           "location": "Home",
           "team_score": 30,
@@ -68011,8 +68011,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2023": [
@@ -68185,7 +68185,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Notre Dame",
           "location": "Away",
           "team_score": 8,
@@ -68195,8 +68195,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2024": [
@@ -69413,7 +69413,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 17,
           "opponent": "Army",
           "location": "Away",
           "team_score": 6,
@@ -69597,7 +69597,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Coastal Carolina",
           "location": "Home",
           "team_score": 23,
@@ -70293,7 +70293,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 17,
           "opponent": "Oklahoma",
           "location": "Home",
           "team_score": 21,
@@ -70463,6 +70463,20 @@
           "bowl_name": null
         },
         {
+          "week": 15,
+          "opponent": "Cincinnati",
+          "location": "Away",
+          "team_score": 35,
+          "opponent_score": 13,
+          "actual_margin": 22.0,
+          "predicted_margin": null,
+          "beat_expectation_by": null,
+          "result": "W",
+          "is_playoff": true,
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
+        },
+        {
           "week": 16,
           "opponent": "Army",
           "location": "Home",
@@ -70475,20 +70489,6 @@
           "is_playoff": false,
           "round_name": null,
           "bowl_name": null
-        },
-        {
-          "week": 35,
-          "opponent": "Cincinnati",
-          "location": "Away",
-          "team_score": 35,
-          "opponent_score": 13,
-          "actual_margin": 22.0,
-          "predicted_margin": null,
-          "beat_expectation_by": null,
-          "result": "W",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
         }
       ]
     },
@@ -70663,7 +70663,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 14,
           "opponent": "Old Dominion",
           "location": "Home",
           "team_score": 30,
@@ -70673,8 +70673,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl Pres. by TaxAct",
-          "bowl_name": "Myrtle Beach Bowl Pres. by TaxAct"
+          "round_name": " By Taxact",
+          "bowl_name": " By Taxact"
         }
       ],
       "2022": [
@@ -71595,7 +71595,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Arizona State",
           "location": "Away",
           "team_score": 20,
@@ -71605,8 +71605,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2022": [
@@ -71779,7 +71779,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Oklahoma State",
           "location": "Away",
           "team_score": 24,
@@ -71963,7 +71963,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "LSU",
           "location": "Away",
           "team_score": 31,
@@ -71973,8 +71973,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ],
       "2024": [
@@ -72489,7 +72489,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Arkansas",
           "location": "Away",
           "team_score": 10,
@@ -72673,7 +72673,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Utah",
           "location": "Away",
           "team_score": 35,
@@ -72683,8 +72683,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Rose Bowl Game Presented by Prudential",
-          "bowl_name": "Rose Bowl Game Presented by Prudential"
+          "round_name": "Rose Bowl Game Presented By Prudential",
+          "bowl_name": "Rose Bowl Game Presented By Prudential"
         }
       ],
       "2023": [
@@ -72857,7 +72857,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Ole Miss",
           "location": "Home",
           "team_score": 25,
@@ -72867,8 +72867,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
-          "bowl_name": "Chick-fil-A Peach Bowl"
+          "round_name": "Chick-Fil-A Peach Bowl",
+          "bowl_name": "Chick-Fil-A Peach Bowl"
         }
       ],
       "2024": [
@@ -73055,7 +73055,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 16,
           "opponent": "SMU",
           "location": "Home",
           "team_score": 38,
@@ -73065,11 +73065,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 16,
           "opponent": "Boise State",
           "location": "Away",
           "team_score": 31,
@@ -73079,11 +73079,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 36,
+          "week": 18,
           "opponent": "Notre Dame",
           "location": "Home",
           "team_score": 24,
@@ -73093,7 +73093,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -73267,7 +73267,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Clemson",
           "location": "Away",
           "team_score": 22,
@@ -73771,7 +73771,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 14,
           "opponent": "Mississippi State",
           "location": "Home",
           "team_score": 10,
@@ -73781,8 +73781,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ],
       "2023": [
@@ -74125,7 +74125,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "South Carolina",
           "location": "Home",
           "team_score": 21,
@@ -74309,7 +74309,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Tennessee",
           "location": "Home",
           "team_score": 30,
@@ -74665,7 +74665,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Arkansas",
           "location": "Away",
           "team_score": 53,
@@ -74675,8 +74675,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2023": [
@@ -74849,7 +74849,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "UNLV",
           "location": "Away",
           "team_score": 49,
@@ -75375,7 +75375,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Florida",
           "location": "Away",
           "team_score": 29,
@@ -75573,7 +75573,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Duke",
           "location": "Away",
           "team_score": 13,
@@ -75583,8 +75583,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Military Bowl Presented by Peraton",
-          "bowl_name": "Military Bowl Presented by Peraton"
+          "round_name": "Military Bowl Presented By Peraton",
+          "bowl_name": "Military Bowl Presented By Peraton"
         }
       ],
       "2023": [
@@ -75757,7 +75757,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "Georgia Tech",
           "location": "Home",
           "team_score": 17,
@@ -76615,7 +76615,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Texas",
           "location": "Home",
           "team_score": 27,
@@ -76813,7 +76813,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Texas",
           "location": "Home",
           "team_score": 37,
@@ -76823,11 +76823,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 16,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 13,
@@ -76837,7 +76837,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -77011,7 +77011,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Louisville",
           "location": "Home",
           "team_score": 34,
@@ -77021,8 +77021,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2025": [
@@ -77195,7 +77195,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 15,
           "opponent": "Boise State",
           "location": "Home",
           "team_score": 38,
@@ -77205,8 +77205,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Bucked Up LA Bowl",
-          "bowl_name": "Bucked Up LA Bowl"
+          "round_name": "Bucked Up La Bowl",
+          "bowl_name": "Bucked Up La Bowl"
         }
       ]
     },
@@ -77395,7 +77395,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "Oregon State",
           "location": "Away",
           "team_score": 24,
@@ -77405,8 +77405,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
-          "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
+          "round_name": "Jimmy Kimmel La Bowl Presented By Stifel",
+          "bowl_name": "Jimmy Kimmel La Bowl Presented By Stifel"
         }
       ],
       "2022": [
@@ -77579,7 +77579,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Memphis",
           "location": "Home",
           "team_score": 10,
@@ -77589,8 +77589,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2023": [
@@ -77763,7 +77763,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Georgia State",
           "location": "Home",
           "team_score": 22,
@@ -78117,7 +78117,7 @@
           "bowl_name": null
         },
         {
-          "week": 24,
+          "week": 15,
           "opponent": "Washington State",
           "location": "Home",
           "team_score": 21,
@@ -78383,7 +78383,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Kentucky",
           "location": "Away",
           "team_score": 17,
@@ -78567,7 +78567,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Kentucky",
           "location": "Away",
           "team_score": 21,
@@ -78577,8 +78577,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2023": [
@@ -78765,7 +78765,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Tennessee",
           "location": "Away",
           "team_score": 0,
@@ -78949,7 +78949,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Missouri",
           "location": "Away",
           "team_score": 24,
@@ -78959,8 +78959,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2025": [
@@ -79133,7 +79133,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "Vanderbilt",
           "location": "Away",
           "team_score": 34,
@@ -79143,8 +79143,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ]
     },
@@ -79623,7 +79623,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 15,
           "opponent": "Louisiana",
           "location": "Home",
           "team_score": 20,
@@ -80149,7 +80149,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "SMU",
           "location": "Home",
           "team_score": 23,
@@ -80333,7 +80333,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Nebraska",
           "location": "Away",
           "team_score": 15,
@@ -81683,7 +81683,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "UTSA",
           "location": "Away",
           "team_score": 20,
@@ -81693,8 +81693,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ]
     },
@@ -81869,7 +81869,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Nevada",
           "location": "Away",
           "team_score": 52,
@@ -82393,7 +82393,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 15,
           "opponent": "South Alabama",
           "location": "Home",
           "team_score": 23,
@@ -82403,8 +82403,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
-          "bowl_name": "IS4S Salute to Veterans Bowl"
+          "round_name": "Is4S Salute To Veterans Bowl",
+          "bowl_name": "Is4S Salute To Veterans Bowl"
         }
       ],
       "2025": [
@@ -82587,11 +82587,11 @@
           "beat_expectation_by": 11.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 16,
           "opponent": "Kennesaw State",
           "location": "Home",
           "team_score": 41,
@@ -83909,7 +83909,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 15,
           "opponent": "UTSA",
           "location": "Home",
           "team_score": 18,
@@ -84107,7 +84107,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Duke",
           "location": "Away",
           "team_score": 10,
@@ -84475,7 +84475,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 16,
           "opponent": "Jacksonville State",
           "location": "Away",
           "team_score": 13,
@@ -84485,8 +84485,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
-          "bowl_name": "IS4S Salute to Veterans Bowl"
+          "round_name": "Is4S Salute To Veterans Bowl",
+          "bowl_name": "Is4S Salute To Veterans Bowl"
         }
       ]
     },
@@ -85171,7 +85171,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Georgia Tech",
           "location": "Home",
           "team_score": 35,
@@ -85355,7 +85355,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "Iowa",
           "location": "Home",
           "team_score": 27,
@@ -85365,8 +85365,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ]
     },
@@ -85663,7 +85663,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Notre Dame",
           "location": "Away",
           "team_score": 37,
@@ -85673,8 +85673,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "PlayStation Fiesta Bowl",
-          "bowl_name": "PlayStation Fiesta Bowl"
+          "round_name": "Playstation Fiesta Bowl",
+          "bowl_name": "Playstation Fiesta Bowl"
         }
       ],
       "2022": [
@@ -85847,7 +85847,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Wisconsin",
           "location": "Home",
           "team_score": 17,
@@ -86045,7 +86045,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "Texas A&M",
           "location": "Home",
           "team_score": 31,
@@ -86055,8 +86055,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
-          "bowl_name": "TaxAct Texas Bowl"
+          "round_name": "Taxact Texas Bowl",
+          "bowl_name": "Taxact Texas Bowl"
         }
       ],
       "2024": [
@@ -86569,20 +86569,6 @@
           "bowl_name": null
         },
         {
-          "week": 1,
-          "opponent": "North Texas",
-          "location": "Home",
-          "team_score": 27,
-          "opponent_score": 14,
-          "actual_margin": 13.0,
-          "predicted_margin": null,
-          "beat_expectation_by": null,
-          "result": "W",
-          "is_playoff": false,
-          "round_name": null,
-          "bowl_name": null
-        },
-        {
           "week": 2,
           "opponent": "Minnesota",
           "location": "Away",
@@ -86733,6 +86719,20 @@
           "beat_expectation_by": -4.2,
           "result": "L",
           "is_playoff": false,
+          "round_name": null,
+          "bowl_name": null
+        },
+        {
+          "week": 14,
+          "opponent": "North Texas",
+          "location": "Home",
+          "team_score": 27,
+          "opponent_score": 14,
+          "actual_margin": 13.0,
+          "predicted_margin": null,
+          "beat_expectation_by": null,
+          "result": "W",
+          "is_playoff": true,
           "round_name": null,
           "bowl_name": null
         }
@@ -86907,7 +86907,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "UAB",
           "location": "Away",
           "team_score": 20,
@@ -86917,8 +86917,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "HomeTown Lenders Bahamas Bowl",
-          "bowl_name": "HomeTown Lenders Bahamas Bowl"
+          "round_name": "Hometown Lenders Bahamas Bowl",
+          "bowl_name": "Hometown Lenders Bahamas Bowl"
         }
       ],
       "2023": [
@@ -87101,11 +87101,11 @@
           "beat_expectation_by": 15.6,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 15,
           "opponent": "App State",
           "location": "Away",
           "team_score": 9,
@@ -87299,11 +87299,11 @@
           "beat_expectation_by": -35.7,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Colorado State",
           "location": "Away",
           "team_score": 43,
@@ -87497,11 +87497,11 @@
           "beat_expectation_by": -11.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Fresno State",
           "location": "Away",
           "team_score": 3,
@@ -87861,7 +87861,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Texas Tech",
           "location": "Away",
           "team_score": 7,
@@ -87871,8 +87871,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2022": [
@@ -88045,7 +88045,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 14,
           "opponent": "Illinois",
           "location": "Away",
           "team_score": 19,
@@ -88055,8 +88055,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ],
       "2023": [
@@ -88569,7 +88569,7 @@
           "bowl_name": null
         },
         {
-          "week": 36,
+          "week": 15,
           "opponent": "Wake Forest",
           "location": "Home",
           "team_score": 29,
@@ -88579,8 +88579,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ]
     },
@@ -88911,7 +88911,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Air Force",
           "location": "Away",
           "team_score": 21,
@@ -89095,7 +89095,7 @@
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 15,
           "opponent": "Western Kentucky",
           "location": "Home",
           "team_score": 27,
@@ -89293,7 +89293,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 15,
           "opponent": "Oregon",
           "location": "Away",
           "team_score": 34,
@@ -89303,7 +89303,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ]
@@ -89723,7 +89723,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Liberty",
           "location": "Away",
           "team_score": 20,
@@ -89733,8 +89733,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "LendingTree Bowl",
-          "bowl_name": "LendingTree Bowl"
+          "round_name": "Lendingtree Bowl",
+          "bowl_name": "Lendingtree Bowl"
         }
       ],
       "2022": [
@@ -89907,7 +89907,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "San Jos\u00e9 State",
           "location": "Away",
           "team_score": 41,
@@ -90091,7 +90091,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "South Alabama",
           "location": "Home",
           "team_score": 10,
@@ -91231,7 +91231,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "Oklahoma State",
           "location": "Away",
           "team_score": 23,
@@ -91241,8 +91241,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
-          "bowl_name": "TaxAct Texas Bowl"
+          "round_name": "Taxact Texas Bowl",
+          "bowl_name": "Taxact Texas Bowl"
         }
       ],
       "2024": [
@@ -91415,7 +91415,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "USC",
           "location": "Away",
           "team_score": 31,
@@ -91425,8 +91425,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2025": [
@@ -91599,7 +91599,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Miami",
           "location": "Home",
           "team_score": 3,
@@ -91609,7 +91609,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ]
@@ -91785,7 +91785,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Wisconsin",
           "location": "Home",
           "team_score": 13,
@@ -91795,8 +91795,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2022": [
@@ -92323,7 +92323,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 16,
           "opponent": "Texas",
           "location": "Home",
           "team_score": 31,
@@ -92333,7 +92333,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ],
@@ -92507,7 +92507,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Duke",
           "location": "Away",
           "team_score": 39,
@@ -92517,8 +92517,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ]
     },
@@ -93373,7 +93373,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Minnesota",
           "location": "Away",
           "team_score": 17,
@@ -93609,7 +93609,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 16,
           "opponent": "Army",
           "location": "Away",
           "team_score": 22,
@@ -93793,7 +93793,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Wake Forest",
           "location": "Home",
           "team_score": 17,
@@ -93977,7 +93977,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Ohio State",
           "location": "Away",
           "team_score": 14,
@@ -94161,7 +94161,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Iowa",
           "location": "Home",
           "team_score": 27,
@@ -94171,8 +94171,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2025": [
@@ -94345,7 +94345,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Virginia",
           "location": "Home",
           "team_score": 7,
@@ -94355,8 +94355,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ]
     },
@@ -94531,7 +94531,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Penn State",
           "location": "Home",
           "team_score": 24,
@@ -94715,7 +94715,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Kansas",
           "location": "Home",
           "team_score": 55,
@@ -94725,8 +94725,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2023": [
@@ -95069,7 +95069,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Texas Tech",
           "location": "Home",
           "team_score": 39,
@@ -95079,8 +95079,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ],
       "2025": [
@@ -95271,20 +95271,6 @@
           "bowl_name": null
         },
         {
-          "week": 1,
-          "opponent": "Miami (OH)",
-          "location": "Away",
-          "team_score": 14,
-          "opponent_score": 27,
-          "actual_margin": -13.0,
-          "predicted_margin": null,
-          "beat_expectation_by": null,
-          "result": "L",
-          "is_playoff": false,
-          "round_name": null,
-          "bowl_name": null
-        },
-        {
           "week": 2,
           "opponent": "SMU",
           "location": "Away",
@@ -95435,6 +95421,20 @@
           "beat_expectation_by": 30.7,
           "result": "W",
           "is_playoff": false,
+          "round_name": null,
+          "bowl_name": null
+        },
+        {
+          "week": 14,
+          "opponent": "Miami (OH)",
+          "location": "Away",
+          "team_score": 14,
+          "opponent_score": 27,
+          "actual_margin": -13.0,
+          "predicted_margin": null,
+          "beat_expectation_by": null,
+          "result": "L",
+          "is_playoff": true,
           "round_name": null,
           "bowl_name": null
         }
@@ -95619,11 +95619,11 @@
           "beat_expectation_by": -11.1,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 15,
           "opponent": "Boise State",
           "location": "Away",
           "team_score": 32,
@@ -95633,8 +95633,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Frisco Bowl Presented by SERVPRO",
-          "bowl_name": "Frisco Bowl Presented by SERVPRO"
+          "round_name": "Frisco Bowl Presented By Servpro",
+          "bowl_name": "Frisco Bowl Presented By Servpro"
         }
       ],
       "2023": [
@@ -95977,7 +95977,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 15,
           "opponent": "Texas State",
           "location": "Away",
           "team_score": 28,
@@ -95987,8 +95987,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2025": [
@@ -96175,7 +96175,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "San Diego State",
           "location": "Away",
           "team_score": 49,
@@ -96531,7 +96531,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Oklahoma",
           "location": "Home",
           "team_score": 35,
@@ -96725,11 +96725,11 @@
           "beat_expectation_by": 5.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": "Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Georgia",
           "location": "Home",
           "team_score": 3,
@@ -97543,7 +97543,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Georgia",
           "location": "Home",
           "team_score": 11,
@@ -97553,7 +97553,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -97741,7 +97741,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "TCU",
           "location": "Home",
           "team_score": 45,
@@ -97751,7 +97751,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -97939,7 +97939,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Alabama",
           "location": "Home",
           "team_score": 27,
@@ -97949,11 +97949,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 16,
           "opponent": "Washington",
           "location": "Home",
           "team_score": 34,
@@ -97963,7 +97963,7 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -98137,7 +98137,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Alabama",
           "location": "Home",
           "team_score": 19,
@@ -98147,8 +98147,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
-          "bowl_name": "ReliaQuest Bowl"
+          "round_name": "Reliaquest Bowl",
+          "bowl_name": "Reliaquest Bowl"
         }
       ],
       "2025": [
@@ -98321,7 +98321,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "Texas",
           "location": "Away",
           "team_score": 27,
@@ -98521,7 +98521,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 15,
           "opponent": "App State",
           "location": "Away",
           "team_score": 59,
@@ -98531,8 +98531,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
-          "bowl_name": "RoofClaim.com Boca Raton Bowl"
+          "round_name": "Com Boca Raton Bowl",
+          "bowl_name": "Com Boca Raton Bowl"
         }
       ],
       "2022": [
@@ -98719,7 +98719,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "South Alabama",
           "location": "Away",
           "team_score": 44,
@@ -98903,7 +98903,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "Old Dominion",
           "location": "Away",
           "team_score": 38,
@@ -99097,11 +99097,11 @@
           "beat_expectation_by": -30.6,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 19,
+          "week": 15,
           "opponent": "James Madison",
           "location": "Away",
           "team_score": 17,
@@ -99285,7 +99285,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "Southern Miss",
           "location": "Away",
           "team_score": 27,
@@ -99567,7 +99567,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Middle Tennessee",
           "location": "Home",
           "team_score": 24,
@@ -99761,11 +99761,11 @@
           "beat_expectation_by": 8.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Liberty",
           "location": "Home",
           "team_score": 21,
@@ -99775,8 +99775,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
-          "bowl_name": "RoofClaim.com Boca Raton Bowl"
+          "round_name": "Com Boca Raton Bowl",
+          "bowl_name": "Com Boca Raton Bowl"
         }
       ],
       "2023": [
@@ -99959,11 +99959,11 @@
           "beat_expectation_by": -15.6,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": "Mac Championship",
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Wyoming",
           "location": "Away",
           "team_score": 15,
@@ -100147,7 +100147,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 15,
           "opponent": "Pittsburgh",
           "location": "Home",
           "team_score": 48,
@@ -100157,8 +100157,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
-          "bowl_name": "GameAbove Sports Bowl"
+          "round_name": "Gameabove Sports Bowl",
+          "bowl_name": "Gameabove Sports Bowl"
         }
       ],
       "2025": [
@@ -100331,7 +100331,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "Louisville",
           "location": "Away",
           "team_score": 22,
@@ -100341,8 +100341,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Bush's Boca Raton Bowl",
-          "bowl_name": "Bush's Boca Raton Bowl"
+          "round_name": "Bush'S Boca Raton Bowl",
+          "bowl_name": "Bush'S Boca Raton Bowl"
         }
       ]
     },
@@ -100703,7 +100703,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Georgia Southern",
           "location": "Home",
           "team_score": 31,
@@ -101333,7 +101333,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 14,
           "opponent": "Ole Miss",
           "location": "Away",
           "team_score": 21,
@@ -101517,7 +101517,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Air Force",
           "location": "Away",
           "team_score": 15,
@@ -101871,7 +101871,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "LSU",
           "location": "Away",
           "team_score": 31,
@@ -101881,8 +101881,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
-          "bowl_name": "Kinder's Texas Bowl"
+          "round_name": "Kinder'S Texas Bowl",
+          "bowl_name": "Kinder'S Texas Bowl"
         }
       ],
       "2025": [
@@ -102545,7 +102545,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "Western Kentucky",
           "location": "Home",
           "team_score": 23,
@@ -102729,7 +102729,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "Eastern Michigan",
           "location": "Away",
           "team_score": 59,
@@ -102913,7 +102913,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 15,
           "opponent": "Western Michigan",
           "location": "Away",
           "team_score": 30,
@@ -102923,8 +102923,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
-          "bowl_name": "IS4S Salute to Veterans Bowl"
+          "round_name": "Is4S Salute To Veterans Bowl",
+          "bowl_name": "Is4S Salute To Veterans Bowl"
         }
       ],
       "2025": [
@@ -103269,7 +103269,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "Kent State",
           "location": "Home",
           "team_score": 52,
@@ -103453,7 +103453,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Ohio",
           "location": "Home",
           "team_score": 27,
@@ -103637,7 +103637,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Toledo",
           "location": "Home",
           "team_score": 16,
@@ -104163,7 +104163,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Air Force",
           "location": "Home",
           "team_score": 28,
@@ -104173,8 +104173,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2022": [
@@ -104347,7 +104347,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Cincinnati",
           "location": "Home",
           "team_score": 24,
@@ -104531,6 +104531,20 @@
           "bowl_name": null
         },
         {
+          "week": 13,
+          "opponent": "USC",
+          "location": "Away",
+          "team_score": 28,
+          "opponent_score": 42,
+          "actual_margin": -14.0,
+          "predicted_margin": null,
+          "beat_expectation_by": null,
+          "result": "L",
+          "is_playoff": true,
+          "round_name": "Directv Holiday Bowl",
+          "bowl_name": "Directv Holiday Bowl"
+        },
+        {
           "week": 14,
           "opponent": "Florida State",
           "location": "Away",
@@ -104541,22 +104555,8 @@
           "beat_expectation_by": -5.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": "Acc Championship",
           "bowl_name": null
-        },
-        {
-          "week": 25,
-          "opponent": "USC",
-          "location": "Away",
-          "team_score": 28,
-          "opponent_score": 42,
-          "actual_margin": -14.0,
-          "predicted_margin": null,
-          "beat_expectation_by": null,
-          "result": "L",
-          "is_playoff": true,
-          "round_name": "DIRECTV Holiday Bowl",
-          "bowl_name": "DIRECTV Holiday Bowl"
         }
       ],
       "2024": [
@@ -104729,7 +104729,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Washington",
           "location": "Away",
           "team_score": 35,
@@ -104739,8 +104739,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2025": [
@@ -104913,7 +104913,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "Toledo",
           "location": "Home",
           "team_score": 27,
@@ -104923,8 +104923,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Bush's Boca Raton Bowl",
-          "bowl_name": "Bush's Boca Raton Bowl"
+          "round_name": "Bush'S Boca Raton Bowl",
+          "bowl_name": "Bush'S Boca Raton Bowl"
         }
       ]
     },
@@ -105283,7 +105283,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 51,
@@ -105293,11 +105293,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Georgia",
           "location": "Away",
           "team_score": 7,
@@ -105307,7 +105307,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -105651,7 +105651,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Louisiana",
           "location": "Home",
           "team_score": 34,
@@ -105835,7 +105835,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "USC",
           "location": "Home",
           "team_score": 30,
@@ -106035,7 +106035,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Alabama",
           "location": "Away",
           "team_score": 6,
@@ -106045,7 +106045,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -106219,7 +106219,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Louisville",
           "location": "Away",
           "team_score": 7,
@@ -106743,7 +106743,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Navy",
           "location": "Home",
           "team_score": 13,
@@ -106753,8 +106753,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
-          "bowl_name": "AutoZone Liberty Bowl"
+          "round_name": "Autozone Liberty Bowl",
+          "bowl_name": "Autozone Liberty Bowl"
         }
       ]
     },
@@ -107099,7 +107099,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Southern Miss",
           "location": "Away",
           "team_score": 24,
@@ -107109,8 +107109,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "LendingTree Bowl",
-          "bowl_name": "LendingTree Bowl"
+          "round_name": "Lendingtree Bowl",
+          "bowl_name": "Lendingtree Bowl"
         }
       ],
       "2023": [
@@ -107283,7 +107283,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 14,
           "opponent": "Texas State",
           "location": "Home",
           "team_score": 21,
@@ -107293,8 +107293,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
-          "bowl_name": "SERVPRO First Responder Bowl"
+          "round_name": "Servpro First Responder Bowl",
+          "bowl_name": "Servpro First Responder Bowl"
         }
       ],
       "2024": [
@@ -107637,7 +107637,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Texas State",
           "location": "Away",
           "team_score": 10,
@@ -107823,7 +107823,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Western Michigan",
           "location": "Home",
           "team_score": 24,
@@ -110187,7 +110187,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 14,
           "opponent": "Northern Illinois",
           "location": "Away",
           "team_score": 19,
@@ -110371,7 +110371,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Bowling Green",
           "location": "Away",
           "team_score": 38,
@@ -110555,7 +110555,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Missouri State",
           "location": "Home",
           "team_score": 34,
@@ -110741,7 +110741,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Iowa",
           "location": "Home",
           "team_score": 20,
@@ -110925,7 +110925,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Iowa",
           "location": "Home",
           "team_score": 0,
@@ -110935,8 +110935,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2023": [
@@ -111109,7 +111109,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Clemson",
           "location": "Home",
           "team_score": 35,
@@ -111119,8 +111119,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2024": [
@@ -112283,7 +112283,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "BYU",
           "location": "Home",
           "team_score": 14,
@@ -112809,7 +112809,7 @@
           "bowl_name": null
         },
         {
-          "week": 18,
+          "week": 14,
           "opponent": "BYU",
           "location": "Away",
           "team_score": 23,
@@ -113007,7 +113007,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Boston College",
           "location": "Away",
           "team_score": 14,
@@ -113201,11 +113201,11 @@
           "beat_expectation_by": -5.4,
           "result": "L",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": "Acc Championship",
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 16,
           "opponent": "Penn State",
           "location": "Away",
           "team_score": 10,
@@ -113215,7 +113215,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ],
@@ -113389,7 +113389,7 @@
           "bowl_name": null
         },
         {
-          "week": 36,
+          "week": 15,
           "opponent": "Arizona",
           "location": "Home",
           "team_score": 24,
@@ -113817,7 +113817,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Purdue",
           "location": "Away",
           "team_score": 45,
@@ -113827,8 +113827,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2022": [
@@ -114001,7 +114001,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Clemson",
           "location": "Away",
           "team_score": 31,
@@ -114185,7 +114185,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Iowa",
           "location": "Home",
           "team_score": 35,
@@ -114369,7 +114369,7 @@
           "bowl_name": null
         },
         {
-          "week": 23,
+          "week": 15,
           "opponent": "Ohio State",
           "location": "Away",
           "team_score": 17,
@@ -114379,7 +114379,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ],
@@ -114553,7 +114553,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Illinois",
           "location": "Away",
           "team_score": 28,
@@ -114739,7 +114739,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "BYU",
           "location": "Away",
           "team_score": 31,
@@ -114923,7 +114923,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 14,
           "opponent": "Miami (OH)",
           "location": "Home",
           "team_score": 24,
@@ -114933,8 +114933,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "HomeTown Lenders Bahamas Bowl",
-          "bowl_name": "HomeTown Lenders Bahamas Bowl"
+          "round_name": "Hometown Lenders Bahamas Bowl",
+          "bowl_name": "Hometown Lenders Bahamas Bowl"
         }
       ],
       "2023": [
@@ -116609,7 +116609,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 14,
           "opponent": "Baylor",
           "location": "Home",
           "team_score": 7,
@@ -116793,7 +116793,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "Texas Tech",
           "location": "Home",
           "team_score": 25,
@@ -116803,8 +116803,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
-          "bowl_name": "TaxAct Texas Bowl"
+          "round_name": "Taxact Texas Bowl",
+          "bowl_name": "Taxact Texas Bowl"
         }
       ],
       "2023": [
@@ -116977,7 +116977,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Penn State",
           "location": "Away",
           "team_score": 38,
@@ -116987,8 +116987,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
-          "bowl_name": "Chick-fil-A Peach Bowl"
+          "round_name": "Chick-Fil-A Peach Bowl",
+          "bowl_name": "Chick-Fil-A Peach Bowl"
         }
       ],
       "2024": [
@@ -117161,7 +117161,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 15,
           "opponent": "Duke",
           "location": "Home",
           "team_score": 52,
@@ -117171,8 +117171,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2025": [
@@ -117345,7 +117345,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Tulane",
           "location": "Home",
           "team_score": 41,
@@ -117355,11 +117355,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 16,
           "opponent": "Georgia",
           "location": "Away",
           "team_score": 39,
@@ -117369,11 +117369,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 37,
+          "week": 17,
           "opponent": "Miami",
           "location": "Home",
           "team_score": 27,
@@ -117383,7 +117383,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ]
@@ -117737,7 +117737,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 14,
           "opponent": "Eastern Michigan",
           "location": "Home",
           "team_score": 56,
@@ -117747,8 +117747,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "LendingTree Bowl",
-          "bowl_name": "LendingTree Bowl"
+          "round_name": "Lendingtree Bowl",
+          "bowl_name": "Lendingtree Bowl"
         }
       ],
       "2022": [
@@ -117921,7 +117921,7 @@
           "bowl_name": null
         },
         {
-          "week": 21,
+          "week": 15,
           "opponent": "Toledo",
           "location": "Away",
           "team_score": 19,
@@ -117931,8 +117931,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
-          "bowl_name": "RoofClaim.com Boca Raton Bowl"
+          "round_name": "Com Boca Raton Bowl",
+          "bowl_name": "Com Boca Raton Bowl"
         }
       ],
       "2023": [
@@ -118115,11 +118115,11 @@
           "beat_expectation_by": 2.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": "Conference Usa Championship",
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Oregon",
           "location": "Away",
           "team_score": 6,
@@ -118289,7 +118289,7 @@
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 15,
           "opponent": "Buffalo",
           "location": "Home",
           "team_score": 7,
@@ -118299,8 +118299,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Bahamas Bowl Presented by Atlantis Resorts",
-          "bowl_name": "Bahamas Bowl Presented by Atlantis Resorts"
+          "round_name": "Bahamas Bowl Presented By Atlantis Resorts",
+          "bowl_name": "Bahamas Bowl Presented By Atlantis Resorts"
         }
       ],
       "2025": [
@@ -118645,7 +118645,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Houston",
           "location": "Home",
           "team_score": 13,
@@ -118655,8 +118655,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
-          "bowl_name": "TicketSmarter Birmingham Bowl"
+          "round_name": "Ticketsmarter Birmingham Bowl",
+          "bowl_name": "Ticketsmarter Birmingham Bowl"
         }
       ],
       "2022": [
@@ -118999,7 +118999,7 @@
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 14,
           "opponent": "Maryland",
           "location": "Away",
           "team_score": 13,
@@ -119009,8 +119009,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
-          "bowl_name": "TransPerfect Music City Bowl"
+          "round_name": "Transperfect Music City Bowl",
+          "bowl_name": "Transperfect Music City Bowl"
         }
       ],
       "2024": [
@@ -119539,7 +119539,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Ohio State",
           "location": "Away",
           "team_score": 45,
@@ -119549,8 +119549,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Rose Bowl Game Pres. by Capital One Venture X",
-          "bowl_name": "Rose Bowl Game Pres. by Capital One Venture X"
+          "round_name": " By Capital One Venture X",
+          "bowl_name": " By Capital One Venture X"
         }
       ],
       "2022": [
@@ -119737,7 +119737,7 @@
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 15,
           "opponent": "Penn State",
           "location": "Home",
           "team_score": 21,
@@ -119747,8 +119747,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Rose Bowl Game Presented by Prudential",
-          "bowl_name": "Rose Bowl Game Presented by Prudential"
+          "round_name": "Rose Bowl Game Presented By Prudential",
+          "bowl_name": "Rose Bowl Game Presented By Prudential"
         }
       ],
       "2023": [
@@ -119921,7 +119921,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "Northwestern",
           "location": "Away",
           "team_score": 7,
@@ -119931,8 +119931,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ],
       "2024": [
@@ -120275,7 +120275,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "Nebraska",
           "location": "Home",
           "team_score": 44,
@@ -120285,8 +120285,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
-          "bowl_name": "SRS Distribution Las Vegas Bowl"
+          "round_name": "Srs Distribution Las Vegas Bowl",
+          "bowl_name": "Srs Distribution Las Vegas Bowl"
         }
       ]
     },
@@ -120543,7 +120543,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 14,
           "opponent": "Oklahoma State",
           "location": "Home",
           "team_score": 35,
@@ -120553,8 +120553,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "PlayStation Fiesta Bowl",
-          "bowl_name": "PlayStation Fiesta Bowl"
+          "round_name": "Playstation Fiesta Bowl",
+          "bowl_name": "Playstation Fiesta Bowl"
         }
       ],
       "2022": [
@@ -120727,7 +120727,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "South Carolina",
           "location": "Away",
           "team_score": 45,
@@ -120737,8 +120737,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2023": [
@@ -120911,7 +120911,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Oregon State",
           "location": "Home",
           "team_score": 40,
@@ -120921,8 +120921,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2024": [
@@ -121095,7 +121095,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Indiana",
           "location": "Home",
           "team_score": 27,
@@ -121105,11 +121105,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Georgia",
           "location": "Away",
           "team_score": 23,
@@ -121119,11 +121119,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 36,
+          "week": 18,
           "opponent": "Penn State",
           "location": "Away",
           "team_score": 27,
@@ -121133,11 +121133,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 38,
+          "week": 18,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 23,
@@ -121147,7 +121147,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -121507,7 +121507,7 @@
           "bowl_name": null
         },
         {
-          "week": 30,
+          "week": 15,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 34,
@@ -121517,11 +121517,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Alabama",
           "location": "Away",
           "team_score": 33,
@@ -121531,7 +121531,7 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -121715,11 +121715,11 @@
           "beat_expectation_by": 4.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship Game",
+          "round_name": "Sec Championship Game",
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 42,
@@ -121729,11 +121729,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "TCU",
           "location": "Home",
           "team_score": 65,
@@ -121743,7 +121743,7 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ],
@@ -121927,11 +121927,11 @@
           "beat_expectation_by": -6.1,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": "Sec Championship",
           "bowl_name": null
         },
         {
-          "week": 27,
+          "week": 15,
           "opponent": "Florida State",
           "location": "Away",
           "team_score": 63,
@@ -122125,11 +122125,11 @@
           "beat_expectation_by": 6.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": "Sec Championship",
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 16,
           "opponent": "Notre Dame",
           "location": "Home",
           "team_score": 10,
@@ -122139,7 +122139,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ],
@@ -122323,11 +122323,11 @@
           "beat_expectation_by": 20.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": "Sec Championship",
           "bowl_name": null
         },
         {
-          "week": 35,
+          "week": 16,
           "opponent": "Ole Miss",
           "location": "Home",
           "team_score": 34,
@@ -122337,7 +122337,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         }
       ]
@@ -123119,7 +123119,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Notre Dame",
           "location": "Away",
           "team_score": 17,
@@ -123129,7 +123129,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         }
       ],
@@ -123317,7 +123317,7 @@
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 16,
           "opponent": "Alabama",
           "location": "Home",
           "team_score": 38,
@@ -123327,11 +123327,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 38,
+          "week": 17,
           "opponent": "Oregon",
           "location": "Home",
           "team_score": 56,
@@ -123341,11 +123341,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 39,
+          "week": 18,
           "opponent": "Miami",
           "location": "Home",
           "team_score": 27,
@@ -123355,7 +123355,7 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ]
@@ -123701,7 +123701,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Pittsburgh",
           "location": "Home",
           "team_score": 35,
@@ -123711,8 +123711,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
-          "bowl_name": "Tony the Tiger Sun Bowl"
+          "round_name": "Tony The Tiger Sun Bowl",
+          "bowl_name": "Tony The Tiger Sun Bowl"
         }
       ],
       "2023": [
@@ -123885,7 +123885,7 @@
           "bowl_name": null
         },
         {
-          "week": 17,
+          "week": 15,
           "opponent": "Boise State",
           "location": "Away",
           "team_score": 35,
@@ -123895,8 +123895,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Starco Brands LA Bowl",
-          "bowl_name": "Starco Brands LA Bowl"
+          "round_name": "Starco Brands La Bowl",
+          "bowl_name": "Starco Brands La Bowl"
         }
       ],
       "2024": [
@@ -125433,7 +125433,7 @@
           "bowl_name": null
         },
         {
-          "week": 26,
+          "week": 14,
           "opponent": "Coastal Carolina",
           "location": "Home",
           "team_score": 53,
@@ -125443,8 +125443,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
-          "bowl_name": "TicketSmarter Birmingham Bowl"
+          "round_name": "Ticketsmarter Birmingham Bowl",
+          "bowl_name": "Ticketsmarter Birmingham Bowl"
         }
       ],
       "2023": [
@@ -125787,7 +125787,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "NC State",
           "location": "Away",
           "team_score": 26,
@@ -125971,7 +125971,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Pittsburgh",
           "location": "Home",
           "team_score": 23,
@@ -126497,7 +126497,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 14,
           "opponent": "Rutgers",
           "location": "Home",
           "team_score": 24,
@@ -126681,7 +126681,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 15,
           "opponent": "Iowa State",
           "location": "Home",
           "team_score": 41,
@@ -126865,7 +126865,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 15,
           "opponent": "Texas A&M",
           "location": "Away",
           "team_score": 10,
@@ -126875,11 +126875,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 34,
+          "week": 16,
           "opponent": "Ohio State",
           "location": "Away",
           "team_score": 24,
@@ -126889,11 +126889,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 37,
+          "week": 17,
           "opponent": "Ole Miss",
           "location": "Away",
           "team_score": 31,
@@ -126903,11 +126903,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         },
         {
-          "week": 39,
+          "week": 18,
           "opponent": "Indiana",
           "location": "Away",
           "team_score": 21,
@@ -126917,7 +126917,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "championship",
+          "round_name": "Championship",
           "bowl_name": null
         }
       ]
@@ -127093,7 +127093,7 @@
           "bowl_name": null
         },
         {
-          "week": 28,
+          "week": 14,
           "opponent": "North Carolina",
           "location": "Home",
           "team_score": 38,
@@ -127103,8 +127103,8 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
-          "bowl_name": "Duke's Mayo Bowl"
+          "round_name": "Duke'S Mayo Bowl",
+          "bowl_name": "Duke'S Mayo Bowl"
         }
       ],
       "2022": [
@@ -127277,7 +127277,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Notre Dame",
           "location": "Home",
           "team_score": 38,
@@ -127287,8 +127287,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
-          "bowl_name": "TaxSlayer Gator Bowl"
+          "round_name": "Taxslayer Gator Bowl",
+          "bowl_name": "Taxslayer Gator Bowl"
         }
       ],
       "2023": [
@@ -127631,7 +127631,7 @@
           "bowl_name": null
         },
         {
-          "week": 31,
+          "week": 15,
           "opponent": "Illinois",
           "location": "Away",
           "team_score": 17,
@@ -128143,7 +128143,7 @@
           "bowl_name": null
         },
         {
-          "week": 20,
+          "week": 14,
           "opponent": "Eastern Michigan",
           "location": "Home",
           "team_score": 27,
@@ -128327,7 +128327,7 @@
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 14,
           "opponent": "Coastal Carolina",
           "location": "Home",
           "team_score": 14,
@@ -128337,8 +128337,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "EasyPost Hawai\u02bbi Bowl",
-          "bowl_name": "EasyPost Hawai\u02bbi Bowl"
+          "round_name": "Easypost Hawai\u02bbI Bowl",
+          "bowl_name": "Easypost Hawai\u02bbI Bowl"
         }
       ],
       "2024": [
@@ -128511,7 +128511,7 @@
           "bowl_name": null
         },
         {
-          "week": 25,
+          "week": 15,
           "opponent": "South Florida",
           "location": "Home",
           "team_score": 39,
@@ -128521,8 +128521,8 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "Hawai\u02bbi Bowl",
-          "bowl_name": "Hawai\u02bbi Bowl"
+          "round_name": "Hawai\u02bbI Bowl",
+          "bowl_name": "Hawai\u02bbI Bowl"
         }
       ],
       "2025": [
@@ -129037,7 +129037,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 14,
           "opponent": "Washington",
           "location": "Away",
           "team_score": 20,
@@ -129235,7 +129235,7 @@
           "bowl_name": null
         },
         {
-          "week": 29,
+          "week": 15,
           "opponent": "Washington",
           "location": "Away",
           "team_score": 31,
@@ -129245,7 +129245,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -129429,11 +129429,11 @@
           "beat_expectation_by": -6.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": "Sec Championship",
           "bowl_name": null
         },
         {
-          "week": 22,
+          "week": 16,
           "opponent": "Clemson",
           "location": "Home",
           "team_score": 38,
@@ -129443,11 +129443,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "first_round",
+          "round_name": "First Round",
           "bowl_name": null
         },
         {
-          "week": 32,
+          "week": 16,
           "opponent": "Arizona State",
           "location": "Away",
           "team_score": 39,
@@ -129457,11 +129457,11 @@
           "beat_expectation_by": null,
           "result": "W",
           "is_playoff": true,
-          "round_name": "quarterfinal",
+          "round_name": "Quarterfinal",
           "bowl_name": null
         },
         {
-          "week": 37,
+          "week": 18,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 14,
@@ -129471,7 +129471,7 @@
           "beat_expectation_by": null,
           "result": "L",
           "is_playoff": true,
-          "round_name": "semifinal",
+          "round_name": "Semifinal",
           "bowl_name": null
         }
       ],
@@ -129645,7 +129645,7 @@
           "bowl_name": null
         },
         {
-          "week": 33,
+          "week": 15,
           "opponent": "Michigan",
           "location": "Home",
           "team_score": 41,
