@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T14:56:25.694751+00:00",
+  "generated_at": "2026-08-27T16:43:33.951941+00:00",
   "years": [
     2021,
     2022,
@@ -794,8 +794,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Snoop Dogg Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Snoop Dogg Arizona Bowl"
         }
       ],
@@ -2080,8 +2080,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -2264,8 +2264,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -2448,8 +2448,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -2633,7 +2633,7 @@
           "beat_expectation_by": -36.4,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -2646,8 +2646,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Isleta New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Isleta New Mexico Bowl"
         }
       ],
@@ -2830,8 +2830,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "68 Ventures Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "68 Ventures Bowl"
         }
       ]
@@ -3187,7 +3187,7 @@
           "beat_expectation_by": 11.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -3200,8 +3200,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Duluth Trading Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duluth Trading Cure Bowl"
         }
       ],
@@ -3385,7 +3385,7 @@
           "beat_expectation_by": 21.8,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -3398,8 +3398,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "76 Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "76 Birmingham Bowl"
         }
       ],
@@ -3753,7 +3753,7 @@
           "beat_expectation_by": 6.6,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -3766,8 +3766,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "IS4S Salute to Veterans Bowl"
         }
       ]
@@ -4030,8 +4030,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -4214,8 +4214,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ],
@@ -4738,8 +4738,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ]
@@ -5094,8 +5094,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Quick Lane Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Quick Lane Bowl"
         }
       ],
@@ -5278,8 +5278,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Quick Lane Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Quick Lane Bowl"
         }
       ],
@@ -5462,8 +5462,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "68 Ventures Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "68 Ventures Bowl"
         }
       ],
@@ -6084,8 +6084,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "HomeTown Lenders Bahamas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "HomeTown Lenders Bahamas Bowl"
         }
       ],
@@ -6269,7 +6269,7 @@
           "beat_expectation_by": 15.6,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -6282,8 +6282,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Avocados From Mexico Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Avocados From Mexico Cure Bowl"
         }
       ],
@@ -6467,7 +6467,7 @@
           "beat_expectation_by": -35.7,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -6480,8 +6480,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Snoop Dogg Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Snoop Dogg Arizona Bowl"
         }
       ],
@@ -6665,7 +6665,7 @@
           "beat_expectation_by": -11.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -6678,8 +6678,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Snoop Dogg Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Snoop Dogg Arizona Bowl"
         }
       ]
@@ -7517,7 +7517,7 @@
           "beat_expectation_by": -10.2,
           "result": "L",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -7530,8 +7530,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ]
@@ -8234,8 +8234,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -8588,8 +8588,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Trust & Will Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Trust & Will Holiday Bowl"
         }
       ]
@@ -8788,8 +8788,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tailgreeter Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tailgreeter Cure Bowl"
         }
       ],
@@ -9142,8 +9142,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Camellia Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Camellia Bowl"
         }
       ],
@@ -9326,8 +9326,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -9916,8 +9916,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -10354,8 +10354,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -10538,8 +10538,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -10722,8 +10722,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -12966,8 +12966,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -13150,8 +13150,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ]
@@ -13524,8 +13524,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ],
@@ -13878,8 +13878,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ],
@@ -14062,8 +14062,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ]
@@ -14248,8 +14248,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -14433,7 +14433,7 @@
           "beat_expectation_by": -13.7,
           "result": "L",
           "is_playoff": false,
-          "round_name": "American Athletic Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -14446,8 +14446,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Military Bowl Presented by Peraton",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Military Bowl Presented by Peraton"
         }
       ],
@@ -14630,8 +14630,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -15170,8 +15170,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
         }
       ],
@@ -15354,8 +15354,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -15538,8 +15538,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -15892,8 +15892,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ]
@@ -16078,8 +16078,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TicketSmarter Birmingham Bowl"
         }
       ],
@@ -16432,8 +16432,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -17906,8 +17906,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -18090,8 +18090,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Cheez-It Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Bowl"
         }
       ],
@@ -18274,8 +18274,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -18458,8 +18458,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -18998,8 +18998,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Quick Lane Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Quick Lane Bowl"
         }
       ],
@@ -19197,7 +19197,7 @@
           "beat_expectation_by": -3.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -19210,8 +19210,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Isleta New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Isleta New Mexico Bowl"
         }
       ],
@@ -19846,8 +19846,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -20030,8 +20030,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Capital One Orange Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Capital One Orange Bowl"
         }
       ],
@@ -20214,8 +20214,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ],
@@ -20582,8 +20582,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Liberty Mutual Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Liberty Mutual Music City Bowl"
         }
       ]
@@ -20768,8 +20768,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Cheez-It Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Bowl"
         }
       ],
@@ -20953,7 +20953,7 @@
           "beat_expectation_by": 22.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Subway ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -20966,8 +20966,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Capital One Orange Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Capital One Orange Bowl"
         }
       ],
@@ -21150,8 +21150,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -21335,7 +21335,7 @@
           "beat_expectation_by": 5.5,
           "result": "W",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -21532,8 +21532,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ]
@@ -21874,8 +21874,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -22058,8 +22058,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "EasyPost Hawai\u02bbi Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "EasyPost Hawai\u02bbi Bowl"
         }
       ],
@@ -22242,8 +22242,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Hawai\u02bbi Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Hawai\u02bbi Bowl"
         }
       ],
@@ -22708,8 +22708,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tailgreeter Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tailgreeter Cure Bowl"
         }
       ],
@@ -22879,7 +22879,7 @@
           "beat_expectation_by": -11.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -22892,8 +22892,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TicketSmarter Birmingham Bowl"
         }
       ],
@@ -23076,8 +23076,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "EasyPost Hawai\u02bbi Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "EasyPost Hawai\u02bbi Bowl"
         }
       ],
@@ -23260,8 +23260,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ],
@@ -23444,8 +23444,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ]
@@ -23630,8 +23630,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -23814,8 +23814,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Barstool Sports Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Barstool Sports Arizona Bowl"
         }
       ],
@@ -23998,8 +23998,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Barstool Sports Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Barstool Sports Arizona Bowl"
         }
       ],
@@ -24524,8 +24524,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "PUBG Mobile New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "PUBG Mobile New Mexico Bowl"
         }
       ],
@@ -24709,7 +24709,7 @@
           "beat_expectation_by": 20.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Mountain West Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -24722,8 +24722,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
         }
       ],
@@ -24906,8 +24906,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Isleta New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Isleta New Mexico Bowl"
         }
       ],
@@ -25090,8 +25090,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -25274,8 +25274,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Snoop Dogg Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Snoop Dogg Arizona Bowl"
         }
       ]
@@ -26206,8 +26206,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rate Bowl"
         }
       ]
@@ -27144,8 +27144,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tropical Smoothie Cafe Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tropical Smoothie Cafe Frisco Bowl"
         }
       ],
@@ -27328,8 +27328,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "EasyPost Hawai'i Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "EasyPost Hawai'i Bowl"
         }
       ],
@@ -27852,8 +27852,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Isleta New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Isleta New Mexico Bowl"
         }
       ]
@@ -28038,8 +28038,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "PUBG Mobile New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "PUBG Mobile New Mexico Bowl"
         }
       ],
@@ -29074,8 +29074,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Military Bowl Presented by Peraton",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Military Bowl Presented by Peraton"
         }
       ],
@@ -29258,8 +29258,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "76 Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "76 Birmingham Bowl"
         }
       ],
@@ -29442,8 +29442,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -29627,7 +29627,7 @@
           "beat_expectation_by": 10.2,
           "result": "W",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -29640,8 +29640,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ]
@@ -30084,8 +30084,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -30778,8 +30778,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "GameAbove Sports Bowl"
         }
       ]
@@ -31474,8 +31474,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -32252,8 +32252,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -32436,8 +32436,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -32620,8 +32620,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ]
@@ -32806,8 +32806,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxAct Camellia Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Camellia Bowl"
         }
       ],
@@ -33160,8 +33160,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -33956,8 +33956,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -34141,7 +34141,7 @@
           "beat_expectation_by": 1.4,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Big Ten Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -34154,8 +34154,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ],
@@ -34855,7 +34855,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Alabama",
           "location": "Away",
           "team_score": 6,
@@ -34866,7 +34866,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Goodyear Cotton Bowl Classic"
         }
       ],
       "2022": [
@@ -35048,8 +35048,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ],
@@ -35572,8 +35572,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ]
@@ -36268,8 +36268,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -36453,11 +36453,11 @@
           "beat_expectation_by": 6.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Dr Pepper Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Washington",
           "location": "Away",
           "team_score": 31,
@@ -36468,7 +36468,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Allstate Sugar Bowl"
         }
       ],
       "2024": [
@@ -36651,7 +36651,7 @@
           "beat_expectation_by": -6.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -36680,10 +36680,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Chick-fil-A Peach Bowl"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 14,
@@ -36694,7 +36694,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Goodyear Cotton Bowl Classic"
         }
       ],
       "2025": [
@@ -36876,8 +36876,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ]
@@ -37062,8 +37062,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Chick-fil-A Peach Bowl"
         }
       ],
@@ -37933,7 +37933,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Cincinnati",
           "location": "Home",
           "team_score": 27,
@@ -37944,10 +37944,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Goodyear Cotton Bowl Classic"
         },
         {
-          "week": 16,
+          "week": 18,
           "opponent": "Georgia",
           "location": "Home",
           "team_score": 18,
@@ -38140,8 +38140,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Allstate Sugar Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Allstate Sugar Bowl"
         }
       ],
@@ -38325,11 +38325,11 @@
           "beat_expectation_by": 6.1,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 20,
@@ -38340,7 +38340,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Rose Bowl Game Pres. by Prudential"
         }
       ],
       "2024": [
@@ -38522,8 +38522,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ],
@@ -38707,7 +38707,7 @@
           "beat_expectation_by": -20.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -38736,7 +38736,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Rose Bowl Presented by Prudential"
         }
       ]
     },
@@ -39076,8 +39076,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -39260,8 +39260,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Boca Raton Bowl"
         }
       ],
@@ -39445,7 +39445,7 @@
           "beat_expectation_by": -6.6,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -40339,7 +40339,7 @@
           "beat_expectation_by": 6.6,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Big Ten Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -40354,10 +40354,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Rose Bowl Presented by Prudential"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Oregon",
           "location": "Home",
           "team_score": 56,
@@ -40368,10 +40368,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Chick-fil-A Peach Bowl"
         },
         {
-          "week": 17,
+          "week": 19,
           "opponent": "Miami",
           "location": "Home",
           "team_score": 27,
@@ -40746,8 +40746,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -41782,8 +41782,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Camellia Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Camellia Bowl"
         }
       ],
@@ -42136,8 +42136,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bahamas Bowl Presented by Atlantis Resorts",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bahamas Bowl Presented by Atlantis Resorts"
         }
       ],
@@ -42758,8 +42758,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -42942,8 +42942,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "68 Ventures Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "68 Ventures Bowl"
         }
       ],
@@ -43126,8 +43126,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "IS4S Salute to Veterans Bowl"
         }
       ],
@@ -44018,8 +44018,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -44202,8 +44202,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -44386,8 +44386,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Goodyear Cotton Bowl Classic",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Goodyear Cotton Bowl Classic"
         }
       ],
@@ -44570,8 +44570,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -44754,8 +44754,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ]
@@ -45280,8 +45280,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ],
@@ -45464,8 +45464,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ],
@@ -46836,8 +46836,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -47020,8 +47020,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ],
@@ -47204,8 +47204,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Scooter's Coffee Frisco Bowl"
         }
       ],
@@ -47389,7 +47389,7 @@
           "beat_expectation_by": 36.4,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         }
       ],
@@ -47744,8 +47744,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxAct Camellia Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Camellia Bowl"
         }
       ],
@@ -49462,8 +49462,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Quick Lane Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Quick Lane Bowl"
         }
       ],
@@ -49986,8 +49986,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "IS4S Salute to Veterans Bowl"
         }
       ],
@@ -50171,7 +50171,7 @@
           "beat_expectation_by": 11.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -50184,8 +50184,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ]
@@ -50758,8 +50758,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -50942,8 +50942,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Pop-Tarts Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Pop-Tarts Bowl"
         }
       ],
@@ -51126,8 +51126,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Go Bowling Military Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Go Bowling Military Bowl"
         }
       ],
@@ -51310,8 +51310,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ]
@@ -51837,7 +51837,7 @@
           "beat_expectation_by": -20.2,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Mountain West Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -51850,8 +51850,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Guaranteed Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Guaranteed Rate Bowl"
         }
       ],
@@ -52035,7 +52035,7 @@
           "beat_expectation_by": -6.4,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Mountain West Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -52048,8 +52048,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Art of Sport LA Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Art of Sport LA Bowl"
         }
       ],
@@ -52233,7 +52233,7 @@
           "beat_expectation_by": -15.4,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Mountain West Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -52246,8 +52246,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Scooter's Coffee Frisco Bowl"
         }
       ]
@@ -52432,8 +52432,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Texas Bowl"
         }
       ],
@@ -52617,7 +52617,7 @@
           "beat_expectation_by": 2.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Dr Pepper Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -52630,8 +52630,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Allstate Sugar Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Allstate Sugar Bowl"
         }
       ],
@@ -52814,8 +52814,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Pop-Tarts Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Pop-Tarts Bowl"
         }
       ],
@@ -52998,8 +52998,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rate Bowl"
         }
       ],
@@ -53694,8 +53694,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ],
@@ -53878,8 +53878,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Pop-Tarts Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Pop-Tarts Bowl"
         }
       ],
@@ -54078,10 +54078,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Goodyear Cotton Bowl Classic"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Ole Miss",
           "location": "Away",
           "team_score": 31,
@@ -54092,10 +54092,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Vrbo Fiesta Bowl"
         },
         {
-          "week": 17,
+          "week": 19,
           "opponent": "Indiana",
           "location": "Away",
           "team_score": 21,
@@ -54304,8 +54304,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Vrbo Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Vrbo Citrus Bowl"
         }
       ],
@@ -54488,8 +54488,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -54673,7 +54673,7 @@
           "beat_expectation_by": -1.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Big Ten Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -54686,8 +54686,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ],
@@ -54870,8 +54870,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -55054,8 +55054,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ]
@@ -55490,8 +55490,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "LendingTree Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "LendingTree Bowl"
         }
       ],
@@ -55674,8 +55674,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -56028,8 +56028,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ]
@@ -56433,7 +56433,7 @@
           "beat_expectation_by": 11.2,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -56446,8 +56446,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ]
@@ -56696,8 +56696,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Allstate Sugar Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Allstate Sugar Bowl"
         }
       ],
@@ -56880,8 +56880,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -57234,8 +57234,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Kinder's Texas Bowl"
         }
       ],
@@ -57686,8 +57686,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "New Era Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "New Era Pinstripe Bowl"
         }
       ],
@@ -57870,8 +57870,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -58054,8 +58054,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -58580,8 +58580,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
         }
       ],
@@ -58764,8 +58764,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -58948,8 +58948,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -59474,8 +59474,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl Pres. by TaxAct",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl Pres. by TaxAct"
         }
       ],
@@ -59828,8 +59828,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Famous Toastery Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Toastery Bowl"
         }
       ],
@@ -60182,8 +60182,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "StaffDNA Cure Bowl"
         }
       ]
@@ -60368,8 +60368,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -60552,8 +60552,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -60906,8 +60906,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -61499,7 +61499,7 @@
           "beat_expectation_by": -7.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -61512,8 +61512,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Barstool Sports Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Barstool Sports Arizona Bowl"
         }
       ],
@@ -61696,8 +61696,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ],
@@ -61881,7 +61881,7 @@
           "beat_expectation_by": 35.7,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -61894,8 +61894,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "StaffDNA Cure Bowl"
         }
       ],
@@ -62078,8 +62078,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Scooter's Coffee Frisco Bowl"
         }
       ]
@@ -62374,8 +62374,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -62558,8 +62558,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "San Diego County Credit Union Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "San Diego County Credit Union Holiday Bowl"
         }
       ],
@@ -62743,7 +62743,7 @@
           "beat_expectation_by": -12.6,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Pac-12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -62756,8 +62756,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Vrbo Fiesta Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Vrbo Fiesta Bowl"
         }
       ],
@@ -62941,7 +62941,7 @@
           "beat_expectation_by": 5.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Big Ten Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -62956,7 +62956,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Rose Bowl Presented by Prudential"
         }
       ],
       "2025": [
@@ -63154,10 +63154,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Capital One Orange Bowl"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Indiana",
           "location": "Away",
           "team_score": 22,
@@ -63168,7 +63168,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Chick-fil-A Peach Bowl"
         }
       ]
     },
@@ -63352,8 +63352,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -63536,8 +63536,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -63890,8 +63890,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ],
@@ -64260,8 +64260,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Rose Bowl Game Pres. by Capital One Venture X",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rose Bowl Game Pres. by Capital One Venture X"
         }
       ],
@@ -64445,7 +64445,7 @@
           "beat_expectation_by": 23.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Pac-12 Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -64458,8 +64458,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Rose Bowl Game Presented by Prudential",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rose Bowl Game Presented by Prudential"
         }
       ],
@@ -64642,8 +64642,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -64996,8 +64996,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ]
@@ -65522,8 +65522,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -65706,8 +65706,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Birmingham Bowl"
         }
       ],
@@ -65890,8 +65890,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Pop-Tarts Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Pop-Tarts Bowl"
         }
       ]
@@ -66090,8 +66090,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -66274,8 +66274,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -66798,8 +66798,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ]
@@ -67002,8 +67002,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bahamas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bahamas Bowl"
         }
       ],
@@ -67186,8 +67186,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "EasyPost Hawai'i Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "EasyPost Hawai'i Bowl"
         }
       ],
@@ -68067,7 +68067,7 @@
           "beat_expectation_by": -11.1,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -68080,8 +68080,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Frisco Bowl Presented by SERVPRO",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Frisco Bowl Presented by SERVPRO"
         }
       ],
@@ -68434,8 +68434,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -68619,7 +68619,7 @@
           "beat_expectation_by": -16.5,
           "result": "L",
           "is_playoff": false,
-          "round_name": "American Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -68632,8 +68632,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Isleta New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Isleta New Mexico Bowl"
         }
       ]
@@ -68818,8 +68818,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Cheez-It Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Bowl"
         }
       ],
@@ -69172,8 +69172,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -69357,7 +69357,7 @@
           "beat_expectation_by": -23.1,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Dr Pepper Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -69370,8 +69370,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Pop-Tarts Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Pop-Tarts Bowl"
         }
       ],
@@ -69897,7 +69897,7 @@
           "beat_expectation_by": -20.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Mountain West Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -69910,8 +69910,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Frisco Bowl Presented by SERVPRO",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Frisco Bowl Presented by SERVPRO"
         }
       ],
@@ -70095,7 +70095,7 @@
           "beat_expectation_by": 20.2,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Mountain West Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -70108,8 +70108,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Starco Brands LA Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Starco Brands LA Bowl"
         }
       ],
@@ -70293,7 +70293,7 @@
           "beat_expectation_by": 6.4,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Mountain West Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -70308,7 +70308,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Vrbo Fiesta Bowl"
         }
       ],
       "2025": [
@@ -70491,7 +70491,7 @@
           "beat_expectation_by": 15.4,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Mountain West Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -70504,8 +70504,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bucked Up LA Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bucked Up LA Bowl"
         }
       ]
@@ -71392,8 +71392,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -71576,8 +71576,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ]
@@ -71926,8 +71926,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -72110,8 +72110,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Guaranteed Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Guaranteed Rate Bowl"
         }
       ],
@@ -72294,8 +72294,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ],
@@ -73470,8 +73470,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Texas Bowl"
         }
       ],
@@ -73654,8 +73654,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -74120,8 +74120,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TicketSmarter Birmingham Bowl"
         }
       ],
@@ -74304,8 +74304,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -74828,8 +74828,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Kinder's Texas Bowl"
         }
       ]
@@ -75096,8 +75096,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "PlayStation Fiesta Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "PlayStation Fiesta Bowl"
         }
       ],
@@ -75280,8 +75280,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -75464,8 +75464,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -75664,10 +75664,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Allstate Sugar Bowl - Rescheduled from Jan 1"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Penn State",
           "location": "Away",
           "team_score": 27,
@@ -75678,10 +75678,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Capital One Orange Bowl"
         },
         {
-          "week": 17,
+          "week": 19,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 23,
@@ -76046,8 +76046,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bahamas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bahamas Bowl"
         }
       ],
@@ -76231,7 +76231,7 @@
           "beat_expectation_by": 7.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -76244,8 +76244,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "RoofClaim.com Boca Raton Bowl"
         }
       ],
@@ -76429,7 +76429,7 @@
           "beat_expectation_by": -15.6,
           "result": "L",
           "is_playoff": false,
-          "round_name": "MAC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -76442,8 +76442,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Barstool Sports Arizona Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Barstool Sports Arizona Bowl"
         }
       ],
@@ -76626,8 +76626,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "GameAbove Sports Bowl"
         }
       ],
@@ -76810,8 +76810,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bush's Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bush's Boca Raton Bowl"
         }
       ]
@@ -77166,8 +77166,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -77351,11 +77351,11 @@
           "beat_expectation_by": 12.6,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Pac-12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Texas",
           "location": "Home",
           "team_score": 37,
@@ -77366,10 +77366,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Allstate Sugar Bowl"
         },
         {
-          "week": 16,
+          "week": 18,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 13,
@@ -77562,8 +77562,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -77746,8 +77746,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bucked Up LA Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bucked Up LA Bowl"
         }
       ]
@@ -78102,8 +78102,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -78286,8 +78286,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Starco Brands LA Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Starco Brands LA Bowl"
         }
       ],
@@ -78982,8 +78982,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl Pres. by TaxAct",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl Pres. by TaxAct"
         }
       ],
@@ -80018,8 +80018,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "New Mexico Bowl"
         }
       ],
@@ -80203,7 +80203,7 @@
           "beat_expectation_by": 2.8,
           "result": "W",
           "is_playoff": false,
-          "round_name": "American Athletic Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -80216,8 +80216,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ],
@@ -80401,7 +80401,7 @@
           "beat_expectation_by": -5.5,
           "result": "L",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -80598,8 +80598,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Trust & Will Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Trust & Will Holiday Bowl"
         }
       ]
@@ -80955,7 +80955,7 @@
           "beat_expectation_by": 13.7,
           "result": "W",
           "is_playoff": false,
-          "round_name": "American Athletic Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -80968,8 +80968,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Goodyear Cotton Bowl Classic",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Goodyear Cotton Bowl Classic"
         }
       ],
@@ -81153,7 +81153,7 @@
           "beat_expectation_by": -2.8,
           "result": "L",
           "is_playoff": false,
-          "round_name": "American Athletic Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -81166,8 +81166,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Military Bowl Presented by GoBowling.com",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Military Bowl Presented by GoBowling.com"
         }
       ],
@@ -81351,7 +81351,7 @@
           "beat_expectation_by": -35.2,
           "result": "L",
           "is_playoff": false,
-          "round_name": "American Athletic Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -81364,8 +81364,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ],
@@ -81549,7 +81549,7 @@
           "beat_expectation_by": 16.5,
           "result": "W",
           "is_playoff": false,
-          "round_name": "American Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -81748,8 +81748,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -82273,7 +82273,7 @@
           "beat_expectation_by": 23.1,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Dr Pepper Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -82288,7 +82288,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Chick-fil-A Peach Bowl"
         }
       ],
       "2025": [
@@ -82470,8 +82470,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ]
@@ -82826,8 +82826,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TicketSmarter Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TicketSmarter Birmingham Bowl"
         }
       ],
@@ -83180,8 +83180,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Go Bowling Military Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Go Bowling Military Bowl"
         }
       ],
@@ -83364,8 +83364,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Go Bowling Military Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Go Bowling Military Bowl"
         }
       ]
@@ -83596,8 +83596,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -83781,7 +83781,7 @@
           "beat_expectation_by": 30.5,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -83794,8 +83794,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "StaffDNA Cure Bowl"
         }
       ],
@@ -83979,7 +83979,7 @@
           "beat_expectation_by": -11.2,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -83992,8 +83992,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "IS4S Salute to Veterans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "IS4S Salute to Veterans Bowl"
         }
       ]
@@ -84430,8 +84430,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -84614,8 +84614,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "HomeTown Lenders Bahamas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "HomeTown Lenders Bahamas Bowl"
         }
       ],
@@ -85310,8 +85310,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Rose Bowl Game Pres. by Capital One Venture X",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rose Bowl Game Pres. by Capital One Venture X"
         }
       ],
@@ -85485,7 +85485,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Georgia",
           "location": "Away",
           "team_score": 41,
@@ -85496,7 +85496,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Chick-fil-A Peach Bowl"
         }
       ],
       "2023": [
@@ -85678,8 +85678,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Goodyear Cotton Bowl Classic",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Goodyear Cotton Bowl Classic"
         }
       ],
@@ -85878,10 +85878,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Rose Bowl Presented by Prudential"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Texas",
           "location": "Away",
           "team_score": 28,
@@ -85892,10 +85892,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Goodyear Cotton Bowl Classic"
         },
         {
-          "week": 17,
+          "week": 19,
           "opponent": "Notre Dame",
           "location": "Away",
           "team_score": 34,
@@ -86089,7 +86089,7 @@
           "beat_expectation_by": -6.6,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Big Ten Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -86104,7 +86104,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Goodyear Cotton Bowl Classic"
         }
       ]
     },
@@ -86412,8 +86412,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "RoofClaim.com Boca Raton Bowl"
         }
       ],
@@ -86767,7 +86767,7 @@
           "beat_expectation_by": -21.8,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Sun Belt Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -86780,8 +86780,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Avocados From Mexico Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Avocados From Mexico Cure Bowl"
         }
       ],
@@ -87120,8 +87120,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "JLab Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "JLab Birmingham Bowl"
         }
       ]
@@ -87482,8 +87482,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -87666,8 +87666,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "New Mexico Bowl"
         }
       ],
@@ -88020,8 +88020,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ],
@@ -88205,7 +88205,7 @@
           "beat_expectation_by": -14.2,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -88218,8 +88218,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Pop-Tarts Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Pop-Tarts Bowl"
         }
       ]
@@ -88898,8 +88898,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Quick Lane Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Quick Lane Bowl"
         }
       ],
@@ -90630,8 +90630,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Outback Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Outback Bowl"
         }
       ],
@@ -90814,8 +90814,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Rose Bowl Game Presented by Prudential",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rose Bowl Game Presented by Prudential"
         }
       ],
@@ -90998,8 +90998,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Chick-fil-A Peach Bowl"
         }
       ],
@@ -91183,7 +91183,7 @@
           "beat_expectation_by": -5.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Big Ten Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -91212,10 +91212,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Vrbo Fiesta Bowl"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Notre Dame",
           "location": "Home",
           "team_score": 24,
@@ -91226,7 +91226,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Capital One Orange Bowl"
         }
       ],
       "2025": [
@@ -91408,8 +91408,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ]
@@ -92016,8 +92016,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Camellia Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Camellia Bowl"
         }
       ],
@@ -92200,8 +92200,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "68 Ventures Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "68 Ventures Bowl"
         }
       ],
@@ -92384,8 +92384,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Xbox Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Xbox Bowl"
         }
       ]
@@ -92748,8 +92748,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "68 Ventures Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "68 Ventures Bowl"
         }
       ]
@@ -93104,8 +93104,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -93288,8 +93288,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -93472,8 +93472,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Scooter's Coffee Frisco Bowl"
         }
       ],
@@ -93656,8 +93656,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Union Home Mortgage Gasparilla Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Union Home Mortgage Gasparilla Bowl"
         }
       ]
@@ -93906,8 +93906,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Xbox Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Xbox Bowl"
         }
       ]
@@ -94097,7 +94097,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 34,
@@ -94108,10 +94108,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Capital One Orange Bowl"
         },
         {
-          "week": 16,
+          "week": 18,
           "opponent": "Alabama",
           "location": "Away",
           "team_score": 33,
@@ -94305,11 +94305,11 @@
           "beat_expectation_by": 4.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Ohio State",
           "location": "Home",
           "team_score": 42,
@@ -94320,10 +94320,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Chick-fil-A Peach Bowl"
         },
         {
-          "week": 16,
+          "week": 18,
           "opponent": "TCU",
           "location": "Home",
           "team_score": 65,
@@ -94517,7 +94517,7 @@
           "beat_expectation_by": -6.1,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -94530,8 +94530,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Capital One Orange Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Capital One Orange Bowl"
         }
       ],
@@ -94715,7 +94715,7 @@
           "beat_expectation_by": 6.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -94730,7 +94730,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Allstate Sugar Bowl - Rescheduled from Jan 1"
         }
       ],
       "2025": [
@@ -94913,7 +94913,7 @@
           "beat_expectation_by": 20.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "SEC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -94928,7 +94928,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Allstate Sugar Bowl"
         }
       ]
     },
@@ -95278,8 +95278,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "RoofClaim.com Boca Raton Bowl"
         }
       ],
@@ -95476,8 +95476,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -95660,8 +95660,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Famous Toastery Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Toastery Bowl"
         }
       ],
@@ -95845,7 +95845,7 @@
           "beat_expectation_by": -30.5,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -95858,8 +95858,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Boca Raton Bowl"
         }
       ],
@@ -96042,8 +96042,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "New Orleans Bowl"
         }
       ]
@@ -96228,8 +96228,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Outback Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Outback Bowl"
         }
       ],
@@ -96412,8 +96412,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -96766,8 +96766,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -97728,8 +97728,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Camellia Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Camellia Bowl"
         }
       ],
@@ -97912,8 +97912,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ],
@@ -98096,8 +98096,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "R+L Carriers New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "R+L Carriers New Orleans Bowl"
         }
       ],
@@ -98280,8 +98280,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "JLab Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "JLab Birmingham Bowl"
         }
       ]
@@ -98466,8 +98466,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Allstate Sugar Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Allstate Sugar Bowl"
         }
       ],
@@ -98650,8 +98650,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Texas Bowl"
         }
       ],
@@ -98834,8 +98834,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Chick-fil-A Peach Bowl"
         }
       ],
@@ -99018,8 +99018,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -99218,10 +99218,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Allstate Sugar Bowl"
         },
         {
-          "week": 17,
+          "week": 18,
           "opponent": "Miami",
           "location": "Home",
           "team_score": 27,
@@ -99232,7 +99232,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Semifinal at the Vrbo Fiesta Bowl"
         }
       ]
     },
@@ -99512,8 +99512,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "PlayStation Fiesta Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "PlayStation Fiesta Bowl"
         }
       ],
@@ -99696,8 +99696,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Guaranteed Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Guaranteed Rate Bowl"
         }
       ],
@@ -99881,7 +99881,7 @@
           "beat_expectation_by": -6.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Dr Pepper Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -99894,8 +99894,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Texas Bowl"
         }
       ],
@@ -100434,8 +100434,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Chick-fil-A Peach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Chick-fil-A Peach Bowl"
         }
       ],
@@ -100618,8 +100618,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -100972,8 +100972,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "GameAbove Sports Bowl"
         }
       ],
@@ -101156,8 +101156,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Go Bowling Military Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Go Bowling Military Bowl"
         }
       ]
@@ -101512,8 +101512,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "LendingTree Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "LendingTree Bowl"
         }
       ],
@@ -102036,8 +102036,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "New Orleans Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "New Orleans Bowl"
         }
       ]
@@ -102330,8 +102330,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Guaranteed Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Guaranteed Rate Bowl"
         }
       ],
@@ -102684,8 +102684,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -102868,8 +102868,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Scooter's Coffee Frisco Bowl"
         }
       ],
@@ -103518,8 +103518,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Cheez-It Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Bowl"
         }
       ],
@@ -103703,7 +103703,7 @@
           "beat_expectation_by": 5.3,
           "result": "W",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -103716,8 +103716,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Capital One Orange Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Capital One Orange Bowl"
         }
       ],
@@ -104242,8 +104242,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "New Era Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "New Era Pinstripe Bowl"
         }
       ],
@@ -104582,8 +104582,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Military Bowl Presented by GoBowling.com",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Military Bowl Presented by GoBowling.com"
         }
       ],
@@ -104766,8 +104766,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -105364,8 +105364,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "LendingTree Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "LendingTree Bowl"
         }
       ],
@@ -105548,8 +105548,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "RoofClaim.com Boca Raton Bowl"
         }
       ],
@@ -105733,7 +105733,7 @@
           "beat_expectation_by": 3.0,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -105746,8 +105746,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Vrbo Fiesta Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Vrbo Fiesta Bowl"
         }
       ],
@@ -105916,8 +105916,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bahamas Bowl Presented by Atlantis Resorts",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bahamas Bowl Presented by Atlantis Resorts"
         }
       ],
@@ -106418,8 +106418,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Texas Bowl"
         }
       ],
@@ -106603,7 +106603,7 @@
           "beat_expectation_by": -4.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "SEC Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -106616,8 +106616,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ],
@@ -106800,8 +106800,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ],
@@ -106984,8 +106984,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Kinder's Texas Bowl"
         }
       ],
@@ -107168,8 +107168,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Kinder's Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Kinder's Texas Bowl"
         }
       ]
@@ -107759,11 +107759,11 @@
           "beat_expectation_by": -2.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Dr Pepper Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Michigan",
           "location": "Away",
           "team_score": 51,
@@ -107774,10 +107774,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Vrbo Fiesta Bowl"
         },
         {
-          "week": 16,
+          "week": 18,
           "opponent": "Georgia",
           "location": "Away",
           "team_score": 7,
@@ -108140,8 +108140,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Isleta New Mexico Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Isleta New Mexico Bowl"
         }
       ],
@@ -108324,8 +108324,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ]
@@ -108510,8 +108510,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Lockheed Martin Armed Forces Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Lockheed Martin Armed Forces Bowl"
         }
       ],
@@ -109021,7 +109021,7 @@
           "beat_expectation_by": 35.2,
           "result": "W",
           "is_playoff": false,
-          "round_name": "American Athletic Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -109048,8 +109048,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -109232,8 +109232,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ]
@@ -109780,8 +109780,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ],
@@ -109964,8 +109964,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "RoofClaim.com Boca Raton Bowl"
         }
       ],
@@ -110148,8 +110148,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "DirecTV Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "DirecTV Holiday Bowl"
         }
       ],
@@ -110844,8 +110844,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -111198,8 +111198,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "GameAbove Sports Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "GameAbove Sports Bowl"
         }
       ]
@@ -111724,8 +111724,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -111908,8 +111908,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Art of Sport LA Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Art of Sport LA Bowl"
         }
       ],
@@ -112092,8 +112092,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Sheraton Hawai\u02bbi Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Sheraton Hawai\u02bbi Bowl"
         }
       ]
@@ -112958,8 +112958,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ]
@@ -113314,8 +113314,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ],
@@ -113668,8 +113668,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ],
@@ -113852,8 +113852,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Liberty Mutual Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Liberty Mutual Music City Bowl"
         }
       ]
@@ -114038,8 +114038,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Vrbo Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Vrbo Citrus Bowl"
         }
       ],
@@ -114222,8 +114222,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TransPerfect Music City Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TransPerfect Music City Bowl"
         }
       ],
@@ -114406,8 +114406,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -115884,8 +115884,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -116069,7 +116069,7 @@
           "beat_expectation_by": -22.9,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Subway ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -116082,8 +116082,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "San Diego County Credit Union Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "San Diego County Credit Union Holiday Bowl"
         }
       ],
@@ -116266,8 +116266,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -116450,8 +116450,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ],
@@ -116806,8 +116806,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ],
@@ -116990,8 +116990,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Wasabi Fenway Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Wasabi Fenway Bowl"
         }
       ],
@@ -117175,7 +117175,7 @@
           "beat_expectation_by": -5.3,
           "result": "L",
           "is_playoff": false,
-          "round_name": "ACC Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -117188,8 +117188,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "DIRECTV Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "DIRECTV Holiday Bowl"
         }
       ],
@@ -117372,8 +117372,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -117556,8 +117556,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bush's Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bush's Boca Raton Bowl"
         }
       ]
@@ -117756,8 +117756,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tropical Smoothie Cafe Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tropical Smoothie Cafe Frisco Bowl"
         }
       ],
@@ -117941,7 +117941,7 @@
           "beat_expectation_by": 11.1,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Conference USA Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -117954,8 +117954,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Duluth Trading Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duluth Trading Cure Bowl"
         }
       ],
@@ -118138,8 +118138,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Scooter's Coffee Frisco Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Scooter's Coffee Frisco Bowl"
         }
       ],
@@ -118322,8 +118322,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Myrtle Beach Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Myrtle Beach Bowl"
         }
       ],
@@ -118506,8 +118506,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SERVPRO First Responder Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SERVPRO First Responder Bowl"
         }
       ]
@@ -118863,7 +118863,7 @@
           "beat_expectation_by": -23.0,
           "result": "L",
           "is_playoff": false,
-          "round_name": "Pac-12 Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -118876,8 +118876,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Goodyear Cotton Bowl Classic",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Goodyear Cotton Bowl Classic"
         }
       ],
@@ -119060,8 +119060,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "DIRECTV Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "DIRECTV Holiday Bowl"
         }
       ],
@@ -119244,8 +119244,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ],
@@ -119428,8 +119428,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Valero Alamo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Valero Alamo Bowl"
         }
       ]
@@ -119696,8 +119696,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "TaxSlayer Gator Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxSlayer Gator Bowl"
         }
       ],
@@ -120050,8 +120050,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ],
@@ -120234,8 +120234,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rate Bowl"
         }
       ],
@@ -120590,8 +120590,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -120774,8 +120774,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "TaxAct Texas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "TaxAct Texas Bowl"
         }
       ],
@@ -120958,8 +120958,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Radiance Technologies Independence Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Radiance Technologies Independence Bowl"
         }
       ],
@@ -121142,8 +121142,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -121327,7 +121327,7 @@
           "beat_expectation_by": 14.2,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Big 12 Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
@@ -121342,7 +121342,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "quarterfinal",
-          "bowl_name": null
+          "bowl_name": "College Football Playoff Quarterfinal at the Capital One Orange Bowl"
         }
       ]
     },
@@ -121526,8 +121526,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "LendingTree Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "LendingTree Bowl"
         }
       ],
@@ -121710,8 +121710,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ],
@@ -121894,8 +121894,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "68 Ventures Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "68 Ventures Bowl"
         }
       ],
@@ -122420,8 +122420,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Guaranteed Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Guaranteed Rate Bowl"
         }
       ],
@@ -122604,8 +122604,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ],
@@ -122788,8 +122788,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Quick Lane Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Quick Lane Bowl"
         }
       ],
@@ -122972,8 +122972,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Duke's Mayo Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Duke's Mayo Bowl"
         }
       ],
@@ -123156,8 +123156,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Rate Bowl"
         }
       ]
@@ -123860,8 +123860,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "RoofClaim.com Boca Raton Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "RoofClaim.com Boca Raton Bowl"
         }
       ],
@@ -124044,8 +124044,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Hawai\u02bbi Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Hawai\u02bbi Bowl"
         }
       ],
@@ -124228,8 +124228,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "StaffDNA Cure Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "StaffDNA Cure Bowl"
         }
       ]
@@ -124680,8 +124680,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "AutoZone Liberty Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "AutoZone Liberty Bowl"
         }
       ],
@@ -124864,8 +124864,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Guaranteed Rate Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Guaranteed Rate Bowl"
         }
       ],
@@ -125395,7 +125395,7 @@
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Georgia",
           "location": "Home",
           "team_score": 11,
@@ -125406,7 +125406,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Capital One Orange Bowl"
         }
       ],
       "2022": [
@@ -125589,11 +125589,11 @@
           "beat_expectation_by": -1.4,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Big Ten Championship Game",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "TCU",
           "location": "Home",
           "team_score": 45,
@@ -125604,7 +125604,7 @@
           "result": "L",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Vrbo Fiesta Bowl"
         }
       ],
       "2023": [
@@ -125787,11 +125787,11 @@
           "beat_expectation_by": 1.9,
           "result": "W",
           "is_playoff": false,
-          "round_name": "Big Ten Championship",
+          "round_name": null,
           "bowl_name": null
         },
         {
-          "week": 16,
+          "week": 17,
           "opponent": "Alabama",
           "location": "Home",
           "team_score": 27,
@@ -125802,10 +125802,10 @@
           "result": "W",
           "is_playoff": true,
           "round_name": "semifinal",
-          "bowl_name": null
+          "bowl_name": "CFP Semifinal at the Rose Bowl Game Pres. by Prudential"
         },
         {
-          "week": 16,
+          "week": 18,
           "opponent": "Washington",
           "location": "Home",
           "team_score": 34,
@@ -125998,8 +125998,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ],
@@ -126182,8 +126182,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Cheez-It Citrus Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Cheez-It Citrus Bowl"
         }
       ]
@@ -127016,8 +127016,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Birmingham Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Birmingham Bowl"
         }
       ],
@@ -127200,8 +127200,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "ReliaQuest Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "ReliaQuest Bowl"
         }
       ]
@@ -128254,8 +128254,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Sheraton Hawai\u02bbi Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Sheraton Hawai\u02bbi Bowl"
         }
       ]
@@ -128950,8 +128950,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Bad Boy Mowers Pinstripe Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Bad Boy Mowers Pinstripe Bowl"
         }
       ],
@@ -129134,8 +129134,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "SRS Distribution Las Vegas Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "SRS Distribution Las Vegas Bowl"
         }
       ]
@@ -129338,8 +129338,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Tony the Tiger Sun Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Tony the Tiger Sun Bowl"
         }
       ],
@@ -129522,8 +129522,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "Jimmy Kimmel LA Bowl Presented by Stifel",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Jimmy Kimmel LA Bowl Presented by Stifel"
         }
       ],
@@ -129876,8 +129876,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "L",
-          "is_playoff": true,
-          "round_name": "DirecTV Holiday Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "DirecTV Holiday Bowl"
         }
       ],
@@ -130060,8 +130060,8 @@
           "predicted_margin": null,
           "beat_expectation_by": null,
           "result": "W",
-          "is_playoff": true,
-          "round_name": "Famous Idaho Potato Bowl",
+          "is_playoff": false,
+          "round_name": null,
           "bowl_name": "Famous Idaho Potato Bowl"
         }
       ]
