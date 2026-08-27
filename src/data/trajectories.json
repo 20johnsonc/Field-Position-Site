@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T16:43:33.716374+00:00",
+  "generated_at": "2026-08-27T17:23:28.438672+00:00",
   "teams": {
     "Northwestern": {
       "2022": [
@@ -7,8 +7,8 @@
           "week": 1,
           "adj_off_ppa": 0.1462,
           "adj_def_value": 0.2559,
-          "raw_off_ppa": 0.22,
-          "raw_def_ppa": 0.25,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -7494,10 +7494,10 @@
           "week": 16,
           "adj_off_ppa": 0.1253,
           "adj_def_value": 0.1722,
-          "raw_off_ppa": -0.1,
-          "raw_def_ppa": 0.32,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0001,
-          "is_playoff": true
+          "is_playoff": false
         }
       ]
     },
@@ -7642,10 +7642,10 @@
           "week": 16,
           "adj_off_ppa": 0.1421,
           "adj_def_value": 0.2584,
-          "raw_off_ppa": 0.02,
-          "raw_def_ppa": 0.43,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0001,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2022": [
@@ -7788,10 +7788,10 @@
           "week": 16,
           "adj_off_ppa": 0.1515,
           "adj_def_value": 0.2218,
-          "raw_off_ppa": -0.04,
-          "raw_def_ppa": 0.34,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0015,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2024": [
@@ -8244,10 +8244,10 @@
           "week": 16,
           "adj_off_ppa": 0.2117,
           "adj_def_value": 0.0264,
-          "raw_off_ppa": 0.27,
-          "raw_def_ppa": 0.04,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0076,
-          "is_playoff": true
+          "is_playoff": false
         }
       ]
     },
@@ -8704,8 +8704,8 @@
           "week": 1,
           "adj_off_ppa": 0.2488,
           "adj_def_value": 0.1994,
-          "raw_off_ppa": 0.34,
-          "raw_def_ppa": 0.21,
+          "raw_off_ppa": -0.06,
+          "raw_def_ppa": 0.38,
           "fbs_avg_ppa": -0.0063,
           "is_playoff": false
         },
@@ -9757,8 +9757,8 @@
           "week": 1,
           "adj_off_ppa": 0.242,
           "adj_def_value": 0.3863,
-          "raw_off_ppa": 0.31,
-          "raw_def_ppa": 0.48,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -16952,8 +16952,8 @@
           "week": 17,
           "adj_off_ppa": 0.3746,
           "adj_def_value": 0.0462,
-          "raw_off_ppa": 0.31,
-          "raw_def_ppa": -0.08,
+          "raw_off_ppa": 0.46,
+          "raw_def_ppa": 0.13,
           "fbs_avg_ppa": 0.0008,
           "is_playoff": true
         }
@@ -17098,10 +17098,10 @@
           "week": 16,
           "adj_off_ppa": 0.2999,
           "adj_def_value": 0.3431,
-          "raw_off_ppa": 0.34,
-          "raw_def_ppa": 0.44,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0015,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2023": [
@@ -18892,10 +18892,10 @@
           "week": 16,
           "adj_off_ppa": 0.1471,
           "adj_def_value": 0.2698,
-          "raw_off_ppa": 0.29,
-          "raw_def_ppa": 0.26,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0076,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2022": [
@@ -31038,10 +31038,10 @@
           "week": 16,
           "adj_off_ppa": 0.3193,
           "adj_def_value": -0.0618,
-          "raw_off_ppa": 0.32,
-          "raw_def_ppa": -0.1,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0001,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2023": [
@@ -31184,10 +31184,10 @@
           "week": 16,
           "adj_off_ppa": 0.1789,
           "adj_def_value": 0.1851,
-          "raw_off_ppa": 0.02,
-          "raw_def_ppa": 0.2,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0076,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2025": [
@@ -32102,8 +32102,8 @@
           "week": 1,
           "adj_off_ppa": 0.6535,
           "adj_def_value": 0.1208,
-          "raw_off_ppa": 0.57,
-          "raw_def_ppa": 0.16,
+          "raw_off_ppa": 0.79,
+          "raw_def_ppa": 0.05,
           "fbs_avg_ppa": -0.0063,
           "is_playoff": false
         },
@@ -35704,8 +35704,8 @@
           "week": 1,
           "adj_off_ppa": 0.3004,
           "adj_def_value": 0.0517,
-          "raw_off_ppa": 0.03,
-          "raw_def_ppa": 0.06,
+          "raw_off_ppa": 0.35,
+          "raw_def_ppa": 0.0,
           "fbs_avg_ppa": -0.0063,
           "is_playoff": false
         },
@@ -40799,8 +40799,8 @@
           "week": 1,
           "adj_off_ppa": 0.09,
           "adj_def_value": 0.0833,
-          "raw_off_ppa": 0.08,
-          "raw_def_ppa": 0.04,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0014,
           "is_playoff": false
         },
@@ -41383,10 +41383,10 @@
           "week": 16,
           "adj_off_ppa": 0.2798,
           "adj_def_value": 0.1752,
-          "raw_off_ppa": 0.26,
-          "raw_def_ppa": 0.29,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0076,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2025": [
@@ -41693,8 +41693,8 @@
           "week": 17,
           "adj_off_ppa": 0.0318,
           "adj_def_value": 0.1462,
-          "raw_off_ppa": -0.08,
-          "raw_def_ppa": 0.31,
+          "raw_off_ppa": 0.27,
+          "raw_def_ppa": 0.14,
           "fbs_avg_ppa": 0.0008,
           "is_playoff": true
         }
@@ -41861,8 +41861,8 @@
           "week": 1,
           "adj_off_ppa": -0.094,
           "adj_def_value": 0.6901,
-          "raw_off_ppa": -0.09,
-          "raw_def_ppa": 0.7,
+          "raw_off_ppa": -0.06,
+          "raw_def_ppa": 0.71,
           "fbs_avg_ppa": -0.0159,
           "is_playoff": false
         },
@@ -42896,8 +42896,8 @@
           "week": 1,
           "adj_off_ppa": 0.4213,
           "adj_def_value": 0.0221,
-          "raw_off_ppa": 0.22,
-          "raw_def_ppa": -0.04,
+          "raw_off_ppa": 0.47,
+          "raw_def_ppa": -0.02,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -45146,8 +45146,8 @@
           "week": 1,
           "adj_off_ppa": -0.0494,
           "adj_def_value": -0.019,
-          "raw_off_ppa": -0.06,
-          "raw_def_ppa": 0.53,
+          "raw_off_ppa": -0.05,
+          "raw_def_ppa": -0.02,
           "fbs_avg_ppa": -0.0159,
           "is_playoff": false
         },
@@ -50102,8 +50102,8 @@
           "week": 1,
           "adj_off_ppa": 0.3948,
           "adj_def_value": 0.29,
-          "raw_off_ppa": 0.48,
-          "raw_def_ppa": 0.31,
+          "raw_off_ppa": 0.54,
+          "raw_def_ppa": 0.39,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -53697,8 +53697,8 @@
           "week": 1,
           "adj_off_ppa": 0.195,
           "adj_def_value": 0.108,
-          "raw_off_ppa": 0.63,
-          "raw_def_ppa": -0.45,
+          "raw_off_ppa": 0.2,
+          "raw_def_ppa": 0.11,
           "fbs_avg_ppa": -0.0159,
           "is_playoff": false
         },
@@ -64792,8 +64792,8 @@
           "week": 1,
           "adj_off_ppa": 0.113,
           "adj_def_value": 0.3483,
-          "raw_off_ppa": 0.14,
-          "raw_def_ppa": 0.39,
+          "raw_off_ppa": 0.06,
+          "raw_def_ppa": 0.24,
           "fbs_avg_ppa": -0.0026,
           "is_playoff": false
         },
@@ -67040,8 +67040,8 @@
           "week": 17,
           "adj_off_ppa": 0.2566,
           "adj_def_value": 0.1603,
-          "raw_off_ppa": 0.21,
-          "raw_def_ppa": 0.2,
+          "raw_off_ppa": -0.06,
+          "raw_def_ppa": -0.04,
           "fbs_avg_ppa": 0.0001,
           "is_playoff": true
         }
@@ -67947,8 +67947,8 @@
           "week": 1,
           "adj_off_ppa": 0.5724,
           "adj_def_value": 0.0995,
-          "raw_off_ppa": 0.12,
-          "raw_def_ppa": 0.11,
+          "raw_off_ppa": 0.71,
+          "raw_def_ppa": 0.06,
           "fbs_avg_ppa": -0.0014,
           "is_playoff": false
         },
@@ -76500,8 +76500,8 @@
           "week": 1,
           "adj_off_ppa": 0.1142,
           "adj_def_value": 0.1959,
-          "raw_off_ppa": 0.14,
-          "raw_def_ppa": 0.16,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0026,
           "is_playoff": false
         },
@@ -77854,8 +77854,8 @@
           "week": 1,
           "adj_off_ppa": 0.1534,
           "adj_def_value": 0.1514,
-          "raw_off_ppa": 0.16,
-          "raw_def_ppa": 0.14,
+          "raw_off_ppa": 0.33,
+          "raw_def_ppa": 0.64,
           "fbs_avg_ppa": -0.0026,
           "is_playoff": false
         },
@@ -80562,8 +80562,8 @@
           "week": 1,
           "adj_off_ppa": 0.0353,
           "adj_def_value": 0.4258,
-          "raw_off_ppa": 0.04,
-          "raw_def_ppa": 0.71,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0063,
           "is_playoff": false
         },
@@ -82053,8 +82053,8 @@
           "week": 1,
           "adj_off_ppa": 0.1864,
           "adj_def_value": 0.7085,
-          "raw_off_ppa": 0.22,
-          "raw_def_ppa": 0.87,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -82345,8 +82345,8 @@
           "week": 1,
           "adj_off_ppa": 0.1281,
           "adj_def_value": 0.2636,
-          "raw_off_ppa": 0.16,
-          "raw_def_ppa": 0.28,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0014,
           "is_playoff": false
         },
@@ -86562,8 +86562,8 @@
           "week": 1,
           "adj_off_ppa": 0.5486,
           "adj_def_value": 0.2041,
-          "raw_off_ppa": 0.87,
-          "raw_def_ppa": 0.22,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -86708,8 +86708,8 @@
           "week": 1,
           "adj_off_ppa": 0.2769,
           "adj_def_value": 0.0565,
-          "raw_off_ppa": 0.28,
-          "raw_def_ppa": 0.16,
+          "raw_off_ppa": 0.35,
+          "raw_def_ppa": 0.06,
           "fbs_avg_ppa": -0.0014,
           "is_playoff": false
         },
@@ -97365,8 +97365,8 @@
           "week": 1,
           "adj_off_ppa": 0.2348,
           "adj_def_value": 0.2785,
-          "raw_off_ppa": 0.03,
-          "raw_def_ppa": 0.22,
+          "raw_off_ppa": 0.32,
+          "raw_def_ppa": 0.32,
           "fbs_avg_ppa": -0.0026,
           "is_playoff": false
         },
@@ -106807,8 +106807,8 @@
           "week": 1,
           "adj_off_ppa": 0.2175,
           "adj_def_value": -0.0089,
-          "raw_off_ppa": 0.06,
-          "raw_def_ppa": 0.21,
+          "raw_off_ppa": 0.29,
+          "raw_def_ppa": -0.06,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -107101,8 +107101,8 @@
           "week": 1,
           "adj_off_ppa": 0.1857,
           "adj_def_value": 0.0529,
-          "raw_off_ppa": 0.21,
-          "raw_def_ppa": 0.06,
+          "raw_off_ppa": -0.25,
+          "raw_def_ppa": 0.55,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -109641,10 +109641,10 @@
           "week": 16,
           "adj_off_ppa": 0.3822,
           "adj_def_value": 0.0375,
-          "raw_off_ppa": 0.43,
-          "raw_def_ppa": 0.02,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0001,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2022": [
@@ -109787,10 +109787,10 @@
           "week": 16,
           "adj_off_ppa": 0.3716,
           "adj_def_value": 0.24,
-          "raw_off_ppa": 0.44,
-          "raw_def_ppa": 0.34,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0015,
-          "is_playoff": true
+          "is_playoff": false
         }
       ],
       "2025": [
@@ -124068,8 +124068,8 @@
           "week": 1,
           "adj_off_ppa": 0.0448,
           "adj_def_value": 0.2757,
-          "raw_off_ppa": 0.04,
-          "raw_def_ppa": 0.13,
+          "raw_off_ppa": 0.06,
+          "raw_def_ppa": 0.35,
           "fbs_avg_ppa": -0.0014,
           "is_playoff": false
         },
@@ -124526,8 +124526,8 @@
           "week": 1,
           "adj_off_ppa": 0.0432,
           "adj_def_value": 0.4176,
-          "raw_off_ppa": 0.16,
-          "raw_def_ppa": 0.57,
+          "raw_off_ppa": 0.02,
+          "raw_def_ppa": 0.51,
           "fbs_avg_ppa": -0.0063,
           "is_playoff": false
         },
@@ -124973,8 +124973,8 @@
           "week": 1,
           "adj_off_ppa": 0.0288,
           "adj_def_value": 0.235,
-          "raw_off_ppa": 0.7,
-          "raw_def_ppa": -0.09,
+          "raw_off_ppa": 0.03,
+          "raw_def_ppa": 0.24,
           "fbs_avg_ppa": -0.0159,
           "is_playoff": false
         },
@@ -125422,8 +125422,8 @@
           "week": 1,
           "adj_off_ppa": -0.0097,
           "adj_def_value": 0.5309,
-          "raw_off_ppa": -0.02,
-          "raw_def_ppa": 0.71,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -133506,8 +133506,8 @@
           "week": 17,
           "adj_off_ppa": 0.3584,
           "adj_def_value": -0.0323,
-          "raw_off_ppa": 0.08,
-          "raw_def_ppa": 0.17,
+          "raw_off_ppa": 0.39,
+          "raw_def_ppa": -0.1,
           "fbs_avg_ppa": 0.0001,
           "is_playoff": true
         }
@@ -139517,8 +139517,8 @@
           "week": 17,
           "adj_off_ppa": 0.297,
           "adj_def_value": 0.1241,
-          "raw_off_ppa": 0.21,
-          "raw_def_ppa": 0.22,
+          "raw_off_ppa": 0.25,
+          "raw_def_ppa": 0.01,
           "fbs_avg_ppa": 0.0008,
           "is_playoff": true
         }
@@ -154831,8 +154831,8 @@
           "week": 1,
           "adj_off_ppa": -0.0626,
           "adj_def_value": 0.2345,
-          "raw_off_ppa": -0.04,
-          "raw_def_ppa": 0.22,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -163388,8 +163388,8 @@
           "week": 1,
           "adj_off_ppa": 0.0991,
           "adj_def_value": 0.2913,
-          "raw_off_ppa": 0.04,
-          "raw_def_ppa": 0.18,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": -0.0026,
           "is_playoff": false
         },
@@ -164897,8 +164897,8 @@
           "week": 1,
           "adj_off_ppa": 0.0209,
           "adj_def_value": 0.3765,
-          "raw_off_ppa": -0.25,
-          "raw_def_ppa": 0.54,
+          "raw_off_ppa": -0.02,
+          "raw_def_ppa": 0.47,
           "fbs_avg_ppa": -0.0099,
           "is_playoff": false
         },
@@ -165044,7 +165044,7 @@
           "adj_off_ppa": 0.0599,
           "adj_def_value": 0.1013,
           "raw_off_ppa": 0.04,
-          "raw_def_ppa": 0.08,
+          "raw_def_ppa": 0.28,
           "fbs_avg_ppa": -0.0014,
           "is_playoff": false
         },
@@ -165198,8 +165198,8 @@
           "week": 1,
           "adj_off_ppa": 0.1589,
           "adj_def_value": 0.2165,
-          "raw_off_ppa": 0.24,
-          "raw_def_ppa": 0.11,
+          "raw_off_ppa": 0.2,
+          "raw_def_ppa": 0.23,
           "fbs_avg_ppa": -0.0063,
           "is_playoff": false
         },
@@ -169833,10 +169833,10 @@
           "week": 16,
           "adj_off_ppa": 0.2815,
           "adj_def_value": 0.0306,
-          "raw_off_ppa": 0.34,
-          "raw_def_ppa": -0.04,
+          "raw_off_ppa": null,
+          "raw_def_ppa": null,
           "fbs_avg_ppa": 0.0015,
-          "is_playoff": true
+          "is_playoff": false
         }
       ]
     },
