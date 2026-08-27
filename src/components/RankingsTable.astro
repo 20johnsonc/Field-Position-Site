@@ -43,10 +43,9 @@ const getRecordSortValue = (record: string) => {
             data-year={row.year}
             data-team={row.team}
             data-rank={row.rank}
-            {/* Update this line to use the sort helper! */}
             data-record={getRecordSortValue(row.record)}
             data-net-rating={row.netRating}
-            data-sos={row.sos}
+            data-sos={row.sos_rank}
             data-sor={row.sor}
             data-conference={row.conference}
           >
@@ -59,8 +58,8 @@ const getRecordSortValue = (record: string) => {
             </td>
             <td class="num rating">{formatRating(row.netRating)}</td>
             <td class="num">{row.record}</td>
-            <td class="num">{row.sos}</td>
-            <td class="num">{row.sor}</td>
+            <td class="num" title={`Rating: ${row.sos}`}>{row.sos_rank}</td>
+            <td class="num" title={`Rating: ${row.sor}`}>{row.sor}</td>
             <td>{row.conference}</td>
             <td class="text-right">
               {row.tags && row.tags.length > 0 ? (
@@ -74,9 +73,9 @@ const getRecordSortValue = (record: string) => {
                     return <span class={`mini-tag ${tagClass}`}>{tag}</span>;
                   })}
                   
-                  {row.tags.length > 2 && (
-                    <span class="mini-tag mini-counter" title={row.tags.slice(2).join(', ')}>
-                      +{row.tags.length - 2} more
+                  {row.tags.length > 3 && (
+                    <span class="mini-tag mini-counter" title={row.tags.slice(3).join(', ')}>
+                      +{row.tags.length - 3} more
                     </span>
                   )}
                 </div>

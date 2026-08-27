@@ -40,8 +40,9 @@ export function normalizeRankings(raw: RankingsFile | Record<string, unknown>[])
     record: str(row.Record ?? row.record ?? row.w_l, '0-0'),
     sos: num(row.SOS ?? row.sos ?? row.strength_of_schedule),
     sor: num(row.SOR ?? row.sor ?? row.strength_of_record),
+    sos_rank: num(row.sos_rank ?? row.SOS_Rank ?? row.sos_Rank),
+    sor_rank: num(row.sor_rank ?? row.SOR_Rank ?? row.sor_Rank),
     tags: Array.isArray(row.tags) ? (row.tags as string[]) : [],
-    
     trajectory: Array.isArray(row.trajectory) ? (row.trajectory as any[]) : [],
     gameLog: Array.isArray(row.game_log) ? (row.game_log as any[]) : [],
   }));

@@ -60,23 +60,20 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
   const chartData = useMemo(() => {
     if (!trajectory.length) return null;
 
-    const maxRegularWeek = Math.max(...trajectory.map(w => w.week), 12);
+    const maxRegularWeek = Math.max(12, ...trajectory.map(w => w.week));
+    const minWeek = Math.min(0, ...trajectory.map(w => w.week), ...games.map(g => g.week));
 
-    // Normalize weeks for trajectory entries (pushing mislabelled week 1 postseason games to the end)
     const sortedWeeks = [...trajectory].sort((a, b) => a.week - b.week);
-    
-    // Find highest regular week to shift postseason week 1s correctly
     let currentPostWeek = maxRegularWeek + 1;
 
     const processedWeeks = sortedWeeks.map((w) => {
-      const isPost = (w.is_playoff || w.bowl_name || w.round_name) && w.week === 1;
+      const isPost = (w.is_playoff || w.bowl_name || w.round_name) && w.week <= 1;
       const effectiveWeek = isPost ? currentPostWeek++ : w.week;
       return { ...w, effectiveWeek };
     });
 
     const efficiencyByWeek = new Map<number, number>();
     processedWeeks.forEach((w) => {
-      // Corrected net metric: Offense minus Defense allowed
       efficiencyByWeek.set(w.effectiveWeek, w.raw_off_ppa - w.raw_def_ppa);
     });
 
@@ -94,11 +91,10 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
         y: w.fbs_avg_ppa ?? 0,
       }));
 
-    // Map games to their corresponding effective weeks
     let gamePostWeek = maxRegularWeek + 1;
     const gameWeekMap = new Map<number, number>();
     games.forEach((g) => {
-      const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week === 1;
+      const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week <= 1;
       if (isPost) {
         gameWeekMap.set(JSON.stringify({ week: g.week, opp: g.opponent }), gamePostWeek++);
       }
@@ -108,7 +104,7 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
 
     const gameBubbles = games
       .map((g) => {
-        const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week === 1;
+        const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week <= 1;
         const effWeek = isPost ? (gameWeekMap.get(JSON.stringify({ week: g.week, opp: g.opponent })) ?? g.week) : g.week;
         
         if (!efficiencyByWeek.has(effWeek)) return null;
@@ -123,7 +119,14 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
       })
       .filter(Boolean) as { game: GameLogEntry; x: number; y: number; r: number }[];
 
-    // Calculate dynamic bounds including lines AND game bubbles so nothing clips out of view
+    const allWeeks = [
+      ...processedWeeks.map(w => w.effectiveWeek),
+      ...gameBubbles.map(b => b.x),
+      12
+    ];
+    const chartXMin = minWeek;
+    const chartXMax = Math.max(...allWeeks);
+
     const allValues: number[] = [
       ...adjLinePoints.map(p => p.y),
       ...fbsLinePoints.map(p => p.y),
@@ -138,7 +141,7 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
     const chartYMin = dynamicMin - padding;
     const chartYMax = dynamicMax + padding;
 
-    return { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax };
+    return { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax, chartXMin, chartXMax };
   }, [trajectory, games, yMin, yMax]);
 
   useEffect(() => {
@@ -217,12 +220,20 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
               label: (context) => {
                 if (context.datasetIndex === 2) {
                   const g = gameBubbles[context.dataIndex].game;
-                  return [
+                  const tooltipLines = [
                     `Result: ${g.result} (${g.location})`,
-                    `Actual Margin: ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`,
-                    `Expected Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`,
-                    `Beat Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`,
+                    `Actual Margin: ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`
                   ];
+
+                  if (g.predicted_margin != null) {
+                    tooltipLines.push(`Expected Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`);
+                  }
+                  
+                  if (g.beat_expectation_by != null) {
+                    tooltipLines.push(`Beat Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`);
+                  }
+
+                  return tooltipLines;
                 }
                 return `${context.dataset.label}: ${context.parsed.y.toFixed(3)}`;
               },

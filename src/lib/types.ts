@@ -23,6 +23,8 @@ export interface Ranking {
   tags?: string[];
   trajectory?: TrajectoryPoint[];
   gameLog?: GameLogEntry[];
+  sos_rank: number;
+  sor_rank: number;
 }
 
 export interface Matchup {
