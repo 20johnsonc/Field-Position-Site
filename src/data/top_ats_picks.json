@@ -1,0 +1,232 @@
+{
+  "generated_at": "2026-08-28T17:56:04.515396+00:00",
+  "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
+  "backtest_cover_rate": 0.6383,
+  "picks_by_week": {
+    "0": [
+      {
+        "game_id": 401858202,
+        "week": 0,
+        "home_team": "Virginia",
+        "away_team": "NC State",
+        "market_spread": -4.0,
+        "predicted_margin": -0.87,
+        "pick": "NC State",
+        "pick_side": "away",
+        "edge_pts": 3.1,
+        "cover_prob": 0.5774,
+        "adjusted_ranking_score": 0.3208
+      }
+    ],
+    "1": [
+      {
+        "game_id": 401858210,
+        "week": 1,
+        "home_team": "California",
+        "away_team": "UCLA",
+        "market_spread": 2.0,
+        "predicted_margin": -2.99,
+        "pick": "California",
+        "pick_side": "home",
+        "edge_pts": 5.0,
+        "cover_prob": 0.6222,
+        "adjusted_ranking_score": 0.4444
+      }
+    ],
+    "2": [
+      {
+        "game_id": 401856682,
+        "week": 2,
+        "home_team": "Texas",
+        "away_team": "Ohio State",
+        "market_spread": -1.5,
+        "predicted_margin": 3.1,
+        "pick": "Ohio State",
+        "pick_side": "away",
+        "edge_pts": 4.6,
+        "cover_prob": 0.6129,
+        "adjusted_ranking_score": 0.4715
+      }
+    ],
+    "3": [
+      {
+        "game_id": 401856688,
+        "week": 3,
+        "home_team": "Ole Miss",
+        "away_team": "LSU",
+        "market_spread": -1.5,
+        "predicted_margin": -10.5,
+        "pick": "Ole Miss",
+        "pick_side": "home",
+        "edge_pts": 9.0,
+        "cover_prob": 0.7127,
+        "adjusted_ranking_score": 0.5482
+      }
+    ],
+    "4": [
+      {
+        "game_id": 401856702,
+        "week": 4,
+        "home_team": "LSU",
+        "away_team": "Texas A&M",
+        "market_spread": -3.0,
+        "predicted_margin": 3.72,
+        "pick": "Texas A&M",
+        "pick_side": "away",
+        "edge_pts": 6.7,
+        "cover_prob": 0.6624,
+        "adjusted_ranking_score": 0.414
+      }
+    ],
+    "5": [
+      {
+        "game_id": 401858249,
+        "week": 5,
+        "home_team": "Clemson",
+        "away_team": "Miami",
+        "market_spread": 7.0,
+        "predicted_margin": 3.06,
+        "pick": "Clemson",
+        "pick_side": "home",
+        "edge_pts": 3.9,
+        "cover_prob": 0.597,
+        "adjusted_ranking_score": 0.2488
+      }
+    ],
+    "6": [
+      {
+        "game_id": 401858485,
+        "week": 6,
+        "home_team": "Penn State",
+        "away_team": "USC",
+        "market_spread": -1.5,
+        "predicted_margin": 1.71,
+        "pick": "USC",
+        "pick_side": "away",
+        "edge_pts": 3.2,
+        "cover_prob": 0.5793,
+        "adjusted_ranking_score": 0.4456
+      }
+    ],
+    "7": [
+      {
+        "game_id": 401858488,
+        "week": 7,
+        "home_team": "Indiana",
+        "away_team": "Ohio State",
+        "market_spread": 1.5,
+        "predicted_margin": 3.06,
+        "pick": "Ohio State",
+        "pick_side": "away",
+        "edge_pts": 1.6,
+        "cover_prob": 0.5387,
+        "adjusted_ranking_score": 0.4144
+      }
+    ],
+    "8": [
+      {
+        "game_id": 401856727,
+        "week": 8,
+        "home_team": "Alabama",
+        "away_team": "Texas A&M",
+        "market_spread": -2.5,
+        "predicted_margin": -2.15,
+        "pick": "Texas A&M",
+        "pick_side": "away",
+        "edge_pts": 0.4,
+        "cover_prob": 0.5087,
+        "adjusted_ranking_score": 0.3391
+      }
+    ],
+    "9": [
+      {
+        "game_id": 401858280,
+        "week": 9,
+        "home_team": "Florida State",
+        "away_team": "Clemson",
+        "market_spread": 1.5,
+        "predicted_margin": 1.73,
+        "pick": "Clemson",
+        "pick_side": "away",
+        "edge_pts": 0.2,
+        "cover_prob": 0.5057,
+        "adjusted_ranking_score": 0.389
+      }
+    ],
+    "10": [
+      {
+        "game_id": 401856849,
+        "week": 10,
+        "home_team": "Utah",
+        "away_team": "BYU",
+        "market_spread": -3.0,
+        "predicted_margin": -9.53,
+        "pick": "Utah",
+        "pick_side": "home",
+        "edge_pts": 6.5,
+        "cover_prob": 0.6581,
+        "adjusted_ranking_score": 0.4113
+      }
+    ],
+    "11": [
+      {
+        "game_id": 401856885,
+        "week": 11,
+        "home_team": "LSU",
+        "away_team": "Texas",
+        "market_spread": 2.5,
+        "predicted_margin": 3.88,
+        "pick": "Texas",
+        "pick_side": "away",
+        "edge_pts": 1.4,
+        "cover_prob": 0.5343,
+        "adjusted_ranking_score": 0.3562
+      }
+    ],
+    "12": [
+      {
+        "game_id": 401856754,
+        "week": 12,
+        "home_team": "Tennessee",
+        "away_team": "LSU",
+        "market_spread": 1.5,
+        "predicted_margin": -5.65,
+        "pick": "Tennessee",
+        "pick_side": "home",
+        "edge_pts": 7.2,
+        "cover_prob": 0.6722,
+        "adjusted_ranking_score": 0.517
+      }
+    ],
+    "13": [
+      {
+        "game_id": 401858313,
+        "week": 13,
+        "home_team": "North Carolina",
+        "away_team": "NC State",
+        "market_spread": 1.5,
+        "predicted_margin": 4.2,
+        "pick": "NC State",
+        "pick_side": "away",
+        "edge_pts": 2.7,
+        "cover_prob": 0.5669,
+        "adjusted_ranking_score": 0.436
+      }
+    ],
+    "15": [
+      {
+        "game_id": 401862844,
+        "week": 15,
+        "home_team": "Army",
+        "away_team": "Navy",
+        "market_spread": 2.5,
+        "predicted_margin": -4.72,
+        "pick": "Army",
+        "pick_side": "home",
+        "edge_pts": 7.2,
+        "cover_prob": 0.6737,
+        "adjusted_ranking_score": 0.4492
+      }
+    ]
+  }
+}
