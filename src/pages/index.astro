@@ -6,6 +6,7 @@ import RankingsTable from '../components/RankingsTable.astro';
 import PbpChartModal from '../components/PbpChartModal.tsx';
 import rankingsRaw from '../data/rankings.json';
 import matchupsRaw from '../data/matchups.json';
+import backtestData from '../data/betting_backtest.json';
 import {
   buildFilterOptions,
   buildTeamConferenceMap,
@@ -22,13 +23,20 @@ const filters = buildFilterOptions(rankings, matchups);
 
 // 1. Extract unique, sorted conferences for the pills
 const conferences = [...new Set(Object.values(teamConfMap))].filter(Boolean).sort();
+
+const backtestByGame = new Map(backtestData.games.map((g) => [g.game_id, g]));
 ---
 
 <Layout seasonLabel={seasonLabel}>
   <!-- 2. Pass the conferences array into your dashboard controls component -->
   <DashboardControls filters={filters} conferences={conferences}>
     <RankingsTable slot="rankings" rankings={rankings} />
-    <MatchupGrid slot="matchups" matchups={matchups} teamConfMap={teamConfMap} />
+    <MatchupGrid
+      slot="matchups"
+      matchups={matchups}
+      teamConfMap={teamConfMap}
+      backtestByGame={backtestByGame}
+    />
   </DashboardControls>
 
   <PbpChartModal client:load />

@@ -78,7 +78,7 @@ const { filters, conferences = [] } = Astro.props;
       }
     </select>
 
-    <!-- Visual Conference Pills for Matchups -->
+        <!-- Visual Conference Pills for Matchups -->
     <div class="conf-pills" id="matchupConfPills">
       <button type="button" class="pill active" data-conf="ALL">ALL</button>
       {
@@ -86,6 +86,18 @@ const { filters, conferences = [] } = Astro.props;
           <button type="button" class="pill" data-conf={conf}>{conf}</button>
         ))
       }
+    </div>
+
+    <!-- Live SU% / ATS% record for the current filter selection -->
+    <div class="record-stats" id="matchupRecordStats">
+      <div class="stat-pill" id="suStatPill">
+        <span class="stat-pill-label">SU</span>
+        <span class="stat-pill-value" id="suStatValue">—</span>
+      </div>
+      <div class="stat-pill" id="atsStatPill">
+        <span class="stat-pill-label">ATS</span>
+        <span class="stat-pill-value" id="atsStatValue">—</span>
+      </div>
     </div>
   </div>
   <slot name="matchups" />
@@ -190,3 +202,47 @@ const { filters, conferences = [] } = Astro.props;
     });
   });
 </script>
+
+<style>
+  .record-stats {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .stat-pill-label {
+    opacity: 0.6;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-pill-value {
+    font-weight: 700;
+    color: #67e8f9;
+  }
+
+  .stat-pill.no-data .stat-pill-value {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media (max-width: 720px) {
+    .record-stats {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+</style>

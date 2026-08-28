@@ -18,6 +18,7 @@ export interface Ranking {
   year: number;
   netRating: number;
   record: string;
+  conference_record: string;
   sos: number;
   sor: number;
   tags?: string[];

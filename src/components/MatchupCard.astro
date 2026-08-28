@@ -2,16 +2,30 @@
 import type { Matchup } from '../lib/types';
 import { fmtDate } from '../lib/data';
 
+interface BacktestResult {
+  game_id: number;
+  predicted_margin: number;
+  actual_margin: number;
+  abs_error: number;
+  su_pick: 'home' | 'away';
+  su_correct: boolean;
+  market_spread: number;
+  ats_pick: 'home' | 'away';
+  ats_correct: boolean;
+}
+
 interface Props {
   game: Matchup;
   homeConf?: string;
   awayConf?: string;
+  backtest?: BacktestResult;
 }
 
-const { 
-  game, 
-  homeConf = (game as any).home_conference || game.homeConference || 'Other', 
-  awayConf = (game as any).away_conference || game.awayConference || 'Other' 
+const {
+  game,
+  homeConf = (game as any).home_conference || game.homeConference || 'Other',
+  awayConf = (game as any).away_conference || game.awayConference || 'Other',
+  backtest,
 } = Astro.props;
 
 // 1. Determine score & completion state using normalized fields
@@ -29,22 +43,28 @@ if (hasScores) {
 let winProbNum: number | null = null;
 if (game.homeWinProb != null && !isNaN(game.homeWinProb)) {
   let raw = game.homeWinProb;
-  // Convert 0-1 decimals (e.g. 0.68) to percentages (68)
   if (raw <= 1.0 && raw > 0) {
     raw = raw * 100;
   }
   winProbNum = Math.min(Math.max(raw, 0), 100);
 }
 
-// 3. Analytics calculations
+// 3. Analytics calculations (upcoming games)
 const modelSpread = game.predictedMargin != null ? game.predictedMargin : null;
 const predTotal = game.predictedTotal ?? (hasScores ? (game.homePoints! + game.awayPoints!) : null);
 const dateTag = fmtDate(game.startDate);
 
-const fmtSpread = (num: number | null) => {
-  if (num === null || isNaN(num)) return 'N/A';
+const fmtSpread = (num: number | null | undefined) => {
+  if (num === null || num === undefined || isNaN(num)) return 'N/A';
   return num > 0 ? `+${num.toFixed(1)}` : num.toFixed(1);
 };
+
+// 4. Backtest result helpers (completed games only)
+const hasBacktest = !isUpcoming && !!backtest;
+const suPickTeam = backtest ? (backtest.su_pick === 'home' ? game.homeTeam : game.awayTeam) : null;
+const atsPickTeam = backtest ? (backtest.ats_pick === 'home' ? game.homeTeam : game.awayTeam) : null;
+const suClass = backtest ? (backtest.su_correct ? 'correct' : 'incorrect') : '';
+const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '';
 ---
 
 <article
@@ -56,6 +76,9 @@ const fmtSpread = (num: number | null) => {
   data-game-id={game.gameId}
   data-home-team={game.homeTeam}
   data-away-team={game.awayTeam}
+  data-has-backtest={hasBacktest ? 'true' : 'false'}
+  data-su-correct={hasBacktest ? String(backtest!.su_correct) : undefined}
+  data-ats-correct={hasBacktest ? String(backtest!.ats_correct) : undefined}
 >
   <!-- Header -->
   <header class="card-head">
@@ -77,14 +100,14 @@ const fmtSpread = (num: number | null) => {
   <div class="card-body">
     <!-- Score & Probability Gauge Row -->
     <div class="score-row">
-      <div class="score-line">
+      <div class:list={['score-line', hasBacktest && `score-${suClass}`]}>
         <span class="score-text">{scoreDisplay}</span>
       </div>
 
       {
         winProbNum !== null && (
-          <div 
-            class="prob-gauge" 
+          <div
+            class="prob-gauge"
             style={`--prob: ${winProbNum}%;`}
             title={`${game.homeTeam} Win Probability: ${winProbNum.toFixed(1)}%`}
           >
@@ -131,6 +154,43 @@ const fmtSpread = (num: number | null) => {
       )
     }
 
+    <!-- Backtest Results Section (Completed Games w/ backtest data) -->
+    {
+      hasBacktest && backtest && (
+        <div class="analytics-grid results-grid">
+          <div class:list={['stat-box', 'result-box', suClass]}>
+            <span class="stat-label">Straight Up</span>
+            <div class="stat-comparison">
+              <span class="mkt">
+                <small>PICK</small> {suPickTeam}
+              </span>
+              <span class="divider">/</span>
+              <span class={`verdict-badge ${suClass}`}>
+                {backtest.su_correct ? '✓ Correct' : '✗ Wrong'}
+              </span>
+            </div>
+          </div>
+
+          <div class:list={['stat-box', 'result-box', atsClass]}>
+            <span class="stat-label">Spread (ATS)</span>
+            <div class="stat-comparison">
+              <span class="mkt">
+                <small>MKT</small> {fmtSpread(backtest.market_spread)}
+              </span>
+              <span class="divider">/</span>
+              <span class="model">
+                <small>MODEL</small> <strong>{fmtSpread(backtest.predicted_margin)}</strong>
+              </span>
+            </div>
+            <div class="actual-line">
+              <small>ACTUAL</small> <strong>{fmtSpread(backtest.actual_margin)}</strong>
+              <span class="pick-note">Pick: {atsPickTeam} ({backtest.ats_correct ? '✓' : '✗'})</span>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     <!-- Action Section (Completed Games) -->
     {
       !isUpcoming && (
@@ -156,3 +216,100 @@ const fmtSpread = (num: number | null) => {
     }
   </div>
 </article>
+
+<style>
+  .result-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .result-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .result-box.correct {
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(34, 197, 94, 0.06);
+  }
+  .result-box.correct::before {
+    background: #4ade80;
+  }
+  .result-box.correct .stat-label {
+    color: #4ade80;
+  }
+  .result-box.correct .model strong {
+    color: #86efac;
+  }
+
+  .result-box.incorrect {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.06);
+  }
+  .result-box.incorrect::before {
+    background: #f87171;
+  }
+  .result-box.incorrect .stat-label {
+    color: #f87171;
+  }
+  .result-box.incorrect .model strong {
+    color: #fca5a5;
+  }
+
+  /* Verdict badge instead of plain "Correct"/"Wrong" text */
+  .verdict-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .verdict-badge.correct {
+    color: #4ade80;
+    background: rgba(34, 197, 94, 0.15);
+  }
+  .verdict-badge.incorrect {
+    color: #f87171;
+    background: rgba(239, 68, 68, 0.15);
+  }
+
+  .score-line.score-correct {
+    box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.4);
+    background: rgba(34, 197, 94, 0.04);
+  }
+  .score-line.score-incorrect {
+    box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.04);
+  }
+
+  .actual-line {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .actual-line small {
+    opacity: 0.55;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+  }
+  .actual-line strong {
+    font-size: 0.85rem;
+  }
+  .pick-note {
+    margin-left: auto;
+    opacity: 0.65;
+    font-size: 0.7rem;
+  }
+</style>

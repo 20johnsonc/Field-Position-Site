@@ -1,0 +1,240 @@
+---
+import type { Matchup } from '../lib/types';
+import { fmtDate } from '../lib/data';
+import { fmtSpread, pickTeamName, type BacktestResult } from '../lib/betting';
+
+interface Props {
+  game: Matchup;
+  homeConf?: string;
+  awayConf?: string;
+  backtest?: BacktestResult;
+}
+
+const {
+  game,
+  homeConf = (game as any).home_conference || game.homeConference || 'Other',
+  awayConf = (game as any).away_conference || game.awayConference || 'Other',
+  backtest,
+} = Astro.props;
+
+const scoreDisplay = `${game.awayTeam} ${game.awayPoints} - ${game.homePoints} ${game.homeTeam}`;
+const dateTag = fmtDate(game.startDate);
+
+const hasBacktest = !!backtest;
+const suPickTeam = backtest ? pickTeamName(game, backtest.su_pick) : null;
+const atsPickTeam = backtest ? pickTeamName(game, backtest.ats_pick) : null;
+const suClass = backtest ? (backtest.su_correct ? 'win' : 'loss') : '';
+const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
+---
+
+<div
+  class="matchup-card row-wrap"
+  data-year={game.year}
+  data-week={game.week}
+  data-home-conf={homeConf}
+  data-away-conf={awayConf}
+  data-game-id={game.gameId}
+  data-home-team={game.homeTeam}
+  data-away-team={game.awayTeam}
+  data-has-backtest={hasBacktest ? 'true' : 'false'}
+  data-su-correct={hasBacktest ? String(backtest!.su_correct) : undefined}
+  data-ats-correct={hasBacktest ? String(backtest!.ats_correct) : undefined}
+>
+  <button type="button" class="game-row" data-row-trigger aria-expanded="false">
+    <span class="matchup">
+      <span class="away-team">{game.awayTeam}</span>
+      <span class="at">@</span>
+      <span class="home-team">{game.homeTeam}</span>
+    </span>
+    <span class="week">
+      WK {game.week}{dateTag ? ` · ${dateTag}` : ''}
+    </span>
+    <span class="score">{scoreDisplay}</span>
+    {
+      hasBacktest && backtest ? (
+        <span class={`pill-result ${suClass}`}>{backtest.su_correct ? '✓ Correct' : '✗ Wrong'}</span>
+      ) : (
+        <span class="pill-muted">—</span>
+      )
+    }
+    {
+      hasBacktest && backtest ? (
+        <span class={`pill-result ${atsClass}`}>{backtest.ats_correct ? '✓ Correct' : '✗ Wrong'}</span>
+      ) : (
+        <span class="pill-muted">—</span>
+      )
+    }
+    <span class="chev" aria-hidden="true">›</span>
+  </button>
+
+  <div class="row-detail">
+    {
+      hasBacktest && backtest && (
+        <div class="detail-grid">
+          <div class="detail-box">
+            <span class="dl">Straight up</span>
+            <div>
+              Pick: <strong>{suPickTeam}</strong> —{' '}
+              <span class={suClass === 'win' ? 'txt-win' : 'txt-loss'}>
+                {backtest.su_correct ? 'Correct' : 'Wrong'}
+              </span>
+            </div>
+          </div>
+          <div class="detail-box">
+            <span class="dl">Spread (ATS)</span>
+            <div>MKT {fmtSpread(backtest.market_spread)} / MODEL {fmtSpread(backtest.predicted_margin)}</div>
+            <div>
+              Actual {fmtSpread(backtest.actual_margin)} — Pick: {atsPickTeam} (
+              <span class={atsClass === 'win' ? 'txt-win' : 'txt-loss'}>{backtest.ats_correct ? '✓' : '✗'}</span>)
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    <button
+      type="button"
+      class="pbp-btn"
+      data-pbp-trigger
+      data-game-id={game.gameId}
+      data-year={game.year}
+      data-home-team={game.homeTeam}
+      data-away-team={game.awayTeam}
+    >
+      <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+      <span>View Play-by-Play Chart</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .row-wrap {
+    background: var(--panel, #0d1117);
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .game-row {
+    all: unset;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.4fr 1fr 1fr 20px;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    padding: 14px 18px;
+    cursor: pointer;
+  }
+  .game-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .game-row:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: -2px;
+  }
+
+  .matchup {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .matchup .at {
+    opacity: 0.4;
+    font-weight: 400;
+    margin: 0 5px;
+  }
+  .week {
+    font-size: 12px;
+    opacity: 0.6;
+  }
+  .score {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .pill-result {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 999px;
+    width: fit-content;
+  }
+  .pill-result.win {
+    color: #4ade80;
+    background: rgba(34, 197, 94, 0.12);
+  }
+  .pill-result.loss {
+    color: #f87171;
+    background: rgba(239, 68, 68, 0.12);
+  }
+  .pill-muted {
+    font-size: 12px;
+    opacity: 0.4;
+  }
+
+  .chev {
+    text-align: right;
+    opacity: 0.5;
+    transition: transform 0.15s ease;
+  }
+  .row-wrap.expanded .chev {
+    transform: rotate(90deg);
+  }
+
+  .row-detail {
+    display: none;
+    padding: 0 18px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .row-wrap.expanded .row-detail {
+    display: block;
+    padding-top: 14px;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+  .detail-box {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .dl {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 5px;
+  }
+  .txt-win {
+    color: #4ade80;
+    font-weight: 700;
+  }
+  .txt-loss {
+    color: #f87171;
+    font-weight: 700;
+  }
+
+  @media (max-width: 640px) {
+    .game-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .chev {
+      display: none;
+    }
+  }
+</style>

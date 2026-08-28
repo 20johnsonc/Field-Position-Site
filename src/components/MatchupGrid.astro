@@ -1,22 +1,44 @@
 ---
 import MatchupCard from './MatchupCard.astro';
+import MatchupRow from './MatchupRow.astro';
 import type { Matchup } from '../lib/types';
 import { resolveMatchupConferences } from '../lib/data';
+import type { BacktestResult } from '../lib/betting';
 
 interface Props {
   matchups: Matchup[];
   teamConfMap: Record<string, string>;
+  backtestByGame?: Map<number, BacktestResult>;
 }
 
-const { matchups, teamConfMap } = Astro.props;
+const { matchups, teamConfMap, backtestByGame } = Astro.props;
 ---
 
 <div id="matchupGrid" class="grid">
   {
     matchups.map((game) => {
       const { homeConf, awayConf } = resolveMatchupConferences(game, teamConfMap);
-      return <MatchupCard game={game} homeConf={homeConf} awayConf={awayConf} />;
+      const backtest = backtestByGame?.get(game.gameId);
+      const isCompleted = game.homePoints !== undefined && game.awayPoints !== undefined;
+
+      return isCompleted ? (
+        <MatchupRow game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />
+      ) : (
+        <MatchupCard game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />
+      );
     })
   }
 </div>
 <div id="matchupEmptyState" class="empty empty-state">No games found for the selected filters.</div>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    align-items: start;
+  }
+  :global(.row-wrap) {
+    grid-column: 1 / -1;
+  }
+</style>
