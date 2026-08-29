@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T17:56:04.515396+00:00",
+  "generated_at": "2026-08-29T02:18:28.705762+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
   "backtest_cover_rate": 0.6383,
   "picks_by_week": {
