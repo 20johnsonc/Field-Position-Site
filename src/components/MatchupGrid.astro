@@ -12,33 +12,38 @@ interface Props {
 }
 
 const { matchups, teamConfMap, backtestByGame } = Astro.props;
+
+const completed = matchups.filter((g) => g.homePoints !== undefined && g.awayPoints !== undefined);
+const upcoming = matchups.filter((g) => g.homePoints === undefined || g.awayPoints === undefined);
 ---
 
-<div id="matchupGrid" class="grid">
+<div id="matchupRowList" class="row-list">
   {
-    matchups.map((game) => {
+    completed.map((game) => {
       const { homeConf, awayConf } = resolveMatchupConferences(game, teamConfMap);
       const backtest = backtestByGame?.get(game.gameId);
-      const isCompleted = game.homePoints !== undefined && game.awayPoints !== undefined;
-
-      return isCompleted ? (
-        <MatchupRow game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />
-      ) : (
-        <MatchupCard game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />
-      );
+      return <MatchupRow game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />;
     })
   }
 </div>
+
+<div id="matchupGrid" class="grid">
+  {
+    upcoming.map((game) => {
+      const { homeConf, awayConf } = resolveMatchupConferences(game, teamConfMap);
+      const backtest = backtestByGame?.get(game.gameId);
+      return <MatchupCard game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />;
+    })
+  }
+</div>
+
 <div id="matchupEmptyState" class="empty empty-state">No games found for the selected filters.</div>
 
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 18px;
-    align-items: start;
-  }
-  :global(.row-wrap) {
-    grid-column: 1 / -1;
+  .row-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5px;
   }
 </style>

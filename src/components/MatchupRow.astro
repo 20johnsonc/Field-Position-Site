@@ -2,6 +2,7 @@
 import type { Matchup } from '../lib/types';
 import { fmtDate } from '../lib/data';
 import { fmtSpread, pickTeamName, type BacktestResult } from '../lib/betting';
+import { slugifyTeam } from '../lib/data';
 
 interface Props {
   game: Matchup;
@@ -42,28 +43,34 @@ const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
 >
   <button type="button" class="game-row" data-row-trigger aria-expanded="false">
     <span class="matchup">
-      <span class="away-team">{game.awayTeam}</span>
+      <a href={`/teams/${game.year}/${slugifyTeam(game.awayTeam)}/`} class="team-link">
+        <span class="away-team">{game.awayTeam}</span>
+      </a>
       <span class="at">@</span>
-      <span class="home-team">{game.homeTeam}</span>
+      <a href={`/teams/${game.year}/${slugifyTeam(game.homeTeam)}/`} class="team-link">
+        <span class="home-team">{game.homeTeam}</span>
+      </a>
     </span>
     <span class="week">
       WK {game.week}{dateTag ? ` · ${dateTag}` : ''}
     </span>
     <span class="score">{scoreDisplay}</span>
-    {
-      hasBacktest && backtest ? (
-        <span class={`pill-result ${suClass}`}>{backtest.su_correct ? '✓ Correct' : '✗ Wrong'}</span>
-      ) : (
-        <span class="pill-muted">—</span>
-      )
-    }
-    {
-      hasBacktest && backtest ? (
-        <span class={`pill-result ${atsClass}`}>{backtest.ats_correct ? '✓ Correct' : '✗ Wrong'}</span>
-      ) : (
-        <span class="pill-muted">—</span>
-      )
-    }
+    <span class="results">
+      {
+        hasBacktest && backtest ? (
+          <>
+            <span class={`tag ${suClass}`}>
+              <small>SU</small> {backtest.su_correct ? '✓' : '✗'}
+            </span>
+            <span class={`tag ${atsClass}`}>
+              <small>ATS</small> {backtest.ats_correct ? '✓' : '✗'}
+            </span>
+          </>
+        ) : (
+          <span class="pill-muted">—</span>
+        )
+      }
+    </span>
     <span class="chev" aria-hidden="true">›</span>
   </button>
 
@@ -124,7 +131,7 @@ const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
     all: unset;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 2fr 1.2fr 1.4fr 1fr 1fr 20px;
+    grid-template-columns: 2fr 1.1fr 1.3fr auto 20px;
     gap: 14px;
     align-items: center;
     width: 100%;
@@ -157,21 +164,32 @@ const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
     font-weight: 600;
   }
 
-  .pill-result {
+  .results {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+
+  .tag {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 4px;
     font-size: 11px;
     font-weight: 700;
-    padding: 4px 9px;
-    border-radius: 999px;
-    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
   }
-  .pill-result.win {
+  .tag small {
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    opacity: 0.75;
+  }
+  .tag.win {
     color: #4ade80;
     background: rgba(34, 197, 94, 0.12);
   }
-  .pill-result.loss {
+  .tag.loss {
     color: #f87171;
     background: rgba(239, 68, 68, 0.12);
   }
@@ -236,5 +254,18 @@ const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
     .chev {
       display: none;
     }
+  }
+
+  .team-link {
+    color: #f8fafc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .team-link:hover {
+    color: #60a5fa;
   }
 </style>

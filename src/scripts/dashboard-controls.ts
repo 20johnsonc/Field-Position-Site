@@ -65,18 +65,108 @@ function applyMatchupFilters(): void {
   updateMatchupRecordStats();
 }
 
-function bindRowExpansion(): void {
-  document.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement | null;
-    const trigger = target?.closest<HTMLElement>('[data-row-trigger]');
-    if (!trigger) return;
+function updateMatchupRecordStats(): void {
+  const cards = document.querySelectorAll<HTMLElement>('.matchup-card:not(.is-hidden)');
 
-    const wrap = trigger.closest('.row-wrap');
-    if (!wrap) return;
+  let suTotal = 0;
+  let suCorrect = 0;
+  let atsTotal = 0;
+  let atsCorrect = 0;
 
-    const isExpanded = wrap.classList.toggle('expanded');
-    trigger.setAttribute('aria-expanded', String(isExpanded));
+  cards.forEach((card) => {
+    if (card.dataset.hasBacktest !== 'true') return;
+
+    if (card.dataset.suCorrect !== undefined) {
+      suTotal += 1;
+      if (card.dataset.suCorrect === 'true') suCorrect += 1;
+    }
+    if (card.dataset.atsCorrect !== undefined) {
+      atsTotal += 1;
+      if (card.dataset.atsCorrect === 'true') atsCorrect += 1;
+    }
   });
+
+  const suValueEl = document.getElementById('suStatValue');
+  const atsValueEl = document.getElementById('atsStatValue');
+  const suPill = document.getElementById('suStatPill');
+  const atsPill = document.getElementById('atsStatPill');
+
+  if (suValueEl && suPill) {
+    if (suTotal > 0) {
+      const pct = Math.round((suCorrect / suTotal) * 100);
+      suValueEl.textContent = `${pct}% (${suCorrect}-${suTotal - suCorrect})`;
+      suPill.classList.remove('no-data');
+    } else {
+      suValueEl.textContent = '—';
+      suPill.classList.add('no-data');
+    }
+  }
+
+  if (atsValueEl && atsPill) {
+    if (atsTotal > 0) {
+      const pct = Math.round((atsCorrect / atsTotal) * 100);
+      atsValueEl.textContent = `${pct}% (${atsCorrect}-${atsTotal - atsCorrect})`;
+      atsPill.classList.remove('no-data');
+    } else {
+      atsValueEl.textContent = '—';
+      atsPill.classList.add('no-data');
+    }
+  }
+}
+
+// Season total ignores week and conference — only year matters. Queries all
+// .matchup-card elements (not just visible ones), since applyMatchupFilters()
+// only toggles a .is-hidden class rather than removing games from the DOM.
+function updateMatchupSeasonStats(): void {
+  const selectedYear = getSelectValue('matchupYearFilter');
+
+  const cards = document.querySelectorAll<HTMLElement>('.matchup-card');
+
+  let suTotal = 0;
+  let suCorrect = 0;
+  let atsTotal = 0;
+  let atsCorrect = 0;
+
+  cards.forEach((card) => {
+    if (card.dataset.hasBacktest !== 'true') return;
+    if (selectedYear !== 'ALL' && card.dataset.year !== selectedYear) return;
+
+    if (card.dataset.suCorrect !== undefined) {
+      suTotal += 1;
+      if (card.dataset.suCorrect === 'true') suCorrect += 1;
+    }
+    if (card.dataset.atsCorrect !== undefined) {
+      atsTotal += 1;
+      if (card.dataset.atsCorrect === 'true') atsCorrect += 1;
+    }
+  });
+
+  const suValueEl = document.getElementById('suSeasonValue');
+  const atsValueEl = document.getElementById('atsSeasonValue');
+  const suPill = document.getElementById('suSeasonPill');
+  const atsPill = document.getElementById('atsSeasonPill');
+
+  if (suValueEl && suPill) {
+    if (suTotal > 0) {
+      const pct = Math.round((suCorrect / suTotal) * 100);
+      suValueEl.textContent = `${pct}% (${suCorrect}-${suTotal - suCorrect})`;
+      suPill.classList.remove('no-data');
+    } else {
+      suValueEl.textContent = '—';
+      suPill.classList.add('no-data');
+    }
+  }
+
+  if (atsValueEl && atsPill) {
+    if (atsTotal > 0) {
+      const pct = Math.round((atsCorrect / atsTotal) * 100);
+      atsValueEl.textContent = `${pct}% (${atsCorrect}-${atsTotal - atsCorrect})`;
+      atsPill.classList.remove('no-data');
+    } else {
+      atsValueEl.textContent = '—';
+      atsPill.classList.add('no-data');
+    }
+  }
 }
 
 function populateTeamDropdown(): void {
@@ -129,55 +219,6 @@ function applyRankingsFilters(): void {
   document.getElementById('rankingsEmptyState')?.classList.toggle('visible', visibleCount === 0);
 }
 
-function updateMatchupRecordStats(): void {
-  const cards = document.querySelectorAll<HTMLElement>('.matchup-card:not(.is-hidden)');
-
-  let suTotal = 0;
-  let suCorrect = 0;
-  let atsTotal = 0;
-  let atsCorrect = 0;
-
-  cards.forEach((card) => {
-    if (card.dataset.hasBacktest !== 'true') return;
-
-    if (card.dataset.suCorrect !== undefined) {
-      suTotal += 1;
-      if (card.dataset.suCorrect === 'true') suCorrect += 1;
-    }
-    if (card.dataset.atsCorrect !== undefined) {
-      atsTotal += 1;
-      if (card.dataset.atsCorrect === 'true') atsCorrect += 1;
-    }
-  });
-
-  const suValueEl = document.getElementById('suStatValue');
-  const atsValueEl = document.getElementById('atsStatValue');
-  const suPill = document.getElementById('suStatPill');
-  const atsPill = document.getElementById('atsStatPill');
-
-  if (suValueEl && suPill) {
-    if (suTotal > 0) {
-      const pct = Math.round((suCorrect / suTotal) * 100);
-      suValueEl.textContent = `${pct}% (${suCorrect}-${suTotal - suCorrect})`;
-      suPill.classList.remove('no-data');
-    } else {
-      suValueEl.textContent = '—';
-      suPill.classList.add('no-data');
-    }
-  }
-
-  if (atsValueEl && atsPill) {
-    if (atsTotal > 0) {
-      const pct = Math.round((atsCorrect / atsTotal) * 100);
-      atsValueEl.textContent = `${pct}% (${atsCorrect}-${atsTotal - atsCorrect})`;
-      atsPill.classList.remove('no-data');
-    } else {
-      atsValueEl.textContent = '—';
-      atsPill.classList.add('no-data');
-    }
-  }
-}
-
 const sortKeyToDataset: Record<string, keyof DOMStringMap> = {
   rank: 'rank',
   team: 'team',
@@ -228,7 +269,10 @@ function bindSortHeaders(): void {
 }
 
 function bindFilters(): void {
-  document.getElementById('matchupYearFilter')?.addEventListener('change', applyMatchupFilters);
+  document.getElementById('matchupYearFilter')?.addEventListener('change', () => {
+    applyMatchupFilters();
+    updateMatchupSeasonStats();
+  });
   document.getElementById('confFilter')?.addEventListener('change', applyMatchupFilters);
   document.getElementById('weekFilter')?.addEventListener('change', applyMatchupFilters);
 
@@ -260,6 +304,7 @@ export function initDashboardControls(): void {
   switchTab('rankings');
   applyMatchupFilters();
   applyRankingsFilters();
+  updateMatchupSeasonStats();
 }
 
 export function openPbpModal(gameId: string, year: string, homeTeam: string, awayTeam: string): void {
@@ -287,6 +332,20 @@ function bindPbpTriggers(): void {
   });
 }
 
+function bindRowExpansion(): void {
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement | null;
+    const trigger = target?.closest<HTMLElement>('[data-row-trigger]');
+    if (!trigger) return;
+
+    const wrap = trigger.closest('.row-wrap');
+    if (!wrap) return;
+
+    const isExpanded = wrap.classList.toggle('expanded');
+    trigger.setAttribute('aria-expanded', String(isExpanded));
+  });
+}
+
 bindPbpTriggers();
 bindRowExpansion();
 
@@ -297,4 +356,3 @@ declare global {
 }
 
 window.openPbpModal = openPbpModal;
-

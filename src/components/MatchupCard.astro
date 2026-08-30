@@ -1,18 +1,8 @@
 ---
 import type { Matchup } from '../lib/types';
 import { fmtDate } from '../lib/data';
-
-interface BacktestResult {
-  game_id: number;
-  predicted_margin: number;
-  actual_margin: number;
-  abs_error: number;
-  su_pick: 'home' | 'away';
-  su_correct: boolean;
-  market_spread: number;
-  ats_pick: 'home' | 'away';
-  ats_correct: boolean;
-}
+import { fmtSpread, pickTeamName, type BacktestResult } from '../lib/betting';
+import { slugifyTeam } from '../lib/data';
 
 interface Props {
   game: Matchup;
@@ -43,26 +33,24 @@ if (hasScores) {
 let winProbNum: number | null = null;
 if (game.homeWinProb != null && !isNaN(game.homeWinProb)) {
   let raw = game.homeWinProb;
+  // Convert 0-1 decimals (e.g. 0.68) to percentages (68)
   if (raw <= 1.0 && raw > 0) {
     raw = raw * 100;
   }
   winProbNum = Math.min(Math.max(raw, 0), 100);
 }
 
-// 3. Analytics calculations (upcoming games)
+// 3. Analytics calculations
 const modelSpread = game.predictedMargin != null ? game.predictedMargin : null;
 const predTotal = game.predictedTotal ?? (hasScores ? (game.homePoints! + game.awayPoints!) : null);
 const dateTag = fmtDate(game.startDate);
 
-const fmtSpread = (num: number | null | undefined) => {
-  if (num === null || num === undefined || isNaN(num)) return 'N/A';
-  return num > 0 ? `+${num.toFixed(1)}` : num.toFixed(1);
-};
-
-// 4. Backtest result helpers (completed games only)
+// 4. Backtest result helpers (completed games only — kept here for cards that
+// may still show a backtest result, e.g. a game marked upcoming but with
+// stale backtest data attached)
 const hasBacktest = !isUpcoming && !!backtest;
-const suPickTeam = backtest ? (backtest.su_pick === 'home' ? game.homeTeam : game.awayTeam) : null;
-const atsPickTeam = backtest ? (backtest.ats_pick === 'home' ? game.homeTeam : game.awayTeam) : null;
+const suPickTeam = backtest ? pickTeamName(game, backtest.su_pick) : null;
+const atsPickTeam = backtest ? pickTeamName(game, backtest.ats_pick) : null;
 const suClass = backtest ? (backtest.su_correct ? 'correct' : 'incorrect') : '';
 const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '';
 ---
@@ -84,9 +72,13 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
   <header class="card-head">
     <div class="matchup">
       <h3 class="matchup-names">
-        <span class="team away-team">{game.awayTeam}</span>
+        <a href={`/teams/${game.year}/${slugifyTeam(game.awayTeam)}/`} class="team-link">
+          <span class="away-team">{game.awayTeam}</span>
+        </a>
         <span class="at">@</span>
-        <span class="team home-team">{game.homeTeam}</span>
+        <a href={`/teams/${game.year}/${slugifyTeam(game.homeTeam)}/`} class="team-link">
+          <span class="home-team">{game.homeTeam}</span>
+        </a>
       </h3>
     </div>
     <div class="week-tag">
@@ -218,25 +210,17 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
 </article>
 
 <style>
-  .result-box {
-    position: relative;
-    overflow: hidden;
+  .result-box.correct {
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(34, 197, 94, 0.06);
   }
-
-  .result-box::before {
+  .result-box.correct::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 3px;
     height: 100%;
-  }
-
-  .result-box.correct {
-    border-color: rgba(34, 197, 94, 0.35);
-    background: rgba(34, 197, 94, 0.06);
-  }
-  .result-box.correct::before {
     background: #4ade80;
   }
   .result-box.correct .stat-label {
@@ -251,6 +235,12 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
     background: rgba(239, 68, 68, 0.06);
   }
   .result-box.incorrect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
     background: #f87171;
   }
   .result-box.incorrect .stat-label {
@@ -260,7 +250,11 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
     color: #fca5a5;
   }
 
-  /* Verdict badge instead of plain "Correct"/"Wrong" text */
+  .result-box {
+    position: relative;
+    overflow: hidden;
+  }
+
   .verdict-badge {
     display: inline-flex;
     align-items: center;
@@ -311,5 +305,18 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
     margin-left: auto;
     opacity: 0.65;
     font-size: 0.7rem;
+  }
+
+  .team-link {
+    color: #f8fafc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .team-link:hover {
+    color: #60a5fa;
   }
 </style>
