@@ -93,6 +93,41 @@ async function loadPbpData(gameId: string, year: string | number = '2025'): Prom
   throw new Error(`Play-by-play data not found for game ${gameId} (${cleanYear})`);
 }
 
+// Cumulative scores should only change on the play that actually scores.
+// Instead of guessing from neighboring values (which fails when 2+ bad
+// plays appear in a row), trust the feed's own `scoring` flag: hold the
+// last confirmed score on every non-scoring play, and only accept a new
+// value when the play is explicitly marked as a scoring play. This works
+// regardless of whether the bad reading is too high or too low, and
+// regardless of how many consecutive plays it corrupts.
+function sanitizeScoreSeries(
+  homeRaw: number[],
+  awayRaw: number[],
+  scoringFlags: boolean[]
+): { home: number[]; away: number[] } {
+  const n = homeRaw.length;
+  const homeClean: number[] = new Array(n);
+  const awayClean: number[] = new Array(n);
+
+  let lastHome = homeRaw[0] ?? 0;
+  let lastAway = awayRaw[0] ?? 0;
+
+  for (let i = 0; i < n; i++) {
+    if (scoringFlags[i]) {
+      lastHome = homeRaw[i];
+      lastAway = awayRaw[i];
+    } else if (homeRaw[i] !== lastHome || awayRaw[i] !== lastAway) {
+      console.warn(
+        `Discarded score glitch at index ${i}: reported ${homeRaw[i]}-${awayRaw[i]}, kept ${lastHome}-${lastAway} (scoring=false)`
+      );
+    }
+    homeClean[i] = lastHome;
+    awayClean[i] = lastAway;
+  }
+
+  return { home: homeClean, away: awayClean };
+}
+
 export default function PbpChartModal() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
@@ -109,8 +144,8 @@ export default function PbpChartModal() {
     setError(null);
     setActivePlayIndex(null);
     setPbpPoints([]);
-    chartRef.current?.destroy();
-    chartRef.current = null;
+    // Chart teardown happens in the chart-building effect's cleanup below,
+    // triggered automatically when `isOpen` flips to false.
   };
 
   // Keyboard Navigation: Escape to close, Left/Right arrows to step plays
@@ -155,10 +190,14 @@ export default function PbpChartModal() {
     }
   }, [activePlayIndex]);
 
+  // Listens for the open event and ONLY fetches data — never touches the
+  // canvas or Chart.js here. Building the chart is handled by a separate
+  // effect below, keyed on `pbpPoints`, so it always runs after React has
+  // committed the <canvas> to the DOM. If chart creation lived in this
+  // same async function, a cache hit (near-instant resolution) could reach
+  // `canvasRef.current` before the canvas ever mounted, silently failing.
   useEffect(() => {
     const handleOpen = async (event: Event) => {
-      console.log('open-pbp-modal received', event);
-
       const detail = (event as CustomEvent<ModalDetail>).detail;
       if (!detail || !detail.gameId) return;
 
@@ -171,147 +210,10 @@ export default function PbpChartModal() {
       try {
         const pbpData = await loadPbpData(detail.gameId, detail.year);
         setPbpPoints(pbpData);
-
-        const canvas = canvasRef.current;
-        if (!canvas) return;
-
-        if (chartRef.current) {
-          chartRef.current.destroy();
-          chartRef.current = null;
-        }
-
-        const existingChart = Chart.getChart(canvas);
-        if (existingChart) {
-          existingChart.destroy();
-        }
-
-        const ppaValues = pbpData.map((point) => Number(point.cum_net_ppa ?? 0));
-        const scoreDiffValues = pbpData.map((point) => {
-          const homeScore = point.offense === point.home ? point.offenseScore : point.defenseScore;
-          const awayScore = point.offense === point.away ? point.offenseScore : point.defenseScore;
-          return homeScore - awayScore;
-        });
-        const labels = pbpData.map((point) => point.playNumber);
-
-        const maxPpa = Math.max(1, ...ppaValues.map(Math.abs));
-        const maxDiff = Math.max(1, ...scoreDiffValues.map(Math.abs));
-
-        chartRef.current = new Chart(canvas, {
-          type: 'line',
-          data: {
-            labels,
-            datasets: [
-              {
-                label: 'Cumulative PPA',
-                data: ppaValues,
-                borderColor: '#3b82f6',
-                backgroundColor: '#3b82f6',
-                borderWidth: 2,
-                pointRadius: 0,
-                pointHoverRadius: 6,
-                pointHoverBackgroundColor: '#60a5fa',
-                fill: false,
-                tension: 0.2,
-                yAxisID: 'y',
-              },
-              {
-                label: 'Actual Score Lead',
-                data: scoreDiffValues,
-                borderColor: '#ef4444',
-                backgroundColor: '#ef4444',
-                borderWidth: 2,
-                borderDash: [5, 5],
-                stepped: 'before',
-                pointRadius: 0,
-                pointHoverRadius: 6,
-                pointHoverBackgroundColor: '#f87171',
-                fill: false,
-                yAxisID: 'y1',
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            animation: false, // Performance speedup
-            interaction: {
-              mode: 'index',
-              intersect: false,
-            },
-            onHover: (_event, activeElements: ActiveElement[]) => {
-              if (activeElements.length > 0) {
-                setActivePlayIndex(activeElements[0].index);
-              }
-            },
-            plugins: {
-              legend: {
-                labels: {
-                  color: '#9ca3af',
-                  font: { family: 'sans-serif', size: 12 },
-                  usePointStyle: true,
-                  boxWidth: 8,
-                },
-              },
-              tooltip: {
-                backgroundColor: '#1f2937',
-                titleColor: '#f3f4f6',
-                bodyColor: '#e5e7eb',
-                borderColor: '#374151',
-                borderWidth: 1,
-                padding: 10,
-                callbacks: {
-                  title: (items) => `Play #${items[0].label}`,
-                  label: (context) => {
-                    const dataIndex = context.dataIndex;
-                    const point = pbpData[dataIndex];
-
-                    if (context.datasetIndex === 1) {
-                      const homeScore = point.offense === point.home ? point.offenseScore : point.defenseScore;
-                      const awayScore = point.offense === point.away ? point.offenseScore : point.defenseScore;
-                      return `Score: ${point.away} ${awayScore} - ${homeScore} ${point.home}`;
-                    }
-
-                    const playEpa = Number(point.net_ppa ?? point.ppa ?? 0);
-                    return `Play EPA: ${playEpa > 0 ? '+' : ''}${playEpa.toFixed(2)}`;
-                  },
-                },
-              },
-            },
-            scales: {
-              x: {
-                grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                ticks: { color: '#6b7280', maxRotation: 0, autoSkip: true, maxTicksLimit: 12 },
-              },
-              y: {
-                type: 'linear',
-                position: 'left',
-                min: -(maxPpa * 1.15),
-                max: maxPpa * 1.15,
-                grid: {
-                  color: (context) =>
-                    context.tick.value === 0 ? 'rgba(255, 255, 255, 0.25)' : 'rgba(255, 255, 255, 0.05)',
-                },
-                ticks: {
-                  color: '#3b82f6',
-                  callback: (val) => Number(val).toFixed(1),
-                },
-              },
-              y1: {
-                type: 'linear',
-                position: 'right',
-                min: -(maxDiff * 1.15),
-                max: maxDiff * 1.15,
-                grid: { drawOnChartArea: false },
-                ticks: { color: '#ef4444', precision: 0 },
-              },
-            },
-          },
-        });
       } catch (loadError) {
         console.error(loadError);
         setError('Play-by-play data not available for this game.');
-        chartRef.current?.destroy();
-        chartRef.current = null;
+        setPbpPoints([]);
       } finally {
         setLoading(false);
       }
@@ -321,8 +223,166 @@ export default function PbpChartModal() {
     return () => {
       window.removeEventListener('open-pbp-modal', handleOpen);
       chartRef.current?.destroy();
+      chartRef.current = null;
     };
   }, []);
+
+  // Builds (or rebuilds) the chart whenever fresh data arrives while the
+  // modal is open. Runs as a commit-synced effect, so `canvasRef.current`
+  // is guaranteed to be populated — regardless of how fast loadPbpData
+  // resolved.
+  useEffect(() => {
+    if (!isOpen || pbpPoints.length === 0) return;
+
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    if (chartRef.current) {
+      chartRef.current.destroy();
+      chartRef.current = null;
+    }
+    const existingChart = Chart.getChart(canvas);
+    if (existingChart) {
+      existingChart.destroy();
+    }
+
+    const ppaValues = pbpPoints.map((point) => Number(point.cum_net_ppa ?? 0));
+
+    const homeScoresRaw = pbpPoints.map((point) =>
+      point.offense === point.home ? point.offenseScore : point.defenseScore
+    );
+    const awayScoresRaw = pbpPoints.map((point) =>
+      point.offense === point.away ? point.offenseScore : point.defenseScore
+    );
+    const scoringFlags = pbpPoints.map((point) => Boolean(point.scoring));
+
+    const { home: homeScoresClean, away: awayScoresClean } = sanitizeScoreSeries(
+      homeScoresRaw,
+      awayScoresRaw,
+      scoringFlags
+    );
+
+    const scoreDiffValues = homeScoresClean.map((h, i) => h - awayScoresClean[i]);
+    const labels = pbpPoints.map((point) => point.playNumber);
+
+    const maxPpa = Math.max(1, ...ppaValues.map(Math.abs));
+    const maxDiff = Math.max(1, ...scoreDiffValues.map(Math.abs));
+
+    chartRef.current = new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Cumulative PPA',
+            data: ppaValues,
+            borderColor: '#3b82f6',
+            backgroundColor: '#3b82f6',
+            borderWidth: 2,
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#60a5fa',
+            fill: false,
+            tension: 0.2,
+            yAxisID: 'y',
+          },
+          {
+            label: 'Actual Score Lead',
+            data: scoreDiffValues,
+            borderColor: '#ef4444',
+            backgroundColor: '#ef4444',
+            borderWidth: 2,
+            borderDash: [5, 5],
+            stepped: 'before',
+            pointRadius: 0,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#f87171',
+            fill: false,
+            yAxisID: 'y1',
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false, // Performance speedup
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        onHover: (_event, activeElements: ActiveElement[]) => {
+          if (activeElements.length > 0) {
+            setActivePlayIndex(activeElements[0].index);
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#9ca3af',
+              font: { family: 'sans-serif', size: 12 },
+              usePointStyle: true,
+              boxWidth: 8,
+            },
+          },
+          tooltip: {
+            backgroundColor: '#1f2937',
+            titleColor: '#f3f4f6',
+            bodyColor: '#e5e7eb',
+            borderColor: '#374151',
+            borderWidth: 1,
+            padding: 10,
+            callbacks: {
+              title: (items) => `Play #${items[0].label}`,
+              label: (context) => {
+                const dataIndex = context.dataIndex;
+                const point = pbpPoints[dataIndex];
+
+                if (context.datasetIndex === 1) {
+                  return `Score: ${point.away} ${awayScoresClean[dataIndex]} - ${homeScoresClean[dataIndex]} ${point.home}`;
+                }
+
+                const playEpa = Number(point.net_ppa ?? point.ppa ?? 0);
+                return `Play EPA: ${playEpa > 0 ? '+' : ''}${playEpa.toFixed(2)}`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#6b7280', maxRotation: 0, autoSkip: true, maxTicksLimit: 12 },
+          },
+          y: {
+            type: 'linear',
+            position: 'left',
+            min: -(maxPpa * 1.15),
+            max: maxPpa * 1.15,
+            grid: {
+              color: (context) =>
+                context.tick.value === 0 ? 'rgba(255, 255, 255, 0.25)' : 'rgba(255, 255, 255, 0.05)',
+            },
+            ticks: {
+              color: '#3b82f6',
+              callback: (val) => Number(val).toFixed(1),
+            },
+          },
+          y1: {
+            type: 'linear',
+            position: 'right',
+            min: -(maxDiff * 1.15),
+            max: maxDiff * 1.15,
+            grid: { drawOnChartArea: false },
+            ticks: { color: '#ef4444', precision: 0 },
+          },
+        },
+      },
+    });
+
+    return () => {
+      chartRef.current?.destroy();
+      chartRef.current = null;
+    };
+  }, [pbpPoints, isOpen]);
 
   const activePlay = activePlayIndex !== null ? pbpPoints[activePlayIndex] : null;
 
@@ -361,7 +421,7 @@ export default function PbpChartModal() {
         if (p.offense === p.home){
           return (
             <span style={{ ...badgeStyle, backgroundColor: '#065f46', color: '#34d399', borderColor: '#047857' }}>
-              🔥 Big Play — {p.offense} (+{ppa.toFixed(2)})
+              🔥 Big Play — {p.offense} ({ppa.toFixed(2)})
             </span>
           );
         }
@@ -384,7 +444,7 @@ export default function PbpChartModal() {
         else {
           return (
             <span style={{ ...badgeStyle, backgroundColor: '#065f46', color: '#34d399', borderColor: '#047857' }}>
-              🔥 Big Play — {p.offense} (+{ppa.toFixed(2)})
+              🔥 Big Play — {p.offense} ({ppa.toFixed(2)})
             </span>
           );
         }
@@ -421,58 +481,60 @@ export default function PbpChartModal() {
         if (event.target === event.currentTarget) closeModal();
       }}
     >
-      <div className="modal-content">
-        <div className="modal-header">
-          <h3>{title}</h3>
-          <button
-            type="button"
-            className="close-btn"
-            onClick={closeModal}
-            aria-label="Close chart"
-          >
-            &times;
-          </button>
-        </div>
-
-        <div className="chart-container" style={{ position: 'relative', height: '360px' }}>
-          {loading && <div className="empty">Loading play-by-play data…</div>}
-          {!loading && error && <div className="empty">{error}</div>}
-          <canvas
-            ref={canvasRef}
-            style={{ display: loading || error ? 'none' : 'block' }}
-          />
-        </div>
-
-        {/* Enhanced Play Context Footer */}
-        {!loading && !error && pbpPoints.length > 0 && (
-          <div className="play-detail-card" style={detailCardStyle}>
-            {activePlay ? (
-              <>
-                <div style={detailMetaStyle}>
-                  {getClock(activePlay) && <span style={badgeStyle}>{getClock(activePlay)}</span>}
-                  {getDownDistance(activePlay) && (
-                    <span style={badgeStyle}>{getDownDistance(activePlay)}</span>
-                  )}
-                  {getFieldPosition(activePlay) && (
-                    <span style={badgeStyle}>{getFieldPosition(activePlay)}</span>
-                  )}
-                  {getPossession(activePlay) && (
-                    <span style={badgeStyle}>{getPossession(activePlay)}</span>
-                  )}
-                  {getEpaBadge(activePlay)}
-                </div>
-                <div style={detailTextStyle}>
-                  {formatPlayText(activePlay.playText || 'No play description available.')}
-                </div>
-              </>
-            ) : (
-              <div style={{ color: '#6b7280', fontSize: '0.875rem', textAlign: 'center' }}>
-                Hover points or use <kbd style={kbdStyle}>←</kbd> / <kbd style={kbdStyle}>→</kbd> arrow keys to inspect play details
-              </div>
-            )}
+      {isOpen && (
+        <div className="modal-content">
+          <div className="modal-header">
+            <h3>{title}</h3>
+            <button
+              type="button"
+              className="close-btn"
+              onClick={closeModal}
+              aria-label="Close chart"
+            >
+              &times;
+            </button>
           </div>
-        )}
-      </div>
+
+          <div className="chart-container" style={{ position: 'relative', height: '360px' }}>
+            {loading && <div className="empty">Loading play-by-play data…</div>}
+            {!loading && error && <div className="empty">{error}</div>}
+            <canvas
+              ref={canvasRef}
+              style={{ display: loading || error ? 'none' : 'block' }}
+            />
+          </div>
+
+          {/* Enhanced Play Context Footer */}
+          {!loading && !error && pbpPoints.length > 0 && (
+            <div className="play-detail-card" style={detailCardStyle}>
+              {activePlay ? (
+                <>
+                  <div style={detailMetaStyle}>
+                    {getClock(activePlay) && <span style={badgeStyle}>{getClock(activePlay)}</span>}
+                    {getDownDistance(activePlay) && (
+                      <span style={badgeStyle}>{getDownDistance(activePlay)}</span>
+                    )}
+                    {getFieldPosition(activePlay) && (
+                      <span style={badgeStyle}>{getFieldPosition(activePlay)}</span>
+                    )}
+                    {getPossession(activePlay) && (
+                      <span style={badgeStyle}>{getPossession(activePlay)}</span>
+                    )}
+                    {getEpaBadge(activePlay)}
+                  </div>
+                  <div style={detailTextStyle}>
+                    {formatPlayText(activePlay.playText || 'No play description available.')}
+                  </div>
+                </>
+              ) : (
+                <div style={{ color: '#6b7280', fontSize: '0.875rem', textAlign: 'center' }}>
+                  Hover points or use <kbd style={kbdStyle}>←</kbd> / <kbd style={kbdStyle}>→</kbd> arrow keys to inspect play details
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

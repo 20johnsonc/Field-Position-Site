@@ -49,11 +49,24 @@ const getRecordSortValue = (record: string) => {
             data-sor={row.sor}
             data-conference={row.conference}
           >
-            <td class="rank">{row.rank}</td>
+            <td class="rank">
+              <span class="rank-num">{row.rank}</span>
+            </td>
             <td class="team">
               <a href={`/teams/${row.year}/${slugifyTeam(row.team)}/`} class="team-link">
                 {row.team}
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
+                <div class="rank-wrapper">
+                  {row.rank_change != null && (
+                    <span 
+                      class={`rank-change ${Number(row.rank_change) > 0 ? 'up' : Number(row.rank_change) < 0 ? 'down' : 'neutral'}`}
+                      title={row.previous_rank ? `Previous Rank: ${row.previous_rank}` : 'No change'}
+                    >
+                      {Number(row.rank_change) > 0 ? '▲' : Number(row.rank_change) < 0 ? '▼' : ''}
+                      {Number(row.rank_change) !== 0 ? <span class="change-val">{Math.abs(Number(row.rank_change))}</span> : ''}
+                    </span>
+                  )}
+                </div>
               </a>
             </td>
             <td class="num rating">{formatRating(row.netRating)}</td>
@@ -92,10 +105,46 @@ const getRecordSortValue = (record: string) => {
 <div id="rankingsEmptyState" class="empty empty-state">No rankings found matching filters.</div>
 
 <style>
+  /* --- New Rank Indicator Styles --- */
+  .rank-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .rank-num {
+    min-width: 20px; /* Keeps arrows aligned if single/double digits change */
+  }
+
+  .rank-change {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .rank-change.up {
+    color: #22c55e; /* Tailwind green-500 */
+  }
+
+  .rank-change.down {
+    color: #ef4444; /* Tailwind red-500 */
+  }
+
+  .rank-change.neutral {
+    color: #64748b; /* Tailwind slate-500 */
+    font-weight: 900;
+  }
+  /* --------------------------------- */
+
   .team-link,
   .team-link:visited {
     color: #ffffff; 
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   .team-link:hover {

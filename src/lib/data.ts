@@ -42,6 +42,8 @@ export function normalizeRankings(raw: RankingsFile | Record<string, unknown>[])
     sor: num(row.SOR ?? row.sor ?? row.strength_of_record),
     sos_rank: num(row.sos_rank ?? row.SOS_Rank ?? row.sos_Rank),
     sor_rank: num(row.sor_rank ?? row.SOR_Rank ?? row.sor_Rank),
+    rank_change: row.rank_change as number | undefined,
+    previous_rank: row.previous_rank as number | undefined,
     tags: Array.isArray(row.tags) ? (row.tags as string[]) : [],
     trajectory: Array.isArray(row.trajectory) ? (row.trajectory as any[]) : [],
     gameLog: Array.isArray(row.game_log) ? (row.game_log as any[]) : [],

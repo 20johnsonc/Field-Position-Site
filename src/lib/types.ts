@@ -26,6 +26,8 @@ export interface Ranking {
   gameLog?: GameLogEntry[];
   sos_rank: number;
   sor_rank: number;
+  rank_change?: number;
+  previous_rank?: number;
 }
 
 export interface Matchup {
