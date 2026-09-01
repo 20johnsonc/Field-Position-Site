@@ -4,6 +4,8 @@ import MatchupRow from './MatchupRow.astro';
 import type { Matchup } from '../lib/types';
 import { resolveMatchupConferences } from '../lib/data';
 import type { BacktestResult } from '../lib/betting';
+import { loadWeekPbpDataServer } from '../lib/pbpServer';
+import { getTopPlays, toDisplayPlay, type GameMeta, type DisplayPlay } from '../lib/pbp';
 
 interface Props {
   matchups: Matchup[];
@@ -15,14 +17,77 @@ const { matchups, teamConfMap, backtestByGame } = Astro.props;
 
 const completed = matchups.filter((g) => g.homePoints !== undefined && g.awayPoints !== undefined);
 const upcoming = matchups.filter((g) => g.homePoints === undefined || g.awayPoints === undefined);
+
+// NOTE: adjust field names to whatever your Matchup type actually calls
+// year/homeTeam/awayTeam if they differ.
+const weekGames: GameMeta[] = completed.map((g) => ({
+  gameId: String(g.gameId),
+  year: g.year,
+  homeTeam: g.homeTeam,
+  awayTeam: g.awayTeam,
+}));
+
+const { byGame, errors } = await loadWeekPbpDataServer(weekGames);
+
+if (errors.length > 0) {
+  console.warn(
+    `Weekly leaderboard: ${errors.length}/${weekGames.length} games failed to load`,
+    errors
+  );
+}
+
+// Two views of the same per-game data, capped at different sizes:
+// - a small inline top-5 baked directly into each MatchupRow (static —
+//   doesn't need to react to filters, since hiding the row hides its box)
+// - a larger top-15-per-game slice embedded as JSON for the client script
+//   to re-merge/re-rank across whichever games are currently visible
+const inlineTopPlaysByGame = new Map<string, ReturnType<typeof getTopPlays>>();
+const clientPlaysByGame: Record<string, DisplayPlay[]> = {};
+
+byGame.forEach((plays, gameId) => {
+  inlineTopPlaysByGame.set(gameId, getTopPlays(plays, 5));
+  clientPlaysByGame[gameId] = getTopPlays(plays, 15).map(toDisplayPlay);
+});
+
+// Escape `<` so a play's text can never accidentally close the script tag
+// early (e.g. if playText ever contained "</script>").
+const pbpDataJson = JSON.stringify(clientPlaysByGame).replace(/</g, '\\u003c');
 ---
+
+<div class="panel" id="topPlaysWrapper">
+  <button type="button" class="panel-toggle" id="topPlaysToggle" aria-expanded="false">
+    <span class="panel-title">
+      Top 10 Plays This Week
+      <span class="panel-count" id="topPlaysToggleCount"></span>
+    </span>
+    <svg class="panel-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 6 15 12 9 18" />
+    </svg>
+  </button>
+  <div class="panel-body">
+    <div id="topPlaysPanel">
+      <div class="empty">No notable plays yet.</div>
+    </div>
+  </div>
+</div>
+
+<script id="pbp-week-data" type="application/json" set:html={pbpDataJson} />
 
 <div id="matchupRowList" class="row-list">
   {
     completed.map((game) => {
       const { homeConf, awayConf } = resolveMatchupConferences(game, teamConfMap);
       const backtest = backtestByGame?.get(game.gameId);
-      return <MatchupRow game={game} homeConf={homeConf} awayConf={awayConf} backtest={backtest} />;
+      const topPlays = inlineTopPlaysByGame.get(String(game.gameId)) ?? [];
+      return (
+        <MatchupRow
+          game={game}
+          homeConf={homeConf}
+          awayConf={awayConf}
+          backtest={backtest}
+          topPlays={topPlays}
+        />
+      );
     })
   }
 </div>
@@ -41,9 +106,125 @@ const upcoming = matchups.filter((g) => g.homePoints === undefined || g.awayPoin
 
 <style>
   .row-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-bottom: 5px;
+  }
+  .panel {
+    background: var(--panel, #0d1117);
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .panel-toggle {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 18px;
+    cursor: pointer;
+  }
+  .panel-toggle:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .panel-toggle:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: -2px;
+  }
+  .panel-title {
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel-count {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.5;
+  }
+  .panel-chev {
+    opacity: 0.5;
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+  }
+  #topPlaysWrapper.expanded .panel-chev {
+    transform: rotate(90deg);
+  }
+  .panel-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+  #topPlaysWrapper.expanded .panel-body {
+    max-height: 3000px; /* generous cap so 10 full-text plays never get clipped */
+    padding: 0 18px 16px;
+  }
+</style>
+
+<style is:global>
+  /* Rendered into #topPlaysPanel via innerHTML by pbpTopPlaysClient.ts,
+     so these can't be Astro-scoped (scoped styles only attach to elements
+     present at build time). Prefixed week- to avoid clashing with the
+     similarly-named .plays-list styles scoped inside MatchupRow.astro. */
+  .week-plays-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .week-play-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+  .week-play-rank {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .week-play-body {
+    flex: 1;
+    min-width: 0;
+  }
+  .week-play-matchup {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+  .week-play-text {
+    color: #e5e7eb;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .week-play-impact {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .week-play-impact.offense {
+    color: #4ade80;
+  }
+  .week-play-impact.defense {
+    color: #60a5fa;
   }
 </style>

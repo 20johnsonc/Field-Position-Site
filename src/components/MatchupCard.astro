@@ -30,14 +30,21 @@ if (hasScores) {
 }
 
 // 2. Win Probability Calculation (0-100%)
-let winProbNum: number | null = null;
+let homeWinProbNum: number | null = null;
 if (game.homeWinProb != null && !isNaN(game.homeWinProb)) {
   let raw = game.homeWinProb;
-  // Convert 0-1 decimals (e.g. 0.68) to percentages (68)
   if (raw <= 1.0 && raw > 0) {
     raw = raw * 100;
   }
-  winProbNum = Math.min(Math.max(raw, 0), 100);
+  homeWinProbNum = Math.min(Math.max(raw, 0), 100);
+}
+let awayWinProbNum: number | null = null;
+if (game.awayWinProb != null && !isNaN(game.awayWinProb)) {
+  let raw = game.awayWinProb;
+  if (raw <= 1.0 && raw > 0) {
+    raw = raw * 100;
+  }
+  awayWinProbNum = Math.min(Math.max(raw, 0), 100);
 }
 
 // 3. Analytics calculations
@@ -45,9 +52,7 @@ const modelSpread = game.predictedMargin != null ? game.predictedMargin : null;
 const predTotal = game.predictedTotal ?? (hasScores ? (game.homePoints! + game.awayPoints!) : null);
 const dateTag = fmtDate(game.startDate);
 
-// 4. Backtest result helpers (completed games only — kept here for cards that
-// may still show a backtest result, e.g. a game marked upcoming but with
-// stale backtest data attached)
+// 4. Backtest result helpers
 const hasBacktest = !isUpcoming && !!backtest;
 const suPickTeam = backtest ? pickTeamName(game, backtest.su_pick) : null;
 const atsPickTeam = backtest ? pickTeamName(game, backtest.ats_pick) : null;
@@ -70,17 +75,6 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
 >
   <!-- Header -->
   <header class="card-head">
-    <div class="matchup">
-      <h3 class="matchup-names">
-        <a href={`/teams/${game.year}/${slugifyTeam(game.awayTeam)}/`} class="team-link">
-          <span class="away-team">{game.awayTeam}</span>
-        </a>
-        <span class="at">@</span>
-        <a href={`/teams/${game.year}/${slugifyTeam(game.homeTeam)}/`} class="team-link">
-          <span class="home-team">{game.homeTeam}</span>
-        </a>
-      </h3>
-    </div>
     <div class="week-tag">
       <span>WK {game.week}</span>
       {dateTag && <span class="dot-sep">•</span>}
@@ -90,25 +84,47 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
 
   <!-- Card Body -->
   <div class="card-body">
-    <!-- Score & Probability Gauge Row -->
-    <div class="score-row">
-      <div class:list={['score-line', hasBacktest && `score-${suClass}`]}>
-        <span class="score-text">{scoreDisplay}</span>
-      </div>
-
-      {
-        winProbNum !== null && (
+    
+    <!-- Grouped Matchup & Gauge Grid -->
+    <div class="matchup-grid">
+      <!-- Away Side -->
+      <div class="team-col">
+        <a href={`/teams/${game.year}/${slugifyTeam(game.awayTeam)}/`} class="team-link" title={game.awayTeam}>
+          <span class="away-team">{game.awayTeam}</span>
+        </a>
+        {awayWinProbNum !== null && (
           <div
             class="prob-gauge"
-            style={`--prob: ${winProbNum}%;`}
-            title={`${game.homeTeam} Win Probability: ${winProbNum.toFixed(1)}%`}
+            style={`--prob: ${awayWinProbNum}%;`}
+            title={`${game.awayTeam} Win Probability: ${awayWinProbNum.toFixed(1)}%`}
           >
             <div class="gauge-center">
-              <span>{Math.round(winProbNum)}%</span>
+              <span>{Math.round(awayWinProbNum)}%</span>
             </div>
           </div>
-        )
-      }
+        )}
+      </div>
+
+      <!-- Center Divider -->
+      <div class="vs-divider">@</div>
+
+      <!-- Home Side -->
+      <div class="team-col">
+        <a href={`/teams/${game.year}/${slugifyTeam(game.homeTeam)}/`} class="team-link" title={game.homeTeam}>
+          <span class="home-team">{game.homeTeam}</span>
+        </a>
+        {homeWinProbNum !== null && (
+          <div
+            class="prob-gauge"
+            style={`--prob: ${homeWinProbNum}%;`}
+            title={`${game.homeTeam} Win Probability: ${homeWinProbNum.toFixed(1)}%`}
+          >
+            <div class="gauge-center">
+              <span>{Math.round(homeWinProbNum)}%</span>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
 
     <!-- Analytics Section (Upcoming Games) -->
@@ -210,6 +226,64 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
 </article>
 
 <style>
+  /* Tightened padding to remove the large header-to-body gap */
+  .card-head {
+    padding: 0 0 6px 0;
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 0px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Grid layout for team names & win probability gauges */
+  .matchup-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--card-border);
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .team-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .vs-divider {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .team-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+  }
+  
+  .team-link:hover {
+    color: var(--accent-primary);
+  }
+
+  /* Result Box styles */
   .result-box.correct {
     border-color: rgba(34, 197, 94, 0.35);
     background: rgba(34, 197, 94, 0.06);
@@ -273,15 +347,6 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
     background: rgba(239, 68, 68, 0.15);
   }
 
-  .score-line.score-correct {
-    box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.4);
-    background: rgba(34, 197, 94, 0.04);
-  }
-  .score-line.score-incorrect {
-    box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.4);
-    background: rgba(239, 68, 68, 0.04);
-  }
-
   .actual-line {
     margin-top: 8px;
     padding-top: 8px;
@@ -305,18 +370,5 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
     margin-left: auto;
     opacity: 0.65;
     font-size: 0.7rem;
-  }
-
-  .team-link {
-    color: #f8fafc;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: color 0.2s ease;
-  }
-  
-  .team-link:hover {
-    color: #60a5fa;
   }
 </style>

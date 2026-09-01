@@ -1,3 +1,5 @@
+import { renderVisibleTopPlays, bindTopPlaysToggle } from './pbpTopPlaysClient';
+
 let initialized = false;
 
 type SortDirection = Record<string, boolean>;
@@ -63,6 +65,7 @@ function applyMatchupFilters(): void {
 
   document.getElementById('matchupEmptyState')?.classList.toggle('visible', visibleCount === 0);
   updateMatchupRecordStats();
+  renderVisibleTopPlays();
 }
 
 function updateMatchupRecordStats(): void {
@@ -300,6 +303,7 @@ export function initDashboardControls(): void {
   bindTabs();
   bindFilters();
   bindSortHeaders();
+  bindTopPlaysToggle();
   populateTeamDropdown();
   switchTab('rankings');
   applyMatchupFilters();

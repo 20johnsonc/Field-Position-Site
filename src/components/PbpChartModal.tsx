@@ -10,6 +10,8 @@ import {
   Tooltip,
   type ActiveElement,
 } from 'chart.js';
+import { type PbpPoint } from '../lib/pbp';
+import { loadPbpData } from '../lib/pbpClient';
 
 Chart.register(
   LineController,
@@ -21,37 +23,6 @@ Chart.register(
   Tooltip
 );
 
-export interface PbpPoint {
-  id: string;
-  driveId: string;
-  driveNumber: number;
-  playNumber: number;
-  home: string;
-  away: string;
-  offense: string;
-  offenseConference?: string;
-  defense: string;
-  defenseConference?: string;
-  offenseScore: number;
-  defenseScore: number;
-  score_diff: number;
-  period: number;
-  clock: string | { displayValue?: string };
-  clock_seconds?: number;
-  wallclock?: string;
-  down: number;
-  distance: number;
-  yardline: number;
-  yardsToGoal: number;
-  yardsGained: number;
-  scoring: boolean;
-  playType: string;
-  playText: string;
-  ppa?: number;
-  net_ppa?: number;
-  cum_net_ppa: number;
-}
-
 interface ModalDetail {
   gameId: string;
   year: string | number;
@@ -59,47 +30,12 @@ interface ModalDetail {
   awayTeam: string;
 }
 
-// In-Memory Cache for low-latency re-opens
-const pbpCache = new Map<string, PbpPoint[]>();
-
-async function loadPbpData(gameId: string, year: string | number = '2025'): Promise<PbpPoint[]> {
-  const isInvalidYear = typeof year === 'string' && /[a-zA-Z]/.test(year);
-  const cleanYear = isInvalidYear || !year ? '2025' : String(year).trim();
-  const cacheKey = `${cleanYear}_${gameId}`;
-
-  if (pbpCache.has(cacheKey)) {
-    return pbpCache.get(cacheKey)!;
-  }
-
-  const candidates = [
-    `/pbp/${year}/${gameId}.json`,
-    `/pbp/${cleanYear}/pbp_${gameId}.json`,
-    `/pbp/${gameId}.json`,
-  ];
-
-  for (const url of candidates) {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data: PbpPoint[] = await response.json();
-        pbpCache.set(cacheKey, data);
-        return data;
-      }
-    } catch {
-      // Try next candidate path
-    }
-  }
-
-  throw new Error(`Play-by-play data not found for game ${gameId} (${cleanYear})`);
-}
-
 // Cumulative scores should only change on the play that actually scores.
-// Instead of guessing from neighboring values (which fails when 2+ bad
-// plays appear in a row), trust the feed's own `scoring` flag: hold the
-// last confirmed score on every non-scoring play, and only accept a new
-// value when the play is explicitly marked as a scoring play. This works
-// regardless of whether the bad reading is too high or too low, and
-// regardless of how many consecutive plays it corrupts.
+// Trusts the feed's own `scoring` flag: holds the last confirmed score on
+// every non-scoring play, and only accepts a new value when the play is
+// explicitly marked as a scoring play. Works regardless of whether a bad
+// reading is too high or too low, and regardless of how many consecutive
+// plays it corrupts.
 function sanitizeScoreSeries(
   homeRaw: number[],
   awayRaw: number[],
@@ -144,11 +80,8 @@ export default function PbpChartModal() {
     setError(null);
     setActivePlayIndex(null);
     setPbpPoints([]);
-    // Chart teardown happens in the chart-building effect's cleanup below,
-    // triggered automatically when `isOpen` flips to false.
   };
 
-  // Keyboard Navigation: Escape to close, Left/Right arrows to step plays
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
@@ -172,7 +105,6 @@ export default function PbpChartModal() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, pbpPoints.length]);
 
-  // Programmatically highlight/hover point when using arrow keys
   useEffect(() => {
     if (chartRef.current && activePlayIndex !== null && activePlayIndex >= 0) {
       chartRef.current.setActiveElements([
@@ -190,12 +122,7 @@ export default function PbpChartModal() {
     }
   }, [activePlayIndex]);
 
-  // Listens for the open event and ONLY fetches data — never touches the
-  // canvas or Chart.js here. Building the chart is handled by a separate
-  // effect below, keyed on `pbpPoints`, so it always runs after React has
-  // committed the <canvas> to the DOM. If chart creation lived in this
-  // same async function, a cache hit (near-instant resolution) could reach
-  // `canvasRef.current` before the canvas ever mounted, silently failing.
+  // Fetches data only — never touches the canvas or Chart.js here.
   useEffect(() => {
     const handleOpen = async (event: Event) => {
       const detail = (event as CustomEvent<ModalDetail>).detail;
@@ -227,10 +154,9 @@ export default function PbpChartModal() {
     };
   }, []);
 
-  // Builds (or rebuilds) the chart whenever fresh data arrives while the
-  // modal is open. Runs as a commit-synced effect, so `canvasRef.current`
-  // is guaranteed to be populated — regardless of how fast loadPbpData
-  // resolved.
+  // Builds/rebuilds the chart whenever fresh data arrives while open.
+  // Runs after React has committed the <canvas> to the DOM, so a fast
+  // cache hit on reopen can't race ahead of the canvas mounting.
   useEffect(() => {
     if (!isOpen || pbpPoints.length === 0) return;
 
@@ -305,7 +231,7 @@ export default function PbpChartModal() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        animation: false, // Performance speedup
+        animation: false,
         interaction: {
           mode: 'index',
           intersect: false,
@@ -504,7 +430,6 @@ export default function PbpChartModal() {
             />
           </div>
 
-          {/* Enhanced Play Context Footer */}
           {!loading && !error && pbpPoints.length > 0 && (
             <div className="play-detail-card" style={detailCardStyle}>
               {activePlay ? (
