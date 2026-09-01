@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "year": 2021,
+  "week": 16,
+  "games": [
+    {
+      "game_id": 401331215,
+      "week": 16,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Army",
+      "away_team": "Missouri",
+      "home_points": 24,
+      "away_points": 22,
+      "actual_margin": 2,
+      "actual_total": 46,
+      "start_date": "2021-12-23 01:00:00+00:00",
+      "home_conference": "FBS Independents",
+      "away_conference": "SEC",
+      "is_playoff": true,
+      "round_name": "Lockheed Martin Armed Forces Bowl",
+      "bowl_name": "Lockheed Martin Armed Forces Bowl"
+    },
+    {
+      "game_id": 401331242,
+      "week": 16,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Alabama",
+      "away_team": "Georgia",
+      "home_points": 18,
+      "away_points": 33,
+      "actual_margin": -15,
+      "actual_total": 51,
+      "start_date": "2022-01-11 01:00:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "SEC",
+      "is_playoff": true,
+      "round_name": "Championship",
+      "bowl_name": null
+    }
+  ]
+}

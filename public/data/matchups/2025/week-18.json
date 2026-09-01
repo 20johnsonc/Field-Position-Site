@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "year": 2025,
+  "week": 18,
+  "games": [
+    {
+      "game_id": 401769076,
+      "week": 18,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Indiana",
+      "away_team": "Miami",
+      "home_points": 27,
+      "away_points": 21,
+      "actual_margin": 6,
+      "actual_total": 48,
+      "start_date": "2026-01-20 00:30:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "ACC",
+      "is_playoff": true,
+      "round_name": "Championship",
+      "bowl_name": null
+    }
+  ]
+}

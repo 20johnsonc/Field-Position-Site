@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "year": 2023,
+  "week": 16,
+  "games": [
+    {
+      "game_id": 401551789,
+      "week": 16,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Michigan",
+      "away_team": "Washington",
+      "home_points": 34,
+      "away_points": 13,
+      "actual_margin": 21,
+      "actual_total": 47,
+      "start_date": "2024-01-09 00:30:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Pac-12",
+      "is_playoff": true,
+      "round_name": "Championship",
+      "bowl_name": null
+    }
+  ]
+}

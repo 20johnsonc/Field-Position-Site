@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "year": 2024,
+  "week": 17,
+  "games": [
+    {
+      "game_id": 401677090,
+      "week": 17,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Navy",
+      "away_team": "Oklahoma",
+      "home_points": 21,
+      "away_points": 20,
+      "actual_margin": 1,
+      "actual_total": 41,
+      "start_date": "2024-12-27 17:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "SEC",
+      "is_playoff": true,
+      "round_name": "Lockheed Martin Armed Forces Bowl",
+      "bowl_name": "Lockheed Martin Armed Forces Bowl"
+    },
+    {
+      "game_id": 401677100,
+      "week": 17,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Army",
+      "away_team": "Louisiana Tech",
+      "home_points": 27,
+      "away_points": 6,
+      "actual_margin": 21,
+      "actual_total": 33,
+      "start_date": "2024-12-29 02:15:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "Conference USA",
+      "is_playoff": true,
+      "round_name": "Radiance Technologies Independence Bowl",
+      "bowl_name": "Radiance Technologies Independence Bowl"
+    }
+  ]
+}

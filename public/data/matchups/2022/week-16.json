@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "year": 2022,
+  "week": 16,
+  "games": [
+    {
+      "game_id": 401442010,
+      "week": 16,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Georgia",
+      "away_team": "TCU",
+      "home_points": 65,
+      "away_points": 7,
+      "actual_margin": 58,
+      "actual_total": 72,
+      "start_date": "2023-01-10 00:30:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "Big 12",
+      "is_playoff": true,
+      "round_name": "Championship",
+      "bowl_name": null
+    }
+  ]
+}

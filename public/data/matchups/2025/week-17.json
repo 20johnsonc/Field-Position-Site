@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "year": 2025,
+  "week": 17,
+  "games": [
+    {
+      "game_id": 401778318,
+      "week": 17,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Army",
+      "away_team": "UConn",
+      "home_points": 41,
+      "away_points": 16,
+      "actual_margin": 25,
+      "actual_total": 57,
+      "start_date": "2025-12-27 19:15:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "FBS Independents",
+      "is_playoff": true,
+      "round_name": "Wasabi Fenway Bowl",
+      "bowl_name": "Wasabi Fenway Bowl"
+    },
+    {
+      "game_id": 401769075,
+      "week": 17,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Ole Miss",
+      "away_team": "Miami",
+      "home_points": 27,
+      "away_points": 31,
+      "actual_margin": -4,
+      "actual_total": 58,
+      "start_date": "2026-01-09 00:30:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "ACC",
+      "is_playoff": true,
+      "round_name": "Semifinal",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401769074,
+      "week": 17,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Indiana",
+      "away_team": "Oregon",
+      "home_points": 56,
+      "away_points": 22,
+      "actual_margin": 34,
+      "actual_total": 78,
+      "start_date": "2026-01-10 00:30:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": true,
+      "round_name": "Semifinal",
+      "bowl_name": null
+    }
+  ]
+}
