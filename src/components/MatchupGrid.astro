@@ -4,54 +4,21 @@ import MatchupRow from './MatchupRow.astro';
 import type { Matchup } from '../lib/types';
 import { resolveMatchupConferences } from '../lib/data';
 import type { BacktestResult } from '../lib/betting';
-import { loadWeekPbpDataServer } from '../lib/pbpServer';
-import { getTopPlays, toDisplayPlay, type GameMeta, type DisplayPlay } from '../lib/pbp';
+import type { DisplayPlay } from '../lib/pbp';
 
 interface Props {
   matchups: Matchup[];
   teamConfMap: Record<string, string>;
   backtestByGame?: Map<number, BacktestResult>;
+  topPlaysByGame?: Record<string, DisplayPlay[]>;
 }
 
-const { matchups, teamConfMap, backtestByGame } = Astro.props;
+const { matchups, teamConfMap, backtestByGame, topPlaysByGame = {} } = Astro.props;
 
 const completed = matchups.filter((g) => g.homePoints !== undefined && g.awayPoints !== undefined);
 const upcoming = matchups.filter((g) => g.homePoints === undefined || g.awayPoints === undefined);
 
-// NOTE: adjust field names to whatever your Matchup type actually calls
-// year/homeTeam/awayTeam if they differ.
-const weekGames: GameMeta[] = completed.map((g) => ({
-  gameId: String(g.gameId),
-  year: g.year,
-  homeTeam: g.homeTeam,
-  awayTeam: g.awayTeam,
-}));
-
-const { byGame, errors } = await loadWeekPbpDataServer(weekGames);
-
-if (errors.length > 0) {
-  console.warn(
-    `Weekly leaderboard: ${errors.length}/${weekGames.length} games failed to load`,
-    errors
-  );
-}
-
-// Two views of the same per-game data, capped at different sizes:
-// - a small inline top-5 baked directly into each MatchupRow (static —
-//   doesn't need to react to filters, since hiding the row hides its box)
-// - a larger top-15-per-game slice embedded as JSON for the client script
-//   to re-merge/re-rank across whichever games are currently visible
-const inlineTopPlaysByGame = new Map<string, ReturnType<typeof getTopPlays>>();
-const clientPlaysByGame: Record<string, DisplayPlay[]> = {};
-
-byGame.forEach((plays, gameId) => {
-  inlineTopPlaysByGame.set(gameId, getTopPlays(plays, 5));
-  clientPlaysByGame[gameId] = getTopPlays(plays, 15).map(toDisplayPlay);
-});
-
-// Escape `<` so a play's text can never accidentally close the script tag
-// early (e.g. if playText ever contained "</script>").
-const pbpDataJson = JSON.stringify(clientPlaysByGame).replace(/</g, '\\u003c');
+const pbpDataJson = JSON.stringify(topPlaysByGame).replace(/</g, '\\u003c');
 ---
 
 <div class="panel" id="topPlaysWrapper">
@@ -78,7 +45,7 @@ const pbpDataJson = JSON.stringify(clientPlaysByGame).replace(/</g, '\\u003c');
     completed.map((game) => {
       const { homeConf, awayConf } = resolveMatchupConferences(game, teamConfMap);
       const backtest = backtestByGame?.get(game.gameId);
-      const topPlays = inlineTopPlaysByGame.get(String(game.gameId)) ?? [];
+      const topPlays = (topPlaysByGame[String(game.gameId)] ?? []).slice(0, 5);
       return (
         <MatchupRow
           game={game}
@@ -104,7 +71,9 @@ const pbpDataJson = JSON.stringify(clientPlaysByGame).replace(/</g, '\\u003c');
 
 <div id="matchupEmptyState" class="empty empty-state">No games found for the selected filters.</div>
 
-<style>
+<!-- ...unchanged <style> blocks... -->
+
+<style is:global>
   .row-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

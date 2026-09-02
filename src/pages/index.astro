@@ -1,35 +1,52 @@
 ---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import Layout from '../layouts/Layout.astro';
 import DashboardControls from '../components/DashboardControls.astro';
 import MatchupGrid from '../components/MatchupGrid.astro';
 import RankingsTable from '../components/RankingsTable.astro';
 import PbpChartModal from '../components/PbpChartModal.tsx';
-import rankingsRaw from '../data/rankings.json';
-import matchupsRaw from '../data/matchups.json';
-import backtestData from '../data/betting_backtest.json';
-import {
-  buildFilterOptions,
-  buildTeamConferenceMap,
-  getSeasonLabel,
-  normalizeMatchups,
-  normalizeRankings,
-} from '../lib/data';
+import matchupsIndex from '../../public/data/matchups-index.json';
+import { buildTeamConferenceMap, normalizeMatchups, normalizeRankings } from '../lib/data';
 
-const rankings = normalizeRankings(rankingsRaw);
+const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
+
+function loadJson(relPath: string, fallback: unknown = {}) {
+  try {
+    return JSON.parse(readFileSync(join(process.cwd(), 'public', relPath), 'utf-8'));
+  } catch {
+    return fallback;
+  }
+}
+
+const rankings = years.flatMap((year: number) => {
+  const raw = loadJson(`data/rankings/${year}.json`, {});
+  const rows = Array.isArray(raw) ? raw : (raw?.rankings ?? []);
+  return normalizeRankings(rows);
+});
+const matchupsRaw = loadJson(`data/matchups/${default_year}/week-${default_week}.json`, []);
+const topPlaysByGame = loadJson(`data/pbp-top-plays/${default_year}/week-${default_week}.json`, {});
+const backtestRaw = loadJson(`data/backtest/${default_year}/week-${default_week}.json`, {});
+
 const matchups = normalizeMatchups(matchupsRaw);
-const seasonLabel = getSeasonLabel(rankings);
 const teamConfMap = buildTeamConferenceMap(rankings);
-const filters = buildFilterOptions(rankings, matchups);
-
-// 1. Extract unique, sorted conferences for the pills
 const conferences = [...new Set(Object.values(teamConfMap))].filter(Boolean).sort();
 
-const backtestByGame = new Map(backtestData.games.map((g) => [g.game_id, g]));
+const backtestByGame = new Map(Object.entries(backtestRaw).map(([id, row]) => [Number(id), row]));
 
+const filters = {
+  rankingYears: years,
+  matchupYears: years,
+  matchupWeeks: weeks_by_year[String(default_year)] ?? [],
+  matchupConferences: conferences,
+};
+
+function escapeForScript(json: string) {
+  return json.replace(/</g, '\\u003c');
+}
 ---
 
-<Layout seasonLabel={seasonLabel}>
-  <!-- 2. Pass the conferences array into your dashboard controls component -->
+<Layout seasonLabel={String(default_year)}>
   <DashboardControls filters={filters} conferences={conferences}>
     <RankingsTable slot="rankings" rankings={rankings} />
     <MatchupGrid
@@ -37,8 +54,18 @@ const backtestByGame = new Map(backtestData.games.map((g) => [g.game_id, g]));
       matchups={matchups}
       teamConfMap={teamConfMap}
       backtestByGame={backtestByGame}
+      topPlaysByGame={topPlaysByGame}
     />
   </DashboardControls>
+
+  <!-- Read once by dashboard-controls.ts at init so client-side re-renders
+       (other weeks) know each team's conference without refetching rankings. -->
+  <script id="team-conf-map" type="application/json" set:html={escapeForScript(JSON.stringify(teamConfMap))} />
+
+  <!-- Read once so the "current week/year" JS state matches the server-rendered default. -->
+  <script id="matchups-default" type="application/json" set:html={escapeForScript(JSON.stringify({ year: default_year, week: default_week }))} />
+
+  <script id="matchups-manifest" type="application/json" set:html={escapeForScript(JSON.stringify({ years, weeks_by_year }))} />
 
   <PbpChartModal client:load />
 </Layout>
