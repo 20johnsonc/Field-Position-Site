@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T17:37:31.372100+00:00",
+  "generated_at": "2026-09-04T20:36:37.995284+00:00",
   "year": 2021,
   "week": 14,
   "games": [
@@ -148,24 +148,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401331163,
-      "week": 14,
-      "year": 2021,
-      "status": "completed",
-      "home_team": "Wake Forest",
-      "away_team": "Pittsburgh",
-      "home_points": 21,
-      "away_points": 45,
-      "actual_margin": -24,
-      "actual_total": 66,
-      "start_date": "2021-12-05 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401331447,
       "week": 14,
       "year": 2021,
@@ -179,6 +161,24 @@
       "start_date": "2021-12-05 01:00:00+00:00",
       "home_conference": "Big Ten",
       "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401331163,
+      "week": 14,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Wake Forest",
+      "away_team": "Pittsburgh",
+      "home_points": 21,
+      "away_points": 45,
+      "actual_margin": -24,
+      "actual_total": 66,
+      "start_date": "2021-12-05 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null

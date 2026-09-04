@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T17:37:31.372100+00:00",
+  "generated_at": "2026-09-04T20:36:37.995284+00:00",
   "year": 2023,
   "week": 0,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401532392,
-      "week": 0,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "San Diego State",
-      "away_team": "Ohio",
-      "home_points": 20,
-      "away_points": 13,
-      "actual_margin": 7,
-      "actual_total": 33,
-      "start_date": "2023-08-26 23:00:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401525450,
       "week": 0,
       "year": 2023,
@@ -71,6 +53,24 @@
       "start_date": "2023-08-26 23:00:00+00:00",
       "home_conference": "Conference USA",
       "away_conference": "FBS Independents",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401532392,
+      "week": 0,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "San Diego State",
+      "away_team": "Ohio",
+      "home_points": 20,
+      "away_points": 13,
+      "actual_margin": 7,
+      "actual_total": 33,
+      "start_date": "2023-08-26 23:00:00+00:00",
+      "home_conference": "Mountain West",
+      "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T17:37:31.372100+00:00",
+  "generated_at": "2026-09-04T20:36:37.995284+00:00",
   "year": 2026,
   "week": 0,
   "games": [
@@ -94,24 +94,6 @@
       "actual_total": 45
     },
     {
-      "game_id": 401864570,
-      "week": 0,
-      "year": 2026,
-      "home_team": "Florida State",
-      "away_team": "New Mexico State",
-      "start_date": "2026-08-29 23:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "Conference USA",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "status": "completed",
-      "home_points": 34,
-      "away_points": 17,
-      "actual_margin": 17,
-      "actual_total": 51
-    },
-    {
       "game_id": 401858201,
       "week": 0,
       "year": 2026,
@@ -128,6 +110,24 @@
       "away_points": 27,
       "actual_margin": 10,
       "actual_total": 64
+    },
+    {
+      "game_id": 401864570,
+      "week": 0,
+      "year": 2026,
+      "home_team": "Florida State",
+      "away_team": "New Mexico State",
+      "start_date": "2026-08-29 23:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "Conference USA",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "status": "completed",
+      "home_points": 34,
+      "away_points": 17,
+      "actual_margin": 17,
+      "actual_total": 51
     },
     {
       "game_id": 401862693,

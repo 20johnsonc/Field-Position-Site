@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T17:37:31.372100+00:00",
+  "generated_at": "2026-09-04T20:36:37.995284+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539479,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Texas",
-      "away_team": "Oklahoma State",
-      "home_points": 49,
-      "away_points": 21,
-      "actual_margin": 28,
-      "actual_total": 70,
-      "start_date": "2023-12-02 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539481,
       "week": 14,
       "year": 2023,
@@ -73,6 +55,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539479,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Texas",
+      "away_team": "Oklahoma State",
+      "home_points": 49,
+      "away_points": 21,
+      "actual_margin": 28,
+      "actual_total": 70,
+      "start_date": "2023-12-02 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {
