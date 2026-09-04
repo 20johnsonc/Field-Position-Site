@@ -56,47 +56,52 @@ interface Props {
 export default function TeamTrajectoryChart({ team, trajectory = [], games = [], yMin, yMax }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
-
   const chartData = useMemo(() => {
     if (!trajectory.length) return null;
 
-    const maxRegularWeek = Math.max(12, ...trajectory.map(w => w.week));
-    const minWeek = Math.min(0, ...trajectory.map(w => w.week), ...games.map(g => g.week));
+    const maxRegularWeek = Math.max(12, ...trajectory.map((w) => Number(w.week)));
+    const minWeek = Math.min(0, ...trajectory.map((w) => Number(w.week)), ...games.map((g) => Number(g.week)));
 
-    const sortedWeeks = [...trajectory].sort((a, b) => a.week - b.week);
+    const sortedWeeks = [...trajectory].sort((a, b) => Number(a.week) - Number(b.week));
     let currentPostWeek = maxRegularWeek + 1;
 
     const processedWeeks = sortedWeeks.map((w) => {
-      const isPost = (w.is_playoff || w.bowl_name || w.round_name) && w.week <= 1;
-      const effectiveWeek = isPost ? currentPostWeek++ : w.week;
+      const wNum = Number(w.week);
+      const isPost = (w.is_playoff || w.bowl_name || w.round_name) && wNum <= 1;
+      const effectiveWeek = isPost ? currentPostWeek++ : wNum;
       return { ...w, effectiveWeek };
     });
 
     const efficiencyByWeek = new Map<number, number>();
     processedWeeks.forEach((w) => {
-      efficiencyByWeek.set(w.effectiveWeek, w.raw_off_ppa - w.raw_def_ppa);
+      // REVERTED: Map bubbles back to the raw PPA values.
+      // We still check for nulls so it drops the bubble completely if the raw data is missing.
+      if (w.raw_off_ppa != null && w.raw_def_ppa != null) {
+        efficiencyByWeek.set(w.effectiveWeek, w.raw_off_ppa - w.raw_def_ppa);
+      }
     });
-
+    
     const adjLinePoints = processedWeeks
       .filter((w) => w.adj_off_ppa != null && w.adj_def_value != null)
       .map((w) => ({
         x: w.effectiveWeek,
-        y: (w.adj_off_ppa ?? 0) - (w.adj_def_value ?? 0),
+        y: w.adj_off_ppa! - w.adj_def_value!,
       }));
 
     const fbsLinePoints = processedWeeks
       .filter((w) => w.fbs_avg_ppa != null)
       .map((w) => ({
         x: w.effectiveWeek,
-        y: w.fbs_avg_ppa ?? 0,
+        y: w.fbs_avg_ppa!,
       }));
 
     let gamePostWeek = maxRegularWeek + 1;
-    const gameWeekMap = new Map<number, number>();
+    const gameWeekMap = new Map<string, number>();
     games.forEach((g) => {
-      const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week <= 1;
+      const gNum = Number(g.week);
+      const isPost = (g.is_playoff || g.bowl_name || g.round_name) && gNum <= 1;
       if (isPost) {
-        gameWeekMap.set(JSON.stringify({ week: g.week, opp: g.opponent }), gamePostWeek++);
+        gameWeekMap.set(JSON.stringify({ week: gNum, opp: g.opponent }), gamePostWeek++);
       }
     });
 
@@ -104,9 +109,13 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
 
     const gameBubbles = games
       .map((g) => {
-        const isPost = (g.is_playoff || g.bowl_name || g.round_name) && g.week <= 1;
-        const effWeek = isPost ? (gameWeekMap.get(JSON.stringify({ week: g.week, opp: g.opponent })) ?? g.week) : g.week;
+        const gNum = Number(g.week);
+        const isPost = (g.is_playoff || g.bowl_name || g.round_name) && gNum <= 1;
+        const stringifiedKey = JSON.stringify({ week: gNum, opp: g.opponent });
         
+        const effWeek = isPost ? (gameWeekMap.get(stringifiedKey) ?? gNum) : gNum;
+
+        // Will cleanly skip if the raw data null check above failed
         if (!efficiencyByWeek.has(effWeek)) return null;
 
         const mag = Math.abs(g.beat_expectation_by ?? 0);
@@ -120,20 +129,22 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
       .filter(Boolean) as { game: GameLogEntry; x: number; y: number; r: number }[];
 
     const allWeeks = [
-      ...processedWeeks.map(w => w.effectiveWeek),
-      ...gameBubbles.map(b => b.x),
-      12
+      ...processedWeeks.map((w) => w.effectiveWeek),
+      ...gameBubbles.map((b) => b.x),
+      12,
     ];
+    
     const chartXMin = minWeek;
     const chartXMax = Math.max(...allWeeks);
 
     const allValues: number[] = [
-      ...adjLinePoints.map(p => p.y),
-      ...fbsLinePoints.map(p => p.y),
-      ...gameBubbles.map(b => b.y),
+      ...adjLinePoints.map((p) => p.y),
+      ...fbsLinePoints.map((p) => p.y),
+      ...gameBubbles.map((b) => b.y),
       yMin,
-      yMax
+      yMax,
     ];
+    
     const dynamicMin = Math.min(...allValues);
     const dynamicMax = Math.max(...allValues);
     const padding = Math.max(0.15, (dynamicMax - dynamicMin) * 0.15);
