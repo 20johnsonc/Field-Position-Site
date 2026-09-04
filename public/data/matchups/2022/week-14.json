@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T23:54:28.717068+00:00",
+  "generated_at": "2026-09-04T17:37:31.372100+00:00",
   "year": 2022,
   "week": 14,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437030,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "TCU",
-      "away_team": "Kansas State",
-      "home_points": 28,
-      "away_points": 31,
-      "actual_margin": -3,
-      "actual_total": 59,
-      "start_date": "2022-12-03 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437033,
       "week": 14,
       "year": 2022,
@@ -91,6 +73,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437030,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "TCU",
+      "away_team": "Kansas State",
+      "home_points": 28,
+      "away_points": 31,
+      "actual_margin": -3,
+      "actual_total": 59,
+      "start_date": "2022-12-03 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {
@@ -130,21 +130,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437034,
+      "game_id": 401437008,
       "week": 14,
       "year": 2022,
       "status": "completed",
-      "home_team": "Boise State",
-      "away_team": "Fresno State",
-      "home_points": 16,
+      "home_team": "Tulane",
+      "away_team": "UCF",
+      "home_points": 45,
       "away_points": 28,
-      "actual_margin": -12,
-      "actual_total": 44,
+      "actual_margin": 17,
+      "actual_total": 73,
       "start_date": "2022-12-03 21:00:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "Mountain West",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
       "is_playoff": false,
-      "round_name": "Mountain West Championship Game",
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
@@ -166,21 +166,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437008,
+      "game_id": 401437034,
       "week": 14,
       "year": 2022,
       "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "UCF",
-      "home_points": 45,
+      "home_team": "Boise State",
+      "away_team": "Fresno State",
+      "home_points": 16,
       "away_points": 28,
-      "actual_margin": 17,
-      "actual_total": 73,
+      "actual_margin": -12,
+      "actual_total": 44,
       "start_date": "2022-12-03 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
+      "home_conference": "Mountain West",
+      "away_conference": "Mountain West",
       "is_playoff": false,
-      "round_name": "American Athletic Championship",
+      "round_name": "Mountain West Championship Game",
       "bowl_name": null
     },
     {
