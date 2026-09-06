@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-06T15:12:45.808039+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -94,24 +94,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539477,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "SMU",
-      "home_points": 14,
-      "away_points": 26,
-      "actual_margin": -12,
-      "actual_total": 40,
-      "start_date": "2023-12-02 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Athletic Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539484,
       "week": 14,
       "year": 2023,
@@ -127,6 +109,24 @@
       "away_conference": "Sun Belt",
       "is_playoff": false,
       "round_name": "Sun Belt Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539477,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Tulane",
+      "away_team": "SMU",
+      "home_points": 14,
+      "away_points": 26,
+      "actual_margin": -12,
+      "actual_total": 40,
+      "start_date": "2023-12-02 21:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
@@ -148,24 +148,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539478,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Florida State",
-      "away_team": "Louisville",
-      "home_points": 16,
-      "away_points": 6,
-      "actual_margin": 10,
-      "actual_total": 22,
-      "start_date": "2023-12-03 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": "Acc Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539480,
       "week": 14,
       "year": 2023,
@@ -181,6 +163,24 @@
       "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": "Big Ten Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539478,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Florida State",
+      "away_team": "Louisville",
+      "home_points": 16,
+      "away_points": 6,
+      "actual_margin": 10,
+      "actual_total": 22,
+      "start_date": "2023-12-03 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": "Acc Championship",
       "bowl_name": null
     },
     {

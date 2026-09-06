@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-06T15:12:45.808039+00:00",
   "year": 2023,
   "week": 0,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401525450,
-      "week": 0,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "New Mexico State",
-      "away_team": "Massachusetts",
-      "home_points": 30,
-      "away_points": 41,
-      "actual_margin": -11,
-      "actual_total": 71,
-      "start_date": "2023-08-26 23:00:00+00:00",
-      "home_conference": "Conference USA",
-      "away_conference": "FBS Independents",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401532392,
       "week": 0,
       "year": 2023,
@@ -71,6 +53,24 @@
       "start_date": "2023-08-26 23:00:00+00:00",
       "home_conference": "Mountain West",
       "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401525450,
+      "week": 0,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "New Mexico State",
+      "away_team": "Massachusetts",
+      "home_points": 30,
+      "away_points": 41,
+      "actual_margin": -11,
+      "actual_total": 71,
+      "start_date": "2023-08-26 23:00:00+00:00",
+      "home_conference": "Conference USA",
+      "away_conference": "FBS Independents",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null

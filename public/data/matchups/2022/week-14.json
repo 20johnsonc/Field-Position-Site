@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-06T15:12:45.808039+00:00",
   "year": 2022,
   "week": 14,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437030,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "TCU",
-      "away_team": "Kansas State",
-      "home_points": 28,
-      "away_points": 31,
-      "actual_margin": -3,
-      "actual_total": 59,
-      "start_date": "2022-12-03 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437033,
       "week": 14,
       "year": 2022,
@@ -91,6 +73,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437030,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "TCU",
+      "away_team": "Kansas State",
+      "home_points": 28,
+      "away_points": 31,
+      "actual_margin": -3,
+      "actual_total": 59,
+      "start_date": "2022-12-03 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437008,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "UCF",
-      "home_points": 45,
-      "away_points": 28,
-      "actual_margin": 17,
-      "actual_total": 73,
-      "start_date": "2022-12-03 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Athletic Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437036,
       "week": 14,
       "year": 2022,
@@ -163,6 +145,24 @@
       "away_conference": "SEC",
       "is_playoff": false,
       "round_name": "Sec Championship Game",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437008,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Tulane",
+      "away_team": "UCF",
+      "home_points": 45,
+      "away_points": 28,
+      "actual_margin": 17,
+      "actual_total": 73,
+      "start_date": "2022-12-03 21:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
