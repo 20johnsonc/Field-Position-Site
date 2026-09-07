@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T15:12:45.808039+00:00",
+  "generated_at": "2026-09-07T18:19:13.463664+00:00",
   "year": 2022,
   "week": 14,
   "games": [
@@ -130,6 +130,24 @@
       "bowl_name": null
     },
     {
+      "game_id": 401437034,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Boise State",
+      "away_team": "Fresno State",
+      "home_points": 16,
+      "away_points": 28,
+      "actual_margin": -12,
+      "actual_total": 44,
+      "start_date": "2022-12-03 21:00:00+00:00",
+      "home_conference": "Mountain West",
+      "away_conference": "Mountain West",
+      "is_playoff": false,
+      "round_name": "Mountain West Championship Game",
+      "bowl_name": null
+    },
+    {
       "game_id": 401437036,
       "week": 14,
       "year": 2022,
@@ -166,21 +184,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437034,
+      "game_id": 401437009,
       "week": 14,
       "year": 2022,
       "status": "completed",
-      "home_team": "Boise State",
-      "away_team": "Fresno State",
-      "home_points": 16,
-      "away_points": 28,
-      "actual_margin": -12,
-      "actual_total": 44,
-      "start_date": "2022-12-03 21:00:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "Mountain West",
+      "home_team": "North Carolina",
+      "away_team": "Clemson",
+      "home_points": 10,
+      "away_points": 39,
+      "actual_margin": -29,
+      "actual_total": 49,
+      "start_date": "2022-12-04 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
-      "round_name": "Mountain West Championship Game",
+      "round_name": "Subway Acc Championship",
       "bowl_name": null
     },
     {
@@ -199,24 +217,6 @@
       "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": "Big Ten Championship Game",
-      "bowl_name": null
-    },
-    {
-      "game_id": 401437009,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "North Carolina",
-      "away_team": "Clemson",
-      "home_points": 10,
-      "away_points": 39,
-      "actual_margin": -29,
-      "actual_total": 49,
-      "start_date": "2022-12-04 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": "Subway Acc Championship",
       "bowl_name": null
     },
     {
