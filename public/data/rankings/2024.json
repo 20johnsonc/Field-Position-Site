@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-07T18:20:15.405325+00:00",
   "year": 2024,
   "rankings": [
     {
@@ -13,7 +13,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Balanced Attack",
+        "Ball-Control Passing Attack",
         "Blue-Blood Talent"
       ],
       "sos": 5,
@@ -36,7 +36,6 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 19,
@@ -59,7 +58,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Air Assault",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 11,
@@ -210,8 +209,7 @@
       "Net Rating": 17.7,
       "Year": 2024,
       "tags": [
-        "High-Powered Offense",
-        "Balanced Attack"
+        "High-Powered Offense"
       ],
       "sos": 64,
       "sor": 28,
@@ -305,6 +303,27 @@
     },
     {
       "Rank": 15,
+      "Team": "Tulane",
+      "Conference": "American Athletic",
+      "Record": "9-5",
+      "Net Rating": 13.5,
+      "Year": 2024,
+      "tags": [
+        "Well-Rounded Team",
+        "Elite Defense",
+        "Passing-Downs Weapon"
+      ],
+      "sos": 75,
+      "sor": 51,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-5",
+      "conference_record": "7-2",
+      "sos_rank": 75,
+      "sor_rank": 51
+    },
+    {
+      "Rank": 16,
       "Team": "Michigan",
       "Conference": "Big Ten",
       "Record": "8-5",
@@ -321,7 +340,7 @@
       "sor_rank": 21
     },
     {
-      "Rank": 16,
+      "Rank": 17,
       "Team": "Texas A&M",
       "Conference": "SEC",
       "Record": "8-5",
@@ -342,27 +361,6 @@
       "sor_rank": 29
     },
     {
-      "Rank": 17,
-      "Team": "Tulane",
-      "Conference": "American Athletic",
-      "Record": "9-5",
-      "Net Rating": 13.4,
-      "Year": 2024,
-      "tags": [
-        "Well-Rounded Team",
-        "Elite Defense",
-        "Passing-Downs Weapon"
-      ],
-      "sos": 75,
-      "sor": 51,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-5",
-      "conference_record": "7-2",
-      "sos_rank": 75,
-      "sor_rank": 51
-    },
-    {
       "Rank": 18,
       "Team": "LSU",
       "Conference": "SEC",
@@ -371,6 +369,7 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 13,
@@ -413,7 +412,8 @@
       "Net Rating": 11.7,
       "Year": 2024,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Balanced Attack"
       ],
       "sos": 8,
       "sor": 39,
@@ -472,7 +472,6 @@
       "Net Rating": 10.6,
       "Year": 2024,
       "tags": [
-        "Ground Explosion",
         "Snail-Pace"
       ],
       "sos": 43,
@@ -531,8 +530,7 @@
       "Net Rating": 10.1,
       "Year": 2024,
       "tags": [
-        "High-Powered Offense",
-        "Balanced Attack"
+        "High-Powered Offense"
       ],
       "sos": 32,
       "sor": 81,
@@ -653,13 +651,13 @@
         "Efficient Offense",
         "Stout Defense"
       ],
-      "sos": 59,
+      "sos": 60,
       "sor": 38,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "7-2",
-      "sos_rank": 59,
+      "sos_rank": 60,
       "sor_rank": 38
     },
     {
@@ -692,7 +690,8 @@
       "tags": [
         "Well-Rounded Team",
         "Efficient Offense",
-        "Shutdown Defense"
+        "Shutdown Defense",
+        "Balanced Attack"
       ],
       "sos": 27,
       "sor": 42,
@@ -748,7 +747,9 @@
       "Record": "11-3",
       "Net Rating": 6.3,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Ground Explosion"
+      ],
       "sos": 80,
       "sor": 32,
       "Actual Wins": null,
@@ -893,6 +894,23 @@
     },
     {
       "Rank": 45,
+      "Team": "California",
+      "Conference": "ACC",
+      "Record": "6-7",
+      "Net Rating": 4.1,
+      "Year": 2024,
+      "tags": [],
+      "sos": 66,
+      "sor": 82,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "6-7",
+      "conference_record": "2-6",
+      "sos_rank": 66,
+      "sor_rank": 82
+    },
+    {
+      "Rank": 46,
       "Team": "North Carolina",
       "Conference": "ACC",
       "Record": "6-7",
@@ -912,7 +930,7 @@
       "sor_rank": 100
     },
     {
-      "Rank": 46,
+      "Rank": 47,
       "Team": "Texas State",
       "Conference": "Sun Belt",
       "Record": "8-5",
@@ -930,23 +948,6 @@
       "conference_record": "5-3",
       "sos_rank": 114,
       "sor_rank": 71
-    },
-    {
-      "Rank": 47,
-      "Team": "California",
-      "Conference": "ACC",
-      "Record": "6-7",
-      "Net Rating": 4.0,
-      "Year": 2024,
-      "tags": [],
-      "sos": 66,
-      "sor": 82,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "6-7",
-      "conference_record": "2-6",
-      "sos_rank": 66,
-      "sor_rank": 82
     },
     {
       "Rank": 48,
@@ -1185,7 +1186,9 @@
       "Record": "8-4",
       "Net Rating": 1.1,
       "Year": 2024,
-      "tags": [],
+      "tags": [
+        "Balanced Attack"
+      ],
       "sos": 134,
       "sor": 59,
       "Actual Wins": null,
@@ -1246,7 +1249,6 @@
       "Net Rating": 0.6,
       "Year": 2024,
       "tags": [
-        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 108,
@@ -1358,7 +1360,6 @@
       "Net Rating": -0.6,
       "Year": 2024,
       "tags": [
-        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 86,
@@ -1396,14 +1397,16 @@
       "Record": "10-3",
       "Net Rating": -1.4,
       "Year": 2024,
-      "tags": [],
-      "sos": 60,
+      "tags": [
+        "Balanced Attack"
+      ],
+      "sos": 59,
       "sor": 30,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
       "conference_record": "5-3",
-      "sos_rank": 60,
+      "sos_rank": 59,
       "sor_rank": 30
     },
     {
@@ -1609,8 +1612,7 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
-        "Leaky Defense",
-        "Balanced Attack"
+        "Leaky Defense"
       ],
       "sos": 51,
       "sor": 116,
@@ -1707,7 +1709,6 @@
       "Net Rating": -3.8,
       "Year": 2024,
       "tags": [
-        "Ball-Control Passing Attack",
         "Disruptive Defense"
       ],
       "sos": 33,
@@ -1924,6 +1925,7 @@
       "Year": 2024,
       "tags": [
         "Porous Defense",
+        "Balanced Attack",
         "Passing-Downs Weapon"
       ],
       "sos": 67,
@@ -2002,7 +2004,7 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
-        "Ground Explosion"
+        "Air Assault"
       ],
       "sos": 90,
       "sor": 104,
@@ -2138,9 +2140,7 @@
       "Record": "3-9",
       "Net Rating": -10.7,
       "Year": 2024,
-      "tags": [
-        "Balanced Attack"
-      ],
+      "tags": [],
       "sos": 21,
       "sor": 103,
       "Actual Wins": null,
@@ -2280,7 +2280,7 @@
       "tags": [
         "Anemic Offense",
         "Leaky Defense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 85,
       "sor": 123,
@@ -2300,7 +2300,7 @@
       "Year": 2024,
       "tags": [
         "Porous Defense",
-        "Ball-Control Passing Attack",
+        "Balanced Attack",
         "Snail-Pace"
       ],
       "sos": 4,
@@ -2342,6 +2342,7 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
+        "Air Assault",
         "Disruptive Defense"
       ],
       "sos": 72,
@@ -2379,7 +2380,7 @@
       "Team": "Hawai'i",
       "Conference": "Mountain West",
       "Record": "5-7",
-      "Net Rating": -14.9,
+      "Net Rating": -14.8,
       "Year": 2024,
       "tags": [
         "Passing-Downs Liability"
@@ -2585,7 +2586,8 @@
       "Year": 2024,
       "tags": [
         "Anemic Offense",
-        "Leaky Defense"
+        "Leaky Defense",
+        "Ground Explosion"
       ],
       "sos": 87,
       "sor": 119,
@@ -2605,7 +2607,8 @@
       "Year": 2024,
       "tags": [
         "Anemic Offense",
-        "Porous Defense"
+        "Porous Defense",
+        "Ground Explosion"
       ],
       "sos": 74,
       "sor": 134,

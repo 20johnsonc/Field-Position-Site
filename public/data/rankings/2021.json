@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-07T18:20:15.405325+00:00",
   "year": 2021,
   "rankings": [
     {
@@ -36,7 +36,6 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 1,
@@ -59,6 +58,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 3,
@@ -100,7 +100,6 @@
       "Year": 2021,
       "tags": [
         "Stout Defense",
-        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 25,
@@ -162,6 +161,7 @@
       "Year": 2021,
       "tags": [
         "High-Powered Offense",
+        "Ground Explosion",
         "Blue-Blood Talent",
         "Disruptive Defense"
       ],
@@ -286,8 +286,7 @@
       "Net Rating": 13.6,
       "Year": 2021,
       "tags": [
-        "High-Powered Offense",
-        "Ground Explosion"
+        "High-Powered Offense"
       ],
       "sos": 12,
       "sor": 11,
@@ -450,6 +449,7 @@
       "Net Rating": 10.9,
       "Year": 2021,
       "tags": [
+        "Ground Explosion",
         "Blue-Blood Talent",
         "Disruptive Defense",
         "Early-Downs Grinder"
@@ -472,7 +472,7 @@
       "Year": 2021,
       "tags": [
         "High-Powered Offense",
-        "Methodical Grind"
+        "Ball-Control Passing Attack"
       ],
       "sos": 130,
       "sor": 29,
@@ -533,6 +533,7 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
+        "Balanced Attack",
         "Underachiever",
         "Disruptive Defense"
       ],
@@ -775,8 +776,7 @@
       "Net Rating": 7.4,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
-        "Balanced Attack"
+        "Efficient Offense"
       ],
       "sos": 66,
       "sor": 17,
@@ -837,7 +837,6 @@
       "Year": 2021,
       "tags": [
         "Stout Defense",
-        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 98,
@@ -1030,7 +1029,7 @@
       "tags": [
         "Explosive Offense",
         "Elite Defense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 129,
       "sor": 79,
@@ -1048,7 +1047,9 @@
       "Record": "11-2",
       "Net Rating": 4.0,
       "Year": 2021,
-      "tags": [],
+      "tags": [
+        "Ground Explosion"
+      ],
       "sos": 10,
       "sor": 7,
       "Actual Wins": null,
@@ -1145,7 +1146,7 @@
       "Year": 2021,
       "tags": [
         "Efficient Offense",
-        "Ball-Control Passing Attack",
+        "Balanced Attack",
         "Underachiever",
         "Blue-Blood Talent",
         "Disruptive Defense"
@@ -1320,15 +1321,15 @@
       "Net Rating": 0.6,
       "Year": 2021,
       "tags": [
-        "Ground Explosion"
+        "Boom-or-Bust"
       ],
-      "sos": 72,
+      "sos": 73,
       "sor": 54,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-5",
       "conference_record": "5-3",
-      "sos_rank": 72,
+      "sos_rank": 73,
       "sor_rank": 54
     },
     {
@@ -1356,7 +1357,6 @@
       "Net Rating": 0.3,
       "Year": 2021,
       "tags": [
-        "Ground Explosion",
         "Underdog Roster",
         "Disruptive Defense",
         "Early-Downs Grinder"
@@ -1398,7 +1398,7 @@
       "Year": 2021,
       "tags": [
         "Leaky Defense",
-        "Ball-Control Passing Attack",
+        "Balanced Attack",
         "Snail-Pace"
       ],
       "sos": 44,
@@ -1494,7 +1494,7 @@
       "Net Rating": -1.7,
       "Year": 2021,
       "tags": [
-        "Methodical Grind",
+        "Air Assault",
         "Snail-Pace"
       ],
       "sos": 118,
@@ -1571,6 +1571,7 @@
       "Net Rating": -2.9,
       "Year": 2021,
       "tags": [
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 68,
@@ -1708,7 +1709,7 @@
       "Net Rating": -4.9,
       "Year": 2021,
       "tags": [
-        "Ball-Control Passing Attack",
+        "Balanced Attack",
         "Snail-Pace"
       ],
       "sos": 82,
@@ -1747,7 +1748,8 @@
       "Net Rating": -5.6,
       "Year": 2021,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Balanced Attack"
       ],
       "sos": 28,
       "sor": 56,
@@ -1806,6 +1808,7 @@
       "Year": 2021,
       "tags": [
         "Inefficient Offense",
+        "Air Assault",
         "Underachiever",
         "Disruptive Defense"
       ],
@@ -1924,7 +1927,8 @@
       "Net Rating": -7.3,
       "Year": 2021,
       "tags": [
-        "Inefficient Offense"
+        "Inefficient Offense",
+        "Methodical Grind"
       ],
       "sos": 117,
       "sor": 103,
@@ -2021,7 +2025,7 @@
       "Year": 2021,
       "tags": [
         "Explosive Offense",
-        "Air Assault",
+        "Ground Explosion",
         "Underdog Roster"
       ],
       "sos": 127,
@@ -2041,7 +2045,8 @@
       "Net Rating": -9.4,
       "Year": 2021,
       "tags": [
-        "Vulnerable Defense"
+        "Vulnerable Defense",
+        "Ball-Control Passing Attack"
       ],
       "sos": 121,
       "sor": 124,
@@ -2235,15 +2240,16 @@
       "Net Rating": -12.7,
       "Year": 2021,
       "tags": [
-        "Inefficient Offense"
+        "Inefficient Offense",
+        "Methodical Grind"
       ],
-      "sos": 73,
+      "sos": 72,
       "sor": 125,
       "Actual Wins": null,
       "Games Played": null,
       "record": "2-10",
       "conference_record": "2-6",
-      "sos_rank": 73,
+      "sos_rank": 72,
       "sor_rank": 125
     },
     {
@@ -2336,7 +2342,7 @@
       "tags": [
         "Anemic Offense",
         "Vulnerable Defense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 50,
       "sor": 112,
@@ -2396,7 +2402,8 @@
       "Year": 2021,
       "tags": [
         "Anemic Offense",
-        "Vulnerable Defense"
+        "Vulnerable Defense",
+        "Ground Explosion"
       ],
       "sos": 115,
       "sor": 117,
@@ -2477,7 +2484,8 @@
       "Year": 2021,
       "tags": [
         "Anemic Offense",
-        "Vulnerable Defense"
+        "Vulnerable Defense",
+        "Ground Explosion"
       ],
       "sos": 84,
       "sor": 118,
@@ -2518,7 +2526,7 @@
       "tags": [
         "Explosive Offense",
         "Porous Defense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 119,
       "sor": 130,
@@ -2539,6 +2547,7 @@
       "tags": [
         "Inefficient Offense",
         "Porous Defense",
+        "Balanced Attack",
         "Underdog Roster"
       ],
       "sos": 95,
@@ -2560,7 +2569,7 @@
       "tags": [
         "Anemic Offense",
         "Porous Defense",
-        "Air Assault"
+        "Boom-or-Bust"
       ],
       "sos": 94,
       "sor": 129,

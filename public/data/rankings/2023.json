@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-07T18:20:15.405325+00:00",
   "year": 2023,
   "rankings": [
     {
@@ -13,7 +13,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Shutdown Defense",
-        "Methodical Grind"
+        "Ball-Control Passing Attack"
       ],
       "sos": 20,
       "sor": 2,
@@ -57,6 +57,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Stout Defense",
+        "Ball-Control Passing Attack",
         "Blue-Blood Talent"
       ],
       "sos": 31,
@@ -101,7 +102,7 @@
         "Playoff Contender",
         "Efficient Offense",
         "Stout Defense",
-        "Air Assault",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 1,
@@ -123,7 +124,7 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
-        "Air Assault",
+        "Ground Explosion",
         "Underachiever",
         "Blue-Blood Talent",
         "Disruptive Defense"
@@ -148,7 +149,6 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Shutdown Defense",
-        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 56,
@@ -273,8 +273,7 @@
       "Net Rating": 16.3,
       "Year": 2023,
       "tags": [
-        "High-Powered Offense",
-        "Balanced Attack"
+        "High-Powered Offense"
       ],
       "sos": 2,
       "sor": 1,
@@ -359,6 +358,7 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
+        "Balanced Attack",
         "Underachiever",
         "Blue-Blood Talent"
       ],
@@ -501,8 +501,7 @@
       "Net Rating": 9.4,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
-        "Methodical Grind"
+        "Efficient Offense"
       ],
       "sos": 10,
       "sor": 5,
@@ -640,6 +639,7 @@
       "Year": 2023,
       "tags": [
         "Offense-Carried Team",
+        "Ground Explosion",
         "Underachiever",
         "Early-Downs Grinder"
       ],
@@ -680,7 +680,7 @@
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
-        "Balanced Attack"
+        "Ground Explosion"
       ],
       "sos": 43,
       "sor": 24,
@@ -749,7 +749,9 @@
       "Record": "7-6",
       "Net Rating": 5.5,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Ground Explosion"
+      ],
       "sos": 37,
       "sor": 42,
       "Actual Wins": null,
@@ -806,7 +808,7 @@
       "tags": [
         "Inefficient Offense",
         "Elite Defense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 82,
       "sor": 26,
@@ -865,6 +867,7 @@
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
+        "Balanced Attack",
         "Underdog Roster"
       ],
       "sos": 125,
@@ -996,13 +999,13 @@
         "Methodical Grind",
         "Snail-Pace"
       ],
-      "sos": 42,
+      "sos": 41,
       "sor": 22,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "6-3",
-      "sos_rank": 42,
+      "sos_rank": 41,
       "sor_rank": 22
     },
     {
@@ -1120,7 +1123,7 @@
       "Team": "Nebraska",
       "Conference": "Big Ten",
       "Record": "5-7",
-      "Net Rating": 1.1,
+      "Net Rating": 1.2,
       "Year": 2023,
       "tags": [
         "Underachiever",
@@ -1154,26 +1157,6 @@
     },
     {
       "Rank": 59,
-      "Team": "Illinois",
-      "Conference": "Big Ten",
-      "Record": "5-7",
-      "Net Rating": 0.9,
-      "Year": 2023,
-      "tags": [
-        "Efficient Offense",
-        "Disruptive Defense"
-      ],
-      "sos": 53,
-      "sor": 85,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "5-7",
-      "conference_record": "3-6",
-      "sos_rank": 53,
-      "sor_rank": 85
-    },
-    {
-      "Rank": 60,
       "Team": "Oklahoma State",
       "Conference": "Big 12",
       "Record": "10-4",
@@ -1190,13 +1173,35 @@
       "sor_rank": 18
     },
     {
+      "Rank": 60,
+      "Team": "Illinois",
+      "Conference": "Big Ten",
+      "Record": "5-7",
+      "Net Rating": 0.8,
+      "Year": 2023,
+      "tags": [
+        "Efficient Offense",
+        "Disruptive Defense"
+      ],
+      "sos": 53,
+      "sor": 85,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "5-7",
+      "conference_record": "3-6",
+      "sos_rank": 53,
+      "sor_rank": 85
+    },
+    {
       "Rank": 61,
       "Team": "Purdue",
       "Conference": "Big Ten",
       "Record": "4-8",
       "Net Rating": 0.4,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Balanced Attack"
+      ],
       "sos": 21,
       "sor": 90,
       "Actual Wins": null,
@@ -1273,7 +1278,7 @@
       "Net Rating": -1.0,
       "Year": 2023,
       "tags": [
-        "Ground Explosion",
+        "Air Assault",
         "Passing-Downs Weapon"
       ],
       "sos": 84,
@@ -1297,13 +1302,13 @@
         "Explosive Offense",
         "Vulnerable Defense"
       ],
-      "sos": 41,
+      "sos": 42,
       "sor": 51,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
-      "sos_rank": 41,
+      "sos_rank": 42,
       "sor_rank": 51
     },
     {
@@ -1386,29 +1391,10 @@
     },
     {
       "Rank": 71,
-      "Team": "Houston",
-      "Conference": "Big 12",
-      "Record": "4-8",
-      "Net Rating": -2.2,
-      "Year": 2023,
-      "tags": [
-        "Ground Explosion"
-      ],
-      "sos": 35,
-      "sor": 95,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "4-8",
-      "conference_record": "2-7",
-      "sos_rank": 35,
-      "sor_rank": 95
-    },
-    {
-      "Rank": 72,
       "Team": "Pittsburgh",
       "Conference": "ACC",
       "Record": "3-9",
-      "Net Rating": -2.2,
+      "Net Rating": -2.1,
       "Year": 2023,
       "tags": [
         "Defense-Carried Team",
@@ -1423,6 +1409,23 @@
       "conference_record": "2-6",
       "sos_rank": 36,
       "sor_rank": 111
+    },
+    {
+      "Rank": 72,
+      "Team": "Houston",
+      "Conference": "Big 12",
+      "Record": "4-8",
+      "Net Rating": -2.2,
+      "Year": 2023,
+      "tags": [],
+      "sos": 35,
+      "sor": 95,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "2-7",
+      "sos_rank": 35,
+      "sor_rank": 95
     },
     {
       "Rank": 73,
@@ -1452,7 +1455,6 @@
       "Year": 2023,
       "tags": [
         "Vulnerable Defense",
-        "Balanced Attack",
         "Passing-Downs Weapon"
       ],
       "sos": 65,
@@ -1472,8 +1474,7 @@
       "Net Rating": -2.4,
       "Year": 2023,
       "tags": [
-        "Inefficient Offense",
-        "Methodical Grind"
+        "Inefficient Offense"
       ],
       "sos": 118,
       "sor": 34,
@@ -1515,7 +1516,7 @@
       "tags": [
         "Explosive Offense",
         "Vulnerable Defense",
-        "Air Assault"
+        "Boom-or-Bust"
       ],
       "sos": 97,
       "sor": 53,
@@ -1780,6 +1781,7 @@
       "Net Rating": -5.7,
       "Year": 2023,
       "tags": [
+        "Methodical Grind",
         "Disruptive Defense",
         "Snail-Pace"
       ],
@@ -1800,8 +1802,7 @@
       "Net Rating": -5.8,
       "Year": 2023,
       "tags": [
-        "Vulnerable Defense",
-        "Air Assault"
+        "Vulnerable Defense"
       ],
       "sos": 68,
       "sor": 69,
@@ -1859,7 +1860,7 @@
       "Year": 2023,
       "tags": [
         "Explosive Offense",
-        "Air Assault"
+        "Boom-or-Bust"
       ],
       "sos": 88,
       "sor": 102,
@@ -2053,7 +2054,6 @@
       "Net Rating": -8.7,
       "Year": 2023,
       "tags": [
-        "Ground Explosion",
         "Behind The Chains"
       ],
       "sos": 86,
@@ -2154,6 +2154,7 @@
       "Year": 2023,
       "tags": [
         "Vulnerable Defense",
+        "Air Assault",
         "Snail-Pace"
       ],
       "sos": 5,
@@ -2278,7 +2279,8 @@
       "Year": 2023,
       "tags": [
         "Inefficient Offense",
-        "Leaky Defense"
+        "Leaky Defense",
+        "Ground Explosion"
       ],
       "sos": 23,
       "sor": 118,
@@ -2356,7 +2358,8 @@
       "Net Rating": -13.6,
       "Year": 2023,
       "tags": [
-        "Leaky Defense"
+        "Leaky Defense",
+        "Ground Explosion"
       ],
       "sos": 99,
       "sor": 126,
@@ -2415,7 +2418,8 @@
       "Year": 2023,
       "tags": [
         "Inefficient Offense",
-        "Vulnerable Defense"
+        "Vulnerable Defense",
+        "Ground Explosion"
       ],
       "sos": 73,
       "sor": 120,
@@ -2456,6 +2460,7 @@
       "Year": 2023,
       "tags": [
         "Porous Defense",
+        "Ground Explosion",
         "Behind The Chains"
       ],
       "sos": 69,
@@ -2477,7 +2482,7 @@
       "tags": [
         "Inefficient Offense",
         "Porous Defense",
-        "Ball-Control Passing Attack"
+        "Balanced Attack"
       ],
       "sos": 103,
       "sor": 124,
@@ -2517,7 +2522,6 @@
       "Year": 2023,
       "tags": [
         "Porous Defense",
-        "Balanced Attack",
         "Behind The Chains"
       ],
       "sos": 112,

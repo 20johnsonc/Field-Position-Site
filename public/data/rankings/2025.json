@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:36:37.995284+00:00",
+  "generated_at": "2026-09-07T18:20:15.405325+00:00",
   "year": 2025,
   "rankings": [
     {
@@ -13,7 +13,6 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 46,
@@ -36,7 +35,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Balanced Attack",
+        "Ball-Control Passing Attack",
         "Blue-Blood Talent"
       ],
       "sos": 27,
@@ -59,7 +58,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Stout Defense",
-        "Ground Explosion",
+        "Ball-Control Passing Attack",
         "Blue-Blood Talent"
       ],
       "sos": 14,
@@ -104,7 +103,6 @@
         "Playoff Contender",
         "Efficient Offense",
         "Stout Defense",
-        "Methodical Grind",
         "Blue-Blood Talent"
       ],
       "sos": 15,
@@ -148,6 +146,7 @@
         "Playoff Contender",
         "Efficient Offense",
         "Stout Defense",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 4,
@@ -172,13 +171,13 @@
         "Elite Defense",
         "Ground Explosion"
       ],
-      "sos": 53,
+      "sos": 52,
       "sor": 16,
       "Actual Wins": null,
       "Games Played": null,
       "record": "11-2",
       "conference_record": "7-2",
-      "sos_rank": 53,
+      "sos_rank": 52,
       "sor_rank": 16
     },
     {
@@ -273,7 +272,7 @@
       "Year": 2025,
       "tags": [
         "High-Powered Offense",
-        "Ball-Control Passing Attack"
+        "Balanced Attack"
       ],
       "sos": 29,
       "sor": 21,
@@ -293,7 +292,7 @@
       "Year": 2025,
       "tags": [
         "High-Powered Offense",
-        "Balanced Attack",
+        "Ground Explosion",
         "Disruptive Defense"
       ],
       "sos": 39,
@@ -314,7 +313,7 @@
       "Year": 2025,
       "tags": [
         "High-Powered Offense",
-        "Balanced Attack",
+        "Methodical Grind",
         "Disruptive Defense"
       ],
       "sos": 22,
@@ -350,31 +349,10 @@
     },
     {
       "Rank": 17,
-      "Team": "Iowa",
-      "Conference": "Big Ten",
-      "Record": "9-4",
-      "Net Rating": 14.5,
-      "Year": 2025,
-      "tags": [
-        "Elite Defense",
-        "Methodical Grind",
-        "Snail-Pace"
-      ],
-      "sos": 28,
-      "sor": 15,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-3",
-      "sos_rank": 28,
-      "sor_rank": 15
-    },
-    {
-      "Rank": 18,
       "Team": "Michigan",
       "Conference": "Big Ten",
       "Record": "9-4",
-      "Net Rating": 14.5,
+      "Net Rating": 14.6,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
@@ -389,6 +367,26 @@
       "conference_record": "7-2",
       "sos_rank": 21,
       "sor_rank": 19
+    },
+    {
+      "Rank": 18,
+      "Team": "Iowa",
+      "Conference": "Big Ten",
+      "Record": "9-4",
+      "Net Rating": 14.5,
+      "Year": 2025,
+      "tags": [
+        "Elite Defense",
+        "Snail-Pace"
+      ],
+      "sos": 28,
+      "sor": 15,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-3",
+      "sos_rank": 28,
+      "sor_rank": 15
     },
     {
       "Rank": 19,
@@ -621,7 +619,7 @@
       "Team": "LSU",
       "Conference": "SEC",
       "Record": "7-6",
-      "Net Rating": 8.9,
+      "Net Rating": 9.0,
       "Year": 2025,
       "tags": [
         "Stout Defense",
@@ -664,13 +662,13 @@
       "Net Rating": 7.2,
       "Year": 2025,
       "tags": [],
-      "sos": 52,
+      "sos": 53,
       "sor": 46,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "6-2",
-      "sos_rank": 52,
+      "sos_rank": 53,
       "sor_rank": 46
     },
     {
@@ -724,7 +722,7 @@
       "tags": [
         "Offense-Carried Team",
         "Vulnerable Defense",
-        "Air Assault",
+        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 107,
@@ -786,6 +784,7 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
+        "Balanced Attack",
         "Underachiever"
       ],
       "sos": 6,
@@ -896,7 +895,7 @@
       "Team": "Georgia Tech",
       "Conference": "ACC",
       "Record": "9-4",
-      "Net Rating": 4.8,
+      "Net Rating": 4.7,
       "Year": 2025,
       "tags": [
         "Efficient Offense"
@@ -1013,7 +1012,7 @@
       "tags": [
         "Offense-Carried Team",
         "Efficient Offense",
-        "Balanced Attack"
+        "Ground Explosion"
       ],
       "sos": 69,
       "sor": 70,
@@ -1052,7 +1051,8 @@
       "Net Rating": 3.2,
       "Year": 2025,
       "tags": [
-        "Passive Defense"
+        "Passive Defense",
+        "Ground Explosion"
       ],
       "sos": 59,
       "sor": 60,
@@ -1131,7 +1131,6 @@
       "tags": [
         "Offense-Carried Team",
         "Efficient Offense",
-        "Balanced Attack",
         "Disruptive Defense"
       ],
       "sos": 44,
@@ -1171,13 +1170,13 @@
         "Disruptive Defense"
       ],
       "sos": 17,
-      "sor": 76,
+      "sor": 77,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-8",
       "conference_record": "1-7",
       "sos_rank": 17,
-      "sor_rank": 76
+      "sor_rank": 77
     },
     {
       "Rank": 59,
@@ -1186,9 +1185,7 @@
       "Record": "9-4",
       "Net Rating": 1.3,
       "Year": 2025,
-      "tags": [
-        "Air Assault"
-      ],
+      "tags": [],
       "sos": 132,
       "sor": 59,
       "Actual Wins": null,
@@ -1251,7 +1248,7 @@
       "tags": [
         "Offense-Carried Team",
         "Vulnerable Defense",
-        "Ground Explosion",
+        "Balanced Attack",
         "Passing-Downs Weapon"
       ],
       "sos": 108,
@@ -1290,7 +1287,6 @@
       "Net Rating": -0.3,
       "Year": 2025,
       "tags": [
-        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 116,
@@ -1349,7 +1345,7 @@
       "Year": 2025,
       "tags": [
         "Inefficient Offense",
-        "Ground Explosion",
+        "Boom-or-Bust",
         "Underachiever"
       ],
       "sos": 3,
@@ -1483,7 +1479,7 @@
       "Year": 2025,
       "tags": [
         "Explosive Offense",
-        "Air Assault"
+        "Boom-or-Bust"
       ],
       "sos": 54,
       "sor": 102,
@@ -1502,7 +1498,8 @@
       "Net Rating": -3.3,
       "Year": 2025,
       "tags": [
-        "Leaky Defense"
+        "Leaky Defense",
+        "Balanced Attack"
       ],
       "sos": 118,
       "sor": 118,
@@ -1683,6 +1680,26 @@
     },
     {
       "Rank": 85,
+      "Team": "California",
+      "Conference": "ACC",
+      "Record": "7-6",
+      "Net Rating": -5.8,
+      "Year": 2025,
+      "tags": [
+        "Disruptive Defense",
+        "Behind The Chains"
+      ],
+      "sos": 70,
+      "sor": 83,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "4-4",
+      "sos_rank": 70,
+      "sor_rank": 83
+    },
+    {
+      "Rank": 86,
       "Team": "West Virginia",
       "Conference": "Big 12",
       "Record": "4-8",
@@ -1699,26 +1716,6 @@
       "conference_record": "2-7",
       "sos_rank": 33,
       "sor_rank": 97
-    },
-    {
-      "Rank": 86,
-      "Team": "California",
-      "Conference": "ACC",
-      "Record": "7-6",
-      "Net Rating": -5.9,
-      "Year": 2025,
-      "tags": [
-        "Disruptive Defense",
-        "Behind The Chains"
-      ],
-      "sos": 70,
-      "sor": 83,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "4-4",
-      "sos_rank": 70,
-      "sor_rank": 83
     },
     {
       "Rank": 87,
@@ -1807,13 +1804,13 @@
         "Disruptive Defense",
         "Behind The Chains"
       ],
-      "sos": 114,
+      "sos": 113,
       "sor": 53,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "5-3",
-      "sos_rank": 114,
+      "sos_rank": 113,
       "sor_rank": 53
     },
     {
@@ -1880,7 +1877,8 @@
       "Net Rating": -7.3,
       "Year": 2025,
       "tags": [
-        "Inefficient Offense"
+        "Inefficient Offense",
+        "Ground Explosion"
       ],
       "sos": 126,
       "sor": 94,
@@ -1898,7 +1896,9 @@
       "Record": "2-10",
       "Net Rating": -7.8,
       "Year": 2025,
-      "tags": [],
+      "tags": [
+        "Balanced Attack"
+      ],
       "sos": 8,
       "sor": 96,
       "Actual Wins": null,
@@ -2057,17 +2057,17 @@
       "tags": [
         "Explosive Offense",
         "Vulnerable Defense",
-        "Air Assault",
+        "Ground Explosion",
         "Underdog Roster"
       ],
       "sos": 92,
-      "sor": 77,
+      "sor": 76,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
       "sos_rank": 92,
-      "sor_rank": 77
+      "sor_rank": 76
     },
     {
       "Rank": 105,
@@ -2078,7 +2078,7 @@
       "Year": 2025,
       "tags": [
         "Vulnerable Defense",
-        "Balanced Attack",
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 96,
@@ -2140,13 +2140,13 @@
         "Leaky Defense"
       ],
       "sos": 16,
-      "sor": 92,
+      "sor": 93,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "1-7",
       "sos_rank": 16,
-      "sor_rank": 92
+      "sor_rank": 93
     },
     {
       "Rank": 109,
@@ -2313,8 +2313,7 @@
       "Net Rating": -12.5,
       "Year": 2025,
       "tags": [
-        "Inefficient Offense",
-        "Ground Explosion"
+        "Inefficient Offense"
       ],
       "sos": 123,
       "sor": 126,
@@ -2376,13 +2375,13 @@
         "Underdog Roster"
       ],
       "sos": 120,
-      "sor": 93,
+      "sor": 92,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-4",
       "sos_rank": 120,
-      "sor_rank": 93
+      "sor_rank": 92
     },
     {
       "Rank": 121,
@@ -2393,7 +2392,7 @@
       "Year": 2025,
       "tags": [
         "Anemic Offense",
-        "Air Assault"
+        "Ground Explosion"
       ],
       "sos": 127,
       "sor": 131,
@@ -2412,8 +2411,7 @@
       "Net Rating": -14.5,
       "Year": 2025,
       "tags": [
-        "Anemic Offense",
-        "Ground Explosion"
+        "Anemic Offense"
       ],
       "sos": 124,
       "sor": 116,
@@ -2473,6 +2471,7 @@
       "Year": 2025,
       "tags": [
         "Porous Defense",
+        "Balanced Attack",
         "Behind The Chains"
       ],
       "sos": 66,
@@ -2593,8 +2592,7 @@
       "Net Rating": -20.4,
       "Year": 2025,
       "tags": [
-        "Anemic Offense",
-        "Ground Explosion"
+        "Anemic Offense"
       ],
       "sos": 95,
       "sor": 111,
@@ -2657,13 +2655,13 @@
         "Anemic Offense",
         "Porous Defense"
       ],
-      "sos": 113,
+      "sos": 114,
       "sor": 134,
       "Actual Wins": null,
       "Games Played": null,
       "record": "0-12",
       "conference_record": "0-8",
-      "sos_rank": 113,
+      "sos_rank": 114,
       "sor_rank": 134
     }
   ]
