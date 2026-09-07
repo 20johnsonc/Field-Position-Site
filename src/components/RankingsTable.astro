@@ -10,12 +10,12 @@ const { rankings } = Astro.props;
 
 // Helper to convert "10-2" into a numeric value for accurate sorting
 const getRecordSortValue = (record: string) => {
-  if (!record || !record.includes('-')) return 0;
+  if (!record || !record.includes('-')) return -1;
   
   const [wins, losses] = record.split('-').map(Number);
   const total = wins + losses;
   
-  if (total === 0) return 0;
+  if (total === 0) return -0.0001; // Distinct value for 0-0 so it doesn't collide with 0-1 (0.0)
   
   // Win Percentage + tiny tiebreaker for total wins
   return (wins / total) + (wins * 0.0001);
