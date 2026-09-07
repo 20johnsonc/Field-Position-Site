@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T18:35:27.766008+00:00",
+  "generated_at": "2026-09-07T20:25:30.931719+00:00",
   "year": 2024,
   "week": 15,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673465,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "Arizona State",
-      "away_team": "Iowa State",
-      "home_points": 45,
-      "away_points": 19,
-      "actual_margin": 26,
-      "actual_total": 64,
-      "start_date": "2024-12-07 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673467,
       "week": 15,
       "year": 2024,
@@ -91,6 +73,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673465,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Arizona State",
+      "away_team": "Iowa State",
+      "home_points": 45,
+      "away_points": 19,
+      "actual_margin": 26,
+      "actual_total": 64,
+      "start_date": "2024-12-07 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T18:35:27.766008+00:00",
+  "generated_at": "2026-09-07T20:25:30.931719+00:00",
   "year": 2025,
   "week": 15,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777324,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "North Texas",
-      "home_points": 34,
-      "away_points": 21,
-      "actual_margin": 13,
-      "actual_total": 55,
-      "start_date": "2025-12-06 01:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777326,
       "week": 15,
       "year": 2025,
@@ -76,21 +58,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777329,
+      "game_id": 401777324,
       "week": 15,
       "year": 2025,
       "status": "completed",
-      "home_team": "Western Michigan",
-      "away_team": "Miami (OH)",
-      "home_points": 23,
-      "away_points": 13,
-      "actual_margin": 10,
-      "actual_total": 36,
-      "start_date": "2025-12-06 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
+      "home_team": "Tulane",
+      "away_team": "North Texas",
+      "home_points": 34,
+      "away_points": 21,
+      "actual_margin": 13,
+      "actual_total": 55,
+      "start_date": "2025-12-06 01:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
       "is_playoff": false,
-      "round_name": "Mac Championship",
+      "round_name": "American Championship",
       "bowl_name": null
     },
     {
@@ -112,6 +94,24 @@
       "bowl_name": null
     },
     {
+      "game_id": 401777329,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Western Michigan",
+      "away_team": "Miami (OH)",
+      "home_points": 23,
+      "away_points": 13,
+      "actual_margin": 10,
+      "actual_total": 36,
+      "start_date": "2025-12-06 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
       "game_id": 401777351,
       "week": 15,
       "year": 2025,
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777353,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Ohio State",
-      "away_team": "Indiana",
-      "home_points": 10,
-      "away_points": 13,
-      "actual_margin": -3,
-      "actual_total": 23,
-      "start_date": "2025-12-07 01:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
-      "is_playoff": false,
-      "round_name": "Big Ten Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777328,
       "week": 15,
       "year": 2025,
@@ -163,6 +145,24 @@
       "away_conference": "ACC",
       "is_playoff": false,
       "round_name": "Acc Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777353,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Ohio State",
+      "away_team": "Indiana",
+      "home_points": 10,
+      "away_points": 13,
+      "actual_margin": -3,
+      "actual_total": 23,
+      "start_date": "2025-12-07 01:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": "Big Ten Championship",
       "bowl_name": null
     },
     {

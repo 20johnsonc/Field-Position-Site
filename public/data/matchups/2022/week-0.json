@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T18:35:27.766008+00:00",
+  "generated_at": "2026-09-07T20:25:30.931719+00:00",
   "year": 2022,
   "week": 0,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401404146,
-      "week": 0,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Utah State",
-      "away_team": "UConn",
-      "home_points": 31,
-      "away_points": 20,
-      "actual_margin": 11,
-      "actual_total": 51,
-      "start_date": "2022-08-27 20:00:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "FBS Independents",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401405058,
       "week": 0,
       "year": 2022,
@@ -89,6 +71,24 @@
       "start_date": "2022-08-27 20:00:00+00:00",
       "home_conference": "Big Ten",
       "away_conference": "Mountain West",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401404146,
+      "week": 0,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Utah State",
+      "away_team": "UConn",
+      "home_points": 31,
+      "away_points": 20,
+      "actual_margin": 11,
+      "actual_total": 51,
+      "start_date": "2022-08-27 20:00:00+00:00",
+      "home_conference": "Mountain West",
+      "away_conference": "FBS Independents",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null
