@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T19:29:04.948821+00:00",
+  "generated_at": "2026-09-08T20:40:43.552817+00:00",
   "year": 2021,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401287953,
-      "week": 14,
-      "year": 2021,
-      "status": "completed",
-      "home_team": "Oklahoma State",
-      "away_team": "Baylor",
-      "home_points": 16,
-      "away_points": 21,
-      "actual_margin": -5,
-      "actual_total": 37,
-      "start_date": "2021-12-04 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401331160,
       "week": 14,
       "year": 2021,
@@ -71,6 +53,24 @@
       "start_date": "2021-12-04 17:00:00+00:00",
       "home_conference": "Mid-American",
       "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401287953,
+      "week": 14,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Oklahoma State",
+      "away_team": "Baylor",
+      "home_points": 16,
+      "away_points": 21,
+      "actual_margin": -5,
+      "actual_total": 37,
+      "start_date": "2021-12-04 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null
@@ -112,24 +112,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401331162,
-      "week": 14,
-      "year": 2021,
-      "status": "completed",
-      "home_team": "Cincinnati",
-      "away_team": "Houston",
-      "home_points": 35,
-      "away_points": 20,
-      "actual_margin": 15,
-      "actual_total": 55,
-      "start_date": "2021-12-04 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401282154,
       "week": 14,
       "year": 2021,
@@ -143,6 +125,24 @@
       "start_date": "2021-12-04 21:00:00+00:00",
       "home_conference": "SEC",
       "away_conference": "SEC",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401331162,
+      "week": 14,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Cincinnati",
+      "away_team": "Houston",
+      "home_points": 35,
+      "away_points": 20,
+      "actual_margin": 15,
+      "actual_total": 55,
+      "start_date": "2021-12-04 21:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null
