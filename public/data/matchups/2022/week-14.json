@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T20:25:30.931719+00:00",
+  "generated_at": "2026-09-08T19:19:41.623554+00:00",
   "year": 2022,
   "week": 14,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437033,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Ohio",
-      "away_team": "Toledo",
-      "home_points": 7,
-      "away_points": 17,
-      "actual_margin": -10,
-      "actual_total": 24,
-      "start_date": "2022-12-03 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": "Mac Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437030,
       "week": 14,
       "year": 2022,
@@ -91,6 +73,24 @@
       "away_conference": "Big 12",
       "is_playoff": false,
       "round_name": "Dr Pepper Big 12 Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437033,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Ohio",
+      "away_team": "Toledo",
+      "home_points": 7,
+      "away_points": 17,
+      "actual_margin": -10,
+      "actual_total": 24,
+      "start_date": "2022-12-03 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": "Mac Championship",
       "bowl_name": null
     },
     {
@@ -184,24 +184,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437009,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "North Carolina",
-      "away_team": "Clemson",
-      "home_points": 10,
-      "away_points": 39,
-      "actual_margin": -29,
-      "actual_total": 49,
-      "start_date": "2022-12-04 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": "Subway Acc Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437031,
       "week": 14,
       "year": 2022,
@@ -217,6 +199,24 @@
       "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": "Big Ten Championship Game",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437009,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "North Carolina",
+      "away_team": "Clemson",
+      "home_points": 10,
+      "away_points": 39,
+      "actual_margin": -29,
+      "actual_total": 49,
+      "start_date": "2022-12-04 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": "Subway Acc Championship",
       "bowl_name": null
     },
     {

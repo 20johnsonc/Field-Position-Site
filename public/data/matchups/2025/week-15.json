@@ -1,26 +1,8 @@
 {
-  "generated_at": "2026-09-07T20:25:30.931719+00:00",
+  "generated_at": "2026-09-08T19:19:41.623554+00:00",
   "year": 2025,
   "week": 15,
   "games": [
-    {
-      "game_id": 401777352,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "James Madison",
-      "away_team": "Troy",
-      "home_points": 31,
-      "away_points": 14,
-      "actual_margin": 17,
-      "actual_total": 45,
-      "start_date": "2025-12-06 00:00:00+00:00",
-      "home_conference": "Sun Belt",
-      "away_conference": "Sun Belt",
-      "is_playoff": false,
-      "round_name": "Sun Belt Championship",
-      "bowl_name": null
-    },
     {
       "game_id": 401777325,
       "week": 15,
@@ -37,6 +19,24 @@
       "away_conference": "Conference USA",
       "is_playoff": false,
       "round_name": "Conference Usa Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777352,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "James Madison",
+      "away_team": "Troy",
+      "home_points": 31,
+      "away_points": 14,
+      "actual_margin": 17,
+      "actual_total": 45,
+      "start_date": "2025-12-06 00:00:00+00:00",
+      "home_conference": "Sun Belt",
+      "away_conference": "Sun Belt",
+      "is_playoff": false,
+      "round_name": "Sun Belt Championship",
       "bowl_name": null
     },
     {
@@ -76,24 +76,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777327,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Texas Tech",
-      "away_team": "BYU",
-      "home_points": 34,
-      "away_points": 7,
-      "actual_margin": 27,
-      "actual_total": 41,
-      "start_date": "2025-12-06 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777329,
       "week": 15,
       "year": 2025,
@@ -109,6 +91,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777327,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Texas Tech",
+      "away_team": "BYU",
+      "home_points": 34,
+      "away_points": 7,
+      "actual_margin": 27,
+      "actual_total": 41,
+      "start_date": "2025-12-06 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Big 12 Championship",
       "bowl_name": null
     },
     {
