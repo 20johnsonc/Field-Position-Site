@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T19:19:41.623554+00:00",
+  "generated_at": "2026-09-08T19:29:04.948821+00:00",
   "year": 2025,
   "rankings": [
     {
@@ -7,7 +7,7 @@
       "Team": "Notre Dame",
       "Conference": "FBS Independents",
       "Record": "10-2",
-      "Net Rating": 38.4,
+      "Net Rating": 37.6,
       "Year": 2025,
       "tags": [
         "Playoff Contender",
@@ -15,13 +15,13 @@
         "Elite Defense",
         "Blue-Blood Talent"
       ],
-      "sos": 77,
+      "sos": 76,
       "sor": 13,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-2",
       "conference_record": "0-0",
-      "sos_rank": 30,
+      "sos_rank": 29,
       "sor_rank": 13
     },
     {
@@ -29,7 +29,7 @@
       "Team": "Ohio State",
       "Conference": "Big Ten",
       "Record": "12-2",
-      "Net Rating": 38.0,
+      "Net Rating": 37.4,
       "Year": 2025,
       "tags": [
         "Playoff Contender",
@@ -39,20 +39,20 @@
         "Blue-Blood Talent"
       ],
       "sos": 80,
-      "sor": 8,
+      "sor": 9,
       "Actual Wins": null,
       "Games Played": null,
       "record": "12-2",
       "conference_record": "9-0",
       "sos_rank": 32,
-      "sor_rank": 8
+      "sor_rank": 9
     },
     {
       "Rank": 3,
       "Team": "Oregon",
       "Conference": "Big Ten",
       "Record": "13-2",
-      "Net Rating": 36.8,
+      "Net Rating": 36.5,
       "Year": 2025,
       "tags": [
         "Playoff Contender",
@@ -75,7 +75,7 @@
       "Team": "Indiana",
       "Conference": "Big Ten",
       "Record": "16-0",
-      "Net Rating": 35.2,
+      "Net Rating": 34.5,
       "Year": 2025,
       "tags": [
         "Playoff Contender",
@@ -94,10 +94,55 @@
     },
     {
       "Rank": 5,
+      "Team": "Georgia",
+      "Conference": "SEC",
+      "Record": "12-2",
+      "Net Rating": 30.7,
+      "Year": 2025,
+      "tags": [
+        "Playoff Contender",
+        "Efficient Offense",
+        "Stout Defense",
+        "Blue-Blood Talent"
+      ],
+      "sos": 43,
+      "sor": 4,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "12-2",
+      "conference_record": "7-1",
+      "sos_rank": 9,
+      "sor_rank": 4
+    },
+    {
+      "Rank": 6,
+      "Team": "Alabama",
+      "Conference": "SEC",
+      "Record": "11-4",
+      "Net Rating": 30.6,
+      "Year": 2025,
+      "tags": [
+        "Playoff Contender",
+        "Efficient Offense",
+        "Stout Defense",
+        "Ground Explosion",
+        "Blue-Blood Talent"
+      ],
+      "sos": 31,
+      "sor": 6,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-4",
+      "conference_record": "7-1",
+      "sos_rank": 5,
+      "sor_rank": 6
+    },
+    {
+      "Rank": 7,
       "Team": "Texas Tech",
       "Conference": "Big 12",
       "Record": "12-2",
-      "Net Rating": 31.3,
+      "Net Rating": 30.6,
       "Year": 2025,
       "tags": [
         "Well-Rounded Team",
@@ -114,56 +159,11 @@
       "sor_rank": 12
     },
     {
-      "Rank": 6,
-      "Team": "Georgia",
-      "Conference": "SEC",
-      "Record": "12-2",
-      "Net Rating": 31.2,
-      "Year": 2025,
-      "tags": [
-        "Playoff Contender",
-        "Efficient Offense",
-        "Stout Defense",
-        "Blue-Blood Talent"
-      ],
-      "sos": 42,
-      "sor": 4,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "12-2",
-      "conference_record": "7-1",
-      "sos_rank": 9,
-      "sor_rank": 4
-    },
-    {
-      "Rank": 7,
-      "Team": "Alabama",
-      "Conference": "SEC",
-      "Record": "11-4",
-      "Net Rating": 31.1,
-      "Year": 2025,
-      "tags": [
-        "Playoff Contender",
-        "Efficient Offense",
-        "Stout Defense",
-        "Ground Explosion",
-        "Blue-Blood Talent"
-      ],
-      "sos": 29,
-      "sor": 6,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-4",
-      "conference_record": "7-1",
-      "sos_rank": 5,
-      "sor_rank": 6
-    },
-    {
       "Rank": 8,
       "Team": "Utah",
       "Conference": "Big 12",
       "Record": "11-2",
-      "Net Rating": 30.3,
+      "Net Rating": 29.8,
       "Year": 2025,
       "tags": [
         "Playoff Contender",
@@ -171,7 +171,7 @@
         "Elite Defense",
         "Ground Explosion"
       ],
-      "sos": 105,
+      "sos": 104,
       "sor": 26,
       "Actual Wins": null,
       "Games Played": null,
@@ -185,7 +185,7 @@
       "Team": "Miami",
       "Conference": "ACC",
       "Record": "13-3",
-      "Net Rating": 28.8,
+      "Net Rating": 28.4,
       "Year": 2025,
       "tags": [
         "Well-Rounded Team",
@@ -203,98 +203,98 @@
     },
     {
       "Rank": 10,
-      "Team": "USC",
-      "Conference": "Big Ten",
-      "Record": "9-4",
-      "Net Rating": 28.6,
-      "Year": 2025,
-      "tags": [
-        "High-Powered Offense",
-        "Balanced Attack"
-      ],
-      "sos": 68,
-      "sor": 89,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "7-2",
-      "sos_rank": 23,
-      "sor_rank": 23
-    },
-    {
-      "Rank": 11,
       "Team": "Vanderbilt",
       "Conference": "SEC",
       "Record": "10-3",
-      "Net Rating": 28.4,
+      "Net Rating": 28.3,
       "Year": 2025,
       "tags": [
         "High-Powered Offense",
         "Methodical Grind",
         "Disruptive Defense"
       ],
-      "sos": 73,
+      "sos": 75,
       "sor": 19,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
       "conference_record": "6-2",
-      "sos_rank": 26,
+      "sos_rank": 28,
       "sor_rank": 15
     },
     {
-      "Rank": 12,
-      "Team": "Ole Miss",
-      "Conference": "SEC",
-      "Record": "13-2",
-      "Net Rating": 27.6,
+      "Rank": 11,
+      "Team": "USC",
+      "Conference": "Big Ten",
+      "Record": "9-4",
+      "Net Rating": 28.3,
       "Year": 2025,
       "tags": [
         "High-Powered Offense",
-        "Track Meet"
+        "Balanced Attack"
       ],
-      "sos": 74,
-      "sor": 5,
+      "sos": 69,
+      "sor": 88,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "13-2",
-      "conference_record": "7-1",
-      "sos_rank": 27,
-      "sor_rank": 5
+      "record": "9-4",
+      "conference_record": "7-2",
+      "sos_rank": 24,
+      "sor_rank": 22
     },
     {
-      "Rank": 13,
+      "Rank": 12,
       "Team": "Tennessee",
       "Conference": "SEC",
       "Record": "8-5",
-      "Net Rating": 27.5,
+      "Net Rating": 27.2,
       "Year": 2025,
       "tags": [
         "High-Powered Offense",
         "Ground Explosion",
         "Disruptive Defense"
       ],
-      "sos": 87,
-      "sor": 126,
+      "sos": 86,
+      "sor": 125,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "4-4",
-      "sos_rank": 37,
-      "sor_rank": 33
+      "sos_rank": 36,
+      "sor_rank": 32
+    },
+    {
+      "Rank": 13,
+      "Team": "Ole Miss",
+      "Conference": "SEC",
+      "Record": "13-2",
+      "Net Rating": 27.0,
+      "Year": 2025,
+      "tags": [
+        "High-Powered Offense",
+        "Track Meet"
+      ],
+      "sos": 73,
+      "sor": 5,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "13-2",
+      "conference_record": "7-1",
+      "sos_rank": 26,
+      "sor_rank": 5
     },
     {
       "Rank": 14,
       "Team": "Texas A&M",
       "Conference": "SEC",
       "Record": "11-2",
-      "Net Rating": 27.3,
+      "Net Rating": 27.0,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
         "Blue-Blood Talent"
       ],
-      "sos": 51,
+      "sos": 52,
       "sor": 7,
       "Actual Wins": null,
       "Games Played": null,
@@ -308,7 +308,7 @@
       "Team": "Penn State",
       "Conference": "Big Ten",
       "Record": "7-6",
-      "Net Rating": 25.9,
+      "Net Rating": 25.2,
       "Year": 2025,
       "tags": [
         "Playoff Contender",
@@ -316,28 +316,28 @@
         "Stout Defense",
         "Blue-Blood Talent"
       ],
-      "sos": 69,
-      "sor": 131,
+      "sos": 68,
+      "sor": 132,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "3-6",
-      "sos_rank": 24,
-      "sor_rank": 38
+      "sos_rank": 23,
+      "sor_rank": 39
     },
     {
       "Rank": 16,
       "Team": "Washington",
       "Conference": "Big Ten",
       "Record": "9-4",
-      "Net Rating": 24.8,
+      "Net Rating": 24.5,
       "Year": 2025,
       "tags": [
         "Well-Rounded Team",
         "Efficient Offense",
         "Stout Defense"
       ],
-      "sos": 93,
+      "sos": 95,
       "sor": 98,
       "Actual Wins": null,
       "Games Played": null,
@@ -351,7 +351,7 @@
       "Team": "South Florida",
       "Conference": "American Athletic",
       "Record": "9-4",
-      "Net Rating": 23.4,
+      "Net Rating": 23.2,
       "Year": 2025,
       "tags": [
         "Well-Rounded Team",
@@ -359,7 +359,7 @@
         "Stout Defense",
         "Track Meet"
       ],
-      "sos": 134,
+      "sos": 133,
       "sor": 123,
       "Actual Wins": null,
       "Games Played": null,
@@ -370,57 +370,57 @@
     },
     {
       "Rank": 18,
-      "Team": "Oklahoma",
-      "Conference": "SEC",
-      "Record": "10-3",
-      "Net Rating": 23.1,
-      "Year": 2025,
-      "tags": [
-        "Elite Defense"
-      ],
-      "sos": 45,
-      "sor": 10,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "10-3",
-      "conference_record": "6-2",
-      "sos_rank": 11,
-      "sor_rank": 10
-    },
-    {
-      "Rank": 19,
       "Team": "Michigan",
       "Conference": "Big Ten",
       "Record": "9-4",
-      "Net Rating": 23.1,
+      "Net Rating": 22.7,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
         "Stout Defense",
         "Blue-Blood Talent"
       ],
-      "sos": 54,
+      "sos": 55,
       "sor": 86,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "7-2",
-      "sos_rank": 17,
+      "sos_rank": 18,
       "sor_rank": 20
+    },
+    {
+      "Rank": 19,
+      "Team": "Oklahoma",
+      "Conference": "SEC",
+      "Record": "10-3",
+      "Net Rating": 22.5,
+      "Year": 2025,
+      "tags": [
+        "Elite Defense"
+      ],
+      "sos": 46,
+      "sor": 10,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "10-3",
+      "conference_record": "6-2",
+      "sos_rank": 12,
+      "sor_rank": 10
     },
     {
       "Rank": 20,
       "Team": "Iowa",
       "Conference": "Big Ten",
       "Record": "9-4",
-      "Net Rating": 22.5,
+      "Net Rating": 21.9,
       "Year": 2025,
       "tags": [
         "Elite Defense",
         "Snail-Pace"
       ],
       "sos": 78,
-      "sor": 28,
+      "sor": 27,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
@@ -430,82 +430,82 @@
     },
     {
       "Rank": 21,
-      "Team": "SMU",
-      "Conference": "ACC",
-      "Record": "9-4",
-      "Net Rating": 22.0,
-      "Year": 2025,
-      "tags": [
-        "Shutdown Defense",
-        "Track Meet"
-      ],
-      "sos": 124,
-      "sor": 132,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-2",
-      "sos_rank": 63,
-      "sor_rank": 39
-    },
-    {
-      "Rank": 22,
-      "Team": "North Texas",
-      "Conference": "American Athletic",
-      "Record": "12-2",
-      "Net Rating": 21.8,
-      "Year": 2025,
-      "tags": [
-        "High-Powered Offense",
-        "Track Meet"
-      ],
-      "sos": 174,
-      "sor": 95,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "12-2",
-      "conference_record": "7-1",
-      "sos_rank": 97,
-      "sor_rank": 24
-    },
-    {
-      "Rank": 23,
       "Team": "Florida State",
       "Conference": "ACC",
       "Record": "5-7",
-      "Net Rating": 21.7,
+      "Net Rating": 21.6,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
         "Ground Explosion"
       ],
       "sos": 97,
-      "sor": 172,
+      "sor": 171,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
       "conference_record": "2-6",
       "sos_rank": 44,
-      "sor_rank": 78
+      "sor_rank": 77
+    },
+    {
+      "Rank": 22,
+      "Team": "North Texas",
+      "Conference": "American Athletic",
+      "Record": "12-2",
+      "Net Rating": 21.6,
+      "Year": 2025,
+      "tags": [
+        "High-Powered Offense",
+        "Track Meet"
+      ],
+      "sos": 175,
+      "sor": 95,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "12-2",
+      "conference_record": "7-1",
+      "sos_rank": 98,
+      "sor_rank": 24
+    },
+    {
+      "Rank": 23,
+      "Team": "SMU",
+      "Conference": "ACC",
+      "Record": "9-4",
+      "Net Rating": 21.4,
+      "Year": 2025,
+      "tags": [
+        "Shutdown Defense",
+        "Track Meet"
+      ],
+      "sos": 122,
+      "sor": 131,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-2",
+      "sos_rank": 62,
+      "sor_rank": 38
     },
     {
       "Rank": 24,
       "Team": "Missouri",
       "Conference": "SEC",
       "Record": "8-5",
-      "Net Rating": 21.7,
+      "Net Rating": 21.3,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
         "Stout Defense"
       ],
-      "sos": 89,
+      "sos": 88,
       "sor": 122,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "4-4",
-      "sos_rank": 39,
+      "sos_rank": 38,
       "sor_rank": 29
     },
     {
@@ -513,7 +513,7 @@
       "Team": "Texas",
       "Conference": "SEC",
       "Record": "10-3",
-      "Net Rating": 21.6,
+      "Net Rating": 20.8,
       "Year": 2025,
       "tags": [
         "Stout Defense",
@@ -521,13 +521,13 @@
         "Blue-Blood Talent",
         "Passing-Downs Weapon"
       ],
-      "sos": 46,
+      "sos": 45,
       "sor": 11,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
       "conference_record": "6-2",
-      "sos_rank": 12,
+      "sos_rank": 11,
       "sor_rank": 11
     },
     {
@@ -535,7 +535,7 @@
       "Team": "BYU",
       "Conference": "Big 12",
       "Record": "12-2",
-      "Net Rating": 21.2,
+      "Net Rating": 20.7,
       "Year": 2025,
       "tags": [
         "Well-Rounded Team",
@@ -543,40 +543,21 @@
         "Methodical Grind",
         "Snail-Pace"
       ],
-      "sos": 81,
-      "sor": 9,
+      "sos": 82,
+      "sor": 8,
       "Actual Wins": null,
       "Games Played": null,
       "record": "12-2",
       "conference_record": "8-1",
       "sos_rank": 33,
-      "sor_rank": 9
+      "sor_rank": 8
     },
     {
       "Rank": 27,
-      "Team": "Auburn",
-      "Conference": "SEC",
-      "Record": "5-7",
-      "Net Rating": 20.3,
-      "Year": 2025,
-      "tags": [
-        "Shutdown Defense"
-      ],
-      "sos": 56,
-      "sor": 152,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "5-7",
-      "conference_record": "1-7",
-      "sos_rank": 19,
-      "sor_rank": 58
-    },
-    {
-      "Rank": 28,
       "Team": "Toledo",
       "Conference": "Mid-American",
       "Record": "8-5",
-      "Net Rating": 20.2,
+      "Net Rating": 20.1,
       "Year": 2025,
       "tags": [
         "Elite Defense",
@@ -592,23 +573,42 @@
       "sor_rank": 68
     },
     {
+      "Rank": 28,
+      "Team": "Auburn",
+      "Conference": "SEC",
+      "Record": "5-7",
+      "Net Rating": 20.0,
+      "Year": 2025,
+      "tags": [
+        "Shutdown Defense"
+      ],
+      "sos": 54,
+      "sor": 152,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "5-7",
+      "conference_record": "1-7",
+      "sos_rank": 17,
+      "sor_rank": 58
+    },
+    {
       "Rank": 29,
       "Team": "Clemson",
       "Conference": "ACC",
       "Record": "7-6",
-      "Net Rating": 20.1,
+      "Net Rating": 19.8,
       "Year": 2025,
       "tags": [
         "Blue-Blood Talent",
         "Early-Downs Grinder"
       ],
-      "sos": 112,
+      "sos": 113,
       "sor": 163,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-4",
-      "sos_rank": 55,
+      "sos_rank": 56,
       "sor_rank": 69
     },
     {
@@ -616,7 +616,7 @@
       "Team": "James Madison",
       "Conference": "Sun Belt",
       "Record": "12-2",
-      "Net Rating": 20.0,
+      "Net Rating": 19.1,
       "Year": 2025,
       "tags": [
         "Stout Defense",
@@ -625,7 +625,7 @@
         "Underdog Roster",
         "Snail-Pace"
       ],
-      "sos": 158,
+      "sos": 157,
       "sor": 30,
       "Actual Wins": null,
       "Games Played": null,
@@ -639,26 +639,26 @@
       "Team": "South Carolina",
       "Conference": "SEC",
       "Record": "4-8",
-      "Net Rating": 18.7,
+      "Net Rating": 18.2,
       "Year": 2025,
       "tags": [
         "Shutdown Defense"
       ],
       "sos": 50,
-      "sor": 169,
+      "sor": 168,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "1-7",
       "sos_rank": 15,
-      "sor_rank": 75
+      "sor_rank": 74
     },
     {
       "Rank": 32,
       "Team": "Arkansas",
       "Conference": "SEC",
       "Record": "2-10",
-      "Net Rating": 18.0,
+      "Net Rating": 17.9,
       "Year": 2025,
       "tags": [
         "Offense-Carried Team",
@@ -666,41 +666,21 @@
         "Balanced Attack",
         "Underachiever"
       ],
-      "sos": 38,
-      "sor": 197,
+      "sos": 39,
+      "sor": 198,
       "Actual Wins": null,
       "Games Played": null,
       "record": "2-10",
       "conference_record": "0-8",
       "sos_rank": 8,
-      "sor_rank": 103
+      "sor_rank": 104
     },
     {
       "Rank": 33,
-      "Team": "LSU",
-      "Conference": "SEC",
-      "Record": "7-6",
-      "Net Rating": 17.7,
-      "Year": 2025,
-      "tags": [
-        "Stout Defense",
-        "Blue-Blood Talent"
-      ],
-      "sos": 44,
-      "sor": 128,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "3-5",
-      "sos_rank": 10,
-      "sor_rank": 35
-    },
-    {
-      "Rank": 34,
       "Team": "Louisville",
       "Conference": "ACC",
       "Record": "9-4",
-      "Net Rating": 17.7,
+      "Net Rating": 17.4,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
@@ -716,167 +696,167 @@
       "sor_rank": 28
     },
     {
-      "Rank": 35,
+      "Rank": 34,
       "Team": "Pittsburgh",
       "Conference": "ACC",
       "Record": "8-5",
-      "Net Rating": 17.5,
+      "Net Rating": 17.1,
       "Year": 2025,
       "tags": [],
-      "sos": 94,
+      "sos": 93,
       "sor": 135,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "6-2",
-      "sos_rank": 43,
+      "sos_rank": 41,
       "sor_rank": 42
     },
     {
+      "Rank": 35,
+      "Team": "LSU",
+      "Conference": "SEC",
+      "Record": "7-6",
+      "Net Rating": 17.1,
+      "Year": 2025,
+      "tags": [
+        "Stout Defense",
+        "Blue-Blood Talent"
+      ],
+      "sos": 44,
+      "sor": 127,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "3-5",
+      "sos_rank": 10,
+      "sor_rank": 34
+    },
+    {
       "Rank": 36,
-      "Team": "Old Dominion",
-      "Conference": "Sun Belt",
-      "Record": "10-3",
-      "Net Rating": 16.9,
-      "Year": 2025,
-      "tags": [
-        "Efficient Offense",
-        "Ground Explosion",
-        "Overachiever"
-      ],
-      "sos": 159,
-      "sor": 88,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "10-3",
-      "conference_record": "6-2",
-      "sos_rank": 85,
-      "sor_rank": 22
-    },
-    {
-      "Rank": 37,
-      "Team": "Georgia Tech",
-      "Conference": "ACC",
-      "Record": "9-4",
-      "Net Rating": 16.9,
-      "Year": 2025,
-      "tags": [
-        "Efficient Offense"
-      ],
-      "sos": 113,
-      "sor": 124,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-2",
-      "sos_rank": 56,
-      "sor_rank": 31
-    },
-    {
-      "Rank": 38,
       "Team": "NC State",
       "Conference": "ACC",
       "Record": "8-5",
-      "Net Rating": 16.8,
+      "Net Rating": 17.0,
       "Year": 2025,
       "tags": [
         "Air Assault",
         "Disruptive Defense",
         "Passing-Downs Weapon"
       ],
-      "sos": 82,
-      "sor": 127,
+      "sos": 83,
+      "sor": 128,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "4-4",
       "sos_rank": 34,
-      "sor_rank": 34
+      "sor_rank": 35
+    },
+    {
+      "Rank": 37,
+      "Team": "Georgia Tech",
+      "Conference": "ACC",
+      "Record": "9-4",
+      "Net Rating": 16.7,
+      "Year": 2025,
+      "tags": [
+        "Efficient Offense"
+      ],
+      "sos": 112,
+      "sor": 124,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-2",
+      "sos_rank": 55,
+      "sor_rank": 31
+    },
+    {
+      "Rank": 38,
+      "Team": "Old Dominion",
+      "Conference": "Sun Belt",
+      "Record": "10-3",
+      "Net Rating": 16.5,
+      "Year": 2025,
+      "tags": [
+        "Efficient Offense",
+        "Ground Explosion",
+        "Overachiever"
+      ],
+      "sos": 160,
+      "sor": 89,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "10-3",
+      "conference_record": "6-2",
+      "sos_rank": 87,
+      "sor_rank": 23
     },
     {
       "Rank": 39,
       "Team": "Florida",
       "Conference": "SEC",
       "Record": "4-8",
-      "Net Rating": 16.3,
+      "Net Rating": 16.1,
       "Year": 2025,
       "tags": [],
       "sos": 27,
-      "sor": 159,
+      "sor": 160,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "2-6",
       "sos_rank": 3,
-      "sor_rank": 65
+      "sor_rank": 66
     },
     {
       "Rank": 40,
-      "Team": "Kansas State",
-      "Conference": "Big 12",
-      "Record": "6-6",
-      "Net Rating": 16.3,
-      "Year": 2025,
-      "tags": [
-        "Explosive Offense",
-        "Ground Explosion",
-        "Disruptive Defense"
-      ],
-      "sos": 109,
-      "sor": 158,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "6-6",
-      "conference_record": "5-4",
-      "sos_rank": 52,
-      "sor_rank": 64
-    },
-    {
-      "Rank": 41,
       "Team": "Memphis",
       "Conference": "American Athletic",
       "Record": "8-5",
-      "Net Rating": 16.3,
+      "Net Rating": 16.0,
       "Year": 2025,
       "tags": [
         "Ground Explosion",
         "Early-Downs Grinder"
       ],
       "sos": 162,
-      "sor": 160,
+      "sor": 159,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "4-4",
       "sos_rank": 88,
-      "sor_rank": 66
+      "sor_rank": 65
+    },
+    {
+      "Rank": 41,
+      "Team": "Kansas State",
+      "Conference": "Big 12",
+      "Record": "6-6",
+      "Net Rating": 15.8,
+      "Year": 2025,
+      "tags": [
+        "Explosive Offense",
+        "Ground Explosion",
+        "Disruptive Defense"
+      ],
+      "sos": 108,
+      "sor": 158,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "6-6",
+      "conference_record": "5-4",
+      "sos_rank": 51,
+      "sor_rank": 64
     },
     {
       "Rank": 42,
-      "Team": "Arizona",
-      "Conference": "Big 12",
-      "Record": "9-4",
-      "Net Rating": 15.9,
-      "Year": 2025,
-      "tags": [
-        "Boom-or-Bust",
-        "Passing-Downs Weapon"
-      ],
-      "sos": 119,
-      "sor": 130,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-3",
-      "sos_rank": 60,
-      "sor_rank": 37
-    },
-    {
-      "Rank": 43,
       "Team": "Cincinnati",
       "Conference": "Big 12",
       "Record": "7-6",
-      "Net Rating": 15.8,
+      "Net Rating": 15.7,
       "Year": 2025,
       "tags": [
         "Offense-Carried Team",
@@ -893,20 +873,40 @@
       "sor_rank": 70
     },
     {
+      "Rank": 43,
+      "Team": "Arizona",
+      "Conference": "Big 12",
+      "Record": "9-4",
+      "Net Rating": 15.5,
+      "Year": 2025,
+      "tags": [
+        "Boom-or-Bust",
+        "Passing-Downs Weapon"
+      ],
+      "sos": 119,
+      "sor": 130,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-3",
+      "sos_rank": 60,
+      "sor_rank": 37
+    },
+    {
       "Rank": 44,
       "Team": "Boise State",
       "Conference": "Mountain West",
       "Record": "9-5",
-      "Net Rating": 15.6,
+      "Net Rating": 15.3,
       "Year": 2025,
       "tags": [],
-      "sos": 125,
+      "sos": 126,
       "sor": 134,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-5",
       "conference_record": "6-2",
-      "sos_rank": 64,
+      "sos_rank": 65,
       "sor_rank": 41
     },
     {
@@ -914,19 +914,19 @@
       "Team": "Iowa State",
       "Conference": "Big 12",
       "Record": "8-4",
-      "Net Rating": 15.6,
+      "Net Rating": 15.3,
       "Year": 2025,
       "tags": [
         "Disruptive Defense",
         "Passing-Downs Liability"
       ],
-      "sos": 116,
+      "sos": 115,
       "sor": 138,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-4",
       "conference_record": "5-4",
-      "sos_rank": 59,
+      "sos_rank": 58,
       "sor_rank": 45
     },
     {
@@ -934,7 +934,7 @@
       "Team": "UNLV",
       "Conference": "Mountain West",
       "Record": "10-4",
-      "Net Rating": 15.4,
+      "Net Rating": 15.0,
       "Year": 2025,
       "tags": [
         "Offense-Carried Team",
@@ -956,7 +956,7 @@
       "Team": "Arizona State",
       "Conference": "Big 12",
       "Record": "8-5",
-      "Net Rating": 15.3,
+      "Net Rating": 14.9,
       "Year": 2025,
       "tags": [],
       "sos": 91,
@@ -970,69 +970,90 @@
     },
     {
       "Rank": 48,
-      "Team": "Virginia",
-      "Conference": "ACC",
-      "Record": "11-3",
-      "Net Rating": 15.0,
-      "Year": 2025,
-      "tags": [
-        "Shutdown Defense"
-      ],
-      "sos": 126,
-      "sor": 100,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-3",
-      "conference_record": "7-1",
-      "sos_rank": 65,
-      "sor_rank": 26
-    },
-    {
-      "Rank": 49,
       "Team": "Illinois",
       "Conference": "Big Ten",
       "Record": "9-4",
-      "Net Rating": 15.0,
+      "Net Rating": 14.7,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
         "Disruptive Defense"
       ],
-      "sos": 76,
-      "sor": 40,
+      "sos": 77,
+      "sor": 39,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "5-4",
-      "sos_rank": 29,
+      "sos_rank": 30,
       "sor_rank": 19
+    },
+    {
+      "Rank": 49,
+      "Team": "Virginia",
+      "Conference": "ACC",
+      "Record": "11-3",
+      "Net Rating": 14.5,
+      "Year": 2025,
+      "tags": [
+        "Shutdown Defense"
+      ],
+      "sos": 125,
+      "sor": 100,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-3",
+      "conference_record": "7-1",
+      "sos_rank": 64,
+      "sor_rank": 26
     },
     {
       "Rank": 50,
       "Team": "Nebraska",
       "Conference": "Big Ten",
       "Record": "7-6",
-      "Net Rating": 14.8,
+      "Net Rating": 14.4,
       "Year": 2025,
       "tags": [
         "Efficient Offense",
         "Balanced Attack"
       ],
-      "sos": 92,
-      "sor": 149,
+      "sos": 96,
+      "sor": 150,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-5",
-      "sos_rank": 41,
-      "sor_rank": 55
+      "sos_rank": 43,
+      "sor_rank": 56
     },
     {
       "Rank": 51,
+      "Team": "Kansas",
+      "Conference": "Big 12",
+      "Record": "5-7",
+      "Net Rating": 14.2,
+      "Year": 2025,
+      "tags": [
+        "Offense-Carried Team",
+        "Efficient Offense",
+        "Disruptive Defense"
+      ],
+      "sos": 109,
+      "sor": 167,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "5-7",
+      "conference_record": "3-6",
+      "sos_rank": 52,
+      "sor_rank": 73
+    },
+    {
+      "Rank": 52,
       "Team": "Kentucky",
       "Conference": "SEC",
       "Record": "5-7",
-      "Net Rating": 14.3,
+      "Net Rating": 14.0,
       "Year": 2025,
       "tags": [],
       "sos": 34,
@@ -1045,79 +1066,58 @@
       "sor_rank": 57
     },
     {
-      "Rank": 52,
-      "Team": "Kansas",
-      "Conference": "Big 12",
-      "Record": "5-7",
-      "Net Rating": 14.2,
-      "Year": 2025,
-      "tags": [
-        "Offense-Carried Team",
-        "Efficient Offense",
-        "Disruptive Defense"
-      ],
-      "sos": 108,
-      "sor": 167,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "5-7",
-      "conference_record": "3-6",
-      "sos_rank": 51,
-      "sor_rank": 73
-    },
-    {
       "Rank": 53,
       "Team": "TCU",
       "Conference": "Big 12",
       "Record": "9-4",
-      "Net Rating": 14.2,
+      "Net Rating": 13.8,
       "Year": 2025,
       "tags": [
         "Passing-Downs Weapon"
       ],
-      "sos": 99,
-      "sor": 125,
+      "sos": 98,
+      "sor": 126,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "5-4",
-      "sos_rank": 46,
-      "sor_rank": 32
+      "sos_rank": 45,
+      "sor_rank": 33
     },
     {
       "Rank": 54,
       "Team": "Baylor",
       "Conference": "Big 12",
       "Record": "5-7",
-      "Net Rating": 14.0,
+      "Net Rating": 13.8,
       "Year": 2025,
       "tags": [
         "Disruptive Defense"
       ],
-      "sos": 98,
-      "sor": 182,
+      "sos": 99,
+      "sor": 181,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
       "conference_record": "3-6",
-      "sos_rank": 45,
-      "sor_rank": 88
+      "sos_rank": 46,
+      "sor_rank": 87
     },
     {
       "Rank": 55,
       "Team": "Tulane",
       "Conference": "American Athletic",
       "Record": "11-3",
-      "Net Rating": 13.3,
+      "Net Rating": 13.0,
       "Year": 2025,
       "tags": [],
-      "sos": 114,
+      "sos": 116,
       "sor": 87,
       "Actual Wins": null,
       "Games Played": null,
       "record": "11-3",
       "conference_record": "7-1",
-      "sos_rank": 57,
+      "sos_rank": 59,
       "sor_rank": 21
     },
     {
@@ -1125,7 +1125,7 @@
       "Team": "Mississippi State",
       "Conference": "SEC",
       "Record": "5-8",
-      "Net Rating": 13.0,
+      "Net Rating": 12.8,
       "Year": 2025,
       "tags": [
         "Disruptive Defense"
@@ -1144,27 +1144,27 @@
       "Team": "Duke",
       "Conference": "ACC",
       "Record": "9-5",
-      "Net Rating": 12.5,
+      "Net Rating": 12.1,
       "Year": 2025,
       "tags": [
         "Passive Defense",
         "Ground Explosion"
       ],
-      "sos": 115,
-      "sor": 155,
+      "sos": 114,
+      "sor": 154,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-5",
       "conference_record": "6-2",
-      "sos_rank": 58,
-      "sor_rank": 61
+      "sos_rank": 57,
+      "sor_rank": 60
     },
     {
       "Rank": 58,
       "Team": "Wake Forest",
       "Conference": "ACC",
       "Record": "9-4",
-      "Net Rating": 12.4,
+      "Net Rating": 12.0,
       "Year": 2025,
       "tags": [
         "Defense-Carried Team",
@@ -1186,20 +1186,20 @@
       "Team": "San Diego State",
       "Conference": "Mountain West",
       "Record": "9-4",
-      "Net Rating": 12.3,
+      "Net Rating": 12.0,
       "Year": 2025,
       "tags": [
         "Defense-Carried Team",
         "Stout Defense",
         "Passing-Downs Liability"
       ],
-      "sos": 181,
+      "sos": 179,
       "sor": 148,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "6-2",
-      "sos_rank": 104,
+      "sos_rank": 102,
       "sor_rank": 54
     },
     {
@@ -1207,24 +1207,24 @@
       "Team": "UConn",
       "Conference": "FBS Independents",
       "Record": "9-4",
-      "Net Rating": 12.1,
+      "Net Rating": 11.8,
       "Year": 2025,
       "tags": [],
-      "sos": 223,
-      "sor": 154,
+      "sos": 222,
+      "sor": 155,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "0-0",
-      "sos_rank": 134,
-      "sor_rank": 60
+      "sos_rank": 133,
+      "sor_rank": 61
     },
     {
       "Rank": 61,
       "Team": "Texas State",
       "Conference": "Sun Belt",
       "Record": "7-6",
-      "Net Rating": 11.6,
+      "Net Rating": 11.3,
       "Year": 2025,
       "tags": [
         "Offense-Carried Team",
@@ -1232,13 +1232,13 @@
         "Balanced Attack",
         "Passing-Downs Weapon"
       ],
-      "sos": 192,
+      "sos": 195,
       "sor": 185,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "3-5",
-      "sos_rank": 113,
+      "sos_rank": 114,
       "sor_rank": 91
     },
     {
@@ -1246,7 +1246,7 @@
       "Team": "East Carolina",
       "Conference": "American Athletic",
       "Record": "9-4",
-      "Net Rating": 11.5,
+      "Net Rating": 11.2,
       "Year": 2025,
       "tags": [
         "Passing-Downs Weapon"
@@ -1262,13 +1262,32 @@
     },
     {
       "Rank": 63,
+      "Team": "Washington State",
+      "Conference": "Pac-12",
+      "Record": "7-6",
+      "Net Rating": 10.4,
+      "Year": 2025,
+      "tags": [
+        "Snail-Pace"
+      ],
+      "sos": 100,
+      "sor": 156,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "1-1",
+      "sos_rank": 47,
+      "sor_rank": 62
+    },
+    {
+      "Rank": 64,
       "Team": "UTSA",
       "Conference": "American Athletic",
       "Record": "7-6",
-      "Net Rating": 10.9,
+      "Net Rating": 10.4,
       "Year": 2025,
       "tags": [],
-      "sos": 154,
+      "sos": 155,
       "sor": 161,
       "Actual Wins": null,
       "Games Played": null,
@@ -1278,30 +1297,11 @@
       "sor_rank": 67
     },
     {
-      "Rank": 64,
-      "Team": "Washington State",
-      "Conference": "Pac-12",
-      "Record": "7-6",
-      "Net Rating": 10.7,
-      "Year": 2025,
-      "tags": [
-        "Snail-Pace"
-      ],
-      "sos": 101,
-      "sor": 156,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "1-1",
-      "sos_rank": 48,
-      "sor_rank": 62
-    },
-    {
       "Rank": 65,
       "Team": "UCF",
       "Conference": "Big 12",
       "Record": "5-7",
-      "Net Rating": 10.0,
+      "Net Rating": 9.7,
       "Year": 2025,
       "tags": [
         "Ground Explosion"
@@ -1320,7 +1320,7 @@
       "Team": "Northwestern",
       "Conference": "Big Ten",
       "Record": "7-6",
-      "Net Rating": 9.9,
+      "Net Rating": 9.5,
       "Year": 2025,
       "tags": [
         "Snail-Pace"
@@ -1336,34 +1336,15 @@
     },
     {
       "Rank": 67,
-      "Team": "Ohio",
-      "Conference": "Mid-American",
-      "Record": "9-4",
-      "Net Rating": 9.6,
-      "Year": 2025,
-      "tags": [
-        "Snail-Pace"
-      ],
-      "sos": 204,
-      "sor": 137,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-2",
-      "sos_rank": 121,
-      "sor_rank": 44
-    },
-    {
-      "Rank": 68,
       "Team": "Virginia Tech",
       "Conference": "ACC",
       "Record": "3-9",
-      "Net Rating": 9.6,
+      "Net Rating": 9.4,
       "Year": 2025,
       "tags": [
         "Disruptive Defense"
       ],
-      "sos": 71,
+      "sos": 70,
       "sor": 201,
       "Actual Wins": null,
       "Games Played": null,
@@ -1373,11 +1354,30 @@
       "sor_rank": 107
     },
     {
+      "Rank": 68,
+      "Team": "Ohio",
+      "Conference": "Mid-American",
+      "Record": "9-4",
+      "Net Rating": 9.2,
+      "Year": 2025,
+      "tags": [
+        "Snail-Pace"
+      ],
+      "sos": 205,
+      "sor": 137,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-2",
+      "sos_rank": 122,
+      "sor_rank": 44
+    },
+    {
       "Rank": 69,
       "Team": "Rutgers",
       "Conference": "Big Ten",
       "Record": "5-7",
-      "Net Rating": 9.1,
+      "Net Rating": 8.9,
       "Year": 2025,
       "tags": [
         "Porous Defense",
@@ -1397,7 +1397,7 @@
       "Team": "Minnesota",
       "Conference": "Big Ten",
       "Record": "8-5",
-      "Net Rating": 8.7,
+      "Net Rating": 8.2,
       "Year": 2025,
       "tags": [
         "Snail-Pace"
@@ -1408,15 +1408,34 @@
       "Games Played": null,
       "record": "8-5",
       "conference_record": "5-4",
-      "sos_rank": 62,
+      "sos_rank": 63,
       "sor_rank": 36
     },
     {
       "Rank": 71,
+      "Team": "Houston",
+      "Conference": "Big 12",
+      "Record": "10-3",
+      "Net Rating": 8.1,
+      "Year": 2025,
+      "tags": [
+        "Passing-Downs Liability"
+      ],
+      "sos": 136,
+      "sor": 109,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "10-3",
+      "conference_record": "6-3",
+      "sos_rank": 72,
+      "sor_rank": 27
+    },
+    {
+      "Rank": 72,
       "Team": "Maryland",
       "Conference": "Big Ten",
       "Record": "4-8",
-      "Net Rating": 8.4,
+      "Net Rating": 8.0,
       "Year": 2025,
       "tags": [
         "Explosive Offense",
@@ -1432,30 +1451,50 @@
       "sor_rank": 102
     },
     {
-      "Rank": 72,
-      "Team": "Houston",
-      "Conference": "Big 12",
-      "Record": "10-3",
-      "Net Rating": 8.4,
+      "Rank": 73,
+      "Team": "Michigan State",
+      "Conference": "Big Ten",
+      "Record": "4-8",
+      "Net Rating": 8.0,
       "Year": 2025,
-      "tags": [
-        "Passing-Downs Liability"
-      ],
-      "sos": 135,
-      "sor": 109,
+      "tags": [],
+      "sos": 74,
+      "sor": 182,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "10-3",
-      "conference_record": "6-3",
-      "sos_rank": 72,
-      "sor_rank": 27
+      "record": "4-8",
+      "conference_record": "1-8",
+      "sos_rank": 27,
+      "sor_rank": 88
     },
     {
-      "Rank": 73,
+      "Rank": 74,
+      "Team": "Navy",
+      "Conference": "American Athletic",
+      "Record": "11-2",
+      "Net Rating": 7.9,
+      "Year": 2025,
+      "tags": [
+        "Offense-Carried Team",
+        "Methodical Grind",
+        "Underdog Roster",
+        "Snail-Pace"
+      ],
+      "sos": 137,
+      "sor": 15,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-2",
+      "conference_record": "8-1",
+      "sos_rank": 73,
+      "sor_rank": 14
+    },
+    {
+      "Rank": 75,
       "Team": "Marshall",
       "Conference": "Sun Belt",
       "Record": "5-7",
-      "Net Rating": 8.3,
+      "Net Rating": 7.9,
       "Year": 2025,
       "tags": [],
       "sos": 176,
@@ -1468,50 +1507,11 @@
       "sor_rank": 96
     },
     {
-      "Rank": 74,
-      "Team": "Michigan State",
-      "Conference": "Big Ten",
-      "Record": "4-8",
-      "Net Rating": 8.2,
-      "Year": 2025,
-      "tags": [],
-      "sos": 75,
-      "sor": 181,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "4-8",
-      "conference_record": "1-8",
-      "sos_rank": 28,
-      "sor_rank": 87
-    },
-    {
-      "Rank": 75,
-      "Team": "Navy",
-      "Conference": "American Athletic",
-      "Record": "11-2",
-      "Net Rating": 8.2,
-      "Year": 2025,
-      "tags": [
-        "Offense-Carried Team",
-        "Methodical Grind",
-        "Underdog Roster",
-        "Snail-Pace"
-      ],
-      "sos": 139,
-      "sor": 15,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-2",
-      "conference_record": "8-1",
-      "sos_rank": 73,
-      "sor_rank": 14
-    },
-    {
       "Rank": 76,
       "Team": "Utah State",
       "Conference": "Mountain West",
       "Record": "6-7",
-      "Net Rating": 8.1,
+      "Net Rating": 7.8,
       "Year": 2025,
       "tags": [],
       "sos": 150,
@@ -1528,20 +1528,20 @@
       "Team": "New Mexico",
       "Conference": "Mountain West",
       "Record": "9-4",
-      "Net Rating": 7.7,
+      "Net Rating": 7.3,
       "Year": 2025,
       "tags": [
         "Ground Explosion",
         "Underdog Roster",
         "Snail-Pace"
       ],
-      "sos": 160,
+      "sos": 158,
       "sor": 141,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "6-2",
-      "sos_rank": 86,
+      "sos_rank": 85,
       "sor_rank": 47
     },
     {
@@ -1549,7 +1549,7 @@
       "Team": "Wisconsin",
       "Conference": "Big Ten",
       "Record": "4-8",
-      "Net Rating": 7.3,
+      "Net Rating": 6.7,
       "Year": 2025,
       "tags": [
         "Inefficient Offense",
@@ -1567,29 +1567,10 @@
     },
     {
       "Rank": 79,
-      "Team": "Liberty",
-      "Conference": "Conference USA",
-      "Record": "4-8",
-      "Net Rating": 6.7,
-      "Year": 2025,
-      "tags": [
-        "Balanced Attack"
-      ],
-      "sos": 207,
-      "sor": 214,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "4-8",
-      "conference_record": "3-5",
-      "sos_rank": 124,
-      "sor_rank": 120
-    },
-    {
-      "Rank": 80,
       "Team": "UCLA",
       "Conference": "Big Ten",
       "Record": "3-9",
-      "Net Rating": 6.5,
+      "Net Rating": 6.4,
       "Year": 2025,
       "tags": [],
       "sos": 22,
@@ -1602,11 +1583,30 @@
       "sor_rank": 82
     },
     {
+      "Rank": 80,
+      "Team": "Liberty",
+      "Conference": "Conference USA",
+      "Record": "4-8",
+      "Net Rating": 6.3,
+      "Year": 2025,
+      "tags": [
+        "Balanced Attack"
+      ],
+      "sos": 209,
+      "sor": 214,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "3-5",
+      "sos_rank": 126,
+      "sor_rank": 120
+    },
+    {
       "Rank": 81,
       "Team": "Miami (OH)",
       "Conference": "Mid-American",
       "Record": "7-7",
-      "Net Rating": 6.2,
+      "Net Rating": 5.8,
       "Year": 2025,
       "tags": [
         "Inefficient Offense"
@@ -1632,99 +1632,80 @@
         "Disruptive Defense",
         "Snail-Pace"
       ],
-      "sos": 205,
+      "sos": 204,
       "sor": 174,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
-      "sos_rank": 122,
+      "sos_rank": 121,
       "sor_rank": 80
     },
     {
       "Rank": 83,
-      "Team": "Jacksonville State",
-      "Conference": "Conference USA",
-      "Record": "9-5",
-      "Net Rating": 5.5,
-      "Year": 2025,
-      "tags": [
-        "Vulnerable Defense"
-      ],
-      "sos": 221,
-      "sor": 166,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-5",
-      "conference_record": "7-1",
-      "sos_rank": 133,
-      "sor_rank": 72
-    },
-    {
-      "Rank": 84,
       "Team": "Western Michigan",
       "Conference": "Mid-American",
       "Record": "10-4",
-      "Net Rating": 5.4,
+      "Net Rating": 5.1,
       "Year": 2025,
       "tags": [
         "Methodical Grind",
         "Snail-Pace"
       ],
-      "sos": 187,
+      "sos": 185,
       "sor": 144,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-4",
       "conference_record": "7-1",
-      "sos_rank": 109,
+      "sos_rank": 108,
       "sor_rank": 50
     },
     {
-      "Rank": 85,
+      "Rank": 84,
       "Team": "Southern Miss",
       "Conference": "Sun Belt",
       "Record": "7-6",
-      "Net Rating": 5.2,
+      "Net Rating": 5.1,
       "Year": 2025,
       "tags": [
         "Inefficient Offense",
         "Ground Explosion"
       ],
-      "sos": 209,
+      "sos": 208,
       "sor": 189,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
-      "sos_rank": 126,
+      "sos_rank": 125,
       "sor_rank": 95
     },
     {
-      "Rank": 86,
-      "Team": "West Virginia",
-      "Conference": "Big 12",
-      "Record": "4-8",
-      "Net Rating": 5.1,
+      "Rank": 85,
+      "Team": "Jacksonville State",
+      "Conference": "Conference USA",
+      "Record": "9-5",
+      "Net Rating": 5.0,
       "Year": 2025,
       "tags": [
-        "Disruptive Defense"
+        "Vulnerable Defense"
       ],
-      "sos": 83,
-      "sor": 191,
+      "sos": 223,
+      "sor": 166,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "4-8",
-      "conference_record": "2-7",
-      "sos_rank": 35,
-      "sor_rank": 97
+      "record": "9-5",
+      "conference_record": "7-1",
+      "sos_rank": 134,
+      "sor_rank": 72
     },
     {
-      "Rank": 87,
+      "Rank": 86,
       "Team": "Louisiana Tech",
       "Conference": "Conference USA",
       "Record": "8-5",
-      "Net Rating": 5.1,
+      "Net Rating": 4.8,
       "Year": 2025,
       "tags": [],
       "sos": 213,
@@ -1737,11 +1718,30 @@
       "sor_rank": 71
     },
     {
+      "Rank": 87,
+      "Team": "West Virginia",
+      "Conference": "Big 12",
+      "Record": "4-8",
+      "Net Rating": 4.7,
+      "Year": 2025,
+      "tags": [
+        "Disruptive Defense"
+      ],
+      "sos": 84,
+      "sor": 191,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "2-7",
+      "sos_rank": 35,
+      "sor_rank": 97
+    },
+    {
       "Rank": 88,
       "Team": "Western Kentucky",
       "Conference": "Conference USA",
       "Record": "9-4",
-      "Net Rating": 5.0,
+      "Net Rating": 4.6,
       "Year": 2025,
       "tags": [
         "Disruptive Defense"
@@ -1757,48 +1757,27 @@
     },
     {
       "Rank": 89,
-      "Team": "Fresno State",
-      "Conference": "Mountain West",
-      "Record": "9-4",
-      "Net Rating": 4.9,
-      "Year": 2025,
-      "tags": [
-        "Methodical Grind",
-        "Disruptive Defense",
-        "Snail-Pace"
-      ],
-      "sos": 191,
-      "sor": 150,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "5-3",
-      "sos_rank": 112,
-      "sor_rank": 56
-    },
-    {
-      "Rank": 90,
       "Team": "Boston College",
       "Conference": "ACC",
       "Record": "2-10",
-      "Net Rating": 4.7,
+      "Net Rating": 4.6,
       "Year": 2025,
       "tags": [],
-      "sos": 100,
+      "sos": 101,
       "sor": 220,
       "Actual Wins": null,
       "Games Played": null,
       "record": "2-10",
       "conference_record": "1-7",
-      "sos_rank": 47,
+      "sos_rank": 48,
       "sor_rank": 126
     },
     {
-      "Rank": 91,
+      "Rank": 90,
       "Team": "Stanford",
       "Conference": "ACC",
       "Record": "4-8",
-      "Net Rating": 4.6,
+      "Net Rating": 4.4,
       "Year": 2025,
       "tags": [
         "Disruptive Defense"
@@ -1813,6 +1792,27 @@
       "sor_rank": 89
     },
     {
+      "Rank": 91,
+      "Team": "Fresno State",
+      "Conference": "Mountain West",
+      "Record": "9-4",
+      "Net Rating": 4.3,
+      "Year": 2025,
+      "tags": [
+        "Methodical Grind",
+        "Disruptive Defense",
+        "Snail-Pace"
+      ],
+      "sos": 191,
+      "sor": 149,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "5-3",
+      "sos_rank": 112,
+      "sor_rank": 55
+    },
+    {
       "Rank": 92,
       "Team": "Florida Atlantic",
       "Conference": "American Athletic",
@@ -1823,13 +1823,13 @@
         "Explosive Offense",
         "Track Meet"
       ],
-      "sos": 161,
+      "sos": 159,
       "sor": 206,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-5",
-      "sos_rank": 87,
+      "sos_rank": 86,
       "sor_rank": 112
     },
     {
@@ -1837,49 +1837,30 @@
       "Team": "California",
       "Conference": "ACC",
       "Record": "7-6",
-      "Net Rating": 4.3,
+      "Net Rating": 4.0,
       "Year": 2025,
       "tags": [
         "Disruptive Defense",
         "Behind The Chains"
       ],
       "sos": 141,
-      "sor": 178,
+      "sor": 177,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-4",
       "sos_rank": 74,
-      "sor_rank": 84
+      "sor_rank": 83
     },
     {
       "Rank": 94,
-      "Team": "South Alabama",
-      "Conference": "Sun Belt",
-      "Record": "4-8",
-      "Net Rating": 4.1,
-      "Year": 2025,
-      "tags": [
-        "Leaky Defense"
-      ],
-      "sos": 186,
-      "sor": 204,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "4-8",
-      "conference_record": "3-5",
-      "sos_rank": 108,
-      "sor_rank": 110
-    },
-    {
-      "Rank": 95,
       "Team": "Purdue",
       "Conference": "Big Ten",
       "Record": "2-10",
-      "Net Rating": 3.9,
+      "Net Rating": 3.8,
       "Year": 2025,
       "tags": [],
-      "sos": 37,
+      "sos": 36,
       "sor": 193,
       "Actual Wins": null,
       "Games Played": null,
@@ -1889,73 +1870,30 @@
       "sor_rank": 99
     },
     {
+      "Rank": 95,
+      "Team": "South Alabama",
+      "Conference": "Sun Belt",
+      "Record": "4-8",
+      "Net Rating": 3.8,
+      "Year": 2025,
+      "tags": [
+        "Leaky Defense"
+      ],
+      "sos": 183,
+      "sor": 204,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "3-5",
+      "sos_rank": 106,
+      "sor_rank": 110
+    },
+    {
       "Rank": 96,
-      "Team": "Colorado",
-      "Conference": "Big 12",
-      "Record": "3-9",
-      "Net Rating": 3.6,
-      "Year": 2025,
-      "tags": [
-        "Explosive Offense",
-        "Ground Explosion",
-        "Disruptive Defense"
-      ],
-      "sos": 86,
-      "sor": 212,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "1-8",
-      "sos_rank": 36,
-      "sor_rank": 118
-    },
-    {
-      "Rank": 97,
-      "Team": "Hawai'i",
-      "Conference": "Mountain West",
-      "Record": "9-4",
-      "Net Rating": 3.6,
-      "Year": 2025,
-      "tags": [
-        "Disruptive Defense",
-        "Behind The Chains"
-      ],
-      "sos": 202,
-      "sor": 147,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "5-3",
-      "sos_rank": 119,
-      "sor_rank": 53
-    },
-    {
-      "Rank": 98,
-      "Team": "Army",
-      "Conference": "American Athletic",
-      "Record": "7-6",
-      "Net Rating": 3.5,
-      "Year": 2025,
-      "tags": [
-        "Methodical Grind",
-        "Underdog Roster",
-        "Snail-Pace"
-      ],
-      "sos": 153,
-      "sor": 179,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "4-5",
-      "sos_rank": 82,
-      "sor_rank": 85
-    },
-    {
-      "Rank": 99,
       "Team": "Temple",
       "Conference": "American Athletic",
       "Record": "5-7",
-      "Net Rating": 3.5,
+      "Net Rating": 3.6,
       "Year": 2025,
       "tags": [
         "Vulnerable Defense",
@@ -1972,69 +1910,112 @@
       "sor_rank": 98
     },
     {
-      "Rank": 100,
-      "Team": "Kennesaw State",
-      "Conference": "Conference USA",
-      "Record": "10-4",
-      "Net Rating": 3.1,
+      "Rank": 97,
+      "Team": "Colorado",
+      "Conference": "Big 12",
+      "Record": "3-9",
+      "Net Rating": 3.3,
       "Year": 2025,
       "tags": [
-        "Track Meet",
-        "Underdog Roster"
+        "Explosive Offense",
+        "Ground Explosion",
+        "Disruptive Defense"
       ],
-      "sos": 180,
-      "sor": 136,
+      "sos": 87,
+      "sor": 212,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "10-4",
-      "conference_record": "7-1",
-      "sos_rank": 103,
-      "sor_rank": 43
+      "record": "3-9",
+      "conference_record": "1-8",
+      "sos_rank": 37,
+      "sor_rank": 118
     },
     {
-      "Rank": 101,
+      "Rank": 98,
       "Team": "San Jos\u00e9 State",
       "Conference": "Mountain West",
       "Record": "3-9",
-      "Net Rating": 3.0,
+      "Net Rating": 3.2,
       "Year": 2025,
       "tags": [
         "Passive Defense"
       ],
       "sos": 172,
-      "sor": 221,
+      "sor": 222,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "2-6",
       "sos_rank": 95,
-      "sor_rank": 127
+      "sor_rank": 128
     },
     {
-      "Rank": 102,
-      "Team": "North Carolina",
-      "Conference": "ACC",
-      "Record": "4-8",
+      "Rank": 99,
+      "Team": "Hawai'i",
+      "Conference": "Mountain West",
+      "Record": "9-4",
+      "Net Rating": 3.1,
+      "Year": 2025,
+      "tags": [
+        "Disruptive Defense",
+        "Behind The Chains"
+      ],
+      "sos": 202,
+      "sor": 147,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "5-3",
+      "sos_rank": 119,
+      "sor_rank": 53
+    },
+    {
+      "Rank": 100,
+      "Team": "Army",
+      "Conference": "American Athletic",
+      "Record": "7-6",
       "Net Rating": 2.9,
       "Year": 2025,
       "tags": [
+        "Methodical Grind",
+        "Underdog Roster",
         "Snail-Pace"
       ],
-      "sos": 151,
-      "sor": 210,
+      "sos": 153,
+      "sor": 179,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "4-8",
-      "conference_record": "2-6",
-      "sos_rank": 81,
-      "sor_rank": 116
+      "record": "7-6",
+      "conference_record": "4-5",
+      "sos_rank": 82,
+      "sor_rank": 85
     },
     {
-      "Rank": 103,
+      "Rank": 101,
+      "Team": "Kennesaw State",
+      "Conference": "Conference USA",
+      "Record": "10-4",
+      "Net Rating": 2.7,
+      "Year": 2025,
+      "tags": [
+        "Track Meet",
+        "Underdog Roster"
+      ],
+      "sos": 181,
+      "sor": 136,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "10-4",
+      "conference_record": "7-1",
+      "sos_rank": 104,
+      "sor_rank": 43
+    },
+    {
+      "Rank": 102,
       "Team": "Louisiana",
       "Conference": "Sun Belt",
       "Record": "6-7",
-      "Net Rating": 2.7,
+      "Net Rating": 2.5,
       "Year": 2025,
       "tags": [
         "Vulnerable Defense",
@@ -2050,22 +2031,41 @@
       "sor_rank": 101
     },
     {
+      "Rank": 103,
+      "Team": "North Carolina",
+      "Conference": "ACC",
+      "Record": "4-8",
+      "Net Rating": 2.5,
+      "Year": 2025,
+      "tags": [
+        "Snail-Pace"
+      ],
+      "sos": 151,
+      "sor": 209,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "2-6",
+      "sos_rank": 81,
+      "sor_rank": 115
+    },
+    {
       "Rank": 104,
       "Team": "Wyoming",
       "Conference": "Mountain West",
       "Record": "4-8",
-      "Net Rating": 2.6,
+      "Net Rating": 2.2,
       "Year": 2025,
       "tags": [
         "Inefficient Offense"
       ],
-      "sos": 182,
+      "sos": 180,
       "sor": 208,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "2-6",
-      "sos_rank": 105,
+      "sos_rank": 103,
       "sor_rank": 114
     },
     {
@@ -2073,26 +2073,26 @@
       "Team": "Florida International",
       "Conference": "Conference USA",
       "Record": "7-6",
-      "Net Rating": 2.4,
+      "Net Rating": 2.1,
       "Year": 2025,
       "tags": [
         "Inefficient Offense"
       ],
       "sos": 188,
-      "sor": 177,
+      "sor": 178,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
       "sos_rank": 110,
-      "sor_rank": 83
+      "sor_rank": 84
     },
     {
       "Rank": 106,
       "Team": "Eastern Michigan",
       "Conference": "Mid-American",
       "Record": "4-8",
-      "Net Rating": 1.9,
+      "Net Rating": 1.8,
       "Year": 2025,
       "tags": [
         "Porous Defense"
@@ -2108,29 +2108,10 @@
     },
     {
       "Rank": 107,
-      "Team": "Troy",
-      "Conference": "Sun Belt",
-      "Record": "8-6",
-      "Net Rating": 1.0,
-      "Year": 2025,
-      "tags": [
-        "Inefficient Offense"
-      ],
-      "sos": 165,
-      "sor": 170,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "8-6",
-      "conference_record": "6-2",
-      "sos_rank": 90,
-      "sor_rank": 76
-    },
-    {
-      "Rank": 108,
       "Team": "Missouri State",
       "Conference": "Conference USA",
       "Record": "7-6",
-      "Net Rating": 0.9,
+      "Net Rating": 0.5,
       "Year": 2025,
       "tags": [
         "Explosive Offense",
@@ -2138,21 +2119,40 @@
         "Ground Explosion",
         "Underdog Roster"
       ],
-      "sos": 183,
-      "sor": 171,
+      "sos": 187,
+      "sor": 172,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
-      "sos_rank": 106,
-      "sor_rank": 77
+      "sos_rank": 109,
+      "sor_rank": 78
+    },
+    {
+      "Rank": 108,
+      "Team": "Troy",
+      "Conference": "Sun Belt",
+      "Record": "8-6",
+      "Net Rating": 0.5,
+      "Year": 2025,
+      "tags": [
+        "Inefficient Offense"
+      ],
+      "sos": 166,
+      "sor": 170,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "8-6",
+      "conference_record": "6-2",
+      "sos_rank": 91,
+      "sor_rank": 76
     },
     {
       "Rank": 109,
       "Team": "Air Force",
       "Conference": "Mountain West",
       "Record": "4-8",
-      "Net Rating": 0.4,
+      "Net Rating": 0.3,
       "Year": 2025,
       "tags": [
         "Porous Defense",
@@ -2160,13 +2160,13 @@
         "Underdog Roster",
         "Snail-Pace"
       ],
-      "sos": 166,
+      "sos": 165,
       "sor": 213,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-5",
-      "sos_rank": 91,
+      "sos_rank": 90,
       "sor_rank": 119
     },
     {
@@ -2174,41 +2174,22 @@
       "Team": "Georgia Southern",
       "Conference": "Sun Belt",
       "Record": "7-6",
-      "Net Rating": 0.4,
+      "Net Rating": 0.3,
       "Year": 2025,
       "tags": [
         "Porous Defense"
       ],
       "sos": 167,
-      "sor": 168,
+      "sor": 169,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-4",
       "sos_rank": 92,
-      "sor_rank": 74
+      "sor_rank": 75
     },
     {
       "Rank": 111,
-      "Team": "Arkansas State",
-      "Conference": "Sun Belt",
-      "Record": "7-6",
-      "Net Rating": -0.0,
-      "Year": 2025,
-      "tags": [
-        "Behind The Chains"
-      ],
-      "sos": 200,
-      "sor": 186,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "5-3",
-      "sos_rank": 117,
-      "sor_rank": 92
-    },
-    {
-      "Rank": 112,
       "Team": "UAB",
       "Conference": "American Athletic",
       "Record": "4-8",
@@ -2218,56 +2199,17 @@
         "Porous Defense",
         "Ground Explosion"
       ],
-      "sos": 129,
+      "sos": 128,
       "sor": 200,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "2-6",
-      "sos_rank": 68,
+      "sos_rank": 67,
       "sor_rank": 106
     },
     {
-      "Rank": 113,
-      "Team": "Colorado State",
-      "Conference": "Mountain West",
-      "Record": "2-10",
-      "Net Rating": -0.1,
-      "Year": 2025,
-      "tags": [
-        "Passive Defense"
-      ],
-      "sos": 146,
-      "sor": 225,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "2-10",
-      "conference_record": "1-7",
-      "sos_rank": 78,
-      "sor_rank": 131
-    },
-    {
-      "Rank": 114,
-      "Team": "Syracuse",
-      "Conference": "ACC",
-      "Record": "3-9",
-      "Net Rating": -0.1,
-      "Year": 2025,
-      "tags": [
-        "Inefficient Offense",
-        "Leaky Defense"
-      ],
-      "sos": 55,
-      "sor": 188,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "1-7",
-      "sos_rank": 18,
-      "sor_rank": 94
-    },
-    {
-      "Rank": 115,
+      "Rank": 112,
       "Team": "Tulsa",
       "Conference": "American Athletic",
       "Record": "4-8",
@@ -2282,22 +2224,41 @@
       "Games Played": null,
       "record": "4-8",
       "conference_record": "1-7",
-      "sos_rank": 114,
+      "sos_rank": 113,
       "sor_rank": 121
     },
     {
-      "Rank": 116,
+      "Rank": 113,
+      "Team": "Colorado State",
+      "Conference": "Mountain West",
+      "Record": "2-10",
+      "Net Rating": -0.2,
+      "Year": 2025,
+      "tags": [
+        "Passive Defense"
+      ],
+      "sos": 147,
+      "sor": 225,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "2-10",
+      "conference_record": "1-7",
+      "sos_rank": 78,
+      "sor_rank": 131
+    },
+    {
+      "Rank": 114,
       "Team": "Oregon State",
       "Conference": "Pac-12",
       "Record": "2-10",
-      "Net Rating": -0.3,
+      "Net Rating": -0.4,
       "Year": 2025,
       "tags": [
         "Ball-Control Passing Attack",
         "Disruptive Defense",
         "Passing-Downs Liability"
       ],
-      "sos": 145,
+      "sos": 144,
       "sor": 219,
       "Actual Wins": null,
       "Games Played": null,
@@ -2307,11 +2268,50 @@
       "sor_rank": 125
     },
     {
+      "Rank": 115,
+      "Team": "Syracuse",
+      "Conference": "ACC",
+      "Record": "3-9",
+      "Net Rating": -0.4,
+      "Year": 2025,
+      "tags": [
+        "Inefficient Offense",
+        "Leaky Defense"
+      ],
+      "sos": 56,
+      "sor": 188,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "3-9",
+      "conference_record": "1-7",
+      "sos_rank": 19,
+      "sor_rank": 94
+    },
+    {
+      "Rank": 116,
+      "Team": "Arkansas State",
+      "Conference": "Sun Belt",
+      "Record": "7-6",
+      "Net Rating": -0.5,
+      "Year": 2025,
+      "tags": [
+        "Behind The Chains"
+      ],
+      "sos": 199,
+      "sor": 186,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "5-3",
+      "sos_rank": 117,
+      "sor_rank": 92
+    },
+    {
       "Rank": 117,
       "Team": "Coastal Carolina",
       "Conference": "Sun Belt",
       "Record": "6-7",
-      "Net Rating": -0.8,
+      "Net Rating": -1.0,
       "Year": 2025,
       "tags": [
         "Inefficient Offense",
@@ -2331,26 +2331,26 @@
       "Team": "App State",
       "Conference": "Sun Belt",
       "Record": "5-8",
-      "Net Rating": -1.0,
+      "Net Rating": -1.4,
       "Year": 2025,
       "tags": [
         "Inefficient Offense"
       ],
-      "sos": 195,
-      "sor": 209,
+      "sos": 196,
+      "sor": 210,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-8",
       "conference_record": "2-6",
       "sos_rank": 115,
-      "sor_rank": 115
+      "sor_rank": 116
     },
     {
       "Rank": 119,
       "Team": "Buffalo",
       "Conference": "Mid-American",
       "Record": "5-7",
-      "Net Rating": -1.7,
+      "Net Rating": -2.2,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
@@ -2370,32 +2370,32 @@
       "Team": "Northern Illinois",
       "Conference": "Mid-American",
       "Record": "3-9",
-      "Net Rating": -1.9,
+      "Net Rating": -2.3,
       "Year": 2025,
       "tags": [
         "Inefficient Offense"
       ],
       "sos": 203,
-      "sor": 222,
+      "sor": 221,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "2-6",
       "sos_rank": 120,
-      "sor_rank": 128
+      "sor_rank": 127
     },
     {
       "Rank": 121,
       "Team": "Nevada",
       "Conference": "Mountain West",
       "Record": "3-9",
-      "Net Rating": -2.1,
+      "Net Rating": -2.5,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
         "Methodical Grind"
       ],
-      "sos": 144,
+      "sos": 143,
       "sor": 218,
       "Actual Wins": null,
       "Games Played": null,
@@ -2409,7 +2409,7 @@
       "Team": "Delaware",
       "Conference": "Conference USA",
       "Record": "7-6",
-      "Net Rating": -2.3,
+      "Net Rating": -2.6,
       "Year": 2025,
       "tags": [
         "Porous Defense",
@@ -2430,12 +2430,12 @@
       "Team": "Middle Tennessee",
       "Conference": "Conference USA",
       "Record": "3-9",
-      "Net Rating": -2.6,
+      "Net Rating": -2.7,
       "Year": 2025,
       "tags": [
         "Porous Defense"
       ],
-      "sos": 215,
+      "sos": 216,
       "sor": 224,
       "Actual Wins": null,
       "Games Played": null,
@@ -2449,14 +2449,14 @@
       "Team": "Rice",
       "Conference": "American Athletic",
       "Record": "5-8",
-      "Net Rating": -3.0,
+      "Net Rating": -3.1,
       "Year": 2025,
       "tags": [
         "Inefficient Offense",
         "Methodical Grind",
         "Disruptive Defense"
       ],
-      "sos": 149,
+      "sos": 148,
       "sor": 203,
       "Actual Wins": null,
       "Games Played": null,
@@ -2470,7 +2470,7 @@
       "Team": "Georgia State",
       "Conference": "Sun Belt",
       "Record": "1-11",
-      "Net Rating": -3.4,
+      "Net Rating": -3.5,
       "Year": 2025,
       "tags": [
         "Porous Defense",
@@ -2491,7 +2491,7 @@
       "Team": "UTEP",
       "Conference": "Conference USA",
       "Record": "2-10",
-      "Net Rating": -4.2,
+      "Net Rating": -4.7,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
@@ -2511,19 +2511,19 @@
       "Team": "New Mexico State",
       "Conference": "Conference USA",
       "Record": "4-8",
-      "Net Rating": -4.6,
+      "Net Rating": -5.0,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
         "Underdog Roster"
       ],
-      "sos": 208,
+      "sos": 207,
       "sor": 207,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "2-6",
-      "sos_rank": 125,
+      "sos_rank": 124,
       "sor_rank": 113
     },
     {
@@ -2531,32 +2531,32 @@
       "Team": "Akron",
       "Conference": "Mid-American",
       "Record": "5-7",
-      "Net Rating": -4.9,
+      "Net Rating": -5.0,
       "Year": 2025,
       "tags": [
         "Inefficient Offense",
         "Leaky Defense"
       ],
-      "sos": 225,
-      "sor": 198,
+      "sos": 224,
+      "sor": 197,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
       "conference_record": "4-4",
       "sos_rank": 135,
-      "sor_rank": 104
+      "sor_rank": 103
     },
     {
       "Rank": 129,
       "Team": "Bowling Green",
       "Conference": "Mid-American",
       "Record": "4-8",
-      "Net Rating": -5.1,
+      "Net Rating": -5.7,
       "Year": 2025,
       "tags": [
         "Anemic Offense"
       ],
-      "sos": 199,
+      "sos": 197,
       "sor": 211,
       "Actual Wins": null,
       "Games Played": null,
@@ -2570,19 +2570,19 @@
       "Team": "Oklahoma State",
       "Conference": "Big 12",
       "Record": "1-11",
-      "Net Rating": -5.8,
+      "Net Rating": -6.0,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
         "Passive Defense"
       ],
-      "sos": 88,
+      "sos": 89,
       "sor": 223,
       "Actual Wins": null,
       "Games Played": null,
       "record": "1-11",
       "conference_record": "0-9",
-      "sos_rank": 38,
+      "sos_rank": 39,
       "sor_rank": 129
     },
     {
@@ -2590,7 +2590,7 @@
       "Team": "Kent State",
       "Conference": "Mid-American",
       "Record": "5-7",
-      "Net Rating": -7.3,
+      "Net Rating": -7.2,
       "Year": 2025,
       "tags": [
         "Explosive Offense",
@@ -2633,18 +2633,18 @@
       "Team": "Ball State",
       "Conference": "Mid-American",
       "Record": "4-8",
-      "Net Rating": -8.2,
+      "Net Rating": -8.4,
       "Year": 2025,
       "tags": [
         "Anemic Offense"
       ],
-      "sos": 175,
+      "sos": 174,
       "sor": 205,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-5",
-      "sos_rank": 98,
+      "sos_rank": 97,
       "sor_rank": 111
     },
     {
@@ -2652,19 +2652,19 @@
       "Team": "Sam Houston",
       "Conference": "Conference USA",
       "Record": "2-10",
-      "Net Rating": -8.8,
+      "Net Rating": -8.9,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
         "Porous Defense"
       ],
-      "sos": 179,
+      "sos": 182,
       "sor": 228,
       "Actual Wins": null,
       "Games Played": null,
       "record": "2-10",
       "conference_record": "1-7",
-      "sos_rank": 102,
+      "sos_rank": 105,
       "sor_rank": 134
     },
     {
@@ -2672,19 +2672,19 @@
       "Team": "Charlotte",
       "Conference": "American Athletic",
       "Record": "1-11",
-      "Net Rating": -9.9,
+      "Net Rating": -10.2,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
         "Vulnerable Defense"
       ],
-      "sos": 128,
+      "sos": 129,
       "sor": 227,
       "Actual Wins": null,
       "Games Played": null,
       "record": "1-11",
       "conference_record": "0-8",
-      "sos_rank": 67,
+      "sos_rank": 68,
       "sor_rank": 133
     },
     {
@@ -2692,7 +2692,7 @@
       "Team": "Massachusetts",
       "Conference": "Mid-American",
       "Record": "0-12",
-      "Net Rating": -17.8,
+      "Net Rating": -17.7,
       "Year": 2025,
       "tags": [
         "Anemic Offense",
