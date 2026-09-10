@@ -1,6 +1,7 @@
 ---
 import type { FilterOptions } from '../lib/types';
 import { renderVisibleTopPlays, bindTopPlaysToggle } from './pbpTopPlaysClient';
+import matchupsIndex from '../../public/data/matchups-index.json';
 
 interface Props {
   filters: FilterOptions;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const { filters, conferences = [] } = Astro.props;
+const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 ---
 
 <div class="tabs" id="dashboardTabs">
@@ -24,7 +26,7 @@ const { filters, conferences = [] } = Astro.props;
     <select id="rankingsYearFilter" aria-label="Filter rankings by year">
       {
         filters.rankingYears.map((year) => (
-          <option value={year} selected={String(year) === "2026"}>{year}</option>
+          <option value={year} selected={String(year) === default_year}>{year}</option>
         ))
       }
     </select>
@@ -54,7 +56,7 @@ const { filters, conferences = [] } = Astro.props;
     <select id="matchupYearFilter" aria-label="Filter matchups by year">
       {
         filters.matchupYears.map((year) => (
-          <option value={year} selected={String(year) === "2026"}>{year}</option>
+          <option value={year} selected={String(year) === default_year}>{year}</option>
         ))
       }
     </select>
@@ -72,7 +74,7 @@ const { filters, conferences = [] } = Astro.props;
     <select id="weekFilter" aria-label="Filter matchups by week">
       {
         filters.matchupWeeks.map((week) => (
-          <option value={week} selected={String(week) === "0"}>
+          <option value={week} selected={String(week) === default_week}>
             Week {week}
           </option>
         ))

@@ -258,6 +258,7 @@ const sortKeyToDataset: Record<string, keyof DOMStringMap> = {
   team: 'team',
   conference: 'conference',
   record: 'record',
+  conference_record: 'conferenceRecord',
   year: 'year',
   netRating: 'netRating',
   sos: 'sos',

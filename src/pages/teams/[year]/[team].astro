@@ -1,11 +1,62 @@
 ---
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import Layout from '../../../layouts/Layout.astro';
 import TeamTrajectoryChart from '../../../components/TeamTrajectoryChart.tsx';
-import rankingsRaw from '../../../data/rankings.json';
 import gameHistoryRaw from '../../../data/game_history.json';
 import trajectoriesRaw from '../../../data/trajectories.json';
-import matchupsRaw from '../../../data/matchups.json';
-import { normalizeRankings, slugifyTeam, formatRating, computeRanks, computeEfficiencyRange, normalizeGameMargins } from '../../../lib/data';
+import {
+  normalizeRankings,
+  slugifyTeam,
+  formatRating,
+  computeRanks,
+  computeEfficiencyRange,
+  normalizeGameMargins,
+} from '../../../lib/data';
+
+const PUBLIC_DATA = join(process.cwd(), 'public', 'data');
+
+
+
+function loadJson(relPath: string, fallback: unknown = {}) {
+  try {
+    return JSON.parse(readFileSync(join(PUBLIC_DATA, relPath), 'utf-8'));
+  } catch {
+    return fallback;
+  }
+}
+
+// Reads every rankings/{year}.json once, unwraps the "rankings" key, and
+// concatenates — same unwrap pattern as index.astro.
+function loadAllRankingsRaw(): any[] {
+  const dir = join(PUBLIC_DATA, 'rankings');
+  const files = readdirSync(dir).filter((f) => f.endsWith('.json'));
+  return files.flatMap((f) => {
+    const raw = loadJson(`rankings/${f}`, {});
+    return Array.isArray(raw) ? raw : (raw?.rankings ?? []);
+  });
+}
+
+// Reads every matchups/{year}/week-*.json once and groups by year, so
+// getStaticPaths only touches disk a single time no matter how many teams
+// need a slice of a given year's games.
+function loadAllMatchupsByYear(): Record<number, any[]> {
+  const matchupsDir = join(PUBLIC_DATA, 'matchups');
+  const years = readdirSync(matchupsDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name);
+
+  const byYear: Record<number, any[]> = {};
+  for (const year of years) {
+    const weekFiles = readdirSync(join(matchupsDir, year)).filter((f) => /^week-\d+\.json$/.test(f));
+    const games = weekFiles.flatMap((f) => {
+      const raw = loadJson(`matchups/${year}/${f}`, {});
+      return Array.isArray(raw) ? raw : (raw?.games ?? []);
+    });
+    byYear[Number(year)] = games;
+  }
+  return byYear;
+}
 
 interface GameLogEntry {
   week: number;
@@ -44,85 +95,88 @@ interface TrajectoriesData {
   teams: Record<string, Record<string, TrajectoryGameEntry[]>>;
 }
 
-interface MatchupGameEntry {
-  game_id: number;
-  week: number;
-  year: number;
-  start_date?: string;
-  status: 'completed' | 'scheduled';
-  home_team: string;
-  away_team: string;
-  home_points: number | null;
-  away_points: number | null;
-  actual_margin: number | null;
-  predicted_margin: number | null;
-  home_win_prob?: number | null;
-  is_playoff?: boolean;
-  round_name?: string | null;
-  bowl_name?: string | null;
-}
-
-interface MatchupsData {
-  generated_at: string;
-  games: MatchupGameEntry[];
-}
-
 export function getStaticPaths() {
+  const PUBLIC_DATA = join(process.cwd(), 'public', 'data');
+
+  const loadJson = (relPath: string, fallback: unknown = {}) => {
+    try {
+      return JSON.parse(readFileSync(join(PUBLIC_DATA, relPath), 'utf-8'));
+    } catch {
+      return fallback;
+    }
+  };
+
+  const rankingsFiles = readdirSync(join(PUBLIC_DATA, 'rankings')).filter((f) => f.endsWith('.json'));
+  const rankingsRaw = rankingsFiles.flatMap((f) => {
+    const raw = loadJson(`rankings/${f}`, {});
+    return Array.isArray(raw) ? raw : (raw?.rankings ?? []);
+  });
+
   const rankings = normalizeRankings(rankingsRaw as any);
+
+  const matchupsDir = join(PUBLIC_DATA, 'matchups');
+  const years = readdirSync(matchupsDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name);
+
+  const matchupsByYear: Record<number, any[]> = {};
+  for (const year of years) {
+    const weekFiles = readdirSync(join(matchupsDir, year)).filter((f) => /^week-\d+\.json$/.test(f));
+    matchupsByYear[Number(year)] = weekFiles.flatMap((f) => {
+      const raw = loadJson(`matchups/${year}/${f}`, {});
+      return Array.isArray(raw) ? raw : (raw?.games ?? []);
+    });
+  }
 
   return rankings.map((row) => {
     const ranks = computeRanks(rankings, row.year);
     const totalTeams = rankings.filter((r) => r.year === row.year).length;
+    const teamMatchups = (matchupsByYear[row.year] ?? []).filter(
+      (g: any) => g.home_team === row.team || g.away_team === row.team
+    );
+
     return {
-      params: { 
-        year: String(row.year), 
-        team: slugifyTeam(row.team) 
+      params: {
+        year: String(row.year),
+        team: slugifyTeam(row.team),
       },
-      props: { row, ranks: ranks.get(row.team), totalTeams },
+      props: { row, ranks: ranks.get(row.team), totalTeams, teamMatchups, allRankings: rankings },
     };
   });
 }
 
-const { row, ranks, totalTeams } = Astro.props;
+const { row, ranks, totalTeams, teamMatchups, allRankings } = Astro.props;
 
 const gameHistory = gameHistoryRaw as GameHistoryData;
 const trajectories = trajectoriesRaw as TrajectoriesData;
-const matchups = matchupsRaw as MatchupsData;
 
 // Build a lookup set of valid team/year pages to make opponent links safe
-const allRankings = normalizeRankings(rankingsRaw as any);
-const validTeamYears = new Set(allRankings.map(r => `${r.year}-${slugifyTeam(r.team)}`));
+const validTeamYears = new Set(allRankings.map((r: any) => `${r.year}-${slugifyTeam(r.team)}`));
 
 // 1. Pull completed game history if available for this team/year
-const completedRaw = gameHistory.years?.includes(row.year) 
+const completedRaw = gameHistory.years?.includes(row.year)
   ? (gameHistory.teams[row.team]?.[String(row.year)] ?? [])
   : [];
-const completedGames = normalizeGameMargins(completedRaw).map(g => ({
+const completedGames = normalizeGameMargins(completedRaw).map((g) => ({
   ...g,
   isCompleted: true,
 }));
 
-// 2. Filter the flat matchups.json list for this specific team and year
-const teamMatchups = matchups.games?.filter((g: any) => 
-  g.year === row.year && (g.home_team === row.team || g.away_team === row.team)
-) ?? [];
-
+// 2. teamMatchups is already filtered to this team+year in getStaticPaths
 // 3. Find which weeks already have completed game results logged
-const completedWeeks = new Set(completedGames.map(g => g.week));
+const completedWeeks = new Set(completedGames.map((g) => g.week));
 
-// 4. Map upcoming/scheduled games from the flat list
+// 4. Map upcoming/scheduled games from the pre-sliced list
 const upcomingGames = teamMatchups
   .filter((g: any) => !completedWeeks.has(g.week))
   .map((g: any) => {
     const isHome = g.home_team === row.team;
     const opponent = isHome ? g.away_team : g.home_team;
-    
-    // Adjust predicted margin perspective if team is away
-    const predMargin = isHome 
-      ? g.predicted_margin 
+
+    const predMargin = isHome
+      ? g.predicted_margin
       : (g.predicted_margin != null ? -g.predicted_margin : null);
 
-    // Calculate win probability from the current team's perspective
     let teamWinProb = null;
     if (g.home_win_prob != null) {
       const rawProb = isHome ? g.home_win_prob : (1 - g.home_win_prob);
@@ -148,21 +202,9 @@ const upcomingGames = teamMatchups
     };
   });
 
-// 5. Merge and sort chronologically (pushing postseason games to the end if they share week 1)
-const sortedGameLog = [...completedGames, ...upcomingGames].sort((a, b) => {
-  const aIsPost = (a.is_playoff || a.bowl_name || a.round_name) && a.week === 1;
-  const bIsPost = (b.is_playoff || b.bowl_name || b.round_name) && b.week === 1;
-  
-  if (aIsPost && !bIsPost) return 1;
-  if (!aIsPost && bIsPost) return -1;
-  
-  return a.week - b.week;
-});
-
 const teamTrajectory = trajectories.teams?.[row.team]?.[String(row.year)] ?? [];
 const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
 
-// Helper function to format postseason labels cleanly with capitalization
 function formatPostseasonLabel(g: any) {
   if (g.bowl_name) return g.bowl_name;
   if (g.round_name) {
@@ -173,6 +215,50 @@ function formatPostseasonLabel(g: any) {
   return null;
 }
 
+// 1. Determine the maximum week present in your team matchups or game history
+const maxWeek = Math.max(
+  1,
+  ...teamMatchups.map((g: any) => g.week),
+  ...completedGames.map((g: any) => g.week)
+);
+
+const completedMap = new Map(completedGames.map((g) => [g.week, g]));
+const upcomingMap = new Map(upcomingGames.map((g) => [g.week, g]));
+
+const fullSchedule = [];
+for (let w = 1; w <= maxWeek; w++) {
+  if (completedMap.has(w)) {
+    fullSchedule.push(completedMap.get(w));
+  } else if (upcomingMap.has(w)) {
+    fullSchedule.push(upcomingMap.get(w));
+  } else {
+    // Insert a Bye placeholder for missing weeks
+    fullSchedule.push({
+      week: w,
+      opponent: 'Bye',
+      location: 'Home',
+      isCompleted: false,
+      isBye: true,
+      team_score: null,
+      opponent_score: null,
+      actual_margin: null,
+      predicted_margin: null,
+      winProb: null,
+      beat_expectation_by: null,
+      result: null,
+    });
+  }
+}
+
+const sortedGameLog = fullSchedule.sort((a: any, b: any) => {
+  const aIsPost = (a.is_playoff || a.bowl_name || a.round_name) && a.week === 1;
+  const bIsPost = (b.is_playoff || b.bowl_name || b.round_name) && b.week === 1;
+
+  if (aIsPost && !bIsPost) return 1;
+  if (!aIsPost && bIsPost) return -1;
+
+  return a.week - b.week;
+});
 ---
 
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
@@ -180,9 +266,28 @@ function formatPostseasonLabel(g: any) {
 
   <div class="team-header">
     <div class="rank-badge">#{ranks?.overallRank ?? '—'}</div>
-    <div>
-      <h1>{row.team}</h1>
-      <p class="subtitle">{row.conference} · Conf Rank #{ranks?.confRank ?? '—'} · {row.year} Season</p>
+    <div class="team-header-content">
+      
+      <div class="team-title-group">
+        <h1>{row.team}</h1>
+        
+        <div class="subtitle-row">
+          <span class="subtitle">{row.conference} · Conf Rank #{ranks?.confRank ?? '—'} ·</span>
+          
+          <div class="team-year-filter-wrap">
+            <select id="teamYearFilter" class="controls select" aria-label="Filter team history by year" data-team={slugifyTeam(row.team)}>
+              {Array.from(new Set(allRankings.filter((r: any) => r.team === row.team).map((r: any) => r.year)))
+                .sort((a: any, b: any) => b - a)
+                .map((yr: any) => (
+                  <option value={yr} selected={yr === row.year}>
+                    {yr}
+                  </option>
+                ))}
+            </select>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -194,26 +299,20 @@ function formatPostseasonLabel(g: any) {
     </div>
     <div class="stat">
       <span class="label">Strength of Schedule</span>
-      <span class="value">#{row.sos ?? '—'}</span>
+      <span class="value">#{row.sos_rank ?? '—'}</span>
     </div>
     <div class="stat">
       <span class="label">Strength of Record</span>
-      <span class="value">#{row.sor ?? '—'}</span>
+      <span class="value">#{row.sor_rank ?? '—'}</span>
     </div>
-    {/* Style Tags Section */}
     {row.tags && row.tags.length > 0 && (
       <div class="team-tags">
         {row.tags.map((tag: string) => {
           const lower = tag.toLowerCase();
           const isDef = lower.includes('defense') || lower.includes('stout') || lower.includes('break');
           const isOff = lower.includes('offense') || lower.includes('explosive') || lower.includes('run');
-          
           const tagClass = isDef ? 'tag-defense' : (isOff ? 'tag-offense' : 'tag-neutral');
-          return (
-            <span class={`style-tag ${tagClass}`}>
-              {tag}
-            </span>
-          );
+          return <span class={`style-tag ${tagClass}`}>{tag}</span>;
         })}
       </div>
     )}
@@ -243,7 +342,7 @@ function formatPostseasonLabel(g: any) {
         const opponentSlug = slugifyTeam(g.opponent);
         const hasPage = validTeamYears.has(`${row.year}-${opponentSlug}`);
         const prefix = g.location === 'Home' ? 'vs ' : '@ ';
-        
+
         let formattedDate = '';
         if (g.startDate) {
           try {
@@ -251,9 +350,7 @@ function formatPostseasonLabel(g: any) {
             if (!isNaN(dateObj.getTime())) {
               formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
             }
-          } catch (e) {
-            // fallback if parsing fails
-          }
+          } catch (e) {}
         }
 
         const winProb = g.winProb;
@@ -261,16 +358,16 @@ function formatPostseasonLabel(g: any) {
         const probColor = isFavored ? '#4ade80' : '#f87171';
 
         const scoreLabel = g.isCompleted
-          ? (g.team_score != null && g.opponent_score != null 
-              ? `${g.team_score}–${g.opponent_score}` 
+          ? (g.team_score != null && g.opponent_score != null
+              ? `${g.team_score}–${g.opponent_score}`
               : `${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`)
           : `Proj: ${g.predicted_margin > 0 ? '+' : ''}${Number(g.predicted_margin).toFixed(1)}`;
 
         const beatExp = g.isCompleted && g.beat_expectation_by != null ? Number(g.beat_expectation_by) : null;
-        
+
         const completedWithBeatExp = sortedGameLog.filter((x: any) => x.isCompleted && x.beat_expectation_by != null);
-        const maxAbsBeatExp = completedWithBeatExp.length > 0 
-          ? Math.max(1, ...completedWithBeatExp.map((x: any) => Math.abs(x.beat_expectation_by))) 
+        const maxAbsBeatExp = completedWithBeatExp.length > 0
+          ? Math.max(1, ...completedWithBeatExp.map((x: any) => Math.abs(x.beat_expectation_by)))
           : 1;
         const barPct = beatExp != null ? Math.min(100, (Math.abs(beatExp) / maxAbsBeatExp) * 100) : 0;
 
@@ -297,22 +394,30 @@ function formatPostseasonLabel(g: any) {
               </div>
             </td>
             <td>
-              {prefix}
-              {hasPage ? (
-                <a href={`/teams/${row.year}/${opponentSlug}`} class="opponent-link">
-                  {g.opponent}
-                </a>
+              {g.isBye ? (
+                <span class="text-muted">Bye</span>
               ) : (
-                g.opponent
+                <>
+                  {prefix}
+                  {hasPage ? (
+                    <a href={`/teams/${row.year}/${opponentSlug}`} class="opponent-link">{g.opponent}</a>
+                  ) : (
+                    g.opponent
+                  )}
+                </>
               )}
             </td>
-            <td class={g.isCompleted ? (g.result === 'W' ? 'win' : 'loss') : 'upcoming'}>
-              {g.isCompleted ? `${g.result} ` : ''}
-              {scoreLabel}
-              {!g.isCompleted && winProb != null && (
-                <span class="win-prob-tag" style={{ color: probColor, marginLeft: '12px' }}>
-                  {' '}{winProb}%
-                </span>
+            <td class={g.isBye ? 'text-muted' : (g.isCompleted ? (g.result === 'W' ? 'win' : 'loss') : 'upcoming')}>
+              {g.isBye ? (
+                <span class="text-muted">—</span>
+              ) : (
+                <>
+                  {g.isCompleted ? `${g.result} ` : ''}
+                  {scoreLabel}
+                  {!g.isCompleted && winProb != null && (
+                    <span class="win-prob-tag" style={{ color: probColor, marginLeft: '12px' }}> {winProb}%</span>
+                  )}
+                </>
               )}
             </td>
             <td class="num">
@@ -351,14 +456,40 @@ function formatPostseasonLabel(g: any) {
           e.preventDefault();
           window.history.back();
         }
-      } catch {
-        // malformed referrer, just fall through to href="/"
-      }
+      } catch {}
     }
   });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const yearSelect = document.getElementById('teamYearFilter') as HTMLSelectElement | null;
+    
+    yearSelect?.addEventListener('change', (e) => {
+      const select = e.target as HTMLSelectElement;
+      const selectedYear = select.value;
+      const teamSlug = select.dataset.team;
+      if (selectedYear && teamSlug) {
+        window.location.href = `/teams/${selectedYear}/${teamSlug}/`;
+      }
+    });
+  });
+</script>
+
 <style>
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    color: #c084fc; /* Or var(--primary) depending on your theme */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
   .week-cell {
     display: flex;
     flex-direction: column;
@@ -437,4 +568,81 @@ function formatPostseasonLabel(g: any) {
     color: #c084fc;
     border: 1px solid rgba(192, 132, 252, 0.4);
     box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
+  }
+
+  .team-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .team-header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .team-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .team-title-group h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .subtitle-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .subtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .team-year-filter-wrap {
+    display: inline-flex;
+    align-items: baseline;
+  }
+
+  .team-year-filter-wrap label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  #teamYearFilter {
+    padding: 4px 28px 4px 10px; /* Leave space on the right for the arrow */
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: var(--text);
+    cursor: pointer;
+    box-sizing: border-box;
+    height: auto;
+    /* Custom inline SVG chevron background */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  #teamYearFilter:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 </style>

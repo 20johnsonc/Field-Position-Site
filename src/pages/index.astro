@@ -19,6 +19,15 @@ function loadJson(relPath: string, fallback: unknown = {}) {
   }
 }
 
+const rawRankings = loadJson(`data/rankings/${default_year}.json`, {});
+const generatedAtStr = rawRankings.generated_at || null;
+const lastUpdate = generatedAtStr 
+  ? new Date(generatedAtStr).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    })
+  : '—';
 const rankings = years.flatMap((year: number) => {
   const raw = loadJson(`data/rankings/${year}.json`, {});
   const rows = Array.isArray(raw) ? raw : (raw?.rankings ?? []);
@@ -46,7 +55,7 @@ function escapeForScript(json: string) {
 }
 ---
 
-<Layout seasonLabel={String(default_year)}>
+<Layout seasonLabel={String(default_year)} lastUpdate={lastUpdate}>
   <DashboardControls filters={filters} conferences={conferences}>
     <RankingsTable slot="rankings" rankings={rankings} />
     <MatchupGrid

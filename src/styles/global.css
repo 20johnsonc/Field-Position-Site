@@ -138,6 +138,7 @@ header {
   border: 1px solid var(--card-border);
 }
 
+/* Keep general controls clean and standard */
 .controls select,
 .controls input {
   background-color: var(--input-bg);
@@ -153,10 +154,46 @@ header {
   min-width: 160px;
 }
 
-.controls select:focus,
-.controls input:focus {
+/* Dedicated styles exclusively for the inline team page year filter */
+#teamYearFilter {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 28px 4px 10px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: auto;
+  line-height: normal;
+  width: auto;
+  min-width: unset;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#teamYearFilter:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#teamYearFilter:focus {
   border-color: var(--accent-primary);
   box-shadow: 0 0 0 2px var(--glow-primary);
+}
+
+/* Forces options to respect dark theme */
+#teamYearFilter option {
+  background-color: var(--input-bg, #10121b);
+  color: var(--text, #f8fafc);
+  min-width: unset; 
+  width: auto;
 }
 
 .tab-panel {

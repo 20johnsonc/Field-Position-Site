@@ -20,6 +20,7 @@ const getRecordSortValue = (record: string) => {
   // Win Percentage + tiny tiebreaker for total wins
   return (wins / total) + (wins * 0.0001);
 };
+console.log(rankings[0])
 ---
 
 <div class="table-container">
@@ -30,6 +31,7 @@ const getRecordSortValue = (record: string) => {
         <th class="sortable" data-sort-key="team">Team</th>
         <th class="sortable num" data-sort-key="netRating" style="text-align: right;">Net Rating</th>
         <th class="sortable num" data-sort-key="record" style="text-align: right;">Record</th>
+        <th class="sortable num" data-sort-key="conference_record" style="text-align: right;">Conf Record</th>
         <th class="sortable num" data-sort-key="sos" style="text-align: right;">SOS</th>
         <th class="sortable num" data-sort-key="sor" style="text-align: right;">SOR</th>
         <th class="sortable" data-sort-key="conference">Conf</th>
@@ -44,9 +46,10 @@ const getRecordSortValue = (record: string) => {
             data-team={row.team}
             data-rank={row.rank}
             data-record={getRecordSortValue(row.record)}
+            data-conference-record={getRecordSortValue(row.conference_record)}
             data-net-rating={row.netRating}
             data-sos={row.sos_rank}
-            data-sor={row.sor}
+            data-sor={row.sor_rank}
             data-conference={row.conference}
           >
             <td class="rank">
@@ -71,6 +74,7 @@ const getRecordSortValue = (record: string) => {
             </td>
             <td class="num rating">{formatRating(row.netRating)}</td>
             <td class="num">{row.record}</td>
+            <td class="num">{row.conference_record}</td>
             <td class="num" title={`Rating: ${row.sos}`}>{row.sos_rank}</td>
             <td class="num" title={`Rating: ${row.sor}`}>{row.sor}</td>
             <td>{row.conference}</td>

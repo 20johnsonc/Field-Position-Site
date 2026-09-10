@@ -38,6 +38,7 @@ export function normalizeRankings(raw: RankingsFile | Record<string, unknown>[])
     year: num(row.Year ?? row.year ?? row.Season ?? row.season, 2026),
     netRating: num(row['Net Rating'] ?? row.net_rating ?? row.power_rating ?? row.net_ppa),
     record: str(row.Record ?? row.record ?? row.w_l, '0-0'),
+    conference_record: str(row.conference_record),
     sos: num(row.SOS ?? row.sos ?? row.strength_of_schedule),
     sor: num(row.SOR ?? row.sor ?? row.strength_of_record),
     sos_rank: num(row.sos_rank ?? row.SOS_Rank ?? row.sos_Rank),

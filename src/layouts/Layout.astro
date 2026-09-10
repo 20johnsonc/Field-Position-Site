@@ -4,9 +4,10 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   seasonLabel: string;
+  lastUpdate?: string;
 }
 
-const { title = 'CFB Power Rankings', seasonLabel } = Astro.props;
+const { title = 'CFB Power Rankings', seasonLabel, lastUpdate } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,7 +33,9 @@ const { title = 'CFB Power Rankings', seasonLabel } = Astro.props;
             <p>Independent power rankings, predictions, win probabilities, and game results.</p>
           </div>
         </a>
-        <div class="year-badge">{seasonLabel}</div>
+        <div class="header-meta">
+          {lastUpdate && <div class="last-updated">Updated {lastUpdate}</div>}
+        </div>
       </header>
       <slot />
     </div>
@@ -45,5 +48,18 @@ const { title = 'CFB Power Rankings', seasonLabel } = Astro.props;
     text-decoration: none;
     color: inherit;
     display: block; /* Ensures the click target takes up the full area */
+  }
+  .header-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .last-updated {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 </style>

@@ -3,13 +3,25 @@ import Layout from '../layouts/Layout.astro';
 import simulationData from '../data/simulation.json';
 import { slugifyTeam } from '../lib/data';
 
-const { prediction_year, n_simulations, teams } = simulationData;
+const { prediction_year, n_simulations, teams, generated_at } = simulationData;
 
 // Convert teams object to array
 const teamsArray = Object.entries(teams).map(([name, stats]) => ({
   name,
   ...stats,
 }));
+
+const lastUpdate = generated_at 
+  ? new Date(generated_at).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZone: 'UTC',
+      timeZoneName: 'short'
+    })
+  : '—';
 
 // Initial server-side sort
 teamsArray.sort((a, b) => b.conference_championship_odds_pct - a.conference_championship_odds_pct);
@@ -18,21 +30,15 @@ teamsArray.sort((a, b) => b.conference_championship_odds_pct - a.conference_cham
 const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
 ---
 
-<Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year}>
-  <div class="futures-container">
-    
-    <div class="page-header">
-      <h1>Futures</h1>
-      <p>Conference title and CFP probabilities from {n_simulations.toLocaleString()} simulated seasons.</p>
-    </div>
-
+<Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year} lastUpdate{lastUpdate}>
+  <div class="futures-container" data-simulation={n_simulations}>
     <!-- Main View Toggle -->
     <div class="view-toggle" id="mainViewToggle">
-      <button class="view-btn active" data-target="conf">
-        Conf. Futures
-      </button>
       <button class="view-btn" data-target="cfp">
         CFP Futures
+      </button>
+      <button class="view-btn active" data-target="conf">
+        Conf. Futures
       </button>
     </div>
 
@@ -87,7 +93,7 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
               
               <!-- Conf Data -->
               <td class="view-conf num-cell" data-val={team.expected_wins ?? 0}>
-                <span class="tabular-num">{team.expected_wins != null ? team.expected_wins.toFixed(1) : '—'}</span>
+                <span class="tabular-num">~{team.expected_wins != null ? team.expected_wins.toFixed(1) : '—'}</span>
               </td>
               <td class="view-conf num-cell" data-val={team.ccg_appearance_odds_pct}>
                 <div class="bar-wrap">
@@ -194,35 +200,6 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
     color: #94a3b8;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
-  }
-
-  .conf-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 2rem;
-  }
-  
-  .pill {
-    background: #1f2937;
-    border: 1px solid transparent;
-    color: #d1d5db;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .pill:hover {
-    background: #374151;
-  }
-  
-  .pill.active {
-    background: rgba(234, 179, 8, 0.15);
-    border-color: #eab308;
-    color: #facc15;
   }
 
   /* Table Container */
@@ -348,8 +325,10 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
   .bar-fill.purple { background: #a855f7; }
 </style>
 
-<script>
+<script define:vars={{ n_simulations }}>
   document.addEventListener('DOMContentLoaded', () => {
+    // n_simulations is now directly available here from the server!
+
     const viewBtns = document.querySelectorAll('.view-btn');
     const pills = document.querySelectorAll('.pill');
     const rows = Array.from(document.querySelectorAll('.team-row'));
@@ -376,24 +355,14 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
 
         if (currentView === 'conf') {
           sectionTitle.textContent = 'Conference Futures';
-          sectionDesc.textContent = 'Simulated CCG appearance and conference title probabilities';
+          sectionDesc.textContent = `Conference Championship appearances and title probabilities from ${n_simulations.toLocaleString()} simulated seasons`;
           document.querySelectorAll('.view-conf').forEach(el => el.classList.remove('hidden'));
           document.querySelectorAll('.view-cfp').forEach(el => el.classList.add('hidden'));
           currentSort = { column: 'champ', asc: false };
 
-          if (allPill) allPill.classList.add('hidden');
-          if (indiePill) indiePill.classList.add('hidden');
-
-          if (currentConf === 'ALL' || currentConf === 'FBS Independents') {
-            const firstValidPill = Array.from(pills).find(p => !p.classList.contains('hidden'));
-            if (firstValidPill) {
-              firstValidPill.click(); 
-              return; 
-            }
-          }
         } else {
           sectionTitle.textContent = 'CFP & National Championship';
-          sectionDesc.textContent = 'Simulated College Football Playoff and National Title probabilities';
+          sectionDesc.textContent = `College Football Playoff and National Title probabilities from ${n_simulations.toLocaleString()} simulated seasons.`;
           document.querySelectorAll('.view-conf').forEach(el => el.classList.add('hidden'));
           document.querySelectorAll('.view-cfp').forEach(el => el.classList.remove('hidden'));
           currentSort = { column: 'natty', asc: false };
@@ -433,8 +402,7 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
           currentSort.asc = !currentSort.asc;
         } else {
           currentSort.column = column;
-          // Default ascending for expected wins, descending for odds/percentages
-          currentSort.asc = (column === 'exp_wins' ? false : false); 
+          currentSort.asc = false; 
         }
         updateSortHeaders();
         filterAndSortTable();

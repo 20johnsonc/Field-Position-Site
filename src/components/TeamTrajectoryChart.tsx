@@ -241,7 +241,7 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
                   }
                   
                   if (g.beat_expectation_by != null) {
-                    tooltipLines.push(`Beat Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`);
+                    tooltipLines.push(`Versus Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`);
                   }
 
                   return tooltipLines;
