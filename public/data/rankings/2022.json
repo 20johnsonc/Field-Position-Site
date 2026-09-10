@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T21:27:48.533491+00:00",
+  "generated_at": "2026-09-10T21:26:24.418084+00:00",
   "year": 2022,
   "rankings": [
     {
@@ -13,6 +13,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 38,
@@ -57,7 +58,7 @@
         "Playoff Contender",
         "Explosive Offense",
         "Elite Defense",
-        "Ground Explosion",
+        "Air Assault",
         "Blue-Blood Talent"
       ],
       "sos": 65,
@@ -142,7 +143,8 @@
       "Net Rating": 30.7,
       "Year": 2022,
       "tags": [
-        "High-Powered Offense"
+        "High-Powered Offense",
+        "Balanced Attack"
       ],
       "sos": 60,
       "sor": 3,
@@ -309,7 +311,6 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
-        "Balanced Attack",
         "Underachiever",
         "Blue-Blood Talent"
       ],
@@ -374,7 +375,7 @@
       "Year": 2022,
       "tags": [
         "Efficient Offense",
-        "Balanced Attack"
+        "Ground Explosion"
       ],
       "sos": 78,
       "sor": 129,
@@ -433,6 +434,7 @@
       "Year": 2022,
       "tags": [
         "Stout Defense",
+        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 96,
@@ -511,8 +513,7 @@
       "Net Rating": 22.5,
       "Year": 2022,
       "tags": [
-        "High-Powered Offense",
-        "Balanced Attack"
+        "High-Powered Offense"
       ],
       "sos": 131,
       "sor": 127,
@@ -532,7 +533,6 @@
       "Year": 2022,
       "tags": [
         "Stout Defense",
-        "Ground Explosion",
         "Snail-Pace"
       ],
       "sos": 144,
@@ -553,7 +553,7 @@
       "Year": 2022,
       "tags": [
         "High-Powered Offense",
-        "Ground Explosion"
+        "Boom-or-Bust"
       ],
       "sos": 48,
       "sor": 144,
@@ -634,6 +634,7 @@
       "tags": [
         "Offense-Carried Team",
         "Efficient Offense",
+        "Balanced Attack",
         "Underachiever",
         "Disruptive Defense"
       ],
@@ -697,7 +698,6 @@
       "tags": [
         "Offense-Carried Team",
         "Efficient Offense",
-        "Balanced Attack",
         "Underachiever"
       ],
       "sos": 64,
@@ -738,7 +738,7 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 31,
       "sor": 142,
@@ -776,7 +776,8 @@
       "Net Rating": 19.6,
       "Year": 2022,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Ball-Control Passing Attack"
       ],
       "sos": 138,
       "sor": 157,
@@ -910,8 +911,7 @@
       "Year": 2022,
       "tags": [
         "Offense-Carried Team",
-        "Efficient Offense",
-        "Balanced Attack"
+        "Efficient Offense"
       ],
       "sos": 142,
       "sor": 163,
@@ -930,7 +930,7 @@
       "Net Rating": 18.2,
       "Year": 2022,
       "tags": [
-        "Boom-or-Bust",
+        "Air Assault",
         "Passing-Downs Weapon"
       ],
       "sos": 188,
@@ -1227,7 +1227,6 @@
       "Net Rating": 13.4,
       "Year": 2022,
       "tags": [
-        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 176,
@@ -1320,7 +1319,7 @@
       "Net Rating": 12.2,
       "Year": 2022,
       "tags": [
-        "Boom-or-Bust",
+        "Ground Explosion",
         "Underdog Roster",
         "Disruptive Defense"
       ],
@@ -1458,6 +1457,7 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
+        "Methodical Grind",
         "Disruptive Defense"
       ],
       "sos": 154,
@@ -1478,7 +1478,7 @@
       "Year": 2022,
       "tags": [
         "Inefficient Offense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 106,
       "sor": 188,
@@ -1652,7 +1652,7 @@
       "Year": 2022,
       "tags": [
         "Porous Defense",
-        "Ball-Control Passing Attack",
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 177,
@@ -1672,8 +1672,7 @@
       "Net Rating": 8.3,
       "Year": 2022,
       "tags": [
-        "Porous Defense",
-        "Ball-Control Passing Attack"
+        "Porous Defense"
       ],
       "sos": 181,
       "sor": 134,
@@ -1750,8 +1749,7 @@
       "Net Rating": 7.2,
       "Year": 2022,
       "tags": [
-        "Leaky Defense",
-        "Ground Explosion"
+        "Leaky Defense"
       ],
       "sos": 56,
       "sor": 156,
@@ -1769,9 +1767,7 @@
       "Record": "5-7",
       "Net Rating": 7.0,
       "Year": 2022,
-      "tags": [
-        "Ground Explosion"
-      ],
+      "tags": [],
       "sos": 143,
       "sor": 194,
       "Actual Wins": null,
@@ -1810,6 +1806,7 @@
       "Year": 2022,
       "tags": [
         "Anemic Offense",
+        "Methodical Grind",
         "Disruptive Defense"
       ],
       "sos": 190,
@@ -1927,7 +1924,8 @@
       "Net Rating": 6.0,
       "Year": 2022,
       "tags": [
-        "Inefficient Offense"
+        "Inefficient Offense",
+        "Ground Explosion"
       ],
       "sos": 63,
       "sor": 160,
@@ -1947,6 +1945,7 @@
       "Year": 2022,
       "tags": [
         "Vulnerable Defense",
+        "Ground Explosion",
         "Passing-Downs Liability"
       ],
       "sos": 203,
@@ -2047,8 +2046,7 @@
       "Net Rating": 4.8,
       "Year": 2022,
       "tags": [
-        "Inefficient Offense",
-        "Ground Explosion"
+        "Inefficient Offense"
       ],
       "sos": 184,
       "sor": 184,
@@ -2068,7 +2066,7 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 105,
       "sor": 206,
@@ -2170,7 +2168,6 @@
       "Year": 2022,
       "tags": [
         "Leaky Defense",
-        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 180,
@@ -2291,8 +2288,7 @@
       "Net Rating": 0.5,
       "Year": 2022,
       "tags": [
-        "Inefficient Offense",
-        "Ground Explosion"
+        "Inefficient Offense"
       ],
       "sos": 175,
       "sor": 219,
@@ -2313,7 +2309,7 @@
       "tags": [
         "Anemic Offense",
         "Passive Defense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 155,
       "sor": 213,
@@ -2353,6 +2349,7 @@
       "Net Rating": -0.3,
       "Year": 2022,
       "tags": [
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 192,

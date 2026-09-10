@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T21:27:48.533491+00:00",
+  "generated_at": "2026-09-10T21:26:24.418084+00:00",
   "year": 2024,
   "rankings": [
     {
@@ -13,7 +13,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Ball-Control Passing Attack",
+        "Methodical Grind",
         "Blue-Blood Talent"
       ],
       "sos": 40,
@@ -36,7 +36,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Ground Explosion",
+        "Air Assault",
         "Blue-Blood Talent"
       ],
       "sos": 57,
@@ -59,6 +59,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 48,
@@ -189,7 +190,8 @@
       "Net Rating": 28.9,
       "Year": 2024,
       "tags": [
-        "High-Powered Offense"
+        "High-Powered Offense",
+        "Balanced Attack"
       ],
       "sos": 133,
       "sor": 108,
@@ -392,7 +394,6 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
-        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 45,
@@ -450,8 +451,7 @@
       "Net Rating": 21.4,
       "Year": 2024,
       "tags": [
-        "Efficient Offense",
-        "Balanced Attack"
+        "Efficient Offense"
       ],
       "sos": 38,
       "sor": 138,
@@ -556,8 +556,7 @@
       "tags": [
         "Well-Rounded Team",
         "Efficient Offense",
-        "Shutdown Defense",
-        "Balanced Attack"
+        "Shutdown Defense"
       ],
       "sos": 72,
       "sor": 136,
@@ -612,6 +611,7 @@
       "Net Rating": 18.8,
       "Year": 2024,
       "tags": [
+        "Ground Explosion",
         "Snail-Pace"
       ],
       "sos": 101,
@@ -784,9 +784,7 @@
       "Record": "11-3",
       "Net Rating": 16.5,
       "Year": 2024,
-      "tags": [
-        "Ground Explosion"
-      ],
+      "tags": [],
       "sos": 158,
       "sor": 116,
       "Actual Wins": null,
@@ -1032,7 +1030,6 @@
       "Net Rating": 13.5,
       "Year": 2024,
       "tags": [
-        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 116,
@@ -1227,6 +1224,7 @@
       "Net Rating": 11.9,
       "Year": 2024,
       "tags": [
+        "Ground Explosion",
         "Underdog Roster"
       ],
       "sos": 214,
@@ -1326,9 +1324,7 @@
       "Record": "8-4",
       "Net Rating": 10.5,
       "Year": 2024,
-      "tags": [
-        "Balanced Attack"
-      ],
+      "tags": [],
       "sos": 226,
       "sor": 153,
       "Actual Wins": null,
@@ -1398,9 +1394,7 @@
       "Record": "10-3",
       "Net Rating": 9.8,
       "Year": 2024,
-      "tags": [
-        "Balanced Attack"
-      ],
+      "tags": [],
       "sos": 106,
       "sor": 104,
       "Actual Wins": null,
@@ -1418,6 +1412,7 @@
       "Net Rating": 9.7,
       "Year": 2024,
       "tags": [
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 176,
@@ -1456,6 +1451,7 @@
       "Net Rating": 9.3,
       "Year": 2024,
       "tags": [
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 155,
@@ -1511,7 +1507,7 @@
       "Net Rating": 8.6,
       "Year": 2024,
       "tags": [
-        "Ball-Control Passing Attack",
+        "Balanced Attack",
         "Snail-Pace"
       ],
       "sos": 117,
@@ -1532,7 +1528,8 @@
       "Year": 2024,
       "tags": [
         "Efficient Offense",
-        "Leaky Defense"
+        "Leaky Defense",
+        "Balanced Attack"
       ],
       "sos": 85,
       "sor": 209,
@@ -1633,6 +1630,7 @@
       "Net Rating": 7.9,
       "Year": 2024,
       "tags": [
+        "Ball-Control Passing Attack",
         "Disruptive Defense"
       ],
       "sos": 100,
@@ -1886,6 +1884,7 @@
       "Net Rating": 4.7,
       "Year": 2024,
       "tags": [
+        "Balanced Attack",
         "Passing-Downs Liability"
       ],
       "sos": 91,
@@ -1927,7 +1926,7 @@
       "Year": 2024,
       "tags": [
         "Explosive Offense",
-        "Air Assault"
+        "Ground Explosion"
       ],
       "sos": 168,
       "sor": 203,
@@ -2023,7 +2022,6 @@
       "Year": 2024,
       "tags": [
         "Porous Defense",
-        "Balanced Attack",
         "Passing-Downs Weapon"
       ],
       "sos": 139,
@@ -2200,7 +2198,7 @@
       "tags": [
         "Inefficient Offense",
         "Leaky Defense",
-        "Air Assault",
+        "Boom-or-Bust",
         "Underdog Roster"
       ],
       "sos": 211,
@@ -2339,8 +2337,7 @@
       "Net Rating": -1.7,
       "Year": 2024,
       "tags": [
-        "Leaky Defense",
-        "Ground Explosion"
+        "Leaky Defense"
       ],
       "sos": 182,
       "sor": 227,
@@ -2381,7 +2378,7 @@
       "Year": 2024,
       "tags": [
         "Porous Defense",
-        "Balanced Attack",
+        "Ball-Control Passing Attack",
         "Snail-Pace"
       ],
       "sos": 52,
@@ -2424,7 +2421,7 @@
       "tags": [
         "Anemic Offense",
         "Leaky Defense",
-        "Ground Explosion"
+        "Boom-or-Bust"
       ],
       "sos": 150,
       "sor": 219,
@@ -2544,8 +2541,7 @@
       "Year": 2024,
       "tags": [
         "Anemic Offense",
-        "Leaky Defense",
-        "Ground Explosion"
+        "Leaky Defense"
       ],
       "sos": 145,
       "sor": 215,
@@ -2607,8 +2603,7 @@
       "Year": 2024,
       "tags": [
         "Anemic Offense",
-        "Porous Defense",
-        "Ground Explosion"
+        "Porous Defense"
       ],
       "sos": 156,
       "sor": 229,

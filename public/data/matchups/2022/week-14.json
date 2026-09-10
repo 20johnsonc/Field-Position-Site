@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T21:27:48.533491+00:00",
+  "generated_at": "2026-09-10T21:26:24.418084+00:00",
   "year": 2022,
   "week": 14,
   "games": [
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437008,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "UCF",
-      "home_points": 45,
-      "away_points": 28,
-      "actual_margin": 17,
-      "actual_total": 73,
-      "start_date": "2022-12-03 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Athletic Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437034,
       "week": 14,
       "year": 2022,
@@ -163,6 +145,24 @@
       "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": "Mountain West Championship Game",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437008,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Tulane",
+      "away_team": "UCF",
+      "home_points": 45,
+      "away_points": 28,
+      "actual_margin": 17,
+      "actual_total": 73,
+      "start_date": "2022-12-03 21:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {

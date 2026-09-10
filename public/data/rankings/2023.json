@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T21:27:48.533491+00:00",
+  "generated_at": "2026-09-10T21:26:24.418084+00:00",
   "year": 2023,
   "rankings": [
     {
@@ -57,7 +57,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Shutdown Defense",
-        "Ball-Control Passing Attack"
+        "Methodical Grind"
       ],
       "sos": 75,
       "sor": 2,
@@ -79,7 +79,6 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Stout Defense",
-        "Ball-Control Passing Attack",
         "Blue-Blood Talent"
       ],
       "sos": 69,
@@ -101,7 +100,7 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
-        "Ground Explosion",
+        "Air Assault",
         "Underachiever",
         "Blue-Blood Talent",
         "Disruptive Defense"
@@ -126,6 +125,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Shutdown Defense",
+        "Ground Explosion",
         "Blue-Blood Talent"
       ],
       "sos": 103,
@@ -148,7 +148,7 @@
         "Playoff Contender",
         "Efficient Offense",
         "Stout Defense",
-        "Ground Explosion",
+        "Air Assault",
         "Blue-Blood Talent"
       ],
       "sos": 36,
@@ -252,7 +252,8 @@
       "Net Rating": 27.1,
       "Year": 2023,
       "tags": [
-        "High-Powered Offense"
+        "High-Powered Offense",
+        "Balanced Attack"
       ],
       "sos": 32,
       "sor": 1,
@@ -294,7 +295,6 @@
       "tags": [
         "Offense-Carried Team",
         "High-Powered Offense",
-        "Balanced Attack",
         "Underachiever",
         "Blue-Blood Talent"
       ],
@@ -501,7 +501,8 @@
       "Net Rating": 20.8,
       "Year": 2023,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Methodical Grind"
       ],
       "sos": 58,
       "sor": 5,
@@ -637,7 +638,6 @@
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
-        "Balanced Attack",
         "Underdog Roster"
       ],
       "sos": 185,
@@ -678,7 +678,6 @@
       "Year": 2023,
       "tags": [
         "Offense-Carried Team",
-        "Ground Explosion",
         "Underachiever",
         "Early-Downs Grinder"
       ],
@@ -887,7 +886,7 @@
       "tags": [
         "Inefficient Offense",
         "Elite Defense",
-        "Ground Explosion"
+        "Boom-or-Bust"
       ],
       "sos": 145,
       "sor": 110,
@@ -943,7 +942,6 @@
       "Net Rating": 13.7,
       "Year": 2023,
       "tags": [
-        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 158,
@@ -1071,7 +1069,7 @@
       "Net Rating": 11.6,
       "Year": 2023,
       "tags": [
-        "Air Assault",
+        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 159,
@@ -1130,6 +1128,7 @@
       "Year": 2023,
       "tags": [
         "Efficient Offense",
+        "Balanced Attack",
         "Disruptive Defense"
       ],
       "sos": 104,
@@ -1151,7 +1150,8 @@
       "tags": [
         "Offense-Carried Team",
         "Explosive Offense",
-        "Vulnerable Defense"
+        "Vulnerable Defense",
+        "Methodical Grind"
       ],
       "sos": 81,
       "sor": 143,
@@ -1203,9 +1203,7 @@
       "Record": "4-8",
       "Net Rating": 10.8,
       "Year": 2023,
-      "tags": [
-        "Balanced Attack"
-      ],
+      "tags": [],
       "sos": 77,
       "sor": 188,
       "Actual Wins": null,
@@ -1360,6 +1358,7 @@
       "Year": 2023,
       "tags": [
         "Vulnerable Defense",
+        "Balanced Attack",
         "Passing-Downs Weapon"
       ],
       "sos": 119,
@@ -1518,7 +1517,7 @@
       "tags": [
         "Explosive Offense",
         "Vulnerable Defense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 171,
       "sor": 149,
@@ -1536,7 +1535,9 @@
       "Record": "4-8",
       "Net Rating": 7.6,
       "Year": 2023,
-      "tags": [],
+      "tags": [
+        "Ground Explosion"
+      ],
       "sos": 67,
       "sor": 191,
       "Actual Wins": null,
@@ -1554,7 +1555,8 @@
       "Net Rating": 7.3,
       "Year": 2023,
       "tags": [
-        "Inefficient Offense"
+        "Inefficient Offense",
+        "Methodical Grind"
       ],
       "sos": 202,
       "sor": 130,
@@ -1610,7 +1612,8 @@
       "Net Rating": 6.8,
       "Year": 2023,
       "tags": [
-        "Vulnerable Defense"
+        "Vulnerable Defense",
+        "Air Assault"
       ],
       "sos": 125,
       "sor": 163,
@@ -1781,7 +1784,6 @@
       "Net Rating": 5.2,
       "Year": 2023,
       "tags": [
-        "Methodical Grind",
         "Disruptive Defense",
         "Snail-Pace"
       ],
@@ -1878,7 +1880,7 @@
       "Year": 2023,
       "tags": [
         "Explosive Offense",
-        "Boom-or-Bust"
+        "Air Assault"
       ],
       "sos": 156,
       "sor": 198,
@@ -2071,6 +2073,7 @@
       "Net Rating": 1.5,
       "Year": 2023,
       "tags": [
+        "Ground Explosion",
         "Behind The Chains"
       ],
       "sos": 161,
@@ -2091,7 +2094,6 @@
       "Year": 2023,
       "tags": [
         "Vulnerable Defense",
-        "Air Assault",
         "Snail-Pace"
       ],
       "sos": 38,
@@ -2237,8 +2239,7 @@
       "Net Rating": -0.8,
       "Year": 2023,
       "tags": [
-        "Leaky Defense",
-        "Ground Explosion"
+        "Leaky Defense"
       ],
       "sos": 167,
       "sor": 221,
@@ -2317,8 +2318,7 @@
       "Year": 2023,
       "tags": [
         "Inefficient Offense",
-        "Leaky Defense",
-        "Ground Explosion"
+        "Leaky Defense"
       ],
       "sos": 68,
       "sor": 214,
@@ -2381,7 +2381,6 @@
       "Year": 2023,
       "tags": [
         "Porous Defense",
-        "Ground Explosion",
         "Behind The Chains"
       ],
       "sos": 137,
@@ -2402,8 +2401,7 @@
       "Year": 2023,
       "tags": [
         "Inefficient Offense",
-        "Vulnerable Defense",
-        "Ground Explosion"
+        "Vulnerable Defense"
       ],
       "sos": 136,
       "sor": 217,
@@ -2482,7 +2480,7 @@
       "tags": [
         "Inefficient Offense",
         "Porous Defense",
-        "Balanced Attack"
+        "Ball-Control Passing Attack"
       ],
       "sos": 168,
       "sor": 220,
@@ -2522,7 +2520,6 @@
       "Year": 2023,
       "tags": [
         "Porous Defense",
-        "Ground Explosion",
         "Behind The Chains"
       ],
       "sos": 163,
@@ -2563,6 +2560,7 @@
       "Year": 2023,
       "tags": [
         "Porous Defense",
+        "Balanced Attack",
         "Behind The Chains"
       ],
       "sos": 189,

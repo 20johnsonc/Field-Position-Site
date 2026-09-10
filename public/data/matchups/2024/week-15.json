@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T21:27:48.533491+00:00",
+  "generated_at": "2026-09-10T21:26:24.418084+00:00",
   "year": 2024,
   "week": 15,
   "games": [
@@ -22,24 +22,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673462,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "Army",
-      "away_team": "Tulane",
-      "home_points": 35,
-      "away_points": 14,
-      "actual_margin": 21,
-      "actual_total": 49,
-      "start_date": "2024-12-07 01:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Athletic Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673468,
       "week": 15,
       "year": 2024,
@@ -55,6 +37,24 @@
       "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": "Mountain West Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673462,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Army",
+      "away_team": "Tulane",
+      "home_points": 35,
+      "away_points": 14,
+      "actual_margin": 21,
+      "actual_total": 49,
+      "start_date": "2024-12-07 01:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
