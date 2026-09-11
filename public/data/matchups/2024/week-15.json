@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T21:01:30.599594+00:00",
+  "generated_at": "2026-09-11T23:48:47.318281+00:00",
   "year": 2024,
   "week": 15,
   "games": [
@@ -22,24 +22,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673468,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "Boise State",
-      "away_team": "UNLV",
-      "home_points": 21,
-      "away_points": 7,
-      "actual_margin": 14,
-      "actual_total": 28,
-      "start_date": "2024-12-07 01:00:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "Mountain West",
-      "is_playoff": false,
-      "round_name": "Mountain West Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673462,
       "week": 15,
       "year": 2024,
@@ -58,21 +40,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673465,
+      "game_id": 401673468,
       "week": 15,
       "year": 2024,
       "status": "completed",
-      "home_team": "Arizona State",
-      "away_team": "Iowa State",
-      "home_points": 45,
-      "away_points": 19,
-      "actual_margin": 26,
-      "actual_total": 64,
-      "start_date": "2024-12-07 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
+      "home_team": "Boise State",
+      "away_team": "UNLV",
+      "home_points": 21,
+      "away_points": 7,
+      "actual_margin": 14,
+      "actual_total": 28,
+      "start_date": "2024-12-07 01:00:00+00:00",
+      "home_conference": "Mountain West",
+      "away_conference": "Mountain West",
       "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
+      "round_name": "Mountain West Championship",
       "bowl_name": null
     },
     {
@@ -91,6 +73,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673465,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Arizona State",
+      "away_team": "Iowa State",
+      "home_points": 45,
+      "away_points": 19,
+      "actual_margin": 26,
+      "actual_total": 64,
+      "start_date": "2024-12-07 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {

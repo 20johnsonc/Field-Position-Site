@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T21:01:30.599594+00:00",
+  "generated_at": "2026-09-11T23:48:47.318281+00:00",
   "year": 2021,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401331160,
-      "week": 14,
-      "year": 2021,
-      "status": "completed",
-      "home_team": "Northern Illinois",
-      "away_team": "Kent State",
-      "home_points": 41,
-      "away_points": 23,
-      "actual_margin": 18,
-      "actual_total": 64,
-      "start_date": "2021-12-04 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401287953,
       "week": 14,
       "year": 2021,
@@ -71,6 +53,24 @@
       "start_date": "2021-12-04 17:00:00+00:00",
       "home_conference": "Big 12",
       "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401331160,
+      "week": 14,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Northern Illinois",
+      "away_team": "Kent State",
+      "home_points": 41,
+      "away_points": 23,
+      "actual_margin": 18,
+      "actual_total": 64,
+      "start_date": "2021-12-04 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null
@@ -148,24 +148,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401331163,
-      "week": 14,
-      "year": 2021,
-      "status": "completed",
-      "home_team": "Wake Forest",
-      "away_team": "Pittsburgh",
-      "home_points": 21,
-      "away_points": 45,
-      "actual_margin": -24,
-      "actual_total": 66,
-      "start_date": "2021-12-05 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401331447,
       "week": 14,
       "year": 2021,
@@ -179,6 +161,24 @@
       "start_date": "2021-12-05 01:00:00+00:00",
       "home_conference": "Big Ten",
       "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401331163,
+      "week": 14,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Wake Forest",
+      "away_team": "Pittsburgh",
+      "home_points": 21,
+      "away_points": 45,
+      "actual_margin": -24,
+      "actual_total": 66,
+      "start_date": "2021-12-05 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null
