@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T21:26:24.418084+00:00",
+  "generated_at": "2026-09-11T21:01:30.599594+00:00",
   "year": 2022,
   "week": 0,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401405058,
-      "week": 0,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Illinois",
-      "away_team": "Wyoming",
-      "home_points": 38,
-      "away_points": 6,
-      "actual_margin": 32,
-      "actual_total": 44,
-      "start_date": "2022-08-27 20:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Mountain West",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401404146,
       "week": 0,
       "year": 2022,
@@ -89,6 +71,24 @@
       "start_date": "2022-08-27 20:00:00+00:00",
       "home_conference": "Mountain West",
       "away_conference": "FBS Independents",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401405058,
+      "week": 0,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Illinois",
+      "away_team": "Wyoming",
+      "home_points": 38,
+      "away_points": 6,
+      "actual_margin": 32,
+      "actual_total": 44,
+      "start_date": "2022-08-27 20:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null

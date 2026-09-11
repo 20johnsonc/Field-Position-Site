@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T21:26:24.418084+00:00",
+  "generated_at": "2026-09-11T21:01:30.599594+00:00",
   "year": 2021,
   "rankings": [
     {
@@ -949,6 +949,7 @@
       "Net Rating": 14.0,
       "Year": 2021,
       "tags": [
+        "Ground Explosion",
         "Passing-Downs Weapon"
       ],
       "sos": 88,
@@ -2395,13 +2396,13 @@
         "Porous Defense",
         "Air Assault"
       ],
-      "sos": 165,
+      "sos": 164,
       "sor": 224,
       "Actual Wins": null,
       "Games Played": null,
       "record": "2-10",
       "conference_record": "1-7",
-      "sos_rank": 94,
+      "sos_rank": 93,
       "sor_rank": 127
     },
     {
@@ -2456,13 +2457,13 @@
         "Anemic Offense",
         "Vulnerable Defense"
       ],
-      "sos": 164,
+      "sos": 165,
       "sor": 217,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "1-7",
-      "sos_rank": 93,
+      "sos_rank": 94,
       "sor_rank": 120
     },
     {
