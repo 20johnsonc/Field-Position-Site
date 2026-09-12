@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T10:52:54.914244+00:00",
+  "generated_at": "2026-09-12T12:16:06.993822+00:00",
   "year": 2022,
   "week": 14,
   "games": [
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401437036,
-      "week": 14,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Georgia",
-      "away_team": "LSU",
-      "home_points": 50,
-      "away_points": 30,
-      "actual_margin": 20,
-      "actual_total": 80,
-      "start_date": "2022-12-03 21:00:00+00:00",
-      "home_conference": "SEC",
-      "away_conference": "SEC",
-      "is_playoff": false,
-      "round_name": "Sec Championship Game",
-      "bowl_name": null
-    },
-    {
       "game_id": 401437008,
       "week": 14,
       "year": 2022,
@@ -163,6 +145,24 @@
       "away_conference": "American Athletic",
       "is_playoff": false,
       "round_name": "American Athletic Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401437036,
+      "week": 14,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Georgia",
+      "away_team": "LSU",
+      "home_points": 50,
+      "away_points": 30,
+      "actual_margin": 20,
+      "actual_total": 80,
+      "start_date": "2022-12-03 21:00:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "SEC",
+      "is_playoff": false,
+      "round_name": "Sec Championship Game",
       "bowl_name": null
     },
     {

@@ -1,26 +1,8 @@
 {
-  "generated_at": "2026-09-12T10:52:54.914244+00:00",
+  "generated_at": "2026-09-12T12:16:06.993822+00:00",
   "year": 2025,
   "week": 15,
   "games": [
-    {
-      "game_id": 401777352,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "James Madison",
-      "away_team": "Troy",
-      "home_points": 31,
-      "away_points": 14,
-      "actual_margin": 17,
-      "actual_total": 45,
-      "start_date": "2025-12-06 00:00:00+00:00",
-      "home_conference": "Sun Belt",
-      "away_conference": "Sun Belt",
-      "is_playoff": false,
-      "round_name": "Sun Belt Championship",
-      "bowl_name": null
-    },
     {
       "game_id": 401777325,
       "week": 15,
@@ -37,6 +19,24 @@
       "away_conference": "Conference USA",
       "is_playoff": false,
       "round_name": "Conference Usa Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777352,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "James Madison",
+      "away_team": "Troy",
+      "home_points": 31,
+      "away_points": 14,
+      "actual_margin": 17,
+      "actual_total": 45,
+      "start_date": "2025-12-06 00:00:00+00:00",
+      "home_conference": "Sun Belt",
+      "away_conference": "Sun Belt",
+      "is_playoff": false,
+      "round_name": "Sun Belt Championship",
       "bowl_name": null
     },
     {
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777353,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Ohio State",
-      "away_team": "Indiana",
-      "home_points": 10,
-      "away_points": 13,
-      "actual_margin": -3,
-      "actual_total": 23,
-      "start_date": "2025-12-07 01:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
-      "is_playoff": false,
-      "round_name": "Big Ten Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777328,
       "week": 15,
       "year": 2025,
@@ -163,6 +145,24 @@
       "away_conference": "ACC",
       "is_playoff": false,
       "round_name": "Acc Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777353,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Ohio State",
+      "away_team": "Indiana",
+      "home_points": 10,
+      "away_points": 13,
+      "actual_margin": -3,
+      "actual_total": 23,
+      "start_date": "2025-12-07 01:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": "Big Ten Championship",
       "bowl_name": null
     },
     {

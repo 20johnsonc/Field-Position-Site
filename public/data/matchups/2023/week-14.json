@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T10:52:54.914244+00:00",
+  "generated_at": "2026-09-12T12:16:06.993822+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539479,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Texas",
-      "away_team": "Oklahoma State",
-      "home_points": 49,
-      "away_points": 21,
-      "actual_margin": 28,
-      "actual_total": 70,
-      "start_date": "2023-12-02 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539481,
       "week": 14,
       "year": 2023,
@@ -73,6 +55,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539479,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Texas",
+      "away_team": "Oklahoma State",
+      "home_points": 49,
+      "away_points": 21,
+      "actual_margin": 28,
+      "actual_total": 70,
+      "start_date": "2023-12-02 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {
@@ -112,24 +112,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539484,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Troy",
-      "away_team": "App State",
-      "home_points": 49,
-      "away_points": 23,
-      "actual_margin": 26,
-      "actual_total": 72,
-      "start_date": "2023-12-02 21:00:00+00:00",
-      "home_conference": "Sun Belt",
-      "away_conference": "Sun Belt",
-      "is_playoff": false,
-      "round_name": "Sun Belt Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539483,
       "week": 14,
       "year": 2023,
@@ -145,6 +127,24 @@
       "away_conference": "SEC",
       "is_playoff": false,
       "round_name": "Sec Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539484,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Troy",
+      "away_team": "App State",
+      "home_points": 49,
+      "away_points": 23,
+      "actual_margin": 26,
+      "actual_total": 72,
+      "start_date": "2023-12-02 21:00:00+00:00",
+      "home_conference": "Sun Belt",
+      "away_conference": "Sun Belt",
+      "is_playoff": false,
+      "round_name": "Sun Belt Championship",
       "bowl_name": null
     },
     {
