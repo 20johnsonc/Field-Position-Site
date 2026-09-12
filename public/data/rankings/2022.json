@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2022,
   "rankings": [
     {
@@ -13,7 +13,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Ground Explosion",
+        "Balanced Attack",
         "Blue-Blood Talent"
       ],
       "sos": 38,
@@ -395,7 +395,7 @@
       "Year": 2022,
       "tags": [
         "Stout Defense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 73,
       "sor": 136,
@@ -1417,7 +1417,7 @@
       "Year": 2022,
       "tags": [
         "High-Powered Offense",
-        "Ground Explosion",
+        "Air Assault",
         "Disruptive Defense"
       ],
       "sos": 49,
@@ -2086,7 +2086,7 @@
       "Year": 2022,
       "tags": [
         "Explosive Offense",
-        "Air Assault"
+        "Boom-or-Bust"
       ],
       "sos": 105,
       "sor": 206,

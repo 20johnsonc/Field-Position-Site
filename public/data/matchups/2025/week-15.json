@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2025,
   "week": 15,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777324,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "North Texas",
-      "home_points": 34,
-      "away_points": 21,
-      "actual_margin": 13,
-      "actual_total": 55,
-      "start_date": "2025-12-06 01:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777326,
       "week": 15,
       "year": 2025,
@@ -73,6 +55,24 @@
       "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": "Mountain West Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777324,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Tulane",
+      "away_team": "North Texas",
+      "home_points": 34,
+      "away_points": 21,
+      "actual_margin": 13,
+      "actual_total": 55,
+      "start_date": "2025-12-06 01:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Championship",
       "bowl_name": null
     },
     {

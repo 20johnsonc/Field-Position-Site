@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2023,
   "rankings": [
     {
@@ -339,7 +339,8 @@
       "tags": [
         "Well-Rounded Team",
         "Efficient Offense",
-        "Stout Defense"
+        "Stout Defense",
+        "Methodical Grind"
       ],
       "sos": 83,
       "sor": 97,
@@ -601,7 +602,7 @@
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
-        "Ground Explosion"
+        "Air Assault"
       ],
       "sos": 81,
       "sor": 111,
@@ -791,6 +792,7 @@
       "Year": 2023,
       "tags": [
         "Shutdown Defense",
+        "Ground Explosion",
         "Snail-Pace"
       ],
       "sos": 95,
@@ -845,9 +847,7 @@
       "Record": "7-6",
       "Net Rating": 15.0,
       "Year": 2023,
-      "tags": [
-        "Ground Explosion"
-      ],
+      "tags": [],
       "sos": 84,
       "sor": 138,
       "Actual Wins": null,
@@ -1629,8 +1629,7 @@
       "Net Rating": 6.7,
       "Year": 2023,
       "tags": [
-        "Vulnerable Defense",
-        "Air Assault"
+        "Vulnerable Defense"
       ],
       "sos": 125,
       "sor": 164,

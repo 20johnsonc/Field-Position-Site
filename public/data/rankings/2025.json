@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2025,
   "rankings": [
     {
@@ -36,7 +36,7 @@
         "Playoff Contender",
         "High-Powered Offense",
         "Elite Defense",
-        "Methodical Grind",
+        "Balanced Attack",
         "Blue-Blood Talent"
       ],
       "sos": 80,
@@ -782,6 +782,7 @@
       "Net Rating": 16.7,
       "Year": 2025,
       "tags": [
+        "Ground Explosion",
         "Disruptive Defense",
         "Passing-Downs Weapon"
       ],
@@ -1074,6 +1075,7 @@
       "tags": [
         "Offense-Carried Team",
         "Efficient Offense",
+        "Ball-Control Passing Attack",
         "Disruptive Defense"
       ],
       "sos": 108,
@@ -1384,8 +1386,7 @@
       "Net Rating": 9.1,
       "Year": 2025,
       "tags": [
-        "Porous Defense",
-        "Balanced Attack"
+        "Porous Defense"
       ],
       "sos": 67,
       "sor": 157,

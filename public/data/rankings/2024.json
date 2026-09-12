@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2024,
   "rankings": [
     {
@@ -374,7 +374,8 @@
       "Net Rating": 22.7,
       "Year": 2024,
       "tags": [
-        "High-Powered Offense"
+        "High-Powered Offense",
+        "Ground Explosion"
       ],
       "sos": 58,
       "sor": 46,
@@ -1070,6 +1071,7 @@
       "Net Rating": 13.2,
       "Year": 2024,
       "tags": [
+        "Ground Explosion",
         "Disruptive Defense",
         "Passing-Downs Weapon"
       ],
@@ -1507,7 +1509,7 @@
       "Net Rating": 8.6,
       "Year": 2024,
       "tags": [
-        "Balanced Attack",
+        "Methodical Grind",
         "Snail-Pace"
       ],
       "sos": 118,

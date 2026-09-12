@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2021,
   "rankings": [
     {
@@ -408,7 +408,7 @@
       "Year": 2021,
       "tags": [
         "Elite Defense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 112,
       "sor": 105,
@@ -490,7 +490,7 @@
       "Year": 2021,
       "tags": [
         "High-Powered Offense",
-        "Boom-or-Bust"
+        "Ground Explosion"
       ],
       "sos": 99,
       "sor": 173,
@@ -815,7 +815,8 @@
       "Net Rating": 15.5,
       "Year": 2021,
       "tags": [
-        "Efficient Offense"
+        "Efficient Offense",
+        "Balanced Attack"
       ],
       "sos": 126,
       "sor": 27,
@@ -1134,7 +1135,7 @@
         "Offense-Carried Team",
         "Efficient Offense",
         "Leaky Defense",
-        "Balanced Attack"
+        "Ground Explosion"
       ],
       "sos": 105,
       "sor": 154,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T23:48:47.318281+00:00",
+  "generated_at": "2026-09-12T10:52:54.914244+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -94,6 +94,24 @@
       "bowl_name": null
     },
     {
+      "game_id": 401539477,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Tulane",
+      "away_team": "SMU",
+      "home_points": 14,
+      "away_points": 26,
+      "actual_margin": -12,
+      "actual_total": 40,
+      "start_date": "2023-12-02 21:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Athletic Championship",
+      "bowl_name": null
+    },
+    {
       "game_id": 401539484,
       "week": 14,
       "year": 2023,
@@ -127,24 +145,6 @@
       "away_conference": "SEC",
       "is_playoff": false,
       "round_name": "Sec Championship",
-      "bowl_name": null
-    },
-    {
-      "game_id": 401539477,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "SMU",
-      "home_points": 14,
-      "away_points": 26,
-      "actual_margin": -12,
-      "actual_total": 40,
-      "start_date": "2023-12-02 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
