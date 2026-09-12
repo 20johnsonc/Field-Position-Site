@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-11T23:48:53.565278+00:00",
+  "generated_at": "2026-09-12T10:53:00.999307+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
-  "backtest_cover_rate": 0.6099,
+  "backtest_cover_rate": 0.6042,
   "picks_by_week": {
     "2": [
       {
@@ -51,12 +51,12 @@
         "home_team": "Louisville",
         "away_team": "SMU",
         "market_spread": -1.5,
-        "predicted_margin": 0.59,
-        "pick": "SMU",
-        "pick_side": "away",
-        "edge_pts": 2.1,
-        "cover_prob": 0.5494,
-        "adjusted_ranking_score": 0.4226
+        "predicted_margin": -2.6,
+        "pick": "Louisville",
+        "pick_side": "home",
+        "edge_pts": 1.1,
+        "cover_prob": 0.5261,
+        "adjusted_ranking_score": 0.4047
       },
       {
         "game_id": 401858232,
@@ -133,12 +133,12 @@
         "home_team": "Clemson",
         "away_team": "Miami",
         "market_spread": 7.0,
-        "predicted_margin": 27.38,
+        "predicted_margin": 27.39,
         "pick": "Miami",
         "pick_side": "away",
         "edge_pts": 20.4,
-        "cover_prob": 0.8871,
-        "adjusted_ranking_score": 0.3696
+        "cover_prob": 0.8872,
+        "adjusted_ranking_score": 0.3697
       },
       {
         "game_id": 401858250,
@@ -251,6 +251,19 @@
         "adjusted_ranking_score": 0.3474
       },
       {
+        "game_id": 401858271,
+        "week": 8,
+        "home_team": "Virginia",
+        "away_team": "Duke",
+        "market_spread": -6.5,
+        "predicted_margin": -15.64,
+        "pick": "Virginia",
+        "pick_side": "home",
+        "edge_pts": 9.1,
+        "cover_prob": 0.7065,
+        "adjusted_ranking_score": 0.3072
+      },
+      {
         "game_id": 401856837,
         "week": 8,
         "home_team": "Utah",
@@ -262,19 +275,6 @@
         "edge_pts": 6.6,
         "cover_prob": 0.6525,
         "adjusted_ranking_score": 0.2837
-      },
-      {
-        "game_id": 401858271,
-        "week": 8,
-        "home_team": "Virginia",
-        "away_team": "Duke",
-        "market_spread": -6.5,
-        "predicted_margin": -9.66,
-        "pick": "Virginia",
-        "pick_side": "home",
-        "edge_pts": 3.2,
-        "cover_prob": 0.5745,
-        "adjusted_ranking_score": 0.2498
       }
     ],
     "9": [
@@ -433,11 +433,11 @@
         "home_team": "Miami",
         "away_team": "Virginia Tech",
         "market_spread": -16.5,
-        "predicted_margin": -21.24,
+        "predicted_margin": -21.25,
         "pick": "Miami",
         "pick_side": "home",
-        "edge_pts": 4.7,
-        "cover_prob": 0.6109,
+        "edge_pts": 4.8,
+        "cover_prob": 0.6111,
         "adjusted_ranking_score": 0.1421
       }
     ],
@@ -456,17 +456,17 @@
         "adjusted_ranking_score": 0.5252
       },
       {
-        "game_id": 401858317,
+        "game_id": 401856756,
         "week": 13,
-        "home_team": "Virginia Tech",
-        "away_team": "Virginia",
-        "market_spread": -1.5,
-        "predicted_margin": -7.56,
-        "pick": "Virginia Tech",
+        "home_team": "Texas A&M",
+        "away_team": "Texas",
+        "market_spread": 2.5,
+        "predicted_margin": -3.34,
+        "pick": "Texas A&M",
         "pick_side": "home",
-        "edge_pts": 6.1,
-        "cover_prob": 0.6406,
-        "adjusted_ranking_score": 0.4928
+        "edge_pts": 5.8,
+        "cover_prob": 0.6357,
+        "adjusted_ranking_score": 0.4238
       },
       {
         "game_id": 401858313,
@@ -474,12 +474,12 @@
         "home_team": "North Carolina",
         "away_team": "NC State",
         "market_spread": 1.5,
-        "predicted_margin": -2.74,
-        "pick": "North Carolina",
-        "pick_side": "home",
-        "edge_pts": 4.2,
-        "cover_prob": 0.5995,
-        "adjusted_ranking_score": 0.4611
+        "predicted_margin": 3.48,
+        "pick": "NC State",
+        "pick_side": "away",
+        "edge_pts": 2.0,
+        "cover_prob": 0.5468,
+        "adjusted_ranking_score": 0.4206
       }
     ],
     "15": [
