@@ -196,19 +196,23 @@ export function computeEfficiencyRange(
   trajectories: {
     teams: Record<string, Record<string, { adj_off_ppa: number; adj_def_value: number }[]>>;
   }
-): { min: number; max: number } {
-  let min = Infinity;
-  let max = -Infinity;
+): Record<string, { min: number; max: number }> {
+  const rangesByYear: Record<string, { min: number; max: number }> = {};
+
   for (const teamData of Object.values(trajectories.teams)) {
-    for (const yearData of Object.values(teamData)) {
+    for (const [year, yearData] of Object.entries(teamData)) {
+      if (!rangesByYear[year]) {
+        rangesByYear[year] = { min: Infinity, max: -Infinity };
+      }
       for (const entry of yearData) {
-        const eff = entry.adj_off_ppa + entry.adj_def_value;
-        if (eff < min) min = eff;
-        if (eff > max) max = eff;
+        const eff = entry.adj_off_ppa - entry.adj_def_value;
+        if (eff < rangesByYear[year].min) rangesByYear[year].min = eff;
+        if (eff > rangesByYear[year].max) rangesByYear[year].max = eff;
       }
     }
   }
-  return { min, max };
+
+  return rangesByYear;
 }
 
 export function normalizeGameMargins<

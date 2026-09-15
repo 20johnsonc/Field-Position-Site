@@ -73,7 +73,8 @@ async function buildTopPlaysForWeek(year: string, week: number, completedGames: 
 
   const { byGame, errors } = await loadWeekPbpDataServer(weekGames);
   if (errors.length > 0) {
-    console.warn(`[pbp-top-plays] ${year} wk${week}: ${errors.length} game(s) failed`, errors.map((e) => e.gameId));
+    //console.warn(`[pbp-top-plays] ${year} wk${week}: ${errors.length} game(s) failed`, errors.map((e) => e.gameId));
+    console.warn(`[pbp-top-plays] ${year} wk${week}: ${errors.length} game(s) failed`, errors.map((e) => `${e.gameId}: ${e.error instanceof Error ? e.error.message : e.error}`));
   }
 
   const output: Record<string, ReturnType<typeof toDisplayPlay>[]> = {};

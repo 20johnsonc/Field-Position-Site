@@ -6,26 +6,16 @@ const WRAPPER_ID = 'topPlaysWrapper';
 const TOGGLE_ID = 'topPlaysToggle';
 const LIMIT = 10;
 
-let playsByGame: Record<string, DisplayPlay[]> | null = null;
-
-// Parsed once and cached — the embedded JSON doesn't change after page
-// load, only which games are currently visible does.
 function loadPlaysData(): Record<string, DisplayPlay[]> {
-  if (playsByGame) return playsByGame;
-
   const scriptEl = document.getElementById(PLAYS_DATA_SCRIPT_ID);
-  if (!scriptEl?.textContent) {
-    playsByGame = {};
-    return playsByGame;
-  }
+  if (!scriptEl?.textContent) return {};
 
   try {
-    playsByGame = JSON.parse(scriptEl.textContent) as Record<string, DisplayPlay[]>;
+    return JSON.parse(scriptEl.textContent) as Record<string, DisplayPlay[]>;
   } catch (err) {
     console.error('Failed to parse embedded weekly play data', err);
-    playsByGame = {};
+    return {};
   }
-  return playsByGame;
 }
 
 function escapeHtml(text: string): string {

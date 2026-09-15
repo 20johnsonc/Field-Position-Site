@@ -50,6 +50,10 @@ function clampProb(raw: number | null | undefined): number | null {
   return Math.min(Math.max(pct, 0), 100);
 }
 
+function pickTeamNameClient(game: ClientGame, pick: 'home' | 'away'): string {
+  return pick === 'home' ? game.home_team : game.away_team;
+}
+
 // --- Mirrors MatchupRow.astro (completed games) ---
 export function renderMatchupRow(
   game: ClientGame,
@@ -69,12 +73,12 @@ export function renderMatchupRow(
     hasBacktest && backtest
       ? `<div class="detail-grid">
         <div class="detail-box"><span class="dl">Straight up</span>
-          <div>Pick: <strong>${pickTeamName(game as any, backtest.su_pick)}</strong> —
+          <div>Pick: <strong>${pickTeamNameClient(game, backtest.ats_pick)}</strong> —
           <span class="${suClass === 'win' ? 'txt-win' : 'txt-loss'}">${backtest.su_correct ? 'Correct' : 'Wrong'}</span></div>
         </div>
         <div class="detail-box"><span class="dl">Spread (ATS)</span>
           <div>MKT ${fmtSpread(backtest.market_spread)} / MODEL ${fmtSpread(backtest.predicted_margin)}</div>
-          <div>Actual ${fmtSpread(backtest.actual_margin)} — Pick: ${pickTeamName(game as any, backtest.ats_pick)}
+          <div>Actual ${fmtSpread(backtest.actual_margin)} — Pick: ${pickTeamNameClient(game, backtest.ats_pick)}
           (<span class="${atsClass === 'win' ? 'txt-win' : 'txt-loss'}">${backtest.ats_correct ? '✓' : '✗'}</span>)</div>
         </div>
       </div>`

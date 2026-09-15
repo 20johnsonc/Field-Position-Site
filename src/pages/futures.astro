@@ -16,10 +16,6 @@ const lastUpdate = generated_at
       month: 'short',
       day: 'numeric',
       year: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit',
-      timeZone: 'UTC',
-      timeZoneName: 'short'
     })
   : '—';
 
@@ -34,10 +30,10 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
   <div class="futures-container" data-simulation={n_simulations}>
     <!-- Main View Toggle -->
     <div class="view-toggle" id="mainViewToggle">
-      <button class="view-btn" data-target="cfp">
+      <button class="view-btn active" data-target="cfp">
         CFP Futures
       </button>
-      <button class="view-btn active" data-target="conf">
+      <button class="view-btn" data-target="conf">
         Conf. Futures
       </button>
     </div>

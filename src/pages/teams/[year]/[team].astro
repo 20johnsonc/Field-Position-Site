@@ -203,7 +203,8 @@ const upcomingGames = teamMatchups
   });
 
 const teamTrajectory = trajectories.teams?.[row.team]?.[String(row.year)] ?? [];
-const { min: effMin, max: effMax } = computeEfficiencyRange(trajectories);
+const efficiencyRanges = computeEfficiencyRange(trajectories);
+const { min: effMin, max: effMax } = efficiencyRanges[String(row.year)] ?? { min: -1, max: 1 };
 
 function formatPostseasonLabel(g: any) {
   if (g.bowl_name) return g.bowl_name;
@@ -215,7 +216,9 @@ function formatPostseasonLabel(g: any) {
   return null;
 }
 
-// 1. Determine the maximum week present in your team matchups or game history
+const weeksPresent = [...teamMatchups.map((g: any) => g.week), ...completedGames.map((g: any) => g.week)];
+const minWeek = weeksPresent.length ? Math.min(1, ...weeksPresent) : 1;
+
 const maxWeek = Math.max(
   1,
   ...teamMatchups.map((g: any) => g.week),
@@ -226,7 +229,7 @@ const completedMap = new Map(completedGames.map((g) => [g.week, g]));
 const upcomingMap = new Map(upcomingGames.map((g) => [g.week, g]));
 
 const fullSchedule = [];
-for (let w = 1; w <= maxWeek; w++) {
+for (let w = minWeek; w <= maxWeek; w++) {
   if (completedMap.has(w)) {
     fullSchedule.push(completedMap.get(w));
   } else if (upcomingMap.has(w)) {
