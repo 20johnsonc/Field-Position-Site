@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T14:49:53.494622+00:00",
+  "generated_at": "2026-09-15T21:10:45.314532+00:00",
   "year": 2021,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401287953,
-      "week": 14,
-      "year": 2021,
-      "status": "completed",
-      "home_team": "Oklahoma State",
-      "away_team": "Baylor",
-      "home_points": 16,
-      "away_points": 21,
-      "actual_margin": -5,
-      "actual_total": 37,
-      "start_date": "2021-12-04 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null
-    },
-    {
       "game_id": 401331160,
       "week": 14,
       "year": 2021,
@@ -71,6 +53,24 @@
       "start_date": "2021-12-04 17:00:00+00:00",
       "home_conference": "Mid-American",
       "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null
+    },
+    {
+      "game_id": 401287953,
+      "week": 14,
+      "year": 2021,
+      "status": "completed",
+      "home_team": "Oklahoma State",
+      "away_team": "Baylor",
+      "home_points": 16,
+      "away_points": 21,
+      "actual_margin": -5,
+      "actual_total": 37,
+      "start_date": "2021-12-04 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null

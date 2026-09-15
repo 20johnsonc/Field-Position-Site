@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T14:49:53.494622+00:00",
+  "generated_at": "2026-09-15T21:10:45.314532+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539481,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Toledo",
-      "away_team": "Miami (OH)",
-      "home_points": 14,
-      "away_points": 23,
-      "actual_margin": -9,
-      "actual_total": 37,
-      "start_date": "2023-12-02 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": "Mac Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539479,
       "week": 14,
       "year": 2023,
@@ -76,6 +58,24 @@
       "bowl_name": null
     },
     {
+      "game_id": 401539481,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Toledo",
+      "away_team": "Miami (OH)",
+      "home_points": 14,
+      "away_points": 23,
+      "actual_margin": -9,
+      "actual_total": 37,
+      "start_date": "2023-12-02 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
       "game_id": 401539482,
       "week": 14,
       "year": 2023,
@@ -91,24 +91,6 @@
       "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": "Mountain West Championship",
-      "bowl_name": null
-    },
-    {
-      "game_id": 401539483,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Alabama",
-      "away_team": "Georgia",
-      "home_points": 27,
-      "away_points": 24,
-      "actual_margin": 3,
-      "actual_total": 51,
-      "start_date": "2023-12-02 21:00:00+00:00",
-      "home_conference": "SEC",
-      "away_conference": "SEC",
-      "is_playoff": false,
-      "round_name": "Sec Championship",
       "bowl_name": null
     },
     {
@@ -145,6 +127,24 @@
       "away_conference": "American Athletic",
       "is_playoff": false,
       "round_name": "American Athletic Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539483,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Alabama",
+      "away_team": "Georgia",
+      "home_points": 27,
+      "away_points": 24,
+      "actual_margin": 3,
+      "actual_total": 51,
+      "start_date": "2023-12-02 21:00:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "SEC",
+      "is_playoff": false,
+      "round_name": "Sec Championship",
       "bowl_name": null
     },
     {
