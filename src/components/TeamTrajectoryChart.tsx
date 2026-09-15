@@ -51,16 +51,18 @@ interface Props {
   games: GameLogEntry[];
   yMin: number;
   yMax: number;
+  minWeek: number;
 }
 
-export default function TeamTrajectoryChart({ team, trajectory = [], games = [], yMin, yMax }: Props) {
+export default function TeamTrajectoryChart({ team, trajectory = [], games = [], yMin, yMax, minWeek }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
   const chartData = useMemo(() => {
     if (!trajectory.length) return null;
 
     const maxRegularWeek = Math.max(12, ...trajectory.map((w) => Number(w.week)));
-    const minWeek = Math.min(0, ...trajectory.map((w) => Number(w.week)), ...games.map((g) => Number(g.week)));
+
+    const chartXMin = minWeek;
 
     const sortedWeeks = [...trajectory].sort((a, b) => Number(a.week) - Number(b.week));
     let currentPostWeek = maxRegularWeek + 1;
@@ -134,7 +136,6 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
       12,
     ];
     
-    const chartXMin = minWeek;
     const chartXMax = Math.max(...allWeeks);
 
     const allValues: number[] = [
@@ -153,13 +154,13 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
     const chartYMax = dynamicMax + padding;
 
     return { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax, chartXMin, chartXMax };
-  }, [trajectory, games, yMin, yMax]);
+  }, [trajectory, games, yMin, yMax, minWeek]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas || !chartData) return;
 
-    const { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax } = chartData;
+    const { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax, chartXMin } = chartData;
 
     chartRef.current = new Chart(canvas, {
       type: 'line',
@@ -202,6 +203,7 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
             borderColor: gameBubbles.map((b) => (b.game.result === 'W' ? '#15803d' : '#b91c1c')),
             borderWidth: 2,
             order: 1,
+            clip: false,
           },
         ],
       },
@@ -261,6 +263,7 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
           },
           x: {
             type: 'linear',
+            min: chartXMin,
             grid: { color: '#374151' },
             ticks: {
               color: '#9ca3af',

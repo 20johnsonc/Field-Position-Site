@@ -129,7 +129,6 @@ function buildSeasonRecords(years: string[]) {
 async function main() {
   const years = listYears();
   const index = buildMatchupsIndex(years);
-  console.log('matchups-index.json →', index);
 
   for (const year of years) {
     for (const week of listWeeks(year)) {

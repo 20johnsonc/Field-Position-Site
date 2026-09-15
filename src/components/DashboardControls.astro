@@ -26,7 +26,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     <select id="rankingsYearFilter" aria-label="Filter rankings by year">
       {
         filters.rankingYears.map((year) => (
-          <option value={year} selected={String(year) === default_year}>{year}</option>
+          <option value={year} selected={year === default_year}>{year}</option>
         ))
       }
     </select>
@@ -56,7 +56,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     <select id="matchupYearFilter" aria-label="Filter matchups by year">
       {
         filters.matchupYears.map((year) => (
-          <option value={year} selected={String(year) === default_year}>{year}</option>
+          <option value={year} selected={year === default_year}>{year}</option>
         ))
       }
     </select>
@@ -74,7 +74,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     <select id="weekFilter" aria-label="Filter matchups by week">
       {
         filters.matchupWeeks.map((week) => (
-          <option value={week} selected={String(week) === default_week}>
+          <option value={week} selected={week === default_week}>
             Week {week}
           </option>
         ))
