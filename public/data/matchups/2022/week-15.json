@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T21:10:45.314532+00:00",
+  "generated_at": "2026-09-16T18:02:10.506475+00:00",
   "year": 2022,
   "week": 15,
   "games": [
@@ -202,24 +202,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401442012,
-      "week": 15,
-      "year": 2022,
-      "status": "completed",
-      "home_team": "Purdue",
-      "away_team": "LSU",
-      "home_points": 7,
-      "away_points": 63,
-      "actual_margin": -56,
-      "actual_total": 70,
-      "start_date": "2023-01-02 18:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "SEC",
-      "is_playoff": true,
-      "round_name": "Cheez-It Citrus Bowl",
-      "bowl_name": "Cheez-It Citrus Bowl"
-    },
-    {
       "game_id": 401442013,
       "week": 15,
       "year": 2022,
@@ -236,6 +218,24 @@
       "is_playoff": true,
       "round_name": "Goodyear Cotton Bowl Classic",
       "bowl_name": "Goodyear Cotton Bowl Classic"
+    },
+    {
+      "game_id": 401442012,
+      "week": 15,
+      "year": 2022,
+      "status": "completed",
+      "home_team": "Purdue",
+      "away_team": "LSU",
+      "home_points": 7,
+      "away_points": 63,
+      "actual_margin": -56,
+      "actual_total": 70,
+      "start_date": "2023-01-02 18:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "SEC",
+      "is_playoff": true,
+      "round_name": "Cheez-It Citrus Bowl",
+      "bowl_name": "Cheez-It Citrus Bowl"
     },
     {
       "game_id": 401442014,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T21:10:45.314532+00:00",
+  "generated_at": "2026-09-16T18:02:10.506475+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -148,24 +148,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539480,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Iowa",
-      "away_team": "Michigan",
-      "home_points": 0,
-      "away_points": 26,
-      "actual_margin": -26,
-      "actual_total": 26,
-      "start_date": "2023-12-03 01:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
-      "is_playoff": false,
-      "round_name": "Big Ten Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539478,
       "week": 14,
       "year": 2023,
@@ -181,6 +163,24 @@
       "away_conference": "ACC",
       "is_playoff": false,
       "round_name": "Acc Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539480,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Iowa",
+      "away_team": "Michigan",
+      "home_points": 0,
+      "away_points": 26,
+      "actual_margin": -26,
+      "actual_total": 26,
+      "start_date": "2023-12-03 01:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": "Big Ten Championship",
       "bowl_name": null
     },
     {
@@ -364,24 +364,6 @@
       "bowl_name": "Camellia Bowl"
     },
     {
-      "game_id": 401551742,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Air Force",
-      "away_team": "James Madison",
-      "home_points": 31,
-      "away_points": 21,
-      "actual_margin": 10,
-      "actual_total": 52,
-      "start_date": "2023-12-23 20:30:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "Sun Belt",
-      "is_playoff": true,
-      "round_name": "Lockheed Martin Armed Forces Bowl",
-      "bowl_name": "Lockheed Martin Armed Forces Bowl"
-    },
-    {
       "game_id": 401551743,
       "week": 14,
       "year": 2023,
@@ -398,6 +380,24 @@
       "is_playoff": true,
       "round_name": "Famous Idaho Potato Bowl",
       "bowl_name": "Famous Idaho Potato Bowl"
+    },
+    {
+      "game_id": 401551742,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Air Force",
+      "away_team": "James Madison",
+      "home_points": 31,
+      "away_points": 21,
+      "actual_margin": 10,
+      "actual_total": 52,
+      "start_date": "2023-12-23 20:30:00+00:00",
+      "home_conference": "Mountain West",
+      "away_conference": "Sun Belt",
+      "is_playoff": true,
+      "round_name": "Lockheed Martin Armed Forces Bowl",
+      "bowl_name": "Lockheed Martin Armed Forces Bowl"
     },
     {
       "game_id": 401551755,
