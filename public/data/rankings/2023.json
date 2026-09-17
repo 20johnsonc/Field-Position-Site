@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T21:58:30.456180+00:00",
+  "generated_at": "2026-09-17T22:38:26.059181+00:00",
   "year": 2023,
   "rankings": [
     {
@@ -7,20 +7,20 @@
       "Team": "Oregon",
       "Conference": "Pac-12",
       "Record": "12-2",
-      "Net Rating": 37.1,
+      "Net Rating": 36.9,
       "Year": 2023,
       "tags": [
         "Bully-Ball Ground Attack",
         "Elite Disruptive Defense",
         "Playoff Contender (Blue-Blood)"
       ],
-      "sos": 96,
+      "sos": 95,
       "sor": 10,
       "Actual Wins": null,
       "Games Played": null,
       "record": "12-2",
       "conference_record": "8-2",
-      "sos_rank": 48,
+      "sos_rank": 47,
       "sor_rank": 10
     },
     {
@@ -28,28 +28,28 @@
       "Team": "Georgia",
       "Conference": "SEC",
       "Record": "13-1",
-      "Net Rating": 34.3,
+      "Net Rating": 34.2,
       "Year": 2023,
       "tags": [
         "Explosive Offense",
         "Elite Disruptive Defense",
         "Playoff Contender (Blue-Blood)"
       ],
-      "sos": 72,
-      "sor": 4,
+      "sos": 73,
+      "sor": 5,
       "Actual Wins": null,
       "Games Played": null,
       "record": "13-1",
       "conference_record": "8-1",
-      "sos_rank": 26,
-      "sor_rank": 4
+      "sos_rank": 27,
+      "sor_rank": 5
     },
     {
       "Rank": 3,
       "Team": "LSU",
       "Conference": "SEC",
       "Record": "10-3",
-      "Net Rating": 33.7,
+      "Net Rating": 33.4,
       "Year": 2023,
       "tags": [
         "Explosive Offense",
@@ -62,7 +62,7 @@
       "Games Played": null,
       "record": "10-3",
       "conference_record": "6-2",
-      "sos_rank": 39,
+      "sos_rank": 40,
       "sor_rank": 12
     },
     {
@@ -70,20 +70,20 @@
       "Team": "Ohio State",
       "Conference": "Big Ten",
       "Record": "11-2",
-      "Net Rating": 32.7,
+      "Net Rating": 32.3,
       "Year": 2023,
       "tags": [
         "Bully-Ball Ground Attack",
         "Elite Defense",
         "Playoff Contender (Blue-Blood)"
       ],
-      "sos": 56,
+      "sos": 55,
       "sor": 9,
       "Actual Wins": null,
       "Games Played": null,
       "record": "11-2",
       "conference_record": "8-1",
-      "sos_rank": 13,
+      "sos_rank": 14,
       "sor_rank": 9
     },
     {
@@ -91,14 +91,14 @@
       "Team": "Michigan",
       "Conference": "Big Ten",
       "Record": "15-0",
-      "Net Rating": 32.6,
+      "Net Rating": 32.2,
       "Year": 2023,
       "tags": [
         "Controlled Pace Explosive Offense",
         "Elite Disruptive Defense",
         "Playoff Contender"
       ],
-      "sos": 65,
+      "sos": 66,
       "sor": 2,
       "Actual Wins": null,
       "Games Played": null,
@@ -112,14 +112,14 @@
       "Team": "Alabama",
       "Conference": "SEC",
       "Record": "12-2",
-      "Net Rating": 31.1,
+      "Net Rating": 30.7,
       "Year": 2023,
       "tags": [
         "High-Powered Air Assault",
         "Elite Disruptive Defense",
         "Playoff Contender (Blue-Blood)"
       ],
-      "sos": 35,
+      "sos": 34,
       "sor": 3,
       "Actual Wins": null,
       "Games Played": null,
@@ -133,7 +133,7 @@
       "Team": "Notre Dame",
       "Conference": "FBS Independents",
       "Record": "10-3",
-      "Net Rating": 29.7,
+      "Net Rating": 29.5,
       "Year": 2023,
       "tags": [
         "Explosive Offense",
@@ -141,7 +141,7 @@
         "Playoff Contender (Blue-Blood)"
       ],
       "sos": 107,
-      "sor": 23,
+      "sor": 22,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
@@ -154,20 +154,20 @@
       "Team": "Penn State",
       "Conference": "Big Ten",
       "Record": "10-3",
-      "Net Rating": 27.5,
+      "Net Rating": 27.2,
       "Year": 2023,
       "tags": [
         "Controlled Pace Methodical Chain-Mover",
         "Elite Disruptive Defense",
         "Playoff Contender"
       ],
-      "sos": 108,
+      "sos": 106,
       "sor": 35,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
       "conference_record": "7-2",
-      "sos_rank": 59,
+      "sos_rank": 57,
       "sor_rank": 15
     },
     {
@@ -175,7 +175,7 @@
       "Team": "Washington",
       "Conference": "Pac-12",
       "Record": "14-1",
-      "Net Rating": 27.1,
+      "Net Rating": 26.7,
       "Year": 2023,
       "tags": [
         "High-Powered Ground Attack",
@@ -196,20 +196,20 @@
       "Team": "Kansas State",
       "Conference": "Big 12",
       "Record": "9-4",
-      "Net Rating": 26.4,
+      "Net Rating": 26.0,
       "Year": 2023,
       "tags": [
         "High-Powered Ground Attack",
         "Elite Disruptive Defense",
         "Playoff Contender"
       ],
-      "sos": 83,
-      "sor": 110,
+      "sos": 84,
+      "sor": 109,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "6-3",
-      "sos_rank": 36,
+      "sos_rank": 37,
       "sor_rank": 27
     },
     {
@@ -217,20 +217,20 @@
       "Team": "Texas",
       "Conference": "Big 12",
       "Record": "12-2",
-      "Net Rating": 26.2,
+      "Net Rating": 25.8,
       "Year": 2023,
       "tags": [
         "High-Powered Air Assault",
         "Elite Defense",
         "Playoff Contender (Blue-Blood)"
       ],
-      "sos": 41,
+      "sos": 43,
       "sor": 8,
       "Actual Wins": null,
       "Games Played": null,
       "record": "12-2",
       "conference_record": "9-1",
-      "sos_rank": 5,
+      "sos_rank": 6,
       "sor_rank": 8
     },
     {
@@ -238,7 +238,7 @@
       "Team": "Oklahoma",
       "Conference": "Big 12",
       "Record": "10-3",
-      "Net Rating": 26.1,
+      "Net Rating": 25.5,
       "Year": 2023,
       "tags": [
         "Uptempo High-Powered Air Assault",
@@ -246,7 +246,7 @@
         "Blue-Blood Talent"
       ],
       "sos": 59,
-      "sor": 55,
+      "sor": 52,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
@@ -259,41 +259,41 @@
       "Team": "USC",
       "Conference": "Pac-12",
       "Record": "8-5",
-      "Net Rating": 23.9,
+      "Net Rating": 23.6,
       "Year": 2023,
       "tags": [
         "High-Powered Ground Attack",
         "Sound Defense",
         "Blue-Blood Talent"
       ],
-      "sos": 47,
-      "sor": 127,
+      "sos": 45,
+      "sor": 124,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "5-4",
-      "sos_rank": 8,
-      "sor_rank": 32
+      "sos_rank": 7,
+      "sor_rank": 31
     },
     {
       "Rank": 14,
       "Team": "Tennessee",
       "Conference": "SEC",
       "Record": "9-4",
-      "Net Rating": 23.1,
+      "Net Rating": 22.9,
       "Year": 2023,
       "tags": [
         "Uptempo Bully-Ball Ground Attack",
         "Stout & Disruptive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 105,
+      "sos": 108,
       "sor": 95,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "4-4",
-      "sos_rank": 56,
+      "sos_rank": 59,
       "sor_rank": 19
     },
     {
@@ -301,15 +301,15 @@
       "Team": "Oregon State",
       "Conference": "Pac-12",
       "Record": "8-5",
-      "Net Rating": 22.6,
+      "Net Rating": 22.4,
       "Year": 2023,
       "tags": [
         "High-Powered Air Assault",
         "Stout Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 63,
-      "sor": 115,
+      "sos": 62,
+      "sor": 114,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
@@ -322,20 +322,20 @@
       "Team": "Texas A&M",
       "Conference": "SEC",
       "Record": "7-6",
-      "Net Rating": 22.4,
+      "Net Rating": 22.1,
       "Year": 2023,
       "tags": [
         "High-Powered Ground Attack",
         "Elite Defense",
         "Blue-Blood Talent"
       ],
-      "sos": 74,
+      "sos": 72,
       "sor": 137,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-4",
-      "sos_rank": 28,
+      "sos_rank": 26,
       "sor_rank": 41
     },
     {
@@ -356,7 +356,7 @@
       "Games Played": null,
       "record": "10-4",
       "conference_record": "7-2",
-      "sos_rank": 41,
+      "sos_rank": 42,
       "sor_rank": 23
     },
     {
@@ -364,20 +364,20 @@
       "Team": "Florida State",
       "Conference": "ACC",
       "Record": "13-1",
-      "Net Rating": 21.7,
+      "Net Rating": 21.1,
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
         "Stout Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 90,
+      "sos": 88,
       "sor": 6,
       "Actual Wins": null,
       "Games Played": null,
       "record": "13-1",
       "conference_record": "9-0",
-      "sos_rank": 42,
+      "sos_rank": 41,
       "sor_rank": 6
     },
     {
@@ -385,7 +385,7 @@
       "Team": "SMU",
       "Conference": "American Athletic",
       "Record": "11-3",
-      "Net Rating": 21.0,
+      "Net Rating": 20.5,
       "Year": 2023,
       "tags": [
         "Uptempo High-Powered Offense",
@@ -398,7 +398,7 @@
       "Games Played": null,
       "record": "11-3",
       "conference_record": "9-0",
-      "sos_rank": 103,
+      "sos_rank": 102,
       "sor_rank": 22
     },
     {
@@ -406,7 +406,7 @@
       "Team": "Clemson",
       "Conference": "ACC",
       "Record": "9-4",
-      "Net Rating": 20.7,
+      "Net Rating": 20.3,
       "Year": 2023,
       "tags": [
         "Methodical Chain-Mover",
@@ -424,59 +424,59 @@
     },
     {
       "Rank": 21,
+      "Team": "TCU",
+      "Conference": "Big 12",
+      "Record": "5-7",
+      "Net Rating": 20.2,
+      "Year": 2023,
+      "tags": [
+        "Uptempo High-Powered Air Assault",
+        "Stout Secondary Lockdown",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 85,
+      "sor": 167,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "5-7",
+      "conference_record": "3-6",
+      "sos_rank": 38,
+      "sor_rank": 71
+    },
+    {
+      "Rank": 22,
       "Team": "North Carolina",
       "Conference": "ACC",
       "Record": "8-5",
-      "Net Rating": 20.3,
+      "Net Rating": 20.0,
       "Year": 2023,
       "tags": [
         "Uptempo Explosive Offense",
         "Disruptive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 117,
+      "sos": 116,
       "sor": 149,
       "Actual Wins": null,
       "Games Played": null,
       "record": "8-5",
       "conference_record": "4-4",
-      "sos_rank": 65,
+      "sos_rank": 64,
       "sor_rank": 53
-    },
-    {
-      "Rank": 22,
-      "Team": "Ole Miss",
-      "Conference": "SEC",
-      "Record": "11-2",
-      "Net Rating": 20.1,
-      "Year": 2023,
-      "tags": [
-        "Controlled Pace High-Powered Ground Attack",
-        "Stout Secondary Lockdown",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 55,
-      "sor": 5,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-2",
-      "conference_record": "6-2",
-      "sos_rank": 12,
-      "sor_rank": 5
     },
     {
       "Rank": 23,
       "Team": "Missouri",
       "Conference": "SEC",
       "Record": "11-2",
-      "Net Rating": 20.1,
+      "Net Rating": 19.9,
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 36,
+      "sos": 38,
       "sor": 7,
       "Actual Wins": null,
       "Games Played": null,
@@ -487,27 +487,6 @@
     },
     {
       "Rank": 24,
-      "Team": "TCU",
-      "Conference": "Big 12",
-      "Record": "5-7",
-      "Net Rating": 20.0,
-      "Year": 2023,
-      "tags": [
-        "Uptempo High-Powered Air Assault",
-        "Stout Secondary Lockdown",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 82,
-      "sor": 167,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "5-7",
-      "conference_record": "3-6",
-      "sos_rank": 35,
-      "sor_rank": 71
-    },
-    {
-      "Rank": 25,
       "Team": "Arizona",
       "Conference": "Pac-12",
       "Record": "10-3",
@@ -518,14 +497,35 @@
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 92,
+      "sos": 93,
       "sor": 29,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
       "conference_record": "7-2",
-      "sos_rank": 44,
+      "sos_rank": 45,
       "sor_rank": 14
+    },
+    {
+      "Rank": 25,
+      "Team": "Ole Miss",
+      "Conference": "SEC",
+      "Record": "11-2",
+      "Net Rating": 19.8,
+      "Year": 2023,
+      "tags": [
+        "Controlled Pace High-Powered Ground Attack",
+        "Stout Secondary Lockdown",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 53,
+      "sor": 4,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-2",
+      "conference_record": "6-2",
+      "sos_rank": 12,
+      "sor_rank": 4
     },
     {
       "Rank": 26,
@@ -539,28 +539,28 @@
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 101,
-      "sor": 168,
+      "sos": 102,
+      "sor": 171,
       "Actual Wins": null,
       "Games Played": null,
       "record": "6-7",
       "conference_record": "3-6",
       "sos_rank": 53,
-      "sor_rank": 72
+      "sor_rank": 75
     },
     {
       "Rank": 27,
       "Team": "Liberty",
       "Conference": "Conference USA",
       "Record": "13-1",
-      "Net Rating": 18.2,
+      "Net Rating": 18.0,
       "Year": 2023,
       "tags": [
         "Explosive Offense",
         "Disruptive Defense",
         "Underdog Roster"
       ],
-      "sos": 186,
+      "sos": 185,
       "sor": 11,
       "Actual Wins": null,
       "Games Played": null,
@@ -571,31 +571,10 @@
     },
     {
       "Rank": 28,
-      "Team": "Kansas",
-      "Conference": "Big 12",
-      "Record": "9-4",
-      "Net Rating": 17.2,
-      "Year": 2023,
-      "tags": [
-        "Bully-Ball Ground Attack",
-        "Sound Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 81,
-      "sor": 111,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "5-4",
-      "sos_rank": 34,
-      "sor_rank": 28
-    },
-    {
-      "Rank": 29,
       "Team": "UCLA",
       "Conference": "Pac-12",
       "Record": "8-5",
-      "Net Rating": 17.2,
+      "Net Rating": 17.1,
       "Year": 2023,
       "tags": [
         "Uptempo Balanced Spread",
@@ -612,18 +591,39 @@
       "sor_rank": 40
     },
     {
+      "Rank": 29,
+      "Team": "Kansas",
+      "Conference": "Big 12",
+      "Record": "9-4",
+      "Net Rating": 16.9,
+      "Year": 2023,
+      "tags": [
+        "Bully-Ball Ground Attack",
+        "Sound Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 83,
+      "sor": 113,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "5-4",
+      "sos_rank": 36,
+      "sor_rank": 28
+    },
+    {
       "Rank": 30,
       "Team": "Boise State",
       "Conference": "Mountain West",
       "Record": "8-6",
-      "Net Rating": 16.6,
+      "Net Rating": 16.4,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 120,
+      "sos": 121,
       "sor": 164,
       "Actual Wins": null,
       "Games Played": null,
@@ -644,7 +644,7 @@
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 103,
+      "sos": 104,
       "sor": 134,
       "Actual Wins": null,
       "Games Played": null,
@@ -658,7 +658,7 @@
       "Team": "Miami",
       "Conference": "ACC",
       "Record": "7-6",
-      "Net Rating": 16.2,
+      "Net Rating": 16.0,
       "Year": 2023,
       "tags": [
         "High-Powered Ground Attack",
@@ -676,52 +676,10 @@
     },
     {
       "Rank": 33,
-      "Team": "Florida",
-      "Conference": "SEC",
-      "Record": "5-7",
-      "Net Rating": 15.7,
-      "Year": 2023,
-      "tags": [
-        "High-Powered Ground Attack",
-        "Sound Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 58,
-      "sor": 153,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "5-7",
-      "conference_record": "3-5",
-      "sos_rank": 15,
-      "sor_rank": 57
-    },
-    {
-      "Rank": 34,
-      "Team": "Texas Tech",
-      "Conference": "Big 12",
-      "Record": "7-6",
-      "Net Rating": 14.9,
-      "Year": 2023,
-      "tags": [
-        "Uptempo Bully-Ball Ground Attack",
-        "Stout Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 49,
-      "sor": 141,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "5-4",
-      "sos_rank": 10,
-      "sor_rank": 45
-    },
-    {
-      "Rank": 35,
       "Team": "South Alabama",
       "Conference": "Sun Belt",
       "Record": "7-6",
-      "Net Rating": 14.9,
+      "Net Rating": 15.2,
       "Year": 2023,
       "tags": [
         "High-Powered Offense",
@@ -738,32 +696,53 @@
       "sor_rank": 82
     },
     {
-      "Rank": 36,
-      "Team": "Utah",
-      "Conference": "Pac-12",
-      "Record": "8-5",
-      "Net Rating": 14.7,
+      "Rank": 34,
+      "Team": "Florida",
+      "Conference": "SEC",
+      "Record": "5-7",
+      "Net Rating": 15.1,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
-        "Elite Defense",
+        "High-Powered Ground Attack",
+        "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 54,
-      "sor": 106,
+      "sos": 58,
+      "sor": 155,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "8-5",
-      "conference_record": "5-4",
-      "sos_rank": 11,
-      "sor_rank": 26
+      "record": "5-7",
+      "conference_record": "3-5",
+      "sos_rank": 15,
+      "sor_rank": 59
     },
     {
-      "Rank": 37,
+      "Rank": 35,
+      "Team": "Texas Tech",
+      "Conference": "Big 12",
+      "Record": "7-6",
+      "Net Rating": 14.8,
+      "Year": 2023,
+      "tags": [
+        "Uptempo Bully-Ball Ground Attack",
+        "Stout Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 48,
+      "sor": 141,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "5-4",
+      "sos_rank": 10,
+      "sor_rank": 45
+    },
+    {
+      "Rank": 36,
       "Team": "West Virginia",
       "Conference": "Big 12",
       "Record": "9-4",
-      "Net Rating": 14.4,
+      "Net Rating": 14.3,
       "Year": 2023,
       "tags": [
         "Controlled Pace High-Powered Offense",
@@ -780,18 +759,39 @@
       "sor_rank": 20
     },
     {
+      "Rank": 37,
+      "Team": "Utah",
+      "Conference": "Pac-12",
+      "Record": "8-5",
+      "Net Rating": 14.2,
+      "Year": 2023,
+      "tags": [
+        "Balanced Spread",
+        "Elite Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 52,
+      "sor": 106,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "8-5",
+      "conference_record": "5-4",
+      "sos_rank": 11,
+      "sor_rank": 26
+    },
+    {
       "Rank": 38,
       "Team": "NC State",
       "Conference": "ACC",
       "Record": "9-4",
-      "Net Rating": 14.4,
+      "Net Rating": 14.1,
       "Year": 2023,
       "tags": [
         "Controlled Pace Balanced Spread",
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 98,
+      "sos": 99,
       "sor": 103,
       "Actual Wins": null,
       "Games Played": null,
@@ -802,101 +802,101 @@
     },
     {
       "Rank": 39,
-      "Team": "Maryland",
-      "Conference": "Big Ten",
-      "Record": "8-5",
-      "Net Rating": 14.1,
-      "Year": 2023,
-      "tags": [
-        "High-Powered Offense",
-        "Stout Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 106,
-      "sor": 132,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "8-5",
-      "conference_record": "4-5",
-      "sos_rank": 57,
-      "sor_rank": 36
-    },
-    {
-      "Rank": 40,
-      "Team": "App State",
-      "Conference": "Sun Belt",
-      "Record": "9-5",
-      "Net Rating": 14.1,
-      "Year": 2023,
-      "tags": [
-        "High-Powered Offense",
-        "Sound Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 189,
-      "sor": 158,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-5",
-      "conference_record": "6-3",
-      "sos_rank": 112,
-      "sor_rank": 62
-    },
-    {
-      "Rank": 41,
       "Team": "Wisconsin",
       "Conference": "Big Ten",
       "Record": "7-6",
-      "Net Rating": 14.0,
+      "Net Rating": 13.8,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 95,
+      "sos": 96,
       "sor": 152,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-4",
-      "sos_rank": 47,
+      "sos_rank": 48,
       "sor_rank": 56
+    },
+    {
+      "Rank": 40,
+      "Team": "Maryland",
+      "Conference": "Big Ten",
+      "Record": "8-5",
+      "Net Rating": 13.7,
+      "Year": 2023,
+      "tags": [
+        "High-Powered Offense",
+        "Stout Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 105,
+      "sor": 132,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "8-5",
+      "conference_record": "4-5",
+      "sos_rank": 56,
+      "sor_rank": 36
+    },
+    {
+      "Rank": 41,
+      "Team": "App State",
+      "Conference": "Sun Belt",
+      "Record": "9-5",
+      "Net Rating": 13.6,
+      "Year": 2023,
+      "tags": [
+        "High-Powered Offense",
+        "Sound Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 190,
+      "sor": 158,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-5",
+      "conference_record": "6-3",
+      "sos_rank": 113,
+      "sor_rank": 62
     },
     {
       "Rank": 42,
       "Team": "Memphis",
       "Conference": "American Athletic",
       "Record": "10-3",
-      "Net Rating": 13.6,
+      "Net Rating": 13.5,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 165,
-      "sor": 122,
+      "sos": 167,
+      "sor": 126,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-3",
       "conference_record": "6-2",
-      "sos_rank": 92,
-      "sor_rank": 31
+      "sos_rank": 94,
+      "sor_rank": 32
     },
     {
       "Rank": 43,
       "Team": "South Carolina",
       "Conference": "SEC",
       "Record": "5-7",
-      "Net Rating": 13.6,
+      "Net Rating": 13.3,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 66,
+      "sos": 67,
       "sor": 154,
       "Actual Wins": null,
       "Games Played": null,
@@ -910,20 +910,20 @@
       "Team": "Auburn",
       "Conference": "SEC",
       "Record": "6-7",
-      "Net Rating": 13.1,
+      "Net Rating": 12.7,
       "Year": 2023,
       "tags": [
         "Run-First Offense",
         "Stout Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 57,
+      "sos": 54,
       "sor": 150,
       "Actual Wins": null,
       "Games Played": null,
       "record": "6-7",
       "conference_record": "3-5",
-      "sos_rank": 14,
+      "sos_rank": 13,
       "sor_rank": 54
     },
     {
@@ -931,7 +931,7 @@
       "Team": "Toledo",
       "Conference": "Mid-American",
       "Record": "11-3",
-      "Net Rating": 12.8,
+      "Net Rating": 12.6,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
@@ -949,38 +949,17 @@
     },
     {
       "Rank": 46,
-      "Team": "Tulane",
-      "Conference": "American Athletic",
-      "Record": "11-3",
-      "Net Rating": 12.8,
-      "Year": 2023,
-      "tags": [
-        "Run-First Offense",
-        "Sound Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 154,
-      "sor": 129,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-3",
-      "conference_record": "8-1",
-      "sos_rank": 82,
-      "sor_rank": 33
-    },
-    {
-      "Rank": 47,
       "Team": "Arkansas",
       "Conference": "SEC",
       "Record": "4-8",
-      "Net Rating": 12.5,
+      "Net Rating": 12.6,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 100,
+      "sos": 101,
       "sor": 175,
       "Actual Wins": null,
       "Games Played": null,
@@ -990,18 +969,39 @@
       "sor_rank": 79
     },
     {
+      "Rank": 47,
+      "Team": "Tulane",
+      "Conference": "American Athletic",
+      "Record": "11-3",
+      "Net Rating": 12.6,
+      "Year": 2023,
+      "tags": [
+        "Run-First Offense",
+        "Sound Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 153,
+      "sor": 129,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-3",
+      "conference_record": "8-1",
+      "sos_rank": 82,
+      "sor_rank": 33
+    },
+    {
       "Rank": 48,
       "Team": "San Jos\u00e9 State",
       "Conference": "Mountain West",
       "Record": "7-6",
-      "Net Rating": 12.5,
+      "Net Rating": 12.3,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 134,
+      "sos": 133,
       "sor": 166,
       "Actual Wins": null,
       "Games Played": null,
@@ -1012,38 +1012,17 @@
     },
     {
       "Rank": 49,
-      "Team": "Oklahoma State",
-      "Conference": "Big 12",
-      "Record": "10-4",
-      "Net Rating": 12.1,
-      "Year": 2023,
-      "tags": [
-        "Uptempo Run-First Offense",
-        "Stout Secondary Lockdown",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 48,
-      "sor": 93,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "10-4",
-      "conference_record": "7-3",
-      "sos_rank": 9,
-      "sor_rank": 17
-    },
-    {
-      "Rank": 50,
       "Team": "Air Force",
       "Conference": "Mountain West",
       "Record": "9-4",
-      "Net Rating": 12.0,
+      "Net Rating": 12.3,
       "Year": 2023,
       "tags": [
         "Controlled Pace Methodical Chain-Mover",
         "Disruptive Defense",
         "Underdog Roster"
       ],
-      "sos": 209,
+      "sos": 211,
       "sor": 145,
       "Actual Wins": null,
       "Games Played": null,
@@ -1053,95 +1032,95 @@
       "sor_rank": 49
     },
     {
-      "Rank": 51,
+      "Rank": 50,
       "Team": "Georgia Tech",
       "Conference": "ACC",
       "Record": "7-6",
-      "Net Rating": 12.0,
+      "Net Rating": 11.9,
       "Year": 2023,
       "tags": [
         "Controlled Pace Bully-Ball Ground Attack",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 86,
-      "sor": 143,
+      "sos": 81,
+      "sor": 142,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
-      "sos_rank": 38,
-      "sor_rank": 47
+      "sos_rank": 34,
+      "sor_rank": 46
     },
     {
-      "Rank": 52,
-      "Team": "Kentucky",
-      "Conference": "SEC",
-      "Record": "7-6",
-      "Net Rating": 11.8,
-      "Year": 2023,
-      "tags": [
-        "Run-First Offense",
-        "Sound Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 75,
-      "sor": 138,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "3-5",
-      "sos_rank": 29,
-      "sor_rank": 42
-    },
-    {
-      "Rank": 53,
-      "Team": "Iowa State",
+      "Rank": 51,
+      "Team": "Oklahoma State",
       "Conference": "Big 12",
-      "Record": "7-6",
-      "Net Rating": 11.8,
+      "Record": "10-4",
+      "Net Rating": 11.7,
       "Year": 2023,
       "tags": [
-        "Volatile Big-Play Offense",
+        "Uptempo Run-First Offense",
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 70,
-      "sor": 148,
+      "sos": 47,
+      "sor": 94,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "7-6",
-      "conference_record": "6-3",
-      "sos_rank": 24,
-      "sor_rank": 52
+      "record": "10-4",
+      "conference_record": "7-3",
+      "sos_rank": 9,
+      "sor_rank": 18
     },
     {
-      "Rank": 54,
+      "Rank": 52,
+      "Team": "Coastal Carolina",
+      "Conference": "Sun Belt",
+      "Record": "8-5",
+      "Net Rating": 11.6,
+      "Year": 2023,
+      "tags": [
+        "Efficient Offense",
+        "Disruptive Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 171,
+      "sor": 159,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "8-5",
+      "conference_record": "5-3",
+      "sos_rank": 97,
+      "sor_rank": 63
+    },
+    {
+      "Rank": 53,
       "Team": "Purdue",
       "Conference": "Big Ten",
       "Record": "4-8",
-      "Net Rating": 11.6,
+      "Net Rating": 11.4,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 73,
-      "sor": 188,
+      "sos": 74,
+      "sor": 189,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-6",
-      "sos_rank": 27,
-      "sor_rank": 92
+      "sos_rank": 28,
+      "sor_rank": 93
     },
     {
-      "Rank": 55,
+      "Rank": 54,
       "Team": "Virginia Tech",
       "Conference": "ACC",
       "Record": "7-6",
-      "Net Rating": 11.6,
+      "Net Rating": 11.4,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
@@ -1158,102 +1137,60 @@
       "sor_rank": 69
     },
     {
-      "Rank": 56,
-      "Team": "Coastal Carolina",
-      "Conference": "Sun Belt",
-      "Record": "8-5",
-      "Net Rating": 11.5,
-      "Year": 2023,
-      "tags": [
-        "Efficient Offense",
-        "Disruptive Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 170,
-      "sor": 159,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "8-5",
-      "conference_record": "5-3",
-      "sos_rank": 96,
-      "sor_rank": 63
-    },
-    {
-      "Rank": 57,
-      "Team": "Troy",
-      "Conference": "Sun Belt",
-      "Record": "11-3",
-      "Net Rating": 11.1,
-      "Year": 2023,
-      "tags": [
-        "Run-Heavy Offense",
-        "Elite Defense",
-        "Developmental Roster"
-      ],
-      "sos": 144,
-      "sor": 105,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-3",
-      "conference_record": "8-1",
-      "sos_rank": 78,
-      "sor_rank": 25
-    },
-    {
-      "Rank": 58,
-      "Team": "UTSA",
-      "Conference": "American Athletic",
-      "Record": "9-4",
-      "Net Rating": 11.1,
-      "Year": 2023,
-      "tags": [
-        "Uptempo Balanced Spread",
-        "Disruptive Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 162,
-      "sor": 139,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "7-1",
-      "sos_rank": 89,
-      "sor_rank": 43
-    },
-    {
-      "Rank": 59,
-      "Team": "James Madison",
-      "Conference": "Sun Belt",
-      "Record": "11-2",
-      "Net Rating": 11.0,
-      "Year": 2023,
-      "tags": [
-        "Efficient Offense",
-        "Stout Defense",
-        "Underdog Roster"
-      ],
-      "sos": 167,
-      "sor": 94,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-2",
-      "conference_record": "7-1",
-      "sos_rank": 93,
-      "sor_rank": 18
-    },
-    {
-      "Rank": 60,
-      "Team": "Illinois",
-      "Conference": "Big Ten",
-      "Record": "5-7",
-      "Net Rating": 11.0,
+      "Rank": 55,
+      "Team": "Kentucky",
+      "Conference": "SEC",
+      "Record": "7-6",
+      "Net Rating": 11.3,
       "Year": 2023,
       "tags": [
         "Run-First Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 99,
+      "sos": 75,
+      "sor": 138,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "3-5",
+      "sos_rank": 29,
+      "sor_rank": 42
+    },
+    {
+      "Rank": 56,
+      "Team": "Iowa State",
+      "Conference": "Big 12",
+      "Record": "7-6",
+      "Net Rating": 10.9,
+      "Year": 2023,
+      "tags": [
+        "Volatile Big-Play Offense",
+        "Stout Secondary Lockdown",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 69,
+      "sor": 148,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "6-3",
+      "sos_rank": 24,
+      "sor_rank": 52
+    },
+    {
+      "Rank": 57,
+      "Team": "Illinois",
+      "Conference": "Big Ten",
+      "Record": "5-7",
+      "Net Rating": 10.9,
+      "Year": 2023,
+      "tags": [
+        "Run-First Offense",
+        "Sound Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 100,
       "sor": 181,
       "Actual Wins": null,
       "Games Played": null,
@@ -1263,18 +1200,18 @@
       "sor_rank": 85
     },
     {
-      "Rank": 61,
+      "Rank": 58,
       "Team": "Rutgers",
       "Conference": "Big Ten",
       "Record": "7-6",
-      "Net Rating": 10.6,
+      "Net Rating": 10.8,
       "Year": 2023,
       "tags": [
         "Controlled Pace Run-First Offense",
         "Stout Secondary Lockdown",
         "Power-4 Tier Roster"
       ],
-      "sos": 102,
+      "sos": 103,
       "sor": 140,
       "Actual Wins": null,
       "Games Played": null,
@@ -1284,11 +1221,32 @@
       "sor_rank": 44
     },
     {
-      "Rank": 62,
+      "Rank": 59,
+      "Team": "UTSA",
+      "Conference": "American Athletic",
+      "Record": "9-4",
+      "Net Rating": 10.6,
+      "Year": 2023,
+      "tags": [
+        "Uptempo Balanced Spread",
+        "Disruptive Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 163,
+      "sor": 139,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "7-1",
+      "sos_rank": 90,
+      "sor_rank": 43
+    },
+    {
+      "Rank": 60,
       "Team": "California",
       "Conference": "Pac-12",
       "Record": "6-7",
-      "Net Rating": 10.5,
+      "Net Rating": 10.6,
       "Year": 2023,
       "tags": [
         "Uptempo Balanced Spread",
@@ -1301,28 +1259,70 @@
       "Games Played": null,
       "record": "6-7",
       "conference_record": "4-5",
-      "sos_rank": 7,
+      "sos_rank": 8,
       "sor_rank": 60
+    },
+    {
+      "Rank": 61,
+      "Team": "Troy",
+      "Conference": "Sun Belt",
+      "Record": "11-3",
+      "Net Rating": 10.5,
+      "Year": 2023,
+      "tags": [
+        "Run-Heavy Offense",
+        "Elite Defense",
+        "Developmental Roster"
+      ],
+      "sos": 143,
+      "sor": 105,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-3",
+      "conference_record": "8-1",
+      "sos_rank": 77,
+      "sor_rank": 25
+    },
+    {
+      "Rank": 62,
+      "Team": "James Madison",
+      "Conference": "Sun Belt",
+      "Record": "11-2",
+      "Net Rating": 10.4,
+      "Year": 2023,
+      "tags": [
+        "Efficient Offense",
+        "Stout Defense",
+        "Underdog Roster"
+      ],
+      "sos": 166,
+      "sor": 93,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-2",
+      "conference_record": "7-1",
+      "sos_rank": 93,
+      "sor_rank": 17
     },
     {
       "Rank": 63,
       "Team": "Cincinnati",
       "Conference": "Big 12",
       "Record": "3-9",
-      "Net Rating": 10.3,
+      "Net Rating": 10.2,
       "Year": 2023,
       "tags": [
         "Bully-Ball Ground Attack",
         "Vulnerable Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 116,
+      "sos": 117,
       "sor": 216,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "1-8",
-      "sos_rank": 64,
+      "sos_rank": 65,
       "sor_rank": 120
     },
     {
@@ -1330,20 +1330,20 @@
       "Team": "Washington State",
       "Conference": "Pac-12",
       "Record": "5-7",
-      "Net Rating": 10.3,
+      "Net Rating": 10.0,
       "Year": 2023,
       "tags": [
         "Run-Heavy Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 93,
+      "sos": 92,
       "sor": 162,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
       "conference_record": "2-7",
-      "sos_rank": 45,
+      "sos_rank": 44,
       "sor_rank": 66
     },
     {
@@ -1351,7 +1351,7 @@
       "Team": "New Mexico State",
       "Conference": "Conference USA",
       "Record": "10-5",
-      "Net Rating": 10.0,
+      "Net Rating": 9.9,
       "Year": 2023,
       "tags": [
         "Controlled Pace Efficient Offense",
@@ -1359,33 +1359,33 @@
         "Underdog Roster"
       ],
       "sos": 207,
-      "sor": 155,
+      "sor": 153,
       "Actual Wins": null,
       "Games Played": null,
       "record": "10-5",
       "conference_record": "7-2",
       "sos_rank": 126,
-      "sor_rank": 59
+      "sor_rank": 57
     },
     {
       "Rank": 66,
       "Team": "Fresno State",
       "Conference": "Mountain West",
       "Record": "9-4",
-      "Net Rating": 9.8,
+      "Net Rating": 9.5,
       "Year": 2023,
       "tags": [
         "Efficient Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 175,
+      "sos": 174,
       "sor": 144,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "4-4",
-      "sos_rank": 101,
+      "sos_rank": 100,
       "sor_rank": 48
     },
     {
@@ -1393,7 +1393,7 @@
       "Team": "Nebraska",
       "Conference": "Big Ten",
       "Record": "5-7",
-      "Net Rating": 9.6,
+      "Net Rating": 9.4,
       "Year": 2023,
       "tags": [
         "Controlled Pace Anemic Offense",
@@ -1401,37 +1401,16 @@
         "Power-4 Tier Roster"
       ],
       "sos": 118,
-      "sor": 183,
+      "sor": 184,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
       "conference_record": "3-6",
       "sos_rank": 66,
-      "sor_rank": 87
+      "sor_rank": 88
     },
     {
       "Rank": 68,
-      "Team": "UNLV",
-      "Conference": "Mountain West",
-      "Record": "9-5",
-      "Net Rating": 9.2,
-      "Year": 2023,
-      "tags": [
-        "Uptempo High-Powered Ground Attack",
-        "Disruptive Defense",
-        "Underdog Roster"
-      ],
-      "sos": 158,
-      "sor": 147,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-5",
-      "conference_record": "6-3",
-      "sos_rank": 85,
-      "sor_rank": 51
-    },
-    {
-      "Rank": 69,
       "Team": "Ohio",
       "Conference": "Mid-American",
       "Record": "10-3",
@@ -1442,7 +1421,7 @@
         "Elite Defense",
         "Underdog Roster"
       ],
-      "sos": 223,
+      "sos": 222,
       "sor": 135,
       "Actual Wins": null,
       "Games Played": null,
@@ -1452,74 +1431,32 @@
       "sor_rank": 39
     },
     {
-      "Rank": 70,
-      "Team": "Iowa",
-      "Conference": "Big Ten",
-      "Record": "10-4",
-      "Net Rating": 8.4,
+      "Rank": 69,
+      "Team": "UNLV",
+      "Conference": "Mountain West",
+      "Record": "9-5",
+      "Net Rating": 8.7,
       "Year": 2023,
       "tags": [
-        "Stymied Anemic Offense",
-        "Elite Bend-Don't-Break Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 77,
-      "sor": 97,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "10-4",
-      "conference_record": "7-3",
-      "sos_rank": 31,
-      "sor_rank": 21
-    },
-    {
-      "Rank": 71,
-      "Team": "Minnesota",
-      "Conference": "Big Ten",
-      "Record": "6-7",
-      "Net Rating": 8.2,
-      "Year": 2023,
-      "tags": [
-        "Balanced Spread",
+        "Uptempo High-Powered Ground Attack",
         "Disruptive Defense",
-        "Power-4 Tier Roster"
+        "Underdog Roster"
       ],
-      "sos": 97,
-      "sor": 169,
+      "sos": 156,
+      "sor": 147,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "6-7",
-      "conference_record": "3-6",
-      "sos_rank": 49,
-      "sor_rank": 73
+      "record": "9-5",
+      "conference_record": "6-3",
+      "sos_rank": 84,
+      "sor_rank": 51
     },
     {
-      "Rank": 72,
-      "Team": "Louisiana",
-      "Conference": "Sun Belt",
-      "Record": "6-7",
-      "Net Rating": 7.9,
-      "Year": 2023,
-      "tags": [
-        "Efficient Offense",
-        "Sound Defense",
-        "Developmental Roster"
-      ],
-      "sos": 208,
-      "sor": 200,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "6-7",
-      "conference_record": "3-5",
-      "sos_rank": 127,
-      "sor_rank": 104
-    },
-    {
-      "Rank": 73,
+      "Rank": 70,
       "Team": "Texas State",
       "Conference": "Sun Belt",
       "Record": "8-5",
-      "Net Rating": 7.9,
+      "Net Rating": 8.2,
       "Year": 2023,
       "tags": [
         "Uptempo Methodical Chain-Mover",
@@ -1536,11 +1473,32 @@
       "sor_rank": 65
     },
     {
-      "Rank": 74,
+      "Rank": 71,
+      "Team": "Iowa",
+      "Conference": "Big Ten",
+      "Record": "10-4",
+      "Net Rating": 8.0,
+      "Year": 2023,
+      "tags": [
+        "Stymied Anemic Offense",
+        "Elite Bend-Don't-Break Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 78,
+      "sor": 98,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "10-4",
+      "conference_record": "7-3",
+      "sos_rank": 32,
+      "sor_rank": 21
+    },
+    {
+      "Rank": 72,
       "Team": "Houston",
       "Conference": "Big 12",
       "Record": "4-8",
-      "Net Rating": 7.8,
+      "Net Rating": 7.7,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
@@ -1548,75 +1506,117 @@
         "Power-4 Tier Roster"
       ],
       "sos": 64,
-      "sor": 189,
+      "sor": 188,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "2-7",
       "sos_rank": 20,
-      "sor_rank": 93
+      "sor_rank": 92
     },
     {
-      "Rank": 75,
-      "Team": "Western Kentucky",
-      "Conference": "Conference USA",
-      "Record": "8-5",
-      "Net Rating": 7.6,
+      "Rank": 73,
+      "Team": "Minnesota",
+      "Conference": "Big Ten",
+      "Record": "6-7",
+      "Net Rating": 7.7,
       "Year": 2023,
       "tags": [
-        "Volatile Big-Play Offense",
-        "Vulnerable Defense",
+        "Balanced Spread",
+        "Disruptive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 181,
-      "sor": 151,
+      "sos": 98,
+      "sor": 170,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "8-5",
-      "conference_record": "5-3",
-      "sos_rank": 106,
-      "sor_rank": 55
+      "record": "6-7",
+      "conference_record": "3-6",
+      "sos_rank": 49,
+      "sor_rank": 74
     },
     {
-      "Rank": 76,
+      "Rank": 74,
       "Team": "Wyoming",
       "Conference": "Mountain West",
       "Record": "9-4",
-      "Net Rating": 7.6,
+      "Net Rating": 7.5,
       "Year": 2023,
       "tags": [
         "Controlled Pace Balanced Spread",
         "Sound Defense",
         "Underdog Roster"
       ],
-      "sos": 142,
+      "sos": 140,
       "sor": 133,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "5-3",
-      "sos_rank": 76,
+      "sos_rank": 75,
       "sor_rank": 37
+    },
+    {
+      "Rank": 75,
+      "Team": "Louisiana",
+      "Conference": "Sun Belt",
+      "Record": "6-7",
+      "Net Rating": 7.5,
+      "Year": 2023,
+      "tags": [
+        "Efficient Offense",
+        "Sound Defense",
+        "Developmental Roster"
+      ],
+      "sos": 210,
+      "sor": 200,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "6-7",
+      "conference_record": "3-5",
+      "sos_rank": 127,
+      "sor_rank": 104
+    },
+    {
+      "Rank": 76,
+      "Team": "Western Kentucky",
+      "Conference": "Conference USA",
+      "Record": "8-5",
+      "Net Rating": 7.2,
+      "Year": 2023,
+      "tags": [
+        "Volatile Big-Play Offense",
+        "Vulnerable Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 180,
+      "sor": 151,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "8-5",
+      "conference_record": "5-3",
+      "sos_rank": 105,
+      "sor_rank": 55
     },
     {
       "Rank": 77,
       "Team": "Indiana",
       "Conference": "Big Ten",
       "Record": "3-9",
-      "Net Rating": 7.2,
+      "Net Rating": 7.0,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
         "Vulnerable Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 78,
+      "sos": 76,
       "sor": 191,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "1-8",
-      "sos_rank": 32,
+      "sos_rank": 30,
       "sor_rank": 95
     },
     {
@@ -1624,14 +1624,14 @@
       "Team": "Mississippi State",
       "Conference": "SEC",
       "Record": "5-7",
-      "Net Rating": 7.0,
+      "Net Rating": 6.8,
       "Year": 2023,
       "tags": [
         "Stymied Anemic Offense",
         "Stout Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 71,
+      "sos": 70,
       "sor": 160,
       "Actual Wins": null,
       "Games Played": null,
@@ -1653,58 +1653,16 @@
         "Power-4 Tier Roster"
       ],
       "sos": 129,
-      "sor": 170,
+      "sor": 168,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "3-5",
       "sos_rank": 69,
-      "sor_rank": 74
+      "sor_rank": 72
     },
     {
       "Rank": 80,
-      "Team": "Pittsburgh",
-      "Conference": "ACC",
-      "Record": "3-9",
-      "Net Rating": 6.6,
-      "Year": 2023,
-      "tags": [
-        "Anemic Offense",
-        "Elite Bend-Don't-Break Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 88,
-      "sor": 208,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "2-6",
-      "sos_rank": 40,
-      "sor_rank": 112
-    },
-    {
-      "Rank": 81,
-      "Team": "Miami (OH)",
-      "Conference": "Mid-American",
-      "Record": "11-3",
-      "Net Rating": 6.5,
-      "Year": 2023,
-      "tags": [
-        "Controlled Pace Run-First Offense",
-        "Sound Defense",
-        "Developmental Roster"
-      ],
-      "sos": 195,
-      "sor": 130,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-3",
-      "conference_record": "8-1",
-      "sos_rank": 118,
-      "sor_rank": 34
-    },
-    {
-      "Rank": 82,
       "Team": "Arizona State",
       "Conference": "Pac-12",
       "Record": "3-9",
@@ -1725,7 +1683,7 @@
       "sor_rank": 102
     },
     {
-      "Rank": 83,
+      "Rank": 81,
       "Team": "UAB",
       "Conference": "American Athletic",
       "Record": "4-8",
@@ -1746,7 +1704,7 @@
       "sor_rank": 107
     },
     {
-      "Rank": 84,
+      "Rank": 82,
       "Team": "Northwestern",
       "Conference": "Big Ten",
       "Record": "8-5",
@@ -1757,7 +1715,7 @@
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 122,
+      "sos": 124,
       "sor": 146,
       "Actual Wins": null,
       "Games Played": null,
@@ -1765,6 +1723,48 @@
       "conference_record": "5-4",
       "sos_rank": 68,
       "sor_rank": 50
+    },
+    {
+      "Rank": 83,
+      "Team": "Pittsburgh",
+      "Conference": "ACC",
+      "Record": "3-9",
+      "Net Rating": 6.3,
+      "Year": 2023,
+      "tags": [
+        "Anemic Offense",
+        "Elite Bend-Don't-Break Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 86,
+      "sor": 208,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "3-9",
+      "conference_record": "2-6",
+      "sos_rank": 39,
+      "sor_rank": 112
+    },
+    {
+      "Rank": 84,
+      "Team": "Miami (OH)",
+      "Conference": "Mid-American",
+      "Record": "11-3",
+      "Net Rating": 6.2,
+      "Year": 2023,
+      "tags": [
+        "Controlled Pace Run-First Offense",
+        "Sound Defense",
+        "Developmental Roster"
+      ],
+      "sos": 194,
+      "sor": 130,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-3",
+      "conference_record": "8-1",
+      "sos_rank": 117,
+      "sor_rank": 34
     },
     {
       "Rank": 85,
@@ -1778,14 +1778,14 @@
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 62,
-      "sor": 206,
+      "sos": 61,
+      "sor": 205,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "2-6",
       "sos_rank": 18,
-      "sor_rank": 110
+      "sor_rank": 109
     },
     {
       "Rank": 86,
@@ -1810,52 +1810,10 @@
     },
     {
       "Rank": 87,
-      "Team": "Northern Illinois",
-      "Conference": "Mid-American",
-      "Record": "7-6",
-      "Net Rating": 6.1,
-      "Year": 2023,
-      "tags": [
-        "Balanced Spread",
-        "Sound Defense",
-        "Underdog Roster"
-      ],
-      "sos": 222,
-      "sor": 182,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "5-3",
-      "sos_rank": 132,
-      "sor_rank": 86
-    },
-    {
-      "Rank": 88,
-      "Team": "Utah State",
-      "Conference": "Mountain West",
-      "Record": "6-7",
-      "Net Rating": 5.9,
-      "Year": 2023,
-      "tags": [
-        "Controlled Pace Efficient Offense",
-        "Sound Defense",
-        "Developmental Roster"
-      ],
-      "sos": 194,
-      "sor": 199,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "6-7",
-      "conference_record": "4-4",
-      "sos_rank": 117,
-      "sor_rank": 103
-    },
-    {
-      "Rank": 89,
       "Team": "Colorado",
       "Conference": "Pac-12",
       "Record": "4-8",
-      "Net Rating": 5.9,
+      "Net Rating": 6.1,
       "Year": 2023,
       "tags": [
         "Uptempo Run-Heavy Offense",
@@ -1868,36 +1826,57 @@
       "Games Played": null,
       "record": "4-8",
       "conference_record": "1-8",
-      "sos_rank": 6,
+      "sos_rank": 5,
       "sor_rank": 81
     },
     {
-      "Rank": 90,
-      "Team": "Baylor",
-      "Conference": "Big 12",
-      "Record": "3-9",
-      "Net Rating": 5.8,
+      "Rank": 88,
+      "Team": "Utah State",
+      "Conference": "Mountain West",
+      "Record": "6-7",
+      "Net Rating": 6.0,
+      "Year": 2023,
+      "tags": [
+        "Controlled Pace Efficient Offense",
+        "Sound Defense",
+        "Developmental Roster"
+      ],
+      "sos": 195,
+      "sor": 199,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "6-7",
+      "conference_record": "4-4",
+      "sos_rank": 118,
+      "sor_rank": 103
+    },
+    {
+      "Rank": 89,
+      "Team": "Northern Illinois",
+      "Conference": "Mid-American",
+      "Record": "7-6",
+      "Net Rating": 6.0,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
-        "Porous & Passive Defense",
-        "Power-4 Tier Roster"
+        "Sound Defense",
+        "Underdog Roster"
       ],
-      "sos": 85,
-      "sor": 207,
+      "sos": 221,
+      "sor": 182,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "3-9",
-      "conference_record": "2-7",
-      "sos_rank": 37,
-      "sor_rank": 111
+      "record": "7-6",
+      "conference_record": "5-3",
+      "sos_rank": 132,
+      "sor_rank": 86
     },
     {
-      "Rank": 91,
+      "Rank": 90,
       "Team": "Rice",
       "Conference": "American Athletic",
       "Record": "6-7",
-      "Net Rating": 5.8,
+      "Net Rating": 5.6,
       "Year": 2023,
       "tags": [
         "Controlled Pace Efficient Offense",
@@ -1914,11 +1893,11 @@
       "sor_rank": 91
     },
     {
-      "Rank": 92,
+      "Rank": 91,
       "Team": "Syracuse",
       "Conference": "ACC",
       "Record": "6-7",
-      "Net Rating": 5.6,
+      "Net Rating": 5.5,
       "Year": 2023,
       "tags": [
         "Controlled Pace Run-Heavy Offense",
@@ -1935,28 +1914,28 @@
       "sor_rank": 83
     },
     {
-      "Rank": 93,
-      "Team": "BYU",
+      "Rank": 92,
+      "Team": "Baylor",
       "Conference": "Big 12",
-      "Record": "5-7",
-      "Net Rating": 5.5,
+      "Record": "3-9",
+      "Net Rating": 5.3,
       "Year": 2023,
       "tags": [
-        "Anemic Offense",
-        "Sound Defense",
+        "Balanced Spread",
+        "Porous & Passive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 76,
-      "sor": 172,
+      "sos": 82,
+      "sor": 206,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "5-7",
+      "record": "3-9",
       "conference_record": "2-7",
-      "sos_rank": 30,
-      "sor_rank": 76
+      "sos_rank": 35,
+      "sor_rank": 110
     },
     {
-      "Rank": 94,
+      "Rank": 93,
       "Team": "Michigan State",
       "Conference": "Big Ten",
       "Record": "4-8",
@@ -1967,7 +1946,7 @@
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 67,
+      "sos": 68,
       "sor": 176,
       "Actual Wins": null,
       "Games Played": null,
@@ -1977,32 +1956,32 @@
       "sor_rank": 80
     },
     {
-      "Rank": 95,
-      "Team": "North Texas",
-      "Conference": "American Athletic",
+      "Rank": 94,
+      "Team": "BYU",
+      "Conference": "Big 12",
       "Record": "5-7",
-      "Net Rating": 4.8,
+      "Net Rating": 5.2,
       "Year": 2023,
       "tags": [
-        "Uptempo Run-First Offense",
-        "Vulnerable Defense",
-        "Developmental Roster"
+        "Anemic Offense",
+        "Sound Defense",
+        "Power-4 Tier Roster"
       ],
-      "sos": 193,
-      "sor": 195,
+      "sos": 77,
+      "sor": 172,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
-      "conference_record": "3-5",
-      "sos_rank": 116,
-      "sor_rank": 99
+      "conference_record": "2-7",
+      "sos_rank": 31,
+      "sor_rank": 76
     },
     {
-      "Rank": 96,
+      "Rank": 95,
       "Team": "Georgia Southern",
       "Conference": "Sun Belt",
       "Record": "6-7",
-      "Net Rating": 4.7,
+      "Net Rating": 4.5,
       "Year": 2023,
       "tags": [
         "Run-Heavy Offense",
@@ -2010,33 +1989,54 @@
         "Developmental Roster"
       ],
       "sos": 191,
-      "sor": 196,
+      "sor": 195,
       "Actual Wins": null,
       "Games Played": null,
       "record": "6-7",
       "conference_record": "3-5",
       "sos_rank": 114,
-      "sor_rank": 100
+      "sor_rank": 99
+    },
+    {
+      "Rank": 96,
+      "Team": "North Texas",
+      "Conference": "American Athletic",
+      "Record": "5-7",
+      "Net Rating": 4.5,
+      "Year": 2023,
+      "tags": [
+        "Uptempo Run-First Offense",
+        "Vulnerable Defense",
+        "Developmental Roster"
+      ],
+      "sos": 193,
+      "sor": 194,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "5-7",
+      "conference_record": "3-5",
+      "sos_rank": 116,
+      "sor_rank": 98
     },
     {
       "Rank": 97,
       "Team": "Florida Atlantic",
       "Conference": "American Athletic",
       "Record": "4-8",
-      "Net Rating": 4.6,
+      "Net Rating": 4.2,
       "Year": 2023,
       "tags": [
         "Anemic Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 163,
+      "sos": 162,
       "sor": 211,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-5",
-      "sos_rank": 90,
+      "sos_rank": 89,
       "sor_rank": 115
     },
     {
@@ -2044,56 +2044,56 @@
       "Team": "Georgia State",
       "Conference": "Sun Belt",
       "Record": "7-6",
-      "Net Rating": 4.4,
+      "Net Rating": 4.2,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 143,
-      "sor": 171,
+      "sos": 146,
+      "sor": 169,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "3-5",
-      "sos_rank": 77,
-      "sor_rank": 75
+      "sos_rank": 78,
+      "sor_rank": 73
     },
     {
       "Rank": 99,
       "Team": "Jacksonville State",
       "Conference": "Conference USA",
       "Record": "9-4",
-      "Net Rating": 4.3,
+      "Net Rating": 3.7,
       "Year": 2023,
       "tags": [
         "Uptempo Balanced Spread",
         "Stout Secondary Lockdown",
         "Underdog Roster"
       ],
-      "sos": 202,
-      "sor": 142,
+      "sos": 203,
+      "sor": 143,
       "Actual Wins": null,
       "Games Played": null,
       "record": "9-4",
       "conference_record": "6-2",
       "sos_rank": 124,
-      "sor_rank": 46
+      "sor_rank": 47
     },
     {
       "Rank": 100,
       "Team": "Arkansas State",
       "Conference": "Sun Belt",
       "Record": "6-7",
-      "Net Rating": 3.5,
+      "Net Rating": 3.2,
       "Year": 2023,
       "tags": [
         "Uptempo Volatile Big-Play Offense",
         "Vulnerable Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 156,
+      "sos": 155,
       "sor": 186,
       "Actual Wins": null,
       "Games Played": null,
@@ -2107,20 +2107,20 @@
       "Team": "Middle Tennessee",
       "Conference": "Conference USA",
       "Record": "4-8",
-      "Net Rating": 3.2,
+      "Net Rating": 3.0,
       "Year": 2023,
       "tags": [
         "Volatile Big-Play Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 164,
+      "sos": 165,
       "sor": 197,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-5",
-      "sos_rank": 91,
+      "sos_rank": 92,
       "sor_rank": 101
     },
     {
@@ -2128,20 +2128,20 @@
       "Team": "Bowling Green",
       "Conference": "Mid-American",
       "Record": "7-6",
-      "Net Rating": 2.2,
+      "Net Rating": 2.0,
       "Year": 2023,
       "tags": [
         "Volatile Big-Play Offense",
         "Sound Defense",
         "Developmental Roster"
       ],
-      "sos": 160,
+      "sos": 161,
       "sor": 163,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "5-3",
-      "sos_rank": 87,
+      "sos_rank": 88,
       "sor_rank": 67
     },
     {
@@ -2149,20 +2149,20 @@
       "Team": "San Diego State",
       "Conference": "Mountain West",
       "Record": "4-8",
-      "Net Rating": 2.2,
+      "Net Rating": 1.9,
       "Year": 2023,
       "tags": [
         "Controlled Pace Balanced Spread",
         "Vulnerable Defense",
         "Developmental Roster"
       ],
-      "sos": 152,
+      "sos": 149,
       "sor": 209,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "2-6",
-      "sos_rank": 80,
+      "sos_rank": 79,
       "sor_rank": 113
     },
     {
@@ -2170,56 +2170,35 @@
       "Team": "Old Dominion",
       "Conference": "Sun Belt",
       "Record": "6-7",
-      "Net Rating": 1.6,
+      "Net Rating": 1.5,
       "Year": 2023,
       "tags": [
         "Uptempo Balanced Spread",
         "Sound Defense",
         "Underdog Roster"
       ],
-      "sos": 157,
+      "sos": 158,
       "sor": 193,
       "Actual Wins": null,
       "Games Played": null,
       "record": "6-7",
       "conference_record": "5-3",
-      "sos_rank": 84,
+      "sos_rank": 85,
       "sor_rank": 97
     },
     {
       "Rank": 105,
-      "Team": "East Carolina",
-      "Conference": "American Athletic",
-      "Record": "2-10",
-      "Net Rating": 1.1,
-      "Year": 2023,
-      "tags": [
-        "Anemic Offense",
-        "Sound Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 149,
-      "sor": 225,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "2-10",
-      "conference_record": "1-7",
-      "sos_rank": 79,
-      "sor_rank": 129
-    },
-    {
-      "Rank": 106,
       "Team": "Western Michigan",
       "Conference": "Mid-American",
       "Record": "4-8",
-      "Net Rating": 1.1,
+      "Net Rating": 0.7,
       "Year": 2023,
       "tags": [
         "Controlled Pace Balanced Spread",
         "Vulnerable Defense",
         "Developmental Roster"
       ],
-      "sos": 188,
+      "sos": 186,
       "sor": 212,
       "Actual Wins": null,
       "Games Played": null,
@@ -2229,11 +2208,32 @@
       "sor_rank": 116
     },
     {
+      "Rank": 106,
+      "Team": "East Carolina",
+      "Conference": "American Athletic",
+      "Record": "2-10",
+      "Net Rating": 0.6,
+      "Year": 2023,
+      "tags": [
+        "Anemic Offense",
+        "Sound Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 150,
+      "sor": 225,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "2-10",
+      "conference_record": "1-7",
+      "sos_rank": 80,
+      "sor_rank": 129
+    },
+    {
       "Rank": 107,
       "Team": "Central Michigan",
       "Conference": "Mid-American",
       "Record": "5-7",
-      "Net Rating": 0.5,
+      "Net Rating": 0.3,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
@@ -2251,48 +2251,27 @@
     },
     {
       "Rank": 108,
-      "Team": "Marshall",
-      "Conference": "Sun Belt",
-      "Record": "6-7",
-      "Net Rating": 0.4,
-      "Year": 2023,
-      "tags": [
-        "Stymied Anemic Offense",
-        "Sound Defense",
-        "Developmental Roster"
-      ],
-      "sos": 140,
-      "sor": 192,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "6-7",
-      "conference_record": "3-5",
-      "sos_rank": 74,
-      "sor_rank": 96
-    },
-    {
-      "Rank": 109,
       "Team": "Colorado State",
       "Conference": "Mountain West",
       "Record": "5-7",
-      "Net Rating": 0.0,
+      "Net Rating": -0.0,
       "Year": 2023,
       "tags": [
         "Uptempo Balanced Spread",
         "Sound Defense",
         "Developmental Roster"
       ],
-      "sos": 182,
+      "sos": 181,
       "sor": 201,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-7",
       "conference_record": "3-5",
-      "sos_rank": 107,
+      "sos_rank": 106,
       "sor_rank": 105
     },
     {
-      "Rank": 110,
+      "Rank": 109,
       "Team": "Ball State",
       "Conference": "Mid-American",
       "Record": "4-8",
@@ -2303,38 +2282,17 @@
         "Porous & Passive Defense",
         "Developmental Roster"
       ],
-      "sos": 190,
-      "sor": 205,
+      "sos": 192,
+      "sor": 207,
       "Actual Wins": null,
       "Games Played": null,
       "record": "4-8",
       "conference_record": "3-5",
-      "sos_rank": 113,
-      "sor_rank": 109
-    },
-    {
-      "Rank": 111,
-      "Team": "Army",
-      "Conference": "FBS Independents",
-      "Record": "6-6",
-      "Net Rating": -0.1,
-      "Year": 2023,
-      "tags": [
-        "Controlled Pace Anemic Offense",
-        "Disruptive Defense",
-        "Underdog Roster"
-      ],
-      "sos": 192,
-      "sor": 173,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "6-6",
-      "conference_record": "0-0",
       "sos_rank": 115,
-      "sor_rank": 77
+      "sor_rank": 111
     },
     {
-      "Rank": 112,
+      "Rank": 110,
       "Team": "Stanford",
       "Conference": "Pac-12",
       "Record": "3-9",
@@ -2345,17 +2303,17 @@
         "Porous & Passive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 40,
-      "sor": 184,
+      "sos": 39,
+      "sor": 183,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "2-7",
       "sos_rank": 4,
-      "sor_rank": 88
+      "sor_rank": 87
     },
     {
-      "Rank": 113,
+      "Rank": 111,
       "Team": "New Mexico",
       "Conference": "Mountain West",
       "Record": "4-8",
@@ -2374,6 +2332,48 @@
       "conference_record": "2-6",
       "sos_rank": 98,
       "sor_rank": 114
+    },
+    {
+      "Rank": 112,
+      "Team": "Marshall",
+      "Conference": "Sun Belt",
+      "Record": "6-7",
+      "Net Rating": -0.3,
+      "Year": 2023,
+      "tags": [
+        "Stymied Anemic Offense",
+        "Sound Defense",
+        "Developmental Roster"
+      ],
+      "sos": 139,
+      "sor": 192,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "6-7",
+      "conference_record": "3-5",
+      "sos_rank": 74,
+      "sor_rank": 96
+    },
+    {
+      "Rank": 113,
+      "Team": "Army",
+      "Conference": "FBS Independents",
+      "Record": "6-6",
+      "Net Rating": -0.5,
+      "Year": 2023,
+      "tags": [
+        "Controlled Pace Anemic Offense",
+        "Disruptive Defense",
+        "Underdog Roster"
+      ],
+      "sos": 188,
+      "sor": 173,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "6-6",
+      "conference_record": "0-0",
+      "sos_rank": 112,
+      "sor_rank": 77
     },
     {
       "Rank": 114,
@@ -2408,13 +2408,13 @@
         "Vulnerable Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 174,
+      "sos": 175,
       "sor": 174,
       "Actual Wins": null,
       "Games Played": null,
       "record": "7-6",
       "conference_record": "4-4",
-      "sos_rank": 100,
+      "sos_rank": 101,
       "sor_rank": 78
     },
     {
@@ -2422,7 +2422,7 @@
       "Team": "Buffalo",
       "Conference": "Mid-American",
       "Record": "3-9",
-      "Net Rating": -1.0,
+      "Net Rating": -1.1,
       "Year": 2023,
       "tags": [
         "Controlled Pace Run-Heavy Offense",
@@ -2443,7 +2443,7 @@
       "Team": "Sam Houston",
       "Conference": "Conference USA",
       "Record": "3-9",
-      "Net Rating": -1.2,
+      "Net Rating": -1.5,
       "Year": 2023,
       "tags": [
         "Pass-Heavy Anemic Offense",
@@ -2461,59 +2461,38 @@
     },
     {
       "Rank": 118,
-      "Team": "Louisiana Tech",
-      "Conference": "Conference USA",
-      "Record": "3-9",
-      "Net Rating": -1.8,
-      "Year": 2023,
-      "tags": [
-        "Balanced Spread",
-        "Vulnerable Defense",
-        "Developmental Roster"
-      ],
-      "sos": 180,
-      "sor": 219,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "2-6",
-      "sos_rank": 105,
-      "sor_rank": 123
-    },
-    {
-      "Rank": 119,
       "Team": "Massachusetts",
       "Conference": "FBS Independents",
       "Record": "3-9",
-      "Net Rating": -1.9,
+      "Net Rating": -1.8,
       "Year": 2023,
       "tags": [
         "Balanced Spread",
         "Porous & Passive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 171,
+      "sos": 170,
       "sor": 215,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "0-0",
-      "sos_rank": 97,
+      "sos_rank": 96,
       "sor_rank": 119
     },
     {
-      "Rank": 120,
+      "Rank": 119,
       "Team": "Southern Miss",
       "Conference": "Sun Belt",
       "Record": "3-9",
-      "Net Rating": -2.0,
+      "Net Rating": -2.1,
       "Year": 2023,
       "tags": [
         "Stymied Anemic Offense",
         "Sound Defense",
         "Developmental Roster"
       ],
-      "sos": 139,
+      "sos": 138,
       "sor": 217,
       "Actual Wins": null,
       "Games Played": null,
@@ -2523,11 +2502,53 @@
       "sor_rank": 121
     },
     {
+      "Rank": 120,
+      "Team": "Louisiana Tech",
+      "Conference": "Conference USA",
+      "Record": "3-9",
+      "Net Rating": -2.2,
+      "Year": 2023,
+      "tags": [
+        "Balanced Spread",
+        "Vulnerable Defense",
+        "Developmental Roster"
+      ],
+      "sos": 182,
+      "sor": 219,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "3-9",
+      "conference_record": "2-6",
+      "sos_rank": 107,
+      "sor_rank": 123
+    },
+    {
       "Rank": 121,
+      "Team": "Tulsa",
+      "Conference": "American Athletic",
+      "Record": "4-8",
+      "Net Rating": -2.4,
+      "Year": 2023,
+      "tags": [
+        "Run-First Offense",
+        "Porous & Passive Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 142,
+      "sor": 196,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "2-6",
+      "sos_rank": 76,
+      "sor_rank": 100
+    },
+    {
+      "Rank": 122,
       "Team": "Vanderbilt",
       "Conference": "SEC",
       "Record": "2-10",
-      "Net Rating": -2.2,
+      "Net Rating": -2.5,
       "Year": 2023,
       "tags": [
         "Run-Heavy Offense",
@@ -2544,60 +2565,39 @@
       "sor_rank": 118
     },
     {
-      "Rank": 122,
-      "Team": "Tulsa",
-      "Conference": "American Athletic",
-      "Record": "4-8",
-      "Net Rating": -2.3,
-      "Year": 2023,
-      "tags": [
-        "Run-First Offense",
-        "Porous & Passive Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 141,
-      "sor": 194,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "4-8",
-      "conference_record": "2-6",
-      "sos_rank": 75,
-      "sor_rank": 98
-    },
-    {
       "Rank": 123,
       "Team": "Charlotte",
       "Conference": "American Athletic",
       "Record": "3-9",
-      "Net Rating": -2.6,
+      "Net Rating": -2.8,
       "Year": 2023,
       "tags": [
         "Controlled Pace Pass-Heavy Anemic Offense",
         "Sound Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 176,
-      "sor": 218,
+      "sos": 178,
+      "sor": 220,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "2-6",
-      "sos_rank": 102,
-      "sor_rank": 122
+      "sos_rank": 103,
+      "sor_rank": 124
     },
     {
       "Rank": 124,
       "Team": "Nevada",
       "Conference": "Mountain West",
       "Record": "2-10",
-      "Net Rating": -3.3,
+      "Net Rating": -3.5,
       "Year": 2023,
       "tags": [
         "Controlled Pace Stymied Anemic Offense",
         "Sound Defense",
         "Developmental Roster"
       ],
-      "sos": 153,
+      "sos": 152,
       "sor": 227,
       "Actual Wins": null,
       "Games Played": null,
@@ -2611,7 +2611,7 @@
       "Team": "Navy",
       "Conference": "American Athletic",
       "Record": "5-7",
-      "Net Rating": -3.7,
+      "Net Rating": -4.0,
       "Year": 2023,
       "tags": [
         "Controlled Pace Stymied Anemic Offense",
@@ -2632,14 +2632,14 @@
       "Team": "Eastern Michigan",
       "Conference": "Mid-American",
       "Record": "6-7",
-      "Net Rating": -4.3,
+      "Net Rating": -4.8,
       "Year": 2023,
       "tags": [
         "Pass-Heavy Anemic Offense",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
-      "sos": 220,
+      "sos": 219,
       "sor": 202,
       "Actual Wins": null,
       "Games Played": null,
@@ -2653,20 +2653,20 @@
       "Team": "Hawai'i",
       "Conference": "Mountain West",
       "Record": "5-8",
-      "Net Rating": -5.4,
+      "Net Rating": -5.6,
       "Year": 2023,
       "tags": [
         "Stymied Anemic Offense",
         "Porous & Passive Defense",
         "Developmental Roster"
       ],
-      "sos": 161,
+      "sos": 160,
       "sor": 204,
       "Actual Wins": null,
       "Games Played": null,
       "record": "5-8",
       "conference_record": "3-5",
-      "sos_rank": 88,
+      "sos_rank": 87,
       "sor_rank": 108
     },
     {
@@ -2674,45 +2674,24 @@
       "Team": "Temple",
       "Conference": "American Athletic",
       "Record": "3-9",
-      "Net Rating": -6.2,
+      "Net Rating": -6.0,
       "Year": 2023,
       "tags": [
         "Anemic Offense",
         "Porous & Passive Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 196,
+      "sos": 197,
       "sor": 223,
       "Actual Wins": null,
       "Games Played": null,
       "record": "3-9",
       "conference_record": "1-7",
-      "sos_rank": 119,
+      "sos_rank": 120,
       "sor_rank": 127
     },
     {
       "Rank": 129,
-      "Team": "UConn",
-      "Conference": "FBS Independents",
-      "Record": "3-9",
-      "Net Rating": -6.6,
-      "Year": 2023,
-      "tags": [
-        "Pass-Heavy Anemic Offense",
-        "Vulnerable Defense",
-        "Power-4 Tier Roster"
-      ],
-      "sos": 168,
-      "sor": 220,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "0-0",
-      "sos_rank": 94,
-      "sor_rank": 124
-    },
-    {
-      "Rank": 130,
       "Team": "UL Monroe",
       "Conference": "Sun Belt",
       "Record": "2-10",
@@ -2733,32 +2712,32 @@
       "sor_rank": 130
     },
     {
-      "Rank": 131,
-      "Team": "Florida International",
-      "Conference": "Conference USA",
-      "Record": "4-8",
-      "Net Rating": -7.5,
+      "Rank": 130,
+      "Team": "UConn",
+      "Conference": "FBS Independents",
+      "Record": "3-9",
+      "Net Rating": -6.7,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Offense",
-        "Porous & Passive Defense",
+        "Pass-Heavy Anemic Offense",
+        "Vulnerable Defense",
         "Power-4 Tier Roster"
       ],
-      "sos": 203,
-      "sor": 213,
+      "sos": 164,
+      "sor": 218,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "4-8",
-      "conference_record": "1-7",
-      "sos_rank": 125,
-      "sor_rank": 117
+      "record": "3-9",
+      "conference_record": "0-0",
+      "sos_rank": 91,
+      "sor_rank": 122
     },
     {
-      "Rank": 132,
+      "Rank": 131,
       "Team": "Akron",
       "Conference": "Mid-American",
       "Record": "2-10",
-      "Net Rating": -7.5,
+      "Net Rating": -7.6,
       "Year": 2023,
       "tags": [
         "Run-Heavy Offense",
@@ -2775,24 +2754,45 @@
       "sor_rank": 132
     },
     {
+      "Rank": 132,
+      "Team": "Florida International",
+      "Conference": "Conference USA",
+      "Record": "4-8",
+      "Net Rating": -7.7,
+      "Year": 2023,
+      "tags": [
+        "Run-Heavy Offense",
+        "Porous & Passive Defense",
+        "Power-4 Tier Roster"
+      ],
+      "sos": 204,
+      "sor": 213,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "1-7",
+      "sos_rank": 125,
+      "sor_rank": 117
+    },
+    {
       "Rank": 133,
       "Team": "Kent State",
       "Conference": "Mid-American",
       "Record": "1-11",
-      "Net Rating": -9.3,
+      "Net Rating": -9.5,
       "Year": 2023,
       "tags": [
         "Anemic Offense",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
-      "sos": 197,
+      "sos": 196,
       "sor": 229,
       "Actual Wins": null,
       "Games Played": null,
       "record": "1-11",
       "conference_record": "0-8",
-      "sos_rank": 120,
+      "sos_rank": 119,
       "sor_rank": 133
     }
   ]
