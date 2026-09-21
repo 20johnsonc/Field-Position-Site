@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T17:22:13.931543+00:00",
+  "generated_at": "2026-09-21T01:34:00.344998+00:00",
   "year": 2024,
   "week": 15,
   "games": [
@@ -58,24 +58,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673465,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "Arizona State",
-      "away_team": "Iowa State",
-      "home_points": 45,
-      "away_points": 19,
-      "actual_margin": 26,
-      "actual_total": 64,
-      "start_date": "2024-12-07 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673467,
       "week": 15,
       "year": 2024,
@@ -91,6 +73,24 @@
       "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": "Mac Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673465,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Arizona State",
+      "away_team": "Iowa State",
+      "home_points": 45,
+      "away_points": 19,
+      "actual_margin": 26,
+      "actual_total": 64,
+      "start_date": "2024-12-07 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
       "bowl_name": null
     },
     {
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673463,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "SMU",
-      "away_team": "Clemson",
-      "home_points": 31,
-      "away_points": 34,
-      "actual_margin": -3,
-      "actual_total": 65,
-      "start_date": "2024-12-08 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": "Acc Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673464,
       "week": 15,
       "year": 2024,
@@ -163,6 +145,24 @@
       "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": "Big Ten Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673463,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "SMU",
+      "away_team": "Clemson",
+      "home_points": 31,
+      "away_points": 34,
+      "actual_margin": -3,
+      "actual_total": 65,
+      "start_date": "2024-12-08 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": "Acc Championship",
       "bowl_name": null
     },
     {

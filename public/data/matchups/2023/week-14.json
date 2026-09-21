@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T17:22:13.931543+00:00",
+  "generated_at": "2026-09-21T01:34:00.344998+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -94,6 +94,24 @@
       "bowl_name": null
     },
     {
+      "game_id": 401539483,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Alabama",
+      "away_team": "Georgia",
+      "home_points": 27,
+      "away_points": 24,
+      "actual_margin": 3,
+      "actual_total": 51,
+      "start_date": "2023-12-02 21:00:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "SEC",
+      "is_playoff": false,
+      "round_name": "Sec Championship",
+      "bowl_name": null
+    },
+    {
       "game_id": 401539477,
       "week": 14,
       "year": 2023,
@@ -127,24 +145,6 @@
       "away_conference": "Sun Belt",
       "is_playoff": false,
       "round_name": "Sun Belt Championship",
-      "bowl_name": null
-    },
-    {
-      "game_id": 401539483,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Alabama",
-      "away_team": "Georgia",
-      "home_points": 27,
-      "away_points": 24,
-      "actual_margin": 3,
-      "actual_total": 51,
-      "start_date": "2023-12-02 21:00:00+00:00",
-      "home_conference": "SEC",
-      "away_conference": "SEC",
-      "is_playoff": false,
-      "round_name": "Sec Championship",
       "bowl_name": null
     },
     {
