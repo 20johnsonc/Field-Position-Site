@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T01:34:00.344998+00:00",
+  "generated_at": "2026-09-21T20:29:58.137210+00:00",
   "year": 2025,
   "week": 15,
   "games": [
@@ -76,24 +76,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777329,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Western Michigan",
-      "away_team": "Miami (OH)",
-      "home_points": 23,
-      "away_points": 13,
-      "actual_margin": 10,
-      "actual_total": 36,
-      "start_date": "2025-12-06 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": "Mac Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777327,
       "week": 15,
       "year": 2025,
@@ -109,6 +91,24 @@
       "away_conference": "Big 12",
       "is_playoff": false,
       "round_name": "Big 12 Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777329,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Western Michigan",
+      "away_team": "Miami (OH)",
+      "home_points": 23,
+      "away_points": 13,
+      "actual_margin": 10,
+      "actual_total": 36,
+      "start_date": "2025-12-06 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": "Mac Championship",
       "bowl_name": null
     },
     {
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401777328,
-      "week": 15,
-      "year": 2025,
-      "status": "completed",
-      "home_team": "Virginia",
-      "away_team": "Duke",
-      "home_points": 20,
-      "away_points": 27,
-      "actual_margin": -7,
-      "actual_total": 47,
-      "start_date": "2025-12-07 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": "Acc Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401777353,
       "week": 15,
       "year": 2025,
@@ -163,6 +145,24 @@
       "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": "Big Ten Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401777328,
+      "week": 15,
+      "year": 2025,
+      "status": "completed",
+      "home_team": "Virginia",
+      "away_team": "Duke",
+      "home_points": 20,
+      "away_points": 27,
+      "actual_margin": -7,
+      "actual_total": 47,
+      "start_date": "2025-12-07 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": "Acc Championship",
       "bowl_name": null
     },
     {
