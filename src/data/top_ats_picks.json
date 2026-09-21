@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T01:34:05.649945+00:00",
+  "generated_at": "2026-09-21T20:35:31.159963+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
   "backtest_cover_rate": 0.5135,
   "picks_by_week": {
@@ -9,26 +9,13 @@
         "week": 4,
         "home_team": "West Virginia",
         "away_team": "Oklahoma State",
-        "market_spread": -1.5,
+        "market_spread": -1.0,
         "predicted_margin": -13.65,
         "pick": "West Virginia",
         "pick_side": "home",
-        "edge_pts": 12.2,
-        "cover_prob": 0.7698,
-        "adjusted_ranking_score": 0.5922
-      },
-      {
-        "game_id": 401860894,
-        "week": 4,
-        "home_team": "Utah State",
-        "away_team": "Troy",
-        "market_spread": -2.5,
-        "predicted_margin": 7.41,
-        "pick": "Troy",
-        "pick_side": "away",
-        "edge_pts": 9.9,
-        "cover_prob": 0.7265,
-        "adjusted_ranking_score": 0.4843
+        "edge_pts": 12.7,
+        "cover_prob": 0.779,
+        "adjusted_ranking_score": 0.6491
       },
       {
         "game_id": 401858462,
@@ -42,6 +29,19 @@
         "edge_pts": 6.3,
         "cover_prob": 0.6497,
         "adjusted_ranking_score": 0.4641
+      },
+      {
+        "game_id": 401860894,
+        "week": 4,
+        "home_team": "Utah State",
+        "away_team": "Troy",
+        "market_spread": -3.0,
+        "predicted_margin": 7.41,
+        "pick": "Troy",
+        "pick_side": "away",
+        "edge_pts": 10.4,
+        "cover_prob": 0.7365,
+        "adjusted_ranking_score": 0.4603
       }
     ],
     "5": [
@@ -105,12 +105,12 @@
         "home_team": "Oklahoma",
         "away_team": "Texas",
         "market_spread": 6.0,
-        "predicted_margin": 4.78,
+        "predicted_margin": 5.02,
         "pick": "Oklahoma",
         "pick_side": "home",
-        "edge_pts": 1.2,
-        "cover_prob": 0.5295,
-        "adjusted_ranking_score": 0.2407
+        "edge_pts": 1.0,
+        "cover_prob": 0.5237,
+        "adjusted_ranking_score": 0.2381
       }
     ],
     "7": [
@@ -284,12 +284,12 @@
         "home_team": "LSU",
         "away_team": "Texas",
         "market_spread": 2.5,
-        "predicted_margin": -1.64,
+        "predicted_margin": -1.4,
         "pick": "LSU",
         "pick_side": "home",
-        "edge_pts": 4.1,
-        "cover_prob": 0.5993,
-        "adjusted_ranking_score": 0.3995
+        "edge_pts": 3.9,
+        "cover_prob": 0.5937,
+        "adjusted_ranking_score": 0.3958
       },
       {
         "game_id": 401856887,
