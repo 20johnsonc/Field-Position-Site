@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T20:29:58.137210+00:00",
+  "generated_at": "2026-09-23T16:47:36.974717+00:00",
   "year": 2023,
   "week": 14,
   "games": [
@@ -40,24 +40,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539479,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Texas",
-      "away_team": "Oklahoma State",
-      "home_points": 49,
-      "away_points": 21,
-      "actual_margin": 28,
-      "actual_total": 70,
-      "start_date": "2023-12-02 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": "Dr Pepper Big 12 Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401539481,
       "week": 14,
       "year": 2023,
@@ -76,6 +58,24 @@
       "bowl_name": null
     },
     {
+      "game_id": 401539479,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Texas",
+      "away_team": "Oklahoma State",
+      "home_points": 49,
+      "away_points": 21,
+      "actual_margin": 28,
+      "actual_total": 70,
+      "start_date": "2023-12-02 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": "Dr Pepper Big 12 Championship",
+      "bowl_name": null
+    },
+    {
       "game_id": 401539482,
       "week": 14,
       "year": 2023,
@@ -91,6 +91,24 @@
       "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": "Mountain West Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401539477,
+      "week": 14,
+      "year": 2023,
+      "status": "completed",
+      "home_team": "Tulane",
+      "away_team": "SMU",
+      "home_points": 14,
+      "away_points": 26,
+      "actual_margin": -12,
+      "actual_total": 40,
+      "start_date": "2023-12-02 21:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
@@ -130,21 +148,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401539477,
+      "game_id": 401539478,
       "week": 14,
       "year": 2023,
       "status": "completed",
-      "home_team": "Tulane",
-      "away_team": "SMU",
-      "home_points": 14,
-      "away_points": 26,
-      "actual_margin": -12,
-      "actual_total": 40,
-      "start_date": "2023-12-02 21:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
+      "home_team": "Florida State",
+      "away_team": "Louisville",
+      "home_points": 16,
+      "away_points": 6,
+      "actual_margin": 10,
+      "actual_total": 22,
+      "start_date": "2023-12-03 01:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
-      "round_name": "American Athletic Championship",
+      "round_name": "Acc Championship",
       "bowl_name": null
     },
     {
@@ -163,24 +181,6 @@
       "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": "Big Ten Championship",
-      "bowl_name": null
-    },
-    {
-      "game_id": 401539478,
-      "week": 14,
-      "year": 2023,
-      "status": "completed",
-      "home_team": "Florida State",
-      "away_team": "Louisville",
-      "home_points": 16,
-      "away_points": 6,
-      "actual_margin": 10,
-      "actual_total": 22,
-      "start_date": "2023-12-03 01:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": "Acc Championship",
       "bowl_name": null
     },
     {

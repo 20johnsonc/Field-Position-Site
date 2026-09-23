@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T20:29:58.137210+00:00",
+  "generated_at": "2026-09-23T16:47:36.974717+00:00",
   "year": 2024,
   "week": 15,
   "games": [
@@ -22,24 +22,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673462,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "Army",
-      "away_team": "Tulane",
-      "home_points": 35,
-      "away_points": 14,
-      "actual_margin": 21,
-      "actual_total": 49,
-      "start_date": "2024-12-07 01:00:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": "American Athletic Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673468,
       "week": 15,
       "year": 2024,
@@ -58,21 +40,21 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673467,
+      "game_id": 401673462,
       "week": 15,
       "year": 2024,
       "status": "completed",
-      "home_team": "Miami (OH)",
-      "away_team": "Ohio",
-      "home_points": 3,
-      "away_points": 38,
-      "actual_margin": -35,
-      "actual_total": 41,
-      "start_date": "2024-12-07 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
+      "home_team": "Army",
+      "away_team": "Tulane",
+      "home_points": 35,
+      "away_points": 14,
+      "actual_margin": 21,
+      "actual_total": 49,
+      "start_date": "2024-12-07 01:00:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
       "is_playoff": false,
-      "round_name": "Mac Championship",
+      "round_name": "American Athletic Championship",
       "bowl_name": null
     },
     {
@@ -91,6 +73,24 @@
       "away_conference": "Big 12",
       "is_playoff": false,
       "round_name": "Dr Pepper Big 12 Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673467,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Miami (OH)",
+      "away_team": "Ohio",
+      "home_points": 3,
+      "away_points": 38,
+      "actual_margin": -35,
+      "actual_total": 41,
+      "start_date": "2024-12-07 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": "Mac Championship",
       "bowl_name": null
     },
     {
@@ -130,24 +130,6 @@
       "bowl_name": null
     },
     {
-      "game_id": 401673464,
-      "week": 15,
-      "year": 2024,
-      "status": "completed",
-      "home_team": "Oregon",
-      "away_team": "Penn State",
-      "home_points": 45,
-      "away_points": 37,
-      "actual_margin": 8,
-      "actual_total": 82,
-      "start_date": "2024-12-08 01:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
-      "is_playoff": false,
-      "round_name": "Big Ten Championship",
-      "bowl_name": null
-    },
-    {
       "game_id": 401673463,
       "week": 15,
       "year": 2024,
@@ -163,6 +145,24 @@
       "away_conference": "ACC",
       "is_playoff": false,
       "round_name": "Acc Championship",
+      "bowl_name": null
+    },
+    {
+      "game_id": 401673464,
+      "week": 15,
+      "year": 2024,
+      "status": "completed",
+      "home_team": "Oregon",
+      "away_team": "Penn State",
+      "home_points": 45,
+      "away_points": 37,
+      "actual_margin": 8,
+      "actual_total": 82,
+      "start_date": "2024-12-08 01:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": "Big Ten Championship",
       "bowl_name": null
     },
     {
