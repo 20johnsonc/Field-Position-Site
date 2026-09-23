@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T16:47:36.974717+00:00",
+  "generated_at": "2026-09-23T22:05:28.061751+00:00",
   "year": 2026,
   "week": 15,
   "games": [
@@ -16,11 +16,11 @@
       "round_name": null,
       "bowl_name": null,
       "status": "upcoming",
-      "predicted_score": "Army 29 - Navy 23",
-      "predicted_home_score": 29.1,
-      "predicted_away_score": 22.6,
-      "predicted_margin": -6.45,
-      "predicted_total": 51.69,
+      "predicted_score": "Army 31 - Navy 24",
+      "predicted_home_score": 30.8,
+      "predicted_away_score": 24.4,
+      "predicted_margin": -6.41,
+      "predicted_total": 55.14,
       "home_win_prob": 0.6701,
       "away_win_prob": 0.3299,
       "market_spread": 2.5,
