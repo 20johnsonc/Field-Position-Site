@@ -1,0 +1,1386 @@
+{
+  "generated_at": "2026-09-24T14:42:05.366541+00:00",
+  "default_year": 2026,
+  "season_type": "both",
+  "has_game_logs": false,
+  "years": [
+    2025,
+    2026
+  ],
+  "teams": {
+    "2025": [
+      {
+        "team": "Air Force",
+        "slug": "air-force",
+        "conference": "MWC"
+      },
+      {
+        "team": "Akron",
+        "slug": "akron",
+        "conference": "MAC"
+      },
+      {
+        "team": "Alabama",
+        "slug": "alabama",
+        "conference": "SEC"
+      },
+      {
+        "team": "App State",
+        "slug": "app-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Arizona",
+        "slug": "arizona",
+        "conference": "B12"
+      },
+      {
+        "team": "Arizona State",
+        "slug": "arizona-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Arkansas",
+        "slug": "arkansas",
+        "conference": "SEC"
+      },
+      {
+        "team": "Arkansas State",
+        "slug": "arkansas-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Army",
+        "slug": "army",
+        "conference": "AAC"
+      },
+      {
+        "team": "Auburn",
+        "slug": "auburn",
+        "conference": "SEC"
+      },
+      {
+        "team": "BYU",
+        "slug": "byu",
+        "conference": "B12"
+      },
+      {
+        "team": "Ball State",
+        "slug": "ball-state",
+        "conference": "MAC"
+      },
+      {
+        "team": "Baylor",
+        "slug": "baylor",
+        "conference": "B12"
+      },
+      {
+        "team": "Boise State",
+        "slug": "boise-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "Boston College",
+        "slug": "boston-college",
+        "conference": "ACC"
+      },
+      {
+        "team": "Bowling Green",
+        "slug": "bowling-green",
+        "conference": "MAC"
+      },
+      {
+        "team": "Buffalo",
+        "slug": "buffalo",
+        "conference": "MAC"
+      },
+      {
+        "team": "California",
+        "slug": "california",
+        "conference": "ACC"
+      },
+      {
+        "team": "Central Michigan",
+        "slug": "central-michigan",
+        "conference": "MAC"
+      },
+      {
+        "team": "Charlotte",
+        "slug": "charlotte",
+        "conference": "AAC"
+      },
+      {
+        "team": "Cincinnati",
+        "slug": "cincinnati",
+        "conference": "B12"
+      },
+      {
+        "team": "Clemson",
+        "slug": "clemson",
+        "conference": "ACC"
+      },
+      {
+        "team": "Coastal Carolina",
+        "slug": "coastal-carolina",
+        "conference": "SBC"
+      },
+      {
+        "team": "Colorado",
+        "slug": "colorado",
+        "conference": "B12"
+      },
+      {
+        "team": "Colorado State",
+        "slug": "colorado-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "Delaware",
+        "slug": "delaware",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Duke",
+        "slug": "duke",
+        "conference": "ACC"
+      },
+      {
+        "team": "East Carolina",
+        "slug": "east-carolina",
+        "conference": "AAC"
+      },
+      {
+        "team": "Eastern Michigan",
+        "slug": "eastern-michigan",
+        "conference": "MAC"
+      },
+      {
+        "team": "Florida",
+        "slug": "florida",
+        "conference": "SEC"
+      },
+      {
+        "team": "Florida Atlantic",
+        "slug": "florida-atlantic",
+        "conference": "AAC"
+      },
+      {
+        "team": "Florida International",
+        "slug": "florida-international",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Florida State",
+        "slug": "florida-state",
+        "conference": "ACC"
+      },
+      {
+        "team": "Fresno State",
+        "slug": "fresno-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "Georgia",
+        "slug": "georgia",
+        "conference": "SEC"
+      },
+      {
+        "team": "Georgia Southern",
+        "slug": "georgia-southern",
+        "conference": "SBC"
+      },
+      {
+        "team": "Georgia State",
+        "slug": "georgia-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Georgia Tech",
+        "slug": "georgia-tech",
+        "conference": "ACC"
+      },
+      {
+        "team": "Hawai'i",
+        "slug": "hawai-i",
+        "conference": "MWC"
+      },
+      {
+        "team": "Houston",
+        "slug": "houston",
+        "conference": "B12"
+      },
+      {
+        "team": "Illinois",
+        "slug": "illinois",
+        "conference": "B1G"
+      },
+      {
+        "team": "Indiana",
+        "slug": "indiana",
+        "conference": "B1G"
+      },
+      {
+        "team": "Iowa",
+        "slug": "iowa",
+        "conference": "B1G"
+      },
+      {
+        "team": "Iowa State",
+        "slug": "iowa-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Jacksonville State",
+        "slug": "jacksonville-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "James Madison",
+        "slug": "james-madison",
+        "conference": "SBC"
+      },
+      {
+        "team": "Kansas",
+        "slug": "kansas",
+        "conference": "B12"
+      },
+      {
+        "team": "Kansas State",
+        "slug": "kansas-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Kennesaw State",
+        "slug": "kennesaw-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Kent State",
+        "slug": "kent-state",
+        "conference": "MAC"
+      },
+      {
+        "team": "Kentucky",
+        "slug": "kentucky",
+        "conference": "SEC"
+      },
+      {
+        "team": "LSU",
+        "slug": "lsu",
+        "conference": "SEC"
+      },
+      {
+        "team": "Liberty",
+        "slug": "liberty",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Louisiana",
+        "slug": "louisiana",
+        "conference": "SBC"
+      },
+      {
+        "team": "Louisiana Tech",
+        "slug": "louisiana-tech",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Louisville",
+        "slug": "louisville",
+        "conference": "ACC"
+      },
+      {
+        "team": "Marshall",
+        "slug": "marshall",
+        "conference": "SBC"
+      },
+      {
+        "team": "Maryland",
+        "slug": "maryland",
+        "conference": "B1G"
+      },
+      {
+        "team": "Massachusetts",
+        "slug": "massachusetts",
+        "conference": "MAC"
+      },
+      {
+        "team": "Memphis",
+        "slug": "memphis",
+        "conference": "AAC"
+      },
+      {
+        "team": "Miami",
+        "slug": "miami",
+        "conference": "ACC"
+      },
+      {
+        "team": "Miami (OH)",
+        "slug": "miami-oh",
+        "conference": "MAC"
+      },
+      {
+        "team": "Michigan",
+        "slug": "michigan",
+        "conference": "B1G"
+      },
+      {
+        "team": "Michigan State",
+        "slug": "michigan-state",
+        "conference": "B1G"
+      },
+      {
+        "team": "Middle Tennessee",
+        "slug": "middle-tennessee",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Minnesota",
+        "slug": "minnesota",
+        "conference": "B1G"
+      },
+      {
+        "team": "Mississippi State",
+        "slug": "mississippi-state",
+        "conference": "SEC"
+      },
+      {
+        "team": "Missouri",
+        "slug": "missouri",
+        "conference": "SEC"
+      },
+      {
+        "team": "Missouri State",
+        "slug": "missouri-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "NC State",
+        "slug": "nc-state",
+        "conference": "ACC"
+      },
+      {
+        "team": "Navy",
+        "slug": "navy",
+        "conference": "AAC"
+      },
+      {
+        "team": "Nebraska",
+        "slug": "nebraska",
+        "conference": "B1G"
+      },
+      {
+        "team": "Nevada",
+        "slug": "nevada",
+        "conference": "MWC"
+      },
+      {
+        "team": "New Mexico",
+        "slug": "new-mexico",
+        "conference": "MWC"
+      },
+      {
+        "team": "New Mexico State",
+        "slug": "new-mexico-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "North Carolina",
+        "slug": "north-carolina",
+        "conference": "ACC"
+      },
+      {
+        "team": "North Texas",
+        "slug": "north-texas",
+        "conference": "AAC"
+      },
+      {
+        "team": "Northern Illinois",
+        "slug": "northern-illinois",
+        "conference": "MAC"
+      },
+      {
+        "team": "Northwestern",
+        "slug": "northwestern",
+        "conference": "B1G"
+      },
+      {
+        "team": "Notre Dame",
+        "slug": "notre-dame",
+        "conference": "Ind"
+      },
+      {
+        "team": "Ohio",
+        "slug": "ohio",
+        "conference": "MAC"
+      },
+      {
+        "team": "Ohio State",
+        "slug": "ohio-state",
+        "conference": "B1G"
+      },
+      {
+        "team": "Oklahoma",
+        "slug": "oklahoma",
+        "conference": "SEC"
+      },
+      {
+        "team": "Oklahoma State",
+        "slug": "oklahoma-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Old Dominion",
+        "slug": "old-dominion",
+        "conference": "SBC"
+      },
+      {
+        "team": "Ole Miss",
+        "slug": "ole-miss",
+        "conference": "SEC"
+      },
+      {
+        "team": "Oregon",
+        "slug": "oregon",
+        "conference": "B1G"
+      },
+      {
+        "team": "Oregon State",
+        "slug": "oregon-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Penn State",
+        "slug": "penn-state",
+        "conference": "B1G"
+      },
+      {
+        "team": "Pittsburgh",
+        "slug": "pittsburgh",
+        "conference": "ACC"
+      },
+      {
+        "team": "Purdue",
+        "slug": "purdue",
+        "conference": "B1G"
+      },
+      {
+        "team": "Rice",
+        "slug": "rice",
+        "conference": "AAC"
+      },
+      {
+        "team": "Rutgers",
+        "slug": "rutgers",
+        "conference": "B1G"
+      },
+      {
+        "team": "SMU",
+        "slug": "smu",
+        "conference": "ACC"
+      },
+      {
+        "team": "Sam Houston",
+        "slug": "sam-houston",
+        "conference": "CUSA"
+      },
+      {
+        "team": "San Diego State",
+        "slug": "san-diego-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "San Jos\u00e9 State",
+        "slug": "san-jose-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "South Alabama",
+        "slug": "south-alabama",
+        "conference": "SBC"
+      },
+      {
+        "team": "South Carolina",
+        "slug": "south-carolina",
+        "conference": "SEC"
+      },
+      {
+        "team": "South Florida",
+        "slug": "south-florida",
+        "conference": "AAC"
+      },
+      {
+        "team": "Southern Miss",
+        "slug": "southern-miss",
+        "conference": "SBC"
+      },
+      {
+        "team": "Stanford",
+        "slug": "stanford",
+        "conference": "ACC"
+      },
+      {
+        "team": "Syracuse",
+        "slug": "syracuse",
+        "conference": "ACC"
+      },
+      {
+        "team": "TCU",
+        "slug": "tcu",
+        "conference": "B12"
+      },
+      {
+        "team": "Temple",
+        "slug": "temple",
+        "conference": "AAC"
+      },
+      {
+        "team": "Tennessee",
+        "slug": "tennessee",
+        "conference": "SEC"
+      },
+      {
+        "team": "Texas",
+        "slug": "texas",
+        "conference": "SEC"
+      },
+      {
+        "team": "Texas A&M",
+        "slug": "texas-a-m",
+        "conference": "SEC"
+      },
+      {
+        "team": "Texas State",
+        "slug": "texas-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Texas Tech",
+        "slug": "texas-tech",
+        "conference": "B12"
+      },
+      {
+        "team": "Toledo",
+        "slug": "toledo",
+        "conference": "MAC"
+      },
+      {
+        "team": "Troy",
+        "slug": "troy",
+        "conference": "SBC"
+      },
+      {
+        "team": "Tulane",
+        "slug": "tulane",
+        "conference": "AAC"
+      },
+      {
+        "team": "Tulsa",
+        "slug": "tulsa",
+        "conference": "AAC"
+      },
+      {
+        "team": "UAB",
+        "slug": "uab",
+        "conference": "AAC"
+      },
+      {
+        "team": "UCF",
+        "slug": "ucf",
+        "conference": "B12"
+      },
+      {
+        "team": "UCLA",
+        "slug": "ucla",
+        "conference": "B1G"
+      },
+      {
+        "team": "UConn",
+        "slug": "uconn",
+        "conference": "Ind"
+      },
+      {
+        "team": "UL Monroe",
+        "slug": "ul-monroe",
+        "conference": "SBC"
+      },
+      {
+        "team": "UNLV",
+        "slug": "unlv",
+        "conference": "MWC"
+      },
+      {
+        "team": "USC",
+        "slug": "usc",
+        "conference": "B1G"
+      },
+      {
+        "team": "UTEP",
+        "slug": "utep",
+        "conference": "CUSA"
+      },
+      {
+        "team": "UTSA",
+        "slug": "utsa",
+        "conference": "AAC"
+      },
+      {
+        "team": "Utah",
+        "slug": "utah",
+        "conference": "B12"
+      },
+      {
+        "team": "Utah State",
+        "slug": "utah-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "Vanderbilt",
+        "slug": "vanderbilt",
+        "conference": "SEC"
+      },
+      {
+        "team": "Virginia",
+        "slug": "virginia",
+        "conference": "ACC"
+      },
+      {
+        "team": "Virginia Tech",
+        "slug": "virginia-tech",
+        "conference": "ACC"
+      },
+      {
+        "team": "Wake Forest",
+        "slug": "wake-forest",
+        "conference": "ACC"
+      },
+      {
+        "team": "Washington",
+        "slug": "washington",
+        "conference": "B1G"
+      },
+      {
+        "team": "Washington State",
+        "slug": "washington-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "West Virginia",
+        "slug": "west-virginia",
+        "conference": "B12"
+      },
+      {
+        "team": "Western Kentucky",
+        "slug": "western-kentucky",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Western Michigan",
+        "slug": "western-michigan",
+        "conference": "MAC"
+      },
+      {
+        "team": "Wisconsin",
+        "slug": "wisconsin",
+        "conference": "B1G"
+      },
+      {
+        "team": "Wyoming",
+        "slug": "wyoming",
+        "conference": "MWC"
+      }
+    ],
+    "2026": [
+      {
+        "team": "Air Force",
+        "slug": "air-force",
+        "conference": "MWC"
+      },
+      {
+        "team": "Akron",
+        "slug": "akron",
+        "conference": "MAC"
+      },
+      {
+        "team": "Alabama",
+        "slug": "alabama",
+        "conference": "SEC"
+      },
+      {
+        "team": "App State",
+        "slug": "app-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Arizona",
+        "slug": "arizona",
+        "conference": "B12"
+      },
+      {
+        "team": "Arizona State",
+        "slug": "arizona-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Arkansas",
+        "slug": "arkansas",
+        "conference": "SEC"
+      },
+      {
+        "team": "Arkansas State",
+        "slug": "arkansas-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Army",
+        "slug": "army",
+        "conference": "AAC"
+      },
+      {
+        "team": "Auburn",
+        "slug": "auburn",
+        "conference": "SEC"
+      },
+      {
+        "team": "BYU",
+        "slug": "byu",
+        "conference": "B12"
+      },
+      {
+        "team": "Ball State",
+        "slug": "ball-state",
+        "conference": "MAC"
+      },
+      {
+        "team": "Baylor",
+        "slug": "baylor",
+        "conference": "B12"
+      },
+      {
+        "team": "Boise State",
+        "slug": "boise-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Boston College",
+        "slug": "boston-college",
+        "conference": "ACC"
+      },
+      {
+        "team": "Bowling Green",
+        "slug": "bowling-green",
+        "conference": "MAC"
+      },
+      {
+        "team": "Buffalo",
+        "slug": "buffalo",
+        "conference": "MAC"
+      },
+      {
+        "team": "California",
+        "slug": "california",
+        "conference": "ACC"
+      },
+      {
+        "team": "Central Michigan",
+        "slug": "central-michigan",
+        "conference": "MAC"
+      },
+      {
+        "team": "Charlotte",
+        "slug": "charlotte",
+        "conference": "AAC"
+      },
+      {
+        "team": "Cincinnati",
+        "slug": "cincinnati",
+        "conference": "B12"
+      },
+      {
+        "team": "Clemson",
+        "slug": "clemson",
+        "conference": "ACC"
+      },
+      {
+        "team": "Coastal Carolina",
+        "slug": "coastal-carolina",
+        "conference": "SBC"
+      },
+      {
+        "team": "Colorado",
+        "slug": "colorado",
+        "conference": "B12"
+      },
+      {
+        "team": "Colorado State",
+        "slug": "colorado-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Delaware",
+        "slug": "delaware",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Duke",
+        "slug": "duke",
+        "conference": "ACC"
+      },
+      {
+        "team": "East Carolina",
+        "slug": "east-carolina",
+        "conference": "AAC"
+      },
+      {
+        "team": "Eastern Michigan",
+        "slug": "eastern-michigan",
+        "conference": "MAC"
+      },
+      {
+        "team": "Florida",
+        "slug": "florida",
+        "conference": "SEC"
+      },
+      {
+        "team": "Florida Atlantic",
+        "slug": "florida-atlantic",
+        "conference": "AAC"
+      },
+      {
+        "team": "Florida International",
+        "slug": "florida-international",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Florida State",
+        "slug": "florida-state",
+        "conference": "ACC"
+      },
+      {
+        "team": "Fresno State",
+        "slug": "fresno-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Georgia",
+        "slug": "georgia",
+        "conference": "SEC"
+      },
+      {
+        "team": "Georgia Southern",
+        "slug": "georgia-southern",
+        "conference": "SBC"
+      },
+      {
+        "team": "Georgia State",
+        "slug": "georgia-state",
+        "conference": "SBC"
+      },
+      {
+        "team": "Georgia Tech",
+        "slug": "georgia-tech",
+        "conference": "ACC"
+      },
+      {
+        "team": "Hawai'i",
+        "slug": "hawai-i",
+        "conference": "MWC"
+      },
+      {
+        "team": "Houston",
+        "slug": "houston",
+        "conference": "B12"
+      },
+      {
+        "team": "Illinois",
+        "slug": "illinois",
+        "conference": "B1G"
+      },
+      {
+        "team": "Indiana",
+        "slug": "indiana",
+        "conference": "B1G"
+      },
+      {
+        "team": "Iowa",
+        "slug": "iowa",
+        "conference": "B1G"
+      },
+      {
+        "team": "Iowa State",
+        "slug": "iowa-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Jacksonville State",
+        "slug": "jacksonville-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "James Madison",
+        "slug": "james-madison",
+        "conference": "SBC"
+      },
+      {
+        "team": "Kansas",
+        "slug": "kansas",
+        "conference": "B12"
+      },
+      {
+        "team": "Kansas State",
+        "slug": "kansas-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Kennesaw State",
+        "slug": "kennesaw-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Kent State",
+        "slug": "kent-state",
+        "conference": "MAC"
+      },
+      {
+        "team": "Kentucky",
+        "slug": "kentucky",
+        "conference": "SEC"
+      },
+      {
+        "team": "LSU",
+        "slug": "lsu",
+        "conference": "SEC"
+      },
+      {
+        "team": "Liberty",
+        "slug": "liberty",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Louisiana",
+        "slug": "louisiana",
+        "conference": "SBC"
+      },
+      {
+        "team": "Louisiana Tech",
+        "slug": "louisiana-tech",
+        "conference": "SBC"
+      },
+      {
+        "team": "Louisville",
+        "slug": "louisville",
+        "conference": "ACC"
+      },
+      {
+        "team": "Marshall",
+        "slug": "marshall",
+        "conference": "SBC"
+      },
+      {
+        "team": "Maryland",
+        "slug": "maryland",
+        "conference": "B1G"
+      },
+      {
+        "team": "Massachusetts",
+        "slug": "massachusetts",
+        "conference": "MAC"
+      },
+      {
+        "team": "Memphis",
+        "slug": "memphis",
+        "conference": "AAC"
+      },
+      {
+        "team": "Miami",
+        "slug": "miami",
+        "conference": "ACC"
+      },
+      {
+        "team": "Miami (OH)",
+        "slug": "miami-oh",
+        "conference": "MAC"
+      },
+      {
+        "team": "Michigan",
+        "slug": "michigan",
+        "conference": "B1G"
+      },
+      {
+        "team": "Michigan State",
+        "slug": "michigan-state",
+        "conference": "B1G"
+      },
+      {
+        "team": "Middle Tennessee",
+        "slug": "middle-tennessee",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Minnesota",
+        "slug": "minnesota",
+        "conference": "B1G"
+      },
+      {
+        "team": "Mississippi State",
+        "slug": "mississippi-state",
+        "conference": "SEC"
+      },
+      {
+        "team": "Missouri",
+        "slug": "missouri",
+        "conference": "SEC"
+      },
+      {
+        "team": "Missouri State",
+        "slug": "missouri-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "NC State",
+        "slug": "nc-state",
+        "conference": "ACC"
+      },
+      {
+        "team": "Navy",
+        "slug": "navy",
+        "conference": "AAC"
+      },
+      {
+        "team": "Nebraska",
+        "slug": "nebraska",
+        "conference": "B1G"
+      },
+      {
+        "team": "Nevada",
+        "slug": "nevada",
+        "conference": "MWC"
+      },
+      {
+        "team": "New Mexico",
+        "slug": "new-mexico",
+        "conference": "MWC"
+      },
+      {
+        "team": "New Mexico State",
+        "slug": "new-mexico-state",
+        "conference": "CUSA"
+      },
+      {
+        "team": "North Carolina",
+        "slug": "north-carolina",
+        "conference": "ACC"
+      },
+      {
+        "team": "North Dakota State",
+        "slug": "north-dakota-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "North Texas",
+        "slug": "north-texas",
+        "conference": "AAC"
+      },
+      {
+        "team": "Northern Illinois",
+        "slug": "northern-illinois",
+        "conference": "MWC"
+      },
+      {
+        "team": "Northwestern",
+        "slug": "northwestern",
+        "conference": "B1G"
+      },
+      {
+        "team": "Notre Dame",
+        "slug": "notre-dame",
+        "conference": "Ind"
+      },
+      {
+        "team": "Ohio",
+        "slug": "ohio",
+        "conference": "MAC"
+      },
+      {
+        "team": "Ohio State",
+        "slug": "ohio-state",
+        "conference": "B1G"
+      },
+      {
+        "team": "Oklahoma",
+        "slug": "oklahoma",
+        "conference": "SEC"
+      },
+      {
+        "team": "Oklahoma State",
+        "slug": "oklahoma-state",
+        "conference": "B12"
+      },
+      {
+        "team": "Old Dominion",
+        "slug": "old-dominion",
+        "conference": "SBC"
+      },
+      {
+        "team": "Ole Miss",
+        "slug": "ole-miss",
+        "conference": "SEC"
+      },
+      {
+        "team": "Oregon",
+        "slug": "oregon",
+        "conference": "B1G"
+      },
+      {
+        "team": "Oregon State",
+        "slug": "oregon-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Penn State",
+        "slug": "penn-state",
+        "conference": "B1G"
+      },
+      {
+        "team": "Pittsburgh",
+        "slug": "pittsburgh",
+        "conference": "ACC"
+      },
+      {
+        "team": "Purdue",
+        "slug": "purdue",
+        "conference": "B1G"
+      },
+      {
+        "team": "Rice",
+        "slug": "rice",
+        "conference": "AAC"
+      },
+      {
+        "team": "Rutgers",
+        "slug": "rutgers",
+        "conference": "B1G"
+      },
+      {
+        "team": "SMU",
+        "slug": "smu",
+        "conference": "ACC"
+      },
+      {
+        "team": "Sacramento State",
+        "slug": "sacramento-state",
+        "conference": "MAC"
+      },
+      {
+        "team": "Sam Houston",
+        "slug": "sam-houston",
+        "conference": "CUSA"
+      },
+      {
+        "team": "San Diego State",
+        "slug": "san-diego-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "San Jos\u00e9 State",
+        "slug": "san-jose-state",
+        "conference": "MWC"
+      },
+      {
+        "team": "South Alabama",
+        "slug": "south-alabama",
+        "conference": "SBC"
+      },
+      {
+        "team": "South Carolina",
+        "slug": "south-carolina",
+        "conference": "SEC"
+      },
+      {
+        "team": "South Florida",
+        "slug": "south-florida",
+        "conference": "AAC"
+      },
+      {
+        "team": "Southern Miss",
+        "slug": "southern-miss",
+        "conference": "SBC"
+      },
+      {
+        "team": "Stanford",
+        "slug": "stanford",
+        "conference": "ACC"
+      },
+      {
+        "team": "Syracuse",
+        "slug": "syracuse",
+        "conference": "ACC"
+      },
+      {
+        "team": "TCU",
+        "slug": "tcu",
+        "conference": "B12"
+      },
+      {
+        "team": "Temple",
+        "slug": "temple",
+        "conference": "AAC"
+      },
+      {
+        "team": "Tennessee",
+        "slug": "tennessee",
+        "conference": "SEC"
+      },
+      {
+        "team": "Texas",
+        "slug": "texas",
+        "conference": "SEC"
+      },
+      {
+        "team": "Texas A&M",
+        "slug": "texas-a-m",
+        "conference": "SEC"
+      },
+      {
+        "team": "Texas State",
+        "slug": "texas-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Texas Tech",
+        "slug": "texas-tech",
+        "conference": "B12"
+      },
+      {
+        "team": "Toledo",
+        "slug": "toledo",
+        "conference": "MAC"
+      },
+      {
+        "team": "Troy",
+        "slug": "troy",
+        "conference": "SBC"
+      },
+      {
+        "team": "Tulane",
+        "slug": "tulane",
+        "conference": "AAC"
+      },
+      {
+        "team": "Tulsa",
+        "slug": "tulsa",
+        "conference": "AAC"
+      },
+      {
+        "team": "UAB",
+        "slug": "uab",
+        "conference": "AAC"
+      },
+      {
+        "team": "UCF",
+        "slug": "ucf",
+        "conference": "B12"
+      },
+      {
+        "team": "UCLA",
+        "slug": "ucla",
+        "conference": "B1G"
+      },
+      {
+        "team": "UConn",
+        "slug": "uconn",
+        "conference": "Ind"
+      },
+      {
+        "team": "UL Monroe",
+        "slug": "ul-monroe",
+        "conference": "SBC"
+      },
+      {
+        "team": "UNLV",
+        "slug": "unlv",
+        "conference": "MWC"
+      },
+      {
+        "team": "USC",
+        "slug": "usc",
+        "conference": "B1G"
+      },
+      {
+        "team": "UTEP",
+        "slug": "utep",
+        "conference": "MWC"
+      },
+      {
+        "team": "UTSA",
+        "slug": "utsa",
+        "conference": "AAC"
+      },
+      {
+        "team": "Utah",
+        "slug": "utah",
+        "conference": "B12"
+      },
+      {
+        "team": "Utah State",
+        "slug": "utah-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "Vanderbilt",
+        "slug": "vanderbilt",
+        "conference": "SEC"
+      },
+      {
+        "team": "Virginia",
+        "slug": "virginia",
+        "conference": "ACC"
+      },
+      {
+        "team": "Virginia Tech",
+        "slug": "virginia-tech",
+        "conference": "ACC"
+      },
+      {
+        "team": "Wake Forest",
+        "slug": "wake-forest",
+        "conference": "ACC"
+      },
+      {
+        "team": "Washington",
+        "slug": "washington",
+        "conference": "B1G"
+      },
+      {
+        "team": "Washington State",
+        "slug": "washington-state",
+        "conference": "PAC"
+      },
+      {
+        "team": "West Virginia",
+        "slug": "west-virginia",
+        "conference": "B12"
+      },
+      {
+        "team": "Western Kentucky",
+        "slug": "western-kentucky",
+        "conference": "CUSA"
+      },
+      {
+        "team": "Western Michigan",
+        "slug": "western-michigan",
+        "conference": "MAC"
+      },
+      {
+        "team": "Wisconsin",
+        "slug": "wisconsin",
+        "conference": "B1G"
+      },
+      {
+        "team": "Wyoming",
+        "slug": "wyoming",
+        "conference": "MWC"
+      }
+    ]
+  }
+}
