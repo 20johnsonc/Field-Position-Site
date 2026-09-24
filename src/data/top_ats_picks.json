@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T22:05:39.129408+00:00",
+  "generated_at": "2026-09-24T21:48:01.959013+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
   "backtest_cover_rate": 0.5223,
   "picks_by_week": {
@@ -46,30 +46,43 @@
     ],
     "5": [
       {
-        "game_id": 401858249,
+        "game_id": 401856708,
         "week": 5,
-        "home_team": "Clemson",
-        "away_team": "Miami",
-        "market_spread": 7.0,
-        "predicted_margin": 24.48,
-        "pick": "Miami",
-        "pick_side": "away",
-        "edge_pts": 17.5,
-        "cover_prob": 0.8568,
-        "adjusted_ranking_score": 0.357
+        "home_team": "Missouri",
+        "away_team": "Florida",
+        "market_spread": 3.0,
+        "predicted_margin": -1.07,
+        "pick": "Missouri",
+        "pick_side": "home",
+        "edge_pts": 4.1,
+        "cover_prob": 0.598,
+        "adjusted_ranking_score": 0.3738
       },
       {
-        "game_id": 401858250,
+        "game_id": 401856707,
         "week": 5,
-        "home_team": "North Carolina",
-        "away_team": "Notre Dame",
-        "market_spread": 23.5,
-        "predicted_margin": 20.65,
-        "pick": "North Carolina",
+        "home_team": "Mississippi State",
+        "away_team": "Alabama",
+        "market_spread": 3.5,
+        "predicted_margin": 6.34,
+        "pick": "Alabama",
+        "pick_side": "away",
+        "edge_pts": 2.8,
+        "cover_prob": 0.5688,
+        "adjusted_ranking_score": 0.3346
+      },
+      {
+        "game_id": 401856709,
+        "week": 5,
+        "home_team": "South Carolina",
+        "away_team": "Kentucky",
+        "market_spread": -6.0,
+        "predicted_margin": -11.02,
+        "pick": "South Carolina",
         "pick_side": "home",
-        "edge_pts": 2.9,
-        "cover_prob": 0.569,
-        "adjusted_ranking_score": 0.0998
+        "edge_pts": 5.0,
+        "cover_prob": 0.6203,
+        "adjusted_ranking_score": 0.2819
       }
     ],
     "6": [
