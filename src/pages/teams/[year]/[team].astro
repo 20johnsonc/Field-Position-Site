@@ -3,6 +3,9 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import Layout from '../../../layouts/Layout.astro';
 import TeamTrajectoryChart from '../../../components/TeamTrajectoryChart.tsx';
+import fs from 'node:fs';
+import path from 'node:path';
+import PassingRushingTab from '../../../components/PassingRushingTab.astro';
 import gameHistoryRaw from '../../../data/game_history.json';
 import trajectoriesRaw from '../../../data/trajectories.json';
 import {
@@ -15,8 +18,6 @@ import {
 } from '../../../lib/data';
 
 const PUBLIC_DATA = join(process.cwd(), 'public', 'data');
-
-
 
 function loadJson(relPath: string, fallback: unknown = {}) {
   try {
@@ -262,6 +263,22 @@ const sortedGameLog = fullSchedule.sort((a: any, b: any) => {
 
   return a.week - b.week;
 });
+
+// Dynamically load the passing/rushing JSON for the current row.year
+let teamPrData = null;
+
+try {
+  const filePath = path.resolve(`./public/data/passing-rushing/${row.year}.json`);
+  if (fs.existsSync(filePath)) {
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const passingRushingData = JSON.parse(fileContent);
+    teamPrData = passingRushingData?.teams?.[row.team] || null;
+  }
+} catch (e) {
+  // File might not exist for years prior to 2025
+  teamPrData = null;
+}
+
 ---
 
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
@@ -321,6 +338,16 @@ const sortedGameLog = fullSchedule.sort((a: any, b: any) => {
     )}
   </div>
 
+  {/* Passing & Rushing Spatial Breakdown Section */}
+  {teamPrData && (
+    <PassingRushingTab 
+      teamData={teamPrData} 
+      teamName={row.team}
+      teamSlug={slugifyTeam(row.team)}
+      year={row.year}
+    />
+  )}
+
   <TeamTrajectoryChart
     client:load
     team={row.team}
@@ -338,7 +365,7 @@ const sortedGameLog = fullSchedule.sort((a: any, b: any) => {
         <th>Week</th>
         <th>Opponent</th>
         <th>Result / Prediction</th>
-        <th class="num">vs Expectation</th>
+        <th class="num">vs Prediction</th>
       </tr>
     </thead>
     <tbody>

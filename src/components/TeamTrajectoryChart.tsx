@@ -20,6 +20,27 @@ Chart.register(
   Tooltip
 );
 
+function calculateBubbleRadius(result: string, beatExpectation: number | null): number {
+  const MIN_RADIUS = 7;
+  const MAX_RADIUS = 25;
+  const SCALE_FACTOR = 2.0; // Controls growth rate
+
+  if (beatExpectation == null) return MIN_RADIUS;
+
+  // Determine excess performance (positive = exceeding expectation in either direction)
+  const margin =
+    result === 'W'
+      ? Math.max(0, beatExpectation) // Win: care about positive beats
+      : Math.max(0, -beatExpectation); // Loss: care about negative misses (blowouts)
+
+  if (margin === 0) return MIN_RADIUS;
+
+  // Scale using square root so area scales linearly with point margin
+  const calculatedRadius = MIN_RADIUS + Math.sqrt(margin) * SCALE_FACTOR;
+
+  return Math.min(calculatedRadius, MAX_RADIUS);
+}
+
 export interface WeeklyEfficiencyEntry {
   week: number;
   adj_off_ppa?: number;
@@ -54,14 +75,21 @@ interface Props {
   minWeek: number;
 }
 
-export default function TeamTrajectoryChart({ team, trajectory = [], games = [], yMin, yMax, minWeek }: Props) {
+export default function TeamTrajectoryChart({
+  team,
+  trajectory = [],
+  games = [],
+  yMin,
+  yMax,
+  minWeek,
+}: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
+
   const chartData = useMemo(() => {
     if (!trajectory.length) return null;
 
     const maxRegularWeek = Math.max(12, ...trajectory.map((w) => Number(w.week)));
-
     const chartXMin = minWeek;
 
     const sortedWeeks = [...trajectory].sort((a, b) => Number(a.week) - Number(b.week));
@@ -76,13 +104,11 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
 
     const efficiencyByWeek = new Map<number, number>();
     processedWeeks.forEach((w) => {
-      // REVERTED: Map bubbles back to the raw PPA values.
-      // We still check for nulls so it drops the bubble completely if the raw data is missing.
       if (w.raw_off_ppa != null && w.raw_def_ppa != null) {
         efficiencyByWeek.set(w.effectiveWeek, w.raw_off_ppa - w.raw_def_ppa);
       }
     });
-    
+
     const adjLinePoints = processedWeeks
       .filter((w) => w.adj_off_ppa != null && w.adj_def_value != null)
       .map((w) => ({
@@ -107,35 +133,42 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
       }
     });
 
-    const maxBeatExp = Math.max(1, ...games.map((g) => Math.abs(g.beat_expectation_by ?? 0)));
-
+    // Clean single-pass calculation for bubbles and colors
     const gameBubbles = games
       .map((g) => {
         const gNum = Number(g.week);
         const isPost = (g.is_playoff || g.bowl_name || g.round_name) && gNum <= 1;
         const stringifiedKey = JSON.stringify({ week: gNum, opp: g.opponent });
-        
         const effWeek = isPost ? (gameWeekMap.get(stringifiedKey) ?? gNum) : gNum;
 
-        // Will cleanly skip if the raw data null check above failed
         if (!efficiencyByWeek.has(effWeek)) return null;
 
-        const mag = Math.abs(g.beat_expectation_by ?? 0);
+        const isWin = g.result === 'W';
+
         return {
           game: g,
           x: effWeek,
           y: efficiencyByWeek.get(effWeek)!,
-          r: 5 + (mag / maxBeatExp) * 16,
+          r: calculateBubbleRadius(g.result, g.beat_expectation_by),
+          bgColor: isWin ? 'rgba(34, 197, 94, 0.75)' : 'rgba(239, 68, 68, 0.75)',
+          borderColor: isWin ? '#15803d' : '#b91c1c',
         };
       })
-      .filter(Boolean) as { game: GameLogEntry; x: number; y: number; r: number }[];
+      .filter(Boolean) as Array<{
+        game: GameLogEntry;
+        x: number;
+        y: number;
+        r: number;
+        bgColor: string;
+        borderColor: string;
+      }>;
 
     const allWeeks = [
       ...processedWeeks.map((w) => w.effectiveWeek),
       ...gameBubbles.map((b) => b.x),
       12,
     ];
-    
+
     const chartXMax = Math.max(...allWeeks);
 
     const allValues: number[] = [
@@ -145,7 +178,7 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
       yMin,
       yMax,
     ];
-    
+
     const dynamicMin = Math.min(...allValues);
     const dynamicMax = Math.max(...allValues);
     const padding = Math.max(0.15, (dynamicMax - dynamicMin) * 0.15);
@@ -153,7 +186,15 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
     const chartYMin = dynamicMin - padding;
     const chartYMax = dynamicMax + padding;
 
-    return { adjLinePoints, fbsLinePoints, gameBubbles, chartYMin, chartYMax, chartXMin, chartXMax };
+    return {
+      adjLinePoints,
+      fbsLinePoints,
+      gameBubbles,
+      chartYMin,
+      chartYMax,
+      chartXMin,
+      chartXMax,
+    };
   }, [trajectory, games, yMin, yMax, minWeek]);
 
   useEffect(() => {
@@ -195,12 +236,10 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
           },
           {
             type: 'bubble',
-            label: 'Game Result (size = Beat Expectation)',
-            data: gameBubbles.map((b) => ({ x: b.x, y: b.y, r: b.r })),
-            backgroundColor: gameBubbles.map((b) =>
-              b.game.result === 'W' ? 'rgba(34, 197, 94, 0.75)' : 'rgba(239, 68, 68, 0.75)'
-            ),
-            borderColor: gameBubbles.map((b) => (b.game.result === 'W' ? '#15803d' : '#b91c1c')),
+            label: 'Game Result',
+            data: gameBubbles,
+            backgroundColor: gameBubbles.map((b) => b.bgColor),
+            borderColor: gameBubbles.map((b) => b.borderColor),
             borderWidth: 2,
             order: 1,
             clip: false,
@@ -225,7 +264,10 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
                 const idx = items[0].dataIndex;
                 if (items[0].datasetIndex === 2) {
                   const g = gameBubbles[idx].game;
-                  const label = g.bowl_name || g.round_name || (g.is_playoff ? 'Playoff Game' : `Week ${g.week}`);
+                  const label =
+                    g.bowl_name ||
+                    g.round_name ||
+                    (g.is_playoff ? 'Playoff Game' : `Week ${g.week}`);
                   return `${label}: vs ${g.opponent}`;
                 }
                 return `Week ${items[0].parsed.x}`;
@@ -235,15 +277,19 @@ export default function TeamTrajectoryChart({ team, trajectory = [], games = [],
                   const g = gameBubbles[context.dataIndex].game;
                   const tooltipLines = [
                     `Result: ${g.result} (${g.location})`,
-                    `Actual Margin: ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`
+                    `Actual Margin: ${g.actual_margin > 0 ? '+' : ''}${g.actual_margin}`,
                   ];
 
                   if (g.predicted_margin != null) {
-                    tooltipLines.push(`Expected Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`);
+                    tooltipLines.push(
+                      `Expected Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`
+                    );
                   }
-                  
+
                   if (g.beat_expectation_by != null) {
-                    tooltipLines.push(`Versus Expectation: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`);
+                    tooltipLines.push(
+                      `Versus Prediction: ${g.beat_expectation_by > 0 ? '+' : ''}${g.beat_expectation_by.toFixed(1)}`
+                    );
                   }
 
                   return tooltipLines;
