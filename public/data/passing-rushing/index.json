@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-24T14:42:05.366541+00:00",
+  "generated_at": "2026-09-24T14:46:45.687826+00:00",
   "default_year": 2026,
   "season_type": "both",
-  "has_game_logs": false,
+  "has_game_logs": true,
   "years": [
     2025,
     2026
