@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-24T21:48:01.959013+00:00",
+  "generated_at": "2026-09-25T17:15:58.085846+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
-  "backtest_cover_rate": 0.5223,
+  "backtest_cover_rate": 0.5253,
   "picks_by_week": {
     "4": [
       {
@@ -35,13 +35,13 @@
         "week": 4,
         "home_team": "California",
         "away_team": "Clemson",
-        "market_spread": 1.0,
+        "market_spread": 1.5,
         "predicted_margin": -2.16,
         "pick": "California",
         "pick_side": "home",
-        "edge_pts": 3.2,
-        "cover_prob": 0.5764,
-        "adjusted_ranking_score": 0.4804
+        "edge_pts": 3.7,
+        "cover_prob": 0.5883,
+        "adjusted_ranking_score": 0.4526
       }
     ],
     "5": [
