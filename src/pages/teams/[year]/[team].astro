@@ -266,6 +266,7 @@ const sortedGameLog = fullSchedule.sort((a: any, b: any) => {
 
 // Dynamically load the passing/rushing JSON for the current row.year
 let teamPrData = null;
+let leagueData = null;
 
 try {
   const filePath = path.resolve(`./public/data/passing-rushing/${row.year}.json`);
@@ -273,6 +274,7 @@ try {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const passingRushingData = JSON.parse(fileContent);
     teamPrData = passingRushingData?.teams?.[row.team] || null;
+    leagueData = passingRushingData.league || null;
   }
 } catch (e) {
   // File might not exist for years prior to 2025
@@ -315,7 +317,6 @@ try {
     <div class="stat">
       <span class="label">Net Rating</span>
       <span class="value">{formatRating(row.netRating)}</span>
-      <span class="rank-sub">#{ranks?.overallRank ?? '—'} of {totalTeams}</span>
     </div>
     <div class="stat">
       <span class="label">Strength of Schedule</span>
@@ -345,6 +346,7 @@ try {
       teamName={row.team}
       teamSlug={slugifyTeam(row.team)}
       year={row.year}
+      league={leagueData}
     />
   )}
 
@@ -508,19 +510,6 @@ try {
 </script>
 
 <style>
-  .back-link {
-    display: inline-block;
-    margin-bottom: 1.25rem;
-    color: #c084fc; /* Or var(--primary) depending on your theme */
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  .back-link:hover {
-    text-decoration: underline;
-  }
-
   .week-cell {
     display: flex;
     flex-direction: column;
@@ -605,7 +594,7 @@ try {
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .team-header-content {
@@ -655,7 +644,6 @@ try {
   }
 
   #teamYearFilter {
-    padding: 4px 28px 4px 10px; /* Leave space on the right for the arrow */
     font-size: 0.85rem;
     font-weight: 600;
     background-color: rgba(255, 255, 255, 0.05);
@@ -675,5 +663,9 @@ try {
 
   #teamYearFilter:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .value{
+    color: var(--text-muted);
   }
 </style>

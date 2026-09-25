@@ -27,6 +27,7 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
 ---
 
 <Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year} lastUpdate{lastUpdate}>
+  <a href="/" class="back-link">&larr; Return</a>
   <div class="futures-container" data-simulation={n_simulations}>
     <!-- Main View Toggle -->
     <div class="view-toggle" id="mainViewToggle">

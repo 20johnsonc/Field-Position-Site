@@ -34,7 +34,7 @@ const getRecordSortValue = (record: string) => {
         <th class="sortable num" data-sort-key="sos" style="text-align: right;">SOS</th>
         <th class="sortable num" data-sort-key="sor" style="text-align: right;">SOR</th>
         <th class="sortable" data-sort-key="conference">Conf</th>
-        <th class="text-right">Style Tags</th>
+        {/*<th class="text-right">Style Tags</th>*/}
       </tr>
     </thead>
     <tbody id="rankingsBody">
@@ -77,6 +77,7 @@ const getRecordSortValue = (record: string) => {
             <td class="num" title={`Rating: ${row.sos}`}>{row.sos_rank}</td>
             <td class="num" title={`Rating: ${row.sor}`}>{row.sor_rank}</td>
             <td>{row.conference}</td>
+            {/*
             <td class="text-right">
               {row.tags && row.tags.length > 0 ? (
                 <div class="table-tags">
@@ -99,6 +100,7 @@ const getRecordSortValue = (record: string) => {
                 <span class="text-muted">—</span>
               )}
             </td>
+            */}
           </tr>
         ))
       }
