@@ -49,10 +49,10 @@ function escapeForScript(json: string) {
 <Layout title="Passing & Rushing Rankings" seasonLabel={defaultYear ? `${defaultYear} Season` : 'Analytics'}>
   <a href="/" class="back-link">&larr; Return</a>
 
-  <h1 class="page-title">Passing &amp; Rushing Stats</h1>
+  <h1 class="page-title">Passing &amp; Rushing Rankings</h1>
   <p class="page-subtitle">
-    Raw team production sortable by area of the field. Not opponent-adjusted &mdash;
-    a team's schedule strength is not reflected here.
+    Raw team production by target zone and rush direction. Not opponent-adjusted &mdash;
+    a team's schedule strength isn't reflected here.
   </p>
 
   <div id="pr-table-root" class="pt-wrapper" data-base="">
@@ -60,12 +60,49 @@ function escapeForScript(json: string) {
     <div class="pt-controls">
       <div class="pt-row">
         <div class="segmented-control">
-          <button type="button" id="pt-tab-passing" class="toggle-btn active">Passing</button>
-          <button type="button" id="pt-tab-rushing" class="toggle-btn">Rushing</button>
+          <button type="button" id="pt-mode-table" class="toggle-btn active">Table</button>
+          <button type="button" id="pt-mode-scatter" class="toggle-btn">Scatter</button>
         </div>
         <div class="segmented-control">
           <button type="button" id="pt-offense" class="toggle-btn active">Offense</button>
           <button type="button" id="pt-defense" class="toggle-btn">Defense Allowed</button>
+        </div>
+        <button id="scatter-theme-btn" style="display: none;" class="scatter-theme-btn">
+          <span class="theme-icon"></span> Theme: Dark
+        </button>
+      </div>
+
+      <div class="pt-row" id="pt-table-controls">
+        <div class="segmented-control">
+          <button type="button" id="pt-tab-passing" class="toggle-btn active">Passing</button>
+          <button type="button" id="pt-tab-rushing" class="toggle-btn">Rushing</button>
+        </div>
+        <label class="pt-field">
+          <span>View</span>
+          <select id="pt-view" class="pt-select">
+            {views(kind).map((v) => <option value={v.key}>{v.label}</option>)}
+          </select>
+        </label>
+      </div>
+
+      <div class="pt-row pt-axis-row" id="pt-axis-row" hidden>
+        <div class="pt-axis-group">
+          <span class="pt-axis-title">X axis</span>
+          <select id="pt-x-kind" class="pt-select pt-select-sm">
+            <option value="passing">Passing</option>
+            <option value="rushing">Rushing</option>
+          </select>
+          <select id="pt-x-view" class="pt-select pt-select-sm"></select>
+          <select id="pt-x-field" class="pt-select pt-select-sm"></select>
+        </div>
+        <div class="pt-axis-group">
+          <span class="pt-axis-title">Y axis</span>
+          <select id="pt-y-kind" class="pt-select pt-select-sm">
+            <option value="passing">Passing</option>
+            <option value="rushing" selected>Rushing</option>
+          </select>
+          <select id="pt-y-view" class="pt-select pt-select-sm"></select>
+          <select id="pt-y-field" class="pt-select pt-select-sm"></select>
         </div>
       </div>
 
@@ -74,12 +111,6 @@ function escapeForScript(json: string) {
           <span>Year</span>
           <select id="pt-year" class="pt-select">
             {years.map((y) => <option value={y} selected={y === defaultYear}>{y}</option>)}
-          </select>
-        </label>
-        <label class="pt-field">
-          <span>Zone</span>
-          <select id="pt-view" class="pt-select">
-            {views(kind).map((v) => <option value={v.key}>{v.label}</option>)}
           </select>
         </label>
         <label class="pt-field">
@@ -97,12 +128,20 @@ function escapeForScript(json: string) {
       </div>
     </div>
 
-    <p class="pt-hint">Check a row to pin it to the top. Click a column header to sort.</p>
+    <p class="pt-hint" id="pt-hint">
+      Table: check a row to pin it, click a header to sort. Scatter: dot size reflects sample
+      size, dashed lines mark each axis's average, click a dot to open that team's page.
+    </p>
 
-    <div class="pt-table-scroll">
-      <table id="pt-table" set:html={initialTableHtml} />
+    <div class="pt-table-scroll" id="pt-table-wrap">
+      <table id="pt-table" set:html={initialTableHtml}></table>
     </div>
     <p id="pt-empty" class="pt-empty">No teams match these filters.</p>
+
+    <div class="pt-scatter-wrap" id="pt-scatter-wrap" hidden>
+      <div id="pt-scatter" class="pt-scatter"></div>
+    </div>
+    <div id="pr-scatter-tooltip" class="pt-tooltip" hidden></div>
   </div>
 
   <script id="pt-seed-year" type="application/json" set:html={escapeForScript(JSON.stringify(seedPayload))} />
@@ -114,7 +153,7 @@ function escapeForScript(json: string) {
 </script>
 
 <style>
-  .page-title { font-size: 1.75rem; font-weight: 800; margin: 0 0 0.25rem; color: #f1f5f9; }
+  .page-title { font-size: 1.75rem; font-weight: 800; margin: 1.5rem 0 0.25rem; color: #f1f5f9; }
   .page-subtitle { font-size: 0.875rem; color: #94a3b8; margin: 0 0 1.5rem; max-width: 46rem; }
 
   .pt-wrapper { color: #f1f5f9; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
@@ -130,6 +169,7 @@ function escapeForScript(json: string) {
     margin-bottom: 0.75rem;
   }
   .pt-row { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: flex-end; }
+  .pt-row[hidden] { display: none; }
 
   .segmented-control {
     background: #0b1220;
@@ -200,7 +240,123 @@ function escapeForScript(json: string) {
   #pt-table :global(.pin-col) { width: 2rem; text-align: center; }
   #pt-table :global(.rk) { color: #94a3b8; }
   #pt-table :global(.rk small) { opacity: 0.7; }
+  #pt-table :global(tr.dimmed) { opacity: 0.3; transition: opacity 0.2s ease; }
+  #pt-table :global(tr.dimmed:hover) { opacity: 1; }
 
   .pt-empty { display: none; text-align: center; padding: 2rem; color: #64748b; font-size: 0.875rem; }
   .pt-empty.visible { display: block; }
+
+  .pt-axis-row { align-items: center; }
+  .pt-axis-group { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+  .pt-axis-title { font-size: 0.6875rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 0.15rem; }
+  .pt-select-sm { padding: 0.32rem 0.5rem; font-size: 0.75rem; }
+
+  /* --- Scatter Chart: Dark Mode (DEFAULT) --- */
+  .pt-scatter-wrap {
+    border: 1px solid #1e293b;
+    border-radius: 0.875rem;
+    background: #030712;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .pt-scatter { min-height: 220px; }
+  .pt-scatter :global(svg.scatter-svg) { width: 100%; aspect-ratio: 760 / 460; height: auto; display: block; min-height: 220px; }
+
+  .pt-scatter :global(.grid) { stroke: #1e293b; stroke-width: 1; }
+  .pt-scatter :global(.axis) { stroke: #475569; stroke-width: 1.25; }
+  .pt-scatter :global(.mean-line) { stroke: #475569; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.8; }
+  .pt-scatter :global(.tick) { fill: #94a3b8; font-size: 10px; }
+  .pt-scatter :global(.axis-label) { fill: #cbd5e1; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .pt-scatter :global(.dot) {
+    fill-opacity: 0.75; stroke: #0b1220; stroke-width: 1;
+    cursor: pointer; transition: opacity 0.15s ease, fill-opacity 0.15s ease, stroke-width 0.15s ease;
+  }
+  .pt-scatter :global(.dot:hover), .pt-scatter :global(.dot:focus) { fill-opacity: 1; stroke: #f1f5f9; stroke-width: 1.5; outline: none; paint-order: stroke; }
+  .pt-scatter :global(.dot.pinned) { stroke: #f59e0b; stroke-width: 2; }
+
+  /* FIX: this was the actual missing piece -- the JS already computes and
+     assigns "match"/"dimmed" per dot, but nothing told the browser what
+     those classes should look like, so search had no visible effect. */
+  .pt-scatter :global(.dot.dimmed) { opacity: 0.15; }
+  .pt-scatter :global(.dot.match) { opacity: 1; stroke: #f8fafc; stroke-width: 1.5; }
+  .pt-scatter :global(.dot.match:hover), .pt-scatter :global(.dot.match:focus) { stroke-width: 2; }
+
+  .pt-scatter :global(.scatter-empty) { text-align: center; color: #64748b; font-size: 0.875rem; padding: 2rem; margin: 0; }
+
+  /* --- Scatter Chart: Light Mode Overrides --- */
+  :global(.pt-scatter-wrap.theme-light) {
+    border-color: #e2e8f0 !important;
+    background: #f8fafc !important;
+  }
+  :global(.pt-scatter-wrap.theme-light) :global(.grid) { stroke: #e2e8f0 !important; }
+  :global(.pt-scatter-wrap.theme-light) :global(.axis) { stroke: #94a3b8 !important; }
+  :global(.pt-scatter-wrap.theme-light) :global(.mean-line) { stroke: #64748b !important; }
+  :global(.pt-scatter-wrap.theme-light) :global(.tick) { fill: #64748b !important; }
+  :global(.pt-scatter-wrap.theme-light) :global(.axis-label) { fill: #475569 !important; }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.dot) {
+    fill-opacity: 0.85;
+    stroke: #0f172a !important;
+  }
+  :global(.pt-scatter-wrap.theme-light) :global(.dot:hover),
+  :global(.pt-scatter-wrap.theme-light) :global(.dot:focus) {
+    stroke: #000000 !important;
+    stroke-width: 2px !important;
+  }
+  :global(.pt-scatter-wrap.theme-light) :global(.dot.pinned) { stroke: #ea580c !important; }
+  :global(.pt-scatter-wrap.theme-light) :global(.dot.match) { stroke: #0f172a !important; }
+  /* Dimmed dots at 0.15 opacity read as nearly invisible against a light
+     background (low-opacity blue fades toward white, not toward gray) --
+     raised the floor so "dimmed" still reads as "present but de-emphasized"
+     rather than "gone" once the light theme is on. */
+  :global(.pt-scatter-wrap.theme-light) :global(.dot.dimmed) { opacity: 0.3; }
+
+  /* --- Tooltip --- */
+  .pt-tooltip {
+    position: fixed;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.75rem;
+    color: #e2e8f0;
+    box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    max-width: 14rem;
+  }
+  .pt-tooltip strong { font-size: 0.8125rem; color: #ffffff; }
+  .pt-tooltip .tt-conf { color: #94a3b8; font-size: 0.6875rem; margin-bottom: 0.15rem; }
+
+  #scatter-theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0b1220;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.375rem 1rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.2s ease;
+  }
+
+  #scatter-theme-btn:hover {
+    color: #ffffff;
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  #scatter-theme-btn.is-light {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
+  }
 </style>

@@ -15,7 +15,7 @@ export type Side = 'offense' | 'defense';
 // in the order columns should appear. Not just "everything" -- ADOT/YAC/etc.
 // stay in the per-team modal (PassingRushingTab), not this overview.
 const PASS_TABLE_KEYS = ['completion_pct', 'yards', 'yards_per_completion', 'interceptions', 'success_rate', 'ppa'];
-const RUSH_TABLE_KEYS = ['yards', 'yards_per_carry', 'stuff_rate', 'explosiveness', 'success_rate', 'ppa'];
+const RUSH_TABLE_KEYS = ['yards', 'yards_per_carry', 'stuff_rate', 'line_yards', 'success_rate', 'ppa'];
 
 export function tableFields(kind: Kind): Field[] {
   const all = kind === 'passing' ? PASS_FIELDS : RUSH_FIELDS;
@@ -58,6 +58,7 @@ export function getBucket(teamEntry: any, kind: Kind, side: Side, view: string):
 export interface TableRow {
   team: string;
   conference: string;
+  match: boolean; // Evaluates whether it passes conference, volume, and search filters
   volume: number;
   share: number | null;
   values: (number | null)[]; // aligned to tableFields(kind)
@@ -82,6 +83,7 @@ export function buildRows(
     rows.push({
       team,
       conference: entry.conference ?? '—',
+      match: true, // defaults to true, refined in filterRows
       volume,
       share: view === 'total' ? null : (b[sKey] ?? null),
       values: fields.map((f) => (isNum(b[f.key]) ? (b[f.key] as number) : null)),
@@ -89,6 +91,32 @@ export function buildRows(
     });
   }
   return rows;
+}
+
+export function filterRows(
+  rows: TableRow[],
+  o: { conf?: string; search?: string; min?: number; pinned?: Set<string> },
+): TableRow[] {
+  const conf = o.conf ?? 'ALL';
+  const search = (o.search ?? '').trim().toLowerCase();
+  const min = o.min ?? 0;
+  const pinned = o.pinned ?? new Set<string>();
+
+  // 1. Hard filter by Conference and Minimum Volume first
+  let out = rows.filter((r) => {
+    const matchesConf = conf === 'ALL' || r.conference === conf;
+    const matchesMin = min <= 0 || r.volume >= min || pinned.has(r.team);
+    return matchesConf && matchesMin;
+  });
+
+  // 2. Map the remaining rows to set the 'match' property for search highlighting
+  return out.map((r) => {
+    const matchesSearch = !search || r.team.toLowerCase().includes(search) || r.conference.toLowerCase().includes(search);
+    return {
+      ...r,
+      match: matchesSearch, // If search is active, non-matching rows get flagged false (dimmed)
+    };
+  });
 }
 
 export function sortRows(
@@ -143,15 +171,20 @@ export function tableHtml(o: {
 
   const body = rows.map((r) => {
     const pin = pinned.has(r.team);
+    const rowClasses = [
+      pin ? 'pinned' : '',
+      !r.match ? 'dimmed' : '', // Applies the dimmed class to rows that fail the filter/search criteria
+    ].filter(Boolean).join(' ');
+
     return `
-    <tr data-team="${escHtml(r.team)}" data-conference="${escHtml(r.conference)}" class="${pin ? 'pinned' : ''}">
+    <tr data-team="${escHtml(r.team)}" data-conference="${escHtml(r.conference)}" class="${rowClasses}">
       <td class="pin-col"><input type="checkbox" class="pin-check" data-team="${escHtml(r.team)}" ${pin ? 'checked' : ''} aria-label="Pin ${escHtml(r.team)}" /></td>
       <td class="team-cell"><a href="${escHtml(teamHref(r.team))}">${escHtml(r.team)}</a></td>
       <td>${escHtml(r.conference)}</td>
       <td class="num">${fmtInt(r.volume)}</td>
       ${showShare ? `<td class="num">${isNum(r.share) ? r.share + '%' : '—'}</td>` : ''}
       ${fields.map((f, i) => `<td class="num">${fmtField(f, r.values[i])}</td>`).join('')}
-      <td class="num">${r.rank ? `<span class="rk">#${r.rank[0]}<small> / ${r.rank[1]}</small></span>` : '—'}</td>
+      <td class="num">${r.rank ? `<span class="rk">#${r.rank[0]}<small> /${r.rank[1]}</small></span>` : '—'}</td>
     </tr>`;
   }).join('');
 
