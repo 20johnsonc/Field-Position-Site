@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T17:10:51.277795+00:00",
+  "generated_at": "2026-10-01T22:09:36.305783+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
   "backtest_cover_rate": 0.5179,
   "picks_by_week": {
@@ -22,13 +22,26 @@
         "week": 5,
         "home_team": "Louisiana Tech",
         "away_team": "Army",
-        "market_spread": 2.5,
+        "market_spread": 1.5,
         "predicted_margin": -5.39,
         "pick": "Louisiana Tech",
         "pick_side": "home",
-        "edge_pts": 7.9,
-        "cover_prob": 0.6901,
-        "adjusted_ranking_score": 0.46
+        "edge_pts": 6.9,
+        "cover_prob": 0.6676,
+        "adjusted_ranking_score": 0.5135
+      },
+      {
+        "game_id": 401869942,
+        "week": 5,
+        "home_team": "Coastal Carolina",
+        "away_team": "Georgia Southern",
+        "market_spread": 1.5,
+        "predicted_margin": 4.01,
+        "pick": "Georgia Southern",
+        "pick_side": "away",
+        "edge_pts": 2.5,
+        "cover_prob": 0.5627,
+        "adjusted_ranking_score": 0.4328
       },
       {
         "game_id": 401856822,
@@ -42,19 +55,6 @@
         "edge_pts": 6.3,
         "cover_prob": 0.6544,
         "adjusted_ranking_score": 0.409
-      },
-      {
-        "game_id": 401864513,
-        "week": 5,
-        "home_team": "Hawai'i",
-        "away_team": "San Jos\u00e9 State",
-        "market_spread": -2.5,
-        "predicted_margin": 1.22,
-        "pick": "San Jos\u00e9 State",
-        "pick_side": "away",
-        "edge_pts": 3.7,
-        "cover_prob": 0.5925,
-        "adjusted_ranking_score": 0.395
       },
       {
         "game_id": 401866434,
