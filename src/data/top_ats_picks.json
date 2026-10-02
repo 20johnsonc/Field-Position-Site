@@ -1,22 +1,9 @@
 {
-  "generated_at": "2026-10-01T22:09:36.305783+00:00",
+  "generated_at": "2026-10-02T20:35:52.796474+00:00",
   "method": "Rank upcoming, market-lined games by cover_prob = Phi(|predicted_margin - market_spread| / resid_std); take the top 5 per week.",
-  "backtest_cover_rate": 0.5179,
+  "backtest_cover_rate": 0.5198,
   "picks_by_week": {
     "5": [
-      {
-        "game_id": 401862786,
-        "week": 5,
-        "home_team": "Tulsa",
-        "away_team": "North Texas",
-        "market_spread": 1.0,
-        "predicted_margin": 6.02,
-        "pick": "North Texas",
-        "pick_side": "away",
-        "edge_pts": 5.0,
-        "cover_prob": 0.6238,
-        "adjusted_ranking_score": 0.5199
-      },
       {
         "game_id": 401869842,
         "week": 5,
@@ -31,17 +18,43 @@
         "adjusted_ranking_score": 0.5135
       },
       {
-        "game_id": 401869942,
+        "game_id": 401858253,
         "week": 5,
-        "home_team": "Coastal Carolina",
-        "away_team": "Georgia Southern",
+        "home_team": "Florida State",
+        "away_team": "Virginia",
         "market_spread": 1.5,
-        "predicted_margin": 4.01,
-        "pick": "Georgia Southern",
+        "predicted_margin": 5.08,
+        "pick": "Virginia",
         "pick_side": "away",
-        "edge_pts": 2.5,
-        "cover_prob": 0.5627,
-        "adjusted_ranking_score": 0.4328
+        "edge_pts": 3.6,
+        "cover_prob": 0.589,
+        "adjusted_ranking_score": 0.4531
+      },
+      {
+        "game_id": 401856709,
+        "week": 5,
+        "home_team": "South Carolina",
+        "away_team": "Kentucky",
+        "market_spread": -2.5,
+        "predicted_margin": -7.59,
+        "pick": "South Carolina",
+        "pick_side": "home",
+        "edge_pts": 5.1,
+        "cover_prob": 0.6255,
+        "adjusted_ranking_score": 0.417
+      },
+      {
+        "game_id": 401858476,
+        "week": 5,
+        "home_team": "Northwestern",
+        "away_team": "Penn State",
+        "market_spread": 2.5,
+        "predicted_margin": 7.51,
+        "pick": "Penn State",
+        "pick_side": "away",
+        "edge_pts": 5.0,
+        "cover_prob": 0.6236,
+        "adjusted_ranking_score": 0.4157
       },
       {
         "game_id": 401856822,
@@ -55,19 +68,6 @@
         "edge_pts": 6.3,
         "cover_prob": 0.6544,
         "adjusted_ranking_score": 0.409
-      },
-      {
-        "game_id": 401866434,
-        "week": 5,
-        "home_team": "Kent State",
-        "away_team": "Ohio",
-        "market_spread": 3.5,
-        "predicted_margin": 10.42,
-        "pick": "Ohio",
-        "pick_side": "away",
-        "edge_pts": 6.9,
-        "cover_prob": 0.6682,
-        "adjusted_ranking_score": 0.3931
       }
     ],
     "6": [
