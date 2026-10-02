@@ -28,16 +28,31 @@ async function fetchJson<T>(url: string, fallback: T): Promise<T> {
 
 const slugify = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
+// Tracks every document/window-level listener this module has added, so a
+// re-run (this page's site uses Astro's ClientRouter -- soft navigations
+// reuse the same document/window across page swaps, so listeners bound to
+// them outlive the DOM elements they were meant to work with) can remove
+// its own previous listeners before adding fresh ones, instead of either
+// leaking duplicates or refusing to ever run again.
+let globalCleanups: Array<() => void> = [];
+function addPageListener(
+  target: Document | Window, type: string, handler: (e: any) => void, options?: AddEventListenerOptions,
+) {
+  target.addEventListener(type, handler, options);
+  globalCleanups.push(() => target.removeEventListener(type, handler, options));
+}
+
 export function initPrTable(): void {
-  // Guards against this running twice on the same page (e.g. the script
-  // block or component ends up included more than once) -- a second run
-  // would add a second, independent set of document-level listeners and a
-  // second tooltip state that don't know about each other.
-  if ((window as any).__prTableInitialized) return;
-  (window as any).__prTableInitialized = true;
+  // Tear down whatever a previous run of this function attached, whether
+  // that was on this exact page (revisited via a soft navigation) or a
+  // different page entirely (navigated away from this one) -- either way,
+  // stale document/window listeners referencing a torn-down DOM must go
+  // before anything else happens.
+  globalCleanups.forEach((fn) => fn());
+  globalCleanups = [];
 
   const root = document.getElementById('pr-table-root');
-  if (!root) return;
+  if (!root) return; // this page doesn't have the table/scatter component -- nothing else to do
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T | null;
   const yearSelect = $<HTMLSelectElement>('pt-year');
@@ -261,7 +276,7 @@ export function initPrTable(): void {
 
   // Registered once, outside bindScatterInteractions, so it isn't re-added
   // (and left orphaned) on every filter/search/year re-render.
-  document.addEventListener('mousemove', (e) => {
+  addPageListener(document, 'mousemove', (e: MouseEvent) => {
     if (!hoveredDot) return;
     // The tooltip itself has pointer-events:none, so this always reflects
     // what's really under the cursor -- if it's not our tracked dot (or any
@@ -269,9 +284,9 @@ export function initPrTable(): void {
     const under = document.elementFromPoint(e.clientX, e.clientY);
     if (!under || !under.classList.contains('dot')) hideTooltip();
   });
-  document.addEventListener('mouseleave', hideTooltip); // cursor leaves the whole window
-  window.addEventListener('blur', hideTooltip); // switching tabs/apps mid-hover
-  document.addEventListener('click', (e) => {
+  addPageListener(document, 'mouseleave', hideTooltip); // cursor leaves the whole window
+  addPageListener(window, 'blur', hideTooltip); // switching tabs/apps mid-hover
+  addPageListener(document, 'click', (e: MouseEvent) => {
     const target = e.target as Element;
     if (!target || !target.classList.contains('dot')) hideTooltip();
   }, { capture: true });

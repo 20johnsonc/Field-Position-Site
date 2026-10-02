@@ -323,7 +323,7 @@ function bindTabs(): void {
   });
 }
 
-export function initDashboardControls(): void {
+export async function initDashboardControls(): Promise<void> {
   if (initialized) return;
   initialized = true;
 
@@ -341,6 +341,10 @@ export function initDashboardControls(): void {
   populateTeamDropdown();
   switchTab('rankings');
 
+  // 1. Await the fetch and render process so cards are guaranteed to be in the DOM
+  await loadWeekAndRender();
+
+  // 2. Now safely apply filters and stats against the populated cards
   applyMatchupConferenceFilter();
   applyRankingsFilters();
   updateMatchupSeasonStats();

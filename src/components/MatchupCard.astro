@@ -3,6 +3,7 @@ import type { Matchup } from '../lib/types';
 import { fmtDate } from '../lib/data';
 import { fmtSpread, pickTeamName, type BacktestResult } from '../lib/betting';
 import { slugifyTeam } from '../lib/data';
+import WatchMeta from './WatchMeta.astro';
 
 interface Props {
   game: Matchup;
@@ -75,16 +76,11 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
 >
   <!-- Header -->
   <header class="card-head">
-    <div class="week-tag">
-      <span>WK {game.week}</span>
-      {dateTag && <span class="dot-sep">•</span>}
-      {dateTag && <time>{dateTag}</time>}
-    </div>
+    <WatchMeta game={game} />
   </header>
 
   <!-- Card Body -->
   <div class="card-body">
-    
     <!-- Grouped Matchup & Gauge Grid -->
     <div class="matchup-grid">
       <!-- Away Side -->
@@ -228,6 +224,9 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
 <style is:global>
   /* Tightened padding to remove the large header-to-body gap */
   .card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 0 6px 0;
     border-bottom: 1px solid var(--card-border);
     margin-bottom: 0px;

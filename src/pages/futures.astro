@@ -11,14 +11,6 @@ const teamsArray = Object.entries(teams).map(([name, stats]) => ({
   ...stats,
 }));
 
-const lastUpdate = generated_at 
-  ? new Date(generated_at).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    })
-  : '—';
-
 // Initial server-side sort
 teamsArray.sort((a, b) => b.conference_championship_odds_pct - a.conference_championship_odds_pct);
 
@@ -26,7 +18,7 @@ teamsArray.sort((a, b) => b.conference_championship_odds_pct - a.conference_cham
 const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
 ---
 
-<Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year} lastUpdate{lastUpdate}>
+<Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year} lastUpdate={generated_at}>
   <a href="/" class="back-link">&larr; Return</a>
   <div class="futures-container" data-simulation={n_simulations}>
     <!-- Main View Toggle -->

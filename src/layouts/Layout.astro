@@ -7,7 +7,15 @@ interface Props {
   lastUpdate?: string;
 }
 
-const { title = 'CFB Power Rankings', seasonLabel, lastUpdate } = Astro.props;
+const { title = 'CFB Power Rankings', seasonLabel, lastUpdate: rawDate } = Astro.props;
+
+// Format the date if it's a valid date string (e.g., ISO timestamp), otherwise use as-is
+const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
+  ? new Date(rawDate).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+    })
+  : rawDate;
 ---
 
 <!doctype html>
@@ -26,7 +34,6 @@ const { title = 'CFB Power Rankings', seasonLabel, lastUpdate } = Astro.props;
   <body>
     <div class="container">
       <header>
-        <!-- Wrapped logo-area in an anchor tag pointing to "/" -->
         <a href="/" class="logo-link">
           <div class="logo-area">
             <h1>CFB Power Rankings</h1>
@@ -34,7 +41,7 @@ const { title = 'CFB Power Rankings', seasonLabel, lastUpdate } = Astro.props;
           </div>
         </a>
         <div class="header-meta">
-          {lastUpdate && <div class="last-updated">Updated {lastUpdate}</div>}
+          {formattedLastUpdate && <div class="last-updated">Updated {formattedLastUpdate}</div>}
         </div>
       </header>
       <slot />
@@ -43,11 +50,10 @@ const { title = 'CFB Power Rankings', seasonLabel, lastUpdate } = Astro.props;
 </html>
 
 <style>
-  /* Prevents the browser from underlining the link or changing its color */
   .logo-link {
     text-decoration: none;
     color: inherit;
-    display: block; /* Ensures the click target takes up the full area */
+    display: block;
   }
   .header-meta {
     display: flex;

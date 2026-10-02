@@ -1,0 +1,52 @@
+---
+// One-line meta strip for a game: [watchability pill] [kickoff] [channel].
+// Drop <WatchMeta game={game} /> inside MatchupCard.astro (upcoming games).
+import type { Matchup } from '../lib/types';
+import { watchTier, kickoffTimeHtml, channelLabel } from '../lib/watchability';
+
+interface Props { game: Matchup }
+const { game } = Astro.props;
+
+const score = game.watchabilityScore;
+const tier = watchTier(score);
+const tip = score !== undefined
+  ? `Watchability ${score.toFixed(1)} / 100${game.watchabilityRank ? ` · #${game.watchabilityRank} this week` : ''}`
+  : '';
+const chan = channelLabel(game);
+
+
+---
+
+<div class="wm-row">
+  {tier && score !== undefined && (
+    <span class={`wm-score wm-${tier.tier}`} title={tip} aria-label={tip}>
+      <span class="wm-score-num">{Math.round(score)}</span>
+      <span class="wm-score-label">{tier.label}</span>
+    </span>
+  )}
+  <Fragment set:html={kickoffTimeHtml(game)} />
+  <span class:list={['wm-chan', !game.tvChannel && 'wm-chan-tbd']} title={game.tvAll && game.tvAll.length > 1 ? game.tvAll.join(', ') : undefined}>{chan}</span>
+</div>
+
+<style is:global>
+  /* Global (not scoped) so client-rendered copies of the same markup are styled too.
+     Defaults match the site's dark theme (same green/blue as the play-impact colors). */
+  .wm-row { display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; font-size: 0.8rem; gap: 0.5rem; }
+  .wm-score { display: inline-flex; align-items: baseline; gap: 0.3rem; padding: 0.05rem 0.45rem; border: 1px solid currentColor; border-radius: 999px; font-weight: 600; line-height: 1.3; }
+  .wm-score-num { font-variant-numeric: tabular-nums; }
+  .wm-score-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.8; }
+  .wm-marquee { color: var(--wm-marquee, #fbbf24); }
+  .wm-strong  { color: var(--wm-strong,  #4ade80); }
+  .wm-solid   { color: var(--wm-solid,   #60a5fa); }
+  .wm-light   { color: var(--wm-light,   rgba(255, 255, 255, 0.5)); }
+  .wm-kickoff { font-variant-numeric: tabular-nums; color: #e5e7eb; }
+  .wm-tbd { opacity: 0.7; }
+  .wm-time-chan { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+  .wm-chan { padding: 0.1rem 0.5rem; border-radius: 0.35rem; background: var(--wm-chip-bg, rgba(255, 255, 255, 0.06)); color: #e5e7eb; }
+  .wm-chan-tbd { opacity: 0.7; }
+  .wm-toolbar { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.75rem; font-size: 0.85rem; }
+  .wm-toolbar[hidden] { display: none; }
+  .wm-toolbar button { padding: 0.2rem 0.65rem; border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08)); border-radius: 999px; background: transparent; color: inherit; cursor: pointer; opacity: 0.7; }
+  .wm-toolbar button:focus-visible { outline: 2px solid #67e8f9; outline-offset: 2px; }
+  .wm-toolbar button[aria-pressed='true'] { opacity: 1; font-weight: 600; background: var(--wm-chip-bg, rgba(255, 255, 255, 0.06)); }
+</style>

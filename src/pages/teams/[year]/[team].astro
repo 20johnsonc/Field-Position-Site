@@ -412,17 +412,14 @@ try {
           <tr>
             <td>
               <div class="week-cell">
-                {isPostseason ? (
-                  <>
-                    <span class="week-num post-num">{postLabel}</span>
-                    {formattedDate && <span class="game-date">{formattedDate}</span>}
-                  </>
-                ) : (
-                  <>
-                    <span class="week-num">Wk {g.week}</span>
-                    {formattedDate && <span class="game-date">{formattedDate}</span>}
-                    {eventLabel && <span class="badge-tag">{eventLabel}</span>}
-                  </>
+                <span class:list={['week-num', { 'post-num': isPostseason }]}>
+                  {isPostseason ? postLabel : `Wk ${g.week}`}
+                </span>
+
+                {formattedDate && <span class="game-date">{formattedDate}</span>}
+
+                {!isPostseason && eventLabel && (
+                  <span class="badge-tag">{eventLabel}</span>
                 )}
               </div>
             </td>

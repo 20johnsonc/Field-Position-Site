@@ -57,6 +57,8 @@ export function normalizeMatchups(raw: MatchupsFile | Record<string, unknown>[])
   return games.map((game) => {
     const homeTeam = str(game.home_team ?? game.homeTeam, 'Home');
     const awayTeam = str(game.away_team ?? game.awayTeam, 'Away');
+    const kickoffUtc = str(game.kickoff_utc ?? game.kickoffUtc);
+    const legacyStart = str(game.start_date ?? game.startDate);
     const startDate = str(game.start_date ?? game.startDate);
     const yearFromDate = startDate ? new Date(startDate).getFullYear() : NaN;
 
@@ -80,6 +82,12 @@ export function normalizeMatchups(raw: MatchupsFile | Record<string, unknown>[])
       predictedTotal: game.predicted_total != null ? num(game.predicted_total) : undefined,
       marketSpread: game.market_spread != null ? num(game.market_spread) : null,
       marketTotal: game.market_total != null ? num(game.market_total) : null,
+      kickoffUtc: kickoffUtc || undefined,
+      startTimeTbd: game.start_time_tbd === true,
+      tvChannel: game.tv_channel ? str(game.tv_channel) : null,
+      tvAll: Array.isArray(game.tv_all) ? game.tv_all.map((c) => str(c)).filter(Boolean) : [],
+      watchabilityScore: game.watchability_score != null ? num(game.watchability_score) : undefined,
+      watchabilityRank: game.watchability_rank != null ? num(game.watchability_rank) : undefined,
     };
   });
 }

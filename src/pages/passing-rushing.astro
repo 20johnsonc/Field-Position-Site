@@ -26,6 +26,22 @@ const seedPayload = defaultYear != null
   ? loadJson(`passing-rushing/${defaultYear}.json`, { year: defaultYear, teams: {} })
   : { year: defaultYear, teams: {} };
 
+// Check all possible key names your notebook/JSON might be using:
+const lastUpdate = 
+  seedPayload.generatedAtStr ?? 
+  seedPayload.generated_at ?? 
+  index.generatedAtStr ?? 
+  index.generated_at ?? 
+  '';
+
+// Debug check (this will print in your terminal during dev mode / astro build):
+console.log('passing-rushing lastUpdate:', {
+  seedPayload_generatedAtStr: seedPayload.generatedAtStr,
+  seedPayload_generated_at: seedPayload.generated_at,
+  index_generatedAtStr: index.generatedAtStr,
+  resolved_lastUpdate: lastUpdate
+});
+
 // Same server-render == client-render path the table page uses after a year
 // change, so first paint and every re-render produce identical markup.
 const kind = 'passing' as const;
@@ -46,7 +62,7 @@ function escapeForScript(json: string) {
 }
 ---
 
-<Layout title="Passing & Rushing Rankings" seasonLabel={defaultYear ? `${defaultYear} Season` : 'Analytics'}>
+<Layout title="Passing & Rushing Rankings" seasonLabel={defaultYear ? `${defaultYear} Season` : 'Analytics'} {lastUpdate}>
   <a href="/" class="back-link">&larr; Return</a>
 
   <h1 class="page-title">Passing &amp; Rushing Rankings</h1>
@@ -149,7 +165,15 @@ function escapeForScript(json: string) {
 
 <script>
   import { initPrTable } from '../scripts/prTableClient';
+  // This inline script only ever executes once (the first time this page is
+  // reached), whether that's a hard load or a soft navigation via Astro's
+  // ClientRouter -- so the direct call here covers first load, and the
+  // astro:page-load listener is what makes every later re-visit to this page
+  // (via soft nav) re-run initPrTable() too. initPrTable() itself tears down
+  // its own previous listeners on every call, so calling it twice back-to-back
+  // on first load (direct call + the event firing for the same load) is safe.
   initPrTable();
+  document.addEventListener('astro:page-load', initPrTable);
 </script>
 
 <style>
@@ -238,8 +262,7 @@ function escapeForScript(json: string) {
   #pt-table :global(.team-cell a) { color: #f1f5f9; font-weight: 600; text-decoration: none; }
   #pt-table :global(.team-cell a:hover) { color: #60a5fa; text-decoration: underline; }
   #pt-table :global(.pin-col) { width: 2rem; text-align: center; }
-  #pt-table :global(.rk) { color: #94a3b8; }
-  #pt-table :global(.rk small) { opacity: 0.7; }
+  #pt-table :global(.rank-col) { width: 2.25rem; color: #64748b; font-variant-numeric: tabular-nums; }
   #pt-table :global(tr.dimmed) { opacity: 0.3; transition: opacity 0.2s ease; }
   #pt-table :global(tr.dimmed:hover) { opacity: 1; }
 
@@ -313,6 +336,15 @@ function escapeForScript(json: string) {
   :global(.pt-scatter-wrap.theme-light) :global(.dot.dimmed) { opacity: 0.3; }
 
   /* --- Tooltip --- */
+  /* This element's `hidden` attribute/property is what showTooltip()/
+     hideTooltip() toggle -- but `.pt-tooltip` below sets `display: flex`
+     directly, and an author stylesheet rule always beats the browser's
+     default `[hidden] { display: none }`, specificity aside. Without this
+     override, `.hidden = true` silently does nothing: the box (and whatever
+     content/position a prior showTooltip() left in it) just stays exactly as
+     it was. Same bug class as the .pt-row[hidden] fix earlier -- this was the
+     one instance of it I missed auditing for at the time. */
+  .pt-tooltip[hidden] { display: none; }
   .pt-tooltip {
     position: fixed;
     z-index: 40;

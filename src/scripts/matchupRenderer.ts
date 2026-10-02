@@ -1,6 +1,7 @@
 import { fmtDate, slugifyTeam } from '../lib/data';
 import { fmtSpread, pickTeamName, type BacktestResult } from '../lib/betting';
 import { getPlayImpact, formatEpa, type DisplayPlay } from '../lib/pbp';
+import { watchTier, kickoffTimeHtml, channelLabel } from '../lib/watchability';
 
 export interface ClientGame {
   game_id: number;
@@ -18,6 +19,13 @@ export interface ClientGame {
   market_total?: number | null;
   home_win_prob?: number | null;
   away_win_prob?: number | null;
+  watchability_score?: number | null;
+  watchability_rank?: number | null;
+  tv_channel?: string | null;
+  tv_all?: string[] | null;
+  kickoff_utc?: string | null;
+  start_time_tbd?: boolean | null;
+  channel?: string | null;
 }
 
 function conferenceFor(team: string, teamConfMap: Record<string, string>) {
@@ -140,6 +148,39 @@ export function renderMatchupCard(game: ClientGame, teamConfMap: Record<string, 
   const modelSpread = game.predicted_margin ?? null;
   const predTotal = game.predicted_total ?? null;
 
+  const watchGame = {
+    ...game,
+    watchabilityScore: game.watchability_score ?? undefined,
+    watchabilityRank: game.watchability_rank ?? undefined,
+    tvChannel: game.tv_channel ?? undefined,
+    tvAll: game.tv_all ?? undefined,
+    startDate: game.start_date ?? undefined,
+    kickoffUtc: game.kickoff_utc ?? undefined,
+    startTimeTbd: game.start_time_tbd ?? undefined,
+  };
+
+  const score = watchGame.watchabilityScore;
+  const tier = score !== undefined && score !== null ? watchTier(score) : null;
+  const tip = score !== undefined && score !== null
+    ? `Watchability ${score.toFixed(1)}}`
+    : '';
+  const chan = channelLabel(watchGame);
+
+  const watchMetaHtml = `
+    <div class="wm-row">
+      <div class="wm-time-chan">
+        ${kickoffTimeHtml(watchGame)}
+        <span class="wm-chan ${!watchGame.tvChannel ? 'wm-chan-tbd' : ''}" title="${watchGame.tvAll && watchGame.tvAll.length > 1 ? watchGame.tvAll.join(', ') : ''}">${chan}</span>
+      </div>
+      ${tier && score !== undefined && score !== null ? `
+        <div class="wm-score wm-${tier.tier}" title="${tip}" aria-label="${tip}">
+        <span class="wm-score-label">Excitement: </span>  
+        <span class="wm-score-num">${Math.round(score)}/100</span>
+        </div>
+      ` : ''}
+    </div>
+  `;
+
   const awayGaugeHtml =
     awayWinProbNum !== null
       ? `<div class="prob-gauge" style="--prob: ${awayWinProbNum}%;" title="${game.away_team} Win Probability: ${awayWinProbNum.toFixed(1)}%">
@@ -182,10 +223,7 @@ export function renderMatchupCard(game: ClientGame, teamConfMap: Record<string, 
       data-game-id="${game.game_id}" data-home-team="${game.home_team}" data-away-team="${game.away_team}"
       data-has-backtest="false">
       <header class="card-head">
-        <div class="week-tag">
-          <span>WK ${game.week}</span>
-          ${dateTag ? `<span class="dot-sep">•</span><time>${dateTag}</time>` : ''}
-        </div>
+        ${watchMetaHtml}
       </header>
       <div class="card-body">
         <div class="matchup-grid">
