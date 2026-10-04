@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T13:48:16.821447+00:00",
+  "generated_at": "2026-10-04T14:04:56.112881+00:00",
   "year": 2023,
   "rankings": [
     {
@@ -10,7 +10,7 @@
       "Net Rating": 27.2,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Explosive Offense (Ball-Secure)",
+        "Controlled Pace High-Powered Ground Attack (Ball-Secure)",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -31,7 +31,7 @@
       "Net Rating": 26.3,
       "Year": 2023,
       "tags": [
-        "Explosive Offense (Ball-Secure)",
+        "High-Powered Air Assault (Ball-Secure)",
         "Elite Defense",
         "Championship Contender"
       ],
@@ -94,7 +94,7 @@
       "Net Rating": 21.9,
       "Year": 2023,
       "tags": [
-        "High-Powered Air Assault",
+        "Bully-Ball Ground Attack",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -157,7 +157,7 @@
       "Net Rating": 20.4,
       "Year": 2023,
       "tags": [
-        "Explosive Offense",
+        "High-Powered Ground Attack",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -178,7 +178,7 @@
       "Net Rating": 19.8,
       "Year": 2023,
       "tags": [
-        "Explosive Offense (Ball-Secure)",
+        "Bully-Ball Ground Attack (Ball-Secure)",
         "Sound Defense",
         "Championship Contender"
       ],
@@ -262,7 +262,7 @@
       "Net Rating": 15.9,
       "Year": 2023,
       "tags": [
-        "High-Powered Ground Attack (Ball-Secure)",
+        "High-Powered Air Assault (Ball-Secure)",
         "Stout Secondary Defense",
         "Elite Roster"
       ],
@@ -304,7 +304,7 @@
       "Net Rating": 13.6,
       "Year": 2023,
       "tags": [
-        "High-Powered Ground Attack",
+        "High-Powered Offense",
         "Elite Disruptive Defense",
         "Blue-Blood Talent"
       ],
@@ -346,7 +346,7 @@
       "Net Rating": 12.9,
       "Year": 2023,
       "tags": [
-        "Uptempo Bully-Ball Ground Attack (Ball-Secure)",
+        "Uptempo High-Powered Offense (Ball-Secure)",
         "Stout & Disruptive Defense",
         "Elite Roster"
       ],
@@ -367,7 +367,7 @@
       "Net Rating": 12.8,
       "Year": 2023,
       "tags": [
-        "High-Powered Offense",
+        "High-Powered Ground Attack",
         "Stout Secondary Defense",
         "Elite Roster"
       ],
@@ -388,7 +388,7 @@
       "Net Rating": 12.7,
       "Year": 2023,
       "tags": [
-        "Controlled Pace High-Powered Air Assault (Ball-Secure)",
+        "Controlled Pace Explosive Offense (Ball-Secure)",
         "Elite Defense",
         "Elite Roster"
       ],
@@ -430,7 +430,7 @@
       "Net Rating": 11.4,
       "Year": 2023,
       "tags": [
-        "High-Powered Ground Attack",
+        "High-Powered Air Assault",
         "Sound Defense",
         "Blue-Blood Talent"
       ],
@@ -514,7 +514,7 @@
       "Net Rating": 8.5,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Elite Disruptive Defense",
         "High-Level Roster"
       ],
@@ -535,7 +535,7 @@
       "Net Rating": 8.3,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
+        "Run-Heavy Offense (Pass-Efficient)",
         "Stout & Disruptive Defense",
         "Overachieving Underdog Roster"
       ],
@@ -640,7 +640,7 @@
       "Net Rating": 6.0,
       "Year": 2023,
       "tags": [
-        "Uptempo Balanced Spread",
+        "Uptempo Run-First Offense",
         "Disruptive Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -682,7 +682,7 @@
       "Net Rating": 5.9,
       "Year": 2023,
       "tags": [
-        "High-Powered Ground Attack (Pass-Efficient)",
+        "High-Powered Offense",
         "Sound Defense",
         "Underachieving Elite Roster"
       ],
@@ -871,7 +871,7 @@
       "Net Rating": 5.0,
       "Year": 2023,
       "tags": [
-        "Bully-Ball Ground Attack",
+        "Explosive Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -913,7 +913,7 @@
       "Net Rating": 4.3,
       "Year": 2023,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Stout & Disruptive Defense",
         "Elite Roster"
       ],
@@ -955,7 +955,7 @@
       "Net Rating": 4.1,
       "Year": 2023,
       "tags": [
-        "High-Powered Air Assault",
+        "High-Powered Offense",
         "Stout Secondary Defense",
         "High-Level Roster"
       ],
@@ -997,7 +997,7 @@
       "Net Rating": 3.7,
       "Year": 2023,
       "tags": [
-        "Uptempo Run-First Offense",
+        "Uptempo Run-Heavy Offense",
         "Stout Secondary Defense",
         "Above-Average Roster"
       ],
@@ -1018,7 +1018,7 @@
       "Net Rating": 3.6,
       "Year": 2023,
       "tags": [
-        "Controlled Pace High-Powered Offense",
+        "Controlled Pace High-Powered Ground Attack",
         "Disruptive Defense",
         "High-Level Roster"
       ],
@@ -1039,7 +1039,7 @@
       "Net Rating": 3.6,
       "Year": 2023,
       "tags": [
-        "Run-First Offense (Pass-Efficient)",
+        "Balanced Spread",
         "Sound Defense",
         "High-Level Roster"
       ],
@@ -1165,7 +1165,7 @@
       "Net Rating": 2.3,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
+        "Run-Heavy Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1186,7 +1186,7 @@
       "Net Rating": 1.7,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient)",
+        "Efficient Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1249,7 +1249,7 @@
       "Net Rating": 0.5,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Anemic Offense (Turnover-Prone)",
+        "Controlled Pace Pass-Heavy Anemic Offense (Turnover-Prone)",
         "Stout Secondary Defense",
         "Underachieving Elite Roster"
       ],
@@ -1291,7 +1291,7 @@
       "Net Rating": 0.3,
       "Year": 2023,
       "tags": [
-        "Run-First Offense (Pass-Efficient, Turnover-Prone)",
+        "Balanced Spread (Turnover-Prone)",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1354,7 +1354,7 @@
       "Net Rating": -0.5,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -1375,7 +1375,7 @@
       "Net Rating": -0.9,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1396,7 +1396,7 @@
       "Net Rating": -1.1,
       "Year": 2023,
       "tags": [
-        "Efficient Offense",
+        "High-Powered Air Assault",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1480,7 +1480,7 @@
       "Net Rating": -2.4,
       "Year": 2023,
       "tags": [
-        "Bully-Ball Ground Attack",
+        "Efficient Offense",
         "Disruptive Defense",
         "Underachieving High-Level Roster"
       ],
@@ -1501,7 +1501,7 @@
       "Net Rating": -2.4,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Run-First Offense (Pass-Efficient)",
+        "Controlled Pace Balanced Spread",
         "Sound Defense",
         "Overachieving Developmental Roster"
       ],
@@ -1606,7 +1606,7 @@
       "Net Rating": -3.4,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -1690,7 +1690,7 @@
       "Net Rating": -3.8,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Offense",
+        "Balanced Spread",
         "Disruptive Defense",
         "Developmental Roster"
       ],
@@ -1753,7 +1753,7 @@
       "Net Rating": -4.8,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Run-Heavy Offense",
+        "Controlled Pace Run-First Offense",
         "Stout Defense",
         "Above-Average Roster"
       ],
@@ -1795,7 +1795,7 @@
       "Net Rating": -5.2,
       "Year": 2023,
       "tags": [
-        "Pass-Heavy Anemic Offense",
+        "Anemic Offense",
         "Sound Defense",
         "Underachieving Elite Roster"
       ],
@@ -1984,7 +1984,7 @@
       "Net Rating": -6.0,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Bully-Ball Ground Attack",
         "Vulnerable Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2026,7 +2026,7 @@
       "Net Rating": -7.0,
       "Year": 2023,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2068,7 +2068,7 @@
       "Net Rating": -7.2,
       "Year": 2023,
       "tags": [
-        "Uptempo Run-First Offense",
+        "Uptempo Run-Heavy Offense",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2089,7 +2089,7 @@
       "Net Rating": -7.2,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient)",
+        "Balanced Spread",
         "Sound Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2194,7 +2194,7 @@
       "Net Rating": -8.6,
       "Year": 2023,
       "tags": [
-        "Uptempo Run-Heavy Offense (Pass-Efficient)",
+        "Uptempo Efficient Offense",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2236,7 +2236,7 @@
       "Net Rating": -9.2,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Run-Heavy Offense",
+        "Controlled Pace Stymied Anemic Offense",
         "Stout Defense",
         "Underdog Roster"
       ],
@@ -2257,7 +2257,7 @@
       "Net Rating": -9.8,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Balanced Spread",
+        "Controlled Pace Run-First Offense",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2278,7 +2278,7 @@
       "Net Rating": -10.0,
       "Year": 2023,
       "tags": [
-        "Uptempo Run-First Offense",
+        "Uptempo Run-Heavy Offense",
         "Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -2320,7 +2320,7 @@
       "Net Rating": -10.4,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Balanced Spread",
+        "Controlled Pace Run-First Offense",
         "Vulnerable Defense",
         "Developmental Roster"
       ],
@@ -2425,7 +2425,7 @@
       "Net Rating": -11.5,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Vulnerable Defense",
         "Competitive Roster"
       ],
@@ -2467,7 +2467,7 @@
       "Net Rating": -11.9,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Offense (Turnover-Prone)",
+        "Volatile Big-Play Offense (Turnover-Prone)",
         "Porous & Passive Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2488,7 +2488,7 @@
       "Net Rating": -12.9,
       "Year": 2023,
       "tags": [
-        "Controlled Pace Pass-Heavy Anemic Offense (Run-Efficient)",
+        "Controlled Pace Stymied Anemic Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2509,7 +2509,7 @@
       "Net Rating": -12.9,
       "Year": 2023,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense (Pass-Efficient)",
         "Vulnerable Defense",
         "Underdog Roster"
       ],
@@ -2530,7 +2530,7 @@
       "Net Rating": -13.2,
       "Year": 2023,
       "tags": [
-        "Pass-Heavy Anemic Offense (Turnover-Prone)",
+        "Anemic Offense (Turnover-Prone)",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
@@ -2677,7 +2677,7 @@
       "Net Rating": -17.1,
       "Year": 2023,
       "tags": [
-        "Pass-Heavy Anemic Offense",
+        "Stymied Anemic Offense",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
@@ -2719,7 +2719,7 @@
       "Net Rating": -17.5,
       "Year": 2023,
       "tags": [
-        "Run-Heavy Offense (Turnover-Prone)",
+        "Pass-Heavy Anemic Offense (Run-Efficient, Turnover-Prone)",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2782,7 +2782,7 @@
       "Net Rating": -22.0,
       "Year": 2023,
       "tags": [
-        "Anemic Offense",
+        "Pass-Heavy Anemic Offense",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
