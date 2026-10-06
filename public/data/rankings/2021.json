@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T14:04:56.112881+00:00",
+  "generated_at": "2026-10-06T20:33:52.922628+00:00",
   "year": 2021,
   "rankings": [
     {
@@ -10,7 +10,7 @@
       "Net Rating": 31.8,
       "Year": 2021,
       "tags": [
-        "High-Powered Air Assault (Ball-Secure)",
+        "Explosive Offense (Ball-Secure)",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -52,7 +52,7 @@
       "Net Rating": 27.6,
       "Year": 2021,
       "tags": [
-        "High-Powered Ground Attack (Pass-Efficient)",
+        "High-Powered Air Assault",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -73,7 +73,7 @@
       "Net Rating": 19.6,
       "Year": 2021,
       "tags": [
-        "High-Powered Ground Attack (Pass-Efficient, Ball-Secure)",
+        "High-Powered Offense (Ball-Secure)",
         "Elite Defense",
         "Championship Contender"
       ],
@@ -115,7 +115,7 @@
       "Net Rating": 18.5,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient)",
+        "Efficient Offense",
         "Elite Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -136,7 +136,7 @@
       "Net Rating": 17.6,
       "Year": 2021,
       "tags": [
-        "High-Powered Ground Attack (Pass-Efficient)",
+        "High-Powered Offense",
         "Elite Defense",
         "Championship Contender"
       ],
@@ -157,7 +157,7 @@
       "Net Rating": 17.5,
       "Year": 2021,
       "tags": [
-        "Explosive Offense (Ball-Secure)",
+        "High-Powered Ground Attack (Ball-Secure)",
         "Elite Disruptive Defense",
         "Overachieving Championship Contender"
       ],
@@ -241,7 +241,7 @@
       "Net Rating": 14.3,
       "Year": 2021,
       "tags": [
-        "High-Powered Ground Attack",
+        "High-Powered Offense",
         "Stout Secondary Defense",
         "High-Level Roster"
       ],
@@ -262,7 +262,7 @@
       "Net Rating": 13.0,
       "Year": 2021,
       "tags": [
-        "High-Powered Ground Attack (Pass-Efficient, Ball-Secure)",
+        "Explosive Offense (Ball-Secure)",
         "Stout Run Defense",
         "Above-Average Roster"
       ],
@@ -367,7 +367,7 @@
       "Net Rating": 10.8,
       "Year": 2021,
       "tags": [
-        "Uptempo Explosive Offense (Ball-Secure)",
+        "Uptempo Bully-Ball Ground Attack (Ball-Secure)",
         "Stout Run Defense",
         "Elite Roster"
       ],
@@ -388,7 +388,7 @@
       "Net Rating": 10.8,
       "Year": 2021,
       "tags": [
-        "Controlled Pace High-Powered Air Assault",
+        "Controlled Pace Explosive Offense",
         "Sound Defense",
         "Overachieving Competitive Roster"
       ],
@@ -472,7 +472,7 @@
       "Net Rating": 9.6,
       "Year": 2021,
       "tags": [
-        "Explosive Offense (Ball-Secure)",
+        "Bully-Ball Ground Attack (Ball-Secure)",
         "Elite Defense",
         "Elite Roster"
       ],
@@ -514,7 +514,7 @@
       "Net Rating": 9.1,
       "Year": 2021,
       "tags": [
-        "Methodical Chain-Mover",
+        "High-Powered Ground Attack (Pass-Efficient)",
         "Stout Defense",
         "Elite Roster"
       ],
@@ -535,7 +535,7 @@
       "Net Rating": 8.8,
       "Year": 2021,
       "tags": [
-        "High-Powered Offense",
+        "Bully-Ball Ground Attack",
         "Stout Secondary Defense",
         "Elite Roster"
       ],
@@ -598,7 +598,7 @@
       "Net Rating": 8.3,
       "Year": 2021,
       "tags": [
-        "Run-First Offense (Pass-Efficient)",
+        "Balanced Spread",
         "Elite Disruptive Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -619,7 +619,7 @@
       "Net Rating": 8.3,
       "Year": 2021,
       "tags": [
-        "High-Powered Offense",
+        "High-Powered Air Assault",
         "Sound Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -640,7 +640,7 @@
       "Net Rating": 8.2,
       "Year": 2021,
       "tags": [
-        "High-Powered Ground Attack",
+        "Explosive Offense",
         "Sound Defense",
         "Overachieving Competitive Roster"
       ],
@@ -766,7 +766,7 @@
       "Net Rating": 7.6,
       "Year": 2021,
       "tags": [
-        "Explosive Offense",
+        "High-Powered Air Assault",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -787,7 +787,7 @@
       "Net Rating": 7.3,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
+        "Run-Heavy Offense",
         "Stout Secondary Defense",
         "Underachieving Blue-Blood Talent"
       ],
@@ -808,7 +808,7 @@
       "Net Rating": 7.2,
       "Year": 2021,
       "tags": [
-        "Balanced Spread",
+        "Bully-Ball Ground Attack",
         "Sound Defense",
         "High-Level Roster"
       ],
@@ -850,7 +850,7 @@
       "Net Rating": 6.9,
       "Year": 2021,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Stout Secondary Defense",
         "High-Level Roster"
       ],
@@ -871,7 +871,7 @@
       "Net Rating": 6.2,
       "Year": 2021,
       "tags": [
-        "Methodical Chain-Mover",
+        "High-Powered Air Assault",
         "Stout Secondary Defense",
         "High-Level Roster"
       ],
@@ -976,7 +976,7 @@
       "Net Rating": 5.2,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient)",
+        "Efficient Offense",
         "Elite Defense",
         "Underachieving Blue-Blood Talent"
       ],
@@ -997,7 +997,7 @@
       "Net Rating": 5.2,
       "Year": 2021,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Elite Defense",
         "Overachieving Competitive Roster"
       ],
@@ -1018,7 +1018,7 @@
       "Net Rating": 5.1,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient)",
+        "Efficient Offense",
         "Sound Defense",
         "Underachieving Elite Roster"
       ],
@@ -1102,7 +1102,7 @@
       "Net Rating": 4.1,
       "Year": 2021,
       "tags": [
-        "Pass-Heavy Anemic Offense",
+        "Anemic Offense",
         "Stout Secondary Defense",
         "Underachieving Elite Roster"
       ],
@@ -1186,7 +1186,7 @@
       "Net Rating": 3.1,
       "Year": 2021,
       "tags": [
-        "Uptempo High-Powered Offense",
+        "Uptempo Bully-Ball Ground Attack",
         "Vulnerable Defense",
         "Above-Average Roster"
       ],
@@ -1249,7 +1249,7 @@
       "Net Rating": 2.1,
       "Year": 2021,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1312,7 +1312,7 @@
       "Net Rating": 1.5,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Efficient Offense",
+        "Controlled Pace Run-Heavy Offense",
         "Vulnerable Defense",
         "Above-Average Roster"
       ],
@@ -1333,7 +1333,7 @@
       "Net Rating": 1.0,
       "Year": 2021,
       "tags": [
-        "Methodical Chain-Mover",
+        "Run-Heavy Offense",
         "Sound Defense",
         "Underachieving Blue-Blood Talent"
       ],
@@ -1375,7 +1375,7 @@
       "Net Rating": 0.4,
       "Year": 2021,
       "tags": [
-        "Balanced Spread",
+        "Run-Heavy Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1396,7 +1396,7 @@
       "Net Rating": 0.4,
       "Year": 2021,
       "tags": [
-        "Run-First Offense (Pass-Efficient)",
+        "Balanced Spread",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1417,7 +1417,7 @@
       "Net Rating": 0.3,
       "Year": 2021,
       "tags": [
-        "Bully-Ball Ground Attack (Ball-Secure)",
+        "Methodical Chain-Mover (Ball-Secure)",
         "Disruptive Defense",
         "Developmental Roster"
       ],
@@ -1480,7 +1480,7 @@
       "Net Rating": -0.6,
       "Year": 2021,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense (Pass-Efficient)",
         "Stout & Disruptive Defense",
         "Underachieving Elite Roster"
       ],
@@ -1564,7 +1564,7 @@
       "Net Rating": -1.2,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Balanced Spread",
+        "Controlled Pace Run-First Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1732,7 +1732,7 @@
       "Net Rating": -2.7,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Efficient Offense",
+        "Controlled Pace Run-Heavy Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1816,7 +1816,7 @@
       "Net Rating": -4.0,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Offense",
+        "Efficient Offense",
         "Vulnerable Defense",
         "High-Level Roster"
       ],
@@ -1837,7 +1837,7 @@
       "Net Rating": -4.7,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Balanced Spread",
+        "Controlled Pace Bully-Ball Ground Attack",
         "Sound Defense",
         "High-Level Roster"
       ],
@@ -1921,7 +1921,7 @@
       "Net Rating": -7.0,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Pass-Heavy Anemic Offense",
+        "Controlled Pace Anemic Offense",
         "Stout Secondary Defense",
         "Developmental Roster"
       ],
@@ -1942,7 +1942,7 @@
       "Net Rating": -7.1,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Run-Heavy Offense",
+        "Controlled Pace Run-First Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1963,7 +1963,7 @@
       "Net Rating": -7.3,
       "Year": 2021,
       "tags": [
-        "Run-First Offense (Pass-Efficient)",
+        "High-Powered Air Assault",
         "Porous & Passive Defense",
         "Overachieving Underdog Roster"
       ],
@@ -2026,7 +2026,7 @@
       "Net Rating": -7.9,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Run-Heavy Offense (Pass-Efficient)",
+        "Controlled Pace Balanced Spread",
         "Sound Defense",
         "Competitive Roster"
       ],
@@ -2152,7 +2152,7 @@
       "Net Rating": -8.8,
       "Year": 2021,
       "tags": [
-        "Balanced Spread (Turnover-Prone)",
+        "Run-Heavy Offense (Turnover-Prone)",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2173,7 +2173,7 @@
       "Net Rating": -8.9,
       "Year": 2021,
       "tags": [
-        "Balanced Spread",
+        "Run-Heavy Offense",
         "Vulnerable Defense",
         "Underdog Roster"
       ],
@@ -2215,7 +2215,7 @@
       "Net Rating": -9.8,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Pass-Heavy Anemic Offense (Run-Efficient)",
+        "Controlled Pace Run-Heavy Offense",
         "Sound Defense",
         "Developmental Roster"
       ],
@@ -2257,7 +2257,7 @@
       "Net Rating": -10.2,
       "Year": 2021,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Sound Defense",
         "Underdog Roster"
       ],
@@ -2320,7 +2320,7 @@
       "Net Rating": -11.3,
       "Year": 2021,
       "tags": [
-        "Run-First Offense (Pass-Efficient)",
+        "Balanced Spread",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2341,7 +2341,7 @@
       "Net Rating": -12.6,
       "Year": 2021,
       "tags": [
-        "Run-First Offense (Pass-Efficient, Turnover-Prone)",
+        "Balanced Spread (Turnover-Prone)",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
@@ -2383,7 +2383,7 @@
       "Net Rating": -14.2,
       "Year": 2021,
       "tags": [
-        "Run-Heavy Offense",
+        "Run-First Offense",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
@@ -2404,7 +2404,7 @@
       "Net Rating": -14.6,
       "Year": 2021,
       "tags": [
-        "Bully-Ball Ground Attack",
+        "Anemic Offense",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2488,7 +2488,7 @@
       "Net Rating": -17.7,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Volatile Big-Play Offense",
+        "Controlled Pace Run-Heavy Offense",
         "Porous & Passive Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2656,7 +2656,7 @@
       "Net Rating": -24.4,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Volatile Big-Play Offense (Turnover-Prone)",
+        "Controlled Pace Run-Heavy Offense (Turnover-Prone)",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
