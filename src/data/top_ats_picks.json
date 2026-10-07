@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-06T20:34:55.394230+00:00",
+  "generated_at": "2026-10-07T15:32:18.132923+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 3 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5119,
+  "backtest_cover_rate": 0.5099,
   "picks_by_week": {
     "6": [
       {
@@ -9,28 +9,42 @@
         "week": 6,
         "home_team": "Oklahoma State",
         "away_team": "UCF",
-        "market_spread": -8.5,
+        "market_spread": -10.0,
         "predicted_margin": 3.69,
         "pick": "UCF",
         "pick_side": "away",
-        "edge_pts": 12.2,
-        "cover_prob": 0.7783,
-        "prob_edge": 0.2783,
-        "kelly_fraction": 0.5344
+        "edge_pts": 13.7,
+        "cover_prob": 0.8053,
+        "prob_edge": 0.3053,
+        "kelly_fraction": 0.5911
+      },
+      {
+        "game_id": 401858487,
+        "week": 6,
+        "home_team": "Washington",
+        "away_team": "Iowa",
+        "market_spread": -3.5,
+        "predicted_margin": 5.96,
+        "pick": "Iowa",
+        "pick_side": "away",
+        "edge_pts": 9.5,
+        "cover_prob": 0.724,
+        "prob_edge": 0.224,
+        "kelly_fraction": 0.4204
       },
       {
         "game_id": 401862794,
         "week": 6,
         "home_team": "UTSA",
         "away_team": "South Florida",
-        "market_spread": -7.5,
+        "market_spread": -7.0,
         "predicted_margin": 2.24,
         "pick": "South Florida",
         "pick_side": "away",
-        "edge_pts": 9.7,
-        "cover_prob": 0.7298,
-        "prob_edge": 0.2298,
-        "kelly_fraction": 0.4327
+        "edge_pts": 9.2,
+        "cover_prob": 0.7194,
+        "prob_edge": 0.2194,
+        "kelly_fraction": 0.4106
       },
       {
         "game_id": 401858257,
@@ -47,32 +61,18 @@
         "kelly_fraction": 0.3986
       },
       {
-        "game_id": 401858487,
+        "game_id": 401866436,
         "week": 6,
-        "home_team": "Washington",
-        "away_team": "Iowa",
-        "market_spread": -3.0,
-        "predicted_margin": 5.96,
-        "pick": "Iowa",
+        "home_team": "Bowling Green",
+        "away_team": "Sacramento State",
+        "market_spread": -8.0,
+        "predicted_margin": 0.22,
+        "pick": "Sacramento State",
         "pick_side": "away",
-        "edge_pts": 9.0,
-        "cover_prob": 0.7134,
-        "prob_edge": 0.2134,
-        "kelly_fraction": 0.3981
-      },
-      {
-        "game_id": 401858256,
-        "week": 6,
-        "home_team": "Pittsburgh",
-        "away_team": "North Carolina",
-        "market_spread": -4.0,
-        "predicted_margin": -11.81,
-        "pick": "Pittsburgh",
-        "pick_side": "home",
-        "edge_pts": 7.8,
-        "cover_prob": 0.6883,
-        "prob_edge": 0.1883,
-        "kelly_fraction": 0.3454
+        "edge_pts": 8.2,
+        "cover_prob": 0.6973,
+        "prob_edge": 0.1973,
+        "kelly_fraction": 0.3644
       }
     ],
     "7": [
