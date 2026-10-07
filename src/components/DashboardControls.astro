@@ -84,31 +84,12 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
       }
     </select>
 
-    <!-- Live SU% / ATS% record for the current filter selection (year + week + conference) -->
-    <div class="record-stats" id="matchupRecordStats">
-      <span class="season-label">Week</span>
-      <div class="stat-pill" id="suStatPill">
-        <span class="stat-pill-label">SU</span>
-        <span class="stat-pill-value" id="suStatValue">—</span>
-      </div>
-      <div class="stat-pill" id="atsStatPill">
-        <span class="stat-pill-label">ATS</span>
-        <span class="stat-pill-value" id="atsStatValue">—</span>
-      </div>
-    </div>
-
-    <!-- Full-season SU% / ATS% for the selected year, independent of week/conference -->
-    <div class="record-stats season-stats" id="matchupSeasonStats">
-      <span class="season-label">Season</span>
-      <div class="stat-pill" id="suSeasonPill">
-        <span class="stat-pill-label">SU</span>
-        <span class="stat-pill-value" id="suSeasonValue">—</span>
-      </div>
-      <div class="stat-pill" id="atsSeasonPill">
-        <span class="stat-pill-label">ATS</span>
-        <span class="stat-pill-value" id="atsSeasonValue">—</span>
-      </div>
-    </div>
+    <select id="sortFilter" aria-label="Sort games">
+      <option value="start">Sort: Kickoff</option>
+      <option value="watch">Sort: Excitement</option>
+      <option value="channel">Sort: Channel</option>
+      <option value="edge">Sort: Biggest edge</option>
+    </select>
 
     <!-- Visual Conference Pills for Matchups -->
     <div class="conf-pills" id="matchupConfPills">
@@ -119,19 +100,82 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
         ))
       }
     </div>
+    
+    <div class="stats-group">
+      <span class="stats-title">Model Performance</span>
+      <div class="record-stats" id="matchupRecordStats">
+        <span class="season-label">Week</span>
+        <div class="stat-pill" id="suStatPill">
+          <span class="stat-pill-label">SU</span>
+          <span class="stat-pill-value" id="suStatValue">—</span>
+        </div>
+        <div class="stat-pill" id="atsStatPill">
+          <span class="stat-pill-label">ATS</span>
+          <span class="stat-pill-value" id="atsStatValue">—</span>
+        </div>
+      </div>
+
+      <!-- Full-season SU% / ATS% for the selected year, independent of week/conference -->
+      <div class="record-stats season-stats" id="matchupSeasonStats">
+        <span class="season-label">Season</span>
+        <div class="stat-pill" id="suSeasonPill">
+          <span class="stat-pill-label">SU</span>
+          <span class="stat-pill-value" id="suSeasonValue">—</span>
+        </div>
+        <div class="stat-pill" id="atsSeasonPill">
+          <span class="stat-pill-label">ATS</span>
+          <span class="stat-pill-value" id="atsSeasonValue">—</span>
+        </div>
+      </div>
+    </div>
   </div>
   <slot name="matchups" />
 </div>
 
 <style>
+  .stats-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    color: var(--text-secondary, rgba(255, 255, 255, 0.5));
+    margin-right: 14px;
+  }
+
+  .season-label { white-space: nowrap; }
+
   .record-stats {
     display: flex;
     gap: 10px;
     align-items: center;
+    padding-left: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  #matchupRecordStats {
-    margin-left: auto;
+  .stats-group {
+    display: flex;
+    flex-wrap: nowrap;      /* Week and Season never split */
+    align-items: center;
+    flex-shrink: 0;         /* wrap as a unit instead of squeezing */
+  }
+
+  #matchupRecordStats.is-empty {
+    display: none;
+  }
+
+  /* When Week is hidden, Season loses its divider */
+  #matchupRecordStats.is-empty + .season-stats {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  @media (max-width: 720px) {
+    .stats-group {
+      width: 100%;
+      margin-left: 0;
+      overflow-x: auto;     /* scroll sideways instead of wrapping */
+    }
   }
 
   .season-stats {
@@ -175,15 +219,8 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     color: rgba(255, 255, 255, 0.4);
   }
 
-  @media (max-width: 720px) {
-    #matchupRecordStats,
-    .season-stats {
-      margin-left: 0;
-      padding-left: 0;
-      border-left: none;
-      width: 100%;
-      justify-content: flex-start;
-    }
+  #sortFilter.is-hidden {
+    display: none;
   }
 </style>
 
@@ -229,6 +266,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     const conf = params.get('conference');
     const wk = params.get('week');
     const tab = params.get('tab');
+    const sort = params.get('sort');
 
     function setAndFire(el: HTMLSelectElement | null, value: string) {
       if (!el) return;
@@ -260,6 +298,8 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
       document.getElementById('matchupsPanel')?.classList.add('active');
     }
 
+    if (sort) setAndFire(document.getElementById('sortFilter') as HTMLSelectElement | null, sort);
+
     // 4. Push current filter state to the URL (used for the back-link and shareability)
     function syncURL() {
       const activeTab = document.getElementById('matchupsPanel')?.classList.contains('active') ? 'matchups' : 'rankings';
@@ -267,7 +307,9 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 
       const currentYear = activeTab === 'matchups' ? matchupYear?.value : rankingsYear?.value;
       const currentConf = activeTab === 'matchups' ? matchupConf?.value : rankingsConf?.value;
+      const sortEl = document.getElementById('sortFilter') as HTMLSelectElement | null;
 
+      if (sortEl && sortEl.value !== 'start') newParams.set('sort', sortEl.value);
       if (currentYear) newParams.set('year', currentYear);
       if (currentConf && currentConf !== 'ALL') newParams.set('conference', currentConf);
       if (activeTab === 'matchups' && week?.value) newParams.set('week', week.value);

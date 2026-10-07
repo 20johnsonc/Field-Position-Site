@@ -32,6 +32,16 @@ function conferenceFor(team: string, teamConfMap: Record<string, string>) {
   return teamConfMap[team] ?? 'Other';
 }
 
+function kickoffMs(game: ClientGame): number {
+  const t = Date.parse(game.kickoff_utc ?? game.start_date ?? '');
+  return Number.isNaN(t) ? Number.MAX_SAFE_INTEGER : t; // unknown times sort last
+}
+
+function spreadEdge(game: ClientGame): number {
+  if (game.predicted_margin == null || game.market_spread == null) return -1; // no line → sort last
+  return Math.abs(Number(game.predicted_margin) - Number(game.market_spread));
+}
+
 function playsListHtml(topPlays: DisplayPlay[]): string {
   if (!topPlays.length) return '';
   const items = topPlays
@@ -104,6 +114,7 @@ export function renderMatchupRow(
       data-home-conf="${homeConf}" data-away-conf="${awayConf}"
       data-game-id="${game.game_id}" data-home-team="${game.home_team}" data-away-team="${game.away_team}"
       data-has-backtest="${hasBacktest}"
+      
       ${hasBacktest ? `data-su-correct="${backtest!.su_correct}" data-ats-correct="${backtest!.ats_correct}"` : ''}>
       <button type="button" class="game-row" data-row-trigger aria-expanded="false">
         <div class="teams-stack">
@@ -162,7 +173,7 @@ export function renderMatchupCard(game: ClientGame, teamConfMap: Record<string, 
   const score = watchGame.watchabilityScore;
   const tier = score !== undefined && score !== null ? watchTier(score) : null;
   const tip = score !== undefined && score !== null
-    ? `Watchability ${score.toFixed(1)}}`
+    ? `Watchability ${score.toFixed(1)}`
     : '';
   const chan = channelLabel(watchGame);
 
@@ -221,7 +232,12 @@ export function renderMatchupCard(game: ClientGame, teamConfMap: Record<string, 
       data-year="${game.year}" data-week="${game.week}"
       data-home-conf="${homeConf}" data-away-conf="${awayConf}"
       data-game-id="${game.game_id}" data-home-team="${game.home_team}" data-away-team="${game.away_team}"
-      data-has-backtest="false">
+      data-start="${kickoffMs(game)}"
+      data-watch-score="${game.watchability_score ?? -1}"
+      data-channel="${(game.tv_channel ?? '').replace(/"/g, '&quot;')}"
+      data-has-backtest="false"
+      data-edge="${spreadEdge(game).toFixed(2)}">
+      
       <header class="card-head">
         ${watchMetaHtml}
       </header>

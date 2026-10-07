@@ -151,6 +151,9 @@ const { row, ranks, totalTeams, teamMatchups, allRankings } = Astro.props;
 const gameHistory = gameHistoryRaw as GameHistoryData;
 const trajectories = trajectoriesRaw as TrajectoriesData;
 
+// Position decides the style: tags[0] = offense, tags[1] = defense, tags[2]+ = other
+const TAG_CLASSES = ['tag-offense', 'tag-defense', 'tag-neutral'];
+
 // Build a lookup set of valid team/year pages to make opponent links safe
 const validTeamYears = new Set(allRankings.map((r: any) => `${r.year}-${slugifyTeam(r.team)}`));
 
@@ -289,13 +292,13 @@ try {
   <div class="team-header">
     <div class="rank-badge">#{ranks?.overallRank ?? '—'}</div>
     <div class="team-header-content">
-      
+
       <div class="team-title-group">
         <h1>{row.team}</h1>
-        
+
         <div class="subtitle-row">
           <span class="subtitle">{row.conference} · Conf Rank #{ranks?.confRank ?? '—'} ·</span>
-          
+
           <div class="team-year-filter-wrap">
             <select id="teamYearFilter" class="controls select" aria-label="Filter team history by year" data-team={slugifyTeam(row.team)}>
               {Array.from(new Set(allRankings.filter((r: any) => r.team === row.team).map((r: any) => r.year)))
@@ -328,21 +331,17 @@ try {
     </div>
     {row.tags && row.tags.length > 0 && (
       <div class="team-tags">
-        {row.tags.map((tag: string) => {
-          const lower = tag.toLowerCase();
-          const isDef = lower.includes('defense') || lower.includes('stout') || lower.includes('break');
-          const isOff = lower.includes('offense') || lower.includes('explosive') || lower.includes('run');
-          const tagClass = isDef ? 'tag-defense' : (isOff ? 'tag-offense' : 'tag-neutral');
-          return <span class={`style-tag ${tagClass}`}>{tag}</span>;
-        })}
+        {row.tags.map((tag: string, i: number) => (
+          <span class={`style-tag ${TAG_CLASSES[Math.min(i, 2)]}`}>{tag}</span>
+        ))}
       </div>
     )}
   </div>
 
   {/* Passing & Rushing Spatial Breakdown Section */}
   {teamPrData && (
-    <PassingRushingTab 
-      teamData={teamPrData} 
+    <PassingRushingTab
+      teamData={teamPrData}
       teamName={row.team}
       teamSlug={slugifyTeam(row.team)}
       year={row.year}
@@ -494,7 +493,7 @@ try {
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const yearSelect = document.getElementById('teamYearFilter') as HTMLSelectElement | null;
-    
+
     yearSelect?.addEventListener('change', (e) => {
       const select = e.target as HTMLSelectElement;
       const selectedYear = select.value;
@@ -562,6 +561,7 @@ try {
     border-radius: 6px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    max-width: 100%; /* long tags wrap inside the pill instead of overflowing */
   }
 
   /* Offense Theme: Vibrant Teal / Cyan */

@@ -59,6 +59,17 @@ const suPickTeam = backtest ? pickTeamName(game, backtest.su_pick) : null;
 const atsPickTeam = backtest ? pickTeamName(game, backtest.ats_pick) : null;
 const suClass = backtest ? (backtest.su_correct ? 'correct' : 'incorrect') : '';
 const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '';
+
+// 5. Watchability
+const startMs = Date.parse(game.kickoffUtc ?? game.startDate ?? '');
+const startKey = Number.isNaN(startMs) ? Number.MAX_SAFE_INTEGER : startMs;
+const watchScore = game.watchabilityScore ?? -1;
+const channel = game.tvChannel ?? '';
+
+const edge =
+  game.predictedMargin != null && game.marketSpread != null
+    ? Math.abs(Number(game.predictedMargin) - Number(game.marketSpread))
+    : -1;
 ---
 
 <article
@@ -73,6 +84,10 @@ const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '
   data-has-backtest={hasBacktest ? 'true' : 'false'}
   data-su-correct={hasBacktest ? String(backtest!.su_correct) : undefined}
   data-ats-correct={hasBacktest ? String(backtest!.ats_correct) : undefined}
+  data-start={startKey}
+  data-watch-score={game.watchabilityScore ?? -1}
+  data-channel={game.tvChannel ?? ''}
+  data-edge={edge.toFixed(2)}
 >
   <!-- Header -->
   <header class="card-head">

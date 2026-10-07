@@ -11,15 +11,19 @@ const { rankings } = Astro.props;
 // Helper to convert "10-2" into a numeric value for accurate sorting
 const getRecordSortValue = (record: string) => {
   if (!record || !record.includes('-')) return -1;
-  
+
   const [wins, losses] = record.split('-').map(Number);
   const total = wins + losses;
-  
+
   if (total === 0) return -0.0001; // Distinct value for 0-0 so it doesn't collide with 0-1 (0.0)
-  
+
   // Win Percentage + tiny tiebreaker for total wins
   return (wins / total) + (wins * 0.0001);
 };
+
+// Position decides the style: tags[0] = offense, tags[1] = defense, tags[2] = other.
+// Anything past the third tag goes into the "+N more" badge.
+const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
 ---
 
 <div class="table-container">
@@ -28,81 +32,81 @@ const getRecordSortValue = (record: string) => {
       <tr>
         <th class="sortable" data-sort-key="rank">Rk ⇕</th>
         <th class="sortable" data-sort-key="team">Team</th>
-        <th class="sortable num" data-sort-key="netRating" style="text-align: right;">Net Rating</th>
-        <th class="sortable num" data-sort-key="record" style="text-align: right;">Record</th>
-        <th class="sortable num" data-sort-key="conference_record" style="text-align: right;">Conf Record</th>
-        <th class="sortable num" data-sort-key="sos" style="text-align: right;">SOS</th>
-        <th class="sortable num" data-sort-key="sor" style="text-align: right;">SOR</th>
-        <th class="sortable" data-sort-key="conference">Conf</th>
+        <th class="sortable num" data-sort-key="netRating" style="text-align: center;">Net Rating</th>
+        <th class="sortable num" data-sort-key="record" style="text-align: center;">Record</th>
+        <th class="sortable num" data-sort-key="conference_record" style="text-align: center;">Conf Record</th>
+        <th class="sortable num" data-sort-key="sos" style="text-align: center;">SOS</th>
+        <th class="sortable num" data-sort-key="sor" style="text-align: center;">SOR</th>
+        <th class="sortable" data-sort-key="conference" style="text-align: left;">Conf</th>
         {/*<th class="text-right">Style Tags</th>*/}
       </tr>
     </thead>
     <tbody id="rankingsBody">
       {
-        rankings.map((row) => (
-          <tr
-            data-year={row.year}
-            data-team={row.team}
-            data-rank={row.rank}
-            data-record={getRecordSortValue(row.record)}
-            data-conference-record={getRecordSortValue(row.conference_record)}
-            data-net-rating={row.netRating}
-            data-sos={row.sos_rank}
-            data-sor={row.sor_rank}
-            data-conference={row.conference}
-          >
-            <td class="rank">
-              <span class="rank-num">{row.rank}</span>
-            </td>
-            <td class="team">
-              <a href={`/teams/${row.year}/${slugifyTeam(row.team)}/`} class="team-link">
-                {row.team}
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
-                <div class="rank-wrapper">
-                  {row.rank_change != null && (
-                    <span 
-                      class={`rank-change ${Number(row.rank_change) > 0 ? 'up' : Number(row.rank_change) < 0 ? 'down' : 'neutral'}`}
-                      title={row.previous_rank ? `Previous Rank: ${row.previous_rank}` : 'No change'}
-                    >
-                      {Number(row.rank_change) > 0 ? '▲' : Number(row.rank_change) < 0 ? '▼' : ''}
-                      {Number(row.rank_change) !== 0 ? <span class="change-val">{Math.abs(Number(row.rank_change))}</span> : ''}
-                    </span>
-                  )}
-                </div>
-              </a>
-            </td>
-            <td class="num rating">{formatRating(row.netRating)}</td>
-            <td class="num">{row.record}</td>
-            <td class="num">{row.conference_record}</td>
-            <td class="num" title={`Rating: ${row.sos}`}>{row.sos_rank}</td>
-            <td class="num" title={`Rating: ${row.sor}`}>{row.sor_rank}</td>
-            <td>{row.conference}</td>
-            {/*
-            <td class="text-right">
-              {row.tags && row.tags.length > 0 ? (
-                <div class="table-tags">
-                  {row.tags.slice(0, 3).map((tag: string) => {
-                    const lower = tag.toLowerCase();
-                    const isDef = lower.includes('defense') || lower.includes('stout') || lower.includes('break');
-                    const isOff = lower.includes('offense') || lower.includes('explosive') || lower.includes('run');
-                    const tagClass = isDef ? 'mini-defense' : (isOff ? 'mini-offense' : 'mini-neutral');
-                    
-                    return <span class={`mini-tag ${tagClass}`}>{tag}</span>;
-                  })}
-                  
-                  {row.tags.length > 3 && (
-                    <span class="mini-tag mini-counter" title={row.tags.slice(3).join(', ')}>
-                      +{row.tags.length - 3} more
-                    </span>
-                  )}
-                </div>
-              ) : (
-                <span class="text-muted">—</span>
-              )}
-            </td>
-            */}
-          </tr>
-        ))
+        rankings.map((row) => {
+          const tags: string[] = row.tags ?? [];
+          const shown = tags.slice(0, 3);
+          const extra = tags.slice(3);
+
+          return (
+            <tr
+              data-year={row.year}
+              data-team={row.team}
+              data-rank={row.rank}
+              data-record={getRecordSortValue(row.record)}
+              data-conference-record={getRecordSortValue(row.conference_record)}
+              data-net-rating={row.netRating}
+              data-sos={row.sos_rank}
+              data-sor={row.sor_rank}
+              data-conference={row.conference}
+            >
+              <td class="rank">
+                <span class="rank-num">{row.rank}</span>
+              </td>
+              <td class="team">
+                <a href={`/teams/${row.year}/${slugifyTeam(row.team)}/`} class="team-link">
+                  {row.team}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
+                  <div class="rank-wrapper">
+                    {row.rank_change != null && (
+                      <span
+                        class={`rank-change ${Number(row.rank_change) > 0 ? 'up' : Number(row.rank_change) < 0 ? 'down' : 'neutral'}`}
+                        title={row.previous_rank ? `Previous Rank: ${row.previous_rank}` : 'No change'}
+                      >
+                        {Number(row.rank_change) > 0 ? '▲' : Number(row.rank_change) < 0 ? '▼' : ''}
+                        {Number(row.rank_change) !== 0 ? <span class="change-val">{Math.abs(Number(row.rank_change))}</span> : ''}
+                      </span>
+                    )}
+                  </div>
+                </a>
+              </td>
+              <td class="num rating">{formatRating(row.netRating)}</td>
+              <td class="num">{row.record}</td>
+              <td class="num">{row.conference_record}</td>
+              <td class="num" title={`Rating: ${row.sos}`}>{row.sos_rank}</td>
+              <td class="num" title={`Rating: ${row.sor}`}>{row.sor_rank}</td>
+              <td>{row.conference}</td>
+              {/*
+              <td class="text-right">
+                {shown.length > 0 ? (
+                  <div class="table-tags">
+                    {shown.map((tag, i) => (
+                      <span class={`mini-tag ${TAG_CLASSES[i]}`} title={tag}>{tag}</span>
+                    ))}
+                    {extra.length > 0 && (
+                      <span class="mini-tag mini-counter" title={extra.join(', ')}>
+                        +{extra.length} more
+                      </span>
+                    )}
+                  </div>
+                ) : (
+                  <span class="text-muted">—</span>
+                )}
+              </td>
+              */}
+            </tr>
+          );
+        })
       }
     </tbody>
   </table>
@@ -145,7 +149,7 @@ const getRecordSortValue = (record: string) => {
 
   .team-link,
   .team-link:visited {
-    color: #ffffff; 
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -153,18 +157,22 @@ const getRecordSortValue = (record: string) => {
   }
 
   .team-link:hover {
-    color: #93c5fd; 
+    color: #93c5fd;
   }
 
   .text-right {
     text-align: right;
   }
 
+  .text-muted {
+    opacity: 0.5;
+  }
+
   .table-tags {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 6px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
   }
 
   .mini-tag {
@@ -175,6 +183,10 @@ const getRecordSortValue = (record: string) => {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     white-space: nowrap;
+    /* Offense tags can be long; truncate and show the full text on hover */
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Counter Badge Style */

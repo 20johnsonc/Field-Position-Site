@@ -276,7 +276,7 @@ header {
 }
 
 .rank-table .num {
-  text-align: right;
+  text-align: center;
   font-variant-numeric: tabular-nums;
 }
 
@@ -303,7 +303,7 @@ header {
   border: 1px solid var(--card-border);
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -437,12 +437,13 @@ header {
 .stat-box {
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid var(--card-border);
-  padding: 10px 12px;
+  padding: 10px 6px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
   transition: border-color 0.2s ease;
+  align-items: center;
 }
 
 .stat-box:hover {

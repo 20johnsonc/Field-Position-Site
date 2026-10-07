@@ -85,6 +85,7 @@ async function loadWeekAndRender(): Promise<void> {
   );
 
   renderMatchupWeek(matchups, teamConfMap, backtestByGame, topPlaysByGame);
+  applySort();
 
   const pbpDataScript = document.getElementById('pbp-week-data');
   if (pbpDataScript) {
@@ -111,6 +112,16 @@ function applyMatchupConferenceFilter(): void {
   document.getElementById('matchupEmptyState')?.classList.toggle('visible', visibleCount === 0);
   updateMatchupRecordStats();
   renderVisibleTopPlays();
+
+  const topPlaysWrapper = document.getElementById('topPlaysWrapper');
+  const topPlaysCount = parseInt(
+    document.getElementById('topPlaysToggleCount')?.textContent ?? '0',
+    10
+  );
+  if (topPlaysWrapper) topPlaysWrapper.hidden = !(topPlaysCount > 0);
+  const hasVisibleUpcoming =
+    document.querySelectorAll('#matchupGrid > .matchup-card:not(.is-hidden)').length > 0;
+  document.getElementById('sortFilter')?.classList.toggle('is-hidden', !hasVisibleUpcoming);
 }
 
 // Unchanged logic — still correct now, because only one week's cards ever
@@ -134,6 +145,8 @@ function updateMatchupRecordStats(): void {
 
   setStatPill('suStatValue', 'suStatPill', suCorrect, suTotal);
   setStatPill('atsStatValue', 'atsStatPill', atsCorrect, atsTotal);
+  const weekStats = document.getElementById('matchupRecordStats');
+  weekStats?.classList.toggle('is-empty', suTotal === 0 && atsTotal === 0);
 }
 
 // Now reads a pre-aggregated file instead of scanning the DOM (the DOM only
@@ -336,6 +349,7 @@ export async function initDashboardControls(): Promise<void> {
 
   bindTabs();
   bindFilters();
+  bindSortSelect();
   bindSortHeaders();
   bindTopPlaysToggle();
   populateTeamDropdown();
@@ -396,3 +410,35 @@ declare global {
   }
 }
 window.openPbpModal = openPbpModal;
+
+type SortKey = 'start' | 'watch' | 'channel' | 'edge';
+let currentSort: SortKey = 'start';
+
+const sorters: Record<SortKey, (a: HTMLElement, b: HTMLElement) => number> = {
+  start: (a, b) => Number(a.dataset.start) - Number(b.dataset.start),
+  watch:   (a, b) => Number(b.dataset.watchScore) - Number(a.dataset.watchScore)
+                     || Number(b.dataset.start) - Number(a.dataset.start),
+  channel: (a, b) => {
+    // empty (TBD) channels go last
+    const ca = a.dataset.channel || '\uffff';
+    const cb = b.dataset.channel || '\uffff';
+    return ca.localeCompare(cb) || Number(a.dataset.start) - Number(b.dataset.start);
+  },
+  edge: (a, b) =>
+    Number(b.dataset.edge) - Number(a.dataset.edge)
+    || Number(a.dataset.start) - Number(b.dataset.start),
+};
+
+export function applySort(): void {
+  const container = document.getElementById('matchupGrid');
+  if (!container) return;
+  const cards = Array.from(container.querySelectorAll<HTMLElement>(':scope > .matchup-card'));
+  cards.sort(sorters[currentSort]).forEach((c) => container.appendChild(c));
+}
+
+function bindSortSelect(): void {
+  document.getElementById('sortFilter')?.addEventListener('change', (e) => {
+    currentSort = (e.target as HTMLSelectElement).value as SortKey;
+    applySort();
+  });
+}
