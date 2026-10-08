@@ -29,24 +29,137 @@ const chan = channelLabel(game);
 </div>
 
 <style is:global>
-  /* Global (not scoped) so client-rendered copies of the same markup are styled too.
-     Defaults match the site's dark theme (same green/blue as the play-impact colors). */
-  .wm-row { display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; font-size: 0.8rem; gap: 0.5rem; }
-  .wm-score { display: inline-flex; align-items: baseline; gap: 0.3rem; padding: 0.05rem 0.45rem; border: 1px solid currentColor; border-radius: 999px; font-weight: 600; line-height: 1.3; }
-  .wm-score-num { font-variant-numeric: tabular-nums; }
-  .wm-score-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.8; }
-  .wm-marquee { color: var(--wm-marquee, #fbbf24); }
-  .wm-strong  { color: var(--wm-strong,  #4ade80); }
-  .wm-solid   { color: var(--wm-solid,   #60a5fa); }
-  .wm-light   { color: var(--wm-light,   rgba(255, 255, 255, 0.5)); }
-  .wm-kickoff { font-variant-numeric: tabular-nums; color: #e5e7eb; }
-  .wm-tbd { opacity: 0.7; }
-  .wm-time-chan { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-  .wm-chan { padding: 0.1rem 0.5rem; border-radius: 0.35rem; background: var(--wm-chip-bg, rgba(255, 255, 255, 0.06)); color: #e5e7eb; }
-  .wm-chan-tbd { opacity: 0.7; }
-  .wm-toolbar { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.75rem; font-size: 0.85rem; }
-  .wm-toolbar[hidden] { display: none; }
-  .wm-toolbar button { padding: 0.2rem 0.65rem; border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08)); border-radius: 999px; background: transparent; color: inherit; cursor: pointer; opacity: 0.7; }
-  .wm-toolbar button:focus-visible { outline: 2px solid #67e8f9; outline-offset: 2px; }
-  .wm-toolbar button[aria-pressed='true'] { opacity: 1; font-weight: 600; background: var(--wm-chip-bg, rgba(255, 255, 255, 0.06)); }
+  /* =========================================================
+     WIN / MATCHUP META
+     Layout and component behavior only.
+     Colors come from the global theme tokens.
+     ========================================================= */
+
+  .wm-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .wm-score {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    padding: 0.05rem 0.45rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .wm-score-num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .wm-score-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  /* Semantic result colors */
+  .wm-marquee {
+    color: var(--wm-marquee);
+  }
+
+  .wm-strong {
+    color: var(--wm-strong);
+  }
+
+  .wm-solid {
+    color: var(--wm-solid);
+  }
+
+  .wm-light {
+    color: var(--text);
+  }
+
+  .wm-kickoff {
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+
+  .wm-tbd,
+  .wm-chan-tbd {
+    opacity: 0.7;
+  }
+
+  .wm-time-chan {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .wm-chan {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.35rem;
+    background: var(--surface-3);
+    color: var(--text-muted);
+  }
+
+  /* =========================================================
+     TOOLBAR
+     ========================================================= */
+
+  .wm-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .wm-toolbar[hidden] {
+    display: none;
+  }
+
+  .wm-toolbar button {
+    padding: 0.2rem 0.65rem;
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease,
+      opacity 0.15s ease;
+  }
+
+  .wm-toolbar button:hover {
+    opacity: 1;
+    background: var(--surface-hover);
+    border-color: var(--card-border-strong);
+  }
+
+  .wm-toolbar button:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+  }
+
+  .wm-toolbar button[aria-pressed="true"] {
+    opacity: 1;
+    font-weight: 600;
+    background: var(--surface-active);
+    border-color: var(--card-border-strong);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wm-toolbar button {
+      transition: none;
+    }
+  }
 </style>

@@ -71,8 +71,11 @@ const pbpDataJson = JSON.stringify(topPlaysByGame).replace(/</g, '\\u003c');
 
 <div id="matchupEmptyState" class="empty empty-state">No games found for the selected filters.</div>
 
-
 <style is:global>
+  /* =========================================
+     Top Plays Panel
+     ========================================= */
+
   .row-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -80,13 +83,17 @@ const pbpDataJson = JSON.stringify(topPlaysByGame).replace(/</g, '\\u003c');
     margin-bottom: 5px;
     align-items: start;
   }
+
   .panel {
-    background: var(--panel, #0d1117);
-    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     margin-bottom: 20px;
     overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   }
+
   .panel-toggle {
     all: unset;
     box-sizing: border-box;
@@ -96,50 +103,78 @@ const pbpDataJson = JSON.stringify(topPlaysByGame).replace(/</g, '\\u003c');
     width: 100%;
     padding: 14px 18px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
   }
+
   .panel-toggle:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background: color-mix(
+      in srgb,
+      var(--text) 4%,
+      transparent
+    );
   }
+
   .panel-toggle:focus-visible {
-    outline: 2px solid #67e8f9;
+    outline: 2px solid var(--accent-primary);
     outline-offset: -2px;
   }
+
   .panel-title {
     font-size: 15px;
     font-weight: 700;
+    color: var(--text);
     display: flex;
     align-items: center;
     gap: 8px;
   }
+
   .panel-count {
     font-size: 12px;
     font-weight: 600;
-    opacity: 0.5;
+    color: var(--text-muted);
   }
+
   .panel-chev {
-    opacity: 0.5;
+    color: var(--text-muted);
     transition: transform 0.15s ease;
     flex-shrink: 0;
   }
+
   #topPlaysWrapper.expanded .panel-chev {
     transform: rotate(90deg);
   }
+
   .panel-body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease;
   }
+
   #topPlaysWrapper.expanded .panel-body {
-    max-height: 3000px; /* generous cap so 10 full-text plays never get clipped */
+    max-height: 3000px;
     padding: 0 18px 16px;
+  }
+
+  /* =========================================
+     Light Mode Panel
+     ========================================= */
+
+  [data-theme="light"] .panel {
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.10);
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+  }
+
+  [data-theme="light"] .panel-toggle:hover {
+    background: #f8fafc;
   }
 </style>
 
 <style is:global>
-  /* Rendered into #topPlaysPanel via innerHTML by pbpTopPlaysClient.ts,
-     so these can't be Astro-scoped (scoped styles only attach to elements
-     present at build time). Prefixed week- to avoid clashing with the
-     similarly-named .plays-list styles scoped inside MatchupRow.astro. */
+  /* =========================================
+     Top Plays List
+     ========================================= */
+
   .week-plays-list {
     list-style: none;
     margin: 0;
@@ -148,52 +183,114 @@ const pbpDataJson = JSON.stringify(topPlaysByGame).replace(/</g, '\\u003c');
     flex-direction: column;
     gap: 8px;
   }
+
   .week-play-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    background: color-mix(
+      in srgb,
+      var(--text) 4%,
+      var(--card-bg)
+    );
+
+    border: 1px solid var(--card-border);
     border-radius: 8px;
     padding: 8px 12px;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
   }
+
+  .week-play-item:hover {
+    background: color-mix(
+      in srgb,
+      var(--accent-primary) 5%,
+      var(--card-bg)
+    );
+
+    border-color: var(--card-border-hover);
+  }
+
   .week-play-rank {
     flex-shrink: 0;
     width: 22px;
     height: 22px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(255, 255, 255, 0.5);
+
+    background: color-mix(
+      in srgb,
+      var(--text) 7%,
+      transparent
+    );
+
+    color: var(--text-muted);
     font-size: 11px;
     font-weight: 700;
+
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .week-play-body {
     flex: 1;
     min-width: 0;
   }
+
   .week-play-matchup {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-dim);
     font-size: 11px;
     margin-bottom: 2px;
   }
+
   .week-play-text {
-    color: #e5e7eb;
+    color: var(--text);
     font-size: 13px;
     line-height: 1.3;
   }
+
   .week-play-impact {
     flex-shrink: 0;
     font-size: 12px;
     font-weight: 700;
     white-space: nowrap;
   }
+
   .week-play-impact.offense {
-    color: #4ade80;
+    color: var(--accent-success);
   }
+
   .week-play-impact.defense {
-    color: #60a5fa;
+    color: var(--accent-primary);
+  }
+
+  /* =========================================
+     Light Mode Top Plays
+     ========================================= */
+
+  [data-theme="light"] .week-play-item {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.08);
+  }
+
+  [data-theme="light"] .week-play-item:hover {
+    background: #f1f5f9;
+    border-color: var(--card-border-hover);
+  }
+
+  [data-theme="light"] .week-play-rank {
+    background: #e2e8f0;
+    color: var(--text-muted);
+  }
+
+  [data-theme="light"] .week-play-impact.offense {
+    color: var(--accent-success);
+  }
+
+  [data-theme="light"] .week-play-impact.defense {
+    color: var(--accent-primary);
   }
 </style>

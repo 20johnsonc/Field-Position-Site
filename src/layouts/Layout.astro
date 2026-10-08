@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ThemeToggle from '../components/ThemeToggle.tsx';
 
 interface Props {
   title?: string;
@@ -30,6 +31,21 @@ const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <script is:inline>
+      const setInitialTheme = () => {
+        const stored = localStorage.getItem('theme');
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        const theme = stored || (prefersLight ? 'light' : 'dark');
+        
+        document.documentElement.setAttribute('data-theme', theme);
+      };
+
+      setInitialTheme();
+
+      // Support Astro View Transitions
+      document.addEventListener('astro:after-swap', setInitialTheme);
+    </script>
   </head>
   <body>
     <div class="container">
@@ -41,6 +57,7 @@ const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
           </div>
         </a>
         <div class="header-meta">
+          <ThemeToggle client:load />
           {formattedLastUpdate && <div class="last-updated">Updated {formattedLastUpdate}</div>}
         </div>
       </header>
@@ -55,17 +72,19 @@ const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
     color: inherit;
     display: block;
   }
+
   .header-meta {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 4px;
   }
 
   .last-updated {
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--text-muted);
     font-weight: 500;
     letter-spacing: 0.02em;
+    transition: color 0.2s ease;
   }
 </style>

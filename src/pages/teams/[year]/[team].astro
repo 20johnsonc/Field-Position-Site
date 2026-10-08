@@ -452,7 +452,7 @@ try {
             <td class="num">
               {g.isCompleted && beatExp != null ? (
                 <div class="beat-exp-bar-wrap">
-                  <span class="beat-exp-value" style={{ color: beatExp >= 0 ? '#4ade80' : '#f87171' }}>
+                  <span class="beat-exp-value" style={{ color: beatExp >= 0 ? 'var(--win-text)' : 'var(--loss-text)' }}>
                     {beatExp > 0 ? '+' : ''}{beatExp.toFixed(1)}
                   </span>
                   <div class="beat-exp-bar">
@@ -461,7 +461,7 @@ try {
                       style={{
                         width: `${barPct}%`,
                         marginLeft: beatExp >= 0 ? '50%' : `${50 - barPct}%`,
-                        backgroundColor: beatExp >= 0 ? '#22c55e' : '#ef4444',
+                        backgroundColor: beatExp >= 0 ? 'var(--win-text)' : 'var(--loss-text)',
                       }}
                     />
                   </div>
@@ -506,35 +506,43 @@ try {
 </script>
 
 <style>
+  /* =========================================================
+     WEEK / GAME META
+     ========================================================= */
+
   .week-cell {
     display: flex;
     flex-direction: column;
   }
 
   .week-num {
+    color: var(--text);
     font-weight: 600;
   }
 
   .post-num {
+    color: var(--accent-primary);
     font-size: 0.85rem;
     font-weight: 700;
-    color: #38bdf8;
   }
 
   .game-date {
+    color: var(--text-muted);
     font-size: 0.75rem;
-    color: #94a3b8;
   }
 
   .badge-tag {
-    font-size: 0.65rem;
-    font-weight: 500;
-    color: #38bdf8;
-    background-color: rgba(56, 189, 248, 0.1);
-    padding: 1px 4px;
-    border-radius: 4px;
     width: max-content;
     margin-top: 2px;
+    padding: 1px 4px;
+
+    background: var(--accent-primary-soft);
+    border: 1px solid var(--accent-primary-border);
+    border-radius: 4px;
+
+    color: var(--accent-primary);
+    font-size: 0.65rem;
+    font-weight: 500;
   }
 
   .opponent-link {
@@ -543,8 +551,13 @@ try {
   }
 
   .opponent-link:hover {
+    color: var(--accent-primary);
     text-decoration: underline;
   }
+
+  /* =========================================================
+     TEAM TAGS
+     ========================================================= */
 
   .team-tags {
     display: flex;
@@ -555,37 +568,45 @@ try {
   }
 
   .style-tag {
+    max-width: 100%;
+    padding: 4px 10px;
+
+    border-radius: 6px;
+
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    max-width: 100%; /* long tags wrap inside the pill instead of overflowing */
   }
 
-  /* Offense Theme: Vibrant Teal / Cyan */
+  /* =========================================================
+     TEAM STYLE TAGS
+     ========================================================= */
+
   .tag-offense {
-    background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(13, 148, 136, 0.25));
-    color: #2dd4bf;
-    border: 1px solid rgba(45, 212, 191, 0.4);
-    box-shadow: 0 0 12px rgba(20, 184, 166, 0.15);
+    background: var(--accent-primary-soft);
+    border: 1px solid var(--accent-primary-border);
+    color: var(--accent-primary);
+    box-shadow: 0 0 12px var(--glow-primary);
   }
 
-  /* Defense Theme: Sharp Amber / Gold */
   .tag-defense {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.25));
-    color: #fbbf24;
-    border: 1px solid rgba(251, 191, 36, 0.4);
-    box-shadow: 0 0 12px rgba(245, 158, 11, 0.15);
+    background: var(--accent-success-soft);
+    border: 1px solid var(--accent-success-border);
+    color: var(--accent-success);
+    box-shadow: 0 0 12px var(--glow-success);
   }
 
   .tag-neutral {
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(147, 51, 234, 0.25));
-    color: #c084fc;
-    border: 1px solid rgba(192, 132, 252, 0.4);
-    box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
+    background: var(--accent-secondary-soft);
+    border: 1px solid var(--accent-secondary-border);
+    color: var(--accent-secondary);
+    box-shadow: 0 0 12px var(--glow-secondary);
   }
+
+  /* =========================================================
+     TEAM HEADER
+     ========================================================= */
 
   .team-header {
     display: flex;
@@ -595,8 +616,8 @@ try {
   }
 
   .team-header-content {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     min-width: 0;
   }
@@ -609,21 +630,23 @@ try {
 
   .team-title-group h1 {
     margin: 0;
+
+    color: var(--text);
     font-size: 1.75rem;
     font-weight: 900;
-    color: var(--text);
     line-height: 1.1;
   }
 
   .subtitle-row {
     display: flex;
     align-items: baseline;
-    gap: 8px;
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   .subtitle {
     margin: 0;
+
     color: var(--text-muted);
     font-size: 0.95rem;
     font-weight: 500;
@@ -635,34 +658,68 @@ try {
   }
 
   .team-year-filter-wrap label {
+    color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--text-muted);
   }
 
+  /* =========================================================
+     TEAM YEAR FILTER
+     ========================================================= */
+
   #teamYearFilter {
-    font-size: 0.85rem;
-    font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    color: var(--text);
-    cursor: pointer;
     box-sizing: border-box;
     height: auto;
-    /* Custom inline SVG chevron background */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    -webkit-appearance: none;
+    padding-right: 28px;
+
     appearance: none;
+    -webkit-appearance: none;
+
+    background-color: var(--input-bg);
+    background-image: var(--select-chevron);
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    outline: none;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
   }
 
   #teamYearFilter:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--input-bg-hover);
+    border-color: var(--card-border-strong);
   }
 
-  .value{
+  #teamYearFilter:focus-visible {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px var(--glow-primary);
+  }
+
+  /* =========================================================
+     VALUES
+     ========================================================= */
+
+  .value {
     color: var(--text-muted);
+  }
+
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+    #teamYearFilter {
+      transition: none;
+    }
   }
 </style>

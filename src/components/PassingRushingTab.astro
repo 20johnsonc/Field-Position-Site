@@ -462,7 +462,6 @@ const rOff = teamData?.rushing?.offense ?? {};
   @media (min-width: 640px) { .cards-grid.zone-3-col { grid-template-columns: repeat(3, 1fr); } }
 
   :global(.zone-card) {
-    /* --tint is set inline per tile (green/red vs FBS average); solid color underneath. */
     background: linear-gradient(var(--tint, transparent), var(--tint, transparent)), #0f172a;
     border: 1px solid #1e293b;
     padding: 1.25rem;
@@ -539,7 +538,7 @@ const rOff = teamData?.rushing?.offense ?? {};
 
   .coverage-note { font-size: 0.6875rem; color: #64748b; margin: 0.5rem 0 0; }
 
-  /* Tab pill (reuses .segmented-control / .toggle-btn) */
+  /* Tab pill */
   .pr-tabs.segmented-control { display: inline-flex; }
   .pr-tab { min-width: 6rem; }
   .pr-tab[data-tab="rushing"].active { background: #059669; }
@@ -632,7 +631,8 @@ const rOff = teamData?.rushing?.offense ?? {};
   :global(.trend .bar.rushing) { fill: #10b981; }
   :global(.trend .bar.thin) { opacity: 0.35; }
   :global(.trend .lg-line) { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; opacity: 0.7; }
-  /* "Where the yards come from" bar */
+  
+  /* Where the yards come from bar */
   :global(.yards-split) { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #1e293b; }
   :global(.yards-split-title) { font-size: 0.6875rem; color: #94a3b8; margin-bottom: 0.4rem; }
   :global(.yards-split-title span) { opacity: 0.7; }
@@ -648,4 +648,94 @@ const rOff = teamData?.rushing?.offense ?? {};
   :global(.yl-dot.second) { background: #10b981; }
   :global(.yl-dot.open) { background: #6ee7b7; }
   .modal-content :global(.yards-split) { margin: 0.5rem 0.75rem 0.75rem; padding-top: 0; border-top: none; }
+
+
+  /* =========================================
+     LIGHT MODE OVERRIDES
+     ========================================= */
+
+  /* Structural backgrounds & text */
+  :global([data-theme="light"]) .pr-wrapper { color: #334155; }
+  :global([data-theme="light"]) .pr-accordion,
+  :global([data-theme="light"]) .accordion-content { background: #ffffff; border-color: #e2e8f0; }
+  
+  :global([data-theme="light"]) .accordion-header { background: #f8fafc; color: #0f172a; }
+  :global([data-theme="light"]) .accordion-header:hover { background: #f1f5f9; }
+  :global([data-theme="light"]) .icon { color: #64748b; }
+  
+  :global([data-theme="light"]) .controls-bar { border-color: #e2e8f0; }
+  :global([data-theme="light"]) .filter-label,
+  :global([data-theme="light"]) .section-label,
+  :global([data-theme="light"]) .pr-legend { color: #475569; }
+  
+  /* Inputs & Toggles */
+  :global([data-theme="light"]) .game-dropdown { background: #ffffff; color: #0f172a; border-color: #cbd5e1; }
+  :global([data-theme="light"]) .game-dropdown:hover, 
+  :global([data-theme="light"]) .game-dropdown:focus { border-color: #3b82f6; }
+  
+  :global([data-theme="light"]) .segmented-control { background: #f1f5f9; border-color: #e2e8f0; }
+  :global([data-theme="light"]) .toggle-btn { color: #475569; }
+  :global([data-theme="light"]) .toggle-btn.active { color: #ffffff; }
+  :global([data-theme="light"]) .toggle-btn:not(.active):hover { background: #e2e8f0; color: #0f172a; }
+  
+  :global([data-theme="light"]) .side-note { background: #f8fafc; border-color: #e2e8f0; color: #475569; }
+  
+  /* Summary Strips */
+  :global([data-theme="light"] .pr-summary-row) { background: #f8fafc; border-color: #e2e8f0; }
+  :global([data-theme="light"] .pr-summary-title) { color: #334155; }
+  :global([data-theme="light"]) .section-hint { color: #64748b; }
+  
+  /* Zone Cards */
+  :global([data-theme="light"] .zone-card) { 
+    background: linear-gradient(var(--tint, transparent), var(--tint, transparent)), #ffffff; 
+  }
+  :global([data-theme="light"] .card-label) { color: #475569; }
+  :global([data-theme="light"] .card-value) { color: #0f172a; }
+  :global([data-theme="light"] .unit),
+  :global([data-theme="light"] .card-sub) { color: #64748b; }
+  :global([data-theme="light"] .card-metrics-grid) { border-color: #e2e8f0; }
+  
+  /* Unknown Play Banner */
+  :global([data-theme="light"] .wide-card.unknown-card) { background: #f8fafc; border-color: #cbd5e1; }
+  :global([data-theme="light"] .m-item) { color: #475569; }
+  :global([data-theme="light"] .m-item strong) { color: #0f172a; }
+  :global([data-theme="light"]) .coverage-note { color: #64748b; }
+  
+  /* Badges & Chips (Darkened for light bg contrast) */
+  :global([data-theme="light"] .share-badge) { color: #2563eb; border-color: rgba(37, 99, 235, 0.3); }
+  :global([data-theme="light"] .green-badge) { color: #16a34a; border-color: rgba(22, 163, 74, 0.3); }
+  :global([data-theme="light"] .int-chip) { color: #dc2626; }
+  :global([data-theme="light"] .delta .good),
+  :global([data-theme="light"] .delta .rk.top),
+  :global([data-theme="light"] .rank-tag.top) { color: #16a34a; }
+  :global([data-theme="light"] .delta .bad),
+  :global([data-theme="light"] .delta .rk.bot),
+  :global([data-theme="light"] .rank-tag.bot) { color: #dc2626; }
+  :global([data-theme="light"] .delta .even), 
+  :global([data-theme="light"] .delta .rk) { color: #475569; }
+  :global([data-theme="light"] .rank-tag) { background: #e2e8f0; color: #475569; }
+  
+  /* Modal */
+  :global([data-theme="light"]) .modal-overlay { background: rgba(255, 255, 255, 0.6); }
+  :global([data-theme="light"]) .modal-dialog { background: #ffffff; border-color: #e2e8f0; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
+  :global([data-theme="light"]) .modal-close { background: #f1f5f9; color: #475569; border-color: #e2e8f0; }
+  :global([data-theme="light"]) .modal-close:hover { background: #e2e8f0; color: #0f172a; }
+  :global([data-theme="light"]) .modal-subtitle { color: #475569; }
+  :global([data-theme="light"]) .modal-content { background: #f8fafc; border-color: #e2e8f0; }
+  :global([data-theme="light"] .modal-row) { border-color: #e2e8f0; }
+  :global([data-theme="light"] .modal-row span) { color: #475569; }
+  :global([data-theme="light"] .modal-row strong) { color: #0f172a; }
+  :global([data-theme="light"] .modal-empty) { color: #475569; }
+  
+  /* Legend & Glossary */
+  :global([data-theme="light"]) .pr-legend dt { color: #0f172a; }
+  
+  /* Charts & Bars */
+  :global([data-theme="light"] .trend-title) { color: #475569; }
+  :global([data-theme="light"] .trend .lg-line) { stroke: #94a3b8; }
+  :global([data-theme="light"] .yards-split) { border-color: #e2e8f0; }
+  :global([data-theme="light"] .yards-split-title) { color: #475569; }
+  :global([data-theme="light"] .yards-bar) { background: #e2e8f0; }
+  :global([data-theme="light"] .yards-legend) { color: #475569; }
+  :global([data-theme="light"] .yl-item strong) { color: #0f172a; }
 </style>

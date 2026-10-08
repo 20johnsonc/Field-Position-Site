@@ -134,30 +134,31 @@ const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
   }
 
   .rank-change.up {
-    color: #22c55e; /* Tailwind green-500 */
+    color: var(--accent-success);
   }
 
   .rank-change.down {
-    color: #ef4444; /* Tailwind red-500 */
+    color: var(--accent-danger);
   }
 
   .rank-change.neutral {
-    color: #64748b; /* Tailwind slate-500 */
+    color: var(--text-muted);
     font-weight: 900;
   }
   /* --------------------------------- */
 
   .team-link,
   .team-link:visited {
-    color: #ffffff;
+    color: var(--text); /* Fix for invisible text in light mode */
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 4px;
+    transition: color 0.2s ease;
   }
 
   .team-link:hover {
-    color: #93c5fd;
+    color: var(--accent-primary);
   }
 
   .text-right {
@@ -189,10 +190,10 @@ const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
     text-overflow: ellipsis;
   }
 
-  /* Counter Badge Style */
+  /* Counter Badge Style - Dark Mode Defaults */
   .mini-counter {
     background: rgba(255, 255, 255, 0.05);
-    color: #94a3b8;
+    color: var(--text-muted);
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: default;
   }
@@ -216,5 +217,36 @@ const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
     background: rgba(168, 85, 247, 0.15);
     color: #c084fc;
     border: 1px solid rgba(192, 132, 252, 0.3);
+  }
+
+  /* =========================================
+     Light Mode Overrides (Includes Astro :global support)
+     ========================================= */
+  :global([data-theme="light"]) .mini-counter,
+  [data-theme="light"] .mini-counter {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: var(--text-dim);
+  }
+
+  :global([data-theme="light"]) .mini-offense,
+  [data-theme="light"] .mini-offense {
+    background: rgba(13, 148, 136, 0.1);
+    color: #0f766e; /* Darker teal for contrast */
+    border-color: rgba(13, 148, 136, 0.2);
+  }
+
+  :global([data-theme="light"]) .mini-defense,
+  [data-theme="light"] .mini-defense {
+    background: rgba(217, 119, 6, 0.1);
+    color: #b45309; /* Darker amber for contrast */
+    border-color: rgba(217, 119, 6, 0.2);
+  }
+
+  :global([data-theme="light"]) .mini-neutral,
+  [data-theme="light"] .mini-neutral {
+    background: rgba(126, 34, 206, 0.1);
+    color: #6b21a8; /* Darker purple for contrast */
+    border-color: rgba(126, 34, 206, 0.2);
   }
 </style>

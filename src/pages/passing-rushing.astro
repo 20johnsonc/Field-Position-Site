@@ -177,200 +177,528 @@ function escapeForScript(json: string) {
 </script>
 
 <style>
-  .page-title { font-size: 1.75rem; font-weight: 800; margin: 1.5rem 0 0.25rem; color: #f1f5f9; }
-  .page-subtitle { font-size: 0.875rem; color: #94a3b8; margin: 0 0 1.5rem; max-width: 46rem; }
+  .page-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 1.5rem 0 0.25rem;
+    color: var(--text);
+  }
 
-  .pt-wrapper { color: #f1f5f9; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  .page-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
+    max-width: 46rem;
+  }
+
+  .pt-wrapper {
+    color: var(--text);
+    font-family: inherit;
+  }
+
+  /* =========================================
+    Controls
+    ========================================= */
 
   .pt-controls {
     display: flex;
     flex-direction: column;
     gap: 0.875rem;
-    background: #0f172a;
-    border: 1px solid #1e293b;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
     border-radius: 0.875rem;
     padding: 1rem 1.25rem;
     margin-bottom: 0.75rem;
   }
-  .pt-row { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: flex-end; }
-  .pt-row[hidden] { display: none; }
+
+  .pt-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: flex-end;
+  }
+
+  .pt-row[hidden] {
+    display: none;
+  }
+
+  /* =========================================
+    Segmented Controls
+    ========================================= */
 
   .segmented-control {
-    background: #0b1220;
+    background: var(--input-bg);
     padding: 0.25rem;
     border-radius: 0.75rem;
     display: flex;
     gap: 0.25rem;
-    border: 1px solid #1e293b;
+    border: 1px solid var(--card-border);
   }
+
   .toggle-btn {
     padding: 0.375rem 1rem;
     font-size: 0.75rem;
     font-weight: 700;
     border-radius: 0.5rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     background: transparent;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
   }
-  .toggle-btn.active { background: #2563eb; color: #ffffff; }
-  #pt-tab-rushing.active, #pt-defense.active { background: #059669; }
-  .toggle-btn:not(.active):hover { color: #ffffff; background: #1e293b; }
 
-  .pt-field { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.6875rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
-  .pt-search { flex: 1; min-width: 10rem; }
-  .pt-select, .pt-input {
-    background: #0b1220;
-    color: #f8fafc;
-    border: 1px solid #334155;
+  .toggle-btn.active {
+    background: var(--accent-primary);
+    color: var(--bg);
+  }
+
+  /* Rushing / Defense use the success accent */
+  #pt-tab-rushing.active,
+  #pt-defense.active {
+    background: var(--accent-success);
+    color: var(--bg);
+  }
+
+  .toggle-btn:not(.active):hover {
+    color: var(--text);
+    background: color-mix(
+      in srgb,
+      var(--text) 5%,
+      transparent
+    );
+  }
+
+  /* =========================================
+    Fields / Inputs
+    ========================================= */
+
+  .pt-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .pt-search {
+    flex: 1;
+    min-width: 10rem;
+  }
+
+  .pt-select,
+  .pt-input {
+    background: var(--input-bg);
+    color: var(--text);
+    border: 1px solid var(--card-border);
     padding: 0.4rem 0.6rem;
     border-radius: 0.5rem;
     font-size: 0.8125rem;
     font-weight: 600;
     outline: none;
+    transition: all 0.2s ease;
   }
-  .pt-select:focus, .pt-input:focus { border-color: #3b82f6; }
-  .pt-input[type="number"] { width: 5.5rem; }
 
-  .pt-hint { font-size: 0.75rem; color: #64748b; margin: 0 0 0.75rem; }
+  .pt-select:focus,
+  .pt-input:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px var(--glow-primary);
+  }
 
-  .pt-table-scroll { overflow-x: auto; border: 1px solid #1e293b; border-radius: 0.875rem; }
+  .pt-input[type="number"] {
+    width: 5.5rem;
+  }
 
-  #pt-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; background: #030712; }
-  #pt-table :global(th), #pt-table :global(td) { padding: 0.55rem 0.8rem; text-align: left; white-space: nowrap; }
+  .pt-hint {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin: 0 0 0.75rem;
+  }
+
+  /* =========================================
+    Table
+    ========================================= */
+
+  .pt-table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--card-border);
+    border-radius: 0.875rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+  }
+
+  #pt-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8125rem;
+    background: transparent;
+  }
+
+  #pt-table :global(th),
+  #pt-table :global(td) {
+    padding: 0.55rem 0.8rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+
   #pt-table :global(thead th) {
-    background: #0f172a;
-    color: #94a3b8;
+    background: color-mix(
+      in srgb,
+      var(--text) 2%,
+      transparent
+    );
+    color: var(--text-muted);
     font-size: 0.6875rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid var(--card-border);
     position: sticky;
     top: 0;
+    z-index: 1;
   }
-  #pt-table :global(th.sortable) { cursor: pointer; user-select: none; }
-  #pt-table :global(th.sortable:hover) { color: #ffffff; }
-  #pt-table :global(th.sortable.active) { color: #60a5fa; }
-  #pt-table :global(th.sortable.active::after) { content: ' \25BC'; font-size: 0.6em; }
-  #pt-table :global(th.sortable.active.asc::after) { content: ' \25B2'; }
-  #pt-table :global(th.num), #pt-table :global(td.num) { text-align: right; }
-  #pt-table :global(td) { border-bottom: 1px solid #1e293b; color: #e2e8f0; }
-  #pt-table :global(tbody tr:hover) { background: #0b1220; }
-  #pt-table :global(tr.pinned) { background: rgba(59, 130, 246, 0.08); }
-  #pt-table :global(tr.pinned:hover) { background: rgba(59, 130, 246, 0.14); }
-  #pt-table :global(.team-cell a) { color: #f1f5f9; font-weight: 600; text-decoration: none; }
-  #pt-table :global(.team-cell a:hover) { color: #60a5fa; text-decoration: underline; }
-  #pt-table :global(.pin-col) { width: 2rem; text-align: center; }
-  #pt-table :global(.rank-col) { width: 2.25rem; color: #64748b; font-variant-numeric: tabular-nums; }
-  #pt-table :global(tr.dimmed) { opacity: 0.3; transition: opacity 0.2s ease; }
-  #pt-table :global(tr.dimmed:hover) { opacity: 1; }
 
-  .pt-empty { display: none; text-align: center; padding: 2rem; color: #64748b; font-size: 0.875rem; }
-  .pt-empty.visible { display: block; }
+  #pt-table :global(th.sortable) {
+    cursor: pointer;
+    user-select: none;
+  }
 
-  .pt-axis-row { align-items: center; }
-  .pt-axis-group { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
-  .pt-axis-title { font-size: 0.6875rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 0.15rem; }
-  .pt-select-sm { padding: 0.32rem 0.5rem; font-size: 0.75rem; }
+  #pt-table :global(th.sortable:hover) {
+    color: var(--accent-primary);
+  }
 
-  /* --- Scatter Chart: Dark Mode (DEFAULT) --- */
+  #pt-table :global(th.sortable.active) {
+    color: var(--accent-primary);
+  }
+
+  #pt-table :global(th.sortable.active::after) {
+    content: ' \25BC';
+    font-size: 0.6em;
+  }
+
+  #pt-table :global(th.sortable.active.asc::after) {
+    content: ' \25B2';
+  }
+
+  #pt-table :global(th.num),
+  #pt-table :global(td.num) {
+    text-align: right;
+  }
+
+  #pt-table :global(td) {
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text);
+  }
+
+  #pt-table :global(tbody tr) {
+    transition: background-color 0.2s ease;
+  }
+
+  #pt-table :global(tbody tr:hover) {
+    background: color-mix(
+      in srgb,
+      var(--accent-primary) 4%,
+      transparent
+    );
+  }
+
+  #pt-table :global(tr.pinned) {
+    background: color-mix(
+      in srgb,
+      var(--accent-primary) 8%,
+      transparent
+    );
+  }
+
+  #pt-table :global(tr.pinned:hover) {
+    background: color-mix(
+      in srgb,
+      var(--accent-primary) 14%,
+      transparent
+    );
+  }
+
+  #pt-table :global(.team-cell a) {
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #pt-table :global(.team-cell a:hover) {
+    color: var(--accent-primary);
+    text-decoration: underline;
+  }
+
+  #pt-table :global(.pin-col) {
+    width: 2rem;
+    text-align: center;
+  }
+
+  #pt-table :global(.rank-col) {
+    width: 2.25rem;
+    color: var(--text-dim);
+    font-variant-numeric: tabular-nums;
+  }
+
+  #pt-table :global(tr.dimmed) {
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+  }
+
+  #pt-table :global(tr.dimmed:hover) {
+    opacity: 1;
+  }
+
+  .pt-empty {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-dim);
+    font-size: 0.875rem;
+  }
+
+  .pt-empty.visible {
+    display: block;
+  }
+
+  /* =========================================
+    Axis Controls
+    ========================================= */
+
+  .pt-axis-row {
+    align-items: center;
+  }
+
+  .pt-axis-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .pt-axis-title {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-right: 0.15rem;
+  }
+
+  .pt-select-sm {
+    padding: 0.32rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* =========================================
+    Scatter Chart
+    Default theme follows global.css
+    ========================================= */
+
   .pt-scatter-wrap {
-    border: 1px solid #1e293b;
+    border: 1px solid var(--card-border);
     border-radius: 0.875rem;
-    background: #030712;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
     padding: 0.75rem;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
   }
-  .pt-scatter { min-height: 220px; }
-  .pt-scatter :global(svg.scatter-svg) { width: 100%; aspect-ratio: 760 / 460; height: auto; display: block; min-height: 220px; }
 
-  .pt-scatter :global(.grid) { stroke: #1e293b; stroke-width: 1; }
-  .pt-scatter :global(.axis) { stroke: #475569; stroke-width: 1.25; }
-  .pt-scatter :global(.mean-line) { stroke: #475569; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.8; }
-  .pt-scatter :global(.tick) { fill: #94a3b8; font-size: 10px; }
-  .pt-scatter :global(.axis-label) { fill: #cbd5e1; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pt-scatter {
+    min-height: 220px;
+  }
+
+  .pt-scatter :global(svg.scatter-svg) {
+    width: 100%;
+    aspect-ratio: 760 / 460;
+    height: auto;
+    display: block;
+    min-height: 220px;
+  }
+
+  .pt-scatter :global(.grid) {
+    stroke: var(--card-border);
+    stroke-width: 1;
+  }
+
+  .pt-scatter :global(.axis) {
+    stroke: var(--text-dim);
+    stroke-width: 1.25;
+  }
+
+  .pt-scatter :global(.mean-line) {
+    stroke: var(--text-dim);
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+    opacity: 0.8;
+  }
+
+  .pt-scatter :global(.tick) {
+    fill: var(--text-muted);
+    font-size: 10px;
+  }
+
+  .pt-scatter :global(.axis-label) {
+    fill: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
 
   .pt-scatter :global(.dot) {
-    fill-opacity: 0.75; stroke: #0b1220; stroke-width: 1;
-    cursor: pointer; transition: opacity 0.15s ease, fill-opacity 0.15s ease, stroke-width 0.15s ease;
+    fill-opacity: 0.75;
+    stroke: var(--input-bg);
+    stroke-width: 1;
+    cursor: pointer;
+    transition:
+      opacity 0.15s ease,
+      fill-opacity 0.15s ease,
+      stroke-width 0.15s ease;
   }
-  .pt-scatter :global(.dot:hover), .pt-scatter :global(.dot:focus) { fill-opacity: 1; stroke: #f1f5f9; stroke-width: 1.5; outline: none; paint-order: stroke; }
-  .pt-scatter :global(.dot.pinned) { stroke: #f59e0b; stroke-width: 2; }
 
-  /* FIX: this was the actual missing piece -- the JS already computes and
-     assigns "match"/"dimmed" per dot, but nothing told the browser what
-     those classes should look like, so search had no visible effect. */
-  .pt-scatter :global(.dot.dimmed) { opacity: 0.15; }
-  .pt-scatter :global(.dot.match) { opacity: 1; stroke: #f8fafc; stroke-width: 1.5; }
-  .pt-scatter :global(.dot.match:hover), .pt-scatter :global(.dot.match:focus) { stroke-width: 2; }
+  .pt-scatter :global(.dot:hover),
+  .pt-scatter :global(.dot:focus) {
+    fill-opacity: 1;
+    stroke: var(--text);
+    stroke-width: 1.5;
+    outline: none;
+    paint-order: stroke;
+  }
 
-  .pt-scatter :global(.scatter-empty) { text-align: center; color: #64748b; font-size: 0.875rem; padding: 2rem; margin: 0; }
+  .pt-scatter :global(.dot.pinned) {
+    stroke: var(--accent-danger);
+    stroke-width: 2;
+  }
 
-  /* --- Scatter Chart: Light Mode Overrides --- */
+  .pt-scatter :global(.dot.dimmed) {
+    opacity: 0.15;
+  }
+
+  .pt-scatter :global(.dot.match) {
+    opacity: 1;
+    stroke: var(--text);
+    stroke-width: 1.5;
+  }
+
+  .pt-scatter :global(.dot.match:hover),
+  .pt-scatter :global(.dot.match:focus) {
+    stroke-width: 2;
+  }
+
+  .pt-scatter :global(.scatter-empty) {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.875rem;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  /* =========================================
+    Independent Scatter Light Theme
+    Preserves .theme-light JS behavior
+    ========================================= */
+
   :global(.pt-scatter-wrap.theme-light) {
-    border-color: #e2e8f0 !important;
-    background: #f8fafc !important;
+    border-color: var(--card-border) !important;
+    background: var(--card-bg) !important;
   }
-  :global(.pt-scatter-wrap.theme-light) :global(.grid) { stroke: #e2e8f0 !important; }
-  :global(.pt-scatter-wrap.theme-light) :global(.axis) { stroke: #94a3b8 !important; }
-  :global(.pt-scatter-wrap.theme-light) :global(.mean-line) { stroke: #64748b !important; }
-  :global(.pt-scatter-wrap.theme-light) :global(.tick) { fill: #64748b !important; }
-  :global(.pt-scatter-wrap.theme-light) :global(.axis-label) { fill: #475569 !important; }
 
+  :global(.pt-scatter-wrap.theme-light) :global(.grid) {
+    stroke: var(--card-border) !important;
+  }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.axis) {
+    stroke: var(--text-dim) !important;
+  }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.mean-line) {
+    stroke: var(--text-dim) !important;
+  }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.tick) {
+    fill: var(--text-muted) !important;
+  }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.axis-label) {
+    fill: var(--text-muted) !important;
+  }
+
+  /* When chart is explicitly light, keep dots visible */
   :global(.pt-scatter-wrap.theme-light) :global(.dot) {
     fill-opacity: 0.85;
-    stroke: #0f172a !important;
+    stroke: var(--text) !important;
   }
+
   :global(.pt-scatter-wrap.theme-light) :global(.dot:hover),
   :global(.pt-scatter-wrap.theme-light) :global(.dot:focus) {
-    stroke: #000000 !important;
+    stroke: var(--text) !important;
     stroke-width: 2px !important;
   }
-  :global(.pt-scatter-wrap.theme-light) :global(.dot.pinned) { stroke: #ea580c !important; }
-  :global(.pt-scatter-wrap.theme-light) :global(.dot.match) { stroke: #0f172a !important; }
-  /* Dimmed dots at 0.15 opacity read as nearly invisible against a light
-     background (low-opacity blue fades toward white, not toward gray) --
-     raised the floor so "dimmed" still reads as "present but de-emphasized"
-     rather than "gone" once the light theme is on. */
-  :global(.pt-scatter-wrap.theme-light) :global(.dot.dimmed) { opacity: 0.3; }
 
-  /* --- Tooltip --- */
-  /* This element's `hidden` attribute/property is what showTooltip()/
-     hideTooltip() toggle -- but `.pt-tooltip` below sets `display: flex`
-     directly, and an author stylesheet rule always beats the browser's
-     default `[hidden] { display: none }`, specificity aside. Without this
-     override, `.hidden = true` silently does nothing: the box (and whatever
-     content/position a prior showTooltip() left in it) just stays exactly as
-     it was. Same bug class as the .pt-row[hidden] fix earlier -- this was the
-     one instance of it I missed auditing for at the time. */
-  .pt-tooltip[hidden] { display: none; }
+  :global(.pt-scatter-wrap.theme-light) :global(.dot.pinned) {
+    stroke: var(--accent-danger) !important;
+  }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.dot.match) {
+    stroke: var(--text) !important;
+  }
+
+  :global(.pt-scatter-wrap.theme-light) :global(.dot.dimmed) {
+    opacity: 0.3;
+  }
+
+  /* =========================================
+    Tooltip
+    ========================================= */
+
+  .pt-tooltip[hidden] {
+    display: none;
+  }
+
   .pt-tooltip {
     position: fixed;
     z-index: 40;
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
-    background: #0f172a;
-    border: 1px solid #334155;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
     border-radius: 0.5rem;
     padding: 0.5rem 0.65rem;
     font-size: 0.75rem;
-    color: #e2e8f0;
+    color: var(--text);
     box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.6);
     pointer-events: none;
     max-width: 14rem;
   }
-  .pt-tooltip strong { font-size: 0.8125rem; color: #ffffff; }
-  .pt-tooltip .tt-conf { color: #94a3b8; font-size: 0.6875rem; margin-bottom: 0.15rem; }
+
+  .pt-tooltip strong {
+    font-size: 0.8125rem;
+    color: var(--text);
+  }
+
+  .pt-tooltip .tt-conf {
+    color: var(--text-muted);
+    font-size: 0.6875rem;
+    margin-bottom: 0.15rem;
+  }
+
+  /* =========================================
+    Scatter Theme Button
+    ========================================= */
 
   #scatter-theme-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: #0b1220;
-    border: 1px solid #1e293b;
-    color: #94a3b8;
+    background: var(--input-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-muted);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.375rem 1rem;
@@ -381,14 +709,47 @@ function escapeForScript(json: string) {
   }
 
   #scatter-theme-btn:hover {
-    color: #ffffff;
-    background: #1e293b;
-    border-color: #334155;
+    color: var(--text);
+    background: color-mix(
+      in srgb,
+      var(--text) 5%,
+      var(--input-bg)
+    );
+    border-color: color-mix(
+      in srgb,
+      var(--text) 15%,
+      var(--card-border)
+    );
   }
 
   #scatter-theme-btn.is-light {
-    background: #f1f5f9;
-    color: #0f172a;
-    border-color: #cbd5e1;
+    background: var(--input-bg);
+    color: var(--text);
+    border-color: var(--card-border);
   }
-</style>
+
+  /* =========================================
+    Global Light Mode Adjustments
+    ========================================= */
+
+  [data-theme="light"] .pt-controls,
+  [data-theme="light"] .pt-scatter-wrap,
+  [data-theme="light"] .pt-table-scroll {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  [data-theme="light"] .segmented-control {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  [data-theme="light"] #pt-table :global(thead th) {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  [data-theme="light"] .pt-tooltip {
+    background: #ffffff;
+    color: var(--text);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+</style
