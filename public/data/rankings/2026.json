@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T14:55:30.799113+00:00",
+  "generated_at": "2026-10-09T21:02:41.462786+00:00",
   "year": 2026,
   "rankings": [
     {
@@ -1480,24 +1480,6 @@
     },
     {
       "Rank": 83,
-      "Team": "Troy",
-      "Conference": "Sun Belt",
-      "Record": "3-2",
-      "Net Rating": -0.5,
-      "Year": 2026,
-      "tags": [],
-      "sos": 190,
-      "sor": 155,
-      "Actual Wins": 3.0,
-      "record": "3-2",
-      "conference_record": "1-0",
-      "previous_rank": 85,
-      "rank_change": 2,
-      "sos_rank": 103,
-      "sor_rank": 76
-    },
-    {
-      "Rank": 84,
       "Team": "Tulane",
       "Conference": "American Athletic",
       "Record": "2-2",
@@ -1510,9 +1492,27 @@
       "record": "2-2",
       "conference_record": "0-0",
       "previous_rank": 82,
-      "rank_change": -2,
+      "rank_change": -1,
       "sos_rank": 74,
       "sor_rank": 80
+    },
+    {
+      "Rank": 84,
+      "Team": "Troy",
+      "Conference": "Sun Belt",
+      "Record": "3-2",
+      "Net Rating": -0.6,
+      "Year": 2026,
+      "tags": [],
+      "sos": 190,
+      "sor": 155,
+      "Actual Wins": 3.0,
+      "record": "3-2",
+      "conference_record": "1-0",
+      "previous_rank": 85,
+      "rank_change": 1,
+      "sos_rank": 103,
+      "sor_rank": 76
     },
     {
       "Rank": 85,
