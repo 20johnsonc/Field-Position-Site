@@ -99,7 +99,18 @@ export const RUSH_FIELDS: Field[] = [
   { key: 'explosiveness', label: 'Explosiveness', kind: 'num2', better: 'high' },
 ];
 
-export const gameLabel = (g: { season_type?: string; week?: number; opponent?: string }) =>
+// "Overall" = passing + rushing combined (no zones). Built client-side from the two
+// `total` buckets -- see combineOverall() in prTable.ts.
+export const OVERALL_FIELDS: Field[] = [
+  { key: 'plays', label: 'Plays', kind: 'int' },
+  { key: 'yards', label: 'Yards', kind: 'int' },
+  { key: 'yards_per_play', label: 'Yards / play', kind: 'num1', better: 'high' },
+  { key: 'success_rate', label: 'Success rate', kind: 'rate', better: 'high' },
+  { key: 'ppa', label: 'PPA / play', kind: 'num2', better: 'high' },
+  { key: 'explosiveness', label: 'Explosiveness', kind: 'num2', better: 'high' },
+];
+
+export const gameLabel =(g: { season_type?: string; week?: number; opponent?: string }) =>
   `${g.season_type === 'postseason' ? 'Postseason' : `Wk ${g.week}`} vs ${g.opponent}`;
 
 // Rank from the export: bucket.rank[field] = [rank, teamsRanked]; 1 = best for that side

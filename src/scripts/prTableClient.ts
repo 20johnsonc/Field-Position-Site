@@ -1,6 +1,7 @@
 // src/scripts/prTableClient.ts
 import {
   buildRows, sortRows, filterRows, tableHtml, tableFields, views, PRIMARY_FIELD,
+  viewsApply, hasAdjustedData,
   type Kind, type Side, type TableRow,
 } from '../lib/prTable';
 import {
@@ -62,6 +63,11 @@ export function initPrTable(): void {
   const minInput = $<HTMLInputElement>('pt-min');
   const tabPassing = $<HTMLButtonElement>('pt-tab-passing');
   const tabRushing = $<HTMLButtonElement>('pt-tab-rushing');
+  const tabOverall = $<HTMLButtonElement>('pt-tab-overall');
+  const basisRaw = $<HTMLButtonElement>('pt-basis-raw');
+  const basisAdj = $<HTMLButtonElement>('pt-basis-adj');
+  const basisNote = $<HTMLElement>('pt-basis-note');
+  const viewField = $<HTMLElement>('pt-view-field');
   const btnOffense = $<HTMLButtonElement>('pt-offense');
   const btnDefense = $<HTMLButtonElement>('pt-defense');
   const modeTable = $<HTMLButtonElement>('pt-mode-table');
@@ -111,16 +117,23 @@ export function initPrTable(): void {
   if (seed) cache.set(seed.year, seed);
 
   const params = new URLSearchParams(location.search);
+  const KINDS: Kind[] = ['passing', 'rushing', 'overall'];
+  const asKind = (v: string | null, fb: Kind): Kind => (KINDS.includes(v as Kind) ? (v as Kind) : fb);
+  const adjustedFromUrl = params.get('adj') === '1';
   const parseAxis = (prefix: 'x' | 'y', fallback: AxisSpec): AxisSpec => {
     const kind = params.get(`${prefix}k`) as Kind | null;
-    if (!kind) return fallback;
-    return { kind, view: params.get(`${prefix}v`) || 'total', field: params.get(`${prefix}f`) || fallback.field };
+    if (!kind || !KINDS.includes(kind)) return { ...fallback, adj: adjustedFromUrl };
+    return {
+      kind, view: params.get(`${prefix}v`) || 'total',
+      field: params.get(`${prefix}f`) || fallback.field, adj: adjustedFromUrl,
+    };
   };
 
   const state = {
     mode: (params.get('mode') as Mode) || 'table',
     year: Number(params.get('year')) || seed?.year || Number(yearSelect?.value) || new Date().getFullYear(),
-    kind: (params.get('kind') as Kind) || 'passing',
+    kind: asKind(params.get('kind'), 'passing'),
+    adjusted: adjustedFromUrl,
     side: (params.get('side') as Side) || 'offense',
     view: params.get('view') || 'total',
     conf: params.get('conf') || 'ALL',
@@ -141,6 +154,7 @@ export function initPrTable(): void {
     p.set('mode', state.mode);
     p.set('year', String(state.year));
     p.set('side', state.side);
+    if (state.adjusted) p.set('adj', '1');
     if (state.conf !== 'ALL') p.set('conf', state.conf);
     if (state.search) p.set('q', state.search);
     if (state.min) p.set('min', String(state.min));
@@ -160,11 +174,22 @@ export function initPrTable(): void {
   // ---- Table-mode option lists --------------------------------------------------
   function populateViewOptions() {
     if (!viewSelect) return;
-    const opts = views(state.kind);
+    const opts = views(state.kind, state.adjusted);
     const prev = state.view;
     viewSelect.innerHTML = opts.map((o) => `<option value="${o.key}">${o.label}</option>`).join('');
     viewSelect.value = opts.some((o) => o.key === prev) ? prev : 'total';
     state.view = viewSelect.value;
+    // Zones/directions only exist for raw passing/rushing, so the picker is hidden
+    // (inline style, not [hidden]: .pt-field's display:flex would override it).
+    if (viewField) viewField.style.display = viewsApply(state.kind, state.adjusted) ? '' : 'none';
+  }
+
+  // Columns differ per kind/basis (adjusted has no yardage, etc.), so a sort key that
+  // doesn't exist in the new column set falls back to the primary stat.
+  function ensureSortKey() {
+    const valid = new Set(['team', 'conference', 'volume', 'share',
+      ...tableFields(state.kind, state.adjusted).map((f) => f.key)]);
+    if (!valid.has(state.sortKey)) { state.sortKey = PRIMARY_FIELD[state.kind]; state.ascending = false; }
   }
 
   function populateConfOptions(teams: Record<string, any>) {
@@ -181,11 +206,12 @@ export function initPrTable(): void {
   function populateAxisSide(kindSel: HTMLSelectElement | null, viewSel: HTMLSelectElement | null, fieldSel: HTMLSelectElement | null, spec: AxisSpec) {
     if (!kindSel || !viewSel || !fieldSel) return;
     kindSel.value = spec.kind;
-    const vOpts = axisViewOptions(spec.kind);
+    const vOpts = axisViewOptions(spec.kind, !!spec.adj);
     viewSel.innerHTML = vOpts.map((o) => `<option value="${o.key}">${o.label}</option>`).join('');
     viewSel.value = vOpts.some((o) => o.key === spec.view) ? spec.view : 'total';
     spec.view = viewSel.value;
-    const fOpts = axisFieldOptions(spec.kind);
+    viewSel.disabled = vOpts.length < 2; // Overall / adjusted have no zone split
+    const fOpts = axisFieldOptions(spec.kind, !!spec.adj);
     fieldSel.innerHTML = fOpts.map((o) => `<option value="${o.key}">${o.label}</option>`).join('');
     fieldSel.value = fOpts.some((o) => o.key === spec.field) ? spec.field : 'success_rate';
     spec.field = fieldSel.value;
@@ -231,13 +257,13 @@ export function initPrTable(): void {
   }
 
   function renderTable(payload: YearPayload) {
-    const rows = filterRows(buildRows(payload.teams, state.kind, state.side, state.view),
+    const rows = filterRows(buildRows(payload.teams, state.kind, state.side, state.view, state.adjusted),
       { conf: state.conf, search: state.search, min: state.min, pinned });
-    let sorted = sortRows(rows, state.sortKey, tableFields(state.kind), state.ascending);
+    let sorted = sortRows(rows, state.sortKey, tableFields(state.kind, state.adjusted), state.ascending);
     const pinnedRows = sorted.filter((r) => pinned.has(r.team));
     const restRows = sorted.filter((r) => !pinned.has(r.team));
     sorted = [...pinnedRows, ...restRows];
-    if (table) table.innerHTML = tableHtml({ rows: sorted, kind: state.kind, view: state.view, pinned, teamHref });
+    if (table) table.innerHTML = tableHtml({ rows: sorted, kind: state.kind, view: state.view, pinned, teamHref, adjusted: state.adjusted });
     bindSortHeaders();
     bindPinCheckboxes();
     updateSortIndicators();
@@ -256,14 +282,14 @@ export function initPrTable(): void {
     if (tooltip) tooltip.hidden = true;
   }
 
-  function showTooltip(circle: SVGCircleElement, clientX: number, clientY: number) {
+  function showTooltip(dot: SVGCircleElement, clientX: number, clientY: number) {
     if (!tooltip) return;
-    hoveredDot = circle;
+    hoveredDot = dot;
     tooltip.innerHTML = `
-      <strong>${circle.dataset.team}</strong>
-      <span class="tt-conf">${circle.dataset.conf}</span>
-      <span>${axisLabel(state.x)}: <b>${circle.dataset.x}</b></span>
-      <span>${axisLabel(state.y)}: <b>${circle.dataset.y}</b></span>`;
+      <strong>${dot.dataset.team}</strong>
+      <span class="tt-conf">${dot.dataset.conf}</span>
+      <span>${axisLabel(state.x)}: <b>${dot.dataset.x}</b></span>
+      <span>${axisLabel(state.y)}: <b>${dot.dataset.y}</b></span>`;
     tooltip.hidden = false;
     const pad = 14;
     const w = tooltip.offsetWidth, h = tooltip.offsetHeight;
@@ -293,25 +319,29 @@ export function initPrTable(): void {
 
   function bindScatterInteractions() {
     if (!scatterEl) return;
-    hideTooltip(); // clears any tooltip left over from before this re-render
-
-    scatterEl.querySelectorAll<SVGCircleElement>('circle.dot').forEach((c) => {
-      c.addEventListener('mouseenter', (e) => showTooltip(c, (e as MouseEvent).clientX, (e as MouseEvent).clientY));
-      c.addEventListener('mousemove', (e) => showTooltip(c, (e as MouseEvent).clientX, (e as MouseEvent).clientY));
-      c.addEventListener('mouseleave', hideTooltip);
-      c.addEventListener('focus', () => {
-        const r = c.getBoundingClientRect();
-        showTooltip(c, r.left + r.width / 2, r.top);
+    hideTooltip();
+    scatterEl.querySelectorAll<SVGElement>('.dot').forEach((dot) => {
+      dot.addEventListener('mouseenter', (e) =>
+        showTooltip(dot as SVGCircleElement, (e as MouseEvent).clientX, (e as MouseEvent).clientY)
+      );
+      dot.addEventListener('mousemove', (e) =>
+        showTooltip(dot as SVGCircleElement, (e as MouseEvent).clientX, (e as MouseEvent).clientY)
+      );
+      dot.addEventListener('mouseleave', hideTooltip);
+      dot.addEventListener('focus', () => {
+        const r = dot.getBoundingClientRect();
+        showTooltip(dot as SVGCircleElement, r.left + r.width / 2, r.top);
       });
-      c.addEventListener('blur', hideTooltip);
-
+      dot.addEventListener('blur', hideTooltip);
       const go = () => {
         hideTooltip();
-        const team = c.dataset.team;
+        const team = dot.dataset.team;
         if (team) window.location.href = teamHref(team);
       };
-      c.addEventListener('click', go);
-      c.addEventListener('keydown', (e) => { if ((e as KeyboardEvent).key === 'Enter') go(); });
+      dot.addEventListener('click', go);
+      dot.addEventListener('keydown', (e) => {
+        if ((e as KeyboardEvent).key === 'Enter') go();
+      });
     });
   }
 
@@ -324,7 +354,7 @@ export function initPrTable(): void {
       });
       scatterEl.innerHTML = scatterSvgHtml({
         points, x: state.x, y: state.y, xLabel: axisLabel(state.x), yLabel: axisLabel(state.y),
-        invertX: isStatInverted(state.side, state.x.field), invertY: isStatInverted(state.side, state.y.field),
+        invertX: isStatInverted(state.side, state.x.field), invertY: isStatInverted(state.side, state.y.field), pinned,
       });
       bindScatterInteractions();
       return points.length;
@@ -345,6 +375,14 @@ export function initPrTable(): void {
     // showing.
     if (state.mode !== 'scatter') hideTooltip();
 
+    // Asking for adjusted numbers from a season exported before the adjusted block
+    // existed: say so instead of showing a bare "no teams match" message.
+    const missingAdj = state.adjusted && !hasAdjustedData(payload.teams);
+    if (emptyState) {
+      emptyState.textContent = missingAdj
+        ? 'No opponent-adjusted data for this season yet -- re-run the passing/rushing export.'
+        : 'No teams match these filters.';
+    }
     const count = state.mode === 'table' ? renderTable(payload) : renderScatter(payload);
 
     if (tableControls) tableControls.hidden = state.mode !== 'table';
@@ -360,14 +398,28 @@ export function initPrTable(): void {
   if (yearSelect) yearSelect.value = String(state.year);
   tabPassing?.classList.toggle('active', state.kind === 'passing');
   tabRushing?.classList.toggle('active', state.kind === 'rushing');
+  tabOverall?.classList.toggle('active', state.kind === 'overall');
   btnOffense?.classList.toggle('active', state.side === 'offense');
   btnDefense?.classList.toggle('active', state.side === 'defense');
   modeTable?.classList.toggle('active', state.mode === 'table');
   modeScatter?.classList.toggle('active', state.mode === 'scatter');
   if (searchInput) searchInput.value = state.search;
   if (minInput) minInput.value = state.min ? String(state.min) : '';
+
+  const BASIS_NOTES = {
+    raw: 'Raw team production by target zone and rush direction. Not opponent-adjusted — a team’s schedule strength isn’t reflected here.',
+    adj: 'Opponent-adjusted using each team’s latest rating. Offense = what the team would produce against an average FBS defense; Defense Allowed = what an average FBS offense would produce against it. Att/Carries/Plays are still raw volume.',
+  };
+  function syncBasisUi() {
+    basisRaw?.classList.toggle('active', !state.adjusted);
+    basisAdj?.classList.toggle('active', state.adjusted);
+    if (basisNote) basisNote.textContent = state.adjusted ? BASIS_NOTES.adj : BASIS_NOTES.raw;
+  }
+
+  ensureSortKey();
   populateViewOptions();
   populateAxisOptions();
+  syncBasisUi();
 
   yearSelect?.addEventListener('change', () => { state.year = Number(yearSelect.value); render(); });
   viewSelect?.addEventListener('change', () => { state.view = viewSelect.value; render(); });
@@ -385,11 +437,30 @@ export function initPrTable(): void {
     state.ascending = false;
     tabPassing?.classList.toggle('active', kind === 'passing');
     tabRushing?.classList.toggle('active', kind === 'rushing');
+    tabOverall?.classList.toggle('active', kind === 'overall');
     populateViewOptions();
     render();
   };
   tabPassing?.addEventListener('click', () => setKind('passing'));
   tabRushing?.addEventListener('click', () => setKind('rushing'));
+  tabOverall?.addEventListener('click', () => setKind('overall'));
+
+  // The single Raw / Adjusted switch. It applies to table AND scatter: the scatter's
+  // axes each carry their own `adj` flag, so both are flipped together here and their
+  // view/stat pickers are rebuilt (adjusted has fewer stats and no zone views).
+  const setAdjusted = (adjusted: boolean) => {
+    if (state.adjusted === adjusted) return;
+    state.adjusted = adjusted;
+    state.x.adj = adjusted;
+    state.y.adj = adjusted;
+    ensureSortKey();
+    populateViewOptions();
+    populateAxisOptions();
+    syncBasisUi();
+    render();
+  };
+  basisRaw?.addEventListener('click', () => setAdjusted(false));
+  basisAdj?.addEventListener('click', () => setAdjusted(true));
 
   const setSide = (side: Side) => {
     state.side = side;

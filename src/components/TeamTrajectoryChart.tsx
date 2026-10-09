@@ -282,7 +282,7 @@ export default function TeamTrajectoryChart({
 
                   if (g.predicted_margin != null) {
                     tooltipLines.push(
-                      `Expected Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`
+                      `Predicted Margin: ${g.predicted_margin > 0 ? '+' : ''}${g.predicted_margin.toFixed(1)}`
                     );
                   }
 

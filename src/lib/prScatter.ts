@@ -4,47 +4,60 @@
 // prTable.ts's getBucket()/tableFields()/views() so it stays in sync with the
 // table's stat list without duplicating it.
 import { isNum, fmtInt, fmtField, type Field } from './prFormat';
-import { tableFields, views, getBucket, type Kind, type Side } from './prTable';
+import {
+  tableFields, views, getBucket, effectiveView, volumeKey,
+  type Kind, type Side,
+} from './prTable';
 
-export interface AxisSpec { kind: Kind; view: string; field: string } // field: 'volume' | a tableFields key
+// field: 'volume' | a tableFields key.
+// adj: use the opponent-adjusted (Massey/Kalman) value instead of the raw one. Kept per
+// axis so the helpers below stay pure functions of the spec; the page's single
+// Raw/Adjusted toggle just sets it on both axes.
+export interface AxisSpec { kind: Kind; view: string; field: string; adj?: boolean }
+
+const KIND_LABEL: Record<Kind, string> = { passing: 'Pass', rushing: 'Rush', overall: 'Overall' };
+const VOLUME_LABEL: Record<Kind, string> = { passing: 'Attempts', rushing: 'Carries', overall: 'Plays' };
 
 export interface AxisFieldOption { key: string; label: string }
-export function axisFieldOptions(kind: Kind): AxisFieldOption[] {
+export function axisFieldOptions(kind: Kind, adjusted = false): AxisFieldOption[] {
   return [
-    { key: 'volume', label: kind === 'passing' ? 'Attempts' : 'Carries' },
-    ...tableFields(kind).map((f) => ({ key: f.key, label: f.label })),
+    { key: 'volume', label: VOLUME_LABEL[kind] },
+    ...tableFields(kind, adjusted).map((f) => ({ key: f.key, label: f.label })),
   ];
 }
-export const axisViewOptions = (kind: Kind) => views(kind);
+export const axisViewOptions = (kind: Kind, adjusted = false) => views(kind, adjusted);
 
-const fieldFor = (kind: Kind, key: string): Field | null =>
-  tableFields(kind).find((f) => f.key === key) ?? null;
+const fieldFor = (kind: Kind, key: string, adjusted = false): Field | null =>
+  tableFields(kind, adjusted).find((f) => f.key === key) ?? null;
 
 export function axisLabel(spec: AxisSpec): string {
+  const adj = !!spec.adj;
   const stat = spec.field === 'volume'
-    ? (spec.kind === 'passing' ? 'Attempts' : 'Carries')
-    : (fieldFor(spec.kind, spec.field)?.label ?? spec.field);
-  const kindLabel = spec.kind === 'passing' ? 'Pass' : 'Rush';
-  const viewLabel = views(spec.kind).find((v) => v.key === spec.view)?.label;
-  return spec.view === 'total' || !viewLabel ? `${kindLabel} ${stat}` : `${kindLabel} ${stat} \u2014 ${viewLabel}`;
+    ? VOLUME_LABEL[spec.kind]
+    : (fieldFor(spec.kind, spec.field, adj)?.label ?? spec.field);
+  const kindLabel = KIND_LABEL[spec.kind];
+  const v = effectiveView(spec.kind, adj, spec.view);
+  const viewLabel = views(spec.kind, adj).find((o) => o.key === v)?.label;
+  return v === 'total' || !viewLabel ? `${kindLabel} ${stat}` : `${kindLabel} ${stat} \u2014 ${viewLabel}`;
 }
 
 // Which stats a lower raw number is actually "better" on -- drives axis
 // inversion so charts read left-to-right / bottom-to-top as "worse to better"
 // consistently, and flips correctly for the Defense Allowed side.
 export function isStatInverted(side: Side, fieldKey: string): boolean {
-  const wantsHighEvenOnDefense = ['interceptions', 'int_rate', 'sacks', 'stuff_rate', 'volume'];
+  const wantsHighEvenOnDefense = ['interceptions', 'int_rate', 'sacks', 'stuff_rate',];
   return side === 'offense'
     ? wantsHighEvenOnDefense.includes(fieldKey)
     : !wantsHighEvenOnDefense.includes(fieldKey);
 }
 
+const bucketFor = (teamData: any, side: Side, spec: AxisSpec) =>
+  getBucket(teamData, spec.kind, side, effectiveView(spec.kind, !!spec.adj, spec.view), !!spec.adj);
+
 function getAxisValue(teamData: any, side: Side, spec: AxisSpec): number | null {
-  const b = getBucket(teamData, spec.kind, side, spec.view);
+  const b = bucketFor(teamData, side, spec);
   if (!b) return null;
-  if (spec.field === 'volume') {
-    return spec.kind === 'passing' ? (b.attempts ?? null) : (b.carries ?? null);
-  }
+  if (spec.field === 'volume') return b[volumeKey(spec.kind)] ?? null;
   const v = b[spec.field];
   return isNum(v) ? v : null;
 }
@@ -53,14 +66,13 @@ function getAxisValue(teamData: any, side: Side, spec: AxisSpec): number | null 
 // field, so that was always undefined and silently fell back to 'offense'
 // even while viewing Defense Allowed. Takes the real side explicitly now.
 function getAxisVolume(teamData: any, side: Side, spec: AxisSpec): number | null {
-  const b = getBucket(teamData, spec.kind, side, spec.view);
-  const v = spec.kind === 'passing' ? b?.attempts : b?.carries;
+  const v = bucketFor(teamData, side, spec)?.[volumeKey(spec.kind)];
   return isNum(v) ? v : null;
 }
 
 export function fmtAxisValue(spec: AxisSpec, v: number | null): string {
   if (spec.field === 'volume') return fmtInt(v);
-  const f = fieldFor(spec.kind, spec.field);
+  const f = fieldFor(spec.kind, spec.field, !!spec.adj);
   return f ? fmtField(f, v) : v == null ? '—' : String(v);
 }
 
@@ -128,7 +140,7 @@ export function buildCrossPoints(options: {
 // Tick formatting per axis (rate -> %, int -> whole number, ...), independent for X and Y.
 function tickFmt(spec: AxisSpec, v: number): string {
   if (spec.field === 'volume') return String(Math.round(v));
-  const f = fieldFor(spec.kind, spec.field);
+  const f = fieldFor(spec.kind, spec.field, !!spec.adj);
   if (!f) return v.toFixed(1);
   switch (f.kind) {
     case 'int': return String(Math.round(v));
@@ -148,7 +160,7 @@ export function scatterSvgHtml(o: {
     invertX?: boolean; invertY?: boolean;
     pinned?: Set<string>;
 }): string {
-  const { points, x, y, xLabel, yLabel, invertX, invertY } = o;
+  const { points, x, y, xLabel, yLabel, invertX, invertY, pinned } = o;
   if (points.length < 2) {
     return `<p class="scatter-empty">Not enough teams have both stats to plot${points.length ? ' (only 1 match)' : ''}.</p>`;
   }
@@ -196,19 +208,39 @@ export function scatterSvgHtml(o: {
   const hasSearch = points.some((p) => !p.match);
 
   const dots = points.map((p, i) => {
-    const circleClass = [
+    const isPinned = p.pinned || pinned?.has(p.team) === true;
+    const dotClass = [
       'dot',
-      p.pinned ? 'pinned' : '',
+      isPinned ? 'pinned' : '',
       hasSearch ? (p.match ? 'match' : 'dimmed') : '',
     ].filter(Boolean).join(' ');
 
-    return `
-    <circle class="${circleClass}" tabindex="0"
-      cx="${sx(p.x).toFixed(1)}" cy="${sy(p.y).toFixed(1)}" r="${sr(sizeMetric[i]).toFixed(1)}"
+    const cx = sx(p.x);
+    const cy = sy(p.y);
+    const r = sr(sizeMetric[i]);
+
+    const commonAttributes = `
+      class="${dotClass}" tabindex="0"
       style="fill: ${escHtml(p.color)};"
       data-team="${escHtml(p.team)}" data-conf="${escHtml(p.conference)}"
       data-x="${escHtml(fmtAxisValue(x, p.x))}" data-y="${escHtml(fmtAxisValue(y, p.y))}"
-      role="button" aria-label="${escHtml(p.team)}: ${escHtml(xLabel)} ${escHtml(fmtAxisValue(x, p.x))}, ${escHtml(yLabel)} ${escHtml(fmtAxisValue(y, p.y))}"></circle>`;
+      role="button" aria-label="${escHtml(p.team)}: ${escHtml(xLabel)} ${escHtml(fmtAxisValue(x, p.x))}, ${escHtml(yLabel)} ${escHtml(fmtAxisValue(y, p.y))}"`;
+
+    if (isPinned) {
+      // Square centered on the same point as the original circle.
+      const size = r * 2;
+      return `
+        <rect ${commonAttributes}
+          x="${(cx - size / 2).toFixed(1)}"
+          y="${(cy - size / 2).toFixed(1)}"
+          width="${size.toFixed(1)}"
+          height="${size.toFixed(1)}"></rect>`;
+    }
+
+    return `
+      <circle ${commonAttributes}
+        cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}"
+        r="${r.toFixed(1)}"></circle>`;
   }).join('');
 
   return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" class="scatter-svg" role="img" aria-label="${escHtml(xLabel)} vs ${escHtml(yLabel)} scatter plot, one dot per team">

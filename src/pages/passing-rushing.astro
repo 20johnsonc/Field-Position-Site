@@ -66,7 +66,7 @@ function escapeForScript(json: string) {
   <a href="/" class="back-link">&larr; Return</a>
 
   <h1 class="page-title">Passing &amp; Rushing Rankings</h1>
-  <p class="page-subtitle">
+  <p class="page-subtitle" id="pt-basis-note">
     Raw team production by target zone and rush direction. Not opponent-adjusted &mdash;
     a team's schedule strength isn't reflected here.
   </p>
@@ -83,6 +83,10 @@ function escapeForScript(json: string) {
           <button type="button" id="pt-offense" class="toggle-btn active">Offense</button>
           <button type="button" id="pt-defense" class="toggle-btn">Defense Allowed</button>
         </div>
+        <div class="segmented-control" role="group" aria-label="Raw or opponent-adjusted stats">
+          <button type="button" id="pt-basis-raw" class="toggle-btn active">Raw</button>
+          <button type="button" id="pt-basis-adj" class="toggle-btn">Opp-Adjusted</button>
+        </div>
         <button id="scatter-theme-btn" style="display: none;" class="scatter-theme-btn">
           <span class="theme-icon"></span> Theme: Dark
         </button>
@@ -92,8 +96,9 @@ function escapeForScript(json: string) {
         <div class="segmented-control">
           <button type="button" id="pt-tab-passing" class="toggle-btn active">Passing</button>
           <button type="button" id="pt-tab-rushing" class="toggle-btn">Rushing</button>
+          <button type="button" id="pt-tab-overall" class="toggle-btn">Overall</button>
         </div>
-        <label class="pt-field">
+        <label class="pt-field" id="pt-view-field">
           <span>View</span>
           <select id="pt-view" class="pt-select">
             {views(kind).map((v) => <option value={v.key}>{v.label}</option>)}
@@ -107,6 +112,7 @@ function escapeForScript(json: string) {
           <select id="pt-x-kind" class="pt-select pt-select-sm">
             <option value="passing">Passing</option>
             <option value="rushing">Rushing</option>
+            <option value="overall">Overall</option>
           </select>
           <select id="pt-x-view" class="pt-select pt-select-sm"></select>
           <select id="pt-x-field" class="pt-select pt-select-sm"></select>
@@ -116,6 +122,7 @@ function escapeForScript(json: string) {
           <select id="pt-y-kind" class="pt-select pt-select-sm">
             <option value="passing">Passing</option>
             <option value="rushing" selected>Rushing</option>
+            <option value="overall">Overall</option>
           </select>
           <select id="pt-y-view" class="pt-select pt-select-sm"></select>
           <select id="pt-y-field" class="pt-select pt-select-sm"></select>
@@ -570,8 +577,9 @@ function escapeForScript(json: string) {
   }
 
   .pt-scatter :global(.dot.pinned) {
-    stroke: var(--accent-danger);
     stroke-width: 2;
+    fill-opacity: 1;
+    paint-order: stroke;
   }
 
   .pt-scatter :global(.dot.dimmed) {
@@ -640,7 +648,9 @@ function escapeForScript(json: string) {
   }
 
   :global(.pt-scatter-wrap.theme-light) :global(.dot.pinned) {
-    stroke: var(--accent-danger) !important;
+    stroke-width: 2;
+    fill-opacity: 1;
+    paint-order: stroke;
   }
 
   :global(.pt-scatter-wrap.theme-light) :global(.dot.match) {
