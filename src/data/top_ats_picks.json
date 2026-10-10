@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-09T21:03:35.810162+00:00",
+  "generated_at": "2026-10-10T15:11:31.225442+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5156,
+  "backtest_cover_rate": 0.5136,
   "picks_by_week": {
     "6": [
       {
@@ -19,32 +19,18 @@
         "kelly_fraction": 0.5911
       },
       {
-        "game_id": 401858487,
-        "week": 6,
-        "home_team": "Washington",
-        "away_team": "Iowa",
-        "market_spread": -3.0,
-        "predicted_margin": 5.96,
-        "pick": "Iowa",
-        "pick_side": "away",
-        "edge_pts": 9.0,
-        "cover_prob": 0.7134,
-        "prob_edge": 0.2134,
-        "kelly_fraction": 0.3981
-      },
-      {
         "game_id": 401866436,
         "week": 6,
         "home_team": "Bowling Green",
         "away_team": "Sacramento State",
-        "market_spread": -8.5,
+        "market_spread": -9.0,
         "predicted_margin": 0.22,
         "pick": "Sacramento State",
         "pick_side": "away",
-        "edge_pts": 8.7,
-        "cover_prob": 0.7082,
-        "prob_edge": 0.2082,
-        "kelly_fraction": 0.3873
+        "edge_pts": 9.2,
+        "cover_prob": 0.7189,
+        "prob_edge": 0.2189,
+        "kelly_fraction": 0.4097
       },
       {
         "game_id": 401858256,
@@ -73,6 +59,20 @@
         "cover_prob": 0.6807,
         "prob_edge": 0.1807,
         "kelly_fraction": 0.3295
+      },
+      {
+        "game_id": 401866438,
+        "week": 6,
+        "home_team": "Ohio",
+        "away_team": "Central Michigan",
+        "market_spread": -2.5,
+        "predicted_margin": -9.12,
+        "pick": "Ohio",
+        "pick_side": "home",
+        "edge_pts": 6.6,
+        "cover_prob": 0.6614,
+        "prob_edge": 0.1614,
+        "kelly_fraction": 0.2889
       }
     ],
     "7": [
@@ -133,18 +133,18 @@
         "kelly_fraction": 0.2015
       },
       {
-        "game_id": 401856721,
+        "game_id": 401856724,
         "week": 7,
-        "home_team": "Ole Miss",
-        "away_team": "Missouri",
-        "market_spread": -6.5,
-        "predicted_margin": -3.61,
-        "pick": "Missouri",
-        "pick_side": "away",
-        "edge_pts": 2.9,
-        "cover_prob": 0.5721,
-        "prob_edge": 0.0721,
-        "kelly_fraction": 0.1014
+        "home_team": "Texas",
+        "away_team": "Florida",
+        "market_spread": -8.5,
+        "predicted_margin": -12.21,
+        "pick": "Texas",
+        "pick_side": "home",
+        "edge_pts": 3.7,
+        "cover_prob": 0.5922,
+        "prob_edge": 0.0922,
+        "kelly_fraction": 0.1437
       }
     ],
     "8": [
@@ -198,13 +198,13 @@
         "home_team": "Florida State",
         "away_team": "Clemson",
         "market_spread": 1.5,
-        "predicted_margin": -8.6,
+        "predicted_margin": -8.18,
         "pick": "Florida State",
         "pick_side": "home",
-        "edge_pts": 10.1,
-        "cover_prob": 0.7373,
-        "prob_edge": 0.2373,
-        "kelly_fraction": 0.4483
+        "edge_pts": 9.7,
+        "cover_prob": 0.7286,
+        "prob_edge": 0.2286,
+        "kelly_fraction": 0.4301
       },
       {
         "game_id": 401856734,
@@ -256,13 +256,13 @@
         "home_team": "Utah",
         "away_team": "BYU",
         "market_spread": -3.0,
-        "predicted_margin": -7.1,
+        "predicted_margin": -6.32,
         "pick": "Utah",
         "pick_side": "home",
-        "edge_pts": 4.1,
-        "cover_prob": 0.6017,
-        "prob_edge": 0.1017,
-        "kelly_fraction": 0.1636
+        "edge_pts": 3.3,
+        "cover_prob": 0.5827,
+        "prob_edge": 0.0827,
+        "kelly_fraction": 0.1236
       },
       {
         "game_id": 401858514,
