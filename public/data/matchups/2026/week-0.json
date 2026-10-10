@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T21:02:41.462786+00:00",
+  "generated_at": "2026-10-10T15:10:21.471407+00:00",
   "year": 2026,
   "week": 0,
   "games": [
@@ -122,6 +122,31 @@
       "actual_total": 45
     },
     {
+      "game_id": 401864570,
+      "week": 0,
+      "year": 2026,
+      "home_team": "Florida State",
+      "away_team": "New Mexico State",
+      "start_date": "2026-08-29 23:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "Conference USA",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-08-29T23:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "The CW Network",
+      "tv_all": [
+        "The CW Network",
+        "CW"
+      ],
+      "status": "completed",
+      "home_points": 34,
+      "away_points": 17,
+      "actual_margin": 17,
+      "actual_total": 51
+    },
+    {
       "game_id": 401858201,
       "week": 0,
       "year": 2026,
@@ -144,31 +169,6 @@
       "away_points": 27,
       "actual_margin": 10,
       "actual_total": 64
-    },
-    {
-      "game_id": 401864570,
-      "week": 0,
-      "year": 2026,
-      "home_team": "Florida State",
-      "away_team": "New Mexico State",
-      "start_date": "2026-08-29 23:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "Conference USA",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-08-29T23:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "CW",
-      "tv_all": [
-        "CW",
-        "The CW Network"
-      ],
-      "status": "completed",
-      "home_points": 34,
-      "away_points": 17,
-      "actual_margin": 17,
-      "actual_total": 51
     },
     {
       "game_id": 401862693,
