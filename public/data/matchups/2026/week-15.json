@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T15:10:21.471407+00:00",
+  "generated_at": "2026-10-11T20:21:38.229419+00:00",
   "year": 2026,
   "week": 15,
   "games": [
@@ -22,16 +22,16 @@
         "CBS"
       ],
       "status": "upcoming",
-      "predicted_score": "Army 31 - Navy 23",
-      "predicted_home_score": 30.6,
-      "predicted_away_score": 23.0,
-      "predicted_margin": -7.64,
-      "predicted_total": 53.59,
-      "home_win_prob": 0.7365,
-      "away_win_prob": 0.2635,
+      "predicted_score": "Army 28 - Navy 22",
+      "predicted_home_score": 28.4,
+      "predicted_away_score": 21.5,
+      "predicted_margin": -6.84,
+      "predicted_total": 49.9,
+      "home_win_prob": 0.672,
+      "away_win_prob": 0.328,
       "market_spread": 2.5,
       "market_total": 37.5,
-      "watchability_score": 49.6,
+      "watchability_score": 49.3,
       "watchability_rank": 1
     }
   ]
