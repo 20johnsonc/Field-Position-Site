@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T20:23:02.409548+00:00",
+  "generated_at": "2026-10-13T20:16:11.637786+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
   "backtest_cover_rate": 0.5097,
   "picks_by_week": {
@@ -9,56 +9,28 @@
         "week": 7,
         "home_team": "Miami (OH)",
         "away_team": "Akron",
-        "market_spread": -10.0,
+        "market_spread": -9.5,
         "predicted_margin": -20.67,
         "pick": "Miami (OH)",
         "pick_side": "home",
-        "edge_pts": 10.7,
-        "cover_prob": 0.7488,
-        "prob_edge": 0.2488,
-        "kelly_fraction": 0.4725
+        "edge_pts": 11.2,
+        "cover_prob": 0.7587,
+        "prob_edge": 0.2587,
+        "kelly_fraction": 0.4934
       },
       {
         "game_id": 401862804,
         "week": 7,
         "home_team": "UTSA",
         "away_team": "Navy",
-        "market_spread": -6.5,
+        "market_spread": -7.0,
         "predicted_margin": -16.74,
         "pick": "UTSA",
         "pick_side": "home",
-        "edge_pts": 10.2,
-        "cover_prob": 0.7401,
-        "prob_edge": 0.2401,
-        "kelly_fraction": 0.4543
-      },
-      {
-        "game_id": 401856831,
-        "week": 7,
-        "home_team": "Houston",
-        "away_team": "Oklahoma State",
-        "market_spread": -4.0,
-        "predicted_margin": -13.83,
-        "pick": "Houston",
-        "pick_side": "home",
-        "edge_pts": 9.8,
-        "cover_prob": 0.7317,
-        "prob_edge": 0.2317,
-        "kelly_fraction": 0.4366
-      },
-      {
-        "game_id": 401862806,
-        "week": 7,
-        "home_team": "South Florida",
-        "away_team": "Kent State",
-        "market_spread": -20.0,
-        "predicted_margin": -29.8,
-        "pick": "South Florida",
-        "pick_side": "home",
-        "edge_pts": 9.8,
-        "cover_prob": 0.7311,
-        "prob_edge": 0.2311,
-        "kelly_fraction": 0.4353
+        "edge_pts": 9.7,
+        "cover_prob": 0.7298,
+        "prob_edge": 0.2298,
+        "kelly_fraction": 0.4327
       },
       {
         "game_id": 401858493,
@@ -73,6 +45,34 @@
         "cover_prob": 0.725,
         "prob_edge": 0.225,
         "kelly_fraction": 0.4226
+      },
+      {
+        "game_id": 401856831,
+        "week": 7,
+        "home_team": "Houston",
+        "away_team": "Oklahoma State",
+        "market_spread": -5.0,
+        "predicted_margin": -13.83,
+        "pick": "Houston",
+        "pick_side": "home",
+        "edge_pts": 8.8,
+        "cover_prob": 0.7106,
+        "prob_edge": 0.2106,
+        "kelly_fraction": 0.3923
+      },
+      {
+        "game_id": 401862806,
+        "week": 7,
+        "home_team": "South Florida",
+        "away_team": "Kent State",
+        "market_spread": -21.0,
+        "predicted_margin": -29.8,
+        "pick": "South Florida",
+        "pick_side": "home",
+        "edge_pts": 8.8,
+        "cover_prob": 0.71,
+        "prob_edge": 0.21,
+        "kelly_fraction": 0.3909
       }
     ],
     "8": [
