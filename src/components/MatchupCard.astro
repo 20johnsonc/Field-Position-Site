@@ -58,7 +58,15 @@ const hasBacktest = !isUpcoming && !!backtest;
 const suPickTeam = backtest ? pickTeamName(game, backtest.su_pick) : null;
 const atsPickTeam = backtest ? pickTeamName(game, backtest.ats_pick) : null;
 const suClass = backtest ? (backtest.su_correct ? 'correct' : 'incorrect') : '';
-const atsClass = backtest ? (backtest.ats_correct ? 'correct' : 'incorrect') : '';
+const atsResult = backtest?.ats_result ?? null;
+const atsClass = !backtest
+  ? ''
+  : atsResult === 'push'
+    ? 'push'
+    : atsResult === 'win'
+      ? 'correct'
+      : 'incorrect';
+const atsMark = atsResult === 'push' ? 'Push' : atsResult === 'win' ? '✓' : '✗';
 
 // 5. Watchability
 const startMs = Date.parse(game.kickoffUtc ?? game.startDate ?? '');
@@ -83,7 +91,7 @@ const edge =
   data-away-team={game.awayTeam}
   data-has-backtest={hasBacktest ? 'true' : 'false'}
   data-su-correct={hasBacktest ? String(backtest!.su_correct) : undefined}
-  data-ats-correct={hasBacktest ? String(backtest!.ats_correct) : undefined}
+  data-ats-result={hasBacktest ? backtest!.ats_result : undefined}
   data-start={startKey}
   data-watch-score={game.watchabilityScore ?? -1}
   data-channel={game.tvChannel ?? ''}
@@ -203,7 +211,9 @@ const edge =
             </div>
             <div class="actual-line">
               <small>ACTUAL</small> <strong>{fmtSpread(backtest.actual_margin)}</strong>
-              <span class="pick-note">Pick: {atsPickTeam} ({backtest.ats_correct ? '✓' : '✗'})</span>
+              <span class="pick-note">
+                Pick: {atsPickTeam} ({atsMark})
+              </span>
             </div>
           </div>
         </div>
@@ -453,6 +463,9 @@ const edge =
     color: var(--text-muted);
     font-size: 0.7rem;
   }
+
+  .result-box.push { border-color: var(--color-muted, #888); }
+  .verdict-badge.push { color: var(--color-muted, #888); }
 
   /* =========================================
      Light Mode Refinement

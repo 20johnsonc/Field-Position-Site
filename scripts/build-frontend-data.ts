@@ -102,24 +102,38 @@ function buildBacktestForWeek(year: string, week: number, completedGames: any[])
   writeFileSync(join(outDir, `week-${week}.json`), JSON.stringify(output));
 }
 
+type AtsRecord = { wins: number; losses: number; pushes: number };
+type SuRecord = { correct: number; total: number };
+
 function buildSeasonRecords(years: string[]) {
-  const byYear: Record<string, { su: { correct: number; total: number }; ats: { correct: number; total: number } }> = {};
+  const byYear: Record<string, { su: SuRecord; ats: AtsRecord }> = {};
 
   for (const year of years) {
-    byYear[year] = { su: { correct: 0, total: 0 }, ats: { correct: 0, total: 0 } };
+    byYear[year] = {
+      su: { correct: 0, total: 0 },
+      ats: { wins: 0, losses: 0, pushes: 0 },
+    };
     for (const week of listWeeks(year)) {
-      const completed = loadWeekFile(year, week).filter((g) => g.home_points != null && g.away_points != null);
+      const completed = loadWeekFile(year, week).filter(
+        (g) => g.home_points != null && g.away_points != null
+      );
       for (const g of completed) {
         const row = backtestByGameId.get(g.game_id);
         if (!row) continue;
+
         if (row.su_correct != null) {
           byYear[year].su.total++;
           if (row.su_correct) byYear[year].su.correct++;
         }
-        if (row.ats_correct != null) {
-          byYear[year].ats.total++;
-          if (row.ats_correct) byYear[year].ats.correct++;
-        }
+
+        // Prefer ats_result; fall back to ats_correct for older rows
+        const result: 'win' | 'loss' | 'push' | null =
+          row.ats_result ??
+          (row.ats_correct == null ? null : row.ats_correct ? 'win' : 'loss');
+
+        if (result === 'win') byYear[year].ats.wins++;
+        else if (result === 'loss') byYear[year].ats.losses++;
+        else if (result === 'push') byYear[year].ats.pushes++;
       }
     }
   }

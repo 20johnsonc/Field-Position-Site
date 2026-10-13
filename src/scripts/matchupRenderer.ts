@@ -83,29 +83,37 @@ export function renderMatchupRow(
   const awayConf = conferenceFor(game.away_team, teamConfMap);
   const hasBacktest = !!backtest;
   const suClass = backtest ? (backtest.su_correct ? 'win' : 'loss') : '';
-  const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
+
+  // ats_result is the source of truth; fall back to ats_correct for older rows
+  const atsResult: 'win' | 'loss' | 'push' | null = backtest
+    ? (backtest.ats_result ??
+        (backtest.ats_correct == null ? 'push' : backtest.ats_correct ? 'win' : 'loss'))
+    : null;
+  const atsClass = atsResult ?? '';
+  const atsMark = atsResult === 'push' ? '–' : atsResult === 'win' ? '✓' : '✗';
+  const atsDetailMark = atsResult === 'push' ? 'Push' : atsMark;
   const isAwayWinner = (game.away_points ?? 0) > (game.home_points ?? 0);
   const isHomeWinner = (game.home_points ?? 0) > (game.away_points ?? 0);
 
   const backtestDetailHtml =
-    hasBacktest && backtest
-      ? `<div class="detail-grid">
-        <div class="detail-box"><span class="dl">Straight up</span>
-          <div>Pick: <strong>${pickTeamNameClient(game, backtest.ats_pick)}</strong> —
-          <span class="${suClass === 'win' ? 'txt-win' : 'txt-loss'}">${backtest.su_correct ? 'Correct' : 'Wrong'}</span></div>
-        </div>
-        <div class="detail-box"><span class="dl">Spread (ATS)</span>
-          <div>MKT ${fmtSpread(backtest.market_spread)} / MODEL ${fmtSpread(backtest.predicted_margin)}</div>
-          <div>Actual ${fmtSpread(backtest.actual_margin)} — Pick: ${pickTeamNameClient(game, backtest.ats_pick)}
-          (<span class="${atsClass === 'win' ? 'txt-win' : 'txt-loss'}">${backtest.ats_correct ? '✓' : '✗'}</span>)</div>
-        </div>
-      </div>`
-      : '';
+  hasBacktest && backtest
+    ? `<div class="detail-grid">
+      <div class="detail-box"><span class="dl">Straight up</span>
+        <div>Pick: <strong>${pickTeamNameClient(game, backtest.su_pick)}</strong> —
+        <span class="${suClass === 'win' ? 'txt-win' : 'txt-loss'}">${backtest.su_correct ? 'Correct' : 'Wrong'}</span></div>
+      </div>
+      <div class="detail-box"><span class="dl">Spread (ATS)</span>
+        <div>MKT ${fmtSpread(backtest.market_spread)} / MODEL ${fmtSpread(backtest.predicted_margin)}</div>
+        <div>Actual ${fmtSpread(backtest.actual_margin)} — Pick: ${pickTeamNameClient(game, backtest.ats_pick)}
+        (<span class="txt-${atsClass}">${atsDetailMark}</span>)</div>
+      </div>
+    </div>`
+    : '';
 
   const resultsHtml =
     hasBacktest && backtest
       ? `<span class="tag ${suClass}"><small>SU</small> ${backtest.su_correct ? '✓' : '✗'}</span>
-       <span class="tag ${atsClass}"><small>ATS</small> ${backtest.ats_correct ? '✓' : '✗'}</span>`
+      <span class="tag ${atsClass}"><small>ATS</small> ${atsMark}</span>`
       : `<span class="pill-muted">—</span>`;
 
   return `
@@ -115,7 +123,7 @@ export function renderMatchupRow(
       data-game-id="${game.game_id}" data-home-team="${game.home_team}" data-away-team="${game.away_team}"
       data-has-backtest="${hasBacktest}"
       
-      ${hasBacktest ? `data-su-correct="${backtest!.su_correct}" data-ats-correct="${backtest!.ats_correct}"` : ''}>
+      ${hasBacktest ? `data-su-correct="${backtest!.su_correct}" data-ats-result="${atsResult}"` : ''}>
       <button type="button" class="game-row" data-row-trigger aria-expanded="false">
         <div class="teams-stack">
           <div class="team-row">

@@ -5,7 +5,10 @@ import type { DisplayPlay } from '../lib/pbp';
 
 let initialized = false;
 let teamConfMap: Record<string, string> = {};
-let seasonRecords: Record<string, { su: { correct: number; total: number }; ats: { correct: number; total: number } }> = {};
+type SuRecord = { correct: number; total: number };
+type AtsRecord = { wins: number; losses: number; pushes: number };
+
+let seasonRecords: Record<string, { su: SuRecord; ats: AtsRecord }> = {};
 let seasonRecordsLoaded = false;
 let weeksByYear: Record<string, number[]> = {};
 
@@ -129,24 +132,31 @@ function applyMatchupConferenceFilter(): void {
 function updateMatchupRecordStats(): void {
   const cards = document.querySelectorAll<HTMLElement>('.matchup-card:not(.is-hidden)');
 
-  let suTotal = 0, suCorrect = 0, atsTotal = 0, atsCorrect = 0;
+  let suWins = 0, suLosses = 0;
+  let atsWins = 0, atsLosses = 0, atsPushes = 0;
 
   cards.forEach((card) => {
     if (card.dataset.hasBacktest !== 'true') return;
+
     if (card.dataset.suCorrect !== undefined) {
-      suTotal += 1;
-      if (card.dataset.suCorrect === 'true') suCorrect += 1;
+      if (card.dataset.suCorrect === 'true') suWins += 1;
+      else suLosses += 1;
     }
-    if (card.dataset.atsCorrect !== undefined) {
-      atsTotal += 1;
-      if (card.dataset.atsCorrect === 'true') atsCorrect += 1;
+
+    switch (card.dataset.atsResult) {
+      case 'win':  atsWins += 1; break;
+      case 'loss': atsLosses += 1; break;
+      case 'push': atsPushes += 1; break;
     }
   });
 
-  setStatPill('suStatValue', 'suStatPill', suCorrect, suTotal);
-  setStatPill('atsStatValue', 'atsStatPill', atsCorrect, atsTotal);
+  setStatPill('suStatValue', 'suStatPill', suWins, suLosses);
+  setStatPill('atsStatValue', 'atsStatPill', atsWins, atsLosses, atsPushes);
+
   const weekStats = document.getElementById('matchupRecordStats');
-  weekStats?.classList.toggle('is-empty', suTotal === 0 && atsTotal === 0);
+  const noSu = suWins + suLosses === 0;
+  const noAts = atsWins + atsLosses + atsPushes === 0;
+  weekStats?.classList.toggle('is-empty', noSu && noAts);
 }
 
 // Now reads a pre-aggregated file instead of scanning the DOM (the DOM only
@@ -160,27 +170,39 @@ async function updateMatchupSeasonStats(): Promise<void> {
   const record = seasonRecords[year];
 
   if (record) {
-    setStatPill('suSeasonValue', 'suSeasonPill', record.su.correct, record.su.total);
-    setStatPill('atsSeasonValue', 'atsSeasonPill', record.ats.correct, record.ats.total);
+    const { su, ats } = record;
+    setStatPill('suSeasonValue', 'suSeasonPill', su.correct, su.total - su.correct);
+    setStatPill('atsSeasonValue', 'atsSeasonPill', ats.wins, ats.losses, ats.pushes);
   } else {
     setStatPill('suSeasonValue', 'suSeasonPill', 0, 0);
-    setStatPill('atsSeasonValue', 'atsSeasonPill', 0, 0);
+    setStatPill('atsSeasonValue', 'atsSeasonPill', 0, 0, 0);
   }
 }
 
-function setStatPill(valueId: string, pillId: string, correct: number, total: number): void {
+function setStatPill(
+  valueId: string,
+  pillId: string,
+  wins: number,
+  losses: number,
+  pushes?: number
+): void {
   const valueEl = document.getElementById(valueId);
   const pillEl = document.getElementById(pillId);
   if (!valueEl || !pillEl) return;
 
-  if (total > 0) {
-    const pct = Math.round((correct / total) * 100);
-    valueEl.textContent = `${pct}% (${correct}-${total - correct})`;
-    pillEl.classList.remove('no-data');
-  } else {
+  const decided = wins + losses;
+  const hasData = decided > 0 || (pushes ?? 0) > 0;
+
+  if (!hasData) {
     valueEl.textContent = '—';
     pillEl.classList.add('no-data');
+    return;
   }
+
+  const record = pushes === undefined ? `${wins}-${losses}` : `${wins}-${losses}-${pushes}`;
+  const pct = decided > 0 ? `${Math.round((wins / decided) * 100)}%` : '—';
+  valueEl.textContent = `${pct} (${record})`;
+  pillEl.classList.remove('no-data');
 }
 
 // --- RANKINGS: unchanged — still one full-year table, toggled client-side ---

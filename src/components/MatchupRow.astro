@@ -27,7 +27,15 @@ const hasBacktest = !!backtest;
 const suPickTeam = backtest ? pickTeamName(game, backtest.su_pick) : null;
 const atsPickTeam = backtest ? pickTeamName(game, backtest.ats_pick) : null;
 const suClass = backtest ? (backtest.su_correct ? 'win' : 'loss') : '';
-const atsClass = backtest ? (backtest.ats_correct ? 'win' : 'loss') : '';
+
+// ats_result is the source of truth; fall back to ats_correct for older rows
+const atsResult: 'win' | 'loss' | 'push' | null = backtest
+  ? (backtest.ats_result ??
+      (backtest.ats_correct == null ? 'push' : backtest.ats_correct ? 'win' : 'loss'))
+  : null;
+const atsClass = atsResult ?? '';
+const atsMark = atsResult === 'push' ? '–' : atsResult === 'win' ? '✓' : '✗';
+const atsDetailMark = atsResult === 'push' ? 'Push' : atsMark;
 
 const isAwayWinner = game.awayPoints > game.homePoints;
 const isHomeWinner = game.homePoints > game.awayPoints;
@@ -44,7 +52,7 @@ const isHomeWinner = game.homePoints > game.awayPoints;
   data-away-team={game.awayTeam}
   data-has-backtest={hasBacktest ? 'true' : 'false'}
   data-su-correct={hasBacktest ? String(backtest!.su_correct) : undefined}
-  data-ats-correct={hasBacktest ? String(backtest!.ats_correct) : undefined}
+  data-ats-result={hasBacktest ? atsResult : undefined}
 >
   <button type="button" class="game-row" data-row-trigger aria-expanded="false">
     
@@ -74,7 +82,7 @@ const isHomeWinner = game.homePoints > game.awayPoints;
                 <small>SU</small> {backtest.su_correct ? '✓' : '✗'}
               </span>
               <span class={`tag ${atsClass}`}>
-                <small>ATS</small> {backtest.ats_correct ? '✓' : '✗'}
+                <small>ATS</small> {atsMark}
               </span>
             </>
           ) : (
@@ -105,7 +113,7 @@ const isHomeWinner = game.homePoints > game.awayPoints;
             <div>MKT {fmtSpread(backtest.market_spread)} / MODEL {fmtSpread(backtest.predicted_margin)}</div>
             <div>
               Actual {fmtSpread(backtest.actual_margin)} — Pick: {atsPickTeam} (
-              <span class={atsClass === 'win' ? 'txt-win' : 'txt-loss'}>{backtest.ats_correct ? '✓' : '✗'}</span>)
+              <span class={`txt-${atsClass}`}>{atsDetailMark}</span>)
             </div>
           </div>
         </div>
@@ -420,6 +428,15 @@ const isHomeWinner = game.homePoints > game.awayPoints;
 
     border:
       1px solid var(--loss-border);
+  }
+  .tag.push {
+    color: var(--text-muted);
+    background: var(--surface-3);
+    border: 1px solid var(--card-border);
+  }
+  .txt-push {
+    color: var(--text-muted);
+    font-weight: 700;
   }
 
   .pill-muted {

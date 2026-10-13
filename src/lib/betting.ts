@@ -9,7 +9,8 @@ export interface BacktestResult {
   su_correct: boolean;
   market_spread: number;
   ats_pick: 'home' | 'away';
-  ats_correct: boolean;
+  ats_result: 'win' | 'loss' | 'push';
+  ats_correct: boolean | null;
 }
 
 export function fmtSpread(num: number | null | undefined): string {
