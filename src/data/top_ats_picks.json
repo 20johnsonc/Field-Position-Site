@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-16T18:46:56.856589+00:00",
+  "generated_at": "2026-10-17T13:14:35.598360+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5096,
+  "backtest_cover_rate": 0.5115,
   "picks_by_week": {
     "7": [
       {
@@ -61,18 +61,18 @@
         "kelly_fraction": 0.4146
       },
       {
-        "game_id": 401858493,
+        "game_id": 401862806,
         "week": 7,
-        "home_team": "Purdue",
-        "away_team": "Washington",
-        "market_spread": -3.0,
-        "predicted_margin": 6.01,
-        "pick": "Washington",
-        "pick_side": "away",
-        "edge_pts": 9.0,
-        "cover_prob": 0.7145,
-        "prob_edge": 0.2145,
-        "kelly_fraction": 0.4004
+        "home_team": "South Florida",
+        "away_team": "Kent State",
+        "market_spread": -20.5,
+        "predicted_margin": -29.81,
+        "pick": "South Florida",
+        "pick_side": "home",
+        "edge_pts": 9.3,
+        "cover_prob": 0.7208,
+        "prob_edge": 0.2208,
+        "kelly_fraction": 0.4137
       }
     ],
     "8": [
@@ -110,13 +110,13 @@
         "home_team": "Florida International",
         "away_team": "Middle Tennessee",
         "market_spread": -10.0,
-        "predicted_margin": -15.54,
+        "predicted_margin": -15.55,
         "pick": "Florida International",
         "pick_side": "home",
-        "edge_pts": 5.5,
-        "cover_prob": 0.6362,
-        "prob_edge": 0.1362,
-        "kelly_fraction": 0.236
+        "edge_pts": 5.6,
+        "cover_prob": 0.6364,
+        "prob_edge": 0.1364,
+        "kelly_fraction": 0.2365
       },
       {
         "game_id": 401856728,
