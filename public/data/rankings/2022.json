@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T13:13:32.119544+00:00",
+  "generated_at": "2026-10-18T13:36:18.256017+00:00",
   "year": 2022,
   "rankings": [
     {
@@ -10,7 +10,7 @@
       "Net Rating": 29.1,
       "Year": 2022,
       "tags": [
-        "Bully-Ball Ground Attack (Ball-Secure)",
+        "High-Powered Air Assault (Ball-Secure)",
         "Elite Defense",
         "Championship Contender"
       ],
@@ -73,7 +73,7 @@
       "Net Rating": 26.3,
       "Year": 2022,
       "tags": [
-        "High-Powered Air Assault",
+        "High-Powered Offense",
         "Elite Defense",
         "Championship Contender"
       ],
@@ -157,7 +157,7 @@
       "Net Rating": 17.0,
       "Year": 2022,
       "tags": [
-        "High-Powered Air Assault (Ball-Secure)",
+        "High-Powered Ground Attack (Ball-Secure)",
         "Stout Defense",
         "Blue-Blood Talent"
       ],
@@ -178,7 +178,7 @@
       "Net Rating": 16.6,
       "Year": 2022,
       "tags": [
-        "Methodical Chain-Mover",
+        "High-Powered Air Assault (Run-Efficient)",
         "Elite Disruptive Defense",
         "High-Level Roster"
       ],
@@ -199,7 +199,7 @@
       "Net Rating": 15.6,
       "Year": 2022,
       "tags": [
-        "High-Powered Air Assault",
+        "Explosive Offense",
         "Stout Secondary Defense",
         "High-Level Roster"
       ],
@@ -220,7 +220,7 @@
       "Net Rating": 15.6,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Bully-Ball Ground Attack",
         "Stout Secondary Defense",
         "Blue-Blood Talent"
       ],
@@ -241,7 +241,7 @@
       "Net Rating": 14.1,
       "Year": 2022,
       "tags": [
-        "Explosive Offense",
+        "High-Powered Air Assault",
         "Stout Secondary Defense",
         "Elite Roster"
       ],
@@ -262,7 +262,7 @@
       "Net Rating": 13.5,
       "Year": 2022,
       "tags": [
-        "High-Powered Ground Attack (Ball-Secure)",
+        "High-Powered Offense (Ball-Secure)",
         "Elite Bend-Don't-Break Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -283,7 +283,7 @@
       "Net Rating": 13.3,
       "Year": 2022,
       "tags": [
-        "High-Powered Ground Attack (Ball-Secure)",
+        "High-Powered Air Assault (Ball-Secure)",
         "Sound Defense",
         "Blue-Blood Talent"
       ],
@@ -325,7 +325,7 @@
       "Net Rating": 12.9,
       "Year": 2022,
       "tags": [
-        "Explosive Offense",
+        "High-Powered Air Assault (Run-Efficient)",
         "Elite Defense",
         "Blue-Blood Talent"
       ],
@@ -367,7 +367,7 @@
       "Net Rating": 11.0,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Efficient Offense",
+        "Controlled Pace Run-Heavy Offense",
         "Sound Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -514,7 +514,7 @@
       "Net Rating": 9.5,
       "Year": 2022,
       "tags": [
-        "Efficient Offense (Ball-Secure)",
+        "Run-Heavy Offense (Ball-Secure)",
         "Elite Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -556,7 +556,7 @@
       "Net Rating": 8.6,
       "Year": 2022,
       "tags": [
-        "Uptempo High-Powered Air Assault",
+        "Uptempo High-Powered Ground Attack (Pass-Efficient)",
         "Sound Defense",
         "Elite Roster"
       ],
@@ -577,7 +577,7 @@
       "Net Rating": 8.2,
       "Year": 2022,
       "tags": [
-        "Uptempo High-Powered Air Assault",
+        "Uptempo Bully-Ball Ground Attack",
         "Sound Defense",
         "Elite Roster"
       ],
@@ -598,7 +598,7 @@
       "Net Rating": 7.9,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Elite Disruptive Defense",
         "High-Level Roster"
       ],
@@ -640,7 +640,7 @@
       "Net Rating": 7.8,
       "Year": 2022,
       "tags": [
-        "Uptempo High-Powered Ground Attack",
+        "Uptempo Explosive Offense",
         "Sound Defense",
         "Elite Roster"
       ],
@@ -724,7 +724,7 @@
       "Net Rating": 7.0,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Disruptive Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -787,7 +787,7 @@
       "Net Rating": 6.8,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Offense",
+        "Balanced Spread",
         "Elite Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -829,7 +829,7 @@
       "Net Rating": 6.6,
       "Year": 2022,
       "tags": [
-        "High-Powered Offense",
+        "High-Powered Air Assault",
         "Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -850,7 +850,7 @@
       "Net Rating": 5.3,
       "Year": 2022,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Elite Bend-Don't-Break Defense",
         "Elite Roster"
       ],
@@ -892,7 +892,7 @@
       "Net Rating": 5.2,
       "Year": 2022,
       "tags": [
-        "Uptempo High-Powered Air Assault",
+        "Uptempo High-Powered Ground Attack (Pass-Efficient)",
         "Porous & Passive Defense",
         "Elite Roster"
       ],
@@ -955,7 +955,7 @@
       "Net Rating": 4.9,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense (Pass-Efficient)",
         "Elite Defense",
         "Above-Average Roster"
       ],
@@ -1039,7 +1039,7 @@
       "Net Rating": 3.8,
       "Year": 2022,
       "tags": [
-        "Uptempo Run-Heavy Offense (Pass-Efficient)",
+        "Uptempo Balanced Spread",
         "Sound Defense",
         "High-Level Roster"
       ],
@@ -1186,7 +1186,7 @@
       "Net Rating": 2.7,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense (Pass-Efficient)",
         "Stout Run Defense",
         "Overachieving Underdog Roster"
       ],
@@ -1207,7 +1207,7 @@
       "Net Rating": 1.9,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Offense",
+        "Balanced Spread",
         "Stout Secondary Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -1312,7 +1312,7 @@
       "Net Rating": 0.2,
       "Year": 2022,
       "tags": [
-        "High-Powered Air Assault (Run-Efficient)",
+        "High-Powered Offense",
         "Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -1459,7 +1459,7 @@
       "Net Rating": -1.1,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Competitive Roster"
       ],
@@ -1543,7 +1543,7 @@
       "Net Rating": -1.9,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Run-Heavy Offense",
+        "Controlled Pace Efficient Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1585,7 +1585,7 @@
       "Net Rating": -2.3,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Offense",
+        "Run-First Offense",
         "Disruptive Defense",
         "Underachieving Elite Roster"
       ],
@@ -1606,7 +1606,7 @@
       "Net Rating": -2.4,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-Heavy Offense",
         "Stout Defense",
         "Above-Average Roster"
       ],
@@ -1627,7 +1627,7 @@
       "Net Rating": -2.7,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Efficient Offense",
+        "Controlled Pace Run-Heavy Offense (Pass-Efficient)",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
@@ -1816,7 +1816,7 @@
       "Net Rating": -4.8,
       "Year": 2022,
       "tags": [
-        "Uptempo Run-Heavy Offense (Turnover-Prone)",
+        "Uptempo Run-First Offense (Turnover-Prone)",
         "Stout Secondary Defense",
         "Above-Average Roster"
       ],
@@ -1921,7 +1921,7 @@
       "Net Rating": -6.1,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient)",
+        "Balanced Spread",
         "Vulnerable Defense",
         "Above-Average Roster"
       ],
@@ -2047,7 +2047,7 @@
       "Net Rating": -7.0,
       "Year": 2022,
       "tags": [
-        "Anemic Offense",
+        "Run-Heavy Offense",
         "Disruptive Defense",
         "Underdog Roster"
       ],
@@ -2068,7 +2068,7 @@
       "Net Rating": -7.2,
       "Year": 2022,
       "tags": [
-        "Efficient Offense",
+        "High-Powered Air Assault",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
@@ -2089,7 +2089,7 @@
       "Net Rating": -7.6,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2194,7 +2194,7 @@
       "Net Rating": -9.4,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Anemic Offense",
+        "Controlled Pace Run-Heavy Offense (Pass-Efficient)",
         "Sound Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2236,7 +2236,7 @@
       "Net Rating": -9.6,
       "Year": 2022,
       "tags": [
-        "Uptempo Anemic Offense",
+        "Uptempo Run-Heavy Offense",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2341,7 +2341,7 @@
       "Net Rating": -11.1,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Run-First Offense (Turnover-Prone)",
+        "Controlled Pace Balanced Spread (Turnover-Prone)",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
@@ -2383,7 +2383,7 @@
       "Net Rating": -12.0,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Balanced Spread",
+        "Controlled Pace Run-Heavy Offense (Pass-Efficient)",
         "Sound Defense",
         "Developmental Roster"
       ],
@@ -2467,7 +2467,7 @@
       "Net Rating": -14.1,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Run-Heavy Offense (Pass-Efficient, Turnover-Prone)",
+        "Controlled Pace Stymied Anemic Offense (Turnover-Prone)",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2551,7 +2551,7 @@
       "Net Rating": -15.4,
       "Year": 2022,
       "tags": [
-        "Anemic Offense",
+        "Run-Heavy Offense (Pass-Efficient)",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2593,7 +2593,7 @@
       "Net Rating": -16.7,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Bully-Ball Ground Attack",
+        "Controlled Pace Balanced Spread",
         "Vulnerable Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2635,7 +2635,7 @@
       "Net Rating": -17.6,
       "Year": 2022,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
@@ -2677,7 +2677,7 @@
       "Net Rating": -19.6,
       "Year": 2022,
       "tags": [
-        "Run-Heavy Offense (Turnover-Prone)",
+        "Pass-Heavy Anemic Offense (Run-Efficient, Turnover-Prone)",
         "Vulnerable Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2698,7 +2698,7 @@
       "Net Rating": -24.7,
       "Year": 2022,
       "tags": [
-        "Controlled Pace Pass-Heavy Anemic Offense (Run-Efficient)",
+        "Controlled Pace Anemic Offense",
         "Vulnerable Defense",
         "Underdog Roster"
       ],
@@ -2719,7 +2719,7 @@
       "Net Rating": -25.0,
       "Year": 2022,
       "tags": [
-        "Uptempo Stymied Anemic Offense (Turnover-Prone)",
+        "Uptempo Pass-Heavy Anemic Offense (Turnover-Prone)",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
