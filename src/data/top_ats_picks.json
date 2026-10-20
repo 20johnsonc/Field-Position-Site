@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T21:39:36.283194+00:00",
+  "generated_at": "2026-10-20T15:18:22.967790+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
   "backtest_cover_rate": 0.5076,
   "picks_by_week": {
@@ -9,14 +9,14 @@
         "week": 8,
         "home_team": "Navy",
         "away_team": "North Texas",
-        "market_spread": 2.0,
+        "market_spread": 2.5,
         "predicted_margin": 13.02,
         "pick": "North Texas",
         "pick_side": "away",
-        "edge_pts": 11.0,
-        "cover_prob": 0.7558,
-        "prob_edge": 0.2558,
-        "kelly_fraction": 0.4872
+        "edge_pts": 10.5,
+        "cover_prob": 0.7458,
+        "prob_edge": 0.2458,
+        "kelly_fraction": 0.4662
       },
       {
         "game_id": 401858497,
@@ -33,6 +33,20 @@
         "kelly_fraction": 0.3986
       },
       {
+        "game_id": 401858272,
+        "week": 8,
+        "home_team": "Stanford",
+        "away_team": "NC State",
+        "market_spread": 6.5,
+        "predicted_margin": 15.26,
+        "pick": "NC State",
+        "pick_side": "away",
+        "edge_pts": 8.8,
+        "cover_prob": 0.7091,
+        "prob_edge": 0.2091,
+        "kelly_fraction": 0.3891
+      },
+      {
         "game_id": 401856836,
         "week": 8,
         "home_team": "Oklahoma State",
@@ -45,20 +59,6 @@
         "cover_prob": 0.7067,
         "prob_edge": 0.2067,
         "kelly_fraction": 0.3841
-      },
-      {
-        "game_id": 401858272,
-        "week": 8,
-        "home_team": "Stanford",
-        "away_team": "NC State",
-        "market_spread": 7.0,
-        "predicted_margin": 15.26,
-        "pick": "NC State",
-        "pick_side": "away",
-        "edge_pts": 8.3,
-        "cover_prob": 0.6982,
-        "prob_edge": 0.1982,
-        "kelly_fraction": 0.3663
       },
       {
         "game_id": 401871094,
