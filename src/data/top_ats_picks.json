@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-21T15:04:05.518279+00:00",
+  "generated_at": "2026-10-22T17:19:16.421991+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5094,
+  "backtest_cover_rate": 0.5075,
   "picks_by_week": {
     "8": [
       {
@@ -17,6 +17,20 @@
         "cover_prob": 0.7458,
         "prob_edge": 0.2458,
         "kelly_fraction": 0.4662
+      },
+      {
+        "game_id": 401871094,
+        "week": 8,
+        "home_team": "Troy",
+        "away_team": "UL Monroe",
+        "market_spread": -13.5,
+        "predicted_margin": -23.15,
+        "pick": "Troy",
+        "pick_side": "home",
+        "edge_pts": 9.6,
+        "cover_prob": 0.728,
+        "prob_edge": 0.228,
+        "kelly_fraction": 0.4287
       },
       {
         "game_id": 401858497,
@@ -47,20 +61,6 @@
         "kelly_fraction": 0.3891
       },
       {
-        "game_id": 401871094,
-        "week": 8,
-        "home_team": "Troy",
-        "away_team": "UL Monroe",
-        "market_spread": -14.5,
-        "predicted_margin": -23.15,
-        "pick": "Troy",
-        "pick_side": "home",
-        "edge_pts": 8.6,
-        "cover_prob": 0.7067,
-        "prob_edge": 0.2067,
-        "kelly_fraction": 0.3841
-      },
-      {
         "game_id": 401856836,
         "week": 8,
         "home_team": "Oklahoma State",
@@ -77,6 +77,34 @@
     ],
     "9": [
       {
+        "game_id": 401859185,
+        "week": 9,
+        "home_team": "Navy",
+        "away_team": "Notre Dame",
+        "market_spread": 28.5,
+        "predicted_margin": 41.03,
+        "pick": "Notre Dame",
+        "pick_side": "away",
+        "edge_pts": 12.5,
+        "cover_prob": 0.7846,
+        "prob_edge": 0.2846,
+        "kelly_fraction": 0.5476
+      },
+      {
+        "game_id": 401856734,
+        "week": 9,
+        "home_team": "Georgia",
+        "away_team": "Florida",
+        "market_spread": -10.5,
+        "predicted_margin": -22.69,
+        "pick": "Georgia",
+        "pick_side": "home",
+        "edge_pts": 12.2,
+        "cover_prob": 0.7783,
+        "prob_edge": 0.2783,
+        "kelly_fraction": 0.5344
+      },
+      {
         "game_id": 401858280,
         "week": 9,
         "home_team": "Florida State",
@@ -91,18 +119,32 @@
         "kelly_fraction": 0.4526
       },
       {
-        "game_id": 401856734,
+        "game_id": 401858505,
         "week": 9,
-        "home_team": "Georgia",
-        "away_team": "Florida",
-        "market_spread": -12.5,
-        "predicted_margin": -22.69,
-        "pick": "Georgia",
+        "home_team": "Oregon",
+        "away_team": "Northwestern",
+        "market_spread": -7.5,
+        "predicted_margin": -13.99,
+        "pick": "Oregon",
         "pick_side": "home",
-        "edge_pts": 10.2,
-        "cover_prob": 0.7391,
-        "prob_edge": 0.2391,
-        "kelly_fraction": 0.4522
+        "edge_pts": 6.5,
+        "cover_prob": 0.6584,
+        "prob_edge": 0.1584,
+        "kelly_fraction": 0.2826
+      },
+      {
+        "game_id": 401856848,
+        "week": 9,
+        "home_team": "Cincinnati",
+        "away_team": "Utah",
+        "market_spread": 9.5,
+        "predicted_margin": 15.82,
+        "pick": "Utah",
+        "pick_side": "away",
+        "edge_pts": 6.3,
+        "cover_prob": 0.6544,
+        "prob_edge": 0.1544,
+        "kelly_fraction": 0.2743
       }
     ],
     "10": [
