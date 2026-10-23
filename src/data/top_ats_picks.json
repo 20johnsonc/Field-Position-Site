@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-22T17:19:16.421991+00:00",
+  "generated_at": "2026-10-23T16:23:06.919968+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5075,
+  "backtest_cover_rate": 0.5094,
   "picks_by_week": {
     "8": [
       {
@@ -37,28 +37,14 @@
         "week": 8,
         "home_team": "Minnesota",
         "away_team": "Iowa",
-        "market_spread": 6.5,
+        "market_spread": 7.0,
         "predicted_margin": 15.97,
         "pick": "Iowa",
         "pick_side": "away",
-        "edge_pts": 9.5,
-        "cover_prob": 0.7242,
-        "prob_edge": 0.2242,
-        "kelly_fraction": 0.4208
-      },
-      {
-        "game_id": 401858272,
-        "week": 8,
-        "home_team": "Stanford",
-        "away_team": "NC State",
-        "market_spread": 6.5,
-        "predicted_margin": 15.26,
-        "pick": "NC State",
-        "pick_side": "away",
-        "edge_pts": 8.8,
-        "cover_prob": 0.7091,
-        "prob_edge": 0.2091,
-        "kelly_fraction": 0.3891
+        "edge_pts": 9.0,
+        "cover_prob": 0.7136,
+        "prob_edge": 0.2136,
+        "kelly_fraction": 0.3986
       },
       {
         "game_id": 401856836,
@@ -73,6 +59,20 @@
         "cover_prob": 0.7067,
         "prob_edge": 0.2067,
         "kelly_fraction": 0.3841
+      },
+      {
+        "game_id": 401858272,
+        "week": 8,
+        "home_team": "Stanford",
+        "away_team": "NC State",
+        "market_spread": 7.0,
+        "predicted_margin": 15.26,
+        "pick": "NC State",
+        "pick_side": "away",
+        "edge_pts": 8.3,
+        "cover_prob": 0.6982,
+        "prob_edge": 0.1982,
+        "kelly_fraction": 0.3663
       }
     ],
     "9": [
