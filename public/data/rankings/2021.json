@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T16:12:15.538336+00:00",
+  "generated_at": "2026-10-24T13:21:42.223047+00:00",
   "year": 2021,
   "rankings": [
     {
@@ -115,7 +115,7 @@
       "Net Rating": 18.5,
       "Year": 2021,
       "tags": [
-        "Efficient Offense",
+        "Run-Heavy Offense (Pass-Efficient)",
         "Elite Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -619,7 +619,7 @@
       "Net Rating": 8.3,
       "Year": 2021,
       "tags": [
-        "High-Powered Offense",
+        "High-Powered Air Assault",
         "Sound Defense",
         "Overachieving Above-Average Roster"
       ],
@@ -1186,7 +1186,7 @@
       "Net Rating": 3.1,
       "Year": 2021,
       "tags": [
-        "Uptempo Bully-Ball Ground Attack",
+        "Uptempo High-Powered Offense",
         "Vulnerable Defense",
         "Above-Average Roster"
       ],
@@ -1354,7 +1354,7 @@
       "Net Rating": 0.8,
       "Year": 2021,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Overachieving Underdog Roster"
       ],
@@ -1564,7 +1564,7 @@
       "Net Rating": -1.2,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Run-First Offense",
+        "Controlled Pace Balanced Spread",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2131,7 +2131,7 @@
       "Net Rating": -8.8,
       "Year": 2021,
       "tags": [
-        "Controlled Pace Balanced Spread",
+        "Controlled Pace Run-First Offense (Pass-Efficient)",
         "Sound Defense",
         "Competitive Roster"
       ],
@@ -2425,7 +2425,7 @@
       "Net Rating": -15.8,
       "Year": 2021,
       "tags": [
-        "Uptempo Pass-Heavy Anemic Offense",
+        "Uptempo Anemic Offense",
         "Vulnerable Defense",
         "Underachieving Above-Average Roster"
       ],
@@ -2719,7 +2719,7 @@
       "Net Rating": -29.3,
       "Year": 2021,
       "tags": [
-        "Pass-Heavy Anemic Offense (Turnover-Prone)",
+        "Stymied Anemic Offense (Turnover-Prone)",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
