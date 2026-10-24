@@ -1,50 +1,36 @@
 {
-  "generated_at": "2026-10-23T16:23:06.919968+00:00",
+  "generated_at": "2026-10-24T13:32:44.946918+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5094,
+  "backtest_cover_rate": 0.5056,
   "picks_by_week": {
     "8": [
-      {
-        "game_id": 401862810,
-        "week": 8,
-        "home_team": "Navy",
-        "away_team": "North Texas",
-        "market_spread": 2.5,
-        "predicted_margin": 13.02,
-        "pick": "North Texas",
-        "pick_side": "away",
-        "edge_pts": 10.5,
-        "cover_prob": 0.7458,
-        "prob_edge": 0.2458,
-        "kelly_fraction": 0.4662
-      },
       {
         "game_id": 401871094,
         "week": 8,
         "home_team": "Troy",
         "away_team": "UL Monroe",
-        "market_spread": -13.5,
+        "market_spread": -12.5,
         "predicted_margin": -23.15,
         "pick": "Troy",
         "pick_side": "home",
-        "edge_pts": 9.6,
-        "cover_prob": 0.728,
-        "prob_edge": 0.228,
-        "kelly_fraction": 0.4287
+        "edge_pts": 10.6,
+        "cover_prob": 0.7484,
+        "prob_edge": 0.2484,
+        "kelly_fraction": 0.4717
       },
       {
-        "game_id": 401858497,
+        "game_id": 401862810,
         "week": 8,
-        "home_team": "Minnesota",
-        "away_team": "Iowa",
-        "market_spread": 7.0,
-        "predicted_margin": 15.97,
-        "pick": "Iowa",
+        "home_team": "Navy",
+        "away_team": "North Texas",
+        "market_spread": 3.0,
+        "predicted_margin": 13.02,
+        "pick": "North Texas",
         "pick_side": "away",
-        "edge_pts": 9.0,
-        "cover_prob": 0.7136,
-        "prob_edge": 0.2136,
-        "kelly_fraction": 0.3986
+        "edge_pts": 10.0,
+        "cover_prob": 0.7356,
+        "prob_edge": 0.2356,
+        "kelly_fraction": 0.4448
       },
       {
         "game_id": 401856836,
@@ -61,18 +47,32 @@
         "kelly_fraction": 0.3841
       },
       {
-        "game_id": 401858272,
+        "game_id": 401858497,
         "week": 8,
-        "home_team": "Stanford",
-        "away_team": "NC State",
-        "market_spread": 7.0,
-        "predicted_margin": 15.26,
-        "pick": "NC State",
+        "home_team": "Minnesota",
+        "away_team": "Iowa",
+        "market_spread": 7.5,
+        "predicted_margin": 15.97,
+        "pick": "Iowa",
         "pick_side": "away",
-        "edge_pts": 8.3,
-        "cover_prob": 0.6982,
-        "prob_edge": 0.1982,
-        "kelly_fraction": 0.3663
+        "edge_pts": 8.5,
+        "cover_prob": 0.7028,
+        "prob_edge": 0.2028,
+        "kelly_fraction": 0.3759
+      },
+      {
+        "game_id": 401866447,
+        "week": 8,
+        "home_team": "Ball State",
+        "away_team": "Sacramento State",
+        "market_spread": -14.5,
+        "predicted_margin": -6.29,
+        "pick": "Sacramento State",
+        "pick_side": "away",
+        "edge_pts": 8.2,
+        "cover_prob": 0.6971,
+        "prob_edge": 0.1971,
+        "kelly_fraction": 0.364
       }
     ],
     "9": [
@@ -254,13 +254,13 @@
         "home_team": "Miami",
         "away_team": "Duke",
         "market_spread": -21.0,
-        "predicted_margin": -27.19,
+        "predicted_margin": -27.13,
         "pick": "Miami",
         "pick_side": "home",
-        "edge_pts": 6.2,
-        "cover_prob": 0.6514,
-        "prob_edge": 0.1514,
-        "kelly_fraction": 0.268
+        "edge_pts": 6.1,
+        "cover_prob": 0.65,
+        "prob_edge": 0.15,
+        "kelly_fraction": 0.2651
       },
       {
         "game_id": 401858523,
@@ -400,13 +400,13 @@
         "home_team": "Army",
         "away_team": "Navy",
         "market_spread": 2.5,
-        "predicted_margin": -7.41,
+        "predicted_margin": -7.3,
         "pick": "Army",
         "pick_side": "home",
-        "edge_pts": 9.9,
-        "cover_prob": 0.7334,
-        "prob_edge": 0.2334,
-        "kelly_fraction": 0.4401
+        "edge_pts": 9.8,
+        "cover_prob": 0.7311,
+        "prob_edge": 0.2311,
+        "kelly_fraction": 0.4353
       }
     ]
   }
