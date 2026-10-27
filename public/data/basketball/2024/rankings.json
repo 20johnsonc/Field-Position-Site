@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-26T20:27:06.420345+00:00",
+  "generated_at": "2026-10-27T17:23:37.047465+00:00",
   "year": 2024,
   "projected": false,
   "teams": [
     {
       "rank": 1,
-      "team": "UConn",
-      "conference": "Big East",
-      "wins": 37,
-      "losses": 3,
-      "adj_off": 124.68,
-      "adj_def": 80.71,
-      "adj_net": 43.96
-    },
-    {
-      "rank": 2,
       "team": "Houston",
       "conference": "Big 12",
       "wins": 32,
       "losses": 5,
-      "adj_off": 114.26,
-      "adj_def": 79.25,
-      "adj_net": 35
+      "adj_off": 114.91,
+      "adj_def": 76.56,
+      "adj_net": 38.36
+    },
+    {
+      "rank": 2,
+      "team": "UConn",
+      "conference": "Big East",
+      "wins": 37,
+      "losses": 3,
+      "adj_off": 122.8,
+      "adj_def": 85.19,
+      "adj_net": 37.61
     },
     {
       "rank": 3,
@@ -29,79 +29,79 @@
       "conference": "Big Ten",
       "wins": 34,
       "losses": 5,
-      "adj_off": 120.97,
-      "adj_def": 86.92,
-      "adj_net": 34.04
+      "adj_off": 121.97,
+      "adj_def": 88.13,
+      "adj_net": 33.84
     },
     {
       "rank": 4,
-      "team": "Auburn",
-      "conference": "SEC",
-      "wins": 27,
-      "losses": 8,
-      "adj_off": 116.9,
-      "adj_def": 85.54,
-      "adj_net": 31.36
-    },
-    {
-      "rank": 5,
-      "team": "Duke",
-      "conference": "ACC",
-      "wins": 27,
-      "losses": 9,
-      "adj_off": 119.22,
-      "adj_def": 88.71,
-      "adj_net": 30.5
-    },
-    {
-      "rank": 6,
-      "team": "North Carolina",
-      "conference": "ACC",
-      "wins": 29,
-      "losses": 8,
-      "adj_off": 118.74,
-      "adj_def": 89.3,
-      "adj_net": 29.44
-    },
-    {
-      "rank": 7,
-      "team": "Iowa State",
-      "conference": "Big 12",
-      "wins": 29,
-      "losses": 8,
-      "adj_off": 109.79,
-      "adj_def": 80.44,
-      "adj_net": 29.35
-    },
-    {
-      "rank": 8,
-      "team": "Tennessee",
-      "conference": "SEC",
-      "wins": 27,
-      "losses": 9,
-      "adj_off": 111.53,
-      "adj_def": 82.26,
-      "adj_net": 29.27
-    },
-    {
-      "rank": 9,
       "team": "Arizona",
       "conference": "Pac-12",
       "wins": 27,
       "losses": 9,
-      "adj_off": 116.07,
-      "adj_def": 87.49,
-      "adj_net": 28.58
+      "adj_off": 118.08,
+      "adj_def": 85.77,
+      "adj_net": 32.31
+    },
+    {
+      "rank": 5,
+      "team": "Iowa State",
+      "conference": "Big 12",
+      "wins": 29,
+      "losses": 8,
+      "adj_off": 112.77,
+      "adj_def": 82.34,
+      "adj_net": 30.43
+    },
+    {
+      "rank": 6,
+      "team": "Tennessee",
+      "conference": "SEC",
+      "wins": 27,
+      "losses": 9,
+      "adj_off": 111.35,
+      "adj_def": 81.1,
+      "adj_net": 30.25
+    },
+    {
+      "rank": 7,
+      "team": "Auburn",
+      "conference": "SEC",
+      "wins": 27,
+      "losses": 8,
+      "adj_off": 115.89,
+      "adj_def": 85.88,
+      "adj_net": 30.01
+    },
+    {
+      "rank": 8,
+      "team": "North Carolina",
+      "conference": "ACC",
+      "wins": 29,
+      "losses": 8,
+      "adj_off": 117.21,
+      "adj_def": 89.12,
+      "adj_net": 28.09
+    },
+    {
+      "rank": 9,
+      "team": "Duke",
+      "conference": "ACC",
+      "wins": 27,
+      "losses": 9,
+      "adj_off": 118.33,
+      "adj_def": 90.29,
+      "adj_net": 28.05
     },
     {
       "rank": 10,
-      "team": "Creighton",
-      "conference": "Big East",
+      "team": "Alabama",
+      "conference": "SEC",
       "wins": 25,
-      "losses": 10,
-      "adj_off": 116.53,
-      "adj_def": 88.92,
-      "adj_net": 27.61
+      "losses": 12,
+      "adj_off": 118.09,
+      "adj_def": 90.33,
+      "adj_net": 27.75
     },
     {
       "rank": 11,
@@ -109,89 +109,89 @@
       "conference": "WCC",
       "wins": 26,
       "losses": 8,
-      "adj_off": 124.94,
-      "adj_def": 97.35,
-      "adj_net": 27.59
+      "adj_off": 121.55,
+      "adj_def": 94.07,
+      "adj_net": 27.48
     },
     {
       "rank": 12,
-      "team": "St. John's",
+      "team": "Creighton",
       "conference": "Big East",
-      "wins": 20,
-      "losses": 13,
-      "adj_off": 118.66,
-      "adj_def": 91.57,
-      "adj_net": 27.09
+      "wins": 25,
+      "losses": 10,
+      "adj_off": 116.4,
+      "adj_def": 89.04,
+      "adj_net": 27.36
     },
     {
       "rank": 13,
-      "team": "Saint Mary's",
-      "conference": "WCC",
-      "wins": 25,
-      "losses": 8,
-      "adj_off": 111.06,
-      "adj_def": 85.23,
-      "adj_net": 25.84
+      "team": "BYU",
+      "conference": "Big 12",
+      "wins": 23,
+      "losses": 11,
+      "adj_off": 115.07,
+      "adj_def": 87.79,
+      "adj_net": 27.28
     },
     {
       "rank": 14,
-      "team": "Illinois",
-      "conference": "Big Ten",
-      "wins": 29,
-      "losses": 9,
-      "adj_off": 122.13,
-      "adj_def": 96.45,
-      "adj_net": 25.68
-    },
-    {
-      "rank": 15,
-      "team": "Alabama",
-      "conference": "SEC",
-      "wins": 25,
-      "losses": 12,
-      "adj_off": 118.14,
-      "adj_def": 92.53,
-      "adj_net": 25.61
-    },
-    {
-      "rank": 16,
-      "team": "Marquette",
-      "conference": "Big East",
-      "wins": 27,
-      "losses": 10,
-      "adj_off": 112.94,
-      "adj_def": 88.06,
-      "adj_net": 24.88
-    },
-    {
-      "rank": 17,
       "team": "Baylor",
       "conference": "Big 12",
       "wins": 23,
       "losses": 11,
-      "adj_off": 120.54,
-      "adj_def": 96.4,
-      "adj_net": 24.14
+      "adj_off": 121.75,
+      "adj_def": 94.48,
+      "adj_net": 27.27
     },
     {
-      "rank": 18,
+      "rank": 15,
+      "team": "Illinois",
+      "conference": "Big Ten",
+      "wins": 29,
+      "losses": 9,
+      "adj_off": 119.46,
+      "adj_def": 93.33,
+      "adj_net": 26.13
+    },
+    {
+      "rank": 16,
+      "team": "Saint Mary's",
+      "conference": "WCC",
+      "wins": 25,
+      "losses": 8,
+      "adj_off": 110.94,
+      "adj_def": 84.84,
+      "adj_net": 26.1
+    },
+    {
+      "rank": 17,
       "team": "Clemson",
       "conference": "ACC",
       "wins": 24,
       "losses": 12,
-      "adj_off": 110.68,
+      "adj_off": 112.01,
+      "adj_def": 87.72,
+      "adj_net": 24.29
+    },
+    {
+      "rank": 18,
+      "team": "Marquette",
+      "conference": "Big East",
+      "wins": 27,
+      "losses": 10,
+      "adj_off": 111.49,
       "adj_def": 87.45,
-      "adj_net": 23.23
+      "adj_net": 24.05
     },
     {
       "rank": 19,
-      "team": "Florida",
-      "conference": "SEC",
-      "wins": 24,
-      "losses": 12,
-      "adj_off": 116.01,
-      "adj_def": 93.49,
-      "adj_net": 22.52
+      "team": "Michigan State",
+      "conference": "Big Ten",
+      "wins": 20,
+      "losses": 15,
+      "adj_off": 110.1,
+      "adj_def": 87.07,
+      "adj_net": 23.03
     },
     {
       "rank": 20,
@@ -199,219 +199,219 @@
       "conference": "SEC",
       "wins": 23,
       "losses": 10,
-      "adj_off": 114.68,
-      "adj_def": 92.19,
-      "adj_net": 22.49
+      "adj_off": 112.5,
+      "adj_def": 89.47,
+      "adj_net": 23.02
     },
     {
       "rank": 21,
-      "team": "BYU",
+      "team": "Kansas",
       "conference": "Big 12",
-      "wins": 23,
+      "wins": 22,
       "losses": 11,
-      "adj_off": 112.9,
-      "adj_def": 90.96,
-      "adj_net": 21.94
+      "adj_off": 104.84,
+      "adj_def": 82.07,
+      "adj_net": 22.77
     },
     {
       "rank": 22,
-      "team": "Michigan State",
-      "conference": "Big Ten",
-      "wins": 20,
-      "losses": 15,
-      "adj_off": 109.75,
-      "adj_def": 87.95,
-      "adj_net": 21.79
-    },
-    {
-      "rank": 23,
-      "team": "NC State",
-      "conference": "ACC",
-      "wins": 26,
-      "losses": 15,
-      "adj_off": 100.74,
-      "adj_def": 79.21,
-      "adj_net": 21.53
-    },
-    {
-      "rank": 24,
-      "team": "Seton Hall",
-      "conference": "Big East",
-      "wins": 25,
-      "losses": 12,
-      "adj_off": 110,
-      "adj_def": 88.94,
-      "adj_net": 21.06
-    },
-    {
-      "rank": 25,
-      "team": "Wisconsin",
-      "conference": "Big Ten",
-      "wins": 22,
-      "losses": 14,
-      "adj_off": 112.48,
-      "adj_def": 91.85,
-      "adj_net": 20.63
-    },
-    {
-      "rank": 26,
-      "team": "Texas Tech",
-      "conference": "Big 12",
-      "wins": 23,
-      "losses": 11,
-      "adj_off": 112.38,
-      "adj_def": 91.79,
-      "adj_net": 20.59
-    },
-    {
-      "rank": 27,
-      "team": "Pittsburgh",
-      "conference": "ACC",
-      "wins": 22,
-      "losses": 11,
-      "adj_off": 100.96,
-      "adj_def": 80.52,
-      "adj_net": 20.44
-    },
-    {
-      "rank": 28,
       "team": "Cincinnati",
       "conference": "Big 12",
       "wins": 22,
       "losses": 15,
-      "adj_off": 108.15,
-      "adj_def": 87.84,
-      "adj_net": 20.31
+      "adj_off": 110.33,
+      "adj_def": 88.03,
+      "adj_net": 22.3
     },
     {
-      "rank": 29,
-      "team": "Wake Forest",
-      "conference": "ACC",
-      "wins": 21,
-      "losses": 14,
-      "adj_off": 103.7,
-      "adj_def": 83.79,
-      "adj_net": 19.91
+      "rank": 23,
+      "team": "St. John's",
+      "conference": "Big East",
+      "wins": 20,
+      "losses": 13,
+      "adj_off": 113.39,
+      "adj_def": 91.58,
+      "adj_net": 21.81
     },
     {
-      "rank": 30,
-      "team": "Nebraska",
+      "rank": 24,
+      "team": "Wisconsin",
       "conference": "Big Ten",
+      "wins": 22,
+      "losses": 14,
+      "adj_off": 114.77,
+      "adj_def": 92.96,
+      "adj_net": 21.81
+    },
+    {
+      "rank": 25,
+      "team": "Texas Tech",
+      "conference": "Big 12",
       "wins": 23,
       "losses": 11,
-      "adj_off": 111.56,
-      "adj_def": 91.87,
-      "adj_net": 19.69
+      "adj_off": 113.05,
+      "adj_def": 91.56,
+      "adj_net": 21.5
     },
     {
-      "rank": 31,
-      "team": "Texas",
-      "conference": "Big 12",
-      "wins": 21,
-      "losses": 13,
-      "adj_off": 108.49,
-      "adj_def": 89.32,
-      "adj_net": 19.17
+      "rank": 26,
+      "team": "Florida",
+      "conference": "SEC",
+      "wins": 24,
+      "losses": 12,
+      "adj_off": 115.76,
+      "adj_def": 94.34,
+      "adj_net": 21.43
     },
     {
-      "rank": 32,
+      "rank": 27,
       "team": "San Diego State",
       "conference": "Mountain West",
       "wins": 24,
       "losses": 11,
-      "adj_off": 107.6,
-      "adj_def": 88.44,
-      "adj_net": 19.17
+      "adj_off": 109.28,
+      "adj_def": 87.93,
+      "adj_net": 21.35
     },
     {
-      "rank": 33,
+      "rank": 28,
+      "team": "Oklahoma",
+      "conference": "Big 12",
+      "wins": 20,
+      "losses": 12,
+      "adj_off": 108.11,
+      "adj_def": 86.91,
+      "adj_net": 21.2
+    },
+    {
+      "rank": 29,
       "team": "TCU",
       "conference": "Big 12",
       "wins": 21,
       "losses": 13,
-      "adj_off": 110.51,
-      "adj_def": 91.36,
-      "adj_net": 19.15
+      "adj_off": 112.49,
+      "adj_def": 91.44,
+      "adj_net": 21.05
     },
     {
-      "rank": 34,
-      "team": "Mississippi State",
-      "conference": "SEC",
+      "rank": 30,
+      "team": "Texas",
+      "conference": "Big 12",
       "wins": 21,
-      "losses": 14,
-      "adj_off": 86.67,
-      "adj_def": 67.55,
-      "adj_net": 19.12
+      "losses": 13,
+      "adj_off": 111.63,
+      "adj_def": 90.72,
+      "adj_net": 20.9
     },
     {
-      "rank": 35,
-      "team": "Colorado",
-      "conference": "Pac-12",
-      "wins": 26,
-      "losses": 11,
-      "adj_off": 112.72,
-      "adj_def": 93.7,
-      "adj_net": 19.02
-    },
-    {
-      "rank": 36,
+      "rank": 31,
       "team": "Washington State",
       "conference": "Pac-12",
       "wins": 25,
       "losses": 10,
-      "adj_off": 108.35,
-      "adj_def": 89.42,
-      "adj_net": 18.93
+      "adj_off": 110.62,
+      "adj_def": 90.03,
+      "adj_net": 20.59
     },
     {
-      "rank": 37,
+      "rank": 32,
+      "team": "Colorado",
+      "conference": "Pac-12",
+      "wins": 26,
+      "losses": 11,
+      "adj_off": 112.24,
+      "adj_def": 92.14,
+      "adj_net": 20.1
+    },
+    {
+      "rank": 33,
+      "team": "New Mexico",
+      "conference": "Mountain West",
+      "wins": 25,
+      "losses": 10,
+      "adj_off": 110.31,
+      "adj_def": 90.46,
+      "adj_net": 19.84
+    },
+    {
+      "rank": 34,
       "team": "Villanova",
       "conference": "Big East",
       "wins": 18,
       "losses": 16,
-      "adj_off": 103.47,
-      "adj_def": 84.6,
-      "adj_net": 18.87
+      "adj_off": 104.93,
+      "adj_def": 85.38,
+      "adj_net": 19.55
     },
     {
-      "rank": 38,
+      "rank": 35,
+      "team": "Mississippi State",
+      "conference": "SEC",
+      "wins": 21,
+      "losses": 14,
+      "adj_off": 85.61,
+      "adj_def": 66.37,
+      "adj_net": 19.25
+    },
+    {
+      "rank": 36,
+      "team": "Utah",
+      "conference": "Pac-12",
+      "wins": 22,
+      "losses": 15,
+      "adj_off": 110.62,
+      "adj_def": 91.6,
+      "adj_net": 19.02
+    },
+    {
+      "rank": 37,
       "team": "Boise State",
       "conference": "Mountain West",
       "wins": 20,
       "losses": 11,
-      "adj_off": 109.63,
-      "adj_def": 91.44,
-      "adj_net": 18.19
+      "adj_off": 109.73,
+      "adj_def": 90.74,
+      "adj_net": 19
+    },
+    {
+      "rank": 38,
+      "team": "Dayton",
+      "conference": "A-10",
+      "wins": 25,
+      "losses": 8,
+      "adj_off": 113.42,
+      "adj_def": 94.61,
+      "adj_net": 18.81
     },
     {
       "rank": 39,
-      "team": "Northwestern",
-      "conference": "Big Ten",
-      "wins": 22,
-      "losses": 12,
-      "adj_off": 110.12,
-      "adj_def": 91.97,
-      "adj_net": 18.15
+      "team": "Washington",
+      "conference": "Pac-12",
+      "wins": 17,
+      "losses": 15,
+      "adj_off": 111.04,
+      "adj_def": 92.37,
+      "adj_net": 18.67
     },
     {
       "rank": 40,
-      "team": "Ohio State",
+      "team": "Nebraska",
       "conference": "Big Ten",
-      "wins": 22,
-      "losses": 14,
-      "adj_off": 107.66,
-      "adj_def": 89.57,
-      "adj_net": 18.09
+      "wins": 23,
+      "losses": 11,
+      "adj_off": 111.06,
+      "adj_def": 92.48,
+      "adj_net": 18.58
     },
     {
       "rank": 41,
-      "team": "Nevada",
-      "conference": "Mountain West",
-      "wins": 25,
-      "losses": 8,
-      "adj_off": 107,
-      "adj_def": 89,
-      "adj_net": 17.99
+      "team": "NC State",
+      "conference": "ACC",
+      "wins": 26,
+      "losses": 15,
+      "adj_off": 98.06,
+      "adj_def": 79.62,
+      "adj_net": 18.44
     },
     {
       "rank": 42,
@@ -419,389 +419,389 @@
       "conference": "MVC",
       "wins": 31,
       "losses": 7,
-      "adj_off": 114.21,
-      "adj_def": 96.28,
-      "adj_net": 17.92
+      "adj_off": 114.02,
+      "adj_def": 95.6,
+      "adj_net": 18.42
     },
     {
       "rank": 43,
-      "team": "Kansas",
-      "conference": "Big 12",
-      "wins": 22,
-      "losses": 11,
-      "adj_off": 102.1,
-      "adj_def": 84.19,
-      "adj_net": 17.9
+      "team": "Wake Forest",
+      "conference": "ACC",
+      "wins": 21,
+      "losses": 14,
+      "adj_off": 103.65,
+      "adj_def": 85.25,
+      "adj_net": 18.4
     },
     {
       "rank": 44,
-      "team": "New Mexico",
-      "conference": "Mountain West",
-      "wins": 25,
-      "losses": 10,
-      "adj_off": 109.94,
-      "adj_def": 92.64,
-      "adj_net": 17.3
+      "team": "Northwestern",
+      "conference": "Big Ten",
+      "wins": 22,
+      "losses": 12,
+      "adj_off": 109.2,
+      "adj_def": 90.94,
+      "adj_net": 18.26
     },
     {
       "rank": 45,
-      "team": "Utah",
-      "conference": "Pac-12",
-      "wins": 22,
-      "losses": 15,
-      "adj_off": 108.98,
-      "adj_def": 91.98,
-      "adj_net": 17
+      "team": "Nevada",
+      "conference": "Mountain West",
+      "wins": 25,
+      "losses": 8,
+      "adj_off": 107.36,
+      "adj_def": 89.16,
+      "adj_net": 18.2
     },
     {
       "rank": 46,
-      "team": "Washington",
-      "conference": "Pac-12",
-      "wins": 17,
-      "losses": 15,
-      "adj_off": 110.66,
-      "adj_def": 94.33,
-      "adj_net": 16.33
+      "team": "Seton Hall",
+      "conference": "Big East",
+      "wins": 25,
+      "losses": 12,
+      "adj_off": 108.03,
+      "adj_def": 89.98,
+      "adj_net": 18.05
     },
     {
       "rank": 47,
-      "team": "Oklahoma",
-      "conference": "Big 12",
-      "wins": 20,
-      "losses": 12,
-      "adj_off": 108.4,
-      "adj_def": 92.08,
-      "adj_net": 16.32
-    },
-    {
-      "rank": 48,
-      "team": "Texas A&M",
-      "conference": "SEC",
-      "wins": 21,
-      "losses": 15,
-      "adj_off": 107.34,
-      "adj_def": 91.05,
-      "adj_net": 16.3
-    },
-    {
-      "rank": 49,
-      "team": "Providence",
-      "conference": "Big East",
-      "wins": 21,
-      "losses": 14,
-      "adj_off": 106.63,
-      "adj_def": 90.37,
-      "adj_net": 16.26
-    },
-    {
-      "rank": 50,
-      "team": "Penn State",
-      "conference": "Big Ten",
-      "wins": 16,
-      "losses": 17,
-      "adj_off": 107.57,
-      "adj_def": 91.34,
-      "adj_net": 16.23
-    },
-    {
-      "rank": 51,
       "team": "Oregon",
       "conference": "Pac-12",
       "wins": 24,
       "losses": 12,
-      "adj_off": 108.71,
-      "adj_def": 92.52,
-      "adj_net": 16.19
+      "adj_off": 110.12,
+      "adj_def": 92.31,
+      "adj_net": 17.81
     },
     {
-      "rank": 52,
-      "team": "Bradley",
-      "conference": "MVC",
-      "wins": 22,
-      "losses": 12,
-      "adj_off": 107.83,
-      "adj_def": 91.95,
-      "adj_net": 15.88
-    },
-    {
-      "rank": 53,
-      "team": "South Carolina",
-      "conference": "SEC",
-      "wins": 26,
-      "losses": 8,
-      "adj_off": 113.08,
-      "adj_def": 97.24,
-      "adj_net": 15.84
-    },
-    {
-      "rank": 54,
-      "team": "Xavier",
-      "conference": "Big East",
-      "wins": 16,
-      "losses": 18,
-      "adj_off": 107.56,
-      "adj_def": 91.83,
-      "adj_net": 15.73
-    },
-    {
-      "rank": 55,
-      "team": "Iowa",
-      "conference": "Big Ten",
-      "wins": 19,
-      "losses": 15,
-      "adj_off": 109.3,
-      "adj_def": 93.93,
-      "adj_net": 15.38
-    },
-    {
-      "rank": 56,
-      "team": "Dayton",
-      "conference": "A-10",
-      "wins": 25,
-      "losses": 8,
-      "adj_off": 109.47,
-      "adj_def": 94.41,
-      "adj_net": 15.06
-    },
-    {
-      "rank": 57,
-      "team": "Grand Canyon",
-      "conference": "UAC",
-      "wins": 29,
-      "losses": 5,
-      "adj_off": 100.75,
-      "adj_def": 85.96,
-      "adj_net": 14.79
-    },
-    {
-      "rank": 58,
-      "team": "UCF",
-      "conference": "Big 12",
-      "wins": 17,
-      "losses": 16,
-      "adj_off": 103.47,
-      "adj_def": 88.74,
-      "adj_net": 14.73
-    },
-    {
-      "rank": 59,
-      "team": "USC",
-      "conference": "Pac-12",
-      "wins": 15,
-      "losses": 18,
-      "adj_off": 108.36,
-      "adj_def": 93.63,
-      "adj_net": 14.73
-    },
-    {
-      "rank": 60,
-      "team": "Kansas State",
-      "conference": "Big 12",
-      "wins": 19,
-      "losses": 15,
-      "adj_off": 87.96,
-      "adj_def": 73.53,
-      "adj_net": 14.43
-    },
-    {
-      "rank": 61,
-      "team": "Drake",
-      "conference": "MVC",
-      "wins": 27,
-      "losses": 7,
-      "adj_off": 110.29,
-      "adj_def": 95.91,
-      "adj_net": 14.38
-    },
-    {
-      "rank": 62,
-      "team": "Butler",
-      "conference": "Big East",
-      "wins": 17,
-      "losses": 15,
-      "adj_off": 108.65,
-      "adj_def": 94.39,
-      "adj_net": 14.26
-    },
-    {
-      "rank": 63,
-      "team": "Virginia Tech",
-      "conference": "ACC",
-      "wins": 19,
-      "losses": 15,
-      "adj_off": 111.72,
-      "adj_def": 97.91,
-      "adj_net": 13.81
-    },
-    {
-      "rank": 64,
-      "team": "San Francisco",
-      "conference": "WCC",
-      "wins": 22,
-      "losses": 11,
-      "adj_off": 104.94,
-      "adj_def": 91.32,
-      "adj_net": 13.62
-    },
-    {
-      "rank": 65,
+      "rank": 48,
       "team": "Colorado State",
       "conference": "Mountain West",
       "wins": 23,
       "losses": 11,
-      "adj_off": 104.5,
-      "adj_def": 90.91,
-      "adj_net": 13.59
+      "adj_off": 108.27,
+      "adj_def": 90.48,
+      "adj_net": 17.79
     },
     {
-      "rank": 66,
+      "rank": 49,
+      "team": "South Carolina",
+      "conference": "SEC",
+      "wins": 26,
+      "losses": 8,
+      "adj_off": 111.9,
+      "adj_def": 94.35,
+      "adj_net": 17.55
+    },
+    {
+      "rank": 50,
+      "team": "Ohio State",
+      "conference": "Big Ten",
+      "wins": 22,
+      "losses": 14,
+      "adj_off": 108.73,
+      "adj_def": 91.25,
+      "adj_net": 17.49
+    },
+    {
+      "rank": 51,
+      "team": "Xavier",
+      "conference": "Big East",
+      "wins": 16,
+      "losses": 18,
+      "adj_off": 108.86,
+      "adj_def": 91.71,
+      "adj_net": 17.15
+    },
+    {
+      "rank": 52,
+      "team": "Texas A&M",
+      "conference": "SEC",
+      "wins": 21,
+      "losses": 15,
+      "adj_off": 109.02,
+      "adj_def": 92.08,
+      "adj_net": 16.94
+    },
+    {
+      "rank": 53,
+      "team": "Pittsburgh",
+      "conference": "ACC",
+      "wins": 22,
+      "losses": 11,
+      "adj_off": 98.73,
+      "adj_def": 81.96,
+      "adj_net": 16.77
+    },
+    {
+      "rank": 54,
+      "team": "UCF",
+      "conference": "Big 12",
+      "wins": 17,
+      "losses": 16,
+      "adj_off": 102.58,
+      "adj_def": 85.88,
+      "adj_net": 16.71
+    },
+    {
+      "rank": 55,
       "team": "Utah State",
       "conference": "Mountain West",
       "wins": 26,
       "losses": 7,
-      "adj_off": 110.1,
-      "adj_def": 97.82,
-      "adj_net": 12.29
+      "adj_off": 109.98,
+      "adj_def": 93.28,
+      "adj_net": 16.7
     },
     {
-      "rank": 67,
-      "team": "UC Irvine",
-      "conference": "Big West",
-      "wins": 23,
-      "losses": 10,
-      "adj_off": 108,
-      "adj_def": 95.8,
-      "adj_net": 12.21
+      "rank": 56,
+      "team": "San Francisco",
+      "conference": "WCC",
+      "wins": 22,
+      "losses": 11,
+      "adj_off": 106.79,
+      "adj_def": 90.37,
+      "adj_net": 16.42
     },
     {
-      "rank": 68,
-      "team": "Georgia",
-      "conference": "SEC",
-      "wins": 20,
-      "losses": 17,
-      "adj_off": 107.24,
-      "adj_def": 95.07,
-      "adj_net": 12.17
+      "rank": 57,
+      "team": "Bradley",
+      "conference": "MVC",
+      "wins": 22,
+      "losses": 12,
+      "adj_off": 108.82,
+      "adj_def": 92.49,
+      "adj_net": 16.34
     },
     {
-      "rank": 69,
-      "team": "Boston College",
-      "conference": "ACC",
-      "wins": 20,
-      "losses": 16,
-      "adj_off": 108.61,
-      "adj_def": 96.72,
-      "adj_net": 11.89
-    },
-    {
-      "rank": 70,
-      "team": "Indiana",
+      "rank": 58,
+      "team": "Iowa",
       "conference": "Big Ten",
       "wins": 19,
-      "losses": 14,
-      "adj_off": 108.24,
-      "adj_def": 96.68,
-      "adj_net": 11.56
+      "losses": 15,
+      "adj_off": 111.32,
+      "adj_def": 95.29,
+      "adj_net": 16.03
     },
     {
-      "rank": 71,
-      "team": "UNLV",
-      "conference": "Mountain West",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 105.42,
-      "adj_def": 94.15,
-      "adj_net": 11.28
-    },
-    {
-      "rank": 72,
-      "team": "Syracuse",
-      "conference": "ACC",
-      "wins": 19,
-      "losses": 12,
-      "adj_off": 110.22,
-      "adj_def": 99.11,
-      "adj_net": 11.11
-    },
-    {
-      "rank": 73,
-      "team": "Virginia",
-      "conference": "ACC",
-      "wins": 23,
-      "losses": 11,
-      "adj_off": 97.5,
-      "adj_def": 86.47,
-      "adj_net": 11.03
-    },
-    {
-      "rank": 74,
+      "rank": 59,
       "team": "Florida Atlantic",
       "conference": "American",
       "wins": 25,
       "losses": 9,
-      "adj_off": 106.81,
-      "adj_def": 95.97,
-      "adj_net": 10.84
+      "adj_off": 110.65,
+      "adj_def": 94.72,
+      "adj_net": 15.93
+    },
+    {
+      "rank": 60,
+      "team": "Butler",
+      "conference": "Big East",
+      "wins": 17,
+      "losses": 15,
+      "adj_off": 109.76,
+      "adj_def": 94.22,
+      "adj_net": 15.54
+    },
+    {
+      "rank": 61,
+      "team": "Kansas State",
+      "conference": "Big 12",
+      "wins": 19,
+      "losses": 15,
+      "adj_off": 94.27,
+      "adj_def": 78.76,
+      "adj_net": 15.52
+    },
+    {
+      "rank": 62,
+      "team": "Virginia Tech",
+      "conference": "ACC",
+      "wins": 19,
+      "losses": 15,
+      "adj_off": 112.59,
+      "adj_def": 97.16,
+      "adj_net": 15.42
+    },
+    {
+      "rank": 63,
+      "team": "Providence",
+      "conference": "Big East",
+      "wins": 21,
+      "losses": 14,
+      "adj_off": 105.57,
+      "adj_def": 90.27,
+      "adj_net": 15.31
+    },
+    {
+      "rank": 64,
+      "team": "USC",
+      "conference": "Pac-12",
+      "wins": 15,
+      "losses": 18,
+      "adj_off": 109.62,
+      "adj_def": 94.35,
+      "adj_net": 15.26
+    },
+    {
+      "rank": 65,
+      "team": "UC Irvine",
+      "conference": "Big West",
+      "wins": 23,
+      "losses": 10,
+      "adj_off": 107.5,
+      "adj_def": 92.98,
+      "adj_net": 14.52
+    },
+    {
+      "rank": 66,
+      "team": "Drake",
+      "conference": "MVC",
+      "wins": 27,
+      "losses": 7,
+      "adj_off": 110.45,
+      "adj_def": 96.54,
+      "adj_net": 13.91
+    },
+    {
+      "rank": 67,
+      "team": "SMU",
+      "conference": "American",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 106.93,
+      "adj_def": 93.09,
+      "adj_net": 13.83
+    },
+    {
+      "rank": 68,
+      "team": "Grand Canyon",
+      "conference": "UAC",
+      "wins": 29,
+      "losses": 5,
+      "adj_off": 103.12,
+      "adj_def": 89.52,
+      "adj_net": 13.61
+    },
+    {
+      "rank": 69,
+      "team": "Penn State",
+      "conference": "Big Ten",
+      "wins": 16,
+      "losses": 17,
+      "adj_off": 107.44,
+      "adj_def": 93.96,
+      "adj_net": 13.48
+    },
+    {
+      "rank": 70,
+      "team": "Miami",
+      "conference": "ACC",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 107.34,
+      "adj_def": 94.22,
+      "adj_net": 13.11
+    },
+    {
+      "rank": 71,
+      "team": "Virginia",
+      "conference": "ACC",
+      "wins": 23,
+      "losses": 11,
+      "adj_off": 98.28,
+      "adj_def": 85.22,
+      "adj_net": 13.06
+    },
+    {
+      "rank": 72,
+      "team": "James Madison",
+      "conference": "Sun Belt",
+      "wins": 31,
+      "losses": 4,
+      "adj_off": 107.08,
+      "adj_def": 94.05,
+      "adj_net": 13.03
+    },
+    {
+      "rank": 73,
+      "team": "UNLV",
+      "conference": "Mountain West",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 106.89,
+      "adj_def": 94.33,
+      "adj_net": 12.56
+    },
+    {
+      "rank": 74,
+      "team": "Boston College",
+      "conference": "ACC",
+      "wins": 20,
+      "losses": 16,
+      "adj_off": 108.98,
+      "adj_def": 96.68,
+      "adj_net": 12.3
     },
     {
       "rank": 75,
-      "team": "Minnesota",
-      "conference": "Big Ten",
-      "wins": 19,
-      "losses": 15,
-      "adj_off": 101.24,
-      "adj_def": 90.54,
-      "adj_net": 10.69
-    },
-    {
-      "rank": 76,
-      "team": "Notre Dame",
-      "conference": "ACC",
-      "wins": 13,
-      "losses": 20,
-      "adj_off": 103.34,
-      "adj_def": 92.8,
-      "adj_net": 10.54
-    },
-    {
-      "rank": 77,
-      "team": "Loyola Chicago",
-      "conference": "A-10",
-      "wins": 22,
-      "losses": 10,
-      "adj_off": 94.92,
-      "adj_def": 84.55,
-      "adj_net": 10.37
-    },
-    {
-      "rank": 78,
-      "team": "UCLA",
-      "conference": "Pac-12",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 104.51,
-      "adj_def": 94.16,
-      "adj_net": 10.35
-    },
-    {
-      "rank": 79,
       "team": "Ole Miss",
       "conference": "SEC",
       "wins": 20,
       "losses": 12,
-      "adj_off": 108.68,
-      "adj_def": 98.63,
-      "adj_net": 10.05
+      "adj_off": 109.64,
+      "adj_def": 97.36,
+      "adj_net": 12.28
     },
     {
-      "rank": 80,
+      "rank": 76,
+      "team": "North Texas",
+      "conference": "American",
+      "wins": 17,
+      "losses": 15,
+      "adj_off": 106.03,
+      "adj_def": 93.78,
+      "adj_net": 12.26
+    },
+    {
+      "rank": 77,
+      "team": "Minnesota",
+      "conference": "Big Ten",
+      "wins": 19,
+      "losses": 15,
+      "adj_off": 102.31,
+      "adj_def": 90.2,
+      "adj_net": 12.11
+    },
+    {
+      "rank": 78,
       "team": "LSU",
       "conference": "SEC",
       "wins": 17,
       "losses": 16,
-      "adj_off": 107.27,
-      "adj_def": 97.39,
-      "adj_net": 9.88
+      "adj_off": 107.08,
+      "adj_def": 94.98,
+      "adj_net": 12.09
+    },
+    {
+      "rank": 79,
+      "team": "Princeton",
+      "conference": "Ivy",
+      "wins": 22,
+      "losses": 5,
+      "adj_off": 110.12,
+      "adj_def": 98.68,
+      "adj_net": 11.44
+    },
+    {
+      "rank": 80,
+      "team": "George Mason",
+      "conference": "A-10",
+      "wins": 19,
+      "losses": 12,
+      "adj_off": 106.69,
+      "adj_def": 95.51,
+      "adj_net": 11.18
     },
     {
       "rank": 81,
@@ -809,29 +809,29 @@
       "conference": "Big Ten",
       "wins": 16,
       "losses": 17,
-      "adj_off": 100.83,
-      "adj_def": 91.13,
-      "adj_net": 9.7
+      "adj_off": 100.33,
+      "adj_def": 89.31,
+      "adj_net": 11.01
     },
     {
       "rank": 82,
-      "team": "James Madison",
-      "conference": "Sun Belt",
-      "wins": 31,
-      "losses": 4,
-      "adj_off": 104.92,
-      "adj_def": 95.25,
-      "adj_net": 9.67
+      "team": "Georgia",
+      "conference": "SEC",
+      "wins": 20,
+      "losses": 17,
+      "adj_off": 106.42,
+      "adj_def": 95.44,
+      "adj_net": 10.98
     },
     {
       "rank": 83,
-      "team": "George Mason",
-      "conference": "A-10",
+      "team": "Indiana",
+      "conference": "Big Ten",
       "wins": 19,
-      "losses": 12,
-      "adj_off": 105.75,
-      "adj_def": 96.37,
-      "adj_net": 9.38
+      "losses": 14,
+      "adj_off": 107.79,
+      "adj_def": 96.88,
+      "adj_net": 10.91
     },
     {
       "rank": 84,
@@ -839,19 +839,19 @@
       "conference": "A-10",
       "wins": 21,
       "losses": 14,
-      "adj_off": 106.35,
-      "adj_def": 97.18,
-      "adj_net": 9.16
+      "adj_off": 106.29,
+      "adj_def": 95.42,
+      "adj_net": 10.87
     },
     {
       "rank": 85,
-      "team": "Florida State",
+      "team": "Syracuse",
       "conference": "ACC",
-      "wins": 17,
-      "losses": 16,
-      "adj_off": 105.83,
-      "adj_def": 96.75,
-      "adj_net": 9.08
+      "wins": 19,
+      "losses": 12,
+      "adj_off": 106.96,
+      "adj_def": 96.38,
+      "adj_net": 10.58
     },
     {
       "rank": 86,
@@ -859,59 +859,59 @@
       "conference": "Sun Belt",
       "wins": 25,
       "losses": 7,
-      "adj_off": 103.2,
-      "adj_def": 94.13,
-      "adj_net": 9.07
+      "adj_off": 102.13,
+      "adj_def": 91.76,
+      "adj_net": 10.37
     },
     {
       "rank": 87,
-      "team": "Miami",
-      "conference": "ACC",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 103.73,
-      "adj_def": 94.67,
-      "adj_net": 9.05
-    },
-    {
-      "rank": 88,
-      "team": "Seattle U",
-      "conference": "UAC",
-      "wins": 22,
-      "losses": 14,
-      "adj_off": 103.62,
-      "adj_def": 94.79,
-      "adj_net": 8.84
-    },
-    {
-      "rank": 89,
-      "team": "SMU",
-      "conference": "American",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 106.88,
-      "adj_def": 98.34,
-      "adj_net": 8.54
-    },
-    {
-      "rank": 90,
-      "team": "North Texas",
-      "conference": "American",
-      "wins": 17,
-      "losses": 15,
-      "adj_off": 104.88,
-      "adj_def": 96.71,
-      "adj_net": 8.17
-    },
-    {
-      "rank": 91,
       "team": "Richmond",
       "conference": "A-10",
       "wins": 23,
       "losses": 10,
-      "adj_off": 100.52,
-      "adj_def": 92.37,
-      "adj_net": 8.15
+      "adj_off": 102.45,
+      "adj_def": 92.11,
+      "adj_net": 10.34
+    },
+    {
+      "rank": 88,
+      "team": "Florida State",
+      "conference": "ACC",
+      "wins": 17,
+      "losses": 16,
+      "adj_off": 104.53,
+      "adj_def": 94.22,
+      "adj_net": 10.31
+    },
+    {
+      "rank": 89,
+      "team": "Louisiana Tech",
+      "conference": "CUSA",
+      "wins": 19,
+      "losses": 10,
+      "adj_off": 103.28,
+      "adj_def": 93.15,
+      "adj_net": 10.13
+    },
+    {
+      "rank": 90,
+      "team": "Loyola Chicago",
+      "conference": "A-10",
+      "wins": 22,
+      "losses": 10,
+      "adj_off": 95.54,
+      "adj_def": 85.58,
+      "adj_net": 9.96
+    },
+    {
+      "rank": 91,
+      "team": "McNeese",
+      "conference": "Southland",
+      "wins": 26,
+      "losses": 4,
+      "adj_off": 96.71,
+      "adj_def": 86.99,
+      "adj_net": 9.72
     },
     {
       "rank": 92,
@@ -919,1349 +919,1349 @@
       "conference": "A-10",
       "wins": 24,
       "losses": 12,
-      "adj_off": 99.93,
-      "adj_def": 91.86,
-      "adj_net": 8.07
+      "adj_off": 101.87,
+      "adj_def": 92.27,
+      "adj_net": 9.61
     },
     {
       "rank": 93,
-      "team": "UAB",
-      "conference": "American",
-      "wins": 22,
-      "losses": 12,
-      "adj_off": 110.13,
-      "adj_def": 102.08,
-      "adj_net": 8.06
-    },
-    {
-      "rank": 94,
-      "team": "VCU",
-      "conference": "A-10",
-      "wins": 24,
-      "losses": 14,
-      "adj_off": 90.16,
-      "adj_def": 82.24,
-      "adj_net": 7.92
-    },
-    {
-      "rank": 95,
-      "team": "South Florida",
-      "conference": "American",
-      "wins": 25,
-      "losses": 8,
-      "adj_off": 104.6,
-      "adj_def": 96.99,
-      "adj_net": 7.61
-    },
-    {
-      "rank": 96,
-      "team": "Charleston",
-      "conference": "CAA",
-      "wins": 26,
-      "losses": 8,
-      "adj_off": 108.91,
-      "adj_def": 101.3,
-      "adj_net": 7.61
-    },
-    {
-      "rank": 97,
-      "team": "UT Arlington",
-      "conference": "UAC",
-      "wins": 18,
-      "losses": 14,
-      "adj_off": 107.18,
-      "adj_def": 99.84,
-      "adj_net": 7.34
-    },
-    {
-      "rank": 98,
-      "team": "Santa Clara",
-      "conference": "WCC",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 104.38,
-      "adj_def": 97.13,
-      "adj_net": 7.25
-    },
-    {
-      "rank": 99,
-      "team": "Rutgers",
-      "conference": "Big Ten",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 95.59,
-      "adj_def": 88.38,
-      "adj_net": 7.21
-    },
-    {
-      "rank": 100,
-      "team": "Princeton",
-      "conference": "Ivy",
-      "wins": 22,
-      "losses": 5,
-      "adj_off": 110.16,
-      "adj_def": 102.96,
-      "adj_net": 7.19
-    },
-    {
-      "rank": 101,
-      "team": "Memphis",
-      "conference": "American",
-      "wins": 22,
-      "losses": 10,
-      "adj_off": 103.02,
-      "adj_def": 96.18,
-      "adj_net": 6.84
-    },
-    {
-      "rank": 102,
-      "team": "Arkansas",
-      "conference": "SEC",
-      "wins": 16,
-      "losses": 17,
-      "adj_off": 106.32,
-      "adj_def": 99.72,
-      "adj_net": 6.6
-    },
-    {
-      "rank": 103,
-      "team": "Stanford",
-      "conference": "Pac-12",
-      "wins": 14,
-      "losses": 18,
-      "adj_off": 106.98,
-      "adj_def": 100.51,
-      "adj_net": 6.47
-    },
-    {
-      "rank": 104,
-      "team": "McNeese",
-      "conference": "Southland",
-      "wins": 26,
-      "losses": 4,
-      "adj_off": 93.91,
-      "adj_def": 87.46,
-      "adj_net": 6.45
-    },
-    {
-      "rank": 105,
-      "team": "Georgia Tech",
-      "conference": "ACC",
-      "wins": 14,
-      "losses": 18,
-      "adj_off": 103.01,
-      "adj_def": 96.68,
-      "adj_net": 6.33
-    },
-    {
-      "rank": 106,
-      "team": "Belmont",
-      "conference": "MVC",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 102.89,
-      "adj_def": 96.58,
-      "adj_net": 6.31
-    },
-    {
-      "rank": 107,
-      "team": "Vermont",
-      "conference": "Am. East",
-      "wins": 26,
-      "losses": 7,
-      "adj_off": 97.33,
-      "adj_def": 91.12,
-      "adj_net": 6.21
-    },
-    {
-      "rank": 108,
-      "team": "California",
-      "conference": "Pac-12",
-      "wins": 13,
-      "losses": 19,
-      "adj_off": 99.82,
-      "adj_def": 93.67,
-      "adj_net": 6.15
-    },
-    {
-      "rank": 109,
-      "team": "Yale",
-      "conference": "Ivy",
-      "wins": 21,
-      "losses": 10,
-      "adj_off": 104.03,
-      "adj_def": 97.92,
-      "adj_net": 6.11
-    },
-    {
-      "rank": 110,
       "team": "St. Bonaventure",
       "conference": "A-10",
       "wins": 20,
       "losses": 13,
-      "adj_off": 107.37,
-      "adj_def": 101.43,
-      "adj_net": 5.95
+      "adj_off": 109.44,
+      "adj_def": 99.87,
+      "adj_net": 9.57
     },
     {
-      "rank": 111,
+      "rank": 94,
+      "team": "UCLA",
+      "conference": "Pac-12",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 102.2,
+      "adj_def": 92.73,
+      "adj_net": 9.47
+    },
+    {
+      "rank": 95,
+      "team": "Rutgers",
+      "conference": "Big Ten",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 96.05,
+      "adj_def": 86.59,
+      "adj_net": 9.45
+    },
+    {
+      "rank": 96,
+      "team": "California",
+      "conference": "Pac-12",
+      "wins": 13,
+      "losses": 19,
+      "adj_off": 104.48,
+      "adj_def": 95.25,
+      "adj_net": 9.23
+    },
+    {
+      "rank": 97,
+      "team": "Stanford",
+      "conference": "Pac-12",
+      "wins": 14,
+      "losses": 18,
+      "adj_off": 107.36,
+      "adj_def": 98.46,
+      "adj_net": 8.9
+    },
+    {
+      "rank": 98,
       "team": "Massachusetts",
       "conference": "A-10",
       "wins": 20,
       "losses": 11,
-      "adj_off": 105.2,
-      "adj_def": 99.6,
-      "adj_net": 5.6
+      "adj_off": 106.94,
+      "adj_def": 98.11,
+      "adj_net": 8.83
     },
     {
-      "rank": 112,
-      "team": "Louisiana Tech",
-      "conference": "CUSA",
-      "wins": 19,
-      "losses": 10,
-      "adj_off": 102.71,
-      "adj_def": 97.12,
-      "adj_net": 5.59
-    },
-    {
-      "rank": 113,
-      "team": "Oakland",
-      "conference": "Horizon",
+      "rank": 99,
+      "team": "VCU",
+      "conference": "A-10",
       "wins": 24,
-      "losses": 12,
-      "adj_off": 106.35,
-      "adj_def": 101.02,
-      "adj_net": 5.33
-    },
-    {
-      "rank": 114,
-      "team": "Samford",
-      "conference": "SoCon",
-      "wins": 27,
-      "losses": 6,
-      "adj_off": 105.58,
-      "adj_def": 100.57,
-      "adj_net": 5.01
-    },
-    {
-      "rank": 115,
-      "team": "Troy",
-      "conference": "Sun Belt",
-      "wins": 17,
-      "losses": 12,
-      "adj_off": 91.12,
-      "adj_def": 86.25,
-      "adj_net": 4.87
-    },
-    {
-      "rank": 116,
-      "team": "Northern Iowa",
-      "conference": "MVC",
-      "wins": 18,
       "losses": 14,
-      "adj_off": 101.16,
-      "adj_def": 96.68,
-      "adj_net": 4.48
+      "adj_off": 92.06,
+      "adj_def": 83.31,
+      "adj_net": 8.75
     },
     {
-      "rank": 117,
-      "team": "Western Kentucky",
-      "conference": "CUSA",
-      "wins": 19,
-      "losses": 12,
-      "adj_off": 100.01,
-      "adj_def": 95.57,
-      "adj_net": 4.44
-    },
-    {
-      "rank": 118,
-      "team": "Arkansas State",
-      "conference": "Sun Belt",
-      "wins": 20,
-      "losses": 17,
-      "adj_off": 108.12,
-      "adj_def": 103.81,
-      "adj_net": 4.31
-    },
-    {
-      "rank": 119,
-      "team": "Cornell",
-      "conference": "Ivy",
-      "wins": 20,
-      "losses": 8,
-      "adj_off": 103.03,
-      "adj_def": 98.81,
-      "adj_net": 4.22
-    },
-    {
-      "rank": 120,
-      "team": "Colgate",
-      "conference": "Patriot",
-      "wins": 24,
-      "losses": 10,
-      "adj_off": 101.73,
-      "adj_def": 97.54,
-      "adj_net": 4.19
-    },
-    {
-      "rank": 121,
-      "team": "South Dakota State",
-      "conference": "Summit",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 103.96,
-      "adj_def": 100.1,
-      "adj_net": 3.86
-    },
-    {
-      "rank": 122,
-      "team": "Towson",
-      "conference": "CAA",
-      "wins": 19,
-      "losses": 14,
-      "adj_off": 97.13,
-      "adj_def": 93.37,
-      "adj_net": 3.76
-    },
-    {
-      "rank": 123,
-      "team": "Western Carolina",
-      "conference": "SoCon",
-      "wins": 19,
-      "losses": 10,
-      "adj_off": 99.87,
-      "adj_def": 96.17,
-      "adj_net": 3.7
-    },
-    {
-      "rank": 124,
-      "team": "Oklahoma State",
-      "conference": "Big 12",
-      "wins": 12,
-      "losses": 20,
-      "adj_off": 96.12,
-      "adj_def": 92.48,
-      "adj_net": 3.64
-    },
-    {
-      "rank": 125,
-      "team": "UC San Diego",
-      "conference": "Big West",
-      "wins": 19,
-      "losses": 12,
-      "adj_off": 105.59,
-      "adj_def": 101.97,
-      "adj_net": 3.62
-    },
-    {
-      "rank": 126,
-      "team": "Oregon State",
-      "conference": "Pac-12",
-      "wins": 12,
-      "losses": 19,
-      "adj_off": 103.03,
-      "adj_def": 99.51,
-      "adj_net": 3.52
-    },
-    {
-      "rank": 127,
-      "team": "Tarleton State",
-      "conference": "UAC",
-      "wins": 22,
-      "losses": 10,
-      "adj_off": 105.18,
-      "adj_def": 101.81,
-      "adj_net": 3.37
-    },
-    {
-      "rank": 128,
-      "team": "Arizona State",
-      "conference": "Pac-12",
-      "wins": 14,
-      "losses": 18,
-      "adj_off": 92.2,
-      "adj_def": 89.37,
-      "adj_net": 2.83
-    },
-    {
-      "rank": 129,
-      "team": "Morehead State",
-      "conference": "OVC",
-      "wins": 22,
-      "losses": 9,
-      "adj_off": 101.56,
-      "adj_def": 99.15,
-      "adj_net": 2.42
-    },
-    {
-      "rank": 130,
-      "team": "West Virginia",
-      "conference": "Big 12",
-      "wins": 9,
-      "losses": 23,
-      "adj_off": 107.91,
-      "adj_def": 105.56,
-      "adj_net": 2.34
-    },
-    {
-      "rank": 131,
-      "team": "Ohio",
-      "conference": "MAC",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 99.71,
-      "adj_def": 97.42,
-      "adj_net": 2.29
-    },
-    {
-      "rank": 132,
-      "team": "High Point",
-      "conference": "Big South",
-      "wins": 25,
-      "losses": 9,
-      "adj_off": 108.96,
-      "adj_def": 106.67,
-      "adj_net": 2.29
-    },
-    {
-      "rank": 133,
-      "team": "Charlotte",
+      "rank": 100,
+      "team": "Memphis",
       "conference": "American",
-      "wins": 18,
-      "losses": 12,
-      "adj_off": 101.55,
-      "adj_def": 99.53,
-      "adj_net": 2.02
+      "wins": 22,
+      "losses": 10,
+      "adj_off": 102.81,
+      "adj_def": 94.12,
+      "adj_net": 8.69
     },
     {
-      "rank": 134,
-      "team": "Chattanooga",
-      "conference": "SoCon",
-      "wins": 19,
-      "losses": 12,
-      "adj_off": 106.19,
-      "adj_def": 104.64,
-      "adj_net": 1.55
+      "rank": 101,
+      "team": "Vermont",
+      "conference": "Am. East",
+      "wins": 26,
+      "losses": 7,
+      "adj_off": 101.12,
+      "adj_def": 92.98,
+      "adj_net": 8.14
     },
     {
-      "rank": 135,
+      "rank": 102,
       "team": "Akron",
       "conference": "MAC",
       "wins": 22,
       "losses": 11,
-      "adj_off": 98.64,
-      "adj_def": 97.34,
-      "adj_net": 1.3
+      "adj_off": 102.34,
+      "adj_def": 94.28,
+      "adj_net": 8.06
     },
     {
-      "rank": 136,
-      "team": "Sam Houston",
-      "conference": "CUSA",
+      "rank": 103,
+      "team": "Yale",
+      "conference": "Ivy",
+      "wins": 21,
+      "losses": 10,
+      "adj_off": 104.87,
+      "adj_def": 97.16,
+      "adj_net": 7.7
+    },
+    {
+      "rank": 104,
+      "team": "Santa Clara",
+      "conference": "WCC",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 105.44,
+      "adj_def": 97.82,
+      "adj_net": 7.62
+    },
+    {
+      "rank": 105,
+      "team": "Charleston",
+      "conference": "CAA",
+      "wins": 26,
+      "losses": 8,
+      "adj_off": 107.4,
+      "adj_def": 99.79,
+      "adj_net": 7.61
+    },
+    {
+      "rank": 106,
+      "team": "Oklahoma State",
+      "conference": "Big 12",
+      "wins": 12,
+      "losses": 20,
+      "adj_off": 98.13,
+      "adj_def": 90.93,
+      "adj_net": 7.2
+    },
+    {
+      "rank": 107,
+      "team": "UC San Diego",
+      "conference": "Big West",
       "wins": 19,
       "losses": 12,
-      "adj_off": 102.36,
-      "adj_def": 101.15,
-      "adj_net": 1.21
+      "adj_off": 104.88,
+      "adj_def": 97.83,
+      "adj_net": 7.05
     },
     {
-      "rank": 137,
-      "team": "UNC Greensboro",
-      "conference": "SoCon",
-      "wins": 19,
-      "losses": 11,
-      "adj_off": 102.85,
-      "adj_def": 101.84,
-      "adj_net": 1
+      "rank": 108,
+      "team": "Notre Dame",
+      "conference": "ACC",
+      "wins": 13,
+      "losses": 20,
+      "adj_off": 99.56,
+      "adj_def": 92.7,
+      "adj_net": 6.86
     },
     {
-      "rank": 138,
-      "team": "Vanderbilt",
+      "rank": 109,
+      "team": "South Florida",
+      "conference": "American",
+      "wins": 25,
+      "losses": 8,
+      "adj_off": 102.62,
+      "adj_def": 95.91,
+      "adj_net": 6.71
+    },
+    {
+      "rank": 110,
+      "team": "Arkansas",
       "conference": "SEC",
-      "wins": 9,
-      "losses": 23,
-      "adj_off": 99.5,
-      "adj_def": 98.66,
-      "adj_net": 0.85
+      "wins": 16,
+      "losses": 17,
+      "adj_off": 105.67,
+      "adj_def": 99.49,
+      "adj_net": 6.18
     },
     {
-      "rank": 139,
-      "team": "UC Davis",
-      "conference": "Big West",
-      "wins": 18,
-      "losses": 13,
-      "adj_off": 94.82,
-      "adj_def": 94.28,
-      "adj_net": 0.54
+      "rank": 111,
+      "team": "Georgia Tech",
+      "conference": "ACC",
+      "wins": 14,
+      "losses": 18,
+      "adj_off": 99.81,
+      "adj_def": 93.65,
+      "adj_net": 6.16
     },
     {
-      "rank": 140,
-      "team": "Furman",
+      "rank": 112,
+      "team": "Samford",
       "conference": "SoCon",
-      "wins": 15,
-      "losses": 15,
-      "adj_off": 102.37,
-      "adj_def": 101.83,
-      "adj_net": 0.54
+      "wins": 27,
+      "losses": 6,
+      "adj_off": 105.51,
+      "adj_def": 99.37,
+      "adj_net": 6.14
     },
     {
-      "rank": 141,
-      "team": "Southern Illinois",
+      "rank": 113,
+      "team": "Arizona State",
+      "conference": "Pac-12",
+      "wins": 14,
+      "losses": 18,
+      "adj_off": 94.35,
+      "adj_def": 88.21,
+      "adj_net": 6.14
+    },
+    {
+      "rank": 114,
+      "team": "Seattle U",
+      "conference": "UAC",
+      "wins": 22,
+      "losses": 14,
+      "adj_off": 102.12,
+      "adj_def": 96.05,
+      "adj_net": 6.07
+    },
+    {
+      "rank": 115,
+      "team": "UAB",
+      "conference": "American",
+      "wins": 22,
+      "losses": 12,
+      "adj_off": 107.86,
+      "adj_def": 101.81,
+      "adj_net": 6.05
+    },
+    {
+      "rank": 116,
+      "team": "Charlotte",
+      "conference": "American",
+      "wins": 18,
+      "losses": 12,
+      "adj_off": 103.08,
+      "adj_def": 97.27,
+      "adj_net": 5.81
+    },
+    {
+      "rank": 117,
+      "team": "Troy",
+      "conference": "Sun Belt",
+      "wins": 17,
+      "losses": 12,
+      "adj_off": 91.44,
+      "adj_def": 85.65,
+      "adj_net": 5.8
+    },
+    {
+      "rank": 118,
+      "team": "Cornell",
+      "conference": "Ivy",
+      "wins": 20,
+      "losses": 8,
+      "adj_off": 105.1,
+      "adj_def": 100.1,
+      "adj_net": 5
+    },
+    {
+      "rank": 119,
+      "team": "Oregon State",
+      "conference": "Pac-12",
+      "wins": 12,
+      "losses": 19,
+      "adj_off": 102.59,
+      "adj_def": 97.91,
+      "adj_net": 4.68
+    },
+    {
+      "rank": 120,
+      "team": "Northern Iowa",
       "conference": "MVC",
       "wins": 18,
-      "losses": 13,
-      "adj_off": 100.63,
-      "adj_def": 100.31,
-      "adj_net": 0.32
+      "losses": 14,
+      "adj_off": 100.67,
+      "adj_def": 96.05,
+      "adj_net": 4.62
     },
     {
-      "rank": 142,
-      "team": "Drexel",
-      "conference": "CAA",
-      "wins": 19,
-      "losses": 12,
-      "adj_off": 83.73,
-      "adj_def": 83.49,
-      "adj_net": 0.23
-    },
-    {
-      "rank": 143,
-      "team": "Long Beach State",
-      "conference": "Big West",
-      "wins": 19,
-      "losses": 15,
-      "adj_off": 97.41,
-      "adj_def": 97.19,
-      "adj_net": 0.22
-    },
-    {
-      "rank": 144,
-      "team": "Wyoming",
-      "conference": "Mountain West",
-      "wins": 13,
+      "rank": 121,
+      "team": "Arkansas State",
+      "conference": "Sun Belt",
+      "wins": 20,
       "losses": 17,
-      "adj_off": 99.89,
-      "adj_def": 99.73,
-      "adj_net": 0.16
+      "adj_off": 107.21,
+      "adj_def": 102.61,
+      "adj_net": 4.6
     },
     {
-      "rank": 145,
+      "rank": 122,
+      "team": "Ohio",
+      "conference": "MAC",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 101.93,
+      "adj_def": 97.37,
+      "adj_net": 4.56
+    },
+    {
+      "rank": 123,
       "team": "Michigan",
       "conference": "Big Ten",
       "wins": 8,
       "losses": 24,
-      "adj_off": 103.75,
-      "adj_def": 103.69,
-      "adj_net": 0.06
+      "adj_off": 107.35,
+      "adj_def": 102.83,
+      "adj_net": 4.52
     },
     {
-      "rank": 146,
-      "team": "Wichita State",
-      "conference": "American",
-      "wins": 14,
-      "losses": 19,
-      "adj_off": 97.07,
-      "adj_def": 97.09,
-      "adj_net": -0.02
+      "rank": 124,
+      "team": "Colgate",
+      "conference": "Patriot",
+      "wins": 24,
+      "losses": 10,
+      "adj_off": 100.9,
+      "adj_def": 96.51,
+      "adj_net": 4.4
     },
     {
-      "rank": 147,
-      "team": "Hofstra",
+      "rank": 125,
+      "team": "UT Arlington",
+      "conference": "UAC",
+      "wins": 18,
+      "losses": 14,
+      "adj_off": 103.77,
+      "adj_def": 99.38,
+      "adj_net": 4.39
+    },
+    {
+      "rank": 126,
+      "team": "Oakland",
+      "conference": "Horizon",
+      "wins": 24,
+      "losses": 12,
+      "adj_off": 104.85,
+      "adj_def": 100.54,
+      "adj_net": 4.31
+    },
+    {
+      "rank": 127,
+      "team": "Morehead State",
+      "conference": "OVC",
+      "wins": 22,
+      "losses": 9,
+      "adj_off": 102.44,
+      "adj_def": 98.18,
+      "adj_net": 4.26
+    },
+    {
+      "rank": 128,
+      "team": "Towson",
       "conference": "CAA",
       "wins": 19,
-      "losses": 13,
-      "adj_off": 100.11,
-      "adj_def": 100.23,
-      "adj_net": -0.12
+      "losses": 14,
+      "adj_off": 97.78,
+      "adj_def": 93.64,
+      "adj_net": 4.14
     },
     {
-      "rank": 148,
-      "team": "Missouri State",
-      "conference": "MVC",
-      "wins": 17,
-      "losses": 16,
-      "adj_off": 98.55,
-      "adj_def": 98.69,
-      "adj_net": -0.14
-    },
-    {
-      "rank": 149,
-      "team": "Illinois State",
-      "conference": "MVC",
-      "wins": 14,
-      "losses": 17,
-      "adj_off": 97.32,
-      "adj_def": 97.55,
-      "adj_net": -0.23
-    },
-    {
-      "rank": 150,
-      "team": "Kent State",
-      "conference": "MAC",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 100.31,
-      "adj_def": 100.6,
-      "adj_net": -0.29
-    },
-    {
-      "rank": 151,
-      "team": "Davidson",
-      "conference": "A-10",
-      "wins": 13,
-      "losses": 17,
-      "adj_off": 89.79,
-      "adj_def": 90.08,
-      "adj_net": -0.29
-    },
-    {
-      "rank": 152,
-      "team": "Quinnipiac",
-      "conference": "Metro",
-      "wins": 23,
+      "rank": 129,
+      "team": "Western Carolina",
+      "conference": "SoCon",
+      "wins": 19,
       "losses": 10,
-      "adj_off": 97.27,
-      "adj_def": 97.61,
-      "adj_net": -0.34
+      "adj_off": 100.72,
+      "adj_def": 96.61,
+      "adj_net": 4.11
     },
     {
-      "rank": 153,
-      "team": "Louisville",
-      "conference": "ACC",
-      "wins": 8,
-      "losses": 24,
-      "adj_off": 91.38,
-      "adj_def": 91.92,
-      "adj_net": -0.54
+      "rank": 130,
+      "team": "High Point",
+      "conference": "Big South",
+      "wins": 25,
+      "losses": 9,
+      "adj_off": 108.65,
+      "adj_def": 104.64,
+      "adj_net": 4.01
     },
     {
-      "rank": 154,
-      "team": "Bryant",
-      "conference": "Am. East",
+      "rank": 131,
+      "team": "Southern Illinois",
+      "conference": "MVC",
       "wins": 18,
       "losses": 13,
-      "adj_off": 92.22,
-      "adj_def": 92.78,
-      "adj_net": -0.56
+      "adj_off": 100.88,
+      "adj_def": 97.13,
+      "adj_net": 3.75
     },
     {
-      "rank": 155,
+      "rank": 132,
+      "team": "Western Kentucky",
+      "conference": "CUSA",
+      "wins": 19,
+      "losses": 12,
+      "adj_off": 98.64,
+      "adj_def": 95,
+      "adj_net": 3.64
+    },
+    {
+      "rank": 133,
       "team": "Toledo",
       "conference": "MAC",
       "wins": 20,
       "losses": 12,
-      "adj_off": 104.14,
-      "adj_def": 104.8,
-      "adj_net": -0.65
+      "adj_off": 107,
+      "adj_def": 103.4,
+      "adj_net": 3.6
     },
     {
-      "rank": 156,
-      "team": "Cal State Bakersfield",
-      "conference": "Big West",
-      "wins": 11,
-      "losses": 19,
-      "adj_off": 95.61,
-      "adj_def": 96.58,
-      "adj_net": -0.98
-    },
-    {
-      "rank": 157,
-      "team": "Utah Valley",
-      "conference": "UAC",
-      "wins": 14,
-      "losses": 16,
-      "adj_off": 94.01,
-      "adj_def": 95.1,
-      "adj_net": -1.1
-    },
-    {
-      "rank": 158,
-      "team": "Brown",
-      "conference": "Ivy",
-      "wins": 12,
-      "losses": 18,
-      "adj_off": 97.58,
-      "adj_def": 98.69,
-      "adj_net": -1.11
-    },
-    {
-      "rank": 159,
-      "team": "Hawai'i",
-      "conference": "Big West",
-      "wins": 18,
-      "losses": 14,
-      "adj_off": 99.75,
-      "adj_def": 101.03,
-      "adj_net": -1.28
-    },
-    {
-      "rank": 160,
-      "team": "St. Thomas-Minnesota",
-      "conference": "Summit",
-      "wins": 17,
-      "losses": 13,
-      "adj_off": 101.95,
-      "adj_def": 103.26,
-      "adj_net": -1.31
-    },
-    {
-      "rank": 161,
-      "team": "Youngstown State",
-      "conference": "Horizon",
-      "wins": 18,
-      "losses": 10,
-      "adj_off": 94.22,
-      "adj_def": 95.61,
-      "adj_net": -1.39
-    },
-    {
-      "rank": 162,
-      "team": "Cal State Northridge",
-      "conference": "Big West",
-      "wins": 17,
-      "losses": 15,
-      "adj_off": 95.35,
-      "adj_def": 96.79,
-      "adj_net": -1.44
-    },
-    {
-      "rank": 163,
-      "team": "Tulane",
-      "conference": "American",
-      "wins": 13,
-      "losses": 17,
-      "adj_off": 102.35,
-      "adj_def": 103.87,
-      "adj_net": -1.52
-    },
-    {
-      "rank": 164,
-      "team": "Murray State",
-      "conference": "MVC",
-      "wins": 11,
-      "losses": 20,
-      "adj_off": 101.2,
-      "adj_def": 102.72,
-      "adj_net": -1.52
-    },
-    {
-      "rank": 165,
-      "team": "Fairfield",
-      "conference": "Metro",
-      "wins": 23,
-      "losses": 13,
-      "adj_off": 104.44,
-      "adj_def": 105.98,
-      "adj_net": -1.54
-    },
-    {
-      "rank": 166,
-      "team": "UC Riverside",
-      "conference": "Big West",
-      "wins": 14,
-      "losses": 18,
-      "adj_off": 98.82,
-      "adj_def": 100.42,
-      "adj_net": -1.59
-    },
-    {
-      "rank": 167,
-      "team": "Saint Louis",
-      "conference": "A-10",
-      "wins": 12,
-      "losses": 20,
-      "adj_off": 98.62,
-      "adj_def": 100.22,
-      "adj_net": -1.61
-    },
-    {
-      "rank": 168,
-      "team": "Little Rock",
-      "conference": "OVC",
-      "wins": 21,
-      "losses": 13,
-      "adj_off": 101.99,
-      "adj_def": 103.66,
-      "adj_net": -1.67
-    },
-    {
-      "rank": 169,
-      "team": "Saint Peter's",
-      "conference": "Metro",
-      "wins": 18,
-      "losses": 14,
-      "adj_off": 93.49,
-      "adj_def": 95.4,
-      "adj_net": -1.9
-    },
-    {
-      "rank": 170,
-      "team": "California Baptist",
-      "conference": "UAC",
-      "wins": 14,
-      "losses": 17,
-      "adj_off": 85.56,
-      "adj_def": 87.52,
-      "adj_net": -1.96
-    },
-    {
-      "rank": 171,
-      "team": "Wright State",
-      "conference": "Horizon",
-      "wins": 16,
-      "losses": 14,
-      "adj_off": 110.31,
-      "adj_def": 112.38,
-      "adj_net": -2.07
-    },
-    {
-      "rank": 172,
-      "team": "Missouri",
-      "conference": "SEC",
-      "wins": 8,
-      "losses": 24,
-      "adj_off": 98.33,
-      "adj_def": 100.42,
-      "adj_net": -2.1
-    },
-    {
-      "rank": 173,
-      "team": "Stony Brook",
-      "conference": "CAA",
-      "wins": 19,
-      "losses": 15,
-      "adj_off": 94.23,
-      "adj_def": 96.35,
-      "adj_net": -2.12
-    },
-    {
-      "rank": 174,
-      "team": "Purdue Fort Wayne",
-      "conference": "Horizon",
-      "wins": 21,
-      "losses": 13,
-      "adj_off": 94.42,
-      "adj_def": 96.59,
-      "adj_net": -2.17
-    },
-    {
-      "rank": 175,
-      "team": "UTEP",
-      "conference": "CUSA",
-      "wins": 15,
-      "losses": 16,
-      "adj_off": 89.43,
-      "adj_def": 91.61,
-      "adj_net": -2.17
-    },
-    {
-      "rank": 176,
-      "team": "Texas State",
-      "conference": "Sun Belt",
-      "wins": 15,
-      "losses": 18,
-      "adj_off": 95.24,
-      "adj_def": 97.42,
-      "adj_net": -2.19
-    },
-    {
-      "rank": 177,
-      "team": "UNC Wilmington",
-      "conference": "CAA",
-      "wins": 18,
-      "losses": 10,
-      "adj_off": 106.34,
-      "adj_def": 108.58,
-      "adj_net": -2.24
-    },
-    {
-      "rank": 178,
-      "team": "Fordham",
-      "conference": "A-10",
-      "wins": 13,
-      "losses": 20,
-      "adj_off": 92.25,
-      "adj_def": 94.57,
-      "adj_net": -2.32
-    },
-    {
-      "rank": 179,
+      "rank": 134,
       "team": "Liberty",
       "conference": "CUSA",
       "wins": 15,
       "losses": 14,
-      "adj_off": 100.53,
-      "adj_def": 102.98,
-      "adj_net": -2.45
+      "adj_off": 103.44,
+      "adj_def": 100.28,
+      "adj_net": 3.17
     },
     {
-      "rank": 180,
-      "team": "Longwood",
-      "conference": "Big South",
-      "wins": 18,
-      "losses": 14,
-      "adj_off": 93.12,
-      "adj_def": 95.72,
-      "adj_net": -2.6
-    },
-    {
-      "rank": 181,
-      "team": "Temple",
-      "conference": "American",
-      "wins": 15,
-      "losses": 20,
-      "adj_off": 95.59,
-      "adj_def": 98.5,
-      "adj_net": -2.91
-    },
-    {
-      "rank": 182,
-      "team": "Georgetown",
-      "conference": "Big East",
-      "wins": 9,
-      "losses": 23,
-      "adj_off": 106,
-      "adj_def": 108.93,
-      "adj_net": -2.92
-    },
-    {
-      "rank": 183,
-      "team": "La Salle",
-      "conference": "A-10",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 100.61,
-      "adj_def": 103.62,
-      "adj_net": -3.02
-    },
-    {
-      "rank": 184,
-      "team": "UMass Lowell",
-      "conference": "Am. East",
-      "wins": 19,
-      "losses": 10,
-      "adj_off": 100.58,
-      "adj_def": 103.86,
-      "adj_net": -3.28
-    },
-    {
-      "rank": 185,
-      "team": "Eastern Washington",
-      "conference": "Big Sky",
+      "rank": 135,
+      "team": "UNC Greensboro",
+      "conference": "SoCon",
       "wins": 19,
       "losses": 11,
-      "adj_off": 105.16,
-      "adj_def": 108.56,
-      "adj_net": -3.4
+      "adj_off": 103.87,
+      "adj_def": 100.72,
+      "adj_net": 3.15
     },
     {
-      "rank": 186,
-      "team": "East Tennessee State",
-      "conference": "SoCon",
-      "wins": 17,
-      "losses": 16,
-      "adj_off": 95.04,
-      "adj_def": 98.49,
-      "adj_net": -3.44
+      "rank": 136,
+      "team": "South Dakota State",
+      "conference": "Summit",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 102.82,
+      "adj_def": 99.87,
+      "adj_net": 2.95
     },
     {
-      "rank": 187,
-      "team": "Pepperdine",
-      "conference": "WCC",
-      "wins": 11,
-      "losses": 20,
-      "adj_off": 101.56,
-      "adj_def": 105.03,
-      "adj_net": -3.48
-    },
-    {
-      "rank": 188,
-      "team": "Louisiana",
-      "conference": "Sun Belt",
-      "wins": 17,
-      "losses": 14,
-      "adj_off": 96.41,
-      "adj_def": 100.07,
-      "adj_net": -3.67
-    },
-    {
-      "rank": 189,
-      "team": "Rider",
-      "conference": "Metro",
-      "wins": 14,
-      "losses": 17,
-      "adj_off": 94.4,
-      "adj_def": 98.07,
-      "adj_net": -3.67
-    },
-    {
-      "rank": 190,
-      "team": "UIC",
+      "rank": 137,
+      "team": "Belmont",
       "conference": "MVC",
-      "wins": 11,
-      "losses": 21,
-      "adj_off": 95.86,
-      "adj_def": 99.82,
-      "adj_net": -3.96
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 103.1,
+      "adj_def": 100.19,
+      "adj_net": 2.9
     },
     {
-      "rank": 191,
-      "team": "Montana",
-      "conference": "Big Sky",
-      "wins": 21,
-      "losses": 12,
-      "adj_off": 103.76,
-      "adj_def": 107.73,
-      "adj_net": -3.97
-    },
-    {
-      "rank": 192,
-      "team": "Stephen F. Austin",
-      "conference": "UAC",
-      "wins": 16,
-      "losses": 15,
-      "adj_off": 95.52,
-      "adj_def": 99.54,
-      "adj_net": -4.01
-    },
-    {
-      "rank": 193,
-      "team": "North Dakota",
-      "conference": "Summit",
-      "wins": 15,
-      "losses": 14,
-      "adj_off": 101.57,
-      "adj_def": 105.69,
-      "adj_net": -4.12
-    },
-    {
-      "rank": 194,
-      "team": "Kansas City",
-      "conference": "Summit",
+      "rank": 138,
+      "team": "Tulane",
+      "conference": "American",
       "wins": 13,
-      "losses": 16,
-      "adj_off": 93.75,
-      "adj_def": 98,
-      "adj_net": -4.26
-    },
-    {
-      "rank": 195,
-      "team": "Northern Colorado",
-      "conference": "Big Sky",
-      "wins": 17,
-      "losses": 14,
-      "adj_off": 99,
-      "adj_def": 103.34,
-      "adj_net": -4.33
-    },
-    {
-      "rank": 196,
-      "team": "George Washington",
-      "conference": "A-10",
-      "wins": 14,
       "losses": 17,
-      "adj_off": 102.45,
-      "adj_def": 106.79,
-      "adj_net": -4.33
+      "adj_off": 106.83,
+      "adj_def": 103.99,
+      "adj_net": 2.84
     },
     {
-      "rank": 197,
-      "team": "Loyola Marymount",
-      "conference": "WCC",
-      "wins": 11,
-      "losses": 19,
-      "adj_off": 100.55,
-      "adj_def": 104.88,
-      "adj_net": -4.34
+      "rank": 139,
+      "team": "Davidson",
+      "conference": "A-10",
+      "wins": 13,
+      "losses": 17,
+      "adj_off": 93,
+      "adj_def": 90.2,
+      "adj_net": 2.81
     },
     {
-      "rank": 198,
-      "team": "Lipscomb",
-      "conference": "ASUN",
-      "wins": 18,
-      "losses": 12,
-      "adj_off": 98.25,
-      "adj_def": 102.97,
-      "adj_net": -4.72
+      "rank": 140,
+      "team": "Kent State",
+      "conference": "MAC",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 102.08,
+      "adj_def": 99.36,
+      "adj_net": 2.72
     },
     {
-      "rank": 199,
-      "team": "UNC Asheville",
-      "conference": "Big South",
+      "rank": 141,
+      "team": "Drexel",
+      "conference": "CAA",
       "wins": 19,
       "losses": 12,
-      "adj_off": 99.13,
-      "adj_def": 103.99,
-      "adj_net": -4.87
+      "adj_off": 84.69,
+      "adj_def": 82.31,
+      "adj_net": 2.38
     },
     {
-      "rank": 200,
+      "rank": 142,
+      "team": "West Virginia",
+      "conference": "Big 12",
+      "wins": 9,
+      "losses": 23,
+      "adj_off": 104.57,
+      "adj_def": 102.59,
+      "adj_net": 1.98
+    },
+    {
+      "rank": 143,
+      "team": "Hofstra",
+      "conference": "CAA",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 102.31,
+      "adj_def": 100.35,
+      "adj_net": 1.96
+    },
+    {
+      "rank": 144,
       "team": "Weber State",
       "conference": "Big Sky",
       "wins": 17,
       "losses": 12,
-      "adj_off": 102.19,
-      "adj_def": 107.21,
-      "adj_net": -5.02
+      "adj_off": 104.34,
+      "adj_def": 102.59,
+      "adj_net": 1.74
     },
     {
-      "rank": 201,
-      "team": "Milwaukee",
-      "conference": "Horizon",
-      "wins": 18,
-      "losses": 15,
-      "adj_off": 98.59,
-      "adj_def": 103.66,
-      "adj_net": -5.07
+      "rank": 145,
+      "team": "Missouri",
+      "conference": "SEC",
+      "wins": 8,
+      "losses": 24,
+      "adj_off": 100.98,
+      "adj_def": 99.3,
+      "adj_net": 1.67
     },
     {
-      "rank": 202,
-      "team": "Wofford",
+      "rank": 146,
+      "team": "Chattanooga",
       "conference": "SoCon",
-      "wins": 14,
-      "losses": 15,
-      "adj_off": 99.4,
-      "adj_def": 104.49,
-      "adj_net": -5.09
+      "wins": 19,
+      "losses": 12,
+      "adj_off": 104.99,
+      "adj_def": 103.7,
+      "adj_net": 1.29
     },
     {
-      "rank": 203,
-      "team": "Mercer",
+      "rank": 147,
+      "team": "Furman",
       "conference": "SoCon",
-      "wins": 14,
-      "losses": 16,
-      "adj_off": 98.4,
-      "adj_def": 103.59,
-      "adj_net": -5.19
-    },
-    {
-      "rank": 204,
-      "team": "Northern Kentucky",
-      "conference": "Horizon",
-      "wins": 16,
+      "wins": 15,
       "losses": 15,
-      "adj_off": 96.86,
-      "adj_def": 102.15,
-      "adj_net": -5.29
+      "adj_off": 103.13,
+      "adj_def": 101.88,
+      "adj_net": 1.25
     },
     {
-      "rank": 205,
-      "team": "Cal State Fullerton",
+      "rank": 148,
+      "team": "Louisiana",
+      "conference": "Sun Belt",
+      "wins": 17,
+      "losses": 14,
+      "adj_off": 99.01,
+      "adj_def": 97.87,
+      "adj_net": 1.14
+    },
+    {
+      "rank": 149,
+      "team": "Hawai'i",
       "conference": "Big West",
-      "wins": 12,
-      "losses": 18,
-      "adj_off": 94.62,
-      "adj_def": 99.91,
-      "adj_net": -5.29
-    },
-    {
-      "rank": 206,
-      "team": "Marist",
-      "conference": "Metro",
-      "wins": 18,
-      "losses": 13,
-      "adj_off": 92.16,
-      "adj_def": 97.51,
-      "adj_net": -5.36
-    },
-    {
-      "rank": 207,
-      "team": "Delaware",
-      "conference": "CAA",
       "wins": 18,
       "losses": 14,
-      "adj_off": 97.4,
-      "adj_def": 102.81,
-      "adj_net": -5.41
+      "adj_off": 99.87,
+      "adj_def": 98.77,
+      "adj_net": 1.1
     },
     {
-      "rank": 208,
-      "team": "East Carolina",
+      "rank": 150,
+      "team": "UNC Wilmington",
+      "conference": "CAA",
+      "wins": 18,
+      "losses": 10,
+      "adj_off": 106.92,
+      "adj_def": 105.83,
+      "adj_net": 1.09
+    },
+    {
+      "rank": 151,
+      "team": "Tarleton State",
+      "conference": "UAC",
+      "wins": 22,
+      "losses": 10,
+      "adj_off": 104.05,
+      "adj_def": 103.33,
+      "adj_net": 0.72
+    },
+    {
+      "rank": 152,
+      "team": "Wichita State",
       "conference": "American",
       "wins": 14,
-      "losses": 18,
-      "adj_off": 97.48,
-      "adj_def": 102.91,
-      "adj_net": -5.43
+      "losses": 19,
+      "adj_off": 96.77,
+      "adj_def": 96.09,
+      "adj_net": 0.67
     },
     {
-      "rank": 209,
-      "team": "Florida Gulf Coast",
-      "conference": "ASUN",
+      "rank": 153,
+      "team": "Eastern Washington",
+      "conference": "Big Sky",
+      "wins": 19,
+      "losses": 11,
+      "adj_off": 105.41,
+      "adj_def": 104.77,
+      "adj_net": 0.64
+    },
+    {
+      "rank": 154,
+      "team": "St. Thomas-Minnesota",
+      "conference": "Summit",
+      "wins": 17,
+      "losses": 13,
+      "adj_off": 102.03,
+      "adj_def": 101.47,
+      "adj_net": 0.57
+    },
+    {
+      "rank": 155,
+      "team": "Missouri State",
+      "conference": "MVC",
+      "wins": 17,
+      "losses": 16,
+      "adj_off": 99.57,
+      "adj_def": 99.05,
+      "adj_net": 0.52
+    },
+    {
+      "rank": 156,
+      "team": "Murray State",
+      "conference": "MVC",
       "wins": 11,
-      "losses": 18,
-      "adj_off": 96.95,
-      "adj_def": 102.39,
-      "adj_net": -5.44
+      "losses": 20,
+      "adj_off": 102.76,
+      "adj_def": 102.25,
+      "adj_net": 0.51
     },
     {
-      "rank": 210,
+      "rank": 157,
+      "team": "Montana",
+      "conference": "Big Sky",
+      "wins": 21,
+      "losses": 12,
+      "adj_off": 105.83,
+      "adj_def": 105.32,
+      "adj_net": 0.51
+    },
+    {
+      "rank": 158,
+      "team": "Long Beach State",
+      "conference": "Big West",
+      "wins": 19,
+      "losses": 15,
+      "adj_off": 97,
+      "adj_def": 96.54,
+      "adj_net": 0.46
+    },
+    {
+      "rank": 159,
+      "team": "Cal State Northridge",
+      "conference": "Big West",
+      "wins": 17,
+      "losses": 15,
+      "adj_off": 97.19,
+      "adj_def": 96.89,
+      "adj_net": 0.29
+    },
+    {
+      "rank": 160,
+      "team": "Bryant",
+      "conference": "Am. East",
+      "wins": 18,
+      "losses": 13,
+      "adj_off": 90.93,
+      "adj_def": 90.77,
+      "adj_net": 0.16
+    },
+    {
+      "rank": 161,
+      "team": "UC Davis",
+      "conference": "Big West",
+      "wins": 18,
+      "losses": 13,
+      "adj_off": 94.43,
+      "adj_def": 94.29,
+      "adj_net": 0.13
+    },
+    {
+      "rank": 162,
+      "team": "Longwood",
+      "conference": "Big South",
+      "wins": 18,
+      "losses": 14,
+      "adj_off": 90.22,
+      "adj_def": 90.35,
+      "adj_net": -0.13
+    },
+    {
+      "rank": 163,
+      "team": "Sam Houston",
+      "conference": "CUSA",
+      "wins": 19,
+      "losses": 12,
+      "adj_off": 99.81,
+      "adj_def": 100.05,
+      "adj_net": -0.24
+    },
+    {
+      "rank": 164,
+      "team": "Vanderbilt",
+      "conference": "SEC",
+      "wins": 9,
+      "losses": 23,
+      "adj_off": 96.96,
+      "adj_def": 97.21,
+      "adj_net": -0.25
+    },
+    {
+      "rank": 165,
+      "team": "Youngstown State",
+      "conference": "Horizon",
+      "wins": 18,
+      "losses": 10,
+      "adj_off": 96.24,
+      "adj_def": 96.51,
+      "adj_net": -0.27
+    },
+    {
+      "rank": 166,
+      "team": "Stephen F. Austin",
+      "conference": "UAC",
+      "wins": 16,
+      "losses": 15,
+      "adj_off": 96.33,
+      "adj_def": 96.68,
+      "adj_net": -0.35
+    },
+    {
+      "rank": 167,
+      "team": "Wyoming",
+      "conference": "Mountain West",
+      "wins": 13,
+      "losses": 17,
+      "adj_off": 101.52,
+      "adj_def": 102.16,
+      "adj_net": -0.64
+    },
+    {
+      "rank": 168,
+      "team": "Fordham",
+      "conference": "A-10",
+      "wins": 13,
+      "losses": 20,
+      "adj_off": 93.52,
+      "adj_def": 94.23,
+      "adj_net": -0.7
+    },
+    {
+      "rank": 169,
       "team": "Iona",
       "conference": "Metro",
       "wins": 16,
       "losses": 17,
-      "adj_off": 96.47,
-      "adj_def": 101.97,
-      "adj_net": -5.5
+      "adj_off": 99.8,
+      "adj_def": 100.75,
+      "adj_net": -0.95
     },
     {
-      "rank": 211,
-      "team": "UTSA",
-      "conference": "American",
-      "wins": 10,
-      "losses": 21,
-      "adj_off": 98.99,
-      "adj_def": 104.62,
-      "adj_net": -5.63
+      "rank": 170,
+      "team": "Loyola Marymount",
+      "conference": "WCC",
+      "wins": 11,
+      "losses": 19,
+      "adj_off": 101.85,
+      "adj_def": 102.81,
+      "adj_net": -0.96
     },
     {
-      "rank": 212,
-      "team": "Monmouth",
-      "conference": "CAA",
-      "wins": 18,
-      "losses": 15,
-      "adj_off": 97.93,
-      "adj_def": 103.88,
-      "adj_net": -5.96
-    },
-    {
-      "rank": 213,
-      "team": "Abilene Christian",
-      "conference": "UAC",
-      "wins": 15,
-      "losses": 18,
-      "adj_off": 95.32,
-      "adj_def": 101.32,
-      "adj_net": -6
-    },
-    {
-      "rank": 214,
-      "team": "Montana State",
-      "conference": "Big Sky",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 98.71,
-      "adj_def": 104.8,
-      "adj_net": -6.09
-    },
-    {
-      "rank": 215,
-      "team": "North Florida",
-      "conference": "ASUN",
-      "wins": 13,
-      "losses": 16,
-      "adj_off": 104.04,
-      "adj_def": 110.16,
-      "adj_net": -6.13
-    },
-    {
-      "rank": 216,
-      "team": "Winthrop",
-      "conference": "Big South",
+      "rank": 171,
+      "team": "Illinois State",
+      "conference": "MVC",
       "wins": 14,
-      "losses": 15,
-      "adj_off": 95.6,
-      "adj_def": 101.88,
-      "adj_net": -6.28
+      "losses": 17,
+      "adj_off": 94.09,
+      "adj_def": 95.07,
+      "adj_net": -0.98
     },
     {
-      "rank": 217,
-      "team": "Cleveland State",
-      "conference": "Horizon",
-      "wins": 20,
-      "losses": 15,
-      "adj_off": 97.17,
-      "adj_def": 103.49,
-      "adj_net": -6.32
+      "rank": 172,
+      "team": "Utah Valley",
+      "conference": "UAC",
+      "wins": 14,
+      "losses": 16,
+      "adj_off": 94.22,
+      "adj_def": 95.23,
+      "adj_net": -1.01
     },
     {
-      "rank": 218,
-      "team": "Merrimack",
-      "conference": "NEC",
+      "rank": 173,
+      "team": "UNC Asheville",
+      "conference": "Big South",
       "wins": 19,
       "losses": 12,
-      "adj_off": 87.07,
-      "adj_def": 93.46,
-      "adj_net": -6.39
+      "adj_off": 101.56,
+      "adj_def": 102.73,
+      "adj_net": -1.17
     },
     {
-      "rank": 219,
-      "team": "Evansville",
-      "conference": "MVC",
-      "wins": 16,
-      "losses": 18,
-      "adj_off": 93.1,
-      "adj_def": 99.53,
-      "adj_net": -6.42
+      "rank": 174,
+      "team": "Quinnipiac",
+      "conference": "Metro",
+      "wins": 23,
+      "losses": 10,
+      "adj_off": 95.79,
+      "adj_def": 96.98,
+      "adj_net": -1.19
     },
     {
-      "rank": 220,
-      "team": "Bucknell",
-      "conference": "Patriot",
-      "wins": 14,
-      "losses": 19,
-      "adj_off": 93.24,
-      "adj_def": 99.77,
-      "adj_net": -6.53
+      "rank": 175,
+      "team": "Delaware",
+      "conference": "CAA",
+      "wins": 18,
+      "losses": 14,
+      "adj_off": 99.96,
+      "adj_def": 101.17,
+      "adj_net": -1.21
     },
     {
-      "rank": 221,
-      "team": "Georgia Southern",
-      "conference": "Sun Belt",
-      "wins": 9,
-      "losses": 24,
-      "adj_off": 99.17,
-      "adj_def": 105.85,
-      "adj_net": -6.68
+      "rank": 176,
+      "team": "Saint Peter's",
+      "conference": "Metro",
+      "wins": 18,
+      "losses": 14,
+      "adj_off": 92.98,
+      "adj_def": 94.21,
+      "adj_net": -1.22
     },
     {
-      "rank": 222,
-      "team": "Jacksonville State",
-      "conference": "CUSA",
+      "rank": 177,
+      "team": "Cal State Bakersfield",
+      "conference": "Big West",
       "wins": 11,
-      "losses": 18,
-      "adj_off": 85.48,
-      "adj_def": 92.21,
-      "adj_net": -6.73
+      "losses": 19,
+      "adj_off": 96.65,
+      "adj_def": 97.89,
+      "adj_net": -1.24
     },
     {
-      "rank": 223,
+      "rank": 178,
+      "team": "Saint Louis",
+      "conference": "A-10",
+      "wins": 12,
+      "losses": 20,
+      "adj_off": 92.81,
+      "adj_def": 94.2,
+      "adj_net": -1.39
+    },
+    {
+      "rank": 179,
+      "team": "UIC",
+      "conference": "MVC",
+      "wins": 11,
+      "losses": 21,
+      "adj_off": 96.85,
+      "adj_def": 98.33,
+      "adj_net": -1.48
+    },
+    {
+      "rank": 180,
+      "team": "Fairfield",
+      "conference": "Metro",
+      "wins": 23,
+      "losses": 13,
+      "adj_off": 103.6,
+      "adj_def": 105.15,
+      "adj_net": -1.55
+    },
+    {
+      "rank": 181,
+      "team": "UMass Lowell",
+      "conference": "Am. East",
+      "wins": 19,
+      "losses": 10,
+      "adj_off": 99.58,
+      "adj_def": 101.23,
+      "adj_net": -1.65
+    },
+    {
+      "rank": 182,
+      "team": "Northern Colorado",
+      "conference": "Big Sky",
+      "wins": 17,
+      "losses": 14,
+      "adj_off": 102.56,
+      "adj_def": 104.22,
+      "adj_net": -1.66
+    },
+    {
+      "rank": 183,
+      "team": "California Baptist",
+      "conference": "UAC",
+      "wins": 14,
+      "losses": 17,
+      "adj_off": 85.5,
+      "adj_def": 87.27,
+      "adj_net": -1.77
+    },
+    {
+      "rank": 184,
+      "team": "Lipscomb",
+      "conference": "ASUN",
+      "wins": 18,
+      "losses": 12,
+      "adj_off": 96.05,
+      "adj_def": 97.94,
+      "adj_net": -1.89
+    },
+    {
+      "rank": 185,
+      "team": "Texas State",
+      "conference": "Sun Belt",
+      "wins": 15,
+      "losses": 18,
+      "adj_off": 93.83,
+      "adj_def": 95.78,
+      "adj_net": -1.94
+    },
+    {
+      "rank": 186,
+      "team": "Louisville",
+      "conference": "ACC",
+      "wins": 8,
+      "losses": 24,
+      "adj_off": 91.19,
+      "adj_def": 93.21,
+      "adj_net": -2.02
+    },
+    {
+      "rank": 187,
+      "team": "George Washington",
+      "conference": "A-10",
+      "wins": 14,
+      "losses": 17,
+      "adj_off": 100.99,
+      "adj_def": 103.15,
+      "adj_net": -2.15
+    },
+    {
+      "rank": 188,
       "team": "UC Santa Barbara",
       "conference": "Big West",
       "wins": 14,
       "losses": 15,
-      "adj_off": 98.23,
-      "adj_def": 104.96,
-      "adj_net": -6.73
+      "adj_off": 101.08,
+      "adj_def": 103.3,
+      "adj_net": -2.22
     },
     {
-      "rank": 224,
-      "team": "Green Bay",
+      "rank": 189,
+      "team": "East Carolina",
+      "conference": "American",
+      "wins": 14,
+      "losses": 18,
+      "adj_off": 98.75,
+      "adj_def": 101,
+      "adj_net": -2.25
+    },
+    {
+      "rank": 190,
+      "team": "Little Rock",
+      "conference": "OVC",
+      "wins": 21,
+      "losses": 13,
+      "adj_off": 103.47,
+      "adj_def": 105.74,
+      "adj_net": -2.27
+    },
+    {
+      "rank": 191,
+      "team": "La Salle",
+      "conference": "A-10",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 101.75,
+      "adj_def": 104.08,
+      "adj_net": -2.33
+    },
+    {
+      "rank": 192,
+      "team": "Wright State",
       "conference": "Horizon",
       "wins": 16,
       "losses": 14,
-      "adj_off": 96.9,
-      "adj_def": 103.76,
-      "adj_net": -6.86
+      "adj_off": 110.5,
+      "adj_def": 112.89,
+      "adj_net": -2.39
     },
     {
-      "rank": 225,
-      "team": "UMBC",
-      "conference": "Am. East",
-      "wins": 10,
-      "losses": 21,
-      "adj_off": 100.02,
-      "adj_def": 106.96,
-      "adj_net": -6.94
+      "rank": 193,
+      "team": "UC Riverside",
+      "conference": "Big West",
+      "wins": 14,
+      "losses": 18,
+      "adj_off": 98.92,
+      "adj_def": 101.36,
+      "adj_net": -2.44
     },
     {
-      "rank": 226,
+      "rank": 194,
+      "team": "Purdue Fort Wayne",
+      "conference": "Horizon",
+      "wins": 21,
+      "losses": 13,
+      "adj_off": 96.02,
+      "adj_def": 98.51,
+      "adj_net": -2.49
+    },
+    {
+      "rank": 195,
+      "team": "Georgetown",
+      "conference": "Big East",
+      "wins": 9,
+      "losses": 23,
+      "adj_off": 105.26,
+      "adj_def": 107.88,
+      "adj_net": -2.62
+    },
+    {
+      "rank": 196,
+      "team": "Temple",
+      "conference": "American",
+      "wins": 15,
+      "losses": 20,
+      "adj_off": 96.07,
+      "adj_def": 98.86,
+      "adj_net": -2.79
+    },
+    {
+      "rank": 197,
+      "team": "Stony Brook",
+      "conference": "CAA",
+      "wins": 19,
+      "losses": 15,
+      "adj_off": 96.22,
+      "adj_def": 99.01,
+      "adj_net": -2.8
+    },
+    {
+      "rank": 198,
+      "team": "Monmouth",
+      "conference": "CAA",
+      "wins": 18,
+      "losses": 15,
+      "adj_off": 99.08,
+      "adj_def": 102.08,
+      "adj_net": -3.01
+    },
+    {
+      "rank": 199,
+      "team": "Texas A&M-Corpus Christi",
+      "conference": "Southland",
+      "wins": 17,
+      "losses": 12,
+      "adj_off": 83.51,
+      "adj_def": 86.56,
+      "adj_net": -3.05
+    },
+    {
+      "rank": 200,
+      "team": "Brown",
+      "conference": "Ivy",
+      "wins": 12,
+      "losses": 18,
+      "adj_off": 96.21,
+      "adj_def": 99.37,
+      "adj_net": -3.15
+    },
+    {
+      "rank": 201,
+      "team": "Winthrop",
+      "conference": "Big South",
+      "wins": 14,
+      "losses": 15,
+      "adj_off": 96.75,
+      "adj_def": 99.92,
+      "adj_net": -3.18
+    },
+    {
+      "rank": 202,
+      "team": "Marist",
+      "conference": "Metro",
+      "wins": 18,
+      "losses": 13,
+      "adj_off": 93.19,
+      "adj_def": 96.41,
+      "adj_net": -3.22
+    },
+    {
+      "rank": 203,
+      "team": "Jacksonville State",
+      "conference": "CUSA",
+      "wins": 11,
+      "losses": 18,
+      "adj_off": 85.28,
+      "adj_def": 88.51,
+      "adj_net": -3.23
+    },
+    {
+      "rank": 204,
+      "team": "Pepperdine",
+      "conference": "WCC",
+      "wins": 11,
+      "losses": 20,
+      "adj_off": 102.32,
+      "adj_def": 105.59,
+      "adj_net": -3.27
+    },
+    {
+      "rank": 205,
       "team": "Fresno State",
       "conference": "Mountain West",
       "wins": 11,
       "losses": 21,
-      "adj_off": 96.96,
-      "adj_def": 103.95,
-      "adj_net": -6.99
+      "adj_off": 98.75,
+      "adj_def": 102.06,
+      "adj_net": -3.31
+    },
+    {
+      "rank": 206,
+      "team": "East Tennessee State",
+      "conference": "SoCon",
+      "wins": 17,
+      "losses": 16,
+      "adj_off": 96.04,
+      "adj_def": 99.42,
+      "adj_net": -3.38
+    },
+    {
+      "rank": 207,
+      "team": "UTEP",
+      "conference": "CUSA",
+      "wins": 15,
+      "losses": 16,
+      "adj_off": 90.58,
+      "adj_def": 94.24,
+      "adj_net": -3.66
+    },
+    {
+      "rank": 208,
+      "team": "San Jos\u00e9 State",
+      "conference": "Mountain West",
+      "wins": 8,
+      "losses": 23,
+      "adj_off": 101.87,
+      "adj_def": 105.57,
+      "adj_net": -3.7
+    },
+    {
+      "rank": 209,
+      "team": "Georgia State",
+      "conference": "Sun Belt",
+      "wins": 12,
+      "losses": 17,
+      "adj_off": 101.64,
+      "adj_def": 105.41,
+      "adj_net": -3.77
+    },
+    {
+      "rank": 210,
+      "team": "Tulsa",
+      "conference": "American",
+      "wins": 15,
+      "losses": 15,
+      "adj_off": 89.43,
+      "adj_def": 93.29,
+      "adj_net": -3.86
+    },
+    {
+      "rank": 211,
+      "team": "Wofford",
+      "conference": "SoCon",
+      "wins": 14,
+      "losses": 15,
+      "adj_off": 100.92,
+      "adj_def": 104.8,
+      "adj_net": -3.89
+    },
+    {
+      "rank": 212,
+      "team": "Evansville",
+      "conference": "MVC",
+      "wins": 16,
+      "losses": 18,
+      "adj_off": 96.11,
+      "adj_def": 100.24,
+      "adj_net": -4.13
+    },
+    {
+      "rank": 213,
+      "team": "Pennsylvania",
+      "conference": "Ivy",
+      "wins": 9,
+      "losses": 18,
+      "adj_off": 102.48,
+      "adj_def": 106.7,
+      "adj_net": -4.22
+    },
+    {
+      "rank": 214,
+      "team": "Radford",
+      "conference": "Big South",
+      "wins": 14,
+      "losses": 17,
+      "adj_off": 101.03,
+      "adj_def": 105.31,
+      "adj_net": -4.28
+    },
+    {
+      "rank": 215,
+      "team": "Florida Gulf Coast",
+      "conference": "ASUN",
+      "wins": 11,
+      "losses": 18,
+      "adj_off": 98.35,
+      "adj_def": 102.64,
+      "adj_net": -4.29
+    },
+    {
+      "rank": 216,
+      "team": "Mercer",
+      "conference": "SoCon",
+      "wins": 14,
+      "losses": 16,
+      "adj_off": 97.36,
+      "adj_def": 101.75,
+      "adj_net": -4.39
+    },
+    {
+      "rank": 217,
+      "team": "Montana State",
+      "conference": "Big Sky",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 97.84,
+      "adj_def": 102.49,
+      "adj_net": -4.64
+    },
+    {
+      "rank": 218,
+      "team": "Cleveland State",
+      "conference": "Horizon",
+      "wins": 20,
+      "losses": 15,
+      "adj_off": 98.73,
+      "adj_def": 103.57,
+      "adj_net": -4.84
+    },
+    {
+      "rank": 219,
+      "team": "Gardner-Webb",
+      "conference": "Big South",
+      "wins": 14,
+      "losses": 16,
+      "adj_off": 94.45,
+      "adj_def": 99.38,
+      "adj_net": -4.94
+    },
+    {
+      "rank": 220,
+      "team": "Bowling Green",
+      "conference": "MAC",
+      "wins": 18,
+      "losses": 14,
+      "adj_off": 95.48,
+      "adj_def": 100.51,
+      "adj_net": -5.03
+    },
+    {
+      "rank": 221,
+      "team": "Rider",
+      "conference": "Metro",
+      "wins": 14,
+      "losses": 17,
+      "adj_off": 95.56,
+      "adj_def": 100.65,
+      "adj_net": -5.1
+    },
+    {
+      "rank": 222,
+      "team": "North Dakota",
+      "conference": "Summit",
+      "wins": 15,
+      "losses": 14,
+      "adj_off": 99.32,
+      "adj_def": 104.64,
+      "adj_net": -5.32
+    },
+    {
+      "rank": 223,
+      "team": "Merrimack",
+      "conference": "NEC",
+      "wins": 19,
+      "losses": 12,
+      "adj_off": 87.91,
+      "adj_def": 93.28,
+      "adj_net": -5.37
+    },
+    {
+      "rank": 224,
+      "team": "Northern Kentucky",
+      "conference": "Horizon",
+      "wins": 16,
+      "losses": 15,
+      "adj_off": 97.12,
+      "adj_def": 102.61,
+      "adj_net": -5.49
+    },
+    {
+      "rank": 225,
+      "team": "Lehigh",
+      "conference": "Patriot",
+      "wins": 12,
+      "losses": 18,
+      "adj_off": 92.65,
+      "adj_def": 98.2,
+      "adj_net": -5.55
+    },
+    {
+      "rank": 226,
+      "team": "Kansas City",
+      "conference": "Summit",
+      "wins": 13,
+      "losses": 16,
+      "adj_off": 95.42,
+      "adj_def": 101,
+      "adj_net": -5.58
     },
     {
       "rank": 227,
@@ -2269,109 +2269,109 @@
       "conference": "Sun Belt",
       "wins": 14,
       "losses": 15,
-      "adj_off": 89.61,
-      "adj_def": 96.61,
-      "adj_net": -7.01
+      "adj_off": 89.27,
+      "adj_def": 95.06,
+      "adj_net": -5.79
     },
     {
       "rank": 228,
-      "team": "San Jos\u00e9 State",
-      "conference": "Mountain West",
-      "wins": 8,
-      "losses": 23,
-      "adj_off": 100.45,
-      "adj_def": 107.48,
-      "adj_net": -7.04
-    },
-    {
-      "rank": 229,
-      "team": "Mount St. Mary's",
-      "conference": "Metro",
-      "wins": 13,
-      "losses": 19,
-      "adj_off": 91.69,
-      "adj_def": 98.77,
-      "adj_net": -7.08
-    },
-    {
-      "rank": 230,
-      "team": "Tulsa",
-      "conference": "American",
-      "wins": 15,
-      "losses": 15,
-      "adj_off": 86.93,
-      "adj_def": 94.11,
-      "adj_net": -7.18
-    },
-    {
-      "rank": 231,
       "team": "Maine",
       "conference": "Am. East",
       "wins": 14,
       "losses": 17,
-      "adj_off": 91.13,
-      "adj_def": 98.46,
-      "adj_net": -7.33
+      "adj_off": 91.95,
+      "adj_def": 97.78,
+      "adj_net": -5.83
+    },
+    {
+      "rank": 229,
+      "team": "Cal State Fullerton",
+      "conference": "Big West",
+      "wins": 12,
+      "losses": 18,
+      "adj_off": 93.22,
+      "adj_def": 99.08,
+      "adj_net": -5.85
+    },
+    {
+      "rank": 230,
+      "team": "Mount St. Mary's",
+      "conference": "Metro",
+      "wins": 13,
+      "losses": 19,
+      "adj_off": 90.25,
+      "adj_def": 96.25,
+      "adj_net": -5.99
+    },
+    {
+      "rank": 231,
+      "team": "Eastern Kentucky",
+      "conference": "ASUN",
+      "wins": 14,
+      "losses": 14,
+      "adj_off": 99.31,
+      "adj_def": 105.32,
+      "adj_net": -6.02
     },
     {
       "rank": 232,
-      "team": "Gardner-Webb",
-      "conference": "Big South",
-      "wins": 14,
-      "losses": 16,
-      "adj_off": 94.34,
-      "adj_def": 101.73,
-      "adj_net": -7.39
+      "team": "UTSA",
+      "conference": "American",
+      "wins": 10,
+      "losses": 21,
+      "adj_off": 101.53,
+      "adj_def": 107.57,
+      "adj_net": -6.03
     },
     {
       "rank": 233,
-      "team": "Texas A&M-Corpus Christi",
-      "conference": "Southland",
-      "wins": 17,
-      "losses": 12,
-      "adj_off": 81.81,
-      "adj_def": 89.33,
-      "adj_net": -7.52
+      "team": "San Diego",
+      "conference": "WCC",
+      "wins": 16,
+      "losses": 15,
+      "adj_off": 91.39,
+      "adj_def": 97.58,
+      "adj_net": -6.19
     },
     {
       "rank": 234,
-      "team": "Lehigh",
-      "conference": "Patriot",
-      "wins": 12,
-      "losses": 18,
-      "adj_off": 91.5,
-      "adj_def": 99.06,
-      "adj_net": -7.56
+      "team": "Harvard",
+      "conference": "Ivy",
+      "wins": 13,
+      "losses": 13,
+      "adj_off": 95.59,
+      "adj_def": 101.79,
+      "adj_net": -6.2
     },
     {
       "rank": 235,
-      "team": "Georgia State",
-      "conference": "Sun Belt",
-      "wins": 12,
-      "losses": 17,
-      "adj_off": 99.97,
-      "adj_def": 107.55,
-      "adj_net": -7.58
+      "team": "North Florida",
+      "conference": "ASUN",
+      "wins": 13,
+      "losses": 16,
+      "adj_off": 103.65,
+      "adj_def": 109.97,
+      "adj_net": -6.32
     },
     {
       "rank": 236,
-      "team": "Grambling",
-      "conference": "SWAC",
-      "wins": 18,
-      "losses": 15,
-      "adj_off": 93.84,
-      "adj_def": 101.59,
-      "adj_net": -7.76
+      "team": "Austin Peay",
+      "conference": "ASUN",
+      "wins": 16,
+      "losses": 16,
+      "adj_off": 101.76,
+      "adj_def": 108.12,
+      "adj_net": -6.36
     },
     {
       "rank": 237,
-      "team": "Radford",
-      "conference": "Big South",
-      "wins": 14,
-      "losses": 17,
-      "adj_off": 100.61,
-      "adj_def": 108.43,
-      "adj_net": -7.82
+      "team": "Abilene Christian",
+      "conference": "UAC",
+      "wins": 15,
+      "losses": 18,
+      "adj_off": 94.92,
+      "adj_def": 101.33,
+      "adj_net": -6.41
     },
     {
       "rank": 238,
@@ -2379,369 +2379,369 @@
       "conference": "OVC",
       "wins": 17,
       "losses": 11,
-      "adj_off": 100.39,
-      "adj_def": 108.32,
-      "adj_net": -7.93
+      "adj_off": 100.03,
+      "adj_def": 106.7,
+      "adj_net": -6.68
     },
     {
       "rank": 239,
-      "team": "Norfolk State",
-      "conference": "MEAC",
-      "wins": 20,
-      "losses": 11,
-      "adj_off": 98.43,
-      "adj_def": 106.52,
-      "adj_net": -8.09
-    },
-    {
-      "rank": 240,
       "team": "Rice",
       "conference": "American",
       "wins": 10,
       "losses": 21,
-      "adj_off": 99.95,
-      "adj_def": 108.09,
-      "adj_net": -8.14
+      "adj_off": 99.64,
+      "adj_def": 106.37,
+      "adj_net": -6.73
     },
     {
-      "rank": 241,
-      "team": "Eastern Kentucky",
-      "conference": "ASUN",
-      "wins": 14,
-      "losses": 14,
-      "adj_off": 99.6,
-      "adj_def": 108.24,
-      "adj_net": -8.64
-    },
-    {
-      "rank": 242,
-      "team": "Pennsylvania",
-      "conference": "Ivy",
-      "wins": 9,
-      "losses": 18,
-      "adj_off": 102.08,
-      "adj_def": 110.77,
-      "adj_net": -8.69
-    },
-    {
-      "rank": 243,
-      "team": "Rhode Island",
-      "conference": "A-10",
-      "wins": 11,
-      "losses": 20,
-      "adj_off": 100.09,
-      "adj_def": 109.11,
-      "adj_net": -9.02
-    },
-    {
-      "rank": 244,
-      "team": "Southern Miss",
-      "conference": "Sun Belt",
-      "wins": 14,
-      "losses": 16,
-      "adj_off": 94.19,
-      "adj_def": 103.28,
-      "adj_net": -9.09
-    },
-    {
-      "rank": 245,
-      "team": "Ball State",
-      "conference": "MAC",
-      "wins": 13,
-      "losses": 16,
-      "adj_off": 96.56,
-      "adj_def": 105.68,
-      "adj_net": -9.12
-    },
-    {
-      "rank": 246,
-      "team": "UAlbany",
-      "conference": "Am. East",
-      "wins": 12,
-      "losses": 19,
-      "adj_off": 88.28,
-      "adj_def": 97.43,
-      "adj_net": -9.15
-    },
-    {
-      "rank": 247,
-      "team": "Bowling Green",
-      "conference": "MAC",
-      "wins": 18,
-      "losses": 14,
-      "adj_off": 94.04,
-      "adj_def": 103.62,
-      "adj_net": -9.58
-    },
-    {
-      "rank": 248,
-      "team": "Portland",
-      "conference": "WCC",
-      "wins": 10,
-      "losses": 21,
-      "adj_off": 95.83,
-      "adj_def": 105.43,
-      "adj_net": -9.6
-    },
-    {
-      "rank": 249,
-      "team": "North Carolina Central",
-      "conference": "MEAC",
-      "wins": 14,
-      "losses": 13,
-      "adj_off": 101.52,
-      "adj_def": 111.32,
-      "adj_net": -9.8
-    },
-    {
-      "rank": 250,
-      "team": "DePaul",
-      "conference": "Big East",
-      "wins": 3,
-      "losses": 29,
-      "adj_off": 87.34,
-      "adj_def": 97.17,
-      "adj_net": -9.83
-    },
-    {
-      "rank": 251,
-      "team": "Austin Peay",
-      "conference": "ASUN",
-      "wins": 16,
-      "losses": 16,
-      "adj_off": 103.24,
-      "adj_def": 113.12,
-      "adj_net": -9.88
-    },
-    {
-      "rank": 252,
-      "team": "Central Michigan",
-      "conference": "MAC",
-      "wins": 17,
-      "losses": 14,
-      "adj_off": 90.24,
-      "adj_def": 100.16,
-      "adj_net": -9.93
-    },
-    {
-      "rank": 253,
-      "team": "Queens University",
-      "conference": "ASUN",
-      "wins": 12,
-      "losses": 19,
-      "adj_off": 95.12,
-      "adj_def": 105.21,
-      "adj_net": -10.09
-    },
-    {
-      "rank": 254,
-      "team": "North Dakota State",
-      "conference": "Summit",
-      "wins": 12,
-      "losses": 17,
-      "adj_off": 97.27,
-      "adj_def": 107.37,
-      "adj_net": -10.1
-    },
-    {
-      "rank": 255,
-      "team": "Texas Southern",
-      "conference": "SWAC",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 92.35,
-      "adj_def": 102.48,
-      "adj_net": -10.12
-    },
-    {
-      "rank": 256,
-      "team": "Sacred Heart",
-      "conference": "NEC",
-      "wins": 14,
-      "losses": 16,
-      "adj_off": 96.93,
-      "adj_def": 107.12,
-      "adj_net": -10.19
-    },
-    {
-      "rank": 257,
-      "team": "Harvard",
-      "conference": "Ivy",
-      "wins": 13,
-      "losses": 13,
-      "adj_off": 91.78,
-      "adj_def": 102,
-      "adj_net": -10.22
-    },
-    {
-      "rank": 258,
-      "team": "Kennesaw State",
-      "conference": "ASUN",
-      "wins": 12,
-      "losses": 16,
-      "adj_off": 98.33,
-      "adj_def": 108.59,
-      "adj_net": -10.25
-    },
-    {
-      "rank": 259,
+      "rank": 240,
       "team": "Marshall",
       "conference": "Sun Belt",
       "wins": 12,
       "losses": 20,
-      "adj_off": 93.87,
-      "adj_def": 104.19,
-      "adj_net": -10.32
+      "adj_off": 94.94,
+      "adj_def": 101.72,
+      "adj_net": -6.77
     },
     {
-      "rank": 260,
+      "rank": 241,
       "team": "The Citadel",
       "conference": "SoCon",
       "wins": 8,
       "losses": 21,
-      "adj_off": 97.22,
-      "adj_def": 107.57,
-      "adj_net": -10.36
+      "adj_off": 97.76,
+      "adj_def": 104.54,
+      "adj_net": -6.78
     },
     {
-      "rank": 261,
+      "rank": 242,
+      "team": "Kennesaw State",
+      "conference": "ASUN",
+      "wins": 12,
+      "losses": 16,
+      "adj_off": 100.12,
+      "adj_def": 106.93,
+      "adj_net": -6.81
+    },
+    {
+      "rank": 243,
+      "team": "Southern Miss",
+      "conference": "Sun Belt",
+      "wins": 14,
+      "losses": 16,
+      "adj_off": 96.23,
+      "adj_def": 103.06,
+      "adj_net": -6.83
+    },
+    {
+      "rank": 244,
+      "team": "Green Bay",
+      "conference": "Horizon",
+      "wins": 16,
+      "losses": 14,
+      "adj_off": 96.8,
+      "adj_def": 103.68,
+      "adj_net": -6.88
+    },
+    {
+      "rank": 245,
+      "team": "Rhode Island",
+      "conference": "A-10",
+      "wins": 11,
+      "losses": 20,
+      "adj_off": 101.12,
+      "adj_def": 108.15,
+      "adj_net": -7.04
+    },
+    {
+      "rank": 246,
+      "team": "Ball State",
+      "conference": "MAC",
+      "wins": 13,
+      "losses": 16,
+      "adj_off": 98.12,
+      "adj_def": 105.18,
+      "adj_net": -7.06
+    },
+    {
+      "rank": 247,
       "team": "Nicholls",
       "conference": "Southland",
       "wins": 17,
       "losses": 14,
-      "adj_off": 101.22,
-      "adj_def": 111.7,
-      "adj_net": -10.48
+      "adj_off": 100.66,
+      "adj_def": 107.72,
+      "adj_net": -7.06
     },
     {
-      "rank": 262,
-      "team": "Binghamton",
-      "conference": "Am. East",
-      "wins": 13,
+      "rank": 248,
+      "team": "Norfolk State",
+      "conference": "MEAC",
+      "wins": 20,
+      "losses": 11,
+      "adj_off": 96.52,
+      "adj_def": 103.61,
+      "adj_net": -7.08
+    },
+    {
+      "rank": 249,
+      "team": "Milwaukee",
+      "conference": "Horizon",
+      "wins": 18,
       "losses": 15,
-      "adj_off": 96.79,
-      "adj_def": 107.27,
-      "adj_net": -10.48
+      "adj_off": 99.02,
+      "adj_def": 106.11,
+      "adj_net": -7.09
     },
     {
-      "rank": 263,
-      "team": "Stetson",
-      "conference": "ASUN",
-      "wins": 19,
-      "losses": 13,
-      "adj_off": 101.09,
-      "adj_def": 111.59,
-      "adj_net": -10.5
-    },
-    {
-      "rank": 264,
-      "team": "San Diego",
-      "conference": "WCC",
-      "wins": 16,
-      "losses": 15,
-      "adj_off": 90.17,
-      "adj_def": 100.77,
-      "adj_net": -10.59
-    },
-    {
-      "rank": 265,
-      "team": "Chicago State",
-      "conference": "Indep.",
-      "wins": 10,
-      "losses": 19,
-      "adj_off": 94.02,
-      "adj_def": 104.63,
-      "adj_net": -10.61
-    },
-    {
-      "rank": 266,
-      "team": "Columbia",
-      "conference": "Ivy",
-      "wins": 10,
-      "losses": 14,
-      "adj_off": 98.13,
-      "adj_def": 108.75,
-      "adj_net": -10.63
-    },
-    {
-      "rank": 267,
-      "team": "Southern Utah",
-      "conference": "UAC",
-      "wins": 8,
-      "losses": 21,
-      "adj_off": 94.32,
-      "adj_def": 105.01,
-      "adj_net": -10.69
-    },
-    {
-      "rank": 268,
-      "team": "Air Force",
-      "conference": "Mountain West",
-      "wins": 9,
-      "losses": 22,
-      "adj_off": 93.67,
-      "adj_def": 104.56,
-      "adj_net": -10.89
-    },
-    {
-      "rank": 269,
-      "team": "Lamar",
-      "conference": "Southland",
-      "wins": 17,
-      "losses": 14,
-      "adj_off": 90.9,
-      "adj_def": 101.8,
-      "adj_net": -10.9
-    },
-    {
-      "rank": 270,
-      "team": "Omaha",
-      "conference": "Summit",
-      "wins": 11,
-      "losses": 18,
-      "adj_off": 94.89,
-      "adj_def": 105.82,
-      "adj_net": -10.93
-    },
-    {
-      "rank": 271,
+      "rank": 250,
       "team": "New Hampshire",
       "conference": "Am. East",
       "wins": 15,
       "losses": 15,
-      "adj_off": 89.92,
-      "adj_def": 100.89,
-      "adj_net": -10.98
+      "adj_off": 92.16,
+      "adj_def": 99.57,
+      "adj_net": -7.41
     },
     {
-      "rank": 272,
+      "rank": 251,
+      "team": "Lamar",
+      "conference": "Southland",
+      "wins": 17,
+      "losses": 14,
+      "adj_off": 92.91,
+      "adj_def": 100.33,
+      "adj_net": -7.42
+    },
+    {
+      "rank": 252,
       "team": "Canisius",
       "conference": "Metro",
       "wins": 13,
       "losses": 18,
-      "adj_off": 92.34,
-      "adj_def": 103.51,
-      "adj_net": -11.17
+      "adj_off": 95.49,
+      "adj_def": 102.91,
+      "adj_net": -7.42
     },
     {
-      "rank": 273,
-      "team": "Le Moyne",
-      "conference": "NEC",
+      "rank": 253,
+      "team": "Southern Utah",
+      "conference": "UAC",
+      "wins": 8,
+      "losses": 21,
+      "adj_off": 98.02,
+      "adj_def": 105.56,
+      "adj_net": -7.55
+    },
+    {
+      "rank": 254,
+      "team": "Air Force",
+      "conference": "Mountain West",
+      "wins": 9,
+      "losses": 22,
+      "adj_off": 94.76,
+      "adj_def": 102.38,
+      "adj_net": -7.62
+    },
+    {
+      "rank": 255,
+      "team": "North Dakota State",
+      "conference": "Summit",
       "wins": 12,
       "losses": 17,
-      "adj_off": 93.79,
-      "adj_def": 105.01,
-      "adj_net": -11.22
+      "adj_off": 99.13,
+      "adj_def": 106.76,
+      "adj_net": -7.63
     },
     {
-      "rank": 274,
+      "rank": 256,
+      "team": "Georgia Southern",
+      "conference": "Sun Belt",
+      "wins": 9,
+      "losses": 24,
+      "adj_off": 98.11,
+      "adj_def": 105.76,
+      "adj_net": -7.65
+    },
+    {
+      "rank": 257,
+      "team": "Stetson",
+      "conference": "ASUN",
+      "wins": 19,
+      "losses": 13,
+      "adj_off": 102.57,
+      "adj_def": 110.25,
+      "adj_net": -7.69
+    },
+    {
+      "rank": 258,
+      "team": "Columbia",
+      "conference": "Ivy",
+      "wins": 10,
+      "losses": 14,
+      "adj_off": 99.86,
+      "adj_def": 107.8,
+      "adj_net": -7.94
+    },
+    {
+      "rank": 259,
+      "team": "Central Michigan",
+      "conference": "MAC",
+      "wins": 17,
+      "losses": 14,
+      "adj_off": 91.8,
+      "adj_def": 99.77,
+      "adj_net": -7.97
+    },
+    {
+      "rank": 260,
+      "team": "Bucknell",
+      "conference": "Patriot",
+      "wins": 14,
+      "losses": 19,
+      "adj_off": 94.28,
+      "adj_def": 102.37,
+      "adj_net": -8.09
+    },
+    {
+      "rank": 261,
+      "team": "Miami (OH)",
+      "conference": "MAC",
+      "wins": 13,
+      "losses": 17,
+      "adj_off": 95.05,
+      "adj_def": 103.52,
+      "adj_net": -8.47
+    },
+    {
+      "rank": 262,
+      "team": "Portland State",
+      "conference": "Big Sky",
+      "wins": 14,
+      "losses": 15,
+      "adj_off": 92.84,
+      "adj_def": 101.43,
+      "adj_net": -8.59
+    },
+    {
+      "rank": 263,
+      "team": "Denver",
+      "conference": "Summit",
+      "wins": 13,
+      "losses": 17,
+      "adj_off": 101.89,
+      "adj_def": 110.61,
+      "adj_net": -8.73
+    },
+    {
+      "rank": 264,
+      "team": "Omaha",
+      "conference": "Summit",
+      "wins": 11,
+      "losses": 18,
+      "adj_off": 97.32,
+      "adj_def": 106.14,
+      "adj_net": -8.82
+    },
+    {
+      "rank": 265,
+      "team": "UAlbany",
+      "conference": "Am. East",
+      "wins": 12,
+      "losses": 19,
+      "adj_off": 86.07,
+      "adj_def": 94.92,
+      "adj_net": -8.85
+    },
+    {
+      "rank": 266,
+      "team": "Northeastern",
+      "conference": "CAA",
+      "wins": 12,
+      "losses": 20,
+      "adj_off": 98.96,
+      "adj_def": 107.86,
+      "adj_net": -8.9
+    },
+    {
+      "rank": 267,
       "team": "Jacksonville",
       "conference": "ASUN",
       "wins": 13,
       "losses": 17,
-      "adj_off": 95.48,
-      "adj_def": 106.71,
-      "adj_net": -11.23
+      "adj_off": 95.18,
+      "adj_def": 104.17,
+      "adj_net": -8.98
+    },
+    {
+      "rank": 268,
+      "team": "UMBC",
+      "conference": "Am. East",
+      "wins": 10,
+      "losses": 21,
+      "adj_off": 100.11,
+      "adj_def": 109.13,
+      "adj_net": -9.02
+    },
+    {
+      "rank": 269,
+      "team": "Portland",
+      "conference": "WCC",
+      "wins": 10,
+      "losses": 21,
+      "adj_off": 93.36,
+      "adj_def": 102.52,
+      "adj_net": -9.16
+    },
+    {
+      "rank": 270,
+      "team": "North Alabama",
+      "conference": "ASUN",
+      "wins": 13,
+      "losses": 17,
+      "adj_off": 97.79,
+      "adj_def": 107.01,
+      "adj_net": -9.21
+    },
+    {
+      "rank": 271,
+      "team": "Western Michigan",
+      "conference": "MAC",
+      "wins": 11,
+      "losses": 20,
+      "adj_off": 95.7,
+      "adj_def": 105.15,
+      "adj_net": -9.46
+    },
+    {
+      "rank": 272,
+      "team": "Idaho State",
+      "conference": "Big Sky",
+      "wins": 12,
+      "losses": 20,
+      "adj_off": 95.06,
+      "adj_def": 104.58,
+      "adj_net": -9.51
+    },
+    {
+      "rank": 273,
+      "team": "Niagara",
+      "conference": "Metro",
+      "wins": 15,
+      "losses": 16,
+      "adj_off": 95.37,
+      "adj_def": 105.15,
+      "adj_net": -9.78
+    },
+    {
+      "rank": 274,
+      "team": "Oral Roberts",
+      "conference": "Summit",
+      "wins": 9,
+      "losses": 19,
+      "adj_off": 96.6,
+      "adj_def": 106.38,
+      "adj_net": -9.78
     },
     {
       "rank": 275,
@@ -2749,479 +2749,479 @@
       "conference": "MEAC",
       "wins": 16,
       "losses": 17,
-      "adj_off": 100.92,
-      "adj_def": 112.37,
-      "adj_net": -11.45
+      "adj_off": 101.36,
+      "adj_def": 111.3,
+      "adj_net": -9.93
     },
     {
       "rank": 276,
-      "team": "Miami (OH)",
-      "conference": "MAC",
-      "wins": 13,
-      "losses": 17,
-      "adj_off": 91.5,
-      "adj_def": 103.14,
-      "adj_net": -11.64
-    },
-    {
-      "rank": 277,
-      "team": "Northeastern",
-      "conference": "CAA",
-      "wins": 12,
-      "losses": 20,
-      "adj_off": 97.72,
-      "adj_def": 109.47,
-      "adj_net": -11.75
-    },
-    {
-      "rank": 278,
-      "team": "Niagara",
-      "conference": "Metro",
-      "wins": 15,
-      "losses": 16,
-      "adj_off": 92.36,
-      "adj_def": 104.19,
-      "adj_net": -11.83
-    },
-    {
-      "rank": 279,
-      "team": "Central Connecticut",
-      "conference": "NEC",
-      "wins": 18,
-      "losses": 11,
-      "adj_off": 94.26,
-      "adj_def": 106.17,
-      "adj_net": -11.91
-    },
-    {
-      "rank": 280,
-      "team": "North Alabama",
-      "conference": "ASUN",
-      "wins": 13,
-      "losses": 17,
-      "adj_off": 95.52,
-      "adj_def": 107.43,
-      "adj_net": -11.91
-    },
-    {
-      "rank": 281,
-      "team": "Presbyterian",
-      "conference": "Big South",
-      "wins": 11,
-      "losses": 19,
-      "adj_off": 93.58,
-      "adj_def": 105.67,
-      "adj_net": -12.09
-    },
-    {
-      "rank": 282,
-      "team": "Idaho State",
-      "conference": "Big Sky",
-      "wins": 12,
-      "losses": 20,
-      "adj_off": 95.23,
-      "adj_def": 107.34,
-      "adj_net": -12.11
-    },
-    {
-      "rank": 283,
-      "team": "Wagner",
-      "conference": "NEC",
-      "wins": 15,
-      "losses": 16,
-      "adj_off": 90.17,
-      "adj_def": 102.47,
-      "adj_net": -12.3
-    },
-    {
-      "rank": 284,
-      "team": "Denver",
-      "conference": "Summit",
-      "wins": 13,
-      "losses": 17,
-      "adj_off": 97.58,
-      "adj_def": 109.92,
-      "adj_net": -12.33
-    },
-    {
-      "rank": 285,
-      "team": "Sacramento State",
-      "conference": "Big Sky",
-      "wins": 8,
-      "losses": 24,
-      "adj_off": 91.58,
-      "adj_def": 104.02,
-      "adj_net": -12.44
-    },
-    {
-      "rank": 286,
-      "team": "American University",
-      "conference": "Patriot",
-      "wins": 15,
-      "losses": 16,
-      "adj_off": 97.3,
-      "adj_def": 109.75,
-      "adj_net": -12.44
-    },
-    {
-      "rank": 287,
-      "team": "Southern",
-      "conference": "SWAC",
-      "wins": 15,
-      "losses": 14,
-      "adj_off": 75.54,
-      "adj_def": 88.11,
-      "adj_net": -12.57
-    },
-    {
-      "rank": 288,
       "team": "Western Illinois",
       "conference": "OVC",
       "wins": 17,
       "losses": 12,
-      "adj_off": 89.48,
-      "adj_def": 102.11,
-      "adj_net": -12.63
+      "adj_off": 90.46,
+      "adj_def": 100.43,
+      "adj_net": -9.97
     },
     {
-      "rank": 289,
-      "team": "Portland State",
-      "conference": "Big Sky",
-      "wins": 14,
+      "rank": 277,
+      "team": "Binghamton",
+      "conference": "Am. East",
+      "wins": 13,
       "losses": 15,
-      "adj_off": 89.27,
-      "adj_def": 101.93,
-      "adj_net": -12.66
+      "adj_off": 97.1,
+      "adj_def": 107.14,
+      "adj_net": -10.05
     },
     {
-      "rank": 290,
-      "team": "Middle Tennessee",
-      "conference": "CUSA",
-      "wins": 12,
-      "losses": 19,
-      "adj_off": 90.18,
-      "adj_def": 102.96,
-      "adj_net": -12.77
-    },
-    {
-      "rank": 291,
-      "team": "Bethune-Cookman",
+      "rank": 278,
+      "team": "Southern",
       "conference": "SWAC",
       "wins": 15,
-      "losses": 17,
-      "adj_off": 95.33,
-      "adj_def": 108.22,
-      "adj_net": -12.89
+      "losses": 14,
+      "adj_off": 79.11,
+      "adj_def": 89.16,
+      "adj_net": -10.05
     },
     {
-      "rank": 292,
-      "team": "Valparaiso",
-      "conference": "MVC",
-      "wins": 6,
-      "losses": 25,
-      "adj_off": 95.28,
-      "adj_def": 108.3,
-      "adj_net": -13.03
+      "rank": 279,
+      "team": "Queens University",
+      "conference": "ASUN",
+      "wins": 12,
+      "losses": 19,
+      "adj_off": 95.53,
+      "adj_def": 105.78,
+      "adj_net": -10.24
     },
     {
-      "rank": 293,
-      "team": "Western Michigan",
-      "conference": "MAC",
-      "wins": 11,
-      "losses": 20,
-      "adj_off": 94.1,
-      "adj_def": 107.14,
-      "adj_net": -13.05
+      "rank": 280,
+      "team": "Central Connecticut",
+      "conference": "NEC",
+      "wins": 18,
+      "losses": 11,
+      "adj_off": 95.04,
+      "adj_def": 105.33,
+      "adj_net": -10.29
     },
     {
-      "rank": 294,
-      "team": "South Carolina Upstate",
-      "conference": "Big South",
-      "wins": 7,
-      "losses": 20,
-      "adj_off": 91.35,
-      "adj_def": 104.61,
-      "adj_net": -13.26
-    },
-    {
-      "rank": 295,
-      "team": "Boston University",
+      "rank": 281,
+      "team": "American University",
       "conference": "Patriot",
       "wins": 15,
-      "losses": 17,
-      "adj_off": 91.79,
-      "adj_def": 105.17,
-      "adj_net": -13.37
+      "losses": 16,
+      "adj_off": 98.7,
+      "adj_def": 109.13,
+      "adj_net": -10.43
     },
     {
-      "rank": 296,
-      "team": "Utah Tech",
-      "conference": "UAC",
-      "wins": 10,
-      "losses": 20,
-      "adj_off": 91.91,
-      "adj_def": 105.32,
-      "adj_net": -13.41
+      "rank": 282,
+      "team": "Sacred Heart",
+      "conference": "NEC",
+      "wins": 14,
+      "losses": 16,
+      "adj_off": 96.37,
+      "adj_def": 106.83,
+      "adj_net": -10.46
     },
     {
-      "rank": 297,
-      "team": "UL Monroe",
-      "conference": "Sun Belt",
-      "wins": 9,
+      "rank": 283,
+      "team": "DePaul",
+      "conference": "Big East",
+      "wins": 3,
+      "losses": 29,
+      "adj_off": 88.54,
+      "adj_def": 99.1,
+      "adj_net": -10.56
+    },
+    {
+      "rank": 284,
+      "team": "Sacramento State",
+      "conference": "Big Sky",
+      "wins": 8,
+      "losses": 24,
+      "adj_off": 92.84,
+      "adj_def": 103.87,
+      "adj_net": -11.02
+    },
+    {
+      "rank": 285,
+      "team": "North Carolina Central",
+      "conference": "MEAC",
+      "wins": 14,
+      "losses": 13,
+      "adj_off": 95.64,
+      "adj_def": 106.79,
+      "adj_net": -11.15
+    },
+    {
+      "rank": 286,
+      "team": "Presbyterian",
+      "conference": "Big South",
+      "wins": 11,
       "losses": 19,
-      "adj_off": 94.75,
-      "adj_def": 108.33,
-      "adj_net": -13.58
+      "adj_off": 94.46,
+      "adj_def": 105.62,
+      "adj_net": -11.17
     },
     {
-      "rank": 298,
+      "rank": 287,
+      "team": "Chicago State",
+      "conference": "Indep.",
+      "wins": 10,
+      "losses": 19,
+      "adj_off": 90.43,
+      "adj_def": 101.7,
+      "adj_net": -11.27
+    },
+    {
+      "rank": 288,
       "team": "Florida International",
       "conference": "CUSA",
       "wins": 10,
       "losses": 22,
-      "adj_off": 89.43,
-      "adj_def": 103.22,
-      "adj_net": -13.79
+      "adj_off": 92.83,
+      "adj_def": 104.12,
+      "adj_net": -11.29
     },
     {
-      "rank": 299,
-      "team": "Oral Roberts",
-      "conference": "Summit",
-      "wins": 9,
-      "losses": 19,
-      "adj_off": 93.42,
-      "adj_def": 107.57,
-      "adj_net": -14.15
-    },
-    {
-      "rank": 300,
-      "team": "South Carolina State",
-      "conference": "MEAC",
-      "wins": 12,
-      "losses": 18,
-      "adj_off": 89.47,
-      "adj_def": 104.2,
-      "adj_net": -14.73
-    },
-    {
-      "rank": 301,
-      "team": "Old Dominion",
-      "conference": "Sun Belt",
-      "wins": 6,
-      "losses": 25,
-      "adj_off": 90.47,
-      "adj_def": 105.25,
-      "adj_net": -14.79
-    },
-    {
-      "rank": 302,
+      "rank": 289,
       "team": "SIU Edwardsville",
       "conference": "OVC",
       "wins": 14,
       "losses": 16,
-      "adj_off": 89.94,
-      "adj_def": 104.79,
-      "adj_net": -14.85
+      "adj_off": 91.2,
+      "adj_def": 102.49,
+      "adj_net": -11.29
     },
     {
-      "rank": 303,
-      "team": "Arkansas-Pine Bluff",
+      "rank": 290,
+      "team": "Grambling",
       "conference": "SWAC",
-      "wins": 9,
-      "losses": 18,
-      "adj_off": 99.2,
-      "adj_def": 114.11,
-      "adj_net": -14.92
+      "wins": 18,
+      "losses": 15,
+      "adj_off": 91.87,
+      "adj_def": 103.18,
+      "adj_net": -11.31
     },
     {
-      "rank": 304,
-      "team": "Coastal Carolina",
+      "rank": 291,
+      "team": "Old Dominion",
       "conference": "Sun Belt",
-      "wins": 7,
-      "losses": 22,
-      "adj_off": 90.54,
-      "adj_def": 105.48,
-      "adj_net": -14.93
+      "wins": 6,
+      "losses": 25,
+      "adj_off": 92.41,
+      "adj_def": 103.95,
+      "adj_net": -11.54
     },
     {
-      "rank": 305,
-      "team": "Alcorn State",
-      "conference": "SWAC",
-      "wins": 13,
-      "losses": 18,
-      "adj_off": 84.17,
-      "adj_def": 99.14,
-      "adj_net": -14.97
-    },
-    {
-      "rank": 306,
-      "team": "Alabama A&M",
-      "conference": "SWAC",
-      "wins": 12,
-      "losses": 23,
-      "adj_off": 73.93,
-      "adj_def": 89.04,
-      "adj_net": -15.12
-    },
-    {
-      "rank": 307,
-      "team": "Lafayette",
-      "conference": "Patriot",
-      "wins": 10,
-      "losses": 21,
-      "adj_off": 84.5,
-      "adj_def": 99.64,
-      "adj_net": -15.14
-    },
-    {
-      "rank": 308,
-      "team": "Jackson State",
-      "conference": "SWAC",
-      "wins": 15,
-      "losses": 17,
-      "adj_off": 81.77,
-      "adj_def": 96.95,
-      "adj_net": -15.18
-    },
-    {
-      "rank": 309,
-      "team": "William & Mary",
-      "conference": "CAA",
-      "wins": 8,
-      "losses": 23,
-      "adj_off": 95.6,
-      "adj_def": 110.92,
-      "adj_net": -15.33
-    },
-    {
-      "rank": 310,
-      "team": "Prairie View A&M",
-      "conference": "SWAC",
-      "wins": 8,
-      "losses": 21,
-      "adj_off": 75.22,
-      "adj_def": 90.63,
-      "adj_net": -15.41
-    },
-    {
-      "rank": 311,
-      "team": "Alabama State",
-      "conference": "SWAC",
-      "wins": 10,
-      "losses": 19,
-      "adj_off": 89.17,
-      "adj_def": 105.56,
-      "adj_net": -16.39
-    },
-    {
-      "rank": 312,
-      "team": "Robert Morris",
-      "conference": "Horizon",
-      "wins": 8,
-      "losses": 22,
-      "adj_off": 86.2,
-      "adj_def": 102.76,
-      "adj_net": -16.55
-    },
-    {
-      "rank": 313,
-      "team": "New Mexico State",
+      "rank": 292,
+      "team": "Middle Tennessee",
       "conference": "CUSA",
-      "wins": 9,
+      "wins": 12,
       "losses": 19,
-      "adj_off": 95.09,
-      "adj_def": 111.65,
-      "adj_net": -16.57
+      "adj_off": 89.13,
+      "adj_def": 100.95,
+      "adj_net": -11.82
     },
     {
-      "rank": 314,
-      "team": "Eastern Michigan",
-      "conference": "MAC",
-      "wins": 11,
-      "losses": 18,
-      "adj_off": 85.45,
-      "adj_def": 102.26,
-      "adj_net": -16.81
-    },
-    {
-      "rank": 315,
-      "team": "Elon",
-      "conference": "CAA",
-      "wins": 11,
-      "losses": 19,
-      "adj_off": 93.08,
-      "adj_def": 109.97,
-      "adj_net": -16.88
-    },
-    {
-      "rank": 316,
-      "team": "Northern Illinois",
-      "conference": "MAC",
-      "wins": 9,
-      "losses": 20,
-      "adj_off": 94.34,
-      "adj_def": 111.33,
-      "adj_net": -16.99
-    },
-    {
-      "rank": 317,
-      "team": "Delaware State",
-      "conference": "MEAC",
-      "wins": 13,
-      "losses": 19,
-      "adj_off": 78.48,
-      "adj_def": 95.92,
-      "adj_net": -17.44
-    },
-    {
-      "rank": 318,
-      "team": "Eastern Illinois",
-      "conference": "OVC",
-      "wins": 10,
-      "losses": 18,
-      "adj_off": 88.88,
-      "adj_def": 106.37,
-      "adj_net": -17.49
-    },
-    {
-      "rank": 319,
+      "rank": 293,
       "team": "SE Louisiana",
       "conference": "Southland",
       "wins": 12,
       "losses": 17,
-      "adj_off": 89.8,
-      "adj_def": 107.38,
-      "adj_net": -17.59
+      "adj_off": 93.39,
+      "adj_def": 105.21,
+      "adj_net": -11.82
     },
     {
-      "rank": 320,
-      "team": "Campbell",
-      "conference": "CAA",
+      "rank": 294,
+      "team": "UL Monroe",
+      "conference": "Sun Belt",
+      "wins": 9,
+      "losses": 19,
+      "adj_off": 94.96,
+      "adj_def": 106.79,
+      "adj_net": -11.83
+    },
+    {
+      "rank": 295,
+      "team": "South Carolina Upstate",
+      "conference": "Big South",
+      "wins": 7,
+      "losses": 20,
+      "adj_off": 93.16,
+      "adj_def": 104.99,
+      "adj_net": -11.83
+    },
+    {
+      "rank": 296,
+      "team": "Texas Southern",
+      "conference": "SWAC",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 91.75,
+      "adj_def": 103.87,
+      "adj_net": -12.11
+    },
+    {
+      "rank": 297,
+      "team": "New Mexico State",
+      "conference": "CUSA",
+      "wins": 9,
+      "losses": 19,
+      "adj_off": 94.61,
+      "adj_def": 106.97,
+      "adj_net": -12.36
+    },
+    {
+      "rank": 298,
+      "team": "Boston University",
+      "conference": "Patriot",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 91.18,
+      "adj_def": 103.59,
+      "adj_net": -12.41
+    },
+    {
+      "rank": 299,
+      "team": "Le Moyne",
+      "conference": "NEC",
+      "wins": 12,
+      "losses": 17,
+      "adj_off": 95.32,
+      "adj_def": 107.75,
+      "adj_net": -12.43
+    },
+    {
+      "rank": 300,
+      "team": "Northern Illinois",
+      "conference": "MAC",
+      "wins": 9,
+      "losses": 20,
+      "adj_off": 96.73,
+      "adj_def": 109.22,
+      "adj_net": -12.49
+    },
+    {
+      "rank": 301,
+      "team": "Utah Tech",
+      "conference": "UAC",
+      "wins": 10,
+      "losses": 20,
+      "adj_off": 91.59,
+      "adj_def": 104.11,
+      "adj_net": -12.52
+    },
+    {
+      "rank": 302,
+      "team": "Coastal Carolina",
+      "conference": "Sun Belt",
+      "wins": 7,
+      "losses": 22,
+      "adj_off": 93.58,
+      "adj_def": 106.29,
+      "adj_net": -12.71
+    },
+    {
+      "rank": 303,
+      "team": "Valparaiso",
+      "conference": "MVC",
+      "wins": 6,
+      "losses": 25,
+      "adj_off": 94.33,
+      "adj_def": 107.05,
+      "adj_net": -12.72
+    },
+    {
+      "rank": 304,
+      "team": "Wagner",
+      "conference": "NEC",
+      "wins": 15,
+      "losses": 16,
+      "adj_off": 89.55,
+      "adj_def": 102.36,
+      "adj_net": -12.82
+    },
+    {
+      "rank": 305,
+      "team": "Eastern Illinois",
+      "conference": "OVC",
+      "wins": 10,
+      "losses": 18,
+      "adj_off": 90.62,
+      "adj_def": 103.77,
+      "adj_net": -13.15
+    },
+    {
+      "rank": 306,
+      "team": "Jackson State",
+      "conference": "SWAC",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 84.53,
+      "adj_def": 97.72,
+      "adj_net": -13.2
+    },
+    {
+      "rank": 307,
+      "team": "Tennessee State",
+      "conference": "OVC",
+      "wins": 14,
+      "losses": 15,
+      "adj_off": 92.98,
+      "adj_def": 106.28,
+      "adj_net": -13.29
+    },
+    {
+      "rank": 308,
+      "team": "Eastern Michigan",
+      "conference": "MAC",
       "wins": 11,
       "losses": 18,
-      "adj_off": 91.17,
-      "adj_def": 109.21,
-      "adj_net": -18.04
+      "adj_off": 87.96,
+      "adj_def": 101.65,
+      "adj_net": -13.69
     },
     {
-      "rank": 321,
+      "rank": 309,
+      "team": "Lafayette",
+      "conference": "Patriot",
+      "wins": 10,
+      "losses": 21,
+      "adj_off": 84.66,
+      "adj_def": 98.46,
+      "adj_net": -13.8
+    },
+    {
+      "rank": 310,
+      "team": "Robert Morris",
+      "conference": "Horizon",
+      "wins": 8,
+      "losses": 22,
+      "adj_off": 88.23,
+      "adj_def": 102.31,
+      "adj_net": -14.08
+    },
+    {
+      "rank": 311,
+      "team": "Idaho",
+      "conference": "Big Sky",
+      "wins": 9,
+      "losses": 21,
+      "adj_off": 93.09,
+      "adj_def": 107.31,
+      "adj_net": -14.22
+    },
+    {
+      "rank": 312,
+      "team": "Elon",
+      "conference": "CAA",
+      "wins": 11,
+      "losses": 19,
+      "adj_off": 94.57,
+      "adj_def": 108.84,
+      "adj_net": -14.28
+    },
+    {
+      "rank": 313,
+      "team": "William & Mary",
+      "conference": "CAA",
+      "wins": 8,
+      "losses": 23,
+      "adj_off": 96.47,
+      "adj_def": 111.07,
+      "adj_net": -14.6
+    },
+    {
+      "rank": 314,
+      "team": "Prairie View A&M",
+      "conference": "SWAC",
+      "wins": 8,
+      "losses": 21,
+      "adj_off": 79.22,
+      "adj_def": 93.84,
+      "adj_net": -14.61
+    },
+    {
+      "rank": 315,
+      "team": "Bethune-Cookman",
+      "conference": "SWAC",
+      "wins": 15,
+      "losses": 17,
+      "adj_off": 95.34,
+      "adj_def": 110.38,
+      "adj_net": -15.03
+    },
+    {
+      "rank": 316,
+      "team": "Alabama State",
+      "conference": "SWAC",
+      "wins": 10,
+      "losses": 19,
+      "adj_off": 89.08,
+      "adj_def": 104.19,
+      "adj_net": -15.11
+    },
+    {
+      "rank": 317,
+      "team": "South Carolina State",
+      "conference": "MEAC",
+      "wins": 12,
+      "losses": 18,
+      "adj_off": 88.67,
+      "adj_def": 103.82,
+      "adj_net": -15.15
+    },
+    {
+      "rank": 318,
       "team": "Northern Arizona",
       "conference": "Big Sky",
       "wins": 14,
       "losses": 19,
-      "adj_off": 88.63,
-      "adj_def": 106.76,
-      "adj_net": -18.13
+      "adj_off": 89.16,
+      "adj_def": 104.49,
+      "adj_net": -15.33
     },
     {
-      "rank": 322,
+      "rank": 319,
       "team": "Bellarmine",
       "conference": "ASUN",
       "wins": 5,
       "losses": 23,
-      "adj_off": 95.08,
-      "adj_def": 113.21,
-      "adj_net": -18.13
+      "adj_off": 95.44,
+      "adj_def": 111.35,
+      "adj_net": -15.91
+    },
+    {
+      "rank": 320,
+      "team": "Alcorn State",
+      "conference": "SWAC",
+      "wins": 13,
+      "losses": 18,
+      "adj_off": 82.61,
+      "adj_def": 98.79,
+      "adj_net": -16.18
+    },
+    {
+      "rank": 321,
+      "team": "Campbell",
+      "conference": "CAA",
+      "wins": 11,
+      "losses": 18,
+      "adj_off": 91.14,
+      "adj_def": 107.32,
+      "adj_net": -16.18
+    },
+    {
+      "rank": 322,
+      "team": "East Texas A&M",
+      "conference": "Southland",
+      "wins": 10,
+      "losses": 20,
+      "adj_off": 86.99,
+      "adj_def": 103.25,
+      "adj_net": -16.25
     },
     {
       "rank": 323,
@@ -3229,229 +3229,229 @@
       "conference": "Big West",
       "wins": 3,
       "losses": 28,
-      "adj_off": 88.76,
-      "adj_def": 106.9,
-      "adj_net": -18.14
+      "adj_off": 87.87,
+      "adj_def": 104.22,
+      "adj_net": -16.35
     },
     {
       "rank": 324,
-      "team": "NJIT",
-      "conference": "Am. East",
-      "wins": 6,
-      "losses": 21,
-      "adj_off": 90.33,
-      "adj_def": 108.94,
-      "adj_net": -18.61
-    },
-    {
-      "rank": 325,
-      "team": "Tennessee State",
-      "conference": "OVC",
-      "wins": 14,
-      "losses": 15,
-      "adj_off": 88.71,
-      "adj_def": 107.37,
-      "adj_net": -18.67
-    },
-    {
-      "rank": 326,
-      "team": "Charleston Southern",
-      "conference": "Big South",
-      "wins": 7,
-      "losses": 20,
-      "adj_off": 83.81,
-      "adj_def": 102.58,
-      "adj_net": -18.78
-    },
-    {
-      "rank": 327,
       "team": "South Dakota",
       "conference": "Summit",
       "wins": 9,
       "losses": 20,
-      "adj_off": 96.39,
-      "adj_def": 115.17,
-      "adj_net": -18.79
+      "adj_off": 96.24,
+      "adj_def": 112.6,
+      "adj_net": -16.36
     },
     {
-      "rank": 328,
-      "team": "Idaho",
-      "conference": "Big Sky",
-      "wins": 9,
-      "losses": 21,
-      "adj_off": 90.01,
-      "adj_def": 109.05,
-      "adj_net": -19.03
-    },
-    {
-      "rank": 329,
-      "team": "Morgan State",
-      "conference": "MEAC",
-      "wins": 8,
-      "losses": 20,
-      "adj_off": 87.99,
-      "adj_def": 107.14,
-      "adj_net": -19.16
-    },
-    {
-      "rank": 330,
-      "team": "Long Island University",
-      "conference": "NEC",
-      "wins": 7,
-      "losses": 22,
-      "adj_off": 87.3,
-      "adj_def": 106.59,
-      "adj_net": -19.3
-    },
-    {
-      "rank": 331,
-      "team": "Florida A&M",
+      "rank": 325,
+      "team": "Arkansas-Pine Bluff",
       "conference": "SWAC",
-      "wins": 5,
-      "losses": 22,
-      "adj_off": 90.4,
-      "adj_def": 109.87,
-      "adj_net": -19.47
-    },
-    {
-      "rank": 332,
-      "team": "Holy Cross",
-      "conference": "Patriot",
       "wins": 9,
-      "losses": 23,
-      "adj_off": 95.76,
-      "adj_def": 115.67,
-      "adj_net": -19.91
+      "losses": 18,
+      "adj_off": 95.32,
+      "adj_def": 112.34,
+      "adj_net": -17.02
     },
     {
-      "rank": 333,
-      "team": "Fairleigh Dickinson",
-      "conference": "NEC",
-      "wins": 13,
-      "losses": 17,
-      "adj_off": 89.05,
-      "adj_def": 109.06,
-      "adj_net": -20.01
-    },
-    {
-      "rank": 334,
-      "team": "Dartmouth",
-      "conference": "Ivy",
-      "wins": 4,
-      "losses": 21,
-      "adj_off": 88.69,
-      "adj_def": 108.93,
-      "adj_net": -20.24
-    },
-    {
-      "rank": 335,
+      "rank": 326,
       "team": "Navy",
       "conference": "Patriot",
       "wins": 12,
       "losses": 18,
-      "adj_off": 86.82,
-      "adj_def": 107.17,
-      "adj_net": -20.35
+      "adj_off": 85.89,
+      "adj_def": 103.73,
+      "adj_net": -17.84
     },
     {
-      "rank": 336,
-      "team": "UT Rio Grande Valley",
-      "conference": "UAC",
-      "wins": 4,
-      "losses": 25,
-      "adj_off": 78.14,
-      "adj_def": 98.66,
-      "adj_net": -20.52
+      "rank": 327,
+      "team": "NJIT",
+      "conference": "Am. East",
+      "wins": 6,
+      "losses": 21,
+      "adj_off": 92.02,
+      "adj_def": 109.86,
+      "adj_net": -17.84
     },
     {
-      "rank": 337,
-      "team": "Northwestern State",
-      "conference": "Southland",
-      "wins": 7,
-      "losses": 23,
-      "adj_off": 88.12,
-      "adj_def": 108.96,
-      "adj_net": -20.84
+      "rank": 328,
+      "team": "Delaware State",
+      "conference": "MEAC",
+      "wins": 13,
+      "losses": 19,
+      "adj_off": 78.91,
+      "adj_def": 97.02,
+      "adj_net": -18.11
     },
     {
-      "rank": 338,
-      "team": "Buffalo",
-      "conference": "MAC",
-      "wins": 3,
-      "losses": 27,
-      "adj_off": 88.04,
-      "adj_def": 109.19,
-      "adj_net": -21.16
-    },
-    {
-      "rank": 339,
-      "team": "Central Arkansas",
-      "conference": "ASUN",
-      "wins": 7,
-      "losses": 23,
-      "adj_off": 82.46,
-      "adj_def": 104,
-      "adj_net": -21.54
-    },
-    {
-      "rank": 340,
-      "team": "East Texas A&M",
-      "conference": "Southland",
-      "wins": 10,
-      "losses": 20,
-      "adj_off": 82.99,
-      "adj_def": 104.6,
-      "adj_net": -21.6
-    },
-    {
-      "rank": 341,
+      "rank": 329,
       "team": "Southern Indiana",
       "conference": "OVC",
       "wins": 5,
       "losses": 24,
-      "adj_off": 88.06,
-      "adj_def": 109.97,
-      "adj_net": -21.92
+      "adj_off": 87.78,
+      "adj_def": 106.09,
+      "adj_net": -18.31
     },
     {
-      "rank": 342,
+      "rank": 330,
+      "team": "Fairleigh Dickinson",
+      "conference": "NEC",
+      "wins": 13,
+      "losses": 17,
+      "adj_off": 91.08,
+      "adj_def": 109.6,
+      "adj_net": -18.52
+    },
+    {
+      "rank": 331,
+      "team": "Northwestern State",
+      "conference": "Southland",
+      "wins": 7,
+      "losses": 23,
+      "adj_off": 90.82,
+      "adj_def": 109.42,
+      "adj_net": -18.6
+    },
+    {
+      "rank": 332,
+      "team": "Morgan State",
+      "conference": "MEAC",
+      "wins": 8,
+      "losses": 20,
+      "adj_off": 86.45,
+      "adj_def": 105.08,
+      "adj_net": -18.63
+    },
+    {
+      "rank": 333,
+      "team": "Charleston Southern",
+      "conference": "Big South",
+      "wins": 7,
+      "losses": 20,
+      "adj_off": 88.76,
+      "adj_def": 107.42,
+      "adj_net": -18.66
+    },
+    {
+      "rank": 334,
+      "team": "UT Rio Grande Valley",
+      "conference": "UAC",
+      "wins": 4,
+      "losses": 25,
+      "adj_off": 76.75,
+      "adj_def": 95.54,
+      "adj_net": -18.79
+    },
+    {
+      "rank": 335,
+      "team": "Buffalo",
+      "conference": "MAC",
+      "wins": 3,
+      "losses": 27,
+      "adj_off": 89.58,
+      "adj_def": 108.38,
+      "adj_net": -18.8
+    },
+    {
+      "rank": 336,
+      "team": "Incarnate Word",
+      "conference": "Southland",
+      "wins": 6,
+      "losses": 23,
+      "adj_off": 84.39,
+      "adj_def": 103.3,
+      "adj_net": -18.91
+    },
+    {
+      "rank": 337,
+      "team": "Alabama A&M",
+      "conference": "SWAC",
+      "wins": 12,
+      "losses": 23,
+      "adj_off": 71.56,
+      "adj_def": 90.51,
+      "adj_net": -18.95
+    },
+    {
+      "rank": 338,
       "team": "New Orleans",
       "conference": "Southland",
       "wins": 6,
       "losses": 23,
-      "adj_off": 88.72,
-      "adj_def": 110.64,
-      "adj_net": -21.92
+      "adj_off": 90.9,
+      "adj_def": 109.85,
+      "adj_net": -18.96
     },
     {
-      "rank": 343,
-      "team": "Loyola Maryland",
-      "conference": "Patriot",
-      "wins": 6,
-      "losses": 25,
-      "adj_off": 87.99,
-      "adj_def": 109.97,
-      "adj_net": -21.98
-    },
-    {
-      "rank": 344,
+      "rank": 339,
       "team": "Manhattan",
       "conference": "Metro",
       "wins": 6,
       "losses": 23,
-      "adj_off": 86.58,
-      "adj_def": 108.67,
-      "adj_net": -22.09
+      "adj_off": 86,
+      "adj_def": 105.32,
+      "adj_net": -19.33
     },
     {
-      "rank": 345,
+      "rank": 340,
       "team": "Army",
       "conference": "Patriot",
       "wins": 8,
       "losses": 22,
-      "adj_off": 77.45,
-      "adj_def": 99.63,
-      "adj_net": -22.18
+      "adj_off": 78.61,
+      "adj_def": 98.04,
+      "adj_net": -19.44
+    },
+    {
+      "rank": 341,
+      "team": "Long Island University",
+      "conference": "NEC",
+      "wins": 7,
+      "losses": 22,
+      "adj_off": 85.09,
+      "adj_def": 104.59,
+      "adj_net": -19.5
+    },
+    {
+      "rank": 342,
+      "team": "Central Arkansas",
+      "conference": "ASUN",
+      "wins": 7,
+      "losses": 23,
+      "adj_off": 85.35,
+      "adj_def": 104.98,
+      "adj_net": -19.63
+    },
+    {
+      "rank": 343,
+      "team": "Tennessee Tech",
+      "conference": "OVC",
+      "wins": 7,
+      "losses": 21,
+      "adj_off": 88.62,
+      "adj_def": 108.29,
+      "adj_net": -19.67
+    },
+    {
+      "rank": 344,
+      "team": "Dartmouth",
+      "conference": "Ivy",
+      "wins": 4,
+      "losses": 21,
+      "adj_off": 87.24,
+      "adj_def": 107.07,
+      "adj_net": -19.83
+    },
+    {
+      "rank": 345,
+      "team": "Loyola Maryland",
+      "conference": "Patriot",
+      "wins": 6,
+      "losses": 25,
+      "adj_off": 88.68,
+      "adj_def": 108.55,
+      "adj_net": -19.87
     },
     {
       "rank": 346,
@@ -3459,29 +3459,29 @@
       "conference": "CAA",
       "wins": 7,
       "losses": 25,
-      "adj_off": 78.51,
-      "adj_def": 100.97,
-      "adj_net": -22.47
+      "adj_off": 82.54,
+      "adj_def": 103.09,
+      "adj_net": -20.55
     },
     {
       "rank": 347,
-      "team": "Detroit Mercy",
-      "conference": "Horizon",
-      "wins": 1,
-      "losses": 31,
-      "adj_off": 93.21,
-      "adj_def": 116.28,
-      "adj_net": -23.07
+      "team": "Florida A&M",
+      "conference": "SWAC",
+      "wins": 5,
+      "losses": 22,
+      "adj_off": 90.48,
+      "adj_def": 111.17,
+      "adj_net": -20.69
     },
     {
       "rank": 348,
-      "team": "Tennessee Tech",
-      "conference": "OVC",
-      "wins": 7,
-      "losses": 21,
-      "adj_off": 87.3,
-      "adj_def": 110.41,
-      "adj_net": -23.11
+      "team": "Holy Cross",
+      "conference": "Patriot",
+      "wins": 9,
+      "losses": 23,
+      "adj_off": 94.24,
+      "adj_def": 115.03,
+      "adj_net": -20.79
     },
     {
       "rank": 349,
@@ -3489,69 +3489,69 @@
       "conference": "CAA",
       "wins": 6,
       "losses": 24,
-      "adj_off": 84.48,
-      "adj_def": 107.98,
-      "adj_net": -23.5
+      "adj_off": 85.45,
+      "adj_def": 107.08,
+      "adj_net": -21.63
     },
     {
       "rank": 350,
-      "team": "Incarnate Word",
-      "conference": "Southland",
-      "wins": 6,
-      "losses": 23,
-      "adj_off": 81.39,
-      "adj_def": 105.74,
-      "adj_net": -24.35
-    },
-    {
-      "rank": 351,
-      "team": "Siena",
-      "conference": "Metro",
-      "wins": 4,
-      "losses": 28,
-      "adj_off": 76.04,
-      "adj_def": 100.97,
-      "adj_net": -24.93
-    },
-    {
-      "rank": 352,
       "team": "Southeast Missouri State",
       "conference": "OVC",
       "wins": 5,
       "losses": 22,
-      "adj_off": 83.15,
-      "adj_def": 108.32,
-      "adj_net": -25.16
+      "adj_off": 84.49,
+      "adj_def": 108.45,
+      "adj_net": -23.97
     },
     {
-      "rank": 353,
-      "team": "Stonehill",
-      "conference": "NEC",
-      "wins": 3,
-      "losses": 27,
-      "adj_off": 84.73,
-      "adj_def": 111.08,
-      "adj_net": -26.34
-    },
-    {
-      "rank": 354,
-      "team": "Maryland Eastern Shore",
-      "conference": "MEAC",
-      "wins": 5,
-      "losses": 20,
-      "adj_off": 76.25,
-      "adj_def": 102.66,
-      "adj_net": -26.41
-    },
-    {
-      "rank": 355,
+      "rank": 351,
       "team": "Pacific",
       "conference": "WCC",
       "wins": 4,
       "losses": 26,
-      "adj_off": 74.85,
-      "adj_def": 102.56,
-      "adj_net": -27.71
+      "adj_off": 76.62,
+      "adj_def": 101.26,
+      "adj_net": -24.64
+    },
+    {
+      "rank": 352,
+      "team": "Detroit Mercy",
+      "conference": "Horizon",
+      "wins": 1,
+      "losses": 31,
+      "adj_off": 91.32,
+      "adj_def": 116.21,
+      "adj_net": -24.9
+    },
+    {
+      "rank": 353,
+      "team": "Houston Christian",
+      "conference": "Southland",
+      "wins": 4,
+      "losses": 23,
+      "adj_off": 90.21,
+      "adj_def": 115.27,
+      "adj_net": -25.06
+    },
+    {
+      "rank": 354,
+      "team": "Siena",
+      "conference": "Metro",
+      "wins": 4,
+      "losses": 28,
+      "adj_off": 76.77,
+      "adj_def": 102.09,
+      "adj_net": -25.32
+    },
+    {
+      "rank": 355,
+      "team": "Stonehill",
+      "conference": "NEC",
+      "wins": 3,
+      "losses": 27,
+      "adj_off": 85.48,
+      "adj_def": 111.08,
+      "adj_net": -25.6
     },
     {
       "rank": 356,
@@ -3559,29 +3559,29 @@
       "conference": "NEC",
       "wins": 6,
       "losses": 22,
-      "adj_off": 79.04,
-      "adj_def": 106.81,
-      "adj_net": -27.77
+      "adj_off": 75.71,
+      "adj_def": 101.85,
+      "adj_net": -26.14
     },
     {
       "rank": 357,
-      "team": "Houston Christian",
-      "conference": "Southland",
-      "wins": 4,
-      "losses": 23,
-      "adj_off": 91.5,
-      "adj_def": 121.43,
-      "adj_net": -29.93
+      "team": "Maryland Eastern Shore",
+      "conference": "MEAC",
+      "wins": 5,
+      "losses": 20,
+      "adj_off": 79.19,
+      "adj_def": 106.22,
+      "adj_net": -27.03
     },
     {
       "rank": 358,
-      "team": "Coppin State",
-      "conference": "MEAC",
-      "wins": 2,
-      "losses": 27,
-      "adj_off": 72.13,
-      "adj_def": 102.14,
-      "adj_net": -30.02
+      "team": "VMI",
+      "conference": "SoCon",
+      "wins": 1,
+      "losses": 28,
+      "adj_off": 82.05,
+      "adj_def": 110.14,
+      "adj_net": -28.09
     },
     {
       "rank": 359,
@@ -3589,19 +3589,19 @@
       "conference": "OVC",
       "wins": 6,
       "losses": 22,
-      "adj_off": 81.98,
-      "adj_def": 112.05,
-      "adj_net": -30.07
+      "adj_off": 82.24,
+      "adj_def": 111.15,
+      "adj_net": -28.91
     },
     {
       "rank": 360,
-      "team": "VMI",
-      "conference": "SoCon",
-      "wins": 1,
-      "losses": 28,
-      "adj_off": 80.39,
-      "adj_def": 111.24,
-      "adj_net": -30.85
+      "team": "Coppin State",
+      "conference": "MEAC",
+      "wins": 2,
+      "losses": 27,
+      "adj_off": 72.7,
+      "adj_def": 102.15,
+      "adj_net": -29.45
     },
     {
       "rank": 361,
@@ -3609,9 +3609,9 @@
       "conference": "Horizon",
       "wins": 3,
       "losses": 26,
-      "adj_off": 85.66,
-      "adj_def": 117.43,
-      "adj_net": -31.77
+      "adj_off": 84.54,
+      "adj_def": 116.86,
+      "adj_net": -32.32
     },
     {
       "rank": 362,
@@ -3619,9 +3619,9 @@
       "conference": "SWAC",
       "wins": 1,
       "losses": 30,
-      "adj_off": 69.06,
-      "adj_def": 103.31,
-      "adj_net": -34.25
+      "adj_off": 72.49,
+      "adj_def": 110.11,
+      "adj_net": -37.62
     }
   ]
 }
