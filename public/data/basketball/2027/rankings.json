@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T20:53:31.134652+00:00",
+  "generated_at": "2026-10-28T21:42:36.218681+00:00",
   "year": 2027,
   "projected": true,
   "teams": [
@@ -12,9 +12,10 @@
       "adj_off": 108.61,
       "adj_def": 94.36,
       "adj_net": 14.25,
-      "tempo": 68,
+      "tempo": 70.76,
       "direct_net": 0,
-      "rot_level": 25.91
+      "rot_level": 25.91,
+      "play_types": []
     },
     {
       "rank": 2,
@@ -25,9 +26,10 @@
       "adj_off": 107.22,
       "adj_def": 93.1,
       "adj_net": 14.13,
-      "tempo": 68,
+      "tempo": 71.57,
       "direct_net": 0,
-      "rot_level": 29.82
+      "rot_level": 29.82,
+      "play_types": []
     },
     {
       "rank": 3,
@@ -38,9 +40,10 @@
       "adj_off": 111.47,
       "adj_def": 97.65,
       "adj_net": 13.82,
-      "tempo": 68,
+      "tempo": 67.65,
       "direct_net": 0,
-      "rot_level": 25.55
+      "rot_level": 25.55,
+      "play_types": []
     },
     {
       "rank": 4,
@@ -51,9 +54,10 @@
       "adj_off": 108.84,
       "adj_def": 95.82,
       "adj_net": 13.02,
-      "tempo": 68,
+      "tempo": 73.81,
       "direct_net": 0,
-      "rot_level": 25.58
+      "rot_level": 25.58,
+      "play_types": []
     },
     {
       "rank": 5,
@@ -64,9 +68,10 @@
       "adj_off": 108.46,
       "adj_def": 95.64,
       "adj_net": 12.82,
-      "tempo": 68,
+      "tempo": 70,
       "direct_net": 0,
-      "rot_level": 24.08
+      "rot_level": 24.08,
+      "play_types": []
     },
     {
       "rank": 6,
@@ -77,9 +82,10 @@
       "adj_off": 110.85,
       "adj_def": 98.24,
       "adj_net": 12.61,
-      "tempo": 68,
+      "tempo": 64.7,
       "direct_net": 0,
-      "rot_level": 32.85
+      "rot_level": 32.85,
+      "play_types": []
     },
     {
       "rank": 7,
@@ -90,9 +96,10 @@
       "adj_off": 107.22,
       "adj_def": 94.77,
       "adj_net": 12.45,
-      "tempo": 68,
+      "tempo": 66.38,
       "direct_net": 0,
-      "rot_level": 24.25
+      "rot_level": 24.25,
+      "play_types": []
     },
     {
       "rank": 8,
@@ -103,9 +110,10 @@
       "adj_off": 107.26,
       "adj_def": 95.4,
       "adj_net": 11.86,
-      "tempo": 68,
+      "tempo": 66.13,
       "direct_net": 0,
-      "rot_level": 28.5
+      "rot_level": 28.5,
+      "play_types": []
     },
     {
       "rank": 9,
@@ -116,9 +124,10 @@
       "adj_off": 106.96,
       "adj_def": 95.12,
       "adj_net": 11.84,
-      "tempo": 68,
+      "tempo": 68.14,
       "direct_net": 0,
-      "rot_level": 31.63
+      "rot_level": 31.63,
+      "play_types": []
     },
     {
       "rank": 10,
@@ -129,9 +138,10 @@
       "adj_off": 108.84,
       "adj_def": 97.57,
       "adj_net": 11.26,
-      "tempo": 68,
+      "tempo": 68.07,
       "direct_net": 0,
-      "rot_level": 25.71
+      "rot_level": 25.71,
+      "play_types": []
     },
     {
       "rank": 11,
@@ -142,9 +152,10 @@
       "adj_off": 105.19,
       "adj_def": 93.95,
       "adj_net": 11.24,
-      "tempo": 68,
+      "tempo": 71.21,
       "direct_net": 0,
-      "rot_level": 33.6
+      "rot_level": 33.6,
+      "play_types": []
     },
     {
       "rank": 12,
@@ -155,9 +166,10 @@
       "adj_off": 109.21,
       "adj_def": 98.24,
       "adj_net": 10.97,
-      "tempo": 68,
+      "tempo": 66.91,
       "direct_net": 0,
-      "rot_level": 24.54
+      "rot_level": 24.54,
+      "play_types": []
     },
     {
       "rank": 13,
@@ -168,9 +180,10 @@
       "adj_off": 106.03,
       "adj_def": 95.42,
       "adj_net": 10.6,
-      "tempo": 68,
+      "tempo": 70.4,
       "direct_net": 0,
-      "rot_level": 33.91
+      "rot_level": 33.91,
+      "play_types": []
     },
     {
       "rank": 14,
@@ -181,9 +194,10 @@
       "adj_off": 107.46,
       "adj_def": 97.17,
       "adj_net": 10.29,
-      "tempo": 68,
+      "tempo": 68.38,
       "direct_net": 0,
-      "rot_level": 17.1
+      "rot_level": 17.1,
+      "play_types": []
     },
     {
       "rank": 15,
@@ -194,9 +208,10 @@
       "adj_off": 106.02,
       "adj_def": 95.76,
       "adj_net": 10.26,
-      "tempo": 68,
+      "tempo": 67.26,
       "direct_net": 0,
-      "rot_level": 18.09
+      "rot_level": 18.09,
+      "play_types": []
     },
     {
       "rank": 16,
@@ -207,9 +222,10 @@
       "adj_off": 105.41,
       "adj_def": 95.19,
       "adj_net": 10.22,
-      "tempo": 68,
+      "tempo": 72.02,
       "direct_net": 0,
-      "rot_level": 24.22
+      "rot_level": 24.22,
+      "play_types": []
     },
     {
       "rank": 17,
@@ -220,9 +236,10 @@
       "adj_off": 105.65,
       "adj_def": 95.54,
       "adj_net": 10.11,
-      "tempo": 68,
+      "tempo": 66.47,
       "direct_net": 0,
-      "rot_level": 32.45
+      "rot_level": 32.45,
+      "play_types": []
     },
     {
       "rank": 18,
@@ -233,9 +250,10 @@
       "adj_off": 107.93,
       "adj_def": 98.06,
       "adj_net": 9.87,
-      "tempo": 68,
+      "tempo": 72.79,
       "direct_net": 0,
-      "rot_level": 17.71
+      "rot_level": 17.71,
+      "play_types": []
     },
     {
       "rank": 19,
@@ -246,9 +264,10 @@
       "adj_off": 107.64,
       "adj_def": 98.01,
       "adj_net": 9.63,
-      "tempo": 68,
+      "tempo": 68.24,
       "direct_net": 0,
-      "rot_level": 11.95
+      "rot_level": 11.95,
+      "play_types": []
     },
     {
       "rank": 20,
@@ -259,9 +278,10 @@
       "adj_off": 106.31,
       "adj_def": 96.8,
       "adj_net": 9.51,
-      "tempo": 68,
+      "tempo": 68.47,
       "direct_net": 0,
-      "rot_level": 16.97
+      "rot_level": 16.97,
+      "play_types": []
     },
     {
       "rank": 21,
@@ -272,9 +292,10 @@
       "adj_off": 107.09,
       "adj_def": 97.82,
       "adj_net": 9.27,
-      "tempo": 68,
+      "tempo": 73.43,
       "direct_net": 0,
-      "rot_level": 12.01
+      "rot_level": 12.01,
+      "play_types": []
     },
     {
       "rank": 22,
@@ -285,9 +306,10 @@
       "adj_off": 106.99,
       "adj_def": 98.01,
       "adj_net": 8.98,
-      "tempo": 68,
+      "tempo": 69.17,
       "direct_net": 0,
-      "rot_level": 21.41
+      "rot_level": 21.41,
+      "play_types": []
     },
     {
       "rank": 23,
@@ -298,9 +320,10 @@
       "adj_off": 105.01,
       "adj_def": 96.08,
       "adj_net": 8.93,
-      "tempo": 68,
+      "tempo": 69.89,
       "direct_net": 0,
-      "rot_level": 26.36
+      "rot_level": 26.36,
+      "play_types": []
     },
     {
       "rank": 24,
@@ -311,9 +334,10 @@
       "adj_off": 105.97,
       "adj_def": 97.09,
       "adj_net": 8.88,
-      "tempo": 68,
+      "tempo": 66.19,
       "direct_net": 0,
-      "rot_level": 25.12
+      "rot_level": 25.12,
+      "play_types": []
     },
     {
       "rank": 25,
@@ -324,9 +348,10 @@
       "adj_off": 104.73,
       "adj_def": 95.88,
       "adj_net": 8.85,
-      "tempo": 68,
+      "tempo": 70.26,
       "direct_net": 0,
-      "rot_level": 12.07
+      "rot_level": 12.07,
+      "play_types": []
     },
     {
       "rank": 26,
@@ -337,9 +362,10 @@
       "adj_off": 103.27,
       "adj_def": 94.61,
       "adj_net": 8.66,
-      "tempo": 68,
+      "tempo": 62.39,
       "direct_net": 0,
-      "rot_level": 24.6
+      "rot_level": 24.6,
+      "play_types": []
     },
     {
       "rank": 27,
@@ -350,9 +376,10 @@
       "adj_off": 103.76,
       "adj_def": 95.56,
       "adj_net": 8.19,
-      "tempo": 68,
+      "tempo": 68.25,
       "direct_net": 0,
-      "rot_level": 19.68
+      "rot_level": 19.68,
+      "play_types": []
     },
     {
       "rank": 28,
@@ -363,9 +390,10 @@
       "adj_off": 107.26,
       "adj_def": 99.12,
       "adj_net": 8.14,
-      "tempo": 68,
+      "tempo": 66.31,
       "direct_net": 0,
-      "rot_level": 20.41
+      "rot_level": 20.41,
+      "play_types": []
     },
     {
       "rank": 29,
@@ -376,9 +404,10 @@
       "adj_off": 105.38,
       "adj_def": 97.29,
       "adj_net": 8.09,
-      "tempo": 68,
+      "tempo": 64.72,
       "direct_net": 0,
-      "rot_level": 31.18
+      "rot_level": 31.18,
+      "play_types": []
     },
     {
       "rank": 30,
@@ -389,9 +418,10 @@
       "adj_off": 104.17,
       "adj_def": 96.25,
       "adj_net": 7.92,
-      "tempo": 68,
+      "tempo": 70.04,
       "direct_net": 0,
-      "rot_level": 11.95
+      "rot_level": 11.95,
+      "play_types": []
     },
     {
       "rank": 31,
@@ -402,9 +432,10 @@
       "adj_off": 104.57,
       "adj_def": 96.76,
       "adj_net": 7.81,
-      "tempo": 68,
+      "tempo": 71.68,
       "direct_net": 0,
-      "rot_level": 23.13
+      "rot_level": 23.13,
+      "play_types": []
     },
     {
       "rank": 32,
@@ -415,9 +446,10 @@
       "adj_off": 106.29,
       "adj_def": 98.68,
       "adj_net": 7.61,
-      "tempo": 68,
+      "tempo": 68.84,
       "direct_net": 0,
-      "rot_level": 19.17
+      "rot_level": 19.17,
+      "play_types": []
     },
     {
       "rank": 33,
@@ -428,9 +460,10 @@
       "adj_off": 104.49,
       "adj_def": 97.04,
       "adj_net": 7.45,
-      "tempo": 68,
+      "tempo": 64.7,
       "direct_net": 0,
-      "rot_level": 20.18
+      "rot_level": 20.18,
+      "play_types": []
     },
     {
       "rank": 34,
@@ -441,9 +474,10 @@
       "adj_off": 104.63,
       "adj_def": 97.27,
       "adj_net": 7.36,
-      "tempo": 68,
+      "tempo": 67.55,
       "direct_net": 0,
-      "rot_level": 12.71
+      "rot_level": 12.71,
+      "play_types": []
     },
     {
       "rank": 35,
@@ -454,9 +488,10 @@
       "adj_off": 104.92,
       "adj_def": 97.74,
       "adj_net": 7.18,
-      "tempo": 68,
+      "tempo": 65.18,
       "direct_net": 0,
-      "rot_level": 26.18
+      "rot_level": 26.18,
+      "play_types": []
     },
     {
       "rank": 36,
@@ -467,9 +502,10 @@
       "adj_off": 105.7,
       "adj_def": 98.52,
       "adj_net": 7.17,
-      "tempo": 68,
+      "tempo": 68.68,
       "direct_net": 0,
-      "rot_level": 14.23
+      "rot_level": 14.23,
+      "play_types": []
     },
     {
       "rank": 37,
@@ -480,9 +516,10 @@
       "adj_off": 105.62,
       "adj_def": 98.57,
       "adj_net": 7.04,
-      "tempo": 68,
+      "tempo": 68.22,
       "direct_net": 0,
-      "rot_level": 16.22
+      "rot_level": 16.22,
+      "play_types": []
     },
     {
       "rank": 38,
@@ -493,9 +530,10 @@
       "adj_off": 103.23,
       "adj_def": 96.23,
       "adj_net": 7,
-      "tempo": 68,
+      "tempo": 67.04,
       "direct_net": 0,
-      "rot_level": 10.61
+      "rot_level": 10.61,
+      "play_types": []
     },
     {
       "rank": 39,
@@ -506,9 +544,10 @@
       "adj_off": 104.7,
       "adj_def": 98.04,
       "adj_net": 6.66,
-      "tempo": 68,
+      "tempo": 67.17,
       "direct_net": 0,
-      "rot_level": 13.96
+      "rot_level": 13.96,
+      "play_types": []
     },
     {
       "rank": 40,
@@ -519,9 +558,10 @@
       "adj_off": 103.32,
       "adj_def": 96.74,
       "adj_net": 6.58,
-      "tempo": 68,
+      "tempo": 64.87,
       "direct_net": 0,
-      "rot_level": 16.45
+      "rot_level": 16.45,
+      "play_types": []
     },
     {
       "rank": 41,
@@ -532,9 +572,10 @@
       "adj_off": 102.62,
       "adj_def": 96.15,
       "adj_net": 6.47,
-      "tempo": 68,
+      "tempo": 70.07,
       "direct_net": 0,
-      "rot_level": 15.56
+      "rot_level": 15.56,
+      "play_types": []
     },
     {
       "rank": 42,
@@ -545,9 +586,10 @@
       "adj_off": 102.57,
       "adj_def": 96.2,
       "adj_net": 6.38,
-      "tempo": 68,
+      "tempo": 67.28,
       "direct_net": 0,
-      "rot_level": 14.06
+      "rot_level": 14.06,
+      "play_types": []
     },
     {
       "rank": 43,
@@ -558,9 +600,10 @@
       "adj_off": 103.67,
       "adj_def": 97.46,
       "adj_net": 6.21,
-      "tempo": 68,
+      "tempo": 68.12,
       "direct_net": 0,
-      "rot_level": 13.91
+      "rot_level": 13.91,
+      "play_types": []
     },
     {
       "rank": 44,
@@ -571,9 +614,10 @@
       "adj_off": 102.62,
       "adj_def": 96.52,
       "adj_net": 6.1,
-      "tempo": 68,
+      "tempo": 64.26,
       "direct_net": 0,
-      "rot_level": 28.6
+      "rot_level": 28.6,
+      "play_types": []
     },
     {
       "rank": 45,
@@ -584,9 +628,10 @@
       "adj_off": 104.51,
       "adj_def": 98.45,
       "adj_net": 6.06,
-      "tempo": 68,
+      "tempo": 66.05,
       "direct_net": 0,
-      "rot_level": 4.09
+      "rot_level": 4.09,
+      "play_types": []
     },
     {
       "rank": 46,
@@ -599,7 +644,8 @@
       "adj_net": 6.02,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 47,
@@ -610,9 +656,10 @@
       "adj_off": 102.29,
       "adj_def": 96.34,
       "adj_net": 5.95,
-      "tempo": 68,
+      "tempo": 69.79,
       "direct_net": 0,
-      "rot_level": 29.22
+      "rot_level": 29.22,
+      "play_types": []
     },
     {
       "rank": 48,
@@ -623,9 +670,10 @@
       "adj_off": 105.76,
       "adj_def": 99.82,
       "adj_net": 5.94,
-      "tempo": 68,
+      "tempo": 68.26,
       "direct_net": 0,
-      "rot_level": 23.09
+      "rot_level": 23.09,
+      "play_types": []
     },
     {
       "rank": 49,
@@ -636,9 +684,10 @@
       "adj_off": 104.11,
       "adj_def": 98.2,
       "adj_net": 5.9,
-      "tempo": 68,
+      "tempo": 67.48,
       "direct_net": 0,
-      "rot_level": 6.28
+      "rot_level": 6.28,
+      "play_types": []
     },
     {
       "rank": 50,
@@ -649,9 +698,10 @@
       "adj_off": 100.67,
       "adj_def": 94.85,
       "adj_net": 5.83,
-      "tempo": 68,
+      "tempo": 62.73,
       "direct_net": 0,
-      "rot_level": 14.15
+      "rot_level": 14.15,
+      "play_types": []
     },
     {
       "rank": 51,
@@ -662,9 +712,10 @@
       "adj_off": 104.95,
       "adj_def": 99.2,
       "adj_net": 5.75,
-      "tempo": 68,
+      "tempo": 71.95,
       "direct_net": 0,
-      "rot_level": 11.31
+      "rot_level": 11.31,
+      "play_types": []
     },
     {
       "rank": 52,
@@ -675,9 +726,10 @@
       "adj_off": 102.49,
       "adj_def": 96.83,
       "adj_net": 5.67,
-      "tempo": 68,
+      "tempo": 68.85,
       "direct_net": 0,
-      "rot_level": 14.88
+      "rot_level": 14.88,
+      "play_types": []
     },
     {
       "rank": 53,
@@ -688,9 +740,10 @@
       "adj_off": 103.15,
       "adj_def": 97.6,
       "adj_net": 5.54,
-      "tempo": 68,
+      "tempo": 71.15,
       "direct_net": 0,
-      "rot_level": 9.94
+      "rot_level": 9.94,
+      "play_types": []
     },
     {
       "rank": 54,
@@ -701,9 +754,10 @@
       "adj_off": 103.55,
       "adj_def": 98.18,
       "adj_net": 5.37,
-      "tempo": 68,
+      "tempo": 66.59,
       "direct_net": 0,
-      "rot_level": 11.82
+      "rot_level": 11.82,
+      "play_types": []
     },
     {
       "rank": 55,
@@ -714,9 +768,10 @@
       "adj_off": 103.88,
       "adj_def": 98.58,
       "adj_net": 5.31,
-      "tempo": 68,
+      "tempo": 64.5,
       "direct_net": 0,
-      "rot_level": 10.72
+      "rot_level": 10.72,
+      "play_types": []
     },
     {
       "rank": 56,
@@ -727,9 +782,10 @@
       "adj_off": 103.32,
       "adj_def": 98.03,
       "adj_net": 5.29,
-      "tempo": 68,
+      "tempo": 65.89,
       "direct_net": 0,
-      "rot_level": 9.2
+      "rot_level": 9.2,
+      "play_types": []
     },
     {
       "rank": 57,
@@ -740,9 +796,10 @@
       "adj_off": 104.69,
       "adj_def": 99.45,
       "adj_net": 5.24,
-      "tempo": 68,
+      "tempo": 65.69,
       "direct_net": 0,
-      "rot_level": 16.03
+      "rot_level": 16.03,
+      "play_types": []
     },
     {
       "rank": 58,
@@ -753,9 +810,10 @@
       "adj_off": 102.79,
       "adj_def": 97.64,
       "adj_net": 5.15,
-      "tempo": 68,
+      "tempo": 69.88,
       "direct_net": 0,
-      "rot_level": 7.24
+      "rot_level": 7.24,
+      "play_types": []
     },
     {
       "rank": 59,
@@ -766,9 +824,10 @@
       "adj_off": 105.34,
       "adj_def": 100.25,
       "adj_net": 5.09,
-      "tempo": 68,
+      "tempo": 71.66,
       "direct_net": 0,
-      "rot_level": 17.48
+      "rot_level": 17.48,
+      "play_types": []
     },
     {
       "rank": 60,
@@ -779,9 +838,10 @@
       "adj_off": 101.48,
       "adj_def": 96.4,
       "adj_net": 5.08,
-      "tempo": 68,
+      "tempo": 65.9,
       "direct_net": 0,
-      "rot_level": 20.71
+      "rot_level": 20.71,
+      "play_types": []
     },
     {
       "rank": 61,
@@ -792,9 +852,10 @@
       "adj_off": 102.84,
       "adj_def": 97.78,
       "adj_net": 5.07,
-      "tempo": 68,
+      "tempo": 65.77,
       "direct_net": 0,
-      "rot_level": 23.36
+      "rot_level": 23.36,
+      "play_types": []
     },
     {
       "rank": 62,
@@ -805,9 +866,10 @@
       "adj_off": 101.8,
       "adj_def": 96.74,
       "adj_net": 5.06,
-      "tempo": 68,
+      "tempo": 70.22,
       "direct_net": 0,
-      "rot_level": 20.23
+      "rot_level": 20.23,
+      "play_types": []
     },
     {
       "rank": 63,
@@ -818,9 +880,10 @@
       "adj_off": 103.11,
       "adj_def": 98.08,
       "adj_net": 5.03,
-      "tempo": 68,
+      "tempo": 70.55,
       "direct_net": 0,
-      "rot_level": 11.1
+      "rot_level": 11.1,
+      "play_types": []
     },
     {
       "rank": 64,
@@ -831,9 +894,10 @@
       "adj_off": 103.34,
       "adj_def": 98.35,
       "adj_net": 4.99,
-      "tempo": 68,
+      "tempo": 65.87,
       "direct_net": 0,
-      "rot_level": 1.2
+      "rot_level": 1.2,
+      "play_types": []
     },
     {
       "rank": 65,
@@ -844,9 +908,10 @@
       "adj_off": 103.94,
       "adj_def": 98.98,
       "adj_net": 4.96,
-      "tempo": 68,
+      "tempo": 72.84,
       "direct_net": 0,
-      "rot_level": 10.26
+      "rot_level": 10.26,
+      "play_types": []
     },
     {
       "rank": 66,
@@ -857,9 +922,10 @@
       "adj_off": 105.09,
       "adj_def": 100.18,
       "adj_net": 4.91,
-      "tempo": 68,
+      "tempo": 69.79,
       "direct_net": 0,
-      "rot_level": 21.3
+      "rot_level": 21.3,
+      "play_types": []
     },
     {
       "rank": 67,
@@ -870,9 +936,10 @@
       "adj_off": 104.12,
       "adj_def": 99.3,
       "adj_net": 4.81,
-      "tempo": 68,
+      "tempo": 66.09,
       "direct_net": 0,
-      "rot_level": 1.13
+      "rot_level": 1.13,
+      "play_types": []
     },
     {
       "rank": 68,
@@ -883,9 +950,10 @@
       "adj_off": 102.23,
       "adj_def": 97.49,
       "adj_net": 4.73,
-      "tempo": 68,
+      "tempo": 63.87,
       "direct_net": 0,
-      "rot_level": 14.73
+      "rot_level": 14.73,
+      "play_types": []
     },
     {
       "rank": 69,
@@ -896,9 +964,10 @@
       "adj_off": 103.05,
       "adj_def": 98.39,
       "adj_net": 4.66,
-      "tempo": 68,
+      "tempo": 67.76,
       "direct_net": 0,
-      "rot_level": 7.31
+      "rot_level": 7.31,
+      "play_types": []
     },
     {
       "rank": 70,
@@ -909,9 +978,10 @@
       "adj_off": 104.16,
       "adj_def": 99.76,
       "adj_net": 4.41,
-      "tempo": 68,
+      "tempo": 64.12,
       "direct_net": 0,
-      "rot_level": 3.54
+      "rot_level": 3.54,
+      "play_types": []
     },
     {
       "rank": 71,
@@ -922,9 +992,10 @@
       "adj_off": 102.5,
       "adj_def": 98.2,
       "adj_net": 4.3,
-      "tempo": 68,
+      "tempo": 66.81,
       "direct_net": 0,
-      "rot_level": 2.93
+      "rot_level": 2.93,
+      "play_types": []
     },
     {
       "rank": 72,
@@ -935,9 +1006,10 @@
       "adj_off": 102,
       "adj_def": 97.71,
       "adj_net": 4.29,
-      "tempo": 68,
+      "tempo": 68.93,
       "direct_net": 0,
-      "rot_level": 19.51
+      "rot_level": 19.51,
+      "play_types": []
     },
     {
       "rank": 73,
@@ -948,9 +1020,10 @@
       "adj_off": 104.06,
       "adj_def": 99.88,
       "adj_net": 4.18,
-      "tempo": 68,
+      "tempo": 69.89,
       "direct_net": 0,
-      "rot_level": 16.92
+      "rot_level": 16.92,
+      "play_types": []
     },
     {
       "rank": 74,
@@ -961,9 +1034,10 @@
       "adj_off": 102.4,
       "adj_def": 98.23,
       "adj_net": 4.17,
-      "tempo": 68,
+      "tempo": 68.59,
       "direct_net": 0,
-      "rot_level": 13.3
+      "rot_level": 13.3,
+      "play_types": []
     },
     {
       "rank": 75,
@@ -974,9 +1048,10 @@
       "adj_off": 101.59,
       "adj_def": 97.48,
       "adj_net": 4.11,
-      "tempo": 68,
+      "tempo": 69.26,
       "direct_net": 0,
-      "rot_level": 8.58
+      "rot_level": 8.58,
+      "play_types": []
     },
     {
       "rank": 76,
@@ -987,9 +1062,10 @@
       "adj_off": 102.35,
       "adj_def": 98.24,
       "adj_net": 4.11,
-      "tempo": 68,
+      "tempo": 67.75,
       "direct_net": 0,
-      "rot_level": 21.71
+      "rot_level": 21.71,
+      "play_types": []
     },
     {
       "rank": 77,
@@ -1000,9 +1076,10 @@
       "adj_off": 101.29,
       "adj_def": 97.23,
       "adj_net": 4.06,
-      "tempo": 68,
+      "tempo": 67.71,
       "direct_net": 0,
-      "rot_level": 7.75
+      "rot_level": 7.75,
+      "play_types": []
     },
     {
       "rank": 78,
@@ -1013,9 +1090,10 @@
       "adj_off": 102.74,
       "adj_def": 98.74,
       "adj_net": 3.99,
-      "tempo": 68,
+      "tempo": 70.77,
       "direct_net": 0,
-      "rot_level": 7.62
+      "rot_level": 7.62,
+      "play_types": []
     },
     {
       "rank": 79,
@@ -1026,9 +1104,10 @@
       "adj_off": 103.12,
       "adj_def": 99.14,
       "adj_net": 3.98,
-      "tempo": 68,
+      "tempo": 67.84,
       "direct_net": 0,
-      "rot_level": 7.18
+      "rot_level": 7.18,
+      "play_types": []
     },
     {
       "rank": 80,
@@ -1039,9 +1118,10 @@
       "adj_off": 102.33,
       "adj_def": 98.49,
       "adj_net": 3.84,
-      "tempo": 68,
+      "tempo": 65.96,
       "direct_net": 0,
-      "rot_level": 3.52
+      "rot_level": 3.52,
+      "play_types": []
     },
     {
       "rank": 81,
@@ -1052,9 +1132,10 @@
       "adj_off": 104.95,
       "adj_def": 101.14,
       "adj_net": 3.81,
-      "tempo": 68,
+      "tempo": 67.78,
       "direct_net": 0,
-      "rot_level": 0.81
+      "rot_level": 0.81,
+      "play_types": []
     },
     {
       "rank": 82,
@@ -1065,9 +1146,10 @@
       "adj_off": 101.62,
       "adj_def": 97.87,
       "adj_net": 3.75,
-      "tempo": 68,
+      "tempo": 68.31,
       "direct_net": 0,
-      "rot_level": 14.61
+      "rot_level": 14.61,
+      "play_types": []
     },
     {
       "rank": 83,
@@ -1078,9 +1160,10 @@
       "adj_off": 103.11,
       "adj_def": 99.48,
       "adj_net": 3.63,
-      "tempo": 68,
+      "tempo": 70.07,
       "direct_net": 0,
-      "rot_level": 5.88
+      "rot_level": 5.88,
+      "play_types": []
     },
     {
       "rank": 84,
@@ -1091,9 +1174,10 @@
       "adj_off": 101.94,
       "adj_def": 98.42,
       "adj_net": 3.52,
-      "tempo": 68,
+      "tempo": 67.69,
       "direct_net": 0,
-      "rot_level": 8.35
+      "rot_level": 8.35,
+      "play_types": []
     },
     {
       "rank": 85,
@@ -1104,9 +1188,10 @@
       "adj_off": 102.17,
       "adj_def": 98.68,
       "adj_net": 3.5,
-      "tempo": 68,
+      "tempo": 66.42,
       "direct_net": 0,
-      "rot_level": 8.56
+      "rot_level": 8.56,
+      "play_types": []
     },
     {
       "rank": 86,
@@ -1117,9 +1202,10 @@
       "adj_off": 101.53,
       "adj_def": 98.09,
       "adj_net": 3.43,
-      "tempo": 68,
+      "tempo": 68.55,
       "direct_net": 0,
-      "rot_level": -6.59
+      "rot_level": -6.59,
+      "play_types": []
     },
     {
       "rank": 87,
@@ -1130,9 +1216,10 @@
       "adj_off": 101.91,
       "adj_def": 98.72,
       "adj_net": 3.19,
-      "tempo": 68,
+      "tempo": 66.51,
       "direct_net": 0,
-      "rot_level": 5.17
+      "rot_level": 5.17,
+      "play_types": []
     },
     {
       "rank": 88,
@@ -1143,9 +1230,10 @@
       "adj_off": 104.07,
       "adj_def": 100.93,
       "adj_net": 3.14,
-      "tempo": 68,
+      "tempo": 70.5,
       "direct_net": 0,
-      "rot_level": 13.95
+      "rot_level": 13.95,
+      "play_types": []
     },
     {
       "rank": 89,
@@ -1156,9 +1244,10 @@
       "adj_off": 103,
       "adj_def": 99.87,
       "adj_net": 3.13,
-      "tempo": 68,
+      "tempo": 66.45,
       "direct_net": 0,
-      "rot_level": 2.52
+      "rot_level": 2.52,
+      "play_types": []
     },
     {
       "rank": 90,
@@ -1169,9 +1258,10 @@
       "adj_off": 100.79,
       "adj_def": 97.73,
       "adj_net": 3.06,
-      "tempo": 68,
+      "tempo": 67.45,
       "direct_net": 0,
-      "rot_level": 8.5
+      "rot_level": 8.5,
+      "play_types": []
     },
     {
       "rank": 91,
@@ -1182,9 +1272,10 @@
       "adj_off": 102.21,
       "adj_def": 99.16,
       "adj_net": 3.05,
-      "tempo": 68,
+      "tempo": 64.3,
       "direct_net": 0,
-      "rot_level": 13.23
+      "rot_level": 13.23,
+      "play_types": []
     },
     {
       "rank": 92,
@@ -1195,9 +1286,10 @@
       "adj_off": 102.89,
       "adj_def": 99.92,
       "adj_net": 2.97,
-      "tempo": 68,
+      "tempo": 68.49,
       "direct_net": 0,
-      "rot_level": -4.95
+      "rot_level": -4.95,
+      "play_types": []
     },
     {
       "rank": 93,
@@ -1208,9 +1300,10 @@
       "adj_off": 100.47,
       "adj_def": 97.64,
       "adj_net": 2.83,
-      "tempo": 68,
+      "tempo": 66.56,
       "direct_net": 0,
-      "rot_level": 10.53
+      "rot_level": 10.53,
+      "play_types": []
     },
     {
       "rank": 94,
@@ -1221,9 +1314,10 @@
       "adj_off": 100.43,
       "adj_def": 97.7,
       "adj_net": 2.73,
-      "tempo": 68,
+      "tempo": 71.03,
       "direct_net": 0,
-      "rot_level": 8.86
+      "rot_level": 8.86,
+      "play_types": []
     },
     {
       "rank": 95,
@@ -1234,9 +1328,10 @@
       "adj_off": 102.99,
       "adj_def": 100.28,
       "adj_net": 2.71,
-      "tempo": 68,
+      "tempo": 69.72,
       "direct_net": 0,
-      "rot_level": 3.47
+      "rot_level": 3.47,
+      "play_types": []
     },
     {
       "rank": 96,
@@ -1247,9 +1342,10 @@
       "adj_off": 104.09,
       "adj_def": 101.39,
       "adj_net": 2.7,
-      "tempo": 68,
+      "tempo": 67.02,
       "direct_net": 0,
-      "rot_level": 12.36
+      "rot_level": 12.36,
+      "play_types": []
     },
     {
       "rank": 97,
@@ -1260,9 +1356,10 @@
       "adj_off": 102.44,
       "adj_def": 99.74,
       "adj_net": 2.69,
-      "tempo": 68,
+      "tempo": 64.44,
       "direct_net": 0,
-      "rot_level": 5.56
+      "rot_level": 5.56,
+      "play_types": []
     },
     {
       "rank": 98,
@@ -1273,9 +1370,10 @@
       "adj_off": 103.86,
       "adj_def": 101.44,
       "adj_net": 2.41,
-      "tempo": 68,
+      "tempo": 66.84,
       "direct_net": 0,
-      "rot_level": 1.68
+      "rot_level": 1.68,
+      "play_types": []
     },
     {
       "rank": 99,
@@ -1286,9 +1384,10 @@
       "adj_off": 101.77,
       "adj_def": 99.39,
       "adj_net": 2.37,
-      "tempo": 68,
+      "tempo": 64.66,
       "direct_net": 0,
-      "rot_level": 3.15
+      "rot_level": 3.15,
+      "play_types": []
     },
     {
       "rank": 100,
@@ -1299,9 +1398,10 @@
       "adj_off": 102.92,
       "adj_def": 100.66,
       "adj_net": 2.26,
-      "tempo": 68,
+      "tempo": 65.16,
       "direct_net": 0,
-      "rot_level": 11.28
+      "rot_level": 11.28,
+      "play_types": []
     },
     {
       "rank": 101,
@@ -1312,9 +1412,10 @@
       "adj_off": 100.98,
       "adj_def": 98.74,
       "adj_net": 2.24,
-      "tempo": 68,
+      "tempo": 68.43,
       "direct_net": 0,
-      "rot_level": 3.54
+      "rot_level": 3.54,
+      "play_types": []
     },
     {
       "rank": 102,
@@ -1325,9 +1426,10 @@
       "adj_off": 102.38,
       "adj_def": 100.17,
       "adj_net": 2.2,
-      "tempo": 68,
+      "tempo": 70.44,
       "direct_net": 0,
-      "rot_level": 12.09
+      "rot_level": 12.09,
+      "play_types": []
     },
     {
       "rank": 103,
@@ -1338,9 +1440,10 @@
       "adj_off": 100.59,
       "adj_def": 98.42,
       "adj_net": 2.17,
-      "tempo": 68,
+      "tempo": 69.63,
       "direct_net": 0,
-      "rot_level": 9.62
+      "rot_level": 9.62,
+      "play_types": []
     },
     {
       "rank": 104,
@@ -1351,9 +1454,10 @@
       "adj_off": 102.27,
       "adj_def": 100.1,
       "adj_net": 2.17,
-      "tempo": 68,
+      "tempo": 65.37,
       "direct_net": 0,
-      "rot_level": 10.85
+      "rot_level": 10.85,
+      "play_types": []
     },
     {
       "rank": 105,
@@ -1364,9 +1468,10 @@
       "adj_off": 100.88,
       "adj_def": 98.72,
       "adj_net": 2.16,
-      "tempo": 68,
+      "tempo": 67.09,
       "direct_net": 0,
-      "rot_level": 2.04
+      "rot_level": 2.04,
+      "play_types": []
     },
     {
       "rank": 106,
@@ -1377,9 +1482,10 @@
       "adj_off": 102.1,
       "adj_def": 99.95,
       "adj_net": 2.16,
-      "tempo": 68,
+      "tempo": 68.17,
       "direct_net": 0,
-      "rot_level": -7.25
+      "rot_level": -7.25,
+      "play_types": []
     },
     {
       "rank": 107,
@@ -1390,9 +1496,10 @@
       "adj_off": 102.26,
       "adj_def": 100.12,
       "adj_net": 2.14,
-      "tempo": 68,
+      "tempo": 64.02,
       "direct_net": 0,
-      "rot_level": 7.14
+      "rot_level": 7.14,
+      "play_types": []
     },
     {
       "rank": 108,
@@ -1403,9 +1510,10 @@
       "adj_off": 104.04,
       "adj_def": 101.99,
       "adj_net": 2.05,
-      "tempo": 68,
+      "tempo": 70,
       "direct_net": 0,
-      "rot_level": -0.71
+      "rot_level": -0.71,
+      "play_types": []
     },
     {
       "rank": 109,
@@ -1416,9 +1524,10 @@
       "adj_off": 102.13,
       "adj_def": 100.11,
       "adj_net": 2.02,
-      "tempo": 68,
+      "tempo": 69.4,
       "direct_net": 0,
-      "rot_level": 8.75
+      "rot_level": 8.75,
+      "play_types": []
     },
     {
       "rank": 110,
@@ -1429,9 +1538,10 @@
       "adj_off": 100.44,
       "adj_def": 98.45,
       "adj_net": 1.99,
-      "tempo": 68,
+      "tempo": 69.82,
       "direct_net": 0,
-      "rot_level": 14.28
+      "rot_level": 14.28,
+      "play_types": []
     },
     {
       "rank": 111,
@@ -1442,9 +1552,10 @@
       "adj_off": 101.7,
       "adj_def": 99.71,
       "adj_net": 1.99,
-      "tempo": 68,
+      "tempo": 68.73,
       "direct_net": 0,
-      "rot_level": 3.49
+      "rot_level": 3.49,
+      "play_types": []
     },
     {
       "rank": 112,
@@ -1455,9 +1566,10 @@
       "adj_off": 100.74,
       "adj_def": 98.79,
       "adj_net": 1.95,
-      "tempo": 68,
+      "tempo": 68.1,
       "direct_net": 0,
-      "rot_level": 3.6
+      "rot_level": 3.6,
+      "play_types": []
     },
     {
       "rank": 113,
@@ -1468,9 +1580,10 @@
       "adj_off": 104.42,
       "adj_def": 102.5,
       "adj_net": 1.92,
-      "tempo": 68,
+      "tempo": 70.72,
       "direct_net": 0,
-      "rot_level": 5.3
+      "rot_level": 5.3,
+      "play_types": []
     },
     {
       "rank": 114,
@@ -1481,9 +1594,10 @@
       "adj_off": 101.44,
       "adj_def": 99.56,
       "adj_net": 1.88,
-      "tempo": 68,
+      "tempo": 68.31,
       "direct_net": 0,
-      "rot_level": -3.12
+      "rot_level": -3.12,
+      "play_types": []
     },
     {
       "rank": 115,
@@ -1494,9 +1608,10 @@
       "adj_off": 99.92,
       "adj_def": 98.13,
       "adj_net": 1.79,
-      "tempo": 68,
+      "tempo": 70.5,
       "direct_net": 0,
-      "rot_level": 1.77
+      "rot_level": 1.77,
+      "play_types": []
     },
     {
       "rank": 116,
@@ -1507,9 +1622,10 @@
       "adj_off": 103.5,
       "adj_def": 101.72,
       "adj_net": 1.78,
-      "tempo": 68,
+      "tempo": 71.02,
       "direct_net": 0,
-      "rot_level": 0.08
+      "rot_level": 0.08,
+      "play_types": []
     },
     {
       "rank": 117,
@@ -1520,9 +1636,10 @@
       "adj_off": 100.35,
       "adj_def": 98.57,
       "adj_net": 1.78,
-      "tempo": 68,
+      "tempo": 66.1,
       "direct_net": 0,
-      "rot_level": 7.72
+      "rot_level": 7.72,
+      "play_types": []
     },
     {
       "rank": 118,
@@ -1533,9 +1650,10 @@
       "adj_off": 100.47,
       "adj_def": 98.71,
       "adj_net": 1.76,
-      "tempo": 68,
+      "tempo": 66.09,
       "direct_net": 0,
-      "rot_level": 12.87
+      "rot_level": 12.87,
+      "play_types": []
     },
     {
       "rank": 119,
@@ -1546,9 +1664,10 @@
       "adj_off": 99.47,
       "adj_def": 97.75,
       "adj_net": 1.73,
-      "tempo": 68,
+      "tempo": 71.86,
       "direct_net": 0,
-      "rot_level": 6.16
+      "rot_level": 6.16,
+      "play_types": []
     },
     {
       "rank": 120,
@@ -1559,9 +1678,10 @@
       "adj_off": 100.94,
       "adj_def": 99.29,
       "adj_net": 1.66,
-      "tempo": 68,
+      "tempo": 67.58,
       "direct_net": 0,
-      "rot_level": 0.53
+      "rot_level": 0.53,
+      "play_types": []
     },
     {
       "rank": 121,
@@ -1572,9 +1692,10 @@
       "adj_off": 100.16,
       "adj_def": 98.64,
       "adj_net": 1.52,
-      "tempo": 68,
+      "tempo": 67.76,
       "direct_net": 0,
-      "rot_level": 0.83
+      "rot_level": 0.83,
+      "play_types": []
     },
     {
       "rank": 122,
@@ -1585,9 +1706,10 @@
       "adj_off": 101.16,
       "adj_def": 99.66,
       "adj_net": 1.51,
-      "tempo": 68,
+      "tempo": 68.07,
       "direct_net": 0,
-      "rot_level": 4.14
+      "rot_level": 4.14,
+      "play_types": []
     },
     {
       "rank": 123,
@@ -1598,9 +1720,10 @@
       "adj_off": 100.6,
       "adj_def": 99.14,
       "adj_net": 1.47,
-      "tempo": 68,
+      "tempo": 69.15,
       "direct_net": 0,
-      "rot_level": 13.44
+      "rot_level": 13.44,
+      "play_types": []
     },
     {
       "rank": 124,
@@ -1611,9 +1734,10 @@
       "adj_off": 100.97,
       "adj_def": 99.54,
       "adj_net": 1.43,
-      "tempo": 68,
+      "tempo": 67.55,
       "direct_net": 0,
-      "rot_level": -1.08
+      "rot_level": -1.08,
+      "play_types": []
     },
     {
       "rank": 125,
@@ -1624,9 +1748,10 @@
       "adj_off": 99.5,
       "adj_def": 98.11,
       "adj_net": 1.4,
-      "tempo": 68,
+      "tempo": 70.45,
       "direct_net": 0,
-      "rot_level": 9.05
+      "rot_level": 9.05,
+      "play_types": []
     },
     {
       "rank": 126,
@@ -1637,9 +1762,10 @@
       "adj_off": 99.2,
       "adj_def": 97.82,
       "adj_net": 1.38,
-      "tempo": 68,
+      "tempo": 65.79,
       "direct_net": 0,
-      "rot_level": 2.6
+      "rot_level": 2.6,
+      "play_types": []
     },
     {
       "rank": 127,
@@ -1650,9 +1776,10 @@
       "adj_off": 99.82,
       "adj_def": 98.45,
       "adj_net": 1.37,
-      "tempo": 68,
+      "tempo": 69.41,
       "direct_net": 0,
-      "rot_level": 6.34
+      "rot_level": 6.34,
+      "play_types": []
     },
     {
       "rank": 128,
@@ -1663,9 +1790,10 @@
       "adj_off": 100.05,
       "adj_def": 98.72,
       "adj_net": 1.33,
-      "tempo": 68,
+      "tempo": 66.99,
       "direct_net": 0,
-      "rot_level": 10.44
+      "rot_level": 10.44,
+      "play_types": []
     },
     {
       "rank": 129,
@@ -1676,9 +1804,10 @@
       "adj_off": 101.23,
       "adj_def": 99.9,
       "adj_net": 1.33,
-      "tempo": 68,
+      "tempo": 70.6,
       "direct_net": 0,
-      "rot_level": -7.42
+      "rot_level": -7.42,
+      "play_types": []
     },
     {
       "rank": 130,
@@ -1689,9 +1818,10 @@
       "adj_off": 101,
       "adj_def": 99.83,
       "adj_net": 1.17,
-      "tempo": 68,
+      "tempo": 63.79,
       "direct_net": 0,
-      "rot_level": -9.48
+      "rot_level": -9.48,
+      "play_types": []
     },
     {
       "rank": 131,
@@ -1702,9 +1832,10 @@
       "adj_off": 99.82,
       "adj_def": 98.67,
       "adj_net": 1.15,
-      "tempo": 68,
+      "tempo": 66.9,
       "direct_net": 0,
-      "rot_level": 4.7
+      "rot_level": 4.7,
+      "play_types": []
     },
     {
       "rank": 132,
@@ -1715,9 +1846,10 @@
       "adj_off": 97.62,
       "adj_def": 96.5,
       "adj_net": 1.13,
-      "tempo": 68,
+      "tempo": 68.74,
       "direct_net": 0,
-      "rot_level": -0.85
+      "rot_level": -0.85,
+      "play_types": []
     },
     {
       "rank": 133,
@@ -1728,9 +1860,10 @@
       "adj_off": 99.86,
       "adj_def": 98.75,
       "adj_net": 1.11,
-      "tempo": 68,
+      "tempo": 67.28,
       "direct_net": 0,
-      "rot_level": -1.53
+      "rot_level": -1.53,
+      "play_types": []
     },
     {
       "rank": 134,
@@ -1741,9 +1874,10 @@
       "adj_off": 100.59,
       "adj_def": 99.55,
       "adj_net": 1.03,
-      "tempo": 68,
+      "tempo": 68.38,
       "direct_net": 0,
-      "rot_level": 10.91
+      "rot_level": 10.91,
+      "play_types": []
     },
     {
       "rank": 135,
@@ -1754,9 +1888,10 @@
       "adj_off": 100.48,
       "adj_def": 99.5,
       "adj_net": 0.98,
-      "tempo": 68,
+      "tempo": 66.93,
       "direct_net": 0,
-      "rot_level": -8.79
+      "rot_level": -8.79,
+      "play_types": []
     },
     {
       "rank": 136,
@@ -1767,9 +1902,10 @@
       "adj_off": 101.17,
       "adj_def": 100.25,
       "adj_net": 0.92,
-      "tempo": 68,
+      "tempo": 66.84,
       "direct_net": 0,
-      "rot_level": 7.51
+      "rot_level": 7.51,
+      "play_types": []
     },
     {
       "rank": 137,
@@ -1780,9 +1916,10 @@
       "adj_off": 101.61,
       "adj_def": 100.72,
       "adj_net": 0.89,
-      "tempo": 68,
+      "tempo": 66.26,
       "direct_net": 0,
-      "rot_level": 0.27
+      "rot_level": 0.27,
+      "play_types": []
     },
     {
       "rank": 138,
@@ -1793,9 +1930,10 @@
       "adj_off": 101.16,
       "adj_def": 100.29,
       "adj_net": 0.87,
-      "tempo": 68,
+      "tempo": 70.31,
       "direct_net": 0,
-      "rot_level": -1.53
+      "rot_level": -1.53,
+      "play_types": []
     },
     {
       "rank": 139,
@@ -1806,9 +1944,10 @@
       "adj_off": 100.11,
       "adj_def": 99.26,
       "adj_net": 0.86,
-      "tempo": 68,
+      "tempo": 65.67,
       "direct_net": 0,
-      "rot_level": 13.19
+      "rot_level": 13.19,
+      "play_types": []
     },
     {
       "rank": 140,
@@ -1819,9 +1958,10 @@
       "adj_off": 99.22,
       "adj_def": 98.37,
       "adj_net": 0.84,
-      "tempo": 68,
+      "tempo": 71.19,
       "direct_net": 0,
-      "rot_level": 2.23
+      "rot_level": 2.23,
+      "play_types": []
     },
     {
       "rank": 141,
@@ -1832,9 +1972,10 @@
       "adj_off": 102.26,
       "adj_def": 101.41,
       "adj_net": 0.84,
-      "tempo": 68,
+      "tempo": 67.33,
       "direct_net": 0,
-      "rot_level": -10.98
+      "rot_level": -10.98,
+      "play_types": []
     },
     {
       "rank": 142,
@@ -1845,9 +1986,10 @@
       "adj_off": 101.18,
       "adj_def": 100.42,
       "adj_net": 0.77,
-      "tempo": 68,
+      "tempo": 63.94,
       "direct_net": 0,
-      "rot_level": -0.26
+      "rot_level": -0.26,
+      "play_types": []
     },
     {
       "rank": 143,
@@ -1858,9 +2000,10 @@
       "adj_off": 99.8,
       "adj_def": 99.04,
       "adj_net": 0.76,
-      "tempo": 68,
+      "tempo": 68.36,
       "direct_net": 0,
-      "rot_level": -9.01
+      "rot_level": -9.01,
+      "play_types": []
     },
     {
       "rank": 144,
@@ -1871,9 +2014,10 @@
       "adj_off": 101.05,
       "adj_def": 100.3,
       "adj_net": 0.75,
-      "tempo": 68,
+      "tempo": 70.62,
       "direct_net": 0,
-      "rot_level": -0.09
+      "rot_level": -0.09,
+      "play_types": []
     },
     {
       "rank": 145,
@@ -1884,9 +2028,10 @@
       "adj_off": 100.45,
       "adj_def": 99.7,
       "adj_net": 0.75,
-      "tempo": 68,
+      "tempo": 68.72,
       "direct_net": 0,
-      "rot_level": -4.37
+      "rot_level": -4.37,
+      "play_types": []
     },
     {
       "rank": 146,
@@ -1897,9 +2042,10 @@
       "adj_off": 101.1,
       "adj_def": 100.37,
       "adj_net": 0.74,
-      "tempo": 68,
+      "tempo": 65.67,
       "direct_net": 0,
-      "rot_level": -5.72
+      "rot_level": -5.72,
+      "play_types": []
     },
     {
       "rank": 147,
@@ -1910,9 +2056,10 @@
       "adj_off": 101.78,
       "adj_def": 101.06,
       "adj_net": 0.72,
-      "tempo": 68,
+      "tempo": 69.18,
       "direct_net": 0,
-      "rot_level": 0.06
+      "rot_level": 0.06,
+      "play_types": []
     },
     {
       "rank": 148,
@@ -1923,9 +2070,10 @@
       "adj_off": 101.36,
       "adj_def": 100.67,
       "adj_net": 0.69,
-      "tempo": 68,
+      "tempo": 70.02,
       "direct_net": 0,
-      "rot_level": 5.24
+      "rot_level": 5.24,
+      "play_types": []
     },
     {
       "rank": 149,
@@ -1936,9 +2084,10 @@
       "adj_off": 98.27,
       "adj_def": 97.6,
       "adj_net": 0.68,
-      "tempo": 68,
+      "tempo": 66.26,
       "direct_net": 0,
-      "rot_level": 1.14
+      "rot_level": 1.14,
+      "play_types": []
     },
     {
       "rank": 150,
@@ -1949,9 +2098,10 @@
       "adj_off": 99.63,
       "adj_def": 98.96,
       "adj_net": 0.67,
-      "tempo": 68,
+      "tempo": 69.02,
       "direct_net": 0,
-      "rot_level": 9.51
+      "rot_level": 9.51,
+      "play_types": []
     },
     {
       "rank": 151,
@@ -1962,9 +2112,10 @@
       "adj_off": 102.31,
       "adj_def": 101.64,
       "adj_net": 0.66,
-      "tempo": 68,
+      "tempo": 64.98,
       "direct_net": 0,
-      "rot_level": 1.26
+      "rot_level": 1.26,
+      "play_types": []
     },
     {
       "rank": 152,
@@ -1975,9 +2126,10 @@
       "adj_off": 100.43,
       "adj_def": 99.78,
       "adj_net": 0.65,
-      "tempo": 68,
+      "tempo": 65.54,
       "direct_net": 0,
-      "rot_level": 2.72
+      "rot_level": 2.72,
+      "play_types": []
     },
     {
       "rank": 153,
@@ -1988,9 +2140,10 @@
       "adj_off": 101.22,
       "adj_def": 100.6,
       "adj_net": 0.62,
-      "tempo": 68,
+      "tempo": 72.36,
       "direct_net": 0,
-      "rot_level": 4.54
+      "rot_level": 4.54,
+      "play_types": []
     },
     {
       "rank": 154,
@@ -2001,9 +2154,10 @@
       "adj_off": 98.23,
       "adj_def": 97.64,
       "adj_net": 0.6,
-      "tempo": 68,
+      "tempo": 70.3,
       "direct_net": 0,
-      "rot_level": 1.62
+      "rot_level": 1.62,
+      "play_types": []
     },
     {
       "rank": 155,
@@ -2014,9 +2168,10 @@
       "adj_off": 100.47,
       "adj_def": 99.92,
       "adj_net": 0.55,
-      "tempo": 68,
+      "tempo": 68.91,
       "direct_net": 0,
-      "rot_level": 7.98
+      "rot_level": 7.98,
+      "play_types": []
     },
     {
       "rank": 156,
@@ -2027,9 +2182,10 @@
       "adj_off": 100.63,
       "adj_def": 100.11,
       "adj_net": 0.52,
-      "tempo": 68,
+      "tempo": 63.79,
       "direct_net": 0,
-      "rot_level": 3.02
+      "rot_level": 3.02,
+      "play_types": []
     },
     {
       "rank": 157,
@@ -2040,9 +2196,10 @@
       "adj_off": 99.37,
       "adj_def": 98.92,
       "adj_net": 0.45,
-      "tempo": 68,
+      "tempo": 66.87,
       "direct_net": 0,
-      "rot_level": 5.71
+      "rot_level": 5.71,
+      "play_types": []
     },
     {
       "rank": 158,
@@ -2053,9 +2210,10 @@
       "adj_off": 99.98,
       "adj_def": 99.58,
       "adj_net": 0.4,
-      "tempo": 68,
+      "tempo": 70.77,
       "direct_net": 0,
-      "rot_level": -5.77
+      "rot_level": -5.77,
+      "play_types": []
     },
     {
       "rank": 159,
@@ -2066,9 +2224,10 @@
       "adj_off": 101.24,
       "adj_def": 100.84,
       "adj_net": 0.4,
-      "tempo": 68,
+      "tempo": 63.94,
       "direct_net": 0,
-      "rot_level": -1.93
+      "rot_level": -1.93,
+      "play_types": []
     },
     {
       "rank": 160,
@@ -2079,9 +2238,10 @@
       "adj_off": 100.05,
       "adj_def": 99.67,
       "adj_net": 0.38,
-      "tempo": 68,
+      "tempo": 68.23,
       "direct_net": 0,
-      "rot_level": -11.27
+      "rot_level": -11.27,
+      "play_types": []
     },
     {
       "rank": 161,
@@ -2092,9 +2252,10 @@
       "adj_off": 100,
       "adj_def": 99.63,
       "adj_net": 0.37,
-      "tempo": 68,
+      "tempo": 66.27,
       "direct_net": 0,
-      "rot_level": -3.05
+      "rot_level": -3.05,
+      "play_types": []
     },
     {
       "rank": 162,
@@ -2105,9 +2266,10 @@
       "adj_off": 100.17,
       "adj_def": 99.87,
       "adj_net": 0.3,
-      "tempo": 68,
+      "tempo": 65.64,
       "direct_net": 0,
-      "rot_level": 1.3
+      "rot_level": 1.3,
+      "play_types": []
     },
     {
       "rank": 163,
@@ -2118,9 +2280,10 @@
       "adj_off": 99.6,
       "adj_def": 99.32,
       "adj_net": 0.27,
-      "tempo": 68,
+      "tempo": 68.86,
       "direct_net": 0,
-      "rot_level": 2.48
+      "rot_level": 2.48,
+      "play_types": []
     },
     {
       "rank": 164,
@@ -2131,9 +2294,10 @@
       "adj_off": 100.45,
       "adj_def": 100.2,
       "adj_net": 0.25,
-      "tempo": 68,
+      "tempo": 65.86,
       "direct_net": 0,
-      "rot_level": 1.36
+      "rot_level": 1.36,
+      "play_types": []
     },
     {
       "rank": 165,
@@ -2144,9 +2308,10 @@
       "adj_off": 100.38,
       "adj_def": 100.14,
       "adj_net": 0.23,
-      "tempo": 68,
+      "tempo": 69.05,
       "direct_net": 0,
-      "rot_level": -0.81
+      "rot_level": -0.81,
+      "play_types": []
     },
     {
       "rank": 166,
@@ -2157,9 +2322,10 @@
       "adj_off": 100.1,
       "adj_def": 99.93,
       "adj_net": 0.16,
-      "tempo": 68,
+      "tempo": 67.28,
       "direct_net": 0,
-      "rot_level": 6.18
+      "rot_level": 6.18,
+      "play_types": []
     },
     {
       "rank": 167,
@@ -2170,9 +2336,10 @@
       "adj_off": 100.93,
       "adj_def": 100.8,
       "adj_net": 0.13,
-      "tempo": 68,
+      "tempo": 69.75,
       "direct_net": 0,
-      "rot_level": -1.57
+      "rot_level": -1.57,
+      "play_types": []
     },
     {
       "rank": 168,
@@ -2183,9 +2350,10 @@
       "adj_off": 99.68,
       "adj_def": 99.55,
       "adj_net": 0.13,
-      "tempo": 68,
+      "tempo": 67.67,
       "direct_net": 0,
-      "rot_level": 2.57
+      "rot_level": 2.57,
+      "play_types": []
     },
     {
       "rank": 169,
@@ -2196,9 +2364,10 @@
       "adj_off": 100.73,
       "adj_def": 100.63,
       "adj_net": 0.09,
-      "tempo": 68,
+      "tempo": 63.74,
       "direct_net": 0,
-      "rot_level": -1.3
+      "rot_level": -1.3,
+      "play_types": []
     },
     {
       "rank": 170,
@@ -2209,9 +2378,10 @@
       "adj_off": 99.92,
       "adj_def": 99.86,
       "adj_net": 0.06,
-      "tempo": 68,
+      "tempo": 68.49,
       "direct_net": 0,
-      "rot_level": 4.4
+      "rot_level": 4.4,
+      "play_types": []
     },
     {
       "rank": 171,
@@ -2222,9 +2392,10 @@
       "adj_off": 100.8,
       "adj_def": 100.77,
       "adj_net": 0.04,
-      "tempo": 68,
+      "tempo": 69.16,
       "direct_net": 0,
-      "rot_level": 15.53
+      "rot_level": 15.53,
+      "play_types": []
     },
     {
       "rank": 172,
@@ -2235,9 +2406,10 @@
       "adj_off": 100.86,
       "adj_def": 100.85,
       "adj_net": 0.01,
-      "tempo": 68,
+      "tempo": 66.7,
       "direct_net": 0,
-      "rot_level": -1.66
+      "rot_level": -1.66,
+      "play_types": []
     },
     {
       "rank": 173,
@@ -2250,7 +2422,8 @@
       "adj_net": 0,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 174,
@@ -2263,7 +2436,8 @@
       "adj_net": 0,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 175,
@@ -2276,7 +2450,8 @@
       "adj_net": 0,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 176,
@@ -2287,9 +2462,10 @@
       "adj_off": 100,
       "adj_def": 100,
       "adj_net": 0,
-      "tempo": 68,
+      "tempo": 68.89,
       "direct_net": 0,
-      "rot_level": -31.86
+      "rot_level": -31.86,
+      "play_types": []
     },
     {
       "rank": 177,
@@ -2302,7 +2478,8 @@
       "adj_net": 0,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 178,
@@ -2313,9 +2490,10 @@
       "adj_off": 100.81,
       "adj_def": 100.82,
       "adj_net": 0,
-      "tempo": 68,
+      "tempo": 66.78,
       "direct_net": 0,
-      "rot_level": 4.42
+      "rot_level": 4.42,
+      "play_types": []
     },
     {
       "rank": 179,
@@ -2326,9 +2504,10 @@
       "adj_off": 99.79,
       "adj_def": 99.81,
       "adj_net": -0.02,
-      "tempo": 68,
+      "tempo": 66.08,
       "direct_net": 0,
-      "rot_level": -2.49
+      "rot_level": -2.49,
+      "play_types": []
     },
     {
       "rank": 180,
@@ -2339,9 +2518,10 @@
       "adj_off": 100.47,
       "adj_def": 100.49,
       "adj_net": -0.02,
-      "tempo": 68,
+      "tempo": 65.28,
       "direct_net": 0,
-      "rot_level": -8.72
+      "rot_level": -8.72,
+      "play_types": []
     },
     {
       "rank": 181,
@@ -2352,9 +2532,10 @@
       "adj_off": 99.95,
       "adj_def": 99.99,
       "adj_net": -0.04,
-      "tempo": 68,
+      "tempo": 65.04,
       "direct_net": 0,
-      "rot_level": -9.27
+      "rot_level": -9.27,
+      "play_types": []
     },
     {
       "rank": 182,
@@ -2365,9 +2546,10 @@
       "adj_off": 99.96,
       "adj_def": 100.03,
       "adj_net": -0.06,
-      "tempo": 68,
+      "tempo": 68.75,
       "direct_net": 0,
-      "rot_level": -18.76
+      "rot_level": -18.76,
+      "play_types": []
     },
     {
       "rank": 183,
@@ -2378,9 +2560,10 @@
       "adj_off": 100.56,
       "adj_def": 100.62,
       "adj_net": -0.06,
-      "tempo": 68,
+      "tempo": 70.76,
       "direct_net": 0,
-      "rot_level": 1.74
+      "rot_level": 1.74,
+      "play_types": []
     },
     {
       "rank": 184,
@@ -2391,9 +2574,10 @@
       "adj_off": 99.95,
       "adj_def": 100.02,
       "adj_net": -0.07,
-      "tempo": 68,
+      "tempo": 66.26,
       "direct_net": 0,
-      "rot_level": -18.56
+      "rot_level": -18.56,
+      "play_types": []
     },
     {
       "rank": 185,
@@ -2404,9 +2588,10 @@
       "adj_off": 99.92,
       "adj_def": 99.99,
       "adj_net": -0.07,
-      "tempo": 68,
+      "tempo": 64.84,
       "direct_net": 0,
-      "rot_level": -5.58
+      "rot_level": -5.58,
+      "play_types": []
     },
     {
       "rank": 186,
@@ -2417,9 +2602,10 @@
       "adj_off": 99.1,
       "adj_def": 99.19,
       "adj_net": -0.08,
-      "tempo": 68,
+      "tempo": 66.03,
       "direct_net": 0,
-      "rot_level": 14.65
+      "rot_level": 14.65,
+      "play_types": []
     },
     {
       "rank": 187,
@@ -2430,9 +2616,10 @@
       "adj_off": 99.93,
       "adj_def": 100.01,
       "adj_net": -0.08,
-      "tempo": 68,
+      "tempo": 65.07,
       "direct_net": 0,
-      "rot_level": -19.87
+      "rot_level": -19.87,
+      "play_types": []
     },
     {
       "rank": 188,
@@ -2443,9 +2630,10 @@
       "adj_off": 100.47,
       "adj_def": 100.56,
       "adj_net": -0.09,
-      "tempo": 68,
+      "tempo": 64.32,
       "direct_net": 0,
-      "rot_level": -2.53
+      "rot_level": -2.53,
+      "play_types": []
     },
     {
       "rank": 189,
@@ -2456,9 +2644,10 @@
       "adj_off": 99.55,
       "adj_def": 99.64,
       "adj_net": -0.1,
-      "tempo": 68,
+      "tempo": 68.18,
       "direct_net": 0,
-      "rot_level": -7.25
+      "rot_level": -7.25,
+      "play_types": []
     },
     {
       "rank": 190,
@@ -2469,9 +2658,10 @@
       "adj_off": 99.94,
       "adj_def": 100.06,
       "adj_net": -0.13,
-      "tempo": 68,
+      "tempo": 73.17,
       "direct_net": 0,
-      "rot_level": 4.15
+      "rot_level": 4.15,
+      "play_types": []
     },
     {
       "rank": 191,
@@ -2482,9 +2672,10 @@
       "adj_off": 100.38,
       "adj_def": 100.52,
       "adj_net": -0.13,
-      "tempo": 68,
+      "tempo": 72.13,
       "direct_net": 0,
-      "rot_level": -13.83
+      "rot_level": -13.83,
+      "play_types": []
     },
     {
       "rank": 192,
@@ -2495,9 +2686,10 @@
       "adj_off": 98.67,
       "adj_def": 98.81,
       "adj_net": -0.14,
-      "tempo": 68,
+      "tempo": 70.11,
       "direct_net": 0,
-      "rot_level": -5.96
+      "rot_level": -5.96,
+      "play_types": []
     },
     {
       "rank": 193,
@@ -2508,9 +2700,10 @@
       "adj_off": 99.34,
       "adj_def": 99.52,
       "adj_net": -0.18,
-      "tempo": 68,
+      "tempo": 70.32,
       "direct_net": 0,
-      "rot_level": -1.3
+      "rot_level": -1.3,
+      "play_types": []
     },
     {
       "rank": 194,
@@ -2521,9 +2714,10 @@
       "adj_off": 98.58,
       "adj_def": 98.76,
       "adj_net": -0.18,
-      "tempo": 68,
+      "tempo": 63.85,
       "direct_net": 0,
-      "rot_level": 0.78
+      "rot_level": 0.78,
+      "play_types": []
     },
     {
       "rank": 195,
@@ -2534,9 +2728,10 @@
       "adj_off": 99.86,
       "adj_def": 100.04,
       "adj_net": -0.18,
-      "tempo": 68,
+      "tempo": 68.14,
       "direct_net": 0,
-      "rot_level": -3.7
+      "rot_level": -3.7,
+      "play_types": []
     },
     {
       "rank": 196,
@@ -2547,9 +2742,10 @@
       "adj_off": 100.45,
       "adj_def": 100.67,
       "adj_net": -0.22,
-      "tempo": 68,
+      "tempo": 69.45,
       "direct_net": 0,
-      "rot_level": 0.96
+      "rot_level": 0.96,
+      "play_types": []
     },
     {
       "rank": 197,
@@ -2560,9 +2756,10 @@
       "adj_off": 97.95,
       "adj_def": 98.17,
       "adj_net": -0.22,
-      "tempo": 68,
+      "tempo": 71.3,
       "direct_net": 0,
-      "rot_level": 4.95
+      "rot_level": 4.95,
+      "play_types": []
     },
     {
       "rank": 198,
@@ -2573,9 +2770,10 @@
       "adj_off": 99.95,
       "adj_def": 100.17,
       "adj_net": -0.22,
-      "tempo": 68,
+      "tempo": 68.18,
       "direct_net": 0,
-      "rot_level": -5
+      "rot_level": -5,
+      "play_types": []
     },
     {
       "rank": 199,
@@ -2586,9 +2784,10 @@
       "adj_off": 99.84,
       "adj_def": 100.06,
       "adj_net": -0.22,
-      "tempo": 68,
+      "tempo": 70.47,
       "direct_net": 0,
-      "rot_level": 8.47
+      "rot_level": 8.47,
+      "play_types": []
     },
     {
       "rank": 200,
@@ -2599,9 +2798,10 @@
       "adj_off": 99.58,
       "adj_def": 99.81,
       "adj_net": -0.23,
-      "tempo": 68,
+      "tempo": 74.65,
       "direct_net": 0,
-      "rot_level": 2.11
+      "rot_level": 2.11,
+      "play_types": []
     },
     {
       "rank": 201,
@@ -2612,9 +2812,10 @@
       "adj_off": 100.39,
       "adj_def": 100.62,
       "adj_net": -0.23,
-      "tempo": 68,
+      "tempo": 67.91,
       "direct_net": 0,
-      "rot_level": -10.48
+      "rot_level": -10.48,
+      "play_types": []
     },
     {
       "rank": 202,
@@ -2625,9 +2826,10 @@
       "adj_off": 99.86,
       "adj_def": 100.09,
       "adj_net": -0.24,
-      "tempo": 68,
+      "tempo": 70.61,
       "direct_net": 0,
-      "rot_level": -7.49
+      "rot_level": -7.49,
+      "play_types": []
     },
     {
       "rank": 203,
@@ -2638,9 +2840,10 @@
       "adj_off": 99.82,
       "adj_def": 100.06,
       "adj_net": -0.24,
-      "tempo": 68,
+      "tempo": 64.37,
       "direct_net": 0,
-      "rot_level": -5.79
+      "rot_level": -5.79,
+      "play_types": []
     },
     {
       "rank": 204,
@@ -2651,9 +2854,10 @@
       "adj_off": 99.31,
       "adj_def": 99.56,
       "adj_net": -0.25,
-      "tempo": 68,
+      "tempo": 74.67,
       "direct_net": 0,
-      "rot_level": -3.44
+      "rot_level": -3.44,
+      "play_types": []
     },
     {
       "rank": 205,
@@ -2664,9 +2868,10 @@
       "adj_off": 99.77,
       "adj_def": 100.03,
       "adj_net": -0.26,
-      "tempo": 68,
+      "tempo": 68.69,
       "direct_net": 0,
-      "rot_level": -5.42
+      "rot_level": -5.42,
+      "play_types": []
     },
     {
       "rank": 206,
@@ -2677,9 +2882,10 @@
       "adj_off": 99.67,
       "adj_def": 99.94,
       "adj_net": -0.27,
-      "tempo": 68,
+      "tempo": 66.64,
       "direct_net": 0,
-      "rot_level": 0.99
+      "rot_level": 0.99,
+      "play_types": []
     },
     {
       "rank": 207,
@@ -2690,9 +2896,10 @@
       "adj_off": 99.37,
       "adj_def": 99.65,
       "adj_net": -0.28,
-      "tempo": 68,
+      "tempo": 70.29,
       "direct_net": 0,
-      "rot_level": -3.28
+      "rot_level": -3.28,
+      "play_types": []
     },
     {
       "rank": 208,
@@ -2703,9 +2910,10 @@
       "adj_off": 99.83,
       "adj_def": 100.12,
       "adj_net": -0.29,
-      "tempo": 68,
+      "tempo": 66.06,
       "direct_net": 0,
-      "rot_level": -11.97
+      "rot_level": -11.97,
+      "play_types": []
     },
     {
       "rank": 209,
@@ -2716,9 +2924,10 @@
       "adj_off": 99.23,
       "adj_def": 99.53,
       "adj_net": -0.3,
-      "tempo": 68,
+      "tempo": 69.3,
       "direct_net": 0,
-      "rot_level": -1.15
+      "rot_level": -1.15,
+      "play_types": []
     },
     {
       "rank": 210,
@@ -2729,9 +2938,10 @@
       "adj_off": 99.72,
       "adj_def": 100.04,
       "adj_net": -0.32,
-      "tempo": 68,
+      "tempo": 70.61,
       "direct_net": 0,
-      "rot_level": -9.29
+      "rot_level": -9.29,
+      "play_types": []
     },
     {
       "rank": 211,
@@ -2742,9 +2952,10 @@
       "adj_off": 99.82,
       "adj_def": 100.14,
       "adj_net": -0.32,
-      "tempo": 68,
+      "tempo": 67.8,
       "direct_net": 0,
-      "rot_level": -12.54
+      "rot_level": -12.54,
+      "play_types": []
     },
     {
       "rank": 212,
@@ -2755,9 +2966,10 @@
       "adj_off": 99.51,
       "adj_def": 99.87,
       "adj_net": -0.36,
-      "tempo": 68,
+      "tempo": 62.86,
       "direct_net": 0,
-      "rot_level": -12.2
+      "rot_level": -12.2,
+      "play_types": []
     },
     {
       "rank": 213,
@@ -2768,9 +2980,10 @@
       "adj_off": 99.15,
       "adj_def": 99.51,
       "adj_net": -0.37,
-      "tempo": 68,
+      "tempo": 71.6,
       "direct_net": 0,
-      "rot_level": 8.16
+      "rot_level": 8.16,
+      "play_types": []
     },
     {
       "rank": 214,
@@ -2781,9 +2994,10 @@
       "adj_off": 98.54,
       "adj_def": 98.92,
       "adj_net": -0.38,
-      "tempo": 68,
+      "tempo": 65.24,
       "direct_net": 0,
-      "rot_level": -9.15
+      "rot_level": -9.15,
+      "play_types": []
     },
     {
       "rank": 215,
@@ -2794,9 +3008,10 @@
       "adj_off": 99.4,
       "adj_def": 99.78,
       "adj_net": -0.39,
-      "tempo": 68,
+      "tempo": 63.99,
       "direct_net": 0,
-      "rot_level": -11.62
+      "rot_level": -11.62,
+      "play_types": []
     },
     {
       "rank": 216,
@@ -2807,9 +3022,10 @@
       "adj_off": 96.6,
       "adj_def": 97.03,
       "adj_net": -0.44,
-      "tempo": 68,
+      "tempo": 68.25,
       "direct_net": 0,
-      "rot_level": 6.49
+      "rot_level": 6.49,
+      "play_types": []
     },
     {
       "rank": 217,
@@ -2820,9 +3036,10 @@
       "adj_off": 98.92,
       "adj_def": 99.38,
       "adj_net": -0.46,
-      "tempo": 68,
+      "tempo": 67.48,
       "direct_net": 0,
-      "rot_level": -8.24
+      "rot_level": -8.24,
+      "play_types": []
     },
     {
       "rank": 218,
@@ -2833,9 +3050,10 @@
       "adj_off": 99.57,
       "adj_def": 100.03,
       "adj_net": -0.47,
-      "tempo": 68,
+      "tempo": 68.32,
       "direct_net": 0,
-      "rot_level": -6.65
+      "rot_level": -6.65,
+      "play_types": []
     },
     {
       "rank": 219,
@@ -2846,9 +3064,10 @@
       "adj_off": 102.74,
       "adj_def": 103.21,
       "adj_net": -0.47,
-      "tempo": 68,
+      "tempo": 68.92,
       "direct_net": 0,
-      "rot_level": -2.11
+      "rot_level": -2.11,
+      "play_types": []
     },
     {
       "rank": 220,
@@ -2859,9 +3078,10 @@
       "adj_off": 100.19,
       "adj_def": 100.69,
       "adj_net": -0.5,
-      "tempo": 68,
+      "tempo": 67.68,
       "direct_net": 0,
-      "rot_level": -1.16
+      "rot_level": -1.16,
+      "play_types": []
     },
     {
       "rank": 221,
@@ -2872,9 +3092,10 @@
       "adj_off": 98.63,
       "adj_def": 99.17,
       "adj_net": -0.53,
-      "tempo": 68,
+      "tempo": 68.11,
       "direct_net": 0,
-      "rot_level": -2.01
+      "rot_level": -2.01,
+      "play_types": []
     },
     {
       "rank": 222,
@@ -2885,9 +3106,10 @@
       "adj_off": 98.38,
       "adj_def": 98.92,
       "adj_net": -0.54,
-      "tempo": 68,
+      "tempo": 63.17,
       "direct_net": 0,
-      "rot_level": 0.44
+      "rot_level": 0.44,
+      "play_types": []
     },
     {
       "rank": 223,
@@ -2898,9 +3120,10 @@
       "adj_off": 99.46,
       "adj_def": 100.02,
       "adj_net": -0.56,
-      "tempo": 68,
+      "tempo": 68.75,
       "direct_net": 0,
-      "rot_level": -4
+      "rot_level": -4,
+      "play_types": []
     },
     {
       "rank": 224,
@@ -2911,9 +3134,10 @@
       "adj_off": 99.03,
       "adj_def": 99.63,
       "adj_net": -0.6,
-      "tempo": 68,
+      "tempo": 66.87,
       "direct_net": 0,
-      "rot_level": 7.39
+      "rot_level": 7.39,
+      "play_types": []
     },
     {
       "rank": 225,
@@ -2924,9 +3148,10 @@
       "adj_off": 100.71,
       "adj_def": 101.31,
       "adj_net": -0.6,
-      "tempo": 68,
+      "tempo": 67.83,
       "direct_net": 0,
-      "rot_level": 7.98
+      "rot_level": 7.98,
+      "play_types": []
     },
     {
       "rank": 226,
@@ -2937,9 +3162,10 @@
       "adj_off": 99.13,
       "adj_def": 99.73,
       "adj_net": -0.6,
-      "tempo": 68,
+      "tempo": 66.5,
       "direct_net": 0,
-      "rot_level": -4.01
+      "rot_level": -4.01,
+      "play_types": []
     },
     {
       "rank": 227,
@@ -2950,9 +3176,10 @@
       "adj_off": 99.86,
       "adj_def": 100.47,
       "adj_net": -0.61,
-      "tempo": 68,
+      "tempo": 68.59,
       "direct_net": 0,
-      "rot_level": -1.17
+      "rot_level": -1.17,
+      "play_types": []
     },
     {
       "rank": 228,
@@ -2963,9 +3190,10 @@
       "adj_off": 99.37,
       "adj_def": 99.98,
       "adj_net": -0.61,
-      "tempo": 68,
+      "tempo": 66.1,
       "direct_net": 0,
-      "rot_level": -1.26
+      "rot_level": -1.26,
+      "play_types": []
     },
     {
       "rank": 229,
@@ -2976,9 +3204,10 @@
       "adj_off": 100.02,
       "adj_def": 100.64,
       "adj_net": -0.61,
-      "tempo": 68,
+      "tempo": 66.01,
       "direct_net": 0,
-      "rot_level": -0.94
+      "rot_level": -0.94,
+      "play_types": []
     },
     {
       "rank": 230,
@@ -2989,9 +3218,10 @@
       "adj_off": 99.48,
       "adj_def": 100.11,
       "adj_net": -0.63,
-      "tempo": 68,
+      "tempo": 68.39,
       "direct_net": 0,
-      "rot_level": 3.34
+      "rot_level": 3.34,
+      "play_types": []
     },
     {
       "rank": 231,
@@ -3002,9 +3232,10 @@
       "adj_off": 99.4,
       "adj_def": 100.04,
       "adj_net": -0.64,
-      "tempo": 68,
+      "tempo": 66.35,
       "direct_net": 0,
-      "rot_level": -4.24
+      "rot_level": -4.24,
+      "play_types": []
     },
     {
       "rank": 232,
@@ -3015,9 +3246,10 @@
       "adj_off": 98.56,
       "adj_def": 99.21,
       "adj_net": -0.65,
-      "tempo": 68,
+      "tempo": 68.81,
       "direct_net": 0,
-      "rot_level": 0.17
+      "rot_level": 0.17,
+      "play_types": []
     },
     {
       "rank": 233,
@@ -3028,9 +3260,10 @@
       "adj_off": 97.92,
       "adj_def": 98.58,
       "adj_net": -0.65,
-      "tempo": 68,
+      "tempo": 71.38,
       "direct_net": 0,
-      "rot_level": 2.97
+      "rot_level": 2.97,
+      "play_types": []
     },
     {
       "rank": 234,
@@ -3041,9 +3274,10 @@
       "adj_off": 99.48,
       "adj_def": 100.13,
       "adj_net": -0.65,
-      "tempo": 68,
+      "tempo": 70.52,
       "direct_net": 0,
-      "rot_level": -7.27
+      "rot_level": -7.27,
+      "play_types": []
     },
     {
       "rank": 235,
@@ -3054,9 +3288,10 @@
       "adj_off": 100.09,
       "adj_def": 100.75,
       "adj_net": -0.66,
-      "tempo": 68,
+      "tempo": 72.89,
       "direct_net": 0,
-      "rot_level": 17.79
+      "rot_level": 17.79,
+      "play_types": []
     },
     {
       "rank": 236,
@@ -3067,9 +3302,10 @@
       "adj_off": 99.36,
       "adj_def": 100.04,
       "adj_net": -0.69,
-      "tempo": 68,
+      "tempo": 70.37,
       "direct_net": 0,
-      "rot_level": 2.3
+      "rot_level": 2.3,
+      "play_types": []
     },
     {
       "rank": 237,
@@ -3080,9 +3316,10 @@
       "adj_off": 101.23,
       "adj_def": 101.93,
       "adj_net": -0.7,
-      "tempo": 68,
+      "tempo": 75.31,
       "direct_net": 0,
-      "rot_level": -3.14
+      "rot_level": -3.14,
+      "play_types": []
     },
     {
       "rank": 238,
@@ -3093,9 +3330,10 @@
       "adj_off": 99.29,
       "adj_def": 100,
       "adj_net": -0.7,
-      "tempo": 68,
+      "tempo": 70.82,
       "direct_net": 0,
-      "rot_level": 3.28
+      "rot_level": 3.28,
+      "play_types": []
     },
     {
       "rank": 239,
@@ -3106,9 +3344,10 @@
       "adj_off": 98.64,
       "adj_def": 99.35,
       "adj_net": -0.71,
-      "tempo": 68,
+      "tempo": 66.17,
       "direct_net": 0,
-      "rot_level": 4.67
+      "rot_level": 4.67,
+      "play_types": []
     },
     {
       "rank": 240,
@@ -3119,9 +3358,10 @@
       "adj_off": 99.53,
       "adj_def": 100.25,
       "adj_net": -0.72,
-      "tempo": 68,
+      "tempo": 72.79,
       "direct_net": 0,
-      "rot_level": -2.48
+      "rot_level": -2.48,
+      "play_types": []
     },
     {
       "rank": 241,
@@ -3132,9 +3372,10 @@
       "adj_off": 99.4,
       "adj_def": 100.13,
       "adj_net": -0.73,
-      "tempo": 68,
+      "tempo": 66.57,
       "direct_net": 0,
-      "rot_level": -0.01
+      "rot_level": -0.01,
+      "play_types": []
     },
     {
       "rank": 242,
@@ -3145,9 +3386,10 @@
       "adj_off": 99.55,
       "adj_def": 100.29,
       "adj_net": -0.74,
-      "tempo": 68,
+      "tempo": 64.62,
       "direct_net": 0,
-      "rot_level": -17.58
+      "rot_level": -17.58,
+      "play_types": []
     },
     {
       "rank": 243,
@@ -3158,9 +3400,10 @@
       "adj_off": 100.18,
       "adj_def": 100.94,
       "adj_net": -0.77,
-      "tempo": 68,
+      "tempo": 68.05,
       "direct_net": 0,
-      "rot_level": 0.84
+      "rot_level": 0.84,
+      "play_types": []
     },
     {
       "rank": 244,
@@ -3171,9 +3414,10 @@
       "adj_off": 98.39,
       "adj_def": 99.17,
       "adj_net": -0.78,
-      "tempo": 68,
+      "tempo": 65.54,
       "direct_net": 0,
-      "rot_level": -3.75
+      "rot_level": -3.75,
+      "play_types": []
     },
     {
       "rank": 245,
@@ -3184,9 +3428,10 @@
       "adj_off": 98.64,
       "adj_def": 99.42,
       "adj_net": -0.78,
-      "tempo": 68,
+      "tempo": 68.45,
       "direct_net": 0,
-      "rot_level": 15.62
+      "rot_level": 15.62,
+      "play_types": []
     },
     {
       "rank": 246,
@@ -3197,9 +3442,10 @@
       "adj_off": 99.7,
       "adj_def": 100.48,
       "adj_net": -0.78,
-      "tempo": 68,
+      "tempo": 67.54,
       "direct_net": 0,
-      "rot_level": -12.07
+      "rot_level": -12.07,
+      "play_types": []
     },
     {
       "rank": 247,
@@ -3210,9 +3456,10 @@
       "adj_off": 98.87,
       "adj_def": 99.66,
       "adj_net": -0.79,
-      "tempo": 68,
+      "tempo": 69.99,
       "direct_net": 0,
-      "rot_level": -9.36
+      "rot_level": -9.36,
+      "play_types": []
     },
     {
       "rank": 248,
@@ -3223,9 +3470,10 @@
       "adj_off": 99.92,
       "adj_def": 100.74,
       "adj_net": -0.82,
-      "tempo": 68,
+      "tempo": 65.06,
       "direct_net": 0,
-      "rot_level": 10.12
+      "rot_level": 10.12,
+      "play_types": []
     },
     {
       "rank": 249,
@@ -3236,9 +3484,10 @@
       "adj_off": 98.67,
       "adj_def": 99.51,
       "adj_net": -0.84,
-      "tempo": 68,
+      "tempo": 65.92,
       "direct_net": 0,
-      "rot_level": -0.37
+      "rot_level": -0.37,
+      "play_types": []
     },
     {
       "rank": 250,
@@ -3249,9 +3498,10 @@
       "adj_off": 99.58,
       "adj_def": 100.42,
       "adj_net": -0.84,
-      "tempo": 68,
+      "tempo": 68.62,
       "direct_net": 0,
-      "rot_level": -5.08
+      "rot_level": -5.08,
+      "play_types": []
     },
     {
       "rank": 251,
@@ -3262,9 +3512,10 @@
       "adj_off": 101.74,
       "adj_def": 102.58,
       "adj_net": -0.84,
-      "tempo": 68,
+      "tempo": 68.83,
       "direct_net": 0,
-      "rot_level": -3.12
+      "rot_level": -3.12,
+      "play_types": []
     },
     {
       "rank": 252,
@@ -3275,9 +3526,10 @@
       "adj_off": 99.14,
       "adj_def": 99.99,
       "adj_net": -0.85,
-      "tempo": 68,
+      "tempo": 66.15,
       "direct_net": 0,
-      "rot_level": 4.28
+      "rot_level": 4.28,
+      "play_types": []
     },
     {
       "rank": 253,
@@ -3288,9 +3540,10 @@
       "adj_off": 99.89,
       "adj_def": 100.79,
       "adj_net": -0.9,
-      "tempo": 68,
+      "tempo": 68.38,
       "direct_net": 0,
-      "rot_level": -6.89
+      "rot_level": -6.89,
+      "play_types": []
     },
     {
       "rank": 254,
@@ -3301,9 +3554,10 @@
       "adj_off": 98.73,
       "adj_def": 99.65,
       "adj_net": -0.92,
-      "tempo": 68,
+      "tempo": 69.65,
       "direct_net": 0,
-      "rot_level": -8.74
+      "rot_level": -8.74,
+      "play_types": []
     },
     {
       "rank": 255,
@@ -3314,9 +3568,10 @@
       "adj_off": 99.55,
       "adj_def": 100.51,
       "adj_net": -0.96,
-      "tempo": 68,
+      "tempo": 65.68,
       "direct_net": 0,
-      "rot_level": -1.54
+      "rot_level": -1.54,
+      "play_types": []
     },
     {
       "rank": 256,
@@ -3327,9 +3582,10 @@
       "adj_off": 97.73,
       "adj_def": 98.7,
       "adj_net": -0.96,
-      "tempo": 68,
+      "tempo": 69.49,
       "direct_net": 0,
-      "rot_level": 6.28
+      "rot_level": 6.28,
+      "play_types": []
     },
     {
       "rank": 257,
@@ -3340,9 +3596,10 @@
       "adj_off": 98.84,
       "adj_def": 99.81,
       "adj_net": -0.98,
-      "tempo": 68,
+      "tempo": 68.29,
       "direct_net": 0,
-      "rot_level": -3.56
+      "rot_level": -3.56,
+      "play_types": []
     },
     {
       "rank": 258,
@@ -3353,9 +3610,10 @@
       "adj_off": 97.55,
       "adj_def": 98.55,
       "adj_net": -1,
-      "tempo": 68,
+      "tempo": 63.33,
       "direct_net": 0,
-      "rot_level": 10.2
+      "rot_level": 10.2,
+      "play_types": []
     },
     {
       "rank": 259,
@@ -3366,9 +3624,10 @@
       "adj_off": 98.87,
       "adj_def": 99.89,
       "adj_net": -1.01,
-      "tempo": 68,
+      "tempo": 70.28,
       "direct_net": 0,
-      "rot_level": -17.03
+      "rot_level": -17.03,
+      "play_types": []
     },
     {
       "rank": 260,
@@ -3379,9 +3638,10 @@
       "adj_off": 99.43,
       "adj_def": 100.47,
       "adj_net": -1.04,
-      "tempo": 68,
+      "tempo": 66.51,
       "direct_net": 0,
-      "rot_level": -9.98
+      "rot_level": -9.98,
+      "play_types": []
     },
     {
       "rank": 261,
@@ -3392,9 +3652,10 @@
       "adj_off": 98.97,
       "adj_def": 100.01,
       "adj_net": -1.04,
-      "tempo": 68,
+      "tempo": 65.73,
       "direct_net": 0,
-      "rot_level": -13.34
+      "rot_level": -13.34,
+      "play_types": []
     },
     {
       "rank": 262,
@@ -3405,9 +3666,10 @@
       "adj_off": 98.69,
       "adj_def": 99.74,
       "adj_net": -1.05,
-      "tempo": 68,
+      "tempo": 70.48,
       "direct_net": 0,
-      "rot_level": -11.11
+      "rot_level": -11.11,
+      "play_types": []
     },
     {
       "rank": 263,
@@ -3418,9 +3680,10 @@
       "adj_off": 99.56,
       "adj_def": 100.62,
       "adj_net": -1.05,
-      "tempo": 68,
+      "tempo": 68.06,
       "direct_net": 0,
-      "rot_level": -5.19
+      "rot_level": -5.19,
+      "play_types": []
     },
     {
       "rank": 264,
@@ -3431,9 +3694,10 @@
       "adj_off": 98.77,
       "adj_def": 99.84,
       "adj_net": -1.07,
-      "tempo": 68,
+      "tempo": 71.86,
       "direct_net": 0,
-      "rot_level": -5.41
+      "rot_level": -5.41,
+      "play_types": []
     },
     {
       "rank": 265,
@@ -3444,9 +3708,10 @@
       "adj_off": 99.4,
       "adj_def": 100.48,
       "adj_net": -1.08,
-      "tempo": 68,
+      "tempo": 63.82,
       "direct_net": 0,
-      "rot_level": -5.26
+      "rot_level": -5.26,
+      "play_types": []
     },
     {
       "rank": 266,
@@ -3457,9 +3722,10 @@
       "adj_off": 99.22,
       "adj_def": 100.29,
       "adj_net": -1.08,
-      "tempo": 68,
+      "tempo": 63.46,
       "direct_net": 0,
-      "rot_level": -11.05
+      "rot_level": -11.05,
+      "play_types": []
     },
     {
       "rank": 267,
@@ -3470,9 +3736,10 @@
       "adj_off": 99.79,
       "adj_def": 100.88,
       "adj_net": -1.09,
-      "tempo": 68,
+      "tempo": 65.29,
       "direct_net": 0,
-      "rot_level": -4.77
+      "rot_level": -4.77,
+      "play_types": []
     },
     {
       "rank": 268,
@@ -3483,9 +3750,10 @@
       "adj_off": 100.5,
       "adj_def": 101.59,
       "adj_net": -1.09,
-      "tempo": 68,
+      "tempo": 64.86,
       "direct_net": 0,
-      "rot_level": -8.32
+      "rot_level": -8.32,
+      "play_types": []
     },
     {
       "rank": 269,
@@ -3496,9 +3764,10 @@
       "adj_off": 97.9,
       "adj_def": 99,
       "adj_net": -1.1,
-      "tempo": 68,
+      "tempo": 69.35,
       "direct_net": 0,
-      "rot_level": 3.68
+      "rot_level": 3.68,
+      "play_types": []
     },
     {
       "rank": 270,
@@ -3509,9 +3778,10 @@
       "adj_off": 99.16,
       "adj_def": 100.28,
       "adj_net": -1.12,
-      "tempo": 68,
+      "tempo": 68.07,
       "direct_net": 0,
-      "rot_level": -10.09
+      "rot_level": -10.09,
+      "play_types": []
     },
     {
       "rank": 271,
@@ -3522,9 +3792,10 @@
       "adj_off": 99.78,
       "adj_def": 100.91,
       "adj_net": -1.13,
-      "tempo": 68,
+      "tempo": 74.24,
       "direct_net": 0,
-      "rot_level": -9.43
+      "rot_level": -9.43,
+      "play_types": []
     },
     {
       "rank": 272,
@@ -3535,9 +3806,10 @@
       "adj_off": 99.68,
       "adj_def": 100.83,
       "adj_net": -1.15,
-      "tempo": 68,
+      "tempo": 66.82,
       "direct_net": 0,
-      "rot_level": 4.85
+      "rot_level": 4.85,
+      "play_types": []
     },
     {
       "rank": 273,
@@ -3548,9 +3820,10 @@
       "adj_off": 98.96,
       "adj_def": 100.11,
       "adj_net": -1.15,
-      "tempo": 68,
+      "tempo": 71.82,
       "direct_net": 0,
-      "rot_level": -10.94
+      "rot_level": -10.94,
+      "play_types": []
     },
     {
       "rank": 274,
@@ -3561,9 +3834,10 @@
       "adj_off": 99.38,
       "adj_def": 100.57,
       "adj_net": -1.19,
-      "tempo": 68,
+      "tempo": 66.53,
       "direct_net": 0,
-      "rot_level": -7.86
+      "rot_level": -7.86,
+      "play_types": []
     },
     {
       "rank": 275,
@@ -3574,9 +3848,10 @@
       "adj_off": 98.65,
       "adj_def": 99.84,
       "adj_net": -1.2,
-      "tempo": 68,
+      "tempo": 69.05,
       "direct_net": 0,
-      "rot_level": -10.34
+      "rot_level": -10.34,
+      "play_types": []
     },
     {
       "rank": 276,
@@ -3587,9 +3862,10 @@
       "adj_off": 101.35,
       "adj_def": 102.57,
       "adj_net": -1.22,
-      "tempo": 68,
+      "tempo": 63.05,
       "direct_net": 0,
-      "rot_level": -4.88
+      "rot_level": -4.88,
+      "play_types": []
     },
     {
       "rank": 277,
@@ -3600,9 +3876,10 @@
       "adj_off": 99.19,
       "adj_def": 100.41,
       "adj_net": -1.22,
-      "tempo": 68,
+      "tempo": 68.04,
       "direct_net": 0,
-      "rot_level": 0.08
+      "rot_level": 0.08,
+      "play_types": []
     },
     {
       "rank": 278,
@@ -3613,9 +3890,10 @@
       "adj_off": 99.02,
       "adj_def": 100.25,
       "adj_net": -1.22,
-      "tempo": 68,
+      "tempo": 69.32,
       "direct_net": 0,
-      "rot_level": -18.22
+      "rot_level": -18.22,
+      "play_types": []
     },
     {
       "rank": 279,
@@ -3626,9 +3904,10 @@
       "adj_off": 99.59,
       "adj_def": 100.82,
       "adj_net": -1.24,
-      "tempo": 68,
+      "tempo": 71.58,
       "direct_net": 0,
-      "rot_level": 0.9
+      "rot_level": 0.9,
+      "play_types": []
     },
     {
       "rank": 280,
@@ -3639,9 +3918,10 @@
       "adj_off": 99.97,
       "adj_def": 101.21,
       "adj_net": -1.24,
-      "tempo": 68,
+      "tempo": 65.43,
       "direct_net": 0,
-      "rot_level": 6.71
+      "rot_level": 6.71,
+      "play_types": []
     },
     {
       "rank": 281,
@@ -3652,9 +3932,10 @@
       "adj_off": 98.73,
       "adj_def": 99.97,
       "adj_net": -1.25,
-      "tempo": 68,
+      "tempo": 65.16,
       "direct_net": 0,
-      "rot_level": -11.89
+      "rot_level": -11.89,
+      "play_types": []
     },
     {
       "rank": 282,
@@ -3665,9 +3946,10 @@
       "adj_off": 100.01,
       "adj_def": 101.27,
       "adj_net": -1.27,
-      "tempo": 68,
+      "tempo": 68.66,
       "direct_net": 0,
-      "rot_level": -2.43
+      "rot_level": -2.43,
+      "play_types": []
     },
     {
       "rank": 283,
@@ -3678,9 +3960,10 @@
       "adj_off": 101.57,
       "adj_def": 102.87,
       "adj_net": -1.31,
-      "tempo": 68,
+      "tempo": 69.96,
       "direct_net": 0,
-      "rot_level": 1.67
+      "rot_level": 1.67,
+      "play_types": []
     },
     {
       "rank": 284,
@@ -3691,9 +3974,10 @@
       "adj_off": 98.77,
       "adj_def": 100.13,
       "adj_net": -1.35,
-      "tempo": 68,
+      "tempo": 64.08,
       "direct_net": 0,
-      "rot_level": -19.18
+      "rot_level": -19.18,
+      "play_types": []
     },
     {
       "rank": 285,
@@ -3704,9 +3988,10 @@
       "adj_off": 100.48,
       "adj_def": 101.83,
       "adj_net": -1.36,
-      "tempo": 68,
+      "tempo": 68.13,
       "direct_net": 0,
-      "rot_level": 0.06
+      "rot_level": 0.06,
+      "play_types": []
     },
     {
       "rank": 286,
@@ -3717,9 +4002,10 @@
       "adj_off": 99.54,
       "adj_def": 100.97,
       "adj_net": -1.43,
-      "tempo": 68,
+      "tempo": 67.54,
       "direct_net": 0,
-      "rot_level": -1.13
+      "rot_level": -1.13,
+      "play_types": []
     },
     {
       "rank": 287,
@@ -3730,9 +4016,10 @@
       "adj_off": 98.93,
       "adj_def": 100.37,
       "adj_net": -1.44,
-      "tempo": 68,
+      "tempo": 65.4,
       "direct_net": 0,
-      "rot_level": -16.85
+      "rot_level": -16.85,
+      "play_types": []
     },
     {
       "rank": 288,
@@ -3743,9 +4030,10 @@
       "adj_off": 99.46,
       "adj_def": 100.91,
       "adj_net": -1.45,
-      "tempo": 68,
+      "tempo": 69.63,
       "direct_net": 0,
-      "rot_level": 11.16
+      "rot_level": 11.16,
+      "play_types": []
     },
     {
       "rank": 289,
@@ -3756,9 +4044,10 @@
       "adj_off": 98.98,
       "adj_def": 100.44,
       "adj_net": -1.46,
-      "tempo": 68,
+      "tempo": 69.03,
       "direct_net": 0,
-      "rot_level": -22.88
+      "rot_level": -22.88,
+      "play_types": []
     },
     {
       "rank": 290,
@@ -3769,9 +4058,10 @@
       "adj_off": 98.87,
       "adj_def": 100.33,
       "adj_net": -1.47,
-      "tempo": 68,
+      "tempo": 64.92,
       "direct_net": 0,
-      "rot_level": -0.27
+      "rot_level": -0.27,
+      "play_types": []
     },
     {
       "rank": 291,
@@ -3782,9 +4072,10 @@
       "adj_off": 100.08,
       "adj_def": 101.56,
       "adj_net": -1.47,
-      "tempo": 68,
+      "tempo": 69.97,
       "direct_net": 0,
-      "rot_level": -17.8
+      "rot_level": -17.8,
+      "play_types": []
     },
     {
       "rank": 292,
@@ -3795,9 +4086,10 @@
       "adj_off": 100.2,
       "adj_def": 101.69,
       "adj_net": -1.49,
-      "tempo": 68,
+      "tempo": 67.62,
       "direct_net": 0,
-      "rot_level": 0.07
+      "rot_level": 0.07,
+      "play_types": []
     },
     {
       "rank": 293,
@@ -3808,9 +4100,10 @@
       "adj_off": 97.72,
       "adj_def": 99.27,
       "adj_net": -1.55,
-      "tempo": 68,
+      "tempo": 64.53,
       "direct_net": 0,
-      "rot_level": -15.86
+      "rot_level": -15.86,
+      "play_types": []
     },
     {
       "rank": 294,
@@ -3821,9 +4114,10 @@
       "adj_off": 98.61,
       "adj_def": 100.16,
       "adj_net": -1.55,
-      "tempo": 68,
+      "tempo": 68.35,
       "direct_net": 0,
-      "rot_level": 4.73
+      "rot_level": 4.73,
+      "play_types": []
     },
     {
       "rank": 295,
@@ -3834,9 +4128,10 @@
       "adj_off": 99.9,
       "adj_def": 101.45,
       "adj_net": -1.55,
-      "tempo": 68,
+      "tempo": 70.72,
       "direct_net": 0,
-      "rot_level": -6.22
+      "rot_level": -6.22,
+      "play_types": []
     },
     {
       "rank": 296,
@@ -3847,9 +4142,10 @@
       "adj_off": 98.21,
       "adj_def": 99.77,
       "adj_net": -1.56,
-      "tempo": 68,
+      "tempo": 64.61,
       "direct_net": 0,
-      "rot_level": -2.22
+      "rot_level": -2.22,
+      "play_types": []
     },
     {
       "rank": 297,
@@ -3860,9 +4156,10 @@
       "adj_off": 98.95,
       "adj_def": 100.52,
       "adj_net": -1.57,
-      "tempo": 68,
+      "tempo": 70.04,
       "direct_net": 0,
-      "rot_level": 3.92
+      "rot_level": 3.92,
+      "play_types": []
     },
     {
       "rank": 298,
@@ -3873,9 +4170,10 @@
       "adj_off": 97.79,
       "adj_def": 99.38,
       "adj_net": -1.6,
-      "tempo": 68,
+      "tempo": 66.27,
       "direct_net": 0,
-      "rot_level": -10.06
+      "rot_level": -10.06,
+      "play_types": []
     },
     {
       "rank": 299,
@@ -3886,9 +4184,10 @@
       "adj_off": 99.3,
       "adj_def": 100.92,
       "adj_net": -1.62,
-      "tempo": 68,
+      "tempo": 68.2,
       "direct_net": 0,
-      "rot_level": -2.04
+      "rot_level": -2.04,
+      "play_types": []
     },
     {
       "rank": 300,
@@ -3899,9 +4198,10 @@
       "adj_off": 98.05,
       "adj_def": 99.69,
       "adj_net": -1.64,
-      "tempo": 68,
+      "tempo": 66.77,
       "direct_net": 0,
-      "rot_level": -0.89
+      "rot_level": -0.89,
+      "play_types": []
     },
     {
       "rank": 301,
@@ -3912,9 +4212,10 @@
       "adj_off": 101.91,
       "adj_def": 103.55,
       "adj_net": -1.64,
-      "tempo": 68,
+      "tempo": 71.38,
       "direct_net": 0,
-      "rot_level": -15.85
+      "rot_level": -15.85,
+      "play_types": []
     },
     {
       "rank": 302,
@@ -3925,9 +4226,10 @@
       "adj_off": 98.32,
       "adj_def": 99.96,
       "adj_net": -1.64,
-      "tempo": 68,
+      "tempo": 69.25,
       "direct_net": 0,
-      "rot_level": -8.07
+      "rot_level": -8.07,
+      "play_types": []
     },
     {
       "rank": 303,
@@ -3938,9 +4240,10 @@
       "adj_off": 97.36,
       "adj_def": 99.1,
       "adj_net": -1.74,
-      "tempo": 68,
+      "tempo": 65.79,
       "direct_net": 0,
-      "rot_level": 0.29
+      "rot_level": 0.29,
+      "play_types": []
     },
     {
       "rank": 304,
@@ -3951,9 +4254,10 @@
       "adj_off": 98.31,
       "adj_def": 100.05,
       "adj_net": -1.74,
-      "tempo": 68,
+      "tempo": 66.23,
       "direct_net": 0,
-      "rot_level": -23.63
+      "rot_level": -23.63,
+      "play_types": []
     },
     {
       "rank": 305,
@@ -3964,9 +4268,10 @@
       "adj_off": 100.73,
       "adj_def": 102.49,
       "adj_net": -1.76,
-      "tempo": 68,
+      "tempo": 70.6,
       "direct_net": 0,
-      "rot_level": 3.24
+      "rot_level": 3.24,
+      "play_types": []
     },
     {
       "rank": 306,
@@ -3979,7 +4284,8 @@
       "adj_net": -1.8,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 307,
@@ -3990,9 +4296,10 @@
       "adj_off": 98.02,
       "adj_def": 99.83,
       "adj_net": -1.8,
-      "tempo": 68,
+      "tempo": 66.99,
       "direct_net": 0,
-      "rot_level": -13.28
+      "rot_level": -13.28,
+      "play_types": []
     },
     {
       "rank": 308,
@@ -4003,9 +4310,10 @@
       "adj_off": 99.56,
       "adj_def": 101.41,
       "adj_net": -1.85,
-      "tempo": 68,
+      "tempo": 69.05,
       "direct_net": 0,
-      "rot_level": -5.6
+      "rot_level": -5.6,
+      "play_types": []
     },
     {
       "rank": 309,
@@ -4016,9 +4324,10 @@
       "adj_off": 97.74,
       "adj_def": 99.61,
       "adj_net": -1.86,
-      "tempo": 68,
+      "tempo": 64.93,
       "direct_net": 0,
-      "rot_level": -10.52
+      "rot_level": -10.52,
+      "play_types": []
     },
     {
       "rank": 310,
@@ -4029,9 +4338,10 @@
       "adj_off": 98.65,
       "adj_def": 100.55,
       "adj_net": -1.91,
-      "tempo": 68,
+      "tempo": 65.11,
       "direct_net": 0,
-      "rot_level": 1.28
+      "rot_level": 1.28,
+      "play_types": []
     },
     {
       "rank": 311,
@@ -4042,9 +4352,10 @@
       "adj_off": 99.58,
       "adj_def": 101.49,
       "adj_net": -1.91,
-      "tempo": 68,
+      "tempo": 64.92,
       "direct_net": 0,
-      "rot_level": -8
+      "rot_level": -8,
+      "play_types": []
     },
     {
       "rank": 312,
@@ -4055,9 +4366,10 @@
       "adj_off": 98.82,
       "adj_def": 100.75,
       "adj_net": -1.93,
-      "tempo": 68,
+      "tempo": 66.96,
       "direct_net": 0,
-      "rot_level": -11.34
+      "rot_level": -11.34,
+      "play_types": []
     },
     {
       "rank": 313,
@@ -4068,9 +4380,10 @@
       "adj_off": 98.48,
       "adj_def": 100.42,
       "adj_net": -1.94,
-      "tempo": 68,
+      "tempo": 69.17,
       "direct_net": 0,
-      "rot_level": 0.61
+      "rot_level": 0.61,
+      "play_types": []
     },
     {
       "rank": 314,
@@ -4081,9 +4394,10 @@
       "adj_off": 98,
       "adj_def": 99.93,
       "adj_net": -1.94,
-      "tempo": 68,
+      "tempo": 68.18,
       "direct_net": 0,
-      "rot_level": -4.8
+      "rot_level": -4.8,
+      "play_types": []
     },
     {
       "rank": 315,
@@ -4094,9 +4408,10 @@
       "adj_off": 98.06,
       "adj_def": 100.02,
       "adj_net": -1.96,
-      "tempo": 68,
+      "tempo": 64.82,
       "direct_net": 0,
-      "rot_level": -6.31
+      "rot_level": -6.31,
+      "play_types": []
     },
     {
       "rank": 316,
@@ -4107,9 +4422,10 @@
       "adj_off": 98.75,
       "adj_def": 100.71,
       "adj_net": -1.96,
-      "tempo": 68,
+      "tempo": 68.48,
       "direct_net": 0,
-      "rot_level": -4.42
+      "rot_level": -4.42,
+      "play_types": []
     },
     {
       "rank": 317,
@@ -4122,7 +4438,8 @@
       "adj_net": -1.98,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 318,
@@ -4133,9 +4450,10 @@
       "adj_off": 100.12,
       "adj_def": 102.1,
       "adj_net": -1.98,
-      "tempo": 68,
+      "tempo": 64.19,
       "direct_net": 0,
-      "rot_level": 6.83
+      "rot_level": 6.83,
+      "play_types": []
     },
     {
       "rank": 319,
@@ -4146,9 +4464,10 @@
       "adj_off": 99.73,
       "adj_def": 101.74,
       "adj_net": -2.02,
-      "tempo": 68,
+      "tempo": 70.64,
       "direct_net": 0,
-      "rot_level": -17.27
+      "rot_level": -17.27,
+      "play_types": []
     },
     {
       "rank": 320,
@@ -4159,9 +4478,10 @@
       "adj_off": 99.15,
       "adj_def": 101.2,
       "adj_net": -2.05,
-      "tempo": 68,
+      "tempo": 65.56,
       "direct_net": 0,
-      "rot_level": -12.63
+      "rot_level": -12.63,
+      "play_types": []
     },
     {
       "rank": 321,
@@ -4172,9 +4492,10 @@
       "adj_off": 98.98,
       "adj_def": 101.05,
       "adj_net": -2.07,
-      "tempo": 68,
+      "tempo": 66.82,
       "direct_net": 0,
-      "rot_level": -6.36
+      "rot_level": -6.36,
+      "play_types": []
     },
     {
       "rank": 322,
@@ -4185,9 +4506,10 @@
       "adj_off": 97.72,
       "adj_def": 99.86,
       "adj_net": -2.14,
-      "tempo": 68,
+      "tempo": 66.79,
       "direct_net": 0,
-      "rot_level": 0.19
+      "rot_level": 0.19,
+      "play_types": []
     },
     {
       "rank": 323,
@@ -4198,9 +4520,10 @@
       "adj_off": 99.26,
       "adj_def": 101.42,
       "adj_net": -2.16,
-      "tempo": 68,
+      "tempo": 67.37,
       "direct_net": 0,
-      "rot_level": 6.76
+      "rot_level": 6.76,
+      "play_types": []
     },
     {
       "rank": 324,
@@ -4211,9 +4534,10 @@
       "adj_off": 98.18,
       "adj_def": 100.34,
       "adj_net": -2.16,
-      "tempo": 68,
+      "tempo": 65.43,
       "direct_net": 0,
-      "rot_level": -22.81
+      "rot_level": -22.81,
+      "play_types": []
     },
     {
       "rank": 325,
@@ -4224,9 +4548,10 @@
       "adj_off": 98.07,
       "adj_def": 100.26,
       "adj_net": -2.19,
-      "tempo": 68,
+      "tempo": 63.41,
       "direct_net": 0,
-      "rot_level": -4.99
+      "rot_level": -4.99,
+      "play_types": []
     },
     {
       "rank": 326,
@@ -4237,9 +4562,10 @@
       "adj_off": 98.59,
       "adj_def": 100.79,
       "adj_net": -2.21,
-      "tempo": 68,
+      "tempo": 69.07,
       "direct_net": 0,
-      "rot_level": -14.83
+      "rot_level": -14.83,
+      "play_types": []
     },
     {
       "rank": 327,
@@ -4250,9 +4576,10 @@
       "adj_off": 98.19,
       "adj_def": 100.43,
       "adj_net": -2.24,
-      "tempo": 68,
+      "tempo": 68.35,
       "direct_net": 0,
-      "rot_level": -10.2
+      "rot_level": -10.2,
+      "play_types": []
     },
     {
       "rank": 328,
@@ -4263,9 +4590,10 @@
       "adj_off": 97.46,
       "adj_def": 99.72,
       "adj_net": -2.26,
-      "tempo": 68,
+      "tempo": 66.98,
       "direct_net": 0,
-      "rot_level": -12.99
+      "rot_level": -12.99,
+      "play_types": []
     },
     {
       "rank": 329,
@@ -4276,9 +4604,10 @@
       "adj_off": 98.1,
       "adj_def": 100.37,
       "adj_net": -2.27,
-      "tempo": 68,
+      "tempo": 68.15,
       "direct_net": 0,
-      "rot_level": -12.5
+      "rot_level": -12.5,
+      "play_types": []
     },
     {
       "rank": 330,
@@ -4289,9 +4618,10 @@
       "adj_off": 99.65,
       "adj_def": 101.92,
       "adj_net": -2.27,
-      "tempo": 68,
+      "tempo": 64.32,
       "direct_net": 0,
-      "rot_level": -4.62
+      "rot_level": -4.62,
+      "play_types": []
     },
     {
       "rank": 331,
@@ -4302,9 +4632,10 @@
       "adj_off": 98.86,
       "adj_def": 101.16,
       "adj_net": -2.31,
-      "tempo": 68,
+      "tempo": 68.76,
       "direct_net": 0,
-      "rot_level": -4.73
+      "rot_level": -4.73,
+      "play_types": []
     },
     {
       "rank": 332,
@@ -4315,9 +4646,10 @@
       "adj_off": 97.54,
       "adj_def": 99.85,
       "adj_net": -2.31,
-      "tempo": 68,
+      "tempo": 68.16,
       "direct_net": 0,
-      "rot_level": -0.38
+      "rot_level": -0.38,
+      "play_types": []
     },
     {
       "rank": 333,
@@ -4328,9 +4660,10 @@
       "adj_off": 99.14,
       "adj_def": 101.49,
       "adj_net": -2.36,
-      "tempo": 68,
+      "tempo": 69.04,
       "direct_net": 0,
-      "rot_level": -9.77
+      "rot_level": -9.77,
+      "play_types": []
     },
     {
       "rank": 334,
@@ -4341,9 +4674,10 @@
       "adj_off": 98.3,
       "adj_def": 100.66,
       "adj_net": -2.36,
-      "tempo": 68,
+      "tempo": 64.66,
       "direct_net": 0,
-      "rot_level": -3.71
+      "rot_level": -3.71,
+      "play_types": []
     },
     {
       "rank": 335,
@@ -4354,9 +4688,10 @@
       "adj_off": 98.97,
       "adj_def": 101.37,
       "adj_net": -2.4,
-      "tempo": 68,
+      "tempo": 68.91,
       "direct_net": 0,
-      "rot_level": -2.51
+      "rot_level": -2.51,
+      "play_types": []
     },
     {
       "rank": 336,
@@ -4367,9 +4702,10 @@
       "adj_off": 98.6,
       "adj_def": 101.03,
       "adj_net": -2.43,
-      "tempo": 68,
+      "tempo": 70.77,
       "direct_net": 0,
-      "rot_level": -20.31
+      "rot_level": -20.31,
+      "play_types": []
     },
     {
       "rank": 337,
@@ -4380,9 +4716,10 @@
       "adj_off": 98.41,
       "adj_def": 100.86,
       "adj_net": -2.45,
-      "tempo": 68,
+      "tempo": 69.33,
       "direct_net": 0,
-      "rot_level": 1.42
+      "rot_level": 1.42,
+      "play_types": []
     },
     {
       "rank": 338,
@@ -4393,9 +4730,10 @@
       "adj_off": 97.88,
       "adj_def": 100.35,
       "adj_net": -2.47,
-      "tempo": 68,
+      "tempo": 66.67,
       "direct_net": 0,
-      "rot_level": -3.98
+      "rot_level": -3.98,
+      "play_types": []
     },
     {
       "rank": 339,
@@ -4406,9 +4744,10 @@
       "adj_off": 97.88,
       "adj_def": 100.35,
       "adj_net": -2.48,
-      "tempo": 68,
+      "tempo": 67.9,
       "direct_net": 0,
-      "rot_level": -9.98
+      "rot_level": -9.98,
+      "play_types": []
     },
     {
       "rank": 340,
@@ -4419,9 +4758,10 @@
       "adj_off": 98.13,
       "adj_def": 100.66,
       "adj_net": -2.53,
-      "tempo": 68,
+      "tempo": 67.51,
       "direct_net": 0,
-      "rot_level": -6.35
+      "rot_level": -6.35,
+      "play_types": []
     },
     {
       "rank": 341,
@@ -4432,9 +4772,10 @@
       "adj_off": 97.7,
       "adj_def": 100.23,
       "adj_net": -2.53,
-      "tempo": 68,
+      "tempo": 63.84,
       "direct_net": 0,
-      "rot_level": -16.06
+      "rot_level": -16.06,
+      "play_types": []
     },
     {
       "rank": 342,
@@ -4445,9 +4786,10 @@
       "adj_off": 97.44,
       "adj_def": 100.03,
       "adj_net": -2.6,
-      "tempo": 68,
+      "tempo": 70.02,
       "direct_net": 0,
-      "rot_level": 2.69
+      "rot_level": 2.69,
+      "play_types": []
     },
     {
       "rank": 343,
@@ -4458,9 +4800,10 @@
       "adj_off": 98.42,
       "adj_def": 101.03,
       "adj_net": -2.61,
-      "tempo": 68,
+      "tempo": 68.44,
       "direct_net": 0,
-      "rot_level": -9.49
+      "rot_level": -9.49,
+      "play_types": []
     },
     {
       "rank": 344,
@@ -4471,9 +4814,10 @@
       "adj_off": 98.6,
       "adj_def": 101.24,
       "adj_net": -2.63,
-      "tempo": 68,
+      "tempo": 70.39,
       "direct_net": 0,
-      "rot_level": -25.21
+      "rot_level": -25.21,
+      "play_types": []
     },
     {
       "rank": 345,
@@ -4484,9 +4828,10 @@
       "adj_off": 97.67,
       "adj_def": 100.35,
       "adj_net": -2.68,
-      "tempo": 68,
+      "tempo": 66.51,
       "direct_net": 0,
-      "rot_level": -15.23
+      "rot_level": -15.23,
+      "play_types": []
     },
     {
       "rank": 346,
@@ -4497,9 +4842,10 @@
       "adj_off": 97.81,
       "adj_def": 100.58,
       "adj_net": -2.77,
-      "tempo": 68,
+      "tempo": 66.07,
       "direct_net": 0,
-      "rot_level": -2.63
+      "rot_level": -2.63,
+      "play_types": []
     },
     {
       "rank": 347,
@@ -4510,9 +4856,10 @@
       "adj_off": 96.3,
       "adj_def": 99.08,
       "adj_net": -2.77,
-      "tempo": 68,
+      "tempo": 63.67,
       "direct_net": 0,
-      "rot_level": 3.07
+      "rot_level": 3.07,
+      "play_types": []
     },
     {
       "rank": 348,
@@ -4523,9 +4870,10 @@
       "adj_off": 97.18,
       "adj_def": 99.95,
       "adj_net": -2.78,
-      "tempo": 68,
+      "tempo": 65.53,
       "direct_net": 0,
-      "rot_level": -9.48
+      "rot_level": -9.48,
+      "play_types": []
     },
     {
       "rank": 349,
@@ -4538,7 +4886,8 @@
       "adj_net": -2.82,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 350,
@@ -4549,9 +4898,10 @@
       "adj_off": 97.75,
       "adj_def": 100.59,
       "adj_net": -2.84,
-      "tempo": 68,
+      "tempo": 70.61,
       "direct_net": 0,
-      "rot_level": -8.32
+      "rot_level": -8.32,
+      "play_types": []
     },
     {
       "rank": 351,
@@ -4562,9 +4912,10 @@
       "adj_off": 98.29,
       "adj_def": 101.29,
       "adj_net": -3,
-      "tempo": 68,
+      "tempo": 67.68,
       "direct_net": 0,
-      "rot_level": -9.46
+      "rot_level": -9.46,
+      "play_types": []
     },
     {
       "rank": 352,
@@ -4575,9 +4926,10 @@
       "adj_off": 96.89,
       "adj_def": 99.9,
       "adj_net": -3.01,
-      "tempo": 68,
+      "tempo": 67.71,
       "direct_net": 0,
-      "rot_level": 1.05
+      "rot_level": 1.05,
+      "play_types": []
     },
     {
       "rank": 353,
@@ -4590,7 +4942,8 @@
       "adj_net": -3.04,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 354,
@@ -4601,9 +4954,10 @@
       "adj_off": 98.73,
       "adj_def": 101.81,
       "adj_net": -3.08,
-      "tempo": 68,
+      "tempo": 64.39,
       "direct_net": 0,
-      "rot_level": -13.63
+      "rot_level": -13.63,
+      "play_types": []
     },
     {
       "rank": 355,
@@ -4614,9 +4968,10 @@
       "adj_off": 96.62,
       "adj_def": 99.72,
       "adj_net": -3.11,
-      "tempo": 68,
+      "tempo": 66.24,
       "direct_net": 0,
-      "rot_level": 2.33
+      "rot_level": 2.33,
+      "play_types": []
     },
     {
       "rank": 356,
@@ -4627,9 +4982,10 @@
       "adj_off": 97.35,
       "adj_def": 100.5,
       "adj_net": -3.15,
-      "tempo": 68,
+      "tempo": 65.24,
       "direct_net": 0,
-      "rot_level": -3.78
+      "rot_level": -3.78,
+      "play_types": []
     },
     {
       "rank": 357,
@@ -4640,9 +4996,10 @@
       "adj_off": 97.05,
       "adj_def": 100.36,
       "adj_net": -3.3,
-      "tempo": 68,
+      "tempo": 66.69,
       "direct_net": 0,
-      "rot_level": -2.34
+      "rot_level": -2.34,
+      "play_types": []
     },
     {
       "rank": 358,
@@ -4655,7 +5012,8 @@
       "adj_net": -3.34,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 359,
@@ -4666,9 +5024,10 @@
       "adj_off": 96.72,
       "adj_def": 100.1,
       "adj_net": -3.37,
-      "tempo": 68,
+      "tempo": 67.62,
       "direct_net": 0,
-      "rot_level": -10.51
+      "rot_level": -10.51,
+      "play_types": []
     },
     {
       "rank": 360,
@@ -4679,9 +5038,10 @@
       "adj_off": 98.83,
       "adj_def": 102.25,
       "adj_net": -3.42,
-      "tempo": 68,
+      "tempo": 65.26,
       "direct_net": 0,
-      "rot_level": -16
+      "rot_level": -16,
+      "play_types": []
     },
     {
       "rank": 361,
@@ -4692,9 +5052,10 @@
       "adj_off": 97.65,
       "adj_def": 101.08,
       "adj_net": -3.43,
-      "tempo": 68,
+      "tempo": 68.04,
       "direct_net": 0,
-      "rot_level": -2.83
+      "rot_level": -2.83,
+      "play_types": []
     },
     {
       "rank": 362,
@@ -4705,9 +5066,10 @@
       "adj_off": 96.08,
       "adj_def": 99.53,
       "adj_net": -3.45,
-      "tempo": 68,
+      "tempo": 72.58,
       "direct_net": 0,
-      "rot_level": -4.67
+      "rot_level": -4.67,
+      "play_types": []
     },
     {
       "rank": 363,
@@ -4718,9 +5080,10 @@
       "adj_off": 97.9,
       "adj_def": 101.36,
       "adj_net": -3.47,
-      "tempo": 68,
+      "tempo": 64.08,
       "direct_net": 0,
-      "rot_level": -18.01
+      "rot_level": -18.01,
+      "play_types": []
     },
     {
       "rank": 364,
@@ -4731,9 +5094,10 @@
       "adj_off": 95.77,
       "adj_def": 99.26,
       "adj_net": -3.49,
-      "tempo": 68,
+      "tempo": 66.4,
       "direct_net": 0,
-      "rot_level": -8.48
+      "rot_level": -8.48,
+      "play_types": []
     },
     {
       "rank": 365,
@@ -4744,9 +5108,10 @@
       "adj_off": 97.99,
       "adj_def": 101.55,
       "adj_net": -3.56,
-      "tempo": 68,
+      "tempo": 65.52,
       "direct_net": 0,
-      "rot_level": -7.45
+      "rot_level": -7.45,
+      "play_types": []
     },
     {
       "rank": 366,
@@ -4757,9 +5122,10 @@
       "adj_off": 98.34,
       "adj_def": 101.93,
       "adj_net": -3.59,
-      "tempo": 68,
+      "tempo": 70.16,
       "direct_net": 0,
-      "rot_level": -5.15
+      "rot_level": -5.15,
+      "play_types": []
     },
     {
       "rank": 367,
@@ -4770,9 +5136,10 @@
       "adj_off": 98.45,
       "adj_def": 102.08,
       "adj_net": -3.63,
-      "tempo": 68,
+      "tempo": 66.71,
       "direct_net": 0,
-      "rot_level": -12.63
+      "rot_level": -12.63,
+      "play_types": []
     },
     {
       "rank": 368,
@@ -4783,9 +5150,10 @@
       "adj_off": 98.32,
       "adj_def": 101.95,
       "adj_net": -3.63,
-      "tempo": 68,
+      "tempo": 64.58,
       "direct_net": 0,
-      "rot_level": -20.85
+      "rot_level": -20.85,
+      "play_types": []
     },
     {
       "rank": 369,
@@ -4798,7 +5166,8 @@
       "adj_net": -3.82,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 370,
@@ -4809,9 +5178,10 @@
       "adj_off": 98.63,
       "adj_def": 102.5,
       "adj_net": -3.87,
-      "tempo": 68,
+      "tempo": 67.59,
       "direct_net": 0,
-      "rot_level": -21.57
+      "rot_level": -21.57,
+      "play_types": []
     },
     {
       "rank": 371,
@@ -4822,9 +5192,10 @@
       "adj_off": 97.19,
       "adj_def": 101.24,
       "adj_net": -4.05,
-      "tempo": 68,
+      "tempo": 69.92,
       "direct_net": 0,
-      "rot_level": -13.53
+      "rot_level": -13.53,
+      "play_types": []
     },
     {
       "rank": 372,
@@ -4837,7 +5208,8 @@
       "adj_net": -4.71,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 373,
@@ -4848,9 +5220,10 @@
       "adj_off": 96.05,
       "adj_def": 101.04,
       "adj_net": -4.99,
-      "tempo": 68,
+      "tempo": 68.62,
       "direct_net": 0,
-      "rot_level": -22.74
+      "rot_level": -22.74,
+      "play_types": []
     },
     {
       "rank": 374,
@@ -4863,7 +5236,8 @@
       "adj_net": -5.24,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 375,
@@ -4876,7 +5250,8 @@
       "adj_net": -6.1,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 376,
@@ -4887,9 +5262,10 @@
       "adj_off": 95.12,
       "adj_def": 101.3,
       "adj_net": -6.19,
-      "tempo": 68,
+      "tempo": 68.34,
       "direct_net": 0,
-      "rot_level": -15.18
+      "rot_level": -15.18,
+      "play_types": []
     },
     {
       "rank": 377,
@@ -4900,9 +5276,10 @@
       "adj_off": 96.21,
       "adj_def": 102.52,
       "adj_net": -6.32,
-      "tempo": 68,
+      "tempo": 71.54,
       "direct_net": 0,
-      "rot_level": -14.58
+      "rot_level": -14.58,
+      "play_types": []
     },
     {
       "rank": 378,
@@ -4915,7 +5292,8 @@
       "adj_net": -6.4,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     },
     {
       "rank": 379,
@@ -4926,9 +5304,10 @@
       "adj_off": 95.58,
       "adj_def": 102.37,
       "adj_net": -6.79,
-      "tempo": 68,
+      "tempo": 66.95,
       "direct_net": 0,
-      "rot_level": -19.11
+      "rot_level": -19.11,
+      "play_types": []
     },
     {
       "rank": 380,
@@ -4939,9 +5318,10 @@
       "adj_off": 97.52,
       "adj_def": 104.81,
       "adj_net": -7.29,
-      "tempo": 68,
+      "tempo": 69.61,
       "direct_net": 0,
-      "rot_level": -16.86
+      "rot_level": -16.86,
+      "play_types": []
     },
     {
       "rank": 381,
@@ -4954,7 +5334,8 @@
       "adj_net": -8.84,
       "tempo": 68,
       "direct_net": 0,
-      "rot_level": 0
+      "rot_level": 0,
+      "play_types": []
     }
   ],
   "model": {
