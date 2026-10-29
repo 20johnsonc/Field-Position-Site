@@ -4,3 +4,23 @@ dist/
 .env
 .env.*
 !.env.example
+
+# model weights — never commit; host externally
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+*.ckpt
+
+# local build state
+.wrangler/
+.vercel/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# export_data.py artifacts (regenerated in CWD; don't commit)
+/matchups.json
+/rankings.json
