@@ -17,11 +17,16 @@ export interface PlayersDoc {
   generated_at: string; year: number; projected: boolean; players: BasketballPlayer[];
 }
 
-// Fetch a JSON asset from /public. Returns null on any failure so callers
-// can fall back gracefully (Workers has no fs; everything is HTTP).
-async function fetchJson(base: URL | string, path: string): Promise<any | null> {
+// Fetch a static JSON asset. Uses Cloudflare's ASSETS binding when available
+// (Worker self-fetch to its own origin is blocked/looped), falls back to
+// plain fetch for local dev where Astro's runtime is undefined.
+async function fetchJson(ctx: any, path: string): Promise<any | null> {
   try {
-    const res = await fetch(new URL(path, base));
+    const url = new URL(path, ctx.url);
+    const env = ctx.locals?.runtime?.env;
+    const res = env?.ASSETS
+      ? await env.ASSETS.fetch(url)
+      : await fetch(url);
     if (!res.ok) return null;
     return await res.json();
   } catch {
@@ -31,18 +36,18 @@ async function fetchJson(base: URL | string, path: string): Promise<any | null> 
 
 export async function loadBasketballYear(
   year: number,
-  base: URL | string
+  ctx: any
 ): Promise<{ rankings: RankingsDoc; players: PlayersDoc } | null> {
   const [rankings, players] = await Promise.all([
-    fetchJson(base, `/data/basketball/${year}/rankings.json`),
-    fetchJson(base, `/data/basketball/${year}/players.json`),
+    fetchJson(ctx, `/data/basketball/${year}/rankings.json`),
+    fetchJson(ctx, `/data/basketball/${year}/players.json`),
   ]);
   if (!rankings || !players) return null;
   return { rankings, players };
 }
 
-export async function listBasketballYears(base: URL | string): Promise<number[]> {
-  const idx = await fetchJson(base, '/data/basketball/index.json');
+export async function listBasketballYears(ctx: any): Promise<number[]> {
+  const idx = await fetchJson(ctx, '/data/basketball/index.json');
   if (!idx || !Array.isArray(idx.years)) return [];
   return [...idx.years].sort((a, b) => a - b);
 }

@@ -8,7 +8,7 @@ export const prerender = false; // SSR Mode
 const { year, team } = Astro.params;
 const y = Number(year);
 
-const data = await loadBasketballYear(y, Astro.url);
+const data = await loadBasketballYear(y, Astro);
 if (!data) throw new Error(`Missing data for ${year}`);
 
 const { rankings, players } = data;
@@ -22,9 +22,9 @@ const actualTeamName = teamStats.team;
 
 // Calculate validYears on the fly for the dropdown
 const validYears = [];
-const allYears = await listBasketballYears(Astro.url);
+const allYears = await listBasketballYears(Astro);
 for (const yr of allYears) {
-  const yrData = await loadBasketballYear(yr, Astro.url);
+  const yrData = await loadBasketballYear(yr, Astro);
   if (yrData && yrData.rankings.teams.some((t: any) => slugify(t.team) === team)) {
     validYears.push(yr);
   }
@@ -38,7 +38,9 @@ const roster = players.players
 // Load the schedule at request time (Cloudflare Workers have no fs)
 let schedule = [];
 try {
-  const res = await fetch(new URL(`/data/basketball/${y}/schedule.json`, Astro.url));
+  const schedUrl = new URL(`/data/basketball/${y}/schedule.json`, Astro.url);
+  const assets = Astro.locals?.runtime?.env?.ASSETS;
+  const res = assets ? await assets.fetch(schedUrl) : await fetch(schedUrl);
   if (res.ok) {
     const allSchedules = await res.json();
     schedule = allSchedules[actualTeamName] || [];

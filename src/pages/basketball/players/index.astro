@@ -4,9 +4,9 @@ import SportTabs from '../../../components/SportTabs.astro';
 import BasketballPlayersTable from '../../../components/BasketballPlayersTable.astro';
 import { listBasketballYears, loadBasketballYear } from '../../../lib/basketball';
 
-const years = (await listBasketballYears(Astro.url)).reverse();
+const years = (await listBasketballYears(Astro)).reverse();
 const latest = years[0];
-const data = await loadBasketballYear(latest, Astro.url);
+const data = await loadBasketballYear(latest, Astro);
 if (!data) throw new Error(`Failed to load basketball year ${latest}`);
 
 const { players } = data;
