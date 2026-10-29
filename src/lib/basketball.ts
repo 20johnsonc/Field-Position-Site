@@ -1,6 +1,3 @@
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
-
 export interface BasketballTeam {
   rank: number; team: string; conference: string | null;
   wins: number | null; losses: number | null;
@@ -20,21 +17,37 @@ export interface PlayersDoc {
   generated_at: string; year: number; projected: boolean; players: BasketballPlayer[];
 }
 
-export function listBasketballYears(): number[] {
+// Fetch a static JSON asset. Uses Cloudflare's ASSETS binding when available
+// (Worker self-fetch to its own origin is blocked/looped), falls back to
+// plain fetch for local dev where Astro's runtime is undefined.
+async function fetchJson(ctx: any, path: string): Promise<any | null> {
   try {
-    return readdirSync(join(process.cwd(), 'public', 'data', 'basketball'), { withFileTypes: true })
-      .filter(d => d.isDirectory() && /^\d+$/.test(d.name))
-      .map(d => Number(d.name))
-      .sort((a, b) => a - b);
-  } catch { return []; }
+    const url = new URL(path, ctx.url);
+    const env = ctx.locals?.runtime?.env;
+    const res = env?.ASSETS
+      ? await env.ASSETS.fetch(url)
+      : await fetch(url);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
 }
 
-export function loadBasketballYear(year: number): { rankings: RankingsDoc; players: PlayersDoc } | null {
-  try {
-    const base = join(process.cwd(), 'public', 'data', 'basketball', String(year));
-    return {
-      rankings: JSON.parse(readFileSync(join(base, 'rankings.json'), 'utf-8')),
-      players:  JSON.parse(readFileSync(join(base, 'players.json'),  'utf-8')),
-    };
-  } catch { return null; }
+export async function loadBasketballYear(
+  year: number,
+  ctx: any
+): Promise<{ rankings: RankingsDoc; players: PlayersDoc } | null> {
+  const [rankings, players] = await Promise.all([
+    fetchJson(ctx, `/data/basketball/${year}/rankings.json`),
+    fetchJson(ctx, `/data/basketball/${year}/players.json`),
+  ]);
+  if (!rankings || !players) return null;
+  return { rankings, players };
+}
+
+export async function listBasketballYears(ctx: any): Promise<number[]> {
+  const idx = await fetchJson(ctx, '/data/basketball/index.json');
+  if (!idx || !Array.isArray(idx.years)) return [];
+  return [...idx.years].sort((a, b) => a - b);
 }

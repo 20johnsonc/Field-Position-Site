@@ -6,31 +6,36 @@ interface PlayerDashboardProps {
   year: number;
 }
 
-export default function PlayerDashboard({ player, year }: PlayerDashboardProps) {
+export default function PlayerDashboard({ player, year }: { player: any, year: number }) {
   const [gameFilter, setGameFilter] = useState<string>('all');
   const [gameLogs, setGameLogs] = useState<any[]>([]);
-  const [allShots, setAllShots] = useState<any[]>([]); // <-- New state for shots
+  const [allShots, setAllShots] = useState<any[]>([]);
+
+  const teamSlug = player.team.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const pid = String(player.player_id || player.id);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        // 1. Fetch Game Logs
-        const logsRes = await fetch(`/data/basketball/${year}/game_logs.json`);
+        // 1. Fetch Game Logs (For the whole team)
+        const logsRes = await fetch(`/data/basketball/${year}/game_logs/${teamSlug}.json`);
         if (logsRes.ok) {
-          const logsData = await logsRes.json();
-          setGameLogs(logsData[String(player.player_id || player.id)] || []);
+          const teamLogs = await logsRes.json();
+          setGameLogs(teamLogs[pid] || []); // Extract just this player
         }
 
-        // 2. Fetch Shots (for the single-game profile calculation)
-        const shotsRes = await fetch(`/data/basketball/${year}/shots.json`);
+        // 2. Fetch Shots (For the whole team)
+        const shotsRes = await fetch(`/data/basketball/${year}/shots/${teamSlug}.json`);
         if (shotsRes.ok) {
-          const shotsData = await shotsRes.json();
-          setAllShots(shotsData[String(player.player_id || player.id)] || []);
+          const teamShots = await shotsRes.json();
+          setAllShots(teamShots[pid] || []); // Extract just this player
         }
-      } catch (e) {}
+      } catch (e) {
+        console.error("Failed to load team data", e);
+      }
     }
-    fetchData();
-  }, [year, player]);
+    if (pid && year && teamSlug) fetchData();
+  }, [year, pid, teamSlug]);
 
   const activeGame = gameFilter !== 'all' ? gameLogs.find(g => String(g.game_id) === gameFilter) : null;
 
@@ -251,7 +256,8 @@ export default function PlayerDashboard({ player, year }: PlayerDashboardProps) 
         <div className="card" style={{ padding: '24px' }}>
           <ShotChart 
             year={year} 
-            playerId={String(player.player_id || player.id)} 
+            playerId={pid} 
+            teamName={player.team} // <-- ADD THIS
             externalGameFilter={gameFilter}
             onGameFilterChange={setGameFilter}
           />

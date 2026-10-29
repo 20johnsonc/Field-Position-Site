@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "field-position-site",
+  "main": "./dist/_worker.js", // 👈 This tells Wrangler where the Astro SSR script is
+  "compatibility_date": "2026-10-29",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist", // 👈 This tells Wrangler where static images/CSS live
+    "binding": "ASSETS"    // 👈 Exposes env.ASSETS inside the Worker
+  }
+}

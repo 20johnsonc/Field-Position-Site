@@ -4,7 +4,7 @@ import SportTabs from '../../components/SportTabs.astro';
 import GamePreview from '../../components/GamePreview';
 import { listBasketballYears } from '../../lib/basketball';
 
-const years = listBasketballYears().reverse();
+const years = (await listBasketballYears(Astro)).reverse();
 const latest = years[0];
 const seasonLabel = `${latest - 1}-${String(latest).slice(-2)}`;
 ---
