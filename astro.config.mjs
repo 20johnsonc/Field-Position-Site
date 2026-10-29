@@ -7,7 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [react()],
   output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: 'passthrough' // Prevents Node native image errors on Cloudflare
+  }),
 
   vite: {
     plugins: [tailwindcss()],
