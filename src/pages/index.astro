@@ -19,13 +19,12 @@ function loadJson(relPath: string, fallback: unknown = {}) {
   }
 }
 
+// 1. OPTIMIZATION: Only load the default year's rankings on the server
 const rawRankings = loadJson(`data/rankings/${default_year}.json`, {});
 const generatedAtStr = rawRankings.generated_at || null;
-const rankings = years.flatMap((year: number) => {
-  const raw = loadJson(`data/rankings/${year}.json`, {});
-  const rows = Array.isArray(raw) ? raw : (raw?.rankings ?? []);
-  return normalizeRankings(rows);
-});
+const rows = Array.isArray(rawRankings) ? rawRankings : (rawRankings?.rankings ?? []);
+const rankings = normalizeRankings(rows);
+
 const matchupsRaw = loadJson(`data/matchups/${default_year}/week-${default_week}.json`, []);
 const topPlaysByGame = loadJson(`data/pbp-top-plays/${default_year}/week-${default_week}.json`, {});
 const backtestRaw = loadJson(`data/backtest/${default_year}/week-${default_week}.json`, {});
@@ -49,8 +48,15 @@ function escapeForScript(json: string) {
 ---
 
 <Layout seasonLabel={String(default_year)} lastUpdate={generatedAtStr}>
+  
+  <!-- DashboardControls now handles the SportTabs + PageTabs side-by-side -->
   <DashboardControls filters={filters} conferences={conferences}>
-    <RankingsTable slot="rankings" rankings={rankings} />
+    
+    <!-- Wrapper allows our script to target the table body cleanly -->
+    <div id="rankings-container" slot="rankings">
+      <RankingsTable rankings={rankings} />
+    </div>
+    
     <MatchupGrid
       slot="matchups"
       matchups={matchups}
@@ -60,14 +66,103 @@ function escapeForScript(json: string) {
     />
   </DashboardControls>
 
-  <!-- Read once by dashboard-controls.ts at init so client-side re-renders
-       (other weeks) know each team's conference without refetching rankings. -->
+  <!-- State Scripts for DashboardControls -->
   <script id="team-conf-map" type="application/json" set:html={escapeForScript(JSON.stringify(teamConfMap))} />
-
-  <!-- Read once so the "current week/year" JS state matches the server-rendered default. -->
   <script id="matchups-default" type="application/json" set:html={escapeForScript(JSON.stringify({ year: default_year, week: default_week }))} />
-
   <script id="matchups-manifest" type="application/json" set:html={escapeForScript(JSON.stringify({ years, weeks_by_year }))} />
 
   <PbpChartModal client:load />
+
+  <!-- Client-side script to fetch new year data when dropdown changes -->
+  <script>
+    import { normalizeRankings, formatRating, slugifyTeam } from '../lib/data';
+
+    function getRecordSortValue(record: string) {
+      if (!record || !record.includes('-')) return -1;
+      const [wins, losses] = record.split('-').map(Number);
+      const total = wins + losses;
+      if (total === 0) return -0.0001;
+      return (wins / total) + (wins * 0.0001);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearSelect = document.getElementById('rankingsYearFilter') as HTMLSelectElement;
+      const tableBody = document.getElementById('rankingsBody');
+
+      if (yearSelect && tableBody) {
+        yearSelect.addEventListener('change', async (e) => {
+          const selectedYear = (e.target as HTMLSelectElement).value;
+          const tableContainer = tableBody.closest('.table-container') as HTMLElement;
+          
+          if (tableContainer) tableContainer.style.opacity = '0.5';
+
+          try {
+            const res = await fetch(`/data/rankings/${selectedYear}.json`);
+            const raw = await res.json();
+            const newRows = Array.isArray(raw) ? raw : (raw?.rankings ?? []);
+            const newRankings = normalizeRankings(newRows);
+
+            // Re-build the <tbody> HTML using the exact structure from RankingsTable.astro
+            tableBody.innerHTML = newRankings.map(row => {
+              let rankChangeHtml = '';
+              if (row.rank_change != null) {
+                const val = Number(row.rank_change);
+                const cls = val > 0 ? 'up' : val < 0 ? 'down' : 'neutral';
+                const title = row.previous_rank ? `Previous Rank: ${row.previous_rank}` : 'No change';
+                const arrow = val > 0 ? '▲' : val < 0 ? '▼' : '';
+                const changeVal = val !== 0 ? `<span class="change-val">${Math.abs(val)}</span>` : '';
+                rankChangeHtml = `<span class="rank-change ${cls}" title="${title}">${arrow}${changeVal}</span>`;
+              }
+
+              return `
+                <tr
+                  data-year="${row.year}"
+                  data-team="${row.team}"
+                  data-rank="${row.rank}"
+                  data-record="${getRecordSortValue(row.record)}"
+                  data-conference-record="${getRecordSortValue(row.conference_record)}"
+                  data-net-rating="${row.netRating}"
+                  data-sos="${row.sos_rank}"
+                  data-sor="${row.sor_rank}"
+                  data-conference="${row.conference}"
+                >
+                  <td class="rank"><span class="rank-num">${row.rank}</span></td>
+                  <td class="team">
+                    <a href="/teams/${row.year}/${slugifyTeam(row.team)}/" class="team-link">
+                      ${row.team}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
+                      <div class="rank-wrapper">${rankChangeHtml}</div>
+                    </a>
+                  </td>
+                  <td class="num rating">${formatRating(row.netRating)}</td>
+                  <td class="num">${row.record}</td>
+                  <td class="num">${row.conference_record}</td>
+                  <td class="num" title="Rating: ${row.sos}">${row.sos_rank}</td>
+                  <td class="num" title="Rating: ${row.sor}">${row.sor_rank}</td>
+                  <td>${row.conference}</td>
+                </tr>
+              `;
+            }).join('');
+
+            // Re-apply the conference filter using the new dropdown
+            const confSelect = document.getElementById('rankingsConfFilter') as HTMLSelectElement;
+            if (confSelect) {
+              confSelect.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+
+            // Re-apply current sorting if a column header is active
+            const activeTh = document.querySelector('#rankingsTable th.sortable.active') as HTMLElement;
+            if (activeTh) {
+              activeTh.click();
+            }
+
+          } catch (err) {
+            console.error('Failed to load year', selectedYear, err);
+          } finally {
+            if (tableContainer) tableContainer.style.opacity = '1';
+          }
+        });
+      }
+    });
+  </script>
 </Layout>

@@ -1,0 +1,48 @@
+---
+const { pathname } = Astro.url;
+const isBasketball = pathname.startsWith('/basketball');
+---
+<div class="sport-tabs">
+  <a href="/" class={`sport-tab ${!isBasketball ? 'active' : ''}`}>
+    Football
+  </a>
+  <a href="/basketball/" class={`sport-tab ${isBasketball ? 'active' : ''}`}>
+    Basketball
+  </a>
+</div>
+
+<style>
+  .sport-tabs {
+    display: flex;
+    gap: 8px;
+  }
+  .sport-tab {
+    background: var(--surface-2);
+    border: 1px solid var(--card-border);
+    color: var(--text-muted);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .sport-tab:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+    border-color: var(--card-border-strong);
+  }
+  .sport-tab.active {
+    background: var(--accent-primary);
+    color: var(--bg);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 12px var(--glow-primary);
+  }
+  [data-theme="light"] .sport-tab.active {
+    color: #ffffff;
+  }
+</style>

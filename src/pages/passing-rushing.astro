@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import Layout from '../layouts/Layout.astro';
 import { buildRows, sortRows, tableHtml, tableFields, views, PRIMARY_FIELD } from '../lib/prTable';
+import FootballTabs from '../components/FootballTabs.astro';
 
 const PUBLIC_DATA = join(process.cwd(), 'public', 'data');
 function loadJson(relPath: string, fallback: unknown = {}) {
@@ -62,15 +63,8 @@ function escapeForScript(json: string) {
 }
 ---
 
-<Layout title="Passing & Rushing Rankings" seasonLabel={defaultYear ? `${defaultYear} Season` : 'Analytics'} {lastUpdate}>
-  <a href="/" class="back-link">&larr; Return</a>
-
-  <h1 class="page-title">Passing &amp; Rushing Rankings</h1>
-  <p class="page-subtitle" id="pt-basis-note">
-    Raw team production by target zone and rush direction. Not opponent-adjusted &mdash;
-    a team's schedule strength isn't reflected here.
-  </p>
-
+<Layout seasonLabel={defaultYear ? `${defaultYear} Season` : 'Analytics'} {lastUpdate}>
+  <FootballTabs />
   <div id="pr-table-root" class="pt-wrapper" data-base="">
 
     <div class="pt-controls">

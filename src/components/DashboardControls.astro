@@ -2,6 +2,7 @@
 import type { FilterOptions } from '../lib/types';
 import { renderVisibleTopPlays, bindTopPlaysToggle } from './pbpTopPlaysClient';
 import matchupsIndex from '../../public/data/matchups-index.json';
+import FootballTabs from './FootballTabs.astro'; // <-- Add this import
 
 interface Props {
   filters: FilterOptions;
@@ -12,16 +13,7 @@ const { filters, conferences = [] } = Astro.props;
 const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 ---
 
-<div class="tabs" id="dashboardTabs">
-  <button type="button" class="tab-btn active" data-tab="rankings">Power Rankings</button>
-  <button type="button" class="tab-btn" data-tab="matchups">Matchup Slate</button>
-  <a href="/futures" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center;">
-    2026 Futures
-  </a>
-  <a href="/passing-rushing" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center;">
-    Advanced Stats
-  </a>
-</div>
+<FootballTabs />
 
 <!-- Power Rankings Panel (Default Active) -->
 <div id="rankingsPanel" class="tab-panel active">
@@ -34,21 +26,13 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
       }
     </select>
 
-    <!-- HIDDEN SELECT: Keeps dashboard-controls.ts functional -->
-    <select id="rankingsConfFilter" style="display: none;" aria-hidden="true">
-      <option value="ALL">ALL</option>
+    <!-- Now a visible dropdown, not hidden! -->
+    <select id="rankingsConfFilter" aria-label="Filter rankings by conference">
+      <option value="ALL">All Conferences</option>
       {conferences.map(conf => (
         <option value={conf}>{conf}</option>
       ))}
     </select>
-
-    <!-- Visual Conference Pills -->
-    <div class="conf-pills" id="indexConfPills">
-      <button type="button" class="pill active" data-conf="ALL">ALL</button>
-      {conferences.map(conf => (
-        <button type="button" class="pill" data-conf={conf}>{conf}</button>
-      ))}
-    </div>
   </div>
   <slot name="rankings" />
 </div>
@@ -64,8 +48,8 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
       }
     </select>
 
-    <!-- HIDDEN SELECT: Keeps dashboard-controls.ts functional for matchups -->
-    <select id="confFilter" style="display: none;" aria-hidden="true">
+    <!-- Now a visible dropdown, not hidden! -->
+    <select id="confFilter" aria-label="Filter matchups by conference">
       <option value="ALL">All Conferences</option>
       {
         filters.matchupConferences.map((conf) => (
@@ -90,16 +74,6 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
       <option value="channel">Sort: Channel</option>
       <option value="edge">Sort: Biggest edge</option>
     </select>
-
-    <!-- Visual Conference Pills for Matchups -->
-    <div class="conf-pills" id="matchupConfPills">
-      <button type="button" class="pill active" data-conf="ALL">ALL</button>
-      {
-        filters.matchupConferences.map((conf) => (
-          <button type="button" class="pill" data-conf={conf}>{conf}</button>
-        ))
-      }
-    </div>
     
     <div class="stats-group">
       <span class="stats-title">Model Performance</span>
@@ -115,7 +89,6 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
         </div>
       </div>
 
-      <!-- Full-season SU% / ATS% for the selected year, independent of week/conference -->
       <div class="record-stats season-stats" id="matchupSeasonStats">
         <span class="season-label">Season</span>
         <div class="stat-pill" id="suSeasonPill">
@@ -133,6 +106,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 </div>
 
 <style>
+  /* ... Keep your existing styles for .stats-title, .season-label, .record-stats, etc. ... */
   .stats-title {
     font-size: 11px;
     text-transform: uppercase;
@@ -154,16 +128,12 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 
   .stats-group {
     display: flex;
-    flex-wrap: nowrap;      /* Week and Season never split */
+    flex-wrap: nowrap;
     align-items: center;
-    flex-shrink: 0;         /* wrap as a unit instead of squeezing */
+    flex-shrink: 0;
   }
 
-  #matchupRecordStats.is-empty {
-    display: none;
-  }
-
-  /* When Week is hidden, Season loses its divider */
+  #matchupRecordStats.is-empty { display: none; }
   #matchupRecordStats.is-empty + .season-stats {
     margin-left: 0;
     padding-left: 0;
@@ -174,7 +144,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     .stats-group {
       width: 100%;
       margin-left: 0;
-      overflow-x: auto;     /* scroll sideways instead of wrapping */
+      overflow-x: auto;
     }
   }
 
@@ -204,28 +174,11 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     white-space: nowrap;
   }
 
-  .stat-pill-label {
-    color: var(--text-muted);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-  }
+  .stat-pill-label { color: var(--text-muted); font-weight: 600; letter-spacing: 0.05em; }
+  .stat-pill-value { font-weight: 700; color: var(--accent-primary); }
+  .stat-pill.no-data .stat-pill-value { color: var(--text-dim); }
+  #sortFilter.is-hidden { display: none; }
 
-  .stat-pill-value {
-    font-weight: 700;
-    color: var(--accent-primary);
-  }
-
-  .stat-pill.no-data .stat-pill-value {
-    color: var(--text-dim);
-  }
-
-  #sortFilter.is-hidden {
-    display: none;
-  }
-
-  /* =========================================
-     Light Mode Overrides (Includes Astro :global support)
-     ========================================= */
   :global([data-theme="light"]) .stat-pill,
   [data-theme="light"] .stat-pill {
     background: rgba(0, 0, 0, 0.04);
@@ -245,30 +198,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
     const rankingsConf = document.getElementById('rankingsConfFilter') as HTMLSelectElement | null;
     const matchupConf = document.getElementById('confFilter') as HTMLSelectElement | null;
 
-    // 2. Bridge pill clicks to the hidden selects, and sync URL on any change
-    const setupPillBridge = (pillContainerId: string, hiddenSelectId: string) => {
-      const pills = document.querySelectorAll(`#${pillContainerId} .pill`);
-      const hiddenSelect = document.getElementById(hiddenSelectId) as HTMLSelectElement | null;
-
-      pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          pills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-
-          const selectedConf = (pill as HTMLElement).dataset.conf || 'ALL';
-
-          if (hiddenSelect) {
-            hiddenSelect.value = selectedConf;
-            hiddenSelect.dispatchEvent(new Event('change', { bubbles: true }));
-          }
-        });
-      });
-    };
-
-    setupPillBridge('indexConfPills', 'rankingsConfFilter');
-    setupPillBridge('matchupConfPills', 'confFilter');
-
-    // 3. Apply filter state from the URL on load
+    // 2. Apply filter state from the URL on load
     const params = new URLSearchParams(window.location.search);
     const yr = params.get('year');
     const conf = params.get('conference');
@@ -287,16 +217,11 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
       setAndFire(matchupYear, yr);
     }
     if (wk) setAndFire(week, wk);
-
+    
+    // Directly fire the selects instead of bridging from pills
     if (conf) {
-      const applyConfToPills = (containerId: string, hiddenSelect: HTMLSelectElement | null) => {
-        document.querySelectorAll(`#${containerId} .pill`).forEach(p => {
-          p.classList.toggle('active', (p as HTMLElement).dataset.conf === conf);
-        });
-        setAndFire(hiddenSelect, conf);
-      };
-      applyConfToPills('indexConfPills', rankingsConf);
-      applyConfToPills('matchupConfPills', matchupConf);
+      setAndFire(rankingsConf, conf);
+      setAndFire(matchupConf, conf);
     }
 
     if (tab === 'matchups') {
@@ -308,7 +233,7 @@ const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 
     if (sort) setAndFire(document.getElementById('sortFilter') as HTMLSelectElement | null, sort);
 
-    // 4. Push current filter state to the URL (used for the back-link and shareability)
+    // 3. Push current filter state to the URL
     function syncURL() {
       const activeTab = document.getElementById('matchupsPanel')?.classList.contains('active') ? 'matchups' : 'rankings';
       const newParams = new URLSearchParams();

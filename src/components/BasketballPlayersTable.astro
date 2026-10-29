@@ -1,0 +1,90 @@
+---
+import type { BasketballPlayer } from '../lib/basketball';
+interface Props { players: BasketballPlayer[]; projected: boolean; year: number; limit?: number; }
+const { players, projected, limit = 100, year } = Astro.props;
+const shown = players.slice(0, limit);
+const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+// Helper returns a raw HTML string for the rank badges
+const renderBadge = (rank: number | null | undefined) => {
+  if (!rank || rank > 50) return '';
+  
+  let color = '#b45309'; // Bronze
+  let bg = 'rgba(180, 83, 9, 0.15)';
+  
+  if (rank <= 10) { 
+    color = '#d97706'; 
+    bg = 'rgba(217, 119, 6, 0.15)'; 
+  } else if (rank <= 25) { 
+    color = '#64748b'; 
+    bg = 'rgba(100, 116, 139, 0.15)'; 
+  }
+  
+  return `<span style="font-size: 0.65rem; padding: 2px 4px; border-radius: 4px; margin-left: 4px; font-weight: 800; color: ${color}; background: ${bg}; vertical-align: middle;">#${rank}</span>`;
+};
+---
+<div class="table-container">
+  <table class="rank-table" id="bballPlayersTable">
+    <thead>
+      <tr>
+        <th class="num">Rk</th>
+        <th class="sortable" data-sort="name">Player <span class="sort-icon">⇕</span></th>
+        <th class="sortable" data-sort="team">Team <span class="sort-icon">⇕</span></th>
+        
+        <!-- NEW OFF / DEF COLUMNS -->
+        <th class="sortable num" data-sort="offensive_rating">Off RAPM <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="defensive_rating">Def RAPM <span class="sort-icon">⇕</span></th>
+        
+        <th class="sortable num active" data-sort="net_rating">Net RAPM <span class="sort-icon">▼</span></th>
+        
+        <th class="sortable num" data-sort="pts_pg">PPG <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="reb_pg">RPG <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="ast_pg">APG <span class="sort-icon">⇕</span></th>
+        
+        <th class="sortable" data-sort="position">Pos <span class="sort-icon">⇕</span></th>
+      </tr>
+    </thead>
+    <tbody id="bballPlayersBody">
+      {shown.map(p => (
+        <tr class="bball-player-row">
+          <td class="num">{p.rank}</td>
+          <td>
+            <a href={`/basketball/players/${year}/${p.player_id || p.id}/`} class="team-link">
+              <strong>{p.name}</strong>
+            </a>
+          </td>
+          <td>
+            <a href={`/basketball/teams/${year}/${slugify(p.team)}/`} class="team-link">
+              {p.team}
+            </a>
+          </td>
+          
+          <td class="num">{fmt(p.offensive_rating)}</td>
+          <td class="num">{fmt(p.defensive_rating)}</td>
+          
+          <td class="num rating">{fmt(p.net_rating)}</td>
+          
+          <td class="num" set:html={`${fmt(p.pts_pg)}${renderBadge(p.pts_pg_rank)}`}></td>
+          <td class="num" set:html={`${fmt(p.reb_pg)}${renderBadge(p.reb_pg_rank)}`}></td>
+          <td class="num" set:html={`${fmt(p.ast_pg)}${renderBadge(p.ast_pg_rank)}`}></td>
+          
+          <td style="color: var(--text-muted)">{p.position || '—'}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <div id="bballPlayersLimitNotice" style="padding: 12px; text-align: center; font-size: 0.875rem; color: var(--text-muted); border-top: 1px solid var(--card-border);">
+    Showing top {limit} of {players.length} players.
+  </div>
+</div>
+
+<style is:global>
+  .team-link { color: var(--text); text-decoration: none; transition: color 0.2s ease; }
+  .team-link:hover { color: var(--accent-primary); text-decoration: underline; }
+  
+  th.sortable { cursor: pointer; user-select: none; transition: color 0.2s; }
+  th.sortable:hover { color: var(--accent-primary); }
+  th.sortable .sort-icon { display: inline-block; margin-left: 4px; opacity: 0.3; font-size: 0.8em; }
+  th.sortable.active .sort-icon { opacity: 1; color: var(--accent-primary); }
+</style>

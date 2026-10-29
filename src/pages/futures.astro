@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FootballTabs from '../components/FootballTabs.astro';
 import simulationData from '../data/simulation.json';
 import { slugifyTeam } from '../lib/data';
 
@@ -18,9 +19,9 @@ teamsArray.sort((a, b) => b.conference_championship_odds_pct - a.conference_cham
 const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
 ---
 
-<Layout title="Season Futures - CFB Analytics" seasonLabel={prediction_year} lastUpdate={generated_at}>
-  <a href="/" class="back-link">&larr; Return</a>
+<Layout seasonLabel={prediction_year} lastUpdate={generated_at}>
   <div class="futures-container" data-simulation={n_simulations}>
+    <FootballTabs />
     <!-- Main View Toggle -->
     <div class="view-toggle" id="mainViewToggle">
       <button class="view-btn active" data-target="cfp">
@@ -33,7 +34,6 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
 
     <!-- Section Header & Pills -->
     <div class="sub-header">
-      <h2 id="sectionTitle">Conference Futures</h2>
       <p id="sectionDesc">Simulated CCG appearance and conference title probabilities</p>
       
       <div class="conf-pills" id="confPillContainer">
@@ -479,14 +479,12 @@ const conferences = [...new Set(teamsArray.map(t => t.conference))].sort();
         currentView = btn.dataset.target;
 
         if (currentView === 'conf') {
-          sectionTitle.textContent = 'Conference Futures';
           sectionDesc.textContent = `Conference Championship appearances and title probabilities from ${n_simulations.toLocaleString()} simulated seasons`;
           document.querySelectorAll('.view-conf').forEach(el => el.classList.remove('hidden'));
           document.querySelectorAll('.view-cfp').forEach(el => el.classList.add('hidden'));
           currentSort = { column: 'champ', asc: false };
 
         } else {
-          sectionTitle.textContent = 'CFP & National Championship';
           sectionDesc.textContent = `College Football Playoff and National Title probabilities from ${n_simulations.toLocaleString()} simulated seasons.`;
           document.querySelectorAll('.view-conf').forEach(el => el.classList.add('hidden'));
           document.querySelectorAll('.view-cfp').forEach(el => el.classList.remove('hidden'));

@@ -1,6 +1,6 @@
 # Field Position — Analytics Dashboard
 
-College football power rankings and matchup slate, built with [Astro](https://astro.build).
+College football power rankings and matchup predictions, built with [Astro](https://astro.build).
 
 ## What's in this repo
 

@@ -1,0 +1,80 @@
+---
+import type { BasketballTeam } from '../lib/basketball';
+interface Props { teams: BasketballTeam[]; projected: boolean; year: number; }
+const { teams, projected, year } = Astro.props;
+const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+---
+<div class="table-container">
+  <table class="rank-table" id="bballTable">
+    <thead>
+      <tr>
+        <th class="num">Rk</th>
+        <th class="sortable" data-sort="team">Team <span class="sort-icon">⇕</span></th>
+        <th class="sortable" data-sort="conference">Conf <span class="sort-icon">⇕</span></th>
+        <th class="sortable num wl-col" data-sort="wins" style={projected ? 'display: none;' : ''}>W-L <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="adj_off">AdjOff <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="adj_def">AdjDef <span class="sort-icon">⇕</span></th>
+        <th class="sortable num active" data-sort="adj_net">AdjNet <span class="sort-icon">▼</span></th>
+        <th class="sortable num synergy-col" data-sort="synergy" style={projected ? 'display: none;' : ''}>Synergy <span class="sort-icon">⇕</span></th>
+      </tr>
+    </thead>
+    <tbody id="bballTableBody">
+      {teams.map(t => {
+        const synergy = (t.adj_net || 0) - (t.direct_net || 0);
+        return (
+          <tr class="bball-row" data-conf={t.conference || 'None'}>
+            <td class="num">{t.rank}</td>
+            <td>
+              <a href={`/basketball/teams/${year}/${slugify(t.team)}/`} class="team-link">
+                <strong>{t.team}</strong>
+              </a>
+            </td>
+            <td style="color: var(--text-muted)">{t.conference ?? '—'}</td>
+            <td class="num wl-cell" style={projected ? 'display: none;' : ''}>
+              {t.wins != null ? `${t.wins}-${t.losses}` : '—'}
+            </td>
+            <td class="num">{fmt(t.adj_off)}</td>
+            <td class="num">{fmt(t.adj_def)}</td>
+            <td class="num rating">{fmt(t.adj_net)}</td>
+            <td class="num synergy-cell" style={`${projected ? 'display: none;' : ''} color: ${synergy > 0 ? 'var(--accent-danger)' : (synergy < 0 ? 'var(--accent-success)' : 'var(--text-muted)')}`}>
+              {synergy > 0 ? '+' : ''}{fmt(synergy)}
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>
+
+<style is:global>
+  /* RESTORED STYLES */
+  .team-link { 
+    color: var(--text); 
+    text-decoration: none; 
+    transition: color 0.2s ease; 
+  }
+  .team-link:hover { 
+    color: var(--accent-primary); 
+    text-decoration: underline; 
+  }
+  
+  th.sortable { 
+    cursor: pointer; 
+    user-select: none; 
+    transition: color 0.2s; 
+  }
+  th.sortable:hover { 
+    color: var(--accent-primary); 
+  }
+  th.sortable .sort-icon { 
+    display: inline-block; 
+    margin-left: 4px; 
+    opacity: 0.3; 
+    font-size: 0.8em; 
+  }
+  th.sortable.active .sort-icon { 
+    opacity: 1; 
+    color: var(--accent-primary); 
+  }
+</style>

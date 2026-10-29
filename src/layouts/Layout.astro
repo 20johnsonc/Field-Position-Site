@@ -3,20 +3,41 @@ import '../styles/global.css';
 import ThemeToggle from '../components/ThemeToggle.tsx';
 
 interface Props {
-  title?: string;
+  title?: string;       // e.g., "Yaxel Lendeborg" (controls browser tab)
+  brand?: string;       // e.g., "College Basketball Ratings" (controls header logo)
   seasonLabel: string;
   lastUpdate?: string;
+  subtitle?: string;
 }
 
-const { title = 'CFB Power Rankings', seasonLabel, lastUpdate: rawDate } = Astro.props;
+// Determine which sport we are on
+const { pathname } = Astro.url;
+const isBasketball = pathname.startsWith('/basketball');
 
-// Format the date if it's a valid date string (e.g., ISO timestamp), otherwise use as-is
+// Set dynamic defaults based on the sport
+const defaultBrand = isBasketball ? 'College Basketball Ratings' : 'CFB Power Rankings';
+const defaultSubtitle = isBasketball 
+  ? 'Player-first RAPM ratings, opponent-adjusted for college basketball.' 
+  : 'Independent power rankings, predictions, win probabilities, and game results.';
+
+const {
+  title = '',
+  brand = defaultBrand,
+  seasonLabel,
+  lastUpdate: rawDate,
+  subtitle = defaultSubtitle,
+} = Astro.props;
+
+// Format the date if it's a valid date string
 const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
   ? new Date(rawDate).toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
     })
   : rawDate;
+
+// Format the browser tab title
+const pageTitle = title ? `${title} | ${brand}` : brand;
 ---
 
 <!doctype html>
@@ -24,7 +45,10 @@ const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    
+    <!-- Tab Title: e.g. "Yaxel Lendeborg | College Basketball Ratings" -->
+    <title>{pageTitle}</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,11 +73,14 @@ const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
   </head>
   <body>
     <div class="container">
+      
+      <!-- Global Header (Logo, Title, Dark Mode) -->
       <header>
-        <a href="/" class="logo-link">
+        <a href={isBasketball ? "/basketball/" : "/"} class="logo-link">
           <div class="logo-area">
-            <h1>CFB Power Rankings</h1>
-            <p>Independent power rankings, predictions, win probabilities, and game results.</p>
+            <!-- This now dynamically shows "College Basketball Ratings" or "CFB Power Rankings" -->
+            <h1>{brand}</h1>
+            <p>{subtitle}</p>
           </div>
         </a>
         <div class="header-meta">
@@ -61,7 +88,10 @@ const formattedLastUpdate = rawDate && !isNaN(Date.parse(rawDate))
           {formattedLastUpdate && <div class="last-updated">Updated {formattedLastUpdate}</div>}
         </div>
       </header>
+
+      <!-- Page Content gets injected here -->
       <slot />
+      
     </div>
   </body>
 </html>

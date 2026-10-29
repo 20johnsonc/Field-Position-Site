@@ -1,0 +1,212 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import SportTabs from '../../../../components/SportTabs.astro';
+import PlayerDashboard from '../../../../components/PlayerDashboard';
+import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
+
+export function getStaticPaths() {
+  const paths = [];
+  const allYears = listBasketballYears();
+  const playerYearsMap: Record<string, number[]> = {};
+
+  for (const year of allYears) {
+    const data = loadBasketballYear(year);
+    if (!data) continue;
+    for (const p of data.players.players) {
+      const pid = String(p.player_id || p.id);
+      if (!playerYearsMap[pid]) playerYearsMap[pid] = [];
+      playerYearsMap[pid].push(year);
+    }
+  }
+
+  for (const year of allYears) {
+    const data = loadBasketballYear(year);
+    if (!data) continue;
+    for (const p of data.players.players) {
+      const pid = String(p.player_id || p.id);
+      paths.push({
+        params: { year: String(year), id: pid },
+        props: { validYears: playerYearsMap[pid].sort((a, b) => b - a) }
+      });
+    }
+  }
+  return paths;
+}
+
+const { year, id } = Astro.params;
+const { validYears } = Astro.props;
+const y = Number(year);
+
+const data = loadBasketballYear(y);
+if (!data) throw new Error(`Missing data for ${year}`);
+
+const { players } = data;
+const player = players.players.find((p: any) => String(p.player_id || p.id) === id);
+
+if (!player) return Astro.redirect('/basketball/players/');
+
+const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
+const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+---
+
+<Layout title={`${player.name} - ${seasonLabel}`} seasonLabel={seasonLabel}>
+  <div class="container">
+    
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
+      <SportTabs />
+      <div class="tabs" style="margin-bottom: 0;">
+        <a href="/basketball/" class="tab-btn" style="text-decoration: none;">Team Rankings</a>
+        <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
+        <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
+      </div>
+
+      {validYears.length > 1 && (
+        <div class="controls" style="margin-bottom: 0; margin-left: auto; padding: 0; background: transparent; border: none; box-shadow: none;">
+          <select id="playerYearSelect" data-player-id={player.player_id || player.id} aria-label="Switch Year">
+            {validYears.map(yr => (
+              <option value={yr} selected={yr === y}>
+                {yr - 1}-{String(yr).slice(-2)} Season
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+    </div>
+
+    <div class="card" style="margin-bottom: 24px; padding: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h1 style="font-size: 2.5rem; margin-bottom: 8px;">
+            {player.name}
+            {player.jersey && <span style="font-size: 1.5rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">#{player.jersey}</span>}
+          </h1>
+          <p style="color: var(--text-muted); font-size: 1.1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <a href={`/basketball/teams/${y}/${slugify(player.team)}/`} style="color: var(--accent-primary); text-decoration: none; font-weight: 700;">
+              {player.team}
+            </a> 
+            · {player.conference} 
+            {player.class && <> · <span style="font-weight: 600;">{player.class}</span></>}
+            {player.position && <> · <span class="pill" style="padding: 2px 8px; font-size: 0.8rem; font-weight: 700; margin: 0;">{player.position}</span></>}
+            {player.height && <> · {Math.floor(player.height / 12)}'{player.height % 12}"</>}
+            {player.weight && <> · {player.weight} lbs</>}
+          </p>
+        </div>
+        
+        <div style="display: flex; gap: 24px; text-align: right;">
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Rank</div>
+            <div style="font-size: 2rem; font-weight: 900; color: var(--text);">#{player.rank}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Net RAPM</div>
+            <div style="font-size: 2rem; font-weight: 900; color: var(--accent-primary);">{fmt(player.net_rating)}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">
+              {players.projected ? 'Proj. MPG' : 'MPG'}
+            </div>
+            <div style="font-size: 2rem; font-weight: 900; color: var(--text);">
+              {player.min_pg ? player.min_pg.toFixed(1) : fmt(player.minutes_share * 40)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW DASHBOARD COMPONENT -->
+    <PlayerDashboard player={player} year={y} client:visible />
+
+    <!-- Game Log -->
+    <div id="gameLogContainer" style="display: none; margin-top: 32px;">
+      <h2 class="section-title">Game Log</h2>
+      <div class="table-container">
+        <table class="rank-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Opponent</th>
+              <th class="num">MIN</th>
+              <th class="num">PTS</th>
+              <th class="num">REB</th>
+              <th class="num">AST</th>
+              <th class="num">STL</th>
+              <th class="num">BLK</th>
+              <th class="num">TO</th>
+            </tr>
+          </thead>
+          <tbody id="gameLogBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="gameLogLoading" style="color: var(--text-muted); padding: 20px;">Loading game log...</div>
+
+  </div>
+</Layout>
+
+<script define:vars={{ playerId: String(player.player_id || player.id), year: y, isProjected: players.projected }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const yearSelect = document.getElementById('playerYearSelect');
+    if (yearSelect) {
+      yearSelect.addEventListener('change', (e) => {
+        const newYear = e.target.value;
+        const pid = yearSelect.dataset.playerId;
+        window.location.href = `/basketball/players/${newYear}/${pid}/`;
+      });
+    }
+
+    const loadingEl = document.getElementById('gameLogLoading');
+    const containerEl = document.getElementById('gameLogContainer');
+    const bodyEl = document.getElementById('gameLogBody');
+    
+    if (isProjected) {
+      loadingEl.style.display = 'none';
+      return;
+    }
+
+    (async () => {
+      try {
+        const res = await fetch(`/data/basketball/${year}/game_logs.json`);
+        if (!res.ok) throw new Error('No game logs found');
+        
+        const data = await res.json();
+        const logs = data[playerId];
+
+        if (logs && logs.length > 0) {
+          const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+          
+          bodyEl.innerHTML = logs.map(g => `
+            <tr>
+              <td>${new Date(g.start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
+              <td>
+                ${g.is_home ? 'vs' : '@'} 
+                <a href="/basketball/teams/${year}/${slugify(g.opponent)}/" class="team-link">
+                  ${g.opponent}
+                </a>
+              </td>
+              <td class="num">${g.minutes}</td>
+              <td class="num">${g.points}</td>
+              <td class="num">${g.rebounds}</td>
+              <td class="num">${g.assists}</td>
+              <td class="num">${g.steals}</td>
+              <td class="num">${g.blocks}</td>
+              <td class="num">${g.turnovers}</td>
+            </tr>
+          `).join('');
+          
+          loadingEl.style.display = 'none';
+          containerEl.style.display = 'block';
+        } else {
+          loadingEl.textContent = 'No game-by-game data available for this player.';
+        }
+      } catch (e) {
+        loadingEl.textContent = 'No game-by-game data available.';
+      }
+    })();
+  });
+</script>
+
+<style is:global>
+  .team-link { color: var(--text); text-decoration: none; transition: color 0.2s ease; }
+  .team-link:hover { color: var(--accent-primary); text-decoration: underline; }
+</style>

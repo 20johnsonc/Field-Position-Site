@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadWeekPbpDataServer } from '../src/lib/pbpServer';
 import { getTopPlays, toDisplayPlay, type GameMeta } from '../src/lib/pbp';
@@ -140,6 +140,28 @@ function buildSeasonRecords(years: string[]) {
   writeFileSync(join(PUBLIC, 'data/season-records.json'), JSON.stringify(byYear));
 }
 
+const BBALL_DIR = join(PUBLIC, 'data/basketball');
+
+function buildBasketballIndex() {
+  if (!existsSync(BBALL_DIR)) {
+    console.log('[basketball] no data dir, skipping index');
+    return;
+  }
+  const years = readdirSync(BBALL_DIR, { withFileTypes: true })
+    .filter(d => d.isDirectory() && /^\d+$/.test(d.name))
+    .map(d => Number(d.name))
+    .sort((a, b) => a - b);
+  if (years.length === 0) {
+    console.log('[basketball] empty data dir, skipping index');
+    return;
+  }
+  writeFileSync(
+    join(BBALL_DIR, 'index.json'),
+    JSON.stringify({ years, default_year: years[years.length - 1] }, null, 2)
+  );
+  console.log(`[basketball] wrote index: ${years.length} years (${years.join(', ')})`);
+}
+
 async function main() {
   const years = listYears();
   const index = buildMatchupsIndex(years);
@@ -152,6 +174,7 @@ async function main() {
     }
   }
   buildSeasonRecords(years);
+  buildBasketballIndex();
   console.log('pbp-top-plays/, backtest/, and season-records.json written');
 }
 

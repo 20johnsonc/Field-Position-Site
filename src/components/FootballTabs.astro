@@ -1,0 +1,47 @@
+---
+import SportTabs from './SportTabs.astro';
+
+const { pathname } = Astro.url;
+const isFutures = pathname === '/futures';
+const isStats = pathname === '/passing-rushing';
+const isHome = pathname === '/';
+---
+<!-- New wrapper to align them side-by-side -->
+<div class="nav-row">
+  <SportTabs />
+
+  <div class="tabs" id="dashboardTabs">
+    {isHome ? (
+      <>
+        <button type="button" class="tab-btn active" data-tab="rankings">Rankings</button>
+        <button type="button" class="tab-btn" data-tab="matchups">Matchups</button>
+      </>
+    ) : (
+      <>
+        <a href="/" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center;">Rankings</a>
+        <a href="/?tab=matchups" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center;">Matchups</a>
+      </>
+    )}
+    
+    <a href="/futures" class={`tab-btn ${isFutures ? 'active' : ''}`} style="text-decoration: none; display: inline-flex; align-items: center;">
+      Playoff Odds
+    </a>
+    <a href="/passing-rushing" class={`tab-btn ${isStats ? 'active' : ''}`} style="text-decoration: none; display: inline-flex; align-items: center;">
+      Advanced Stats
+    </a>
+  </div>
+</div>
+
+<style>
+  .nav-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  /* Remove the default bottom margin from .tabs since the wrapper handles it */
+  .nav-row :global(.tabs) {
+    margin-bottom: 0;
+  }
+</style>

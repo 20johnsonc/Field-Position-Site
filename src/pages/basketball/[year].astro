@@ -1,0 +1,218 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SportTabs from '../../components/SportTabs.astro';
+import BasketballRankingsTable from '../../components/BasketballRankingsTable.astro';
+import { listBasketballYears, loadBasketballYear } from '../../lib/basketball';
+
+export function getStaticPaths() {
+  return listBasketballYears().map(year => ({ params: { year: String(year) } }));
+}
+
+const { year } = Astro.params;
+const y = Number(year);
+const data = loadBasketballYear(y);
+if (!data) throw new Error(`Missing basketball data for ${year}`);
+
+const { rankings } = data;
+const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
+const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings';
+const years = listBasketballYears().reverse();
+const conferences = [...new Set(rankings.teams.map(t => t.conference).filter(Boolean))].sort();
+---
+<Layout title={`Basketball ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={rankings.generated_at}>
+  <div class="container">
+    
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
+      <SportTabs />
+      
+      <div class="tabs" style="margin-bottom: 0;">
+        <a href="/basketball/" class="tab-btn active" style="text-decoration: none;">Team Rankings</a>
+        <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
+        <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
+      </div>
+    </div>
+
+    <div class="controls">
+      <select id="yearFilter">
+        {years.map(yr => (
+          <option value={yr} selected={yr === y}>
+            {yr - 1}-{String(yr).slice(-2)}
+          </option>
+        ))}
+      </select>
+      
+      <select id="confFilter">
+        <option value="ALL">All Conferences</option>
+        {conferences.map(c => (
+          <option value={c}>{c}</option>
+        ))}
+      </select>
+
+      <input type="text" id="teamSearch" placeholder="Search teams..." style="margin-left: auto; width: 240px;">
+    </div>
+
+    <BasketballRankingsTable teams={rankings.teams} projected={rankings.projected} year={y} />
+    
+  </div>
+</Layout>
+
+<script>
+  const yearSelect = document.getElementById('yearFilter') as HTMLSelectElement;
+  const confSelect = document.getElementById('confFilter') as HTMLSelectElement;
+  const searchInput = document.getElementById('teamSearch') as HTMLInputElement;
+  const tableBody = document.getElementById('bballTableBody');
+
+  let fullTeamsData: any[] = [];
+  let currentSortKey = 'adj_net';
+  let currentSortDir = -1;
+
+  const slugifyTeam = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  async function getFullData() {
+    if (fullTeamsData.length > 0) return fullTeamsData;
+    const year = yearSelect?.value;
+    if (!year) return [];
+    const res = await fetch(`/data/basketball/${year}/rankings.json`);
+    const data = await res.json();
+    fullTeamsData = data.teams;
+    return fullTeamsData;
+  }
+
+  async function applyFilterAndSort() {
+    const selectedConf = confSelect?.value || 'ALL';
+    const searchQuery = searchInput?.value.toLowerCase().trim() || '';
+    const all = await getFullData();
+    const currentYear = yearSelect?.value;
+
+    // 1. Filter by Conference
+    let filtered = all.filter((t: any) => selectedConf === 'ALL' || (t.conference || 'None') === selectedConf);
+
+    // 2. Calculate Net Rating Rank FIRST (so it doesn't change when sorting by AdjOff)
+    const rankMap: Record<string, number> = {};
+    [...filtered]
+      .sort((a: any, b: any) => (b.adj_net || 0) - (a.adj_net || 0))
+      .forEach((t: any, index: number) => {
+        rankMap[t.team] = index + 1;
+      });
+
+    // 3. Add Synergy property to each team for sorting/rendering
+    filtered = filtered.map((t: any) => ({
+      ...t,
+      synergy: (t.adj_net || 0) - (t.direct_net || 0)
+    }));
+
+    // 4. Sort by the currently clicked column
+    filtered.sort((a: any, b: any) => {
+      let valA = a[currentSortKey];
+      let valB = b[currentSortKey];
+      
+      if (currentSortKey === 'wins') {
+        valA = (a.wins != null && (a.wins + a.losses) > 0) ? a.wins / (a.wins + a.losses) : -1;
+        valB = (b.wins != null && (b.wins + b.losses) > 0) ? b.wins / (b.wins + b.losses) : -1;
+      } else if (typeof valA === 'string' && typeof valB === 'string') {
+        return valA.localeCompare(valB) * currentSortDir;
+      }
+      
+      if (valA == null) valA = -999;
+      if (valB == null) valB = -999;
+      return (valA - valB) * currentSortDir;
+    });
+
+    // 5. Filter by Search
+    if (searchQuery) {
+      filtered = filtered.filter((t: any) => t.team.toLowerCase().includes(searchQuery));
+    }
+
+    // 6. Render
+    const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+    const isProjected = document.querySelector('.wl-col')?.getAttribute('style')?.includes('none');
+
+    if (tableBody) {
+      if (filtered.length === 0) {
+        tableBody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">No teams match your search.</td></tr>`;
+      } else {
+                tableBody.innerHTML = filtered.map((t: any) => {
+          const rapmRank = rankMap[t.team];
+          
+          return `
+          <tr class="bball-row" data-conf="${t.conference || 'None'}">
+            <td class="num">${rapmRank}</td>
+            <td><a href="/basketball/teams/${currentYear}/${slugifyTeam(t.team)}/" class="team-link"><strong>${t.team}</strong></a></td>
+            <td style="color: var(--text-muted)">${t.conference || '—'}</td>
+            
+            <td class="num wl-cell" style="${isProjected ? 'display: none;' : ''}">${t.wins != null ? `${t.wins}-${t.losses}` : '—'}</td>
+            
+            <td class="num">${fmt(t.adj_off)}</td>
+            <td class="num">${fmt(t.adj_def)}</td>
+            <td class="num rating">${fmt(t.adj_net)}</td>
+            
+            <!-- ADDED synergy-cell TOGGLE -->
+            <td class="num synergy-cell" style="${isProjected ? 'display: none;' : ''} color: ${t.synergy > 0 ? 'var(--accent-danger)' : (t.synergy < 0 ? 'var(--accent-success)' : 'var(--text-muted)')}">${t.synergy > 0 ? '+' : ''}${fmt(t.synergy)}</td>
+          </tr>
+        `}).join('');
+      }
+    }
+  }
+
+  searchInput?.addEventListener('input', applyFilterAndSort);
+  confSelect?.addEventListener('change', applyFilterAndSort);
+  
+  yearSelect?.addEventListener('change', async (e) => {
+    const year = (e.target as HTMLSelectElement).value;
+    const res = await fetch(`/data/basketball/${year}/rankings.json`);
+    const data = await res.json();
+    
+    fullTeamsData = data.teams;
+    if (searchInput) searchInput.value = '';
+    
+    const confs = [...new Set(data.teams.map((t: any) => t.conference).filter(Boolean))].sort() as string[];
+    if (confSelect) {
+      confSelect.innerHTML = '<option value="ALL">All Conferences</option>' + 
+        confs.map((c: string) => `<option value="${c}">${c}</option>`).join('');
+      if (!confs.includes(confSelect.value)) confSelect.value = 'ALL';
+    }
+    
+    document.querySelectorAll('.wl-col, .wl-cell').forEach(el => {
+      (el as HTMLElement).style.display = data.projected ? 'none' : '';
+    });
+    
+    document.querySelectorAll('.synergy-col, .synergy-cell').forEach(el => {
+      (el as HTMLElement).style.display = data.projected ? 'none' : '';
+    });
+
+    if (data.projected && currentSortKey === 'wins') {
+      currentSortKey = 'adj_net';
+      currentSortDir = -1;
+    }
+    
+    applyFilterAndSort();
+  });
+
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = (th as HTMLElement).dataset.sort;
+      if (!key) return;
+
+      if (currentSortKey === key) {
+        currentSortDir *= -1;
+      } else {
+        currentSortKey = key;
+        currentSortDir = (key === 'team' || key === 'conference') ? 1 : -1;
+      }
+
+      document.querySelectorAll('th.sortable').forEach(el => {
+        el.classList.remove('active');
+        const icon = el.querySelector('.sort-icon');
+        if (icon) icon.textContent = '⇕';
+      });
+      th.classList.add('active');
+      const activeIcon = th.querySelector('.sort-icon');
+      if (activeIcon) activeIcon.textContent = currentSortDir === 1 ? '▲' : '▼';
+
+      applyFilterAndSort();
+    });
+  });
+
+  // Initial render
+  applyFilterAndSort();
+</script>

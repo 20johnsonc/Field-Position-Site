@@ -9,5 +9,8 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ['.app.github.dev']
+    }
   },
 });

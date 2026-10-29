@@ -1,0 +1,182 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import SportTabs from '../../../../components/SportTabs.astro';
+import BasketballPlayersTable from '../../../../components/BasketballPlayersTable.astro';
+import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
+
+export function getStaticPaths() {
+  return listBasketballYears().map(year => ({ params: { year: String(year) } }));
+}
+
+const { year } = Astro.params;
+const y = Number(year);
+const data = loadBasketballYear(y);
+if (!data) throw new Error(`Missing basketball data for ${year}`);
+
+const { players } = data;
+const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
+const years = listBasketballYears().reverse();
+const conferences = [...new Set(players.players.map(p => p.conference).filter(Boolean))].sort();
+---
+<Layout title={`Basketball Players ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={players.generated_at}>
+  <div class="container">
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
+      <SportTabs />
+      <div class="tabs" style="margin-bottom: 0;">
+        <a href="/basketball/" class="tab-btn" style="text-decoration: none;">Team Rankings</a>
+        <a href="/basketball/players/" class="tab-btn active" style="text-decoration: none;">Player Leaderboard</a>
+        <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
+      </div>
+    </div>
+
+    <div class="controls">
+      <select id="yearFilter">
+        {years.map(yr => (
+          <option value={yr} selected={yr === y}>{yr - 1}-{String(yr).slice(-2)}</option>
+        ))}
+      </select>
+      <select id="confFilter">
+        <option value="ALL">All Conferences</option>
+        {conferences.map(c => <option value={c}>{c}</option>)}
+      </select>
+      <input type="text" id="playerSearch" placeholder="Search players or teams..." style="margin-left: auto; width: 260px;">
+    </div>
+
+    <BasketballPlayersTable players={players.players} projected={players.projected} year={y} />
+  </div>
+</Layout>
+
+<script>
+  const yearSelect = document.getElementById('yearFilter') as HTMLSelectElement;
+  const confSelect = document.getElementById('confFilter') as HTMLSelectElement;
+  const searchInput = document.getElementById('playerSearch') as HTMLInputElement;
+  const tableBody = document.getElementById('bballPlayersBody');
+  const limitNotice = document.getElementById('bballPlayersLimitNotice');
+
+  let fullPlayersData: any[] = [];
+  let currentSortKey = 'net_rating';
+  let currentSortDir = -1;
+  const LIMIT = 100;
+
+  const slugifyTeam = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  async function getFullData() {
+    if (fullPlayersData.length > 0) return fullPlayersData;
+    const year = yearSelect?.value;
+    if (!year) return [];
+    const res = await fetch(`/data/basketball/${year}/players.json`);
+    const data = await res.json();
+    fullPlayersData = data.players;
+    return fullPlayersData;
+  }
+
+  async function applyFilterAndSort() {
+    const selectedConf = confSelect?.value || 'ALL';
+    const searchQuery = searchInput?.value.toLowerCase().trim() || '';
+    const all = await getFullData();
+    const currentYear = yearSelect?.value;
+
+    let filtered = all.filter((p: any) => selectedConf === 'ALL' || (p.conference || 'None') === selectedConf);
+
+    const rankMap: Record<string, number> = {};
+    [...filtered]
+      .sort((a: any, b: any) => b.net_rating - a.net_rating)
+      .forEach((p: any, index: number) => {
+        rankMap[p.player_id || p.id] = index + 1;
+      });
+
+    if (searchQuery) {
+      filtered = filtered.filter((p: any) => p.name.toLowerCase().includes(searchQuery) || p.team.toLowerCase().includes(searchQuery));
+    }
+
+    filtered.sort((a: any, b: any) => {
+      let valA = a[currentSortKey];
+      let valB = b[currentSortKey];
+      if (typeof valA === 'string' && typeof valB === 'string') return valA.localeCompare(valB) * currentSortDir;
+      if (valA == null) valA = -999;
+      if (valB == null) valB = -999;
+      return (valA - valB) * currentSortDir;
+    });
+
+    const shown = filtered.slice(0, LIMIT);
+    const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+
+    const badge = (rank: any) => {
+      if (!rank || rank > 50) return '';
+      let color = '#b45309'; let bg = 'rgba(180, 83, 9, 0.15)';
+      if (rank <= 10) { color = '#d97706'; bg = 'rgba(217, 119, 6, 0.15)'; }
+      else if (rank <= 25) { color = '#64748b'; bg = 'rgba(100, 116, 139, 0.15)'; }
+      return `<span style="font-size: 0.65rem; padding: 2px 4px; border-radius: 4px; margin-left: 4px; font-weight: 800; color: ${color}; background: ${bg}; vertical-align: middle;">#${rank}</span>`;
+    };
+
+    if (tableBody) {
+      if (shown.length === 0) {
+        tableBody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 24px; color: var(--text-muted);">No players match your search.</td></tr>`;
+      } else {
+        tableBody.innerHTML = shown.map((p: any) => {
+          const pId = p.player_id || p.id;
+          const rapmRank = rankMap[pId];
+
+          return `
+          <tr class="bball-player-row">
+            <td class="num">${rapmRank}</td>
+            <td><a href="/basketball/players/${currentYear}/${pId}/" class="team-link"><strong>${p.name}</strong></a></td>
+            <td><a href="/basketball/teams/${currentYear}/${slugifyTeam(p.team)}/" class="team-link">${p.team}</a></td>
+            
+            <td class="num">${fmt(p.offensive_rating)}</td>
+            <td class="num">${fmt(p.defensive_rating)}</td>
+            
+            <td class="num rating">${fmt(p.net_rating)}</td>
+            
+            <td class="num">${fmt(p.pts_pg)}${badge(p.pts_pg_rank)}</td>
+            <td class="num">${fmt(p.reb_pg)}${badge(p.reb_pg_rank)}</td>
+            <td class="num">${fmt(p.ast_pg)}${badge(p.ast_pg_rank)}</td>
+            
+            <td style="color: var(--text-muted)">${p.position || '—'}</td>
+          </tr>
+        `}).join('');
+      }
+    }
+
+    if (limitNotice) {
+      limitNotice.innerHTML = filtered.length > LIMIT ? `Showing top ${LIMIT} of ${filtered.length} matching players.` : `Showing all ${filtered.length} matching players.`;
+    }
+  }
+
+  searchInput?.addEventListener('input', applyFilterAndSort);
+  confSelect?.addEventListener('change', applyFilterAndSort);
+  yearSelect?.addEventListener('change', async (e) => {
+    const year = (e.target as HTMLSelectElement).value;
+    const res = await fetch(`/data/basketball/${year}/players.json`);
+    const data = await res.json();
+    fullPlayersData = data.players;
+    if (searchInput) searchInput.value = '';
+    const confs = [...new Set(data.players.map((p: any) => p.conference).filter(Boolean))].sort() as string[];
+    if (confSelect) {
+      confSelect.innerHTML = '<option value="ALL">All Conferences</option>' + confs.map((c: string) => `<option value="${c}">${c}</option>`).join('');
+      if (!confs.includes(confSelect.value)) confSelect.value = 'ALL';
+    }
+    applyFilterAndSort();
+  });
+
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = (th as HTMLElement).dataset.sort;
+      if (!key) return;
+      if (currentSortKey === key) currentSortDir *= -1;
+      else { currentSortKey = key; currentSortDir = (key === 'name' || key === 'team' || key === 'conference' || key === 'position') ? 1 : -1; }
+      
+      document.querySelectorAll('th.sortable').forEach(el => {
+        el.classList.remove('active');
+        const icon = el.querySelector('.sort-icon');
+        if (icon) icon.textContent = '⇕';
+      });
+      th.classList.add('active');
+      const activeIcon = th.querySelector('.sort-icon');
+      if (activeIcon) activeIcon.textContent = currentSortDir === 1 ? '▲' : '▼';
+      applyFilterAndSort();
+    });
+  });
+
+  applyFilterAndSort();
+</script>
