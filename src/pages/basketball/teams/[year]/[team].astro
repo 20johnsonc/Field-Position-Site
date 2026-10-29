@@ -1,8 +1,6 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
 
 export const prerender = false; // SSR Mode
@@ -36,14 +34,16 @@ const roster = players.players
   .filter((p: any) => p.team === actualTeamName)
   .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
 
-// Load the schedule safely
+// Load the schedule at request time (Cloudflare Workers have no fs)
 let schedule = [];
 try {
-  const schedPath = join(process.cwd(), 'public', 'data', 'basketball', String(y), 'schedule.json');
-  const allSchedules = JSON.parse(readFileSync(schedPath, 'utf-8'));
-  schedule = allSchedules[actualTeamName] || [];
+  const res = await fetch(new URL(`/data/basketball/${y}/schedule.json`, Astro.url));
+  if (res.ok) {
+    const allSchedules = await res.json();
+    schedule = allSchedules[actualTeamName] || [];
+  }
 } catch (e) {
-  // Ignore if no schedule exists (e.g., 2027 projection or SSR path issue)
+  // Ignore if no schedule exists (e.g., 2027 projection)
 }
 
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
