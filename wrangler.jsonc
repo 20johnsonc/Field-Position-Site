@@ -1,9 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "field-position-site",
-  "pages_build_output_dir": "./dist", // Tells Cloudflare exactly where Astro built your app
+  "main": "./dist/_worker.js", // 👈 This tells Wrangler where the Astro SSR script is
   "compatibility_date": "2026-10-29",
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "assets": {
+    "directory": "./dist" // 👈 This tells Wrangler where static images/CSS live
+  }
 }
