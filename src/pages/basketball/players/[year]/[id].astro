@@ -4,37 +4,9 @@ import SportTabs from '../../../../components/SportTabs.astro';
 import PlayerDashboard from '../../../../components/PlayerDashboard';
 import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
 
-export function getStaticPaths() {
-  const paths = [];
-  const allYears = listBasketballYears();
-  const playerYearsMap: Record<string, number[]> = {};
-
-  for (const year of allYears) {
-    const data = loadBasketballYear(year);
-    if (!data) continue;
-    for (const p of data.players.players) {
-      const pid = String(p.player_id || p.id);
-      if (!playerYearsMap[pid]) playerYearsMap[pid] = [];
-      playerYearsMap[pid].push(year);
-    }
-  }
-
-  for (const year of allYears) {
-    const data = loadBasketballYear(year);
-    if (!data) continue;
-    for (const p of data.players.players) {
-      const pid = String(p.player_id || p.id);
-      paths.push({
-        params: { year: String(year), id: pid },
-        props: { validYears: playerYearsMap[pid].sort((a, b) => b - a) }
-      });
-    }
-  }
-  return paths;
-}
+export const prerender = false; // Tell Astro to render this on-demand
 
 const { year, id } = Astro.params;
-const { validYears } = Astro.props;
 const y = Number(year);
 
 const data = loadBasketballYear(y);
@@ -44,6 +16,16 @@ const { players } = data;
 const player = players.players.find((p: any) => String(p.player_id || p.id) === id);
 
 if (!player) return Astro.redirect('/basketball/players/');
+
+// Calculate valid years on the fly for SSR
+const validYears = [];
+for (const yr of listBasketballYears()) {
+  const yrData = loadBasketballYear(yr);
+  if (yrData && yrData.players.players.some((p: any) => String(p.player_id || p.id) === id)) {
+    validYears.push(yr);
+  }
+}
+validYears.sort((a, b) => b - a);
 
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
@@ -114,10 +96,8 @@ const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
       </div>
     </div>
 
-    <!-- NEW DASHBOARD COMPONENT -->
     <PlayerDashboard player={player} year={y} client:visible />
 
-    <!-- Game Log -->
     <div id="gameLogContainer" style="display: none; margin-top: 32px;">
       <h2 class="section-title">Game Log</h2>
       <div class="table-container">

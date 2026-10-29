@@ -1,96 +1,57 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
-import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
 
-export function getStaticPaths() {
-  const paths = [];
-  const allYears = listBasketballYears();
-  const teamYearsMap: Record<string, number[]> = {};
-
-  // 1. Find every year each team existed
-  for (const year of allYears) {
-    const data = loadBasketballYear(year);
-    if (!data) continue;
-    for (const team of data.rankings.teams) {
-      const slug = team.team.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      if (!teamYearsMap[slug]) teamYearsMap[slug] = [];
-      teamYearsMap[slug].push(year);
-    }
-  }
-
-  // 2. Generate paths, attaching only the valid years for that specific team
-  for (const year of allYears) {
-    const data = loadBasketballYear(year);
-    if (!data) continue;
-    for (const team of data.rankings.teams) {
-      const slug = team.team.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      paths.push({
-        params: { year: String(year), team: slug },
-        props: { 
-          actualTeamName: team.team,
-          validYears: teamYearsMap[slug].sort((a, b) => b - a) // descending (latest first)
-        }
-      });
-    }
-  }
-  return paths;
-}
+export const prerender = false; // SSR Mode
 
 const { year, team } = Astro.params;
-const { actualTeamName, validYears } = Astro.props;
 const y = Number(year);
 
 const data = loadBasketballYear(y);
 if (!data) throw new Error(`Missing data for ${year}`);
 
-// Load the schedule
+const { rankings, players } = data;
+const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+// Look up the team by slug
+const teamStats = rankings.teams.find((t: any) => slugify(t.team) === team);
+if (!teamStats) return Astro.redirect('/basketball/');
+
+const actualTeamName = teamStats.team;
+
+// Calculate validYears on the fly for the dropdown
+const validYears = [];
+for (const yr of listBasketballYears()) {
+  const yrData = loadBasketballYear(yr);
+  if (yrData && yrData.rankings.teams.some((t: any) => slugify(t.team) === team)) {
+    validYears.push(yr);
+  }
+}
+validYears.sort((a, b) => b - a);
+
+const roster = players.players
+  .filter((p: any) => p.team === actualTeamName)
+  .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
+
+// Load the schedule safely
 let schedule = [];
 try {
   const schedPath = join(process.cwd(), 'public', 'data', 'basketball', String(y), 'schedule.json');
   const allSchedules = JSON.parse(readFileSync(schedPath, 'utf-8'));
   schedule = allSchedules[actualTeamName] || [];
 } catch (e) {
-  // Ignore if no schedule exists (e.g., 2027 projection)
+  // Ignore if no schedule exists (e.g., 2027 projection or SSR path issue)
 }
-
-const { rankings, players } = data;
-const teamStats = rankings.teams.find((t: any) => t.team === actualTeamName);
-const roster = players.players
-  .filter((p: any) => p.team === actualTeamName)
-  .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
 
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings';
-
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-const teamPlayTypes = roster.reduce((acc: any, p: any) => {
-  if (p.play_types) {
-    for (const [type, data] of Object.entries(p.play_types)) {
-      const d = data as any;
-      if (!acc[type]) acc[type] = { freq: 0, pts: 0 };
-      acc[type].freq += d.freq_pg || 0; // Using per-game average
-      acc[type].pts += (d.ppp || 0) * (d.freq_pg || 0);
-    }
-  }
-  return acc;
-}, {});
-
-const sortedPlayTypes = Object.entries(teamPlayTypes)
-  .map(([type, data]: [string, any]) => ({
-    type,
-    freq: data.freq,
-    ppp: data.freq > 0 ? data.pts / data.freq : 0
-  }))
-  .sort((a, b) => b.freq - a.freq)
-  .slice(0, 5); // Top 5 play types
-
+// Synergy calculations
 const synergyGap = (teamStats?.adj_net || 0) - (teamStats?.direct_net || 0);
-
 let synergyLabel = "Expected Performance";
 let synergyColor = "var(--text)";
 let synergyDesc = "The team's individual talent matches their actual box score performance.";
@@ -104,24 +65,42 @@ if (synergyGap > 3.0) {
     synergyColor = "var(--accent-success)";
     synergyDesc = "Team results are better than individual talent suggests. They may be winning close games or have a highly optimized system.";
 }
+
+// Play types
+const teamPlayTypes = roster.reduce((acc: any, p: any) => {
+  if (p.play_types) {
+    for (const [type, data] of Object.entries(p.play_types)) {
+      const d = data as any;
+      if (!acc[type]) acc[type] = { freq: 0, pts: 0 };
+      acc[type].freq += d.freq_pg || 0;
+      acc[type].pts += (d.ppp || 0) * (d.freq_pg || 0);
+    }
+  }
+  return acc;
+}, {});
+
+const sortedPlayTypes = Object.entries(teamPlayTypes)
+  .map(([type, data]: [string, any]) => ({
+    type, freq: data.freq, ppp: data.freq > 0 ? data.pts / data.freq : 0
+  }))
+  .sort((a, b) => b.freq - a.freq)
+  .slice(0, 6);
 ---
 
-<Layout seasonLabel={seasonLabel}>
+<Layout title={`${actualTeamName} ${seasonLabel}`} seasonLabel={seasonLabel}>
   <div class="container">
     
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
-      
       <div class="tabs" style="margin-bottom: 0;">
         <a href="/basketball/" class="tab-btn" style="text-decoration: none;">Team Rankings</a>
         <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
         <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
       </div>
 
-      <!-- Only show the dropdown if the team played in more than one year -->
       {validYears.length > 1 && (
         <div class="controls" style="margin-bottom: 0; margin-left: auto; padding: 0; background: transparent; border: none; box-shadow: none;">
-          <select id="teamYearSelect" data-slug={slugify(actualTeamName)} aria-label="Switch Year">
+          <select id="teamYearSelect" data-slug={team} aria-label="Switch Year">
             {validYears.map(yr => (
               <option value={yr} selected={yr === y}>
                 {yr - 1}-{String(yr).slice(-2)} Season
@@ -141,7 +120,7 @@ if (synergyGap > 3.0) {
           </p>
         </div>
         
-                <div style="display: flex; gap: 24px; text-align: right;">
+        <div style="display: flex; gap: 24px; text-align: right;">
           <div>
             <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Record</div>
             <div style="font-size: 2rem; font-weight: 900; color: var(--text);">
@@ -171,51 +150,55 @@ if (synergyGap > 3.0) {
       </div>
     </div>
 
-    <!-- Model Synergy Card -->
     {teamStats?.adj_net != null && teamStats?.direct_net != null && teamStats.direct_net !== 0 && (
       <div class="card" style="margin-bottom: 24px; padding: 24px;">
-        
-        <!-- Dynamic Title -->
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
           <h2 class="section-title" style="margin: 0;">Model Synergy</h2>
           <div style={`background: var(--surface-2); border: 1px solid ${synergyColor}; color: ${synergyColor}; padding: 6px 12px; border-radius: 20px; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;`}>
             {synergyLabel}
           </div>
         </div>
-
         <div class="analytics-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-          
           <div class="stat-box">
-            <span class="stat-label" title="Bottom-up rating calculated from individual player RAPM.">Player RAPM Net</span>
-            <span class="stat-comparison">
-              <strong>{fmt(teamStats.adj_net)}</strong>
-            </span>
+            <span class="stat-label">Player RAPM Net</span>
+            <span class="stat-comparison"><strong>{fmt(teamStats.adj_net)}</strong></span>
           </div>
-          
           <div class="stat-box">
-            <span class="stat-label" title="Traditional rating calculated purely from team box scores.">Direct Box Net</span>
-            <span class="stat-comparison">
-              <strong>{fmt(teamStats.direct_net)}</strong>
-            </span>
+            <span class="stat-label">Direct Box Net</span>
+            <span class="stat-comparison"><strong>{fmt(teamStats.direct_net)}</strong></span>
           </div>
-          
           <div class="stat-box" style={`border-color: ${synergyColor};`}>
-            <span class="stat-label" title="The difference between the two.">Synergy Gap</span>
+            <span class="stat-label">Synergy Gap</span>
             <span class="stat-comparison">
               <strong style={`color: ${synergyColor};`}>
                 {synergyGap > 0 ? '+' : ''}{fmt(synergyGap)}
               </strong>
             </span>
           </div>
-          
         </div>
-        
-        <!-- Dynamic Description -->
         <div style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted); text-align: center; border-top: 1px solid var(--card-border); padding-top: 16px;">
           {synergyDesc}
         </div>
       </div>
     )}
+
+    <h2 class="section-title">Roster & Player Ratings</h2>
+    <div class="table-container">
+      <table class="rank-table" id="rosterTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="name">Player <span class="sort-icon">⇕</span></th>
+            <th class="sortable" data-sort="position">Pos <span class="sort-icon">⇕</span></th>
+            <th class="sortable num" data-sort="offensive_rating">Off RAPM <span class="sort-icon">⇕</span></th>
+            <th class="sortable num" data-sort="defensive_rating">Def RAPM <span class="sort-icon">⇕</span></th>
+            <th class="sortable num active" data-sort="net_rating">Net <span class="sort-icon">▼</span></th>
+            <th class="sortable num" data-sort="minutes_share">{rankings.projected ? 'Proj. MPG ' : 'MPG '} <span class="sort-icon">⇕</span></th>
+            <th class="sortable" data-sort="status">Status <span class="sort-icon">⇕</span></th>
+          </tr>
+        </thead>
+        <tbody id="rosterBody"></tbody>
+      </table>
+    </div>
 
     {sortedPlayTypes.length > 0 && (
       <div style="margin-top: 32px;">
@@ -243,25 +226,6 @@ if (synergyGap > 3.0) {
       </div>
     )}
 
-    <h2 class="section-title">Roster & Player Ratings</h2>
-    <div class="table-container">
-      <table class="rank-table" id="rosterTable">
-        <thead>
-          <tr>
-            <th class="sortable" data-sort="name">Player <span class="sort-icon">⇕</span></th>
-            <th class="sortable" data-sort="position">Pos <span class="sort-icon">⇕</span></th>
-            <th class="sortable num" data-sort="offensive_rating">Off RAPM <span class="sort-icon">⇕</span></th>
-            <th class="sortable num" data-sort="defensive_rating">Def RAPM <span class="sort-icon">⇕</span></th>
-            <th class="sortable num active" data-sort="net_rating">Net <span class="sort-icon">▼</span></th>
-            <th class="sortable num" data-sort="minutes_share">{rankings.projected ? 'Proj. MPG ' : 'MPG '} <span class="sort-icon">⇕</span></th>
-            <th class="sortable" data-sort="status">Status <span class="sort-icon">⇕</span></th>
-          </tr>
-        </thead>
-        <tbody id="rosterBody"></tbody>
-      </table>
-    </div>
-
-    <!-- Schedule & Results -->
     {schedule.length > 0 && (
       <div style="margin-top: 32px;">
         <h2 class="section-title">Schedule & Results</h2>
@@ -312,7 +276,6 @@ if (synergyGap > 3.0) {
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Handle Year Dropdown navigation
     const yearSelect = document.getElementById('teamYearSelect') as HTMLSelectElement;
     if (yearSelect) {
       yearSelect.addEventListener('change', (e) => {
@@ -322,7 +285,6 @@ if (synergyGap > 3.0) {
       });
     }
 
-    // 2. Handle Table Sorting
     const dataEl = document.getElementById('roster-data');
     const tableBody = document.getElementById('rosterBody');
     if (!dataEl || !tableBody) return;
@@ -330,7 +292,7 @@ if (synergyGap > 3.0) {
     const currentYear = dataEl.dataset.year;
     const rosterData = JSON.parse(dataEl.textContent || '[]');
     let currentSortKey = 'net_rating';
-    let currentSortDir = -1; 
+    let currentSortDir = -1;
 
     const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
     const getMpg = (p: any) => {
@@ -342,19 +304,15 @@ if (synergyGap > 3.0) {
       const sorted = [...rosterData].sort((a, b) => {
         let valA = a[currentSortKey];
         let valB = b[currentSortKey];
-
         if (currentSortKey === 'minutes_share') {
           valA = a.min_pg || (a.minutes_share * 40);
           valB = b.min_pg || (b.minutes_share * 40);
         }
-
         if (typeof valA === 'string' && typeof valB === 'string') {
           return valA.localeCompare(valB) * currentSortDir;
         }
-
         if (valA == null) valA = -999;
         if (valB == null) valB = -999;
-
         return (valA - valB) * currentSortDir;
       });
 
@@ -383,24 +341,17 @@ if (synergyGap > 3.0) {
       th.addEventListener('click', () => {
         const key = (th as HTMLElement).dataset.sort;
         if (!key) return;
-
-        if (currentSortKey === key) {
-          currentSortDir *= -1;
-        } else {
-          currentSortKey = key;
-          currentSortDir = (key === 'name' || key === 'position' || key === 'status') ? 1 : -1;
-        }
-
+        if (currentSortKey === key) currentSortDir *= -1;
+        else { currentSortKey = key; currentSortDir = (key === 'name' || key === 'position' || key === 'status') ? 1 : -1; }
+        
         document.querySelectorAll('#rosterTable th.sortable').forEach(el => {
           el.classList.remove('active');
           const icon = el.querySelector('.sort-icon');
           if (icon) icon.textContent = '⇕';
         });
-        
         th.classList.add('active');
         const activeIcon = th.querySelector('.sort-icon');
         if (activeIcon) activeIcon.textContent = currentSortDir === 1 ? '▲' : '▼';
-
         renderTable();
       });
     });
