@@ -11,11 +11,12 @@ interface Shot {
 interface Props {
   year: number;
   playerId: string;
+  teamName: string; // <-- ADD THIS
   externalGameFilter: string;
   onGameFilterChange: (val: string) => void;
 }
 
-export default function ShotChart({ year, playerId, externalGameFilter, onGameFilterChange }: Props) {
+export default function ShotChart({ year, playerId, teamName, externalGameFilter, onGameFilterChange }: Props) {
   const [resultFilter, setResultFilter] = useState<'all' | 'makes' | 'misses'>('all');
   const [zoneFilter, setZoneFilter] = useState<string>('all');
   const [hoveredShot, setHoveredShot] = useState<Shot | null>(null);
@@ -24,30 +25,30 @@ export default function ShotChart({ year, playerId, externalGameFilter, onGameFi
   const [gameOptions, setGameOptions] = useState<{ id: string, label: string }[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const teamSlug = teamName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
   useEffect(() => {
     async function fetchData() {
       try {
-        // 1. Fetch Game Logs for opponent names
-        const logsRes = await fetch(`/data/basketball/${year}/game_logs.json`);
+        // 1. Fetch Game Logs (For the team)
+        const logsRes = await fetch(`/data/basketball/${year}/game_logs/${teamSlug}.json`);
         if (logsRes.ok) {
-          const logsData = await logsRes.json();
-          const logs = logsData[playerId] || [];
+          const teamLogs = await logsRes.json();
+          const logs = teamLogs[playerId] || [];
+          
           const opts = logs.map((g: any) => {
             const date = new Date(g.start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
             const prefix = g.is_home ? 'vs' : '@';
-            return {
-              id: String(g.game_id),
-              label: `${date} - ${prefix} ${g.opponent || 'Unknown'}`
-            };
+            return { id: String(g.game_id), label: `${date} - ${prefix} ${g.opponent}` };
           });
           setGameOptions(opts);
         }
 
-        // 2. Fetch Shots from the separate file
-        const shotsRes = await fetch(`/data/basketball/${year}/shots.json`);
+        // 2. Fetch Shots (For the team)
+        const shotsRes = await fetch(`/data/basketball/${year}/shots/${teamSlug}.json`);
         if (shotsRes.ok) {
-          const shotsData = await shotsRes.json();
-          setShots(shotsData[playerId] || []);
+          const teamShots = await shotsRes.json();
+          setShots(teamShots[playerId] || []);
         }
       } catch (e) {
         console.error("Failed to load shot chart data", e);
@@ -55,8 +56,8 @@ export default function ShotChart({ year, playerId, externalGameFilter, onGameFi
         setLoading(false);
       }
     }
-    if (playerId && year) fetchData();
-  }, [playerId, year]);
+    if (playerId && year && teamSlug) fetchData();
+  }, [playerId, year, teamSlug]);
 
   const SVG_W = 500;
   const SVG_H = 470;
