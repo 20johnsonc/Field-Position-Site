@@ -4,10 +4,6 @@ import SportTabs from '../../components/SportTabs.astro';
 import BasketballRankingsTable from '../../components/BasketballRankingsTable.astro';
 import { listBasketballYears, loadBasketballYear } from '../../lib/basketball';
 
-export function getStaticPaths() {
-  return listBasketballYears().map(year => ({ params: { year: String(year) } }));
-}
-
 const { year } = Astro.params;
 const y = Number(year);
 const data = loadBasketballYear(y);
