@@ -1,6 +1,3 @@
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
-
 export interface BasketballTeam {
   rank: number; team: string; conference: string | null;
   wins: number | null; losses: number | null;
@@ -20,21 +17,28 @@ export interface PlayersDoc {
   generated_at: string; year: number; projected: boolean; players: BasketballPlayer[];
 }
 
-export function listBasketballYears(): number[] {
-  try {
-    return readdirSync(join(process.cwd(), 'public', 'data', 'basketball'), { withFileTypes: true })
-      .filter(d => d.isDirectory() && /^\d+$/.test(d.name))
-      .map(d => Number(d.name))
-      .sort((a, b) => a - b);
-  } catch { return []; }
-}
+// Vite bundles these JSON files at build time (eager: true = synchronous)
+const yearData = import.meta.glob('../data/basketball/*/*.json', { eager: true });
 
 export function loadBasketballYear(year: number): { rankings: RankingsDoc; players: PlayersDoc } | null {
   try {
-    const base = join(process.cwd(), 'public', 'data', 'basketball', String(year));
-    return {
-      rankings: JSON.parse(readFileSync(join(base, 'rankings.json'), 'utf-8')),
-      players:  JSON.parse(readFileSync(join(base, 'players.json'),  'utf-8')),
-    };
-  } catch { return null; }
+    const base = `../data/basketball/${year}`;
+    const rankings = (yearData[`${base}/rankings.json`] as any)?.default;
+    const players = (yearData[`${base}/players.json`] as any)?.default;
+    
+    if (!rankings || !players) return null;
+    return { rankings, players };
+  } catch (e) {
+    console.error(`Failed to load year ${year}`, e);
+    return null;
+  }
+}
+
+export function listBasketballYears(): number[] {
+  const years = new Set<number>();
+  for (const key in yearData) {
+    const match = key.match(/basketball\/(\d{4})\//);
+    if (match) years.add(Number(match[1]));
+  }
+  return Array.from(years).sort((a, b) => a - b);
 }
