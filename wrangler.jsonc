@@ -1,13 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "field-position-site",
-  "main": "@astrojs/cloudflare/entrypoints/server",
+  "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-10-29",
   "compatibility_flags": [
     "nodejs_compat"
-  ],
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS"
-  }
+  ]
 }
