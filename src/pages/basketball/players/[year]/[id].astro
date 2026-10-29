@@ -9,7 +9,7 @@ export const prerender = false; // Tell Astro to render this on-demand
 const { year, id } = Astro.params;
 const y = Number(year);
 
-const data = loadBasketballYear(y);
+const data = await loadBasketballYear(y, Astro.url);
 if (!data) throw new Error(`Missing data for ${year}`);
 
 const { players } = data;
@@ -19,8 +19,9 @@ if (!player) return Astro.redirect('/basketball/players/');
 
 // Calculate valid years on the fly for SSR
 const validYears = [];
-for (const yr of listBasketballYears()) {
-  const yrData = loadBasketballYear(yr);
+const allYears = await listBasketballYears(Astro.url);
+for (const yr of allYears) {
+  const yrData = await loadBasketballYear(yr, Astro.url);
   if (yrData && yrData.players.players.some((p: any) => String(p.player_id || p.id) === id)) {
     validYears.push(yr);
   }

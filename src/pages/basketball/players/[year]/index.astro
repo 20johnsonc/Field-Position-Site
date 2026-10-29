@@ -6,12 +6,12 @@ import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketb
 
 const { year } = Astro.params;
 const y = Number(year);
-const data = loadBasketballYear(y);
+const data = await loadBasketballYear(y, Astro.url);
 if (!data) throw new Error(`Missing basketball data for ${year}`);
 
 const { players } = data;
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
-const years = listBasketballYears().reverse();
+const years = (await listBasketballYears(Astro.url)).reverse();
 const conferences = [...new Set(players.players.map(p => p.conference).filter(Boolean))].sort();
 ---
 <Layout title={`Basketball Players ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={players.generated_at}>

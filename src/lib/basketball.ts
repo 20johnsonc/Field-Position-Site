@@ -17,28 +17,32 @@ export interface PlayersDoc {
   generated_at: string; year: number; projected: boolean; players: BasketballPlayer[];
 }
 
-// Vite bundles these JSON files at build time (eager: true = synchronous)
-const yearData = import.meta.glob('../data/basketball/*/*.json', { eager: true });
-
-export function loadBasketballYear(year: number): { rankings: RankingsDoc; players: PlayersDoc } | null {
+// Fetch a JSON asset from /public. Returns null on any failure so callers
+// can fall back gracefully (Workers has no fs; everything is HTTP).
+async function fetchJson(base: URL | string, path: string): Promise<any | null> {
   try {
-    const base = `../data/basketball/${year}`;
-    const rankings = (yearData[`${base}/rankings.json`] as any)?.default;
-    const players = (yearData[`${base}/players.json`] as any)?.default;
-    
-    if (!rankings || !players) return null;
-    return { rankings, players };
-  } catch (e) {
-    console.error(`Failed to load year ${year}`, e);
+    const res = await fetch(new URL(path, base));
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
     return null;
   }
 }
 
-export function listBasketballYears(): number[] {
-  const years = new Set<number>();
-  for (const key in yearData) {
-    const match = key.match(/basketball\/(\d{4})\//);
-    if (match) years.add(Number(match[1]));
-  }
-  return Array.from(years).sort((a, b) => a - b);
+export async function loadBasketballYear(
+  year: number,
+  base: URL | string
+): Promise<{ rankings: RankingsDoc; players: PlayersDoc } | null> {
+  const [rankings, players] = await Promise.all([
+    fetchJson(base, `/data/basketball/${year}/rankings.json`),
+    fetchJson(base, `/data/basketball/${year}/players.json`),
+  ]);
+  if (!rankings || !players) return null;
+  return { rankings, players };
+}
+
+export async function listBasketballYears(base: URL | string): Promise<number[]> {
+  const idx = await fetchJson(base, '/data/basketball/index.json');
+  if (!idx || !Array.isArray(idx.years)) return [];
+  return [...idx.years].sort((a, b) => a - b);
 }

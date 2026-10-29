@@ -6,13 +6,13 @@ import { listBasketballYears, loadBasketballYear } from '../../lib/basketball';
 
 const { year } = Astro.params;
 const y = Number(year);
-const data = loadBasketballYear(y);
+const data = await loadBasketballYear(y, Astro.url);
 if (!data) throw new Error(`Missing basketball data for ${year}`);
 
 const { rankings } = data;
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings';
-const years = listBasketballYears().reverse();
+const years = (await listBasketballYears(Astro.url)).reverse();
 const conferences = [...new Set(rankings.teams.map(t => t.conference).filter(Boolean))].sort();
 ---
 <Layout title={`Basketball ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={rankings.generated_at}>
