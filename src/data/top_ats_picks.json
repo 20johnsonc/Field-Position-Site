@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-29T18:15:17.466910+00:00",
+  "generated_at": "2026-10-31T16:52:31.585612+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5056,
+  "backtest_cover_rate": 0.5037,
   "picks_by_week": {
     "9": [
       {
@@ -47,32 +47,32 @@
         "kelly_fraction": 0.45
       },
       {
-        "game_id": 401866451,
+        "game_id": 401856846,
         "week": 9,
-        "home_team": "Sacramento State",
-        "away_team": "Kent State",
-        "market_spread": 7.5,
-        "predicted_margin": -1.62,
-        "pick": "Sacramento State",
-        "pick_side": "home",
-        "edge_pts": 9.1,
-        "cover_prob": 0.7168,
-        "prob_edge": 0.2168,
-        "kelly_fraction": 0.4053
+        "home_team": "Colorado",
+        "away_team": "Kansas State",
+        "market_spread": -3.0,
+        "predicted_margin": 5.36,
+        "pick": "Kansas State",
+        "pick_side": "away",
+        "edge_pts": 8.4,
+        "cover_prob": 0.7004,
+        "prob_edge": 0.2004,
+        "kelly_fraction": 0.3709
       },
       {
-        "game_id": 401862813,
+        "game_id": 401862814,
         "week": 9,
-        "home_team": "Charlotte",
-        "away_team": "Tulane",
-        "market_spread": 8.5,
-        "predicted_margin": 17.02,
-        "pick": "Tulane",
-        "pick_side": "away",
-        "edge_pts": 8.5,
-        "cover_prob": 0.7039,
-        "prob_edge": 0.2039,
-        "kelly_fraction": 0.3782
+        "home_team": "Memphis",
+        "away_team": "Army",
+        "market_spread": -6.0,
+        "predicted_margin": -14.35,
+        "pick": "Memphis",
+        "pick_side": "home",
+        "edge_pts": 8.3,
+        "cover_prob": 0.7002,
+        "prob_edge": 0.2002,
+        "kelly_fraction": 0.3704
       }
     ],
     "10": [
