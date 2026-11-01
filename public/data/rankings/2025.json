@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T16:50:31.855785+00:00",
+  "generated_at": "2026-11-01T14:33:01.854391+00:00",
   "year": 2025,
   "rankings": [
     {
@@ -31,7 +31,7 @@
       "Net Rating": 28.4,
       "Year": 2025,
       "tags": [
-        "Explosive Offense",
+        "High-Powered Air Assault",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -52,7 +52,7 @@
       "Net Rating": 28.0,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Explosive Offense (Ball-Secure)",
+        "Controlled Pace High-Powered Air Assault (Ball-Secure)",
         "Elite Disruptive Defense",
         "Overachieving Championship Contender"
       ],
@@ -73,7 +73,7 @@
       "Net Rating": 25.2,
       "Year": 2025,
       "tags": [
-        "Bully-Ball Ground Attack (Ball-Secure)",
+        "High-Powered Air Assault (Ball-Secure)",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -94,7 +94,7 @@
       "Net Rating": 23.4,
       "Year": 2025,
       "tags": [
-        "Uptempo High-Powered Ground Attack",
+        "Uptempo High-Powered Offense",
         "Elite Disruptive Defense",
         "Championship Contender"
       ],
@@ -199,7 +199,7 @@
       "Net Rating": 18.9,
       "Year": 2025,
       "tags": [
-        "Explosive Offense",
+        "Bully-Ball Ground Attack",
         "Elite Defense",
         "Championship Contender"
       ],
@@ -304,7 +304,7 @@
       "Net Rating": 15.5,
       "Year": 2025,
       "tags": [
-        "High-Powered Air Assault",
+        "Run-Heavy Offense",
         "Stout & Disruptive Defense",
         "Blue-Blood Talent"
       ],
@@ -325,7 +325,7 @@
       "Net Rating": 15.0,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Efficient Offense (Ball-Secure)",
+        "Controlled Pace Bully-Ball Ground Attack (Ball-Secure)",
         "Elite Disruptive Defense",
         "High-Level Roster"
       ],
@@ -388,7 +388,7 @@
       "Net Rating": 14.4,
       "Year": 2025,
       "tags": [
-        "High-Powered Ground Attack (Pass-Efficient)",
+        "High-Powered Air Assault",
         "Stout Defense",
         "Elite Roster"
       ],
@@ -409,7 +409,7 @@
       "Net Rating": 13.8,
       "Year": 2025,
       "tags": [
-        "High-Powered Offense (Ball-Secure)",
+        "Bully-Ball Ground Attack (Ball-Secure)",
         "Stout Defense",
         "Blue-Blood Talent"
       ],
@@ -430,7 +430,7 @@
       "Net Rating": 12.9,
       "Year": 2025,
       "tags": [
-        "High-Powered Ground Attack",
+        "High-Powered Offense",
         "Stout Defense",
         "High-Level Roster"
       ],
@@ -451,7 +451,7 @@
       "Net Rating": 12.7,
       "Year": 2025,
       "tags": [
-        "High-Powered Offense",
+        "Bully-Ball Ground Attack",
         "Elite Disruptive Defense",
         "Elite Roster"
       ],
@@ -514,7 +514,7 @@
       "Net Rating": 11.4,
       "Year": 2025,
       "tags": [
-        "Uptempo Bully-Ball Ground Attack (Pass-Efficient)",
+        "Uptempo Explosive Offense",
         "Stout Defense",
         "Above-Average Roster"
       ],
@@ -535,7 +535,7 @@
       "Net Rating": 9.6,
       "Year": 2025,
       "tags": [
-        "Bully-Ball Ground Attack",
+        "Methodical Chain-Mover",
         "Elite Disruptive Defense",
         "Elite Roster"
       ],
@@ -682,7 +682,7 @@
       "Net Rating": 7.4,
       "Year": 2025,
       "tags": [
-        "Methodical Chain-Mover",
+        "Run-Heavy Offense",
         "Elite Defense",
         "High-Level Roster"
       ],
@@ -703,7 +703,7 @@
       "Net Rating": 7.3,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Offense",
+        "Efficient Offense",
         "Stout Secondary Defense",
         "Above-Average Roster"
       ],
@@ -766,7 +766,7 @@
       "Net Rating": 6.0,
       "Year": 2025,
       "tags": [
-        "High-Powered Air Assault (Run-Efficient)",
+        "High-Powered Offense",
         "Stout & Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -829,7 +829,7 @@
       "Net Rating": 5.3,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Offense",
+        "Volatile Big-Play Offense",
         "Elite Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -871,7 +871,7 @@
       "Net Rating": 5.0,
       "Year": 2025,
       "tags": [
-        "Bully-Ball Ground Attack (Ball-Secure)",
+        "Methodical Chain-Mover (Ball-Secure)",
         "Sound Defense",
         "High-Level Roster"
       ],
@@ -892,7 +892,7 @@
       "Net Rating": 4.8,
       "Year": 2025,
       "tags": [
-        "Bully-Ball Ground Attack (Pass-Efficient)",
+        "Balanced Spread",
         "Stout Defense",
         "Elite Roster"
       ],
@@ -934,7 +934,7 @@
       "Net Rating": 4.5,
       "Year": 2025,
       "tags": [
-        "Run-First Offense",
+        "Balanced Spread",
         "Stout Secondary Defense",
         "High-Level Roster"
       ],
@@ -1018,7 +1018,7 @@
       "Net Rating": 4.0,
       "Year": 2025,
       "tags": [
-        "Bully-Ball Ground Attack",
+        "Balanced Spread",
         "Stout Secondary Defense",
         "Underachieving Elite Roster"
       ],
@@ -1144,7 +1144,7 @@
       "Net Rating": 2.9,
       "Year": 2025,
       "tags": [
-        "High-Powered Ground Attack",
+        "High-Powered Air Assault",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1165,7 +1165,7 @@
       "Net Rating": 2.3,
       "Year": 2025,
       "tags": [
-        "High-Powered Air Assault",
+        "High-Powered Ground Attack",
         "Sound Defense",
         "High-Level Roster"
       ],
@@ -1207,7 +1207,7 @@
       "Net Rating": 1.9,
       "Year": 2025,
       "tags": [
-        "Uptempo Balanced Spread",
+        "Uptempo Run-First Offense (Pass-Efficient)",
         "Stout & Disruptive Defense",
         "Above-Average Roster"
       ],
@@ -1270,7 +1270,7 @@
       "Net Rating": 0.8,
       "Year": 2025,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense (Pass-Efficient)",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1291,7 +1291,7 @@
       "Net Rating": 0.6,
       "Year": 2025,
       "tags": [
-        "Uptempo Efficient Offense",
+        "Uptempo Run-Heavy Offense",
         "Sound Defense",
         "Underachieving Elite Roster"
       ],
@@ -1312,7 +1312,7 @@
       "Net Rating": 0.4,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Run-First Offense",
+        "Controlled Pace Balanced Spread",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -1333,7 +1333,7 @@
       "Net Rating": -0.1,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Run-Heavy Offense",
+        "Controlled Pace Anemic Offense",
         "Stout Secondary Defense",
         "Above-Average Roster"
       ],
@@ -1438,7 +1438,7 @@
       "Net Rating": -0.8,
       "Year": 2025,
       "tags": [
-        "High-Powered Air Assault",
+        "High-Powered Offense",
         "Sound Defense",
         "Overachieving Competitive Roster"
       ],
@@ -1459,7 +1459,7 @@
       "Net Rating": -1.1,
       "Year": 2025,
       "tags": [
-        "Controlled Pace High-Powered Air Assault",
+        "Controlled Pace Balanced Spread",
         "Disruptive Defense",
         "High-Level Roster"
       ],
@@ -1501,7 +1501,7 @@
       "Net Rating": -1.8,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Run-First Offense",
+        "Controlled Pace Balanced Spread",
         "Sound Defense",
         "Overachieving Underdog Roster"
       ],
@@ -1522,7 +1522,7 @@
       "Net Rating": -1.8,
       "Year": 2025,
       "tags": [
-        "Efficient Offense",
+        "Bully-Ball Ground Attack",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -1774,7 +1774,7 @@
       "Net Rating": -4.4,
       "Year": 2025,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Porous & Passive Defense",
         "Above-Average Roster"
       ],
@@ -1963,7 +1963,7 @@
       "Net Rating": -7.1,
       "Year": 2025,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2089,7 +2089,7 @@
       "Net Rating": -7.8,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Offense (Pass-Efficient, Turnover-Prone)",
+        "Volatile Big-Play Offense (Turnover-Prone)",
         "Sound Defense",
         "Underachieving Elite Roster"
       ],
@@ -2173,7 +2173,7 @@
       "Net Rating": -8.6,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Offense",
+        "Stymied Anemic Offense",
         "Sound Defense",
         "Competitive Roster"
       ],
@@ -2194,7 +2194,7 @@
       "Net Rating": -8.8,
       "Year": 2025,
       "tags": [
-        "Balanced Spread",
+        "Run-First Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2278,7 +2278,7 @@
       "Net Rating": -10.2,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Offense",
+        "Pass-Heavy Anemic Offense (Run-Efficient)",
         "Sound Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2299,7 +2299,7 @@
       "Net Rating": -10.2,
       "Year": 2025,
       "tags": [
-        "Uptempo Pass-Heavy Anemic Offense",
+        "Uptempo Anemic Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2320,7 +2320,7 @@
       "Net Rating": -10.5,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Efficient Offense",
+        "Controlled Pace Run-Heavy Offense (Pass-Efficient)",
         "Sound Defense",
         "Developmental Roster"
       ],
@@ -2341,7 +2341,7 @@
       "Net Rating": -10.7,
       "Year": 2025,
       "tags": [
-        "Anemic Offense",
+        "Run-Heavy Offense",
         "Sound Defense",
         "Above-Average Roster"
       ],
@@ -2383,7 +2383,7 @@
       "Net Rating": -11.4,
       "Year": 2025,
       "tags": [
-        "Run-Heavy Offense",
+        "Efficient Offense",
         "Vulnerable Defense",
         "Above-Average Roster"
       ],
@@ -2404,7 +2404,7 @@
       "Net Rating": -11.5,
       "Year": 2025,
       "tags": [
-        "Uptempo Balanced Spread",
+        "Uptempo Run-First Offense",
         "Porous & Passive Defense",
         "Competitive Roster"
       ],
@@ -2488,7 +2488,7 @@
       "Net Rating": -12.9,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Stymied Anemic Offense",
+        "Controlled Pace Pass-Heavy Anemic Offense",
         "Disruptive Defense",
         "Competitive Roster"
       ],
@@ -2593,7 +2593,7 @@
       "Net Rating": -13.3,
       "Year": 2025,
       "tags": [
-        "Anemic Offense",
+        "Pass-Heavy Anemic Offense (Run-Efficient)",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
@@ -2719,7 +2719,7 @@
       "Net Rating": -16.0,
       "Year": 2025,
       "tags": [
-        "Anemic Offense",
+        "Pass-Heavy Anemic Offense",
         "Vulnerable Defense",
         "Underachieving High-Level Roster"
       ],
@@ -2761,7 +2761,7 @@
       "Net Rating": -19.9,
       "Year": 2025,
       "tags": [
-        "Controlled Pace Volatile Big-Play Offense (Turnover-Prone)",
+        "Controlled Pace Run-Heavy Offense (Pass-Efficient, Turnover-Prone)",
         "Porous & Passive Defense",
         "Underdog Roster"
       ],
