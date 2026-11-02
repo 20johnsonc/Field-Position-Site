@@ -20,7 +20,7 @@ export interface PlayersDoc {
 // Fetch a static JSON asset. Uses Cloudflare's ASSETS binding when available
 // (Worker self-fetch to its own origin is blocked/looped), falls back to
 // plain fetch for local dev where Astro's runtime is undefined.
-async function fetchJson(ctx: any, path: string): Promise<any | null> {
+export async function fetchJson(ctx: any, path: string): Promise<any | null> {
   try {
     const url = new URL(path, ctx.url);
     const env = ctx.locals?.runtime?.env;

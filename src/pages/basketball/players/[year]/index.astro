@@ -2,17 +2,57 @@
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
 import BasketballPlayersTable from '../../../../components/BasketballPlayersTable.astro';
-import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+export const prerender = true; // 👈 Force this page to be static
+
+export async function getStaticPaths() {
+  try {
+    const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+    const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+    const years = indexData.years || [];
+
+    return years.map((year: number) => ({
+      params: { year: String(year) },
+    }));
+  } catch (e) {
+    console.error("Failed to read index.json for getStaticPaths", e);
+    return [];
+  }
+}
 
 const { year } = Astro.params;
 const y = Number(year);
-const data = await loadBasketballYear(y, Astro);
-if (!data) throw new Error(`Missing basketball data for ${year}`);
+
+// 1. Read the specific year's data directly from the filesystem during build
+let data = null;
+try {
+  const playersPath = join(process.cwd(), 'public', `data/basketball/${y}/players.json`);
+  const rankingsPath = join(process.cwd(), 'public', `data/basketball/${y}/rankings.json`);
+  
+  const playersDoc = JSON.parse(readFileSync(playersPath, 'utf-8'));
+  const rankingsDoc = JSON.parse(readFileSync(rankingsPath, 'utf-8'));
+  
+  data = { players: playersDoc, rankings: rankingsDoc };
+} catch (err) {
+  throw new Error(`Missing basketball data for ${year}`);
+}
 
 const { players } = data;
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
-const years = (await listBasketballYears(Astro)).reverse();
-const conferences = [...new Set(players.players.map(p => p.conference).filter(Boolean))].sort();
+
+// 2. Read the years list directly to avoid using the async fetch function
+let years = [];
+try {
+  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+  years = [...(indexData.years || [])].sort((a, b) => b - a); 
+} catch (e) {
+  years = [y];
+}
+
+const conferences = [...new Set(players.players.map((p: any) => p.conference).filter(Boolean))].sort();
 ---
 <Layout title={`Basketball Players ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={players.generated_at}>
   <div class="container">

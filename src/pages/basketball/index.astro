@@ -2,16 +2,35 @@
 import Layout from '../../layouts/Layout.astro';
 import SportTabs from '../../components/SportTabs.astro';
 import BasketballRankingsTable from '../../components/BasketballRankingsTable.astro';
-import { listBasketballYears, loadBasketballYear } from '../../lib/basketball';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-const years = (await listBasketballYears(Astro)).reverse();
-const latest = years[0];
-const data = await loadBasketballYear(latest, Astro);
-if (!data) throw new Error(`Failed to load basketball year ${latest}`);
+export const prerender = true;
 
-const { rankings } = data;
+let latest = null;
+let years = []; // 👈 DECLARE IT HERE
+
+try {
+  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+  years = [...(indexData.years || [])].sort((a, b) => b - a); // 👈 ASSIGN IT HERE
+  latest = years[0];
+} catch (e) {
+  throw new Error("Failed to read basketball index.json at build time");
+}
+
+if (!latest) throw new Error("No basketball years found in index.json");
+
+let rankings = null;
+try {
+  const rankingsPath = join(process.cwd(), 'public', 'data', 'basketball', `${latest}/rankings.json`);
+  rankings = JSON.parse(readFileSync(rankingsPath, 'utf-8'));
+} catch (err) {
+  throw new Error(`Failed to load rankings for ${latest} at build time`);
+}
+
 const seasonLabel = `${latest - 1}-${String(latest).slice(-2)}`;
-const conferences = [...new Set(rankings.teams.map(t => t.conference).filter(Boolean))].sort();
+const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).filter(Boolean))].sort();
 ---
 <Layout title={`Basketball ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={rankings.generated_at}>
   <div class="container">

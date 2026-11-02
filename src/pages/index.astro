@@ -1,7 +1,5 @@
 ---
 export const prerender = true;
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import Layout from '../layouts/Layout.astro';
 import DashboardControls from '../components/DashboardControls.astro';
 import MatchupGrid from '../components/MatchupGrid.astro';
@@ -12,23 +10,21 @@ import { buildTeamConferenceMap, normalizeMatchups, normalizeRankings } from '..
 
 const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 
-function loadJson(relPath: string, fallback: unknown = {}) {
-  try {
-    return JSON.parse(readFileSync(join(process.cwd(), 'public', relPath), 'utf-8'));
-  } catch {
-    return fallback;
-  }
-}
+// ✅ OPTIMIZATION: Use Vite's glob import to load JSON at BUILD time.
+const rankingsFiles = import.meta.glob('../../public/data/rankings/*.json', { eager: true, import: 'default' });
+const matchupsFiles = import.meta.glob('../../public/data/matchups/**/*.json', { eager: true, import: 'default' });
+const pbpFiles = import.meta.glob('../../public/data/pbp-top-plays/**/*.json', { eager: true, import: 'default' });
+const backtestFiles = import.meta.glob('../../public/data/backtest/**/*.json', { eager: true, import: 'default' });
 
-// 1. OPTIMIZATION: Only load the default year's rankings on the server
-const rawRankings = loadJson(`data/rankings/${default_year}.json`, {});
+// 1. OPTIMIZATION: Only load the default year's rankings
+const rawRankings = rankingsFiles[`../../public/data/rankings/${default_year}.json`] || {};
 const generatedAtStr = rawRankings.generated_at || null;
 const rows = Array.isArray(rawRankings) ? rawRankings : (rawRankings?.rankings ?? []);
 const rankings = normalizeRankings(rows);
 
-const matchupsRaw = loadJson(`data/matchups/${default_year}/week-${default_week}.json`, []);
-const topPlaysByGame = loadJson(`data/pbp-top-plays/${default_year}/week-${default_week}.json`, {});
-const backtestRaw = loadJson(`data/backtest/${default_year}/week-${default_week}.json`, {});
+const matchupsRaw = matchupsFiles[`../../public/data/matchups/${default_year}/week-${default_week}.json`] || [];
+const topPlaysByGame = pbpFiles[`../../public/data/pbp-top-plays/${default_year}/week-${default_week}.json`] || {};
+const backtestRaw = backtestFiles[`../../public/data/backtest/${default_year}/week-${default_week}.json`] || {};
 
 const matchups = normalizeMatchups(matchupsRaw);
 const teamConfMap = buildTeamConferenceMap(rankings);

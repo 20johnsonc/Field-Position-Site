@@ -2,17 +2,45 @@
 import Layout from '../../../layouts/Layout.astro';
 import SportTabs from '../../../components/SportTabs.astro';
 import BasketballPlayersTable from '../../../components/BasketballPlayersTable.astro';
-import { listBasketballYears, loadBasketballYear } from '../../../lib/basketball';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-const years = (await listBasketballYears(Astro)).reverse();
-const latest = years[0];
-const data = await loadBasketballYear(latest, Astro);
-if (!data) throw new Error(`Failed to load basketball year ${latest}`);
+export const prerender = true; // 👈 Force this to be static
+
+// 1. Read the index file directly at build time to find the latest year
+let latest = null;
+let years = [];
+try {
+  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+  years = [...(indexData.years || [])].sort((a, b) => b - a); // Sort descending to get latest first
+  latest = years[0];
+} catch (e) {
+  throw new Error("Failed to read basketball index.json at build time");
+}
+
+if (!latest) throw new Error("No basketball years found in index.json");
+
+// 2. Read the latest year's data directly from the filesystem
+let data = null;
+try {
+  const playersPath = join(process.cwd(), 'public', `data/basketball/${latest}/players.json`);
+  const rankingsPath = join(process.cwd(), 'public', `data/basketball/${latest}/rankings.json`);
+  
+  const playersDoc = JSON.parse(readFileSync(playersPath, 'utf-8'));
+  const rankingsDoc = JSON.parse(readFileSync(rankingsPath, 'utf-8'));
+  
+  data = { players: playersDoc, rankings: rankingsDoc };
+} catch (err) {
+  throw new Error(`Failed to load basketball year ${latest} at build time`);
+}
 
 const { players } = data;
 const seasonLabel = `${latest - 1}-${String(latest).slice(-2)}`;
 const stateLabel = players.projected ? 'Preseason projection' : 'Final ratings';
-const conferences = [...new Set(players.players.map(p => p.conference).filter(Boolean))].sort();
+
+// 3. Compute conferences at build time
+const conferences = [...new Set(players.players.map((p: any) => p.conference).filter(Boolean))].sort();
 ---
 <Layout title={`Basketball Players ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={players.generated_at}>
   <div class="container">

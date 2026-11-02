@@ -1,7 +1,8 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
-import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
+// ✅ Import fetchJson instead of listBasketballYears
+import { loadBasketballYear, fetchJson } from '../../../../lib/basketball';
 
 export const prerender = false; // SSR Mode
 
@@ -20,22 +21,16 @@ if (!teamStats) return Astro.redirect('/basketball/');
 
 const actualTeamName = teamStats.team;
 
-// Calculate validYears on the fly for the dropdown
-const validYears = [];
-const allYears = await listBasketballYears(Astro);
-for (const yr of allYears) {
-  const yrData = await loadBasketballYear(yr, Astro);
-  if (yrData && yrData.rankings.teams.some((t: any) => slugify(t.team) === team)) {
-    validYears.push(yr);
-  }
-}
-validYears.sort((a, b) => b - a);
+// ✅ 1. Replace the loop with a single fetch to the new team index!
+const teamIndex = await fetchJson(Astro, '/data/basketball/team-index.json');
+const validYears = teamIndex?.[team] || [y];
 
+// ✅ 2. Move the roster calculation here (this is fast since it's a small array)
 const roster = players.players
   .filter((p: any) => p.team === actualTeamName)
   .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
 
-// Load the schedule at request time (Cloudflare Workers have no fs)
+// Load the schedule at request time
 let schedule = [];
 try {
   const schedUrl = new URL(`/data/basketball/${y}/schedule.json`, Astro.url);
@@ -46,7 +41,7 @@ try {
     schedule = allSchedules[actualTeamName] || [];
   }
 } catch (e) {
-  // Ignore if no schedule exists (e.g., 2027 projection)
+  // Ignore if no schedule exists
 }
 
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;

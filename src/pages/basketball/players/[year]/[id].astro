@@ -2,13 +2,15 @@
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
 import PlayerDashboard from '../../../../components/PlayerDashboard';
-import { listBasketballYears, loadBasketballYear } from '../../../../lib/basketball';
+// We no longer need listBasketballYears
+import { loadBasketballYear, fetchJson } from '../../../../lib/basketball'; 
 
-export const prerender = false; // Tell Astro to render this on-demand
+export const prerender = false;
 
 const { year, id } = Astro.params;
 const y = Number(year);
 
+// 1. Load the specific year's data
 const data = await loadBasketballYear(y, Astro);
 if (!data) throw new Error(`Missing data for ${year}`);
 
@@ -17,17 +19,11 @@ const player = players.players.find((p: any) => String(p.player_id || p.id) === 
 
 if (!player) return Astro.redirect('/basketball/players/');
 
-// Calculate valid years on the fly for SSR
-const validYears = [];
-const allYears = await listBasketballYears(Astro);
-for (const yr of allYears) {
-  const yrData = await loadBasketballYear(yr, Astro);
-  if (yrData && yrData.players.players.some((p: any) => String(p.player_id || p.id) === id)) {
-    validYears.push(yr);
-  }
-}
-validYears.sort((a, b) => b - a);
+// 2. Fetch the tiny index file instead of looping!
+const playerIndex = await fetchJson(Astro, '/data/basketball/player-index.json');
+const validYears = playerIndex?.[id] || [y]; // Fallback to current year if missing
 
+// 3. Keep the rest of your logic exactly the same
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
 const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

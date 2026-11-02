@@ -2,10 +2,24 @@
 import Layout from '../../layouts/Layout.astro';
 import SportTabs from '../../components/SportTabs.astro';
 import GamePreview from '../../components/GamePreview';
-import { listBasketballYears } from '../../lib/basketball';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-const years = (await listBasketballYears(Astro)).reverse();
+export const prerender = true; // 👈 Force this to be static
+
+// 1. Read the index file directly from the filesystem at build time
+let years = [];
+try {
+  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+  years = [...(indexData.years || [])].sort((a, b) => b - a); // Sort descending
+} catch (e) {
+  console.error("Failed to read index.json at build time", e);
+}
+
 const latest = years[0];
+if (!latest) throw new Error("No years found in index.json");
+
 const seasonLabel = `${latest - 1}-${String(latest).slice(-2)}`;
 ---
 

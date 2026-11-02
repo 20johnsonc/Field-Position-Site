@@ -2,18 +2,54 @@
 import Layout from '../../layouts/Layout.astro';
 import SportTabs from '../../components/SportTabs.astro';
 import BasketballRankingsTable from '../../components/BasketballRankingsTable.astro';
-import { listBasketballYears, loadBasketballYear } from '../../lib/basketball';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+export const prerender = true; // 👈 Force this to be static
+
+// 1. Tell Astro to build a static page for every year
+export async function getStaticPaths() {
+  try {
+    const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+    const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+    const years = indexData.years || [];
+
+    return years.map((year: number) => ({
+      params: { year: String(year) },
+    }));
+  } catch (e) {
+    console.error("Failed to read index.json for getStaticPaths", e);
+    return [];
+  }
+}
 
 const { year } = Astro.params;
 const y = Number(year);
-const data = await loadBasketballYear(y, Astro);
-if (!data) throw new Error(`Missing basketball data for ${year}`);
 
-const { rankings } = data;
+// 2. Read the year's rankings directly from the filesystem
+let rankings = null;
+try {
+  const rankingsPath = join(process.cwd(), 'public', `data/basketball/${y}/rankings.json`);
+  rankings = JSON.parse(readFileSync(rankingsPath, 'utf-8'));
+} catch (err) {
+  throw new Error(`Missing basketball data for ${year}`);
+}
+
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings';
-const years = (await listBasketballYears(Astro)).reverse();
-const conferences = [...new Set(rankings.teams.map(t => t.conference).filter(Boolean))].sort();
+
+// 3. Read the years list directly for the dropdown navigation
+let years = [];
+try {
+  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
+  years = [...(indexData.years || [])].sort((a, b) => b - a); // sorted descending
+} catch (e) {
+  years = [y];
+}
+
+// 4. Compute conferences at build time
+const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).filter(Boolean))].sort();
 ---
 <Layout title={`Basketball ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={rankings.generated_at}>
   <div class="container">
