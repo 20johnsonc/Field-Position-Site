@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:33:01.854391+00:00",
+  "generated_at": "2026-11-04T18:00:32.848806+00:00",
   "year": 2025,
   "rankings": [
     {
@@ -760,27 +760,6 @@
     },
     {
       "Rank": 37,
-      "Team": "Arizona",
-      "Conference": "Big 12",
-      "Record": "9-4",
-      "Net Rating": 6.0,
-      "Year": 2025,
-      "tags": [
-        "High-Powered Offense",
-        "Stout & Disruptive Defense",
-        "Above-Average Roster"
-      ],
-      "sos": 126,
-      "sor": 133,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-3",
-      "sos_rank": 62,
-      "sor_rank": 40
-    },
-    {
-      "Rank": 38,
       "Team": "Memphis",
       "Conference": "American Athletic",
       "Record": "8-5",
@@ -799,6 +778,27 @@
       "conference_record": "4-4",
       "sos_rank": 97,
       "sor_rank": 67
+    },
+    {
+      "Rank": 38,
+      "Team": "Arizona",
+      "Conference": "Big 12",
+      "Record": "9-4",
+      "Net Rating": 6.0,
+      "Year": 2025,
+      "tags": [
+        "High-Powered Offense",
+        "Stout & Disruptive Defense",
+        "Above-Average Roster"
+      ],
+      "sos": 126,
+      "sor": 133,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-3",
+      "sos_rank": 62,
+      "sor_rank": 40
     },
     {
       "Rank": 39,
@@ -991,27 +991,6 @@
     },
     {
       "Rank": 48,
-      "Team": "UNLV",
-      "Conference": "Mountain West",
-      "Record": "10-4",
-      "Net Rating": 4.0,
-      "Year": 2025,
-      "tags": [
-        "High-Powered Ground Attack",
-        "Vulnerable Defense",
-        "High-Level Roster"
-      ],
-      "sos": 189,
-      "sor": 146,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "10-4",
-      "conference_record": "6-2",
-      "sos_rank": 110,
-      "sor_rank": 52
-    },
-    {
-      "Rank": 49,
       "Team": "Florida",
       "Conference": "SEC",
       "Record": "4-8",
@@ -1030,6 +1009,27 @@
       "conference_record": "2-6",
       "sos_rank": 3,
       "sor_rank": 64
+    },
+    {
+      "Rank": 49,
+      "Team": "UNLV",
+      "Conference": "Mountain West",
+      "Record": "10-4",
+      "Net Rating": 4.0,
+      "Year": 2025,
+      "tags": [
+        "High-Powered Ground Attack",
+        "Vulnerable Defense",
+        "High-Level Roster"
+      ],
+      "sos": 189,
+      "sor": 146,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "10-4",
+      "conference_record": "6-2",
+      "sos_rank": 110,
+      "sor_rank": 52
     },
     {
       "Rank": 50,
@@ -1096,27 +1096,6 @@
     },
     {
       "Rank": 53,
-      "Team": "Tulane",
-      "Conference": "American Athletic",
-      "Record": "11-3",
-      "Net Rating": 2.9,
-      "Year": 2025,
-      "tags": [
-        "Efficient Offense",
-        "Sound Defense",
-        "Above-Average Roster"
-      ],
-      "sos": 121,
-      "sor": 89,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "11-3",
-      "conference_record": "7-1",
-      "sos_rank": 60,
-      "sor_rank": 22
-    },
-    {
-      "Rank": 54,
       "Team": "Arkansas",
       "Conference": "SEC",
       "Record": "2-10",
@@ -1137,7 +1116,7 @@
       "sor_rank": 102
     },
     {
-      "Rank": 55,
+      "Rank": 54,
       "Team": "Cincinnati",
       "Conference": "Big 12",
       "Record": "7-6",
@@ -1156,6 +1135,27 @@
       "conference_record": "5-4",
       "sos_rank": 73,
       "sor_rank": 71
+    },
+    {
+      "Rank": 55,
+      "Team": "Tulane",
+      "Conference": "American Athletic",
+      "Record": "11-3",
+      "Net Rating": 2.9,
+      "Year": 2025,
+      "tags": [
+        "Efficient Offense",
+        "Sound Defense",
+        "Above-Average Roster"
+      ],
+      "sos": 121,
+      "sor": 89,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "11-3",
+      "conference_record": "7-1",
+      "sos_rank": 60,
+      "sor_rank": 22
     },
     {
       "Rank": 56,
@@ -2272,27 +2272,6 @@
     },
     {
       "Rank": 109,
-      "Team": "Syracuse",
-      "Conference": "ACC",
-      "Record": "3-9",
-      "Net Rating": -10.2,
-      "Year": 2025,
-      "tags": [
-        "Pass-Heavy Anemic Offense (Run-Efficient)",
-        "Sound Defense",
-        "Underachieving High-Level Roster"
-      ],
-      "sos": 62,
-      "sor": 190,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "1-7",
-      "sos_rank": 20,
-      "sor_rank": 96
-    },
-    {
-      "Rank": 110,
       "Team": "App State",
       "Conference": "Sun Belt",
       "Record": "5-8",
@@ -2311,6 +2290,27 @@
       "conference_record": "2-6",
       "sos_rank": 118,
       "sor_rank": 109
+    },
+    {
+      "Rank": 110,
+      "Team": "Syracuse",
+      "Conference": "ACC",
+      "Record": "3-9",
+      "Net Rating": -10.2,
+      "Year": 2025,
+      "tags": [
+        "Pass-Heavy Anemic Offense (Run-Efficient)",
+        "Sound Defense",
+        "Underachieving High-Level Roster"
+      ],
+      "sos": 62,
+      "sor": 190,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "3-9",
+      "conference_record": "1-7",
+      "sos_rank": 20,
+      "sor_rank": 96
     },
     {
       "Rank": 111,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:33:01.854391+00:00",
+  "generated_at": "2026-11-04T18:00:32.848806+00:00",
   "year": 2024,
   "rankings": [
     {
@@ -697,6 +697,27 @@
     },
     {
       "Rank": 34,
+      "Team": "TCU",
+      "Conference": "Big 12",
+      "Record": "9-4",
+      "Net Rating": 6.3,
+      "Year": 2024,
+      "tags": [
+        "Methodical Chain-Mover",
+        "Sound Defense",
+        "Elite Roster"
+      ],
+      "sos": 130,
+      "sor": 131,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "9-4",
+      "conference_record": "6-3",
+      "sos_rank": 67,
+      "sor_rank": 35
+    },
+    {
+      "Rank": 35,
       "Team": "Arkansas",
       "Conference": "SEC",
       "Record": "7-6",
@@ -717,7 +738,7 @@
       "sor_rank": 41
     },
     {
-      "Rank": 35,
+      "Rank": 36,
       "Team": "Washington",
       "Conference": "Big Ten",
       "Record": "6-7",
@@ -736,27 +757,6 @@
       "conference_record": "4-5",
       "sos_rank": 22,
       "sor_rank": 53
-    },
-    {
-      "Rank": 36,
-      "Team": "TCU",
-      "Conference": "Big 12",
-      "Record": "9-4",
-      "Net Rating": 6.3,
-      "Year": 2024,
-      "tags": [
-        "Methodical Chain-Mover",
-        "Sound Defense",
-        "Elite Roster"
-      ],
-      "sos": 130,
-      "sor": 131,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "9-4",
-      "conference_record": "6-3",
-      "sos_rank": 67,
-      "sor_rank": 35
     },
     {
       "Rank": 37,
@@ -802,27 +802,6 @@
     },
     {
       "Rank": 39,
-      "Team": "UCF",
-      "Conference": "Big 12",
-      "Record": "4-8",
-      "Net Rating": 5.4,
-      "Year": 2024,
-      "tags": [
-        "High-Powered Offense",
-        "Sound Defense",
-        "High-Level Roster"
-      ],
-      "sos": 100,
-      "sor": 198,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "4-8",
-      "conference_record": "2-7",
-      "sos_rank": 45,
-      "sor_rank": 102
-    },
-    {
-      "Rank": 40,
       "Team": "Baylor",
       "Conference": "Big 12",
       "Record": "8-5",
@@ -841,6 +820,27 @@
       "conference_record": "6-3",
       "sos_rank": 43,
       "sor_rank": 45
+    },
+    {
+      "Rank": 40,
+      "Team": "UCF",
+      "Conference": "Big 12",
+      "Record": "4-8",
+      "Net Rating": 5.4,
+      "Year": 2024,
+      "tags": [
+        "High-Powered Offense",
+        "Sound Defense",
+        "High-Level Roster"
+      ],
+      "sos": 100,
+      "sor": 198,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "4-8",
+      "conference_record": "2-7",
+      "sos_rank": 45,
+      "sor_rank": 102
     },
     {
       "Rank": 41,
@@ -1012,27 +1012,6 @@
     },
     {
       "Rank": 49,
-      "Team": "South Alabama",
-      "Conference": "Sun Belt",
-      "Record": "7-6",
-      "Net Rating": 3.3,
-      "Year": 2024,
-      "tags": [
-        "Bully-Ball Ground Attack",
-        "Sound Defense",
-        "Overachieving Above-Average Roster"
-      ],
-      "sos": 195,
-      "sor": 179,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "5-3",
-      "sos_rank": 112,
-      "sor_rank": 83
-    },
-    {
-      "Rank": 50,
       "Team": "Duke",
       "Conference": "ACC",
       "Record": "9-4",
@@ -1053,7 +1032,49 @@
       "sor_rank": 31
     },
     {
+      "Rank": 50,
+      "Team": "South Alabama",
+      "Conference": "Sun Belt",
+      "Record": "7-6",
+      "Net Rating": 3.3,
+      "Year": 2024,
+      "tags": [
+        "Bully-Ball Ground Attack",
+        "Sound Defense",
+        "Overachieving Above-Average Roster"
+      ],
+      "sos": 195,
+      "sor": 179,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "5-3",
+      "sos_rank": 112,
+      "sor_rank": 83
+    },
+    {
       "Rank": 51,
+      "Team": "Nebraska",
+      "Conference": "Big Ten",
+      "Record": "7-6",
+      "Net Rating": 2.8,
+      "Year": 2024,
+      "tags": [
+        "Controlled Pace Efficient Offense",
+        "Sound Defense",
+        "Elite Roster"
+      ],
+      "sos": 114,
+      "sor": 144,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "3-6",
+      "sos_rank": 56,
+      "sor_rank": 48
+    },
+    {
+      "Rank": 52,
       "Team": "North Carolina",
       "Conference": "ACC",
       "Record": "6-7",
@@ -1074,7 +1095,7 @@
       "sor_rank": 100
     },
     {
-      "Rank": 52,
+      "Rank": 53,
       "Team": "Texas Tech",
       "Conference": "Big 12",
       "Record": "8-5",
@@ -1093,27 +1114,6 @@
       "conference_record": "6-3",
       "sos_rank": 52,
       "sor_rank": 49
-    },
-    {
-      "Rank": 53,
-      "Team": "Nebraska",
-      "Conference": "Big Ten",
-      "Record": "7-6",
-      "Net Rating": 2.8,
-      "Year": 2024,
-      "tags": [
-        "Controlled Pace Efficient Offense",
-        "Sound Defense",
-        "Elite Roster"
-      ],
-      "sos": 114,
-      "sor": 144,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "3-6",
-      "sos_rank": 56,
-      "sor_rank": 48
     },
     {
       "Rank": 54,
@@ -1495,24 +1495,24 @@
     },
     {
       "Rank": 72,
-      "Team": "UCLA",
-      "Conference": "Big Ten",
-      "Record": "5-7",
+      "Team": "East Carolina",
+      "Conference": "American Athletic",
+      "Record": "8-5",
       "Net Rating": -1.0,
       "Year": 2024,
       "tags": [
-        "High-Powered Air Assault",
+        "Uptempo Run-First Offense",
         "Sound Defense",
-        "Underachieving Elite Roster"
+        "Above-Average Roster"
       ],
-      "sos": 31,
-      "sor": 154,
+      "sos": 210,
+      "sor": 168,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "5-7",
-      "conference_record": "3-6",
-      "sos_rank": 1,
-      "sor_rank": 58
+      "record": "8-5",
+      "conference_record": "5-3",
+      "sos_rank": 124,
+      "sor_rank": 72
     },
     {
       "Rank": 73,
@@ -1537,24 +1537,24 @@
     },
     {
       "Rank": 74,
-      "Team": "East Carolina",
-      "Conference": "American Athletic",
-      "Record": "8-5",
+      "Team": "UCLA",
+      "Conference": "Big Ten",
+      "Record": "5-7",
       "Net Rating": -1.0,
       "Year": 2024,
       "tags": [
-        "Uptempo Run-First Offense",
+        "High-Powered Air Assault",
         "Sound Defense",
-        "Above-Average Roster"
+        "Underachieving Elite Roster"
       ],
-      "sos": 210,
-      "sor": 168,
+      "sos": 31,
+      "sor": 154,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "8-5",
-      "conference_record": "5-3",
-      "sos_rank": 124,
-      "sor_rank": 72
+      "record": "5-7",
+      "conference_record": "3-6",
+      "sos_rank": 1,
+      "sor_rank": 58
     },
     {
       "Rank": 75,
@@ -1579,27 +1579,6 @@
     },
     {
       "Rank": 76,
-      "Team": "South Florida",
-      "Conference": "American Athletic",
-      "Record": "7-6",
-      "Net Rating": -1.7,
-      "Year": 2024,
-      "tags": [
-        "Uptempo Balanced Spread",
-        "Sound Defense",
-        "Above-Average Roster"
-      ],
-      "sos": 174,
-      "sor": 161,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "7-6",
-      "conference_record": "4-4",
-      "sos_rank": 96,
-      "sor_rank": 65
-    },
-    {
-      "Rank": 77,
       "Team": "Bowling Green",
       "Conference": "Mid-American",
       "Record": "7-6",
@@ -1618,6 +1597,27 @@
       "conference_record": "6-2",
       "sos_rank": 120,
       "sor_rank": 74
+    },
+    {
+      "Rank": 77,
+      "Team": "South Florida",
+      "Conference": "American Athletic",
+      "Record": "7-6",
+      "Net Rating": -1.7,
+      "Year": 2024,
+      "tags": [
+        "Uptempo Balanced Spread",
+        "Sound Defense",
+        "Above-Average Roster"
+      ],
+      "sos": 174,
+      "sor": 161,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "7-6",
+      "conference_record": "4-4",
+      "sos_rank": 96,
+      "sor_rank": 65
     },
     {
       "Rank": 78,
@@ -1789,48 +1789,27 @@
     },
     {
       "Rank": 86,
-      "Team": "Arizona",
-      "Conference": "Big 12",
-      "Record": "4-8",
+      "Team": "Western Kentucky",
+      "Conference": "Conference USA",
+      "Record": "8-6",
       "Net Rating": -3.9,
       "Year": 2024,
       "tags": [
         "Balanced Spread",
-        "Sound Defense",
-        "Underachieving Above-Average Roster"
+        "Porous & Passive Defense",
+        "Competitive Roster"
       ],
-      "sos": 103,
-      "sor": 200,
+      "sos": 169,
+      "sor": 169,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "4-8",
-      "conference_record": "2-7",
-      "sos_rank": 48,
-      "sor_rank": 104
+      "record": "8-6",
+      "conference_record": "6-3",
+      "sos_rank": 92,
+      "sor_rank": 73
     },
     {
       "Rank": 87,
-      "Team": "Florida State",
-      "Conference": "ACC",
-      "Record": "2-10",
-      "Net Rating": -3.9,
-      "Year": 2024,
-      "tags": [
-        "Volatile Big-Play Offense",
-        "Sound Defense",
-        "Underachieving Elite Roster"
-      ],
-      "sos": 52,
-      "sor": 206,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "2-10",
-      "conference_record": "1-7",
-      "sos_rank": 13,
-      "sor_rank": 110
-    },
-    {
-      "Rank": 88,
       "Team": "Georgia Southern",
       "Conference": "Sun Belt",
       "Record": "8-5",
@@ -1851,25 +1830,46 @@
       "sor_rank": 52
     },
     {
+      "Rank": 88,
+      "Team": "Florida State",
+      "Conference": "ACC",
+      "Record": "2-10",
+      "Net Rating": -3.9,
+      "Year": 2024,
+      "tags": [
+        "Volatile Big-Play Offense",
+        "Sound Defense",
+        "Underachieving Elite Roster"
+      ],
+      "sos": 52,
+      "sor": 206,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "2-10",
+      "conference_record": "1-7",
+      "sos_rank": 13,
+      "sor_rank": 110
+    },
+    {
       "Rank": 89,
-      "Team": "Western Kentucky",
-      "Conference": "Conference USA",
-      "Record": "8-6",
+      "Team": "Arizona",
+      "Conference": "Big 12",
+      "Record": "4-8",
       "Net Rating": -3.9,
       "Year": 2024,
       "tags": [
         "Balanced Spread",
-        "Porous & Passive Defense",
-        "Competitive Roster"
+        "Sound Defense",
+        "Underachieving Above-Average Roster"
       ],
-      "sos": 169,
-      "sor": 169,
+      "sos": 103,
+      "sor": 200,
       "Actual Wins": null,
       "Games Played": null,
-      "record": "8-6",
-      "conference_record": "6-3",
-      "sos_rank": 92,
-      "sor_rank": 73
+      "record": "4-8",
+      "conference_record": "2-7",
+      "sos_rank": 48,
+      "sor_rank": 104
     },
     {
       "Rank": 90,
@@ -2167,6 +2167,27 @@
     },
     {
       "Rank": 104,
+      "Team": "Georgia State",
+      "Conference": "Sun Belt",
+      "Record": "3-9",
+      "Net Rating": -9.8,
+      "Year": 2024,
+      "tags": [
+        "Balanced Spread",
+        "Porous & Passive Defense",
+        "Above-Average Roster"
+      ],
+      "sos": 156,
+      "sor": 222,
+      "Actual Wins": null,
+      "Games Played": null,
+      "record": "3-9",
+      "conference_record": "1-7",
+      "sos_rank": 82,
+      "sor_rank": 126
+    },
+    {
+      "Rank": 105,
       "Team": "Air Force",
       "Conference": "Mountain West",
       "Record": "5-7",
@@ -2187,7 +2208,7 @@
       "sor_rank": 108
     },
     {
-      "Rank": 105,
+      "Rank": 106,
       "Team": "Buffalo",
       "Conference": "Mid-American",
       "Record": "9-4",
@@ -2206,27 +2227,6 @@
       "conference_record": "6-2",
       "sos_rank": 127,
       "sor_rank": 47
-    },
-    {
-      "Rank": 106,
-      "Team": "Georgia State",
-      "Conference": "Sun Belt",
-      "Record": "3-9",
-      "Net Rating": -9.8,
-      "Year": 2024,
-      "tags": [
-        "Balanced Spread",
-        "Porous & Passive Defense",
-        "Above-Average Roster"
-      ],
-      "sos": 156,
-      "sor": 222,
-      "Actual Wins": null,
-      "Games Played": null,
-      "record": "3-9",
-      "conference_record": "1-7",
-      "sos_rank": 82,
-      "sor_rank": 126
     },
     {
       "Rank": 107,
