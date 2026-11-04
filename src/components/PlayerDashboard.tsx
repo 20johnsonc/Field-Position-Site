@@ -52,6 +52,14 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
     ts: player.ts_pct, usg: player.usage, porpag: player.porpag
   };
 
+  console.log('[DBG]',
+  'year:', year,
+  'name:', player?.name,
+  'id:', player?.player_id,
+  'gp:', player?.gp,
+  'pts_pg:', player?.pts_pg,
+  'reb_pg:', player?.reb_pg);
+
   const displayPlayTypes = useMemo(() => {
     if (!activeGame) {
       // Season Play Types (from players.json)
@@ -106,9 +114,9 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       
-      <div className="card" style={{ padding: '20px' }}>
+      <div className="card" style={{ padding: '10px' }}>
         <h2 className="section-title" style={{ marginTop: 0, marginBottom: '16px' }}>RAPM Breakdown</h2>
-        <div className="analytics-grid" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
+        <div className="analytics-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
           <div className="stat-box">
             <span className="stat-label">Off RAPM</span>
             <span className="stat-comparison"><strong style={{ color: 'var(--accent-success)' }}>{fmt(player.offensive_rating)}</strong></span>
@@ -116,10 +124,6 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
           <div className="stat-box">
             <span className="stat-label">Def RAPM</span>
             <span className="stat-comparison"><strong style={{ color: 'var(--accent-info)' }}>{fmt(player.defensive_rating)}</strong></span>
-          </div>
-          <div className="stat-box">
-            <span className="stat-label">Prev Season Net</span>
-            <span className="stat-comparison"><strong>{fmt(player.prev_net_rating)}</strong></span>
           </div>
         </div>
       </div>

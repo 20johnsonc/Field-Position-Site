@@ -21,7 +21,10 @@ if (!player) return Astro.redirect('/basketball/players/');
 
 // 2. Fetch the tiny index file instead of looping!
 const playerIndex = await fetchJson(Astro, '/data/basketball/player-index.json');
-const validYears = playerIndex?.[id] || [y]; // Fallback to current year if missing
+const entry = playerIndex?.[id];
+const validYears: number[] = entry?.teams
+  ? [...new Set(entry.teams.map((t: any) => t.year))].sort()
+  : [y];
 
 // 3. Keep the rest of your logic exactly the same
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
@@ -121,7 +124,7 @@ const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
   </div>
 </Layout>
 
-<script define:vars={{ playerId: String(player.player_id || player.id), year: y, isProjected: players.projected }}>
+<script define:vars={{ playerId: String(player.player_id || player.id), year: y, isProjected: players.projected, team: player.team }}>
   document.addEventListener('DOMContentLoaded', () => {
     const yearSelect = document.getElementById('playerYearSelect');
     if (yearSelect) {
@@ -143,15 +146,14 @@ const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
     (async () => {
       try {
-        const res = await fetch(`/data/basketball/${year}/game_logs.json`);
+        const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        const res = await fetch(`/data/basketball/${year}/game_logs/${slugify(team)}.json`);
         if (!res.ok) throw new Error('No game logs found');
-        
+
         const data = await res.json();
         const logs = data[playerId];
 
         if (logs && logs.length > 0) {
-          const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-          
           bodyEl.innerHTML = logs.map(g => `
             <tr>
               <td>${new Date(g.start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>

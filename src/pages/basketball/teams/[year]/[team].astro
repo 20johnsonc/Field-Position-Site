@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
-// ✅ Import fetchJson instead of listBasketballYears
+import ShotChart from '../../../../components/ShotChart';
 import { loadBasketballYear, fetchJson } from '../../../../lib/basketball';
 
 export const prerender = false; // SSR Mode
@@ -21,16 +21,57 @@ if (!teamStats) return Astro.redirect('/basketball/');
 
 const actualTeamName = teamStats.team;
 
-// ✅ 1. Replace the loop with a single fetch to the new team index!
-const teamIndex = await fetchJson(Astro, '/data/basketball/team-index.json');
-const validYears = teamIndex?.[team] || [y];
+// ─── Year selector ──────────────────────────────────────────────────
+const teamIndexRaw = await fetchJson(Astro, '/data/basketball/team-index.json');
 
-// ✅ 2. Move the roster calculation here (this is fast since it's a small array)
+const rawEntry =
+  teamIndexRaw?.[team] ??
+  teamIndexRaw?.[team.toLowerCase()] ??
+  teamIndexRaw?.[slugify(actualTeamName)] ??
+  teamIndexRaw?.teams?.[team] ??
+  teamIndexRaw?.teams?.[slugify(actualTeamName)];
+
+const toYear = (e: any): number =>
+  e && typeof e === 'object' ? Number(e.year) : Number(e);
+
+let indexedYears: number[] = [];
+if (Array.isArray(rawEntry)) {
+  indexedYears = rawEntry.map(toYear);
+} else if (rawEntry && Array.isArray((rawEntry as any).years)) {
+  indexedYears = ((rawEntry as any).years).map(toYear);
+} else if (rawEntry && Array.isArray((rawEntry as any).teams)) {
+  indexedYears = ((rawEntry as any).teams).map(toYear);
+}
+indexedYears = indexedYears.filter((n) => Number.isFinite(n));
+
+// Fallback: probe every year in index.json for this team
+if (indexedYears.length === 0) {
+  const globalIndex = await fetchJson(Astro, '/data/basketball/index.json');
+  const candidateYears: number[] = Array.isArray(globalIndex?.years)
+    ? globalIndex.years.map(Number).filter(Number.isFinite)
+    : [];
+  if (candidateYears.length > 0) {
+    const hits = await Promise.all(
+      candidateYears.map(async (yr) => {
+        const r = await fetchJson(Astro, `/data/basketball/${yr}/rankings.json`);
+        const has = r?.teams?.some((t: any) => slugify(t.team) === team);
+        return has ? yr : null;
+      })
+    );
+    indexedYears = hits.filter((yr): yr is number => yr !== null);
+  }
+}
+
+const validYears: number[] = Array.from(
+  new Set([...indexedYears, y])
+).sort((a, b) => a - b);
+
+// ─── Roster ─────────────────────────────────────────────────────────
 const roster = players.players
   .filter((p: any) => p.team === actualTeamName)
   .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
 
-// Load the schedule at request time
+// ─── Schedule ───────────────────────────────────────────────────────
 let schedule = [];
 try {
   const schedUrl = new URL(`/data/basketball/${y}/schedule.json`, Astro.url);
@@ -44,50 +85,71 @@ try {
   // Ignore if no schedule exists
 }
 
-const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
-const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings';
-const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-
-// Synergy calculations
-const synergyGap = (teamStats?.adj_net || 0) - (teamStats?.direct_net || 0);
-let synergyLabel = "Expected Performance";
-let synergyColor = "var(--text)";
-let synergyDesc = "The team's individual talent matches their actual box score performance.";
-
-if (synergyGap > 3.0) {
-    synergyLabel = "Underperforming Talent";
-    synergyColor = "var(--accent-danger)";
-    synergyDesc = "Individual talent is higher than actual team results. They may be losing close games or struggling with chemistry.";
-} else if (synergyGap < -3.0) {
-    synergyLabel = "Outperforming Talent";
-    synergyColor = "var(--accent-success)";
-    synergyDesc = "Team results are better than individual talent suggests. They may be winning close games or have a highly optimized system.";
+// Calculate games played for per-game normalization
+let gamesPlayed = schedule.filter((g: any) => g.team_score !== null && g.opp_score !== null).length;
+if (gamesPlayed === 0) {
+  gamesPlayed = Math.max(1, (teamStats.wins || 0) + (teamStats.losses || 0));
 }
 
-// Play types
+// ─── Helpers ────────────────────────────────────────────────────────
+const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
+const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+
+// Maps typical CBB Adj ratings (~90–125) to 0–100% bar width
+const barWidth = (v: number | null | undefined) => {
+  if (v == null || !Number.isFinite(v)) return 0;
+  return Math.min(100, Math.max(0, ((v - 90) / 35) * 100));
+};
+
+// Split MadeFreeThrow → "Made Free Throw"; Dunk_Shot → "Dunk Shot"
+const formatPlayType = (type: string) =>
+  type
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
+    .replace(/_/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+// ─── Adj O / Adj D rank among all teams ─────────────────────────────
+const allTeams = rankings.teams;
+const offRank = [...allTeams]
+  .sort((a: any, b: any) => (b.adj_off ?? -999) - (a.adj_off ?? -999))
+  .findIndex((t: any) => t.team === actualTeamName) + 1;
+const defRank = [...allTeams]
+  .sort((a: any, b: any) => (a.adj_def ?? -999) - (b.adj_def ?? -999))
+  .findIndex((t: any) => t.team === actualTeamName) + 1;
+
+// ─── Play types ─────────────────────────────────────────────────────
 const teamPlayTypes = roster.reduce((acc: any, p: any) => {
   if (p.play_types) {
     for (const [type, data] of Object.entries(p.play_types)) {
       const d = data as any;
+      const freq = Number(d.freq_pg ?? d.freq ?? 0);
+      const ppp = Number(d.ppp ?? 0);
       if (!acc[type]) acc[type] = { freq: 0, pts: 0 };
-      acc[type].freq += d.freq_pg || 0;
-      acc[type].pts += (d.ppp || 0) * (d.freq_pg || 0);
+      acc[type].freq += freq;
+      acc[type].pts  += ppp * freq;
     }
   }
   return acc;
 }, {});
 
+// Divide the total team frequency by the number of games played
 const sortedPlayTypes = Object.entries(teamPlayTypes)
   .map(([type, data]: [string, any]) => ({
-    type, freq: data.freq, ppp: data.freq > 0 ? data.pts / data.freq : 0
+    type, 
+    freq: data.freq / gamesPlayed, 
+    ppp: data.freq > 0 ? data.pts / data.freq : 0
   }))
   .sort((a, b) => b.freq - a.freq)
   .slice(0, 6);
+
+const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 ---
 
 <Layout title={`${actualTeamName} ${seasonLabel}`} seasonLabel={seasonLabel}>
   <div class="container">
-    
+
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
       <div class="tabs" style="margin-bottom: 0;">
@@ -100,7 +162,7 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
         <div class="controls" style="margin-bottom: 0; margin-left: auto; padding: 0; background: transparent; border: none; box-shadow: none;">
           <select id="teamYearSelect" data-slug={team} aria-label="Switch Year">
             {validYears.map(yr => (
-              <option value={yr} selected={yr === y}>
+              <option value={yr} selected={yr === y ? true : undefined}>
                 {yr - 1}-{String(yr).slice(-2)} Season
               </option>
             ))}
@@ -109,121 +171,123 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
       )}
     </div>
 
-    <div class="card" style="margin-bottom: 24px; padding: 24px;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <h1 style="font-size: 2.5rem; margin-bottom: 8px;">{actualTeamName}</h1>
-          <p style="color: var(--text-muted); font-size: 1.1rem;">
-            {teamStats?.conference} · {stateLabel}
-          </p>
-        </div>
-        
-        <div style="display: flex; gap: 24px; text-align: right;">
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Record</div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--text);">
-              {teamStats?.wins != null ? `${teamStats.wins}-${teamStats.losses}` : '—'}
+    {/* ─────────── Hero ─────────── */}
+    <div class="card hero-card" style="margin-bottom: 24px; padding: 0; overflow: hidden; position: relative;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent-primary), var(--accent-info, #38bdf8));"></div>
+
+      <div style="padding: 28px 28px 24px 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+          <div style="display: flex; gap: 18px; align-items: center;">
+            <div style="
+              width: 64px; height: 64px; border-radius: 16px; flex-shrink: 0;
+              display: flex; align-items: center; justify-content: center;
+              font-size: 1.25rem; font-weight: 900; letter-spacing: -0.03em;
+              font-variant-numeric: tabular-nums;
+              background: linear-gradient(135deg, var(--accent-primary), var(--accent-info, #38bdf8));
+              color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+              padding: 0 6px;
+            ">
+              #{teamStats?.rank}
+            </div>
+            <div>
+              <h1 style="font-size: 2.25rem; margin: 0 0 6px 0; letter-spacing: -0.02em;">{actualTeamName}</h1>
+              <p style="color: var(--text-muted); font-size: 1rem; margin: 0;">
+                {teamStats?.conference}{rankings.projected ? ' · Preseason projection' : ''}
+              </p>
             </div>
           </div>
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Rank</div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--accent-primary);">#{teamStats?.rank}</div>
-          </div>
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Net Rating</div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--text);">{fmt(teamStats?.adj_net)}</div>
+
+          <div style="display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Record</div>
+              <div style="font-size: 1.4rem; font-weight: 900; line-height: 1; white-space: nowrap;">
+                {teamStats?.wins != null ? `${teamStats.wins}-${teamStats.losses}` : '—'}
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Net Rating</div>
+              <div style={`font-size: 1.4rem; font-weight: 900; line-height: 1; white-space: nowrap; color: ${
+                teamStats?.adj_net == null ? 'var(--text)' :
+                teamStats.adj_net >= 0 ? 'var(--accent-success, #16a34a)' : 'var(--accent-danger, #dc2626)'
+              };`}>
+                {teamStats?.adj_net != null && teamStats.adj_net > 0 ? '+' : ''}{fmt(teamStats?.adj_net)}
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div style="display: flex; gap: 32px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--card-border);">
-        <div>
-          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 4px;">Adj. Offense</div>
-          <div style="font-size: 1.5rem; font-weight: 700;">{fmt(teamStats?.adj_off)}</div>
+      <div style="display: flex; gap: 32px; padding: 18px 28px; border-top: 1px solid var(--card-border); background: var(--surface-2, #fafafa);">
+        <!-- Adj O -->
+        <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
+          <div style="
+            width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; font-weight: 900; letter-spacing: -0.03em;
+            font-variant-numeric: tabular-nums;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent, #38bdf8));
+            color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 0 4px;
+          ">
+            #{offRank}
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;">Adj. Offense</span>
+              <span style="font-size: 0.9rem; font-weight: 800; font-variant-numeric: tabular-nums;">{fmt(teamStats?.adj_off)}</span>
+            </div>
+            <div style="height: 6px; border-radius: 3px; background: var(--surface-3, #e2e8f0); overflow: hidden;">
+              <div style={`height: 100%; width: ${barWidth(teamStats?.adj_off)}%; background: var(--accent-success, #16a34a); border-radius: 3px; transition: width 0.3s;`}></div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 4px;">Adj. Defense</div>
-          <div style="font-size: 1.5rem; font-weight: 700;">{fmt(teamStats?.adj_def)}</div>
+
+        <!-- Adj D -->
+        <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
+          <div style="
+            width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; font-weight: 900; letter-spacing: -0.03em;
+            font-variant-numeric: tabular-nums;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent, #38bdf8));
+            color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 0 4px;
+          ">
+            #{defRank}
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;">Adj. Defense</span>
+              <span style="font-size: 0.9rem; font-weight: 800; font-variant-numeric: tabular-nums;">{fmt(teamStats?.adj_def)}</span>
+            </div>
+            <div style="height: 6px; border-radius: 3px; background: var(--surface-3, #e2e8f0); overflow: hidden;">
+              <div style={`height: 100%; width: ${barWidth(teamStats?.adj_def)}%; background: var(--accent-info, #38bdf8); border-radius: 3px; transition: width 0.3s;`}></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    {teamStats?.adj_net != null && teamStats?.direct_net != null && teamStats.direct_net !== 0 && (
-      <div class="card" style="margin-bottom: 24px; padding: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
-          <h2 class="section-title" style="margin: 0;">Model Synergy</h2>
-          <div style={`background: var(--surface-2); border: 1px solid ${synergyColor}; color: ${synergyColor}; padding: 6px 12px; border-radius: 20px; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;`}>
-            {synergyLabel}
-          </div>
-        </div>
-        <div class="analytics-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-          <div class="stat-box">
-            <span class="stat-label">Player RAPM Net</span>
-            <span class="stat-comparison"><strong>{fmt(teamStats.adj_net)}</strong></span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-label">Direct Box Net</span>
-            <span class="stat-comparison"><strong>{fmt(teamStats.direct_net)}</strong></span>
-          </div>
-          <div class="stat-box" style={`border-color: ${synergyColor};`}>
-            <span class="stat-label">Synergy Gap</span>
-            <span class="stat-comparison">
-              <strong style={`color: ${synergyColor};`}>
-                {synergyGap > 0 ? '+' : ''}{fmt(synergyGap)}
-              </strong>
-            </span>
-          </div>
-        </div>
-        <div style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted); text-align: center; border-top: 1px solid var(--card-border); padding-top: 16px;">
-          {synergyDesc}
-        </div>
-      </div>
-    )}
-
+    {/* ─────────── Roster ─────────── */}
     <h2 class="section-title">Roster & Player Ratings</h2>
     <div class="table-container">
       <table class="rank-table" id="rosterTable">
         <thead>
           <tr>
+            <th style="width: 56px; text-align: center;">Rk</th>
             <th class="sortable" data-sort="name">Player <span class="sort-icon">⇕</span></th>
             <th class="sortable" data-sort="position">Pos <span class="sort-icon">⇕</span></th>
             <th class="sortable num" data-sort="offensive_rating">Off RAPM <span class="sort-icon">⇕</span></th>
             <th class="sortable num" data-sort="defensive_rating">Def RAPM <span class="sort-icon">⇕</span></th>
             <th class="sortable num active" data-sort="net_rating">Net <span class="sort-icon">▼</span></th>
             <th class="sortable num" data-sort="minutes_share">{rankings.projected ? 'Proj. MPG ' : 'MPG '} <span class="sort-icon">⇕</span></th>
-            <th class="sortable" data-sort="status">Status <span class="sort-icon">⇕</span></th>
           </tr>
         </thead>
         <tbody id="rosterBody"></tbody>
       </table>
     </div>
 
-    {sortedPlayTypes.length > 0 && (
-      <div style="margin-top: 32px;">
-        <h2 class="section-title">Offensive Identity (Play Types)</h2>
-        <div class="table-container">
-          <table class="rank-table">
-            <thead>
-              <tr>
-                <th>Play Type</th>
-                <th class="num">Freq / Game</th>
-                <th class="num">Points Per Poss (PPP)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sortedPlayTypes.map((pt) => (
-                <tr>
-                  <td style="text-transform: capitalize;">{pt.type.replace(/_/g, ' ')}</td>
-                  <td class="num">{pt.freq.toFixed(1)}</td>
-                  <td class="num rating">{pt.ppp.toFixed(2)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    )}
-
+    {/* ─────────── Schedule ─────────── */}
     {schedule.length > 0 && (
       <div style="margin-top: 32px;">
         <h2 class="section-title">Schedule & Results</h2>
@@ -234,15 +298,16 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
                 <th>Date</th>
                 <th>Opponent</th>
                 <th style="text-align: center;">Loc</th>
-                <th class="num" style="text-align: center;">Result</th>
-                <th class="num" style="text-align: center;">Score</th>
+                <th style="text-align: center;">Result</th>
+                <th class="num" style="text-align: right;">PF</th>
+                <th class="num" style="text-align: right;">PA</th>
               </tr>
             </thead>
             <tbody>
               {schedule.map((g: any) => {
                 const isPlayed = g.team_score !== null && g.opp_score !== null;
                 return (
-                  <tr style={!isPlayed ? 'opacity: 0.7;' : ''}>
+                  <tr style={!isPlayed ? 'opacity: 0.55; font-style: italic;' : ''}>
                     <td>{new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
                     <td>
                       <a href={`/basketball/teams/${y}/${slugify(g.opponent)}/`} class="team-link">
@@ -252,11 +317,20 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
                     <td style="text-align: center; color: var(--text-muted);">
                       {g.neutral ? 'N' : (g.is_home ? 'vs' : '@')}
                     </td>
-                    <td class="num" style={`font-weight: 800; text-align: center; color: ${g.result === 'W' ? 'var(--accent-success)' : (g.result === 'L' ? 'var(--accent-danger)' : 'var(--text-muted)')}`}>
-                      {isPlayed ? g.result : '-'}
+                    <td style="text-align: center;">
+                      {isPlayed ? (
+                        <span style={`display: inline-block; padding: 2px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 900; color: ${g.result === 'W' ? 'var(--accent-success, #16a34a)' : 'var(--accent-danger, #dc2626)'}; background: ${g.result === 'W' ? 'rgba(22, 163, 74, 0.12)' : 'rgba(220, 38, 38, 0.12)'};`}>
+                          {g.result}
+                        </span>
+                      ) : (
+                        <span style="color: var(--text-muted); font-size: 0.75rem;">—</span>
+                      )}
                     </td>
-                    <td class="num" style="text-align: center;">
-                      {isPlayed ? `${g.team_score} - ${g.opp_score}` : 'TBD'}
+                    <td class="num" style="text-align: right; font-variant-numeric: tabular-nums; font-weight: 700;">
+                      {isPlayed ? g.team_score : '—'}
+                    </td>
+                    <td class="num" style="text-align: right; font-variant-numeric: tabular-nums; color: var(--text-muted);">
+                      {isPlayed ? g.opp_score : '—'}
                     </td>
                   </tr>
                 );
@@ -267,6 +341,58 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
       </div>
     )}
 
+    {/* ─────────── Offensive Identity & Shot Chart ─────────── */}
+    <div style="display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 24px; align-items: start; margin-top: 32px;">
+      
+      {/* Play Types */}
+      {sortedPlayTypes.length > 0 && (
+        <div class="card" style="padding: 20px;">
+          <h2 class="section-title" style="margin-top: 0; margin-bottom: 16px;">Offensive Identity</h2>
+          <div class="table-container" style="border: none; box-shadow: none; background: transparent;">
+            <table class="rank-table" style="font-size: 0.85rem;">
+              <thead>
+                <tr>
+                  <th>Play Type</th>
+                  <th class="num">Freq / Game</th>
+                  <th class="num">PPP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sortedPlayTypes.map((pt) => {
+                  const barPct = Math.max(4, (pt.freq / maxPlayTypeFreq) * 100);
+                  return (
+                    <tr>
+                      <td style="font-weight: 600;">{formatPlayType(pt.type)}</td>
+                      <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                          <div style="flex: 1; height: 6px; border-radius: 3px; background: var(--surface-3, #e2e8f0); overflow: hidden; min-width: 40px;">
+                            <div style={`height: 100%; width: ${barPct}%; background: linear-gradient(90deg, var(--accent-primary), var(--accent-info, #38bdf8)); border-radius: 3px;`}></div>
+                          </div>
+                          <span class="num" style="font-weight: 700; min-width: 36px; text-align: right; font-variant-numeric: tabular-nums;">{pt.freq.toFixed(1)}</span>
+                        </div>
+                      </td>
+                      <td class="num" style="font-weight: 800; font-variant-numeric: tabular-nums;">{pt.ppp.toFixed(2)}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Shot Chart */}
+      <div class="card" style="padding: 24px;">
+        <h2 class="section-title" style="margin-top: 0; margin-bottom: 16px;">Team Shot Chart</h2>
+        <ShotChart 
+          year={y} 
+          teamName={actualTeamName}
+          client:visible 
+        />
+      </div>
+
+    </div>
+
   </div>
 </Layout>
 
@@ -274,11 +400,12 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const yearSelect = document.getElementById('teamYearSelect') as HTMLSelectElement;
+    const yearSelect = document.getElementById('teamYearSelect') as HTMLSelectElement | null;
     if (yearSelect) {
       yearSelect.addEventListener('change', (e) => {
         const newYear = (e.target as HTMLSelectElement).value;
         const slug = yearSelect.dataset.slug;
+        if (!newYear || !slug) return;
         window.location.href = `/basketball/teams/${newYear}/${slug}/`;
       });
     }
@@ -316,8 +443,30 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
 
       tableBody.innerHTML = sorted.map((p: any) => {
         const pId = p.player_id || p.id;
+        const rank = p.rank ?? null;
+
+        const rankStyle = rank == null
+          ? 'color: var(--text-muted); font-size: 0.8rem;'
+          : rank <= 10
+            ? 'color:#d97706; background:rgba(217,119,6,0.12); padding:2px 7px; border-radius:6px; font-weight:800; font-size:0.75rem; white-space:nowrap;'
+            : rank <= 25
+              ? 'color:#64748b; background:rgba(100,116,139,0.12); padding:2px 7px; border-radius:6px; font-weight:800; font-size:0.75rem; white-space:nowrap;'
+              : rank <= 50
+                ? 'color:#b45309; background:rgba(180,83,9,0.12); padding:2px 7px; border-radius:6px; font-weight:800; font-size:0.75rem; white-space:nowrap;'
+                : 'color: var(--text-muted); font-size: 0.8rem;';
+
+        const netVal = p.net_rating;
+        const netColor = netVal == null
+          ? 'var(--text)'
+          : netVal >= 5
+            ? 'var(--accent-success, #16a34a)'
+            : netVal <= 0
+              ? 'var(--accent-danger, #dc2626)'
+              : 'var(--text)';
+
         return `
         <tr>
+          <td style="text-align: center;"><span style="${rankStyle}">${rank ?? '—'}</span></td>
           <td>
             <a href="/basketball/players/${currentYear}/${pId}/" class="team-link">
               <strong>${p.name}</strong>
@@ -326,9 +475,8 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
           <td style="color: var(--text-muted)">${p.position || '—'}</td>
           <td class="num">${fmt(p.offensive_rating)}</td>
           <td class="num">${fmt(p.defensive_rating)}</td>
-          <td class="num rating">${fmt(p.net_rating)}</td>
+          <td class="num rating" style="color: ${netColor}; font-weight: 800;">${fmt(p.net_rating)}</td>
           <td class="num">${getMpg(p)}</td>
-          <td style="font-size: 0.8rem; color: var(--text-muted)">${p.status}</td>
         </tr>
       `}).join('');
     }
@@ -340,8 +488,8 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
         const key = (th as HTMLElement).dataset.sort;
         if (!key) return;
         if (currentSortKey === key) currentSortDir *= -1;
-        else { currentSortKey = key; currentSortDir = (key === 'name' || key === 'position' || key === 'status') ? 1 : -1; }
-        
+        else { currentSortKey = key; currentSortDir = (key === 'name' || key === 'position') ? 1 : -1; }
+
         document.querySelectorAll('#rosterTable th.sortable').forEach(el => {
           el.classList.remove('active');
           const icon = el.querySelector('.sort-icon');
@@ -359,8 +507,18 @@ const sortedPlayTypes = Object.entries(teamPlayTypes)
 <style is:global>
   .team-link { color: var(--text); text-decoration: none; transition: color 0.2s ease; }
   .team-link:hover { color: var(--accent-primary); text-decoration: underline; }
+
   th.sortable { cursor: pointer; user-select: none; transition: color 0.2s; }
   th.sortable:hover { color: var(--accent-primary); }
   th.sortable .sort-icon { display: inline-block; margin-left: 4px; opacity: 0.3; font-size: 0.8em; }
   th.sortable.active .sort-icon { opacity: 1; color: var(--accent-primary); }
+
+  .hero-card { transition: box-shadow 0.2s ease; }
+  .hero-card:hover { box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08); }
+
+  #rosterTable tbody tr { transition: background-color 0.15s ease; }
+  #rosterTable tbody tr:hover { background: var(--surface-2, #f8fafc); }
+
+  .rank-table td.num,
+  .rank-table th.num { font-variant-numeric: tabular-nums; }
 </style>

@@ -16,12 +16,10 @@ const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
         <th class="sortable num" data-sort="adj_off">AdjOff <span class="sort-icon">⇕</span></th>
         <th class="sortable num" data-sort="adj_def">AdjDef <span class="sort-icon">⇕</span></th>
         <th class="sortable num active" data-sort="adj_net">AdjNet <span class="sort-icon">▼</span></th>
-        <th class="sortable num synergy-col" data-sort="synergy" style={projected ? 'display: none;' : ''}>Synergy <span class="sort-icon">⇕</span></th>
       </tr>
     </thead>
     <tbody id="bballTableBody">
       {teams.map(t => {
-        const synergy = (t.adj_net || 0) - (t.direct_net || 0);
         return (
           <tr class="bball-row" data-conf={t.conference || 'None'}>
             <td class="num">{t.rank}</td>
@@ -37,9 +35,6 @@ const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
             <td class="num">{fmt(t.adj_off)}</td>
             <td class="num">{fmt(t.adj_def)}</td>
             <td class="num rating">{fmt(t.adj_net)}</td>
-            <td class="num synergy-cell" style={`${projected ? 'display: none;' : ''} color: ${synergy > 0 ? 'var(--accent-danger)' : (synergy < 0 ? 'var(--accent-success)' : 'var(--text-muted)')}`}>
-              {synergy > 0 ? '+' : ''}{fmt(synergy)}
-            </td>
           </tr>
         );
       })}
