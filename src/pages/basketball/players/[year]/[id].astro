@@ -29,7 +29,7 @@ const validYears: number[] = entry?.teams
 // 3. Keep the rest of your logic exactly the same
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 ---
 
 <Layout title={`${player.name} - ${seasonLabel}`} seasonLabel={seasonLabel}>

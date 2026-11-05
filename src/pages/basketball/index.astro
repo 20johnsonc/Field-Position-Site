@@ -68,7 +68,7 @@ const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).fil
   let currentSortKey = 'adj_net';
   let currentSortDir = -1;
 
-  const slugifyTeam = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
   async function getFullData() {
     if (fullTeamsData.length > 0) return fullTeamsData;

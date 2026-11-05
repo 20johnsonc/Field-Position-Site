@@ -13,7 +13,7 @@ const data = await loadBasketballYear(y, Astro);
 if (!data) throw new Error(`Missing data for ${year}`);
 
 const { rankings, players } = data;
-const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 // Look up the team by slug
 const teamStats = rankings.teams.find((t: any) => slugify(t.team) === team);

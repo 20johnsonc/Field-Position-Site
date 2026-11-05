@@ -82,7 +82,7 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
   let currentSortDir = -1;
   const LIMIT = 100;
 
-  const slugifyTeam = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
   async function getFullData() {
     if (fullPlayersData.length > 0) return fullPlayersData;

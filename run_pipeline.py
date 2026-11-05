@@ -35,8 +35,7 @@ else:
     def get_secret(key): return os.environ.get(key)
 
 CBBD_API_KEY = get_secret('CBBD_API_KEY')
-GITHUB_TOKEN = get_secret('GITHUB_TOKEN')
-CBBD_PICKS_TOKEN = get_secret('CBBD_PREDICTIONS_KEY')
+CBBD_PICKS_TOKEN = get_secret('CBBD_PICKS_TOKEN')
 
 # ── 2. Constants ──
 PREDICTION_YEAR  = 2027

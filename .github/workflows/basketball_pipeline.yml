@@ -1,0 +1,59 @@
+name: Daily Basketball BPR Pipeline
+
+on:
+  schedule:
+    # Runs at 13:00 UTC (8:00 AM EST) every day
+    - cron: '0 13 * * *'
+  workflow_dispatch: # This adds a "Run workflow" button so you can test it manually
+
+# Give the action permission to push changes back to your repo
+permissions:
+  contents: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install pandas numpy scipy requests
+          sudo apt-get update && sudo apt-get install -y rclone
+
+      - name: Setup Rclone Config
+        run: |
+          mkdir -p ~/.config/rclone
+          echo "${{ secrets.RCLONE_CONFIG }}" | base64 -d > ~/.config/rclone/rclone.conf
+
+      - name: Download Cache from R2
+        run: |
+          # IMPORTANT: Change 'cbbd-data-cache' if you named your R2 bucket something else
+          rclone sync r2:cbbd-data-cache ./cbbd_data_cache -v
+
+      - name: Run Python Pipeline
+        env:
+          CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+          CBBD_PICKS_TOKEN: ${{ secrets.CBBD_PICKS_TOKEN }}
+          CBBD_CACHE_DIR: "./cbbd_data_cache"
+        run: |
+          python run_pipeline.py
+
+      - name: Upload Updated Cache to R2
+        run: |
+          rclone sync ./cbbd_data_cache r2:cbbd-data-cache -v
+
+      - name: Commit and Push Data
+        run: |
+          git config --global user.name "bpr-bot"
+          git config --global user.email "bpr-bot@users.noreply.github.com"
+          git add public/data/basketball/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Basketball BPR Export $(date +'%Y-%m-%d')"
+          git push

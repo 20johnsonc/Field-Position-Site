@@ -4,7 +4,7 @@ interface Props { players: BasketballPlayer[]; projected: boolean; year: number;
 const { players, projected, limit = 100, year } = Astro.props;
 const shown = players.slice(0, limit);
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-const slugify = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 // Helper returns a raw HTML string for the rank badges
 const renderBadge = (rank: number | null | undefined) => {
