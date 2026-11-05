@@ -1261,25 +1261,6 @@ for s in ALL_SEASONS:
     export_season(s, out_dir=SITE_EXPORT_DIR, dry_run=False)
 build_indexes(out_dir=SITE_EXPORT_DIR)
 
-print("Pushing to GitHub...")
-repo_dir = Path('/tmp/site_repo')
-shutil.rmtree(repo_dir, ignore_errors=True)
-subprocess.run(['git', 'clone', '--depth', '1', '-b', BRANCH, f'https://x-access-token:{GITHUB_TOKEN}@github.com/{GITHUB_REPO}.git', str(repo_dir)], check=True)
-
-dest = repo_dir / 'public' / 'data' / 'basketball'
-shutil.copytree(Path(SITE_EXPORT_DIR) / 'public/data/basketball', dest, dirs_exist_ok=True)
-subprocess.run(['git', 'config', 'user.name', 'bpr-bot'], cwd=repo_dir, check=True)
-subprocess.run(['git', 'config', 'user.email', 'bpr-bot@users.noreply.github.com'], cwd=repo_dir, check=True)
-subprocess.run(['git', 'add', '.'], cwd=repo_dir, check=True)
-
-status = subprocess.run(['git', 'status', '--porcelain'], cwd=repo_dir, capture_output=True, text=True).stdout
-if status.strip():
-    subprocess.run(['git', 'commit', '-m', f'Basketball BPR export {pd.Timestamp.now().strftime("%Y-%m-%d")}'], cwd=repo_dir, check=True)
-    subprocess.run(['git', 'push', 'origin', BRANCH], cwd=repo_dir, check=True)
-    print("  ✓ Pushed to GitHub")
-else:
-    print("  No changes to commit.")
-
 PICKS_BASE = 'https://predictionsapi.collegebasketballdata.com'
 PICKS_DRY_RUN = False
 PICK_IS_HOME_MARGIN = False
