@@ -36,7 +36,7 @@ jobs:
       - name: Download Cache from R2
         run: |
           # IMPORTANT: Change 'cbbd-data-cache' if you named your R2 bucket something else
-          rclone sync r2:cbbd-data-cache ./cbbd_data_cache -v
+          rclone copy r2:cbbd-data-cache ./cbbd_data_cache -v
 
       - name: Run Python Pipeline
         env:
@@ -48,7 +48,7 @@ jobs:
 
       - name: Upload Updated Cache to R2
         run: |
-          rclone sync ./cbbd_data_cache r2:cbbd-data-cache -v
+          rclone copy ./cbbd_data_cache r2:cbbd-data-cache -v
 
       - name: Commit and Push Data
         run: |
