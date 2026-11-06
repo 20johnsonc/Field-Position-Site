@@ -2,20 +2,24 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-export const prerender = false;
+export const prerender = true;
 
-let latest = null;
-try {
-  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
-  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
-  const years = [...(indexData.years || [])].sort((a, b) => b - a);
-  latest = years[0];
-} catch (e) {
-  throw new Error("Failed to read basketball index.json at build time");
-}
+const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
+const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
 
-if (!latest) throw new Error("No basketball years found in index.json");
-
-// Instantly redirect to the latest year's URL
-return Astro.redirect(`/basketball/${latest}/`);
+// Sort DESCENDING to get the latest year, not the earliest
+const years = [...(indexData.years || [])].sort((a, b) => b - a);
+const latest = years[0] || 2027;
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=/basketball/${latest}/`} />
+    <title>Basketball</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={`/basketball/${latest}/`}>/basketball/{latest}/</a>...</p>
+  </body>
+</html>

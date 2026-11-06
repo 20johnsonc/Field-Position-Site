@@ -3,30 +3,25 @@ import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
 import ShotChart from '../../../../components/ShotChart';
 import { fetchJson } from '../../../../lib/basketball';
-import fs from 'node:fs';
-import path from 'node:path';
 
-export const prerender = false; // SSR Mode
+export const prerender = false; // 👈 SSR Mode!
 
 const { year, team } = Astro.params;
 const y = Number(year);
 
-// BULLETPROOF FIX: Read directly from the file system
-let rankings, players;
-try {
-  const rankingsPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'rankings.json');
-  const playersPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'players.json');
-  
-  rankings = JSON.parse(fs.readFileSync(rankingsPath, 'utf-8'));
-  players = JSON.parse(fs.readFileSync(playersPath, 'utf-8'));
-} catch (e) {
-  throw new Error(`Missing data for ${y}. Make sure rankings.json and players.json exist.`);
+const rankingsDoc = await fetchJson(Astro, `/data/basketball/${y}/rankings.json`);
+const playersDoc = await fetchJson(Astro, `/data/basketball/${y}/players.json`);
+// Aliases to match the rest of the template's variable names
+const rankings = rankingsDoc;
+const players = playersDoc;
+
+if (!rankingsDoc || !playersDoc) {
+  throw new Error(`Missing data for ${y}. Make sure the JSON files exist.`);
 }
 
 const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-// Look up the team by slug
-const teamStats = rankings.teams.find((t: any) => slugify(t.team) === team);
+const teamStats = rankingsDoc.teams.find((t: any) => slugify(t.team) === team);
 if (!teamStats) return Astro.redirect('/basketball/');
 
 const actualTeamName = teamStats.team;
@@ -173,9 +168,9 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
       <div class="tabs" style="margin-bottom: 0;">
-        <a href="/basketball/" class="tab-btn" style="text-decoration: none;">Team Rankings</a>
-        <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
-        <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
+        <a href={`/basketball/${y}/`} class="tab-btn" style="text-decoration: none;">Team Rankings</a>
+        <a href={`/basketball/players/${y}/`} class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
+        <a href={`/basketball/game-preview/`} class="tab-btn" style="text-decoration: none;">Game Preview</a>
       </div>
 
       {validYears.length > 1 && (

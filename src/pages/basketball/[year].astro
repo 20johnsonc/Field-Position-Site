@@ -49,9 +49,9 @@ const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings'
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
       <div class="tabs" style="margin-bottom: 0;">
-        <a href="/basketball/" class="tab-btn active" style="text-decoration: none;">Team Rankings</a>
-        <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
-        <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
+        <a href={`/basketball/${y}/`} class="tab-btn active" style="text-decoration: none;">Team Rankings</a>
+        <a href={`/basketball/players/${y}/`} class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
+        <a href={`/basketball/game-preview/`} class="tab-btn" style="text-decoration: none;">Game Preview</a>
       </div>
     </div>
 

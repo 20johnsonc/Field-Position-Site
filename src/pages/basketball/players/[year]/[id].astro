@@ -2,24 +2,19 @@
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
 import PlayerDashboard from '../../../../components/PlayerDashboard';
-import fs from 'node:fs';
-import path from 'node:path';
+import { fetchJson } from '../../../../lib/basketball';
 
-export const prerender = false;
+export const prerender = false; // 👈 SSR Mode!
 
 const { year, id } = Astro.params;
 const y = Number(year);
 
-// BULLETPROOF FIX: Read directly from the file system
-let playersDoc, rankingsDoc;
-try {
-  const playersPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'players.json');
-  const rankingsPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'rankings.json');
-  
-  playersDoc = JSON.parse(fs.readFileSync(playersPath, 'utf-8'));
-  rankingsDoc = JSON.parse(fs.readFileSync(rankingsPath, 'utf-8'));
-} catch (e) {
-  throw new Error(`Missing data for ${y}. Make sure players.json and rankings.json exist.`);
+// Fetch data using Cloudflare's ASSETS binding (no fs needed)
+const playersDoc = await fetchJson(Astro, `/data/basketball/${y}/players.json`);
+const rankingsDoc = await fetchJson(Astro, `/data/basketball/${y}/rankings.json`);
+
+if (!playersDoc || !rankingsDoc) {
+  throw new Error(`Missing data for ${y}. Make sure the JSON files exist.`);
 }
 
 const player = playersDoc.players.find((p: any) => String(p.player_id || p.id) === id);
@@ -33,12 +28,7 @@ const sColor = teamStats.secondaryColor || 'var(--accent-info)';
 const teamGradient = `linear-gradient(135deg, ${pColor}, ${sColor})`;
 
 // Fetch player-index for the year selector
-let playerIndexRaw = null;
-try {
-  const indexPath = path.join(process.cwd(), 'public', 'data', 'basketball', 'player-index.json');
-  playerIndexRaw = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
-} catch(e) {}
-
+const playerIndexRaw = await fetchJson(Astro, '/data/basketball/player-index.json');
 const entry = playerIndexRaw?.[id];
 const validYears: number[] = entry?.teams
   ? [...new Set(entry.teams.map((t: any) => Number(t.year)))].sort((a, b) => b - a)
@@ -56,9 +46,9 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
       <div class="tabs" style="margin-bottom: 0;">
-        <a href="/basketball/" class="tab-btn" style="text-decoration: none;">Team Rankings</a>
-        <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
-        <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
+        <a href={`/basketball/${y}/`} class="tab-btn" style="text-decoration: none;">Team Rankings</a>
+        <a href={`/basketball/players/${y}/`} class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
+        <a href={`/basketball/game-preview/`} class="tab-btn" style="text-decoration: none;">Game Preview</a>
       </div>
 
       {validYears.length > 1 && (

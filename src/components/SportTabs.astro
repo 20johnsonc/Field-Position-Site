@@ -1,12 +1,25 @@
 ---
+import { fetchJson } from '../lib/basketball';
+
 const { pathname } = Astro.url;
 const isBasketball = pathname.startsWith('/basketball');
+
+// 1. Fetch the index to find the latest year
+const indexData = await fetchJson(Astro, '/data/basketball/index.json');
+
+// 2. Sort descending to get the latest (e.g., 2027)
+const years = [...(indexData?.years || [])].sort((a, b) => b - a);
+const latest = years[0] || 2027;
+
+// 3. Generate the direct link
+const basketballLink = `/basketball/${latest}/`;
 ---
+
 <div class="sport-tabs">
   <a href="/" class={`sport-tab ${!isBasketball ? 'active' : ''}`}>
     Football
   </a>
-  <a href="/basketball/2027" class={`sport-tab ${isBasketball ? 'active' : ''}`}>
+  <a href={basketballLink} class={`sport-tab ${isBasketball ? 'active' : ''}`}>
     Basketball
   </a>
 </div>

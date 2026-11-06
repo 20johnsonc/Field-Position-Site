@@ -143,29 +143,32 @@ export type ScheduleDoc = Record<string, ScheduleGame[]>;
 // Fetch helpers
 // ═══════════════════════════════════════════════════════════════════
 
-import fs from 'node:fs';
-import path from 'node:path';
-
 export async function fetchJson(ctx: any, urlPath: string): Promise<any | null> {
-  // 1. Try standard fetch (works in production and dev)
+  // 1. Try standard fetch (works in production SSR on Cloudflare)
   try {
     const url = new URL(urlPath, ctx.url);
     const env = ctx.locals?.runtime?.env;
     const res = env?.ASSETS ? await env.ASSETS.fetch(url) : await fetch(url);
     if (res.ok) return await res.json();
   } catch (e) {
-    // Ignore fetch errors, fall through to local file system check
+    // Ignore fetch errors
   }
 
-  // 2. Fallback: Read directly from the local file system (fixes local dev 404s)
-  try {
-    const filePath = path.join(process.cwd(), 'public', urlPath);
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf-8');
-      return JSON.parse(content);
+  // 2. Fallback: Read from local filesystem ONLY if running in local dev
+  if (import.meta.env.DEV) {
+    try {
+      // Dynamic import prevents Cloudflare Workers from crashing
+      const fs = await import('node:fs');
+      const path = await import('node:path');
+      
+      const filePath = path.join(process.cwd(), 'public', urlPath);
+      if (fs.existsSync(filePath)) {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content);
+      }
+    } catch (e) {
+      // Ignore fs errors
     }
-  } catch (e) {
-    // Ignore fs errors
   }
 
   return null;

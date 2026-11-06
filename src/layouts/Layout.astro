@@ -76,9 +76,8 @@ const pageTitle = title ? `${title} | ${brand}` : brand;
       
       <!-- Global Header (Logo, Title, Dark Mode) -->
       <header>
-        <a href={isBasketball ? "/basketball/" : "/"} class="logo-link">
+        <a href={isBasketball ? "/basketball/2027/" : "/"} id="headerLogoLink" class="logo-link">
           <div class="logo-area">
-            <!-- This now dynamically shows "College Basketball Ratings" or "CFB Power Rankings" -->
             <h1>{brand}</h1>
             <p>{subtitle}</p>
           </div>
@@ -95,6 +94,28 @@ const pageTitle = title ? `${title} | ${brand}` : brand;
     </div>
   </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const logoLink = document.getElementById('headerLogoLink');
+    if (!logoLink) return;
+
+    const path = window.location.pathname;
+    
+    // Check if we are on a basketball page
+    if (path.startsWith('/basketball')) {
+      const parts = path.split('/').filter(Boolean); // ['basketball', '2027', 'teams', ...]
+      
+      // If the second part is a year (e.g., '2027'), set the logo link to `/basketball/2027/`
+      if (parts.length > 1 && /^\d{4}$/.test(parts[1])) {
+        logoLink.href = `/basketball/${parts[1]}/`;
+      } else {
+        // If we are just on /basketball/, let the redirect handle it
+        logoLink.href = '/basketball/';
+      }
+    }
+  });
+</script>
 
 <style>
   .logo-link {
