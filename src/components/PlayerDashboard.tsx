@@ -1,11 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ShotChart from './ShotChart';
 
-interface PlayerDashboardProps {
-  player: any;
-  year: number;
-}
-
 export default function PlayerDashboard({ player, year }: { player: any, year: number }) {
   const [gameFilter, setGameFilter] = useState<string>('all');
   const [gameLogs, setGameLogs] = useState<any[]>([]);
@@ -17,18 +12,16 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
   useEffect(() => {
     async function fetchData() {
       try {
-        // 1. Fetch Game Logs (For the whole team)
         const logsRes = await fetch(`/data/basketball/${year}/game_logs/${teamSlug}.json`);
         if (logsRes.ok) {
           const teamLogs = await logsRes.json();
-          setGameLogs(teamLogs[pid] || []); // Extract just this player
+          setGameLogs(teamLogs[pid] || []); 
         }
 
-        // 2. Fetch Shots (For the whole team)
         const shotsRes = await fetch(`/data/basketball/${year}/shots/${teamSlug}.json`);
         if (shotsRes.ok) {
           const teamShots = await shotsRes.json();
-          setAllShots(teamShots[pid] || []); // Extract just this player
+          setAllShots(teamShots[pid] || []); 
         }
       } catch (e) {
         console.error("Failed to load team data", e);
@@ -41,34 +34,46 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
 
   // Box Score Logic
   const boxStats = activeGame ? {
-    pts: activeGame.points, reb: activeGame.rebounds, ast: activeGame.assists,
-    stl: activeGame.steals, blk: activeGame.blocks, tov: activeGame.turnovers,
-    min: activeGame.minutes, ftm: activeGame.ftm, fta: activeGame.fta,
-    ts: null, usg: null, porpag: null
+    pts: activeGame.points, 
+    reb: activeGame.rebounds, 
+    ast: activeGame.assists,
+    stl: activeGame.steals, 
+    blk: activeGame.blocks, 
+    tov: activeGame.turnovers,
+    min: activeGame.minutes,
+    fgm: activeGame.fgm,
+    fga: activeGame.fga,
+    tpm: activeGame.tpm,
+    tpa: activeGame.tpa,
+    ftm: activeGame.ftm, 
+    fta: activeGame.fta,
+    ts: null, 
+    usg: null
   } : {
-    pts: player.pts_pg, reb: player.reb_pg, ast: player.ast_pg,
-    stl: player.stl_pg, blk: player.blk_pg, tov: player.tov_pg,
-    min: player.min_pg, ftm: player.ftm, fta: player.fta,
-    ts: player.ts_pct, usg: player.usage, porpag: player.porpag
+    pts: player.pts_pg, 
+    reb: player.reb_pg, 
+    ast: player.ast_pg,
+    stl: player.stl_pg, 
+    blk: player.blk_pg, 
+    tov: player.tov_pg,
+    min: player.min_pg, 
+    fgm: null, 
+    fga: null,
+    tpm: null,
+    tpa: null,
+    ftm: player.ftm, 
+    fta: player.fta,
+    ts: player.ts_pct, 
+    usg: player.usage
   };
-
-  console.log('[DBG]',
-  'year:', year,
-  'name:', player?.name,
-  'id:', player?.player_id,
-  'gp:', player?.gp,
-  'pts_pg:', player?.pts_pg,
-  'reb_pg:', player?.reb_pg);
 
   const displayPlayTypes = useMemo(() => {
     if (!activeGame) {
-      // Season Play Types (from players.json)
       return player.play_types ? Object.entries(player.play_types).map(([type, d]: [string, any]) => ({
         type, ppp: d.ppp, freq: d.freq_pg || d.freq
       })).sort((a,b) => b.freq - a.freq) : [];
     }
     
-    // Game Shot Profile (Calculated from shots.json)
     const gameShots = allShots.filter((s: any) => String(s.game_id) === gameFilter);
     const zones: Record<string, { made: number, att: number }> = {};
     
@@ -90,10 +95,17 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
   }, [activeGame, player, gameFilter, allShots]);
 
   const fmt = (v: number | null, d = 1) => v == null ? '—' : Number(v).toFixed(d);
+  
   const pct = (v: number | null) => {
     if (v == null) return '—';
     const val = v > 1 ? v : v * 100;
     return val.toFixed(1) + '%';
+  };
+
+  const fmtShooting = (made: number | null | undefined, att: number | null | undefined) => {
+    if (made == null || att == null || att === 0) return '—';
+    const pctVal = ((made / att) * 100).toFixed(1);
+    return `${made}-${att} (${pctVal}%)`;
   };
 
   const RankBadge = ({ rank }: { rank: number | null | undefined }) => {
@@ -105,16 +117,46 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
     else if (rank <= 50) { color = '#b45309'; bg = 'rgba(180, 83, 9, 0.15)'; }
     
     return (
-      <span style={{ fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', marginLeft: '6px', fontWeight: 800, color, background: bg, verticalAlign: 'middle' }}>
+      <span style={{ fontSize: '0.6rem', padding: '2px 5px', borderRadius: '4px', fontWeight: 800, color, background: bg, verticalAlign: 'middle' }}>
         #{rank}
       </span>
     );
   };
 
+  // Compact Stat Box for the grid
+  const StatBox = ({ label, value, rank }: { label: string, value: string, rank?: number }) => (
+    <div style={{ 
+      display: 'flex', 
+      justifyContent: 'space-between', 
+      alignItems: 'center', 
+      padding: '8px 12px', 
+      background: 'var(--surface-2)', 
+      borderRadius: '6px' 
+    }}>
+      <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+        {label}
+      </span>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        {rank && <RankBadge rank={rank} />}
+        <span style={{ 
+          fontSize: '0.95rem', 
+          fontWeight: 600, 
+          color: 'var(--text)',
+          fontVariantNumeric: 'tabular-nums',
+          minWidth: '40px',
+          textAlign: 'right'
+        }}>
+          {value}
+        </span>
+      </div>
+    </div>
+  );
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       
-      <div className="card" style={{ padding: '10px' }}>
+      {/* RAPM Breakdown */}
+      <div className="card" style={{ padding: '20px' }}>
         <h2 className="section-title" style={{ marginTop: 0, marginBottom: '16px' }}>RAPM Breakdown</h2>
         <div className="analytics-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
           <div className="stat-box">
@@ -128,100 +170,46 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 380px) 1fr', gap: '24px', alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(320px, 400px) 1fr', gap: '24px', alignItems: 'start' }}>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           
+          {/* Compact Grid Box Score */}
           <div className="card" style={{ padding: '20px' }}>
             <h2 className="section-title" style={{ marginTop: 0, marginBottom: '16px' }}>
-              {activeGame ? `Box Score @ ${activeGame.opponent}` : 'Box Score (Season)'}
+              {activeGame ? `Box Score @ ${activeGame.opponent}` : 'Season Stats'}
             </h2>
-            <div className="analytics-grid" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+              <StatBox label={activeGame ? 'MIN' : 'MPG'} value={fmt(boxStats.min)} />
+              <StatBox label="STL" value={fmt(boxStats.stl)} rank={player.stl_pg_rank} />
               
-              <div className="stat-box">
-                <span className="stat-label">PPG</span>
-                <span className="stat-comparison">
-                  <strong>{fmt(boxStats.pts)}</strong>
-                  <RankBadge rank={player.pts_pg_rank} />
-                </span>
-              </div>
+              <StatBox label={activeGame ? 'PTS' : 'PPG'} value={fmt(boxStats.pts)} rank={player.pts_pg_rank} />
+              <StatBox label="BLK" value={fmt(boxStats.blk)} rank={player.blk_pg_rank} />
               
-              <div className="stat-box">
-                <span className="stat-label">RPG</span>
-                <span className="stat-comparison">
-                  <strong>{fmt(boxStats.reb)}</strong>
-                  <RankBadge rank={player.reb_pg_rank} />
-                </span>
-              </div>
+              <StatBox label={activeGame ? 'REB' : 'RPG'} value={fmt(boxStats.reb)} rank={player.reb_pg_rank} />
+              <StatBox label="TO" value={fmt(boxStats.tov)} />
               
-              <div className="stat-box">
-                <span className="stat-label">APG</span>
-                <span className="stat-comparison">
-                  <strong>{fmt(boxStats.ast)}</strong>
-                  <RankBadge rank={player.ast_pg_rank} />
-                </span>
-              </div>
-              
-              <div className="stat-box">
-                <span className="stat-label">SPG</span>
-                <span className="stat-comparison">
-                  <strong>{fmt(boxStats.stl)}</strong>
-                  <RankBadge rank={player.stl_pg_rank} />
-                </span>
-              </div>
-              
-              <div className="stat-box">
-                <span className="stat-label">BPG</span>
-                <span className="stat-comparison">
-                  <strong>{fmt(boxStats.blk)}</strong>
-                  <RankBadge rank={player.blk_pg_rank} />
-                </span>
-              </div>
-              
-              <div className="stat-box">
-                <span className="stat-label">TO</span>
-                <span className="stat-comparison"><strong>{fmt(boxStats.tov)}</strong></span>
-              </div>
-              
-              <div className="stat-box"><span className="stat-label">FTM</span><span className="stat-comparison"><strong>{fmt(boxStats.ftm)}</strong></span></div>
-              <div className="stat-box"><span className="stat-label">FTA</span><span className="stat-comparison"><strong>{fmt(boxStats.fta)}</strong></span></div>
-              <div className="stat-box"><span className="stat-label">FT%</span><span className="stat-comparison"><strong>{boxStats.ftm && boxStats.fta ? ((boxStats.ftm / boxStats.fta) * 100).toFixed(1) + '%' : '—'}</strong></span></div>
+              <StatBox label={activeGame ? 'AST' : 'APG'} value={fmt(boxStats.ast)} rank={player.ast_pg_rank} />
+              <StatBox label="TS%" value={pct(boxStats.ts)} rank={player.ts_pct_rank} />
+            </div>
 
-              {!activeGame && (
-                <>
-                  <div className="stat-box">
-                    <span className="stat-label">TS%</span>
-                    <span className="stat-comparison">
-                      <strong>{pct(boxStats.ts)}</strong>
-                      <RankBadge rank={player.ts_pct_rank} />
-                    </span>
-                  </div>
-                  <div className="stat-box">
-                    <span className="stat-label">USG%</span>
-                    <span className="stat-comparison">
-                      <strong>{pct(boxStats.usg)}</strong>
-                      <RankBadge rank={player.usage_rank} />
-                    </span>
-                  </div>
-                  <div className="stat-box">
-                    <span className="stat-label">PORPAG</span>
-                    <span className="stat-comparison">
-                      <strong>{fmt(boxStats.porpag)}</strong>
-                      <RankBadge rank={player.porpag_rank} />
-                    </span>
-                  </div>
-                </>
-              )}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '8px' }}>
+              <StatBox label="FG" value={fmtShooting(boxStats.fgm, boxStats.fga)} />
+              <StatBox label="3PT" value={fmtShooting(boxStats.tpm, boxStats.tpa)} />
+              <StatBox label="FT" value={fmtShooting(boxStats.ftm, boxStats.fta)} />
+              <StatBox label="USG%" value={pct(boxStats.usg)} rank={player.usage_rank} />
             </div>
           </div>
 
+          {/* Play Types */}
           {displayPlayTypes.length > 0 && (
             <div className="card" style={{ padding: '20px' }}>
               <h2 className="section-title" style={{ marginTop: 0, marginBottom: '16px' }}>
                 {activeGame ? 'Shot Profile (Game)' : 'Play Types (Season)'}
               </h2>
               <div className="table-container" style={{ border: 'none', boxShadow: 'none', background: 'transparent' }}>
-                <table className="rank-table" style={{ fontSize: '0.85rem' }}>
+                <table className="rank-table compact-table" style={{ fontSize: '0.85rem' }}>
                   <thead>
                     <tr>
                       <th>Type</th>
@@ -245,6 +233,7 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
             </div>
           )}
 
+          {/* Clutch */}
           {player.clutch_stats && player.clutch_stats.fga > 0 && (
             <div className="card" style={{ padding: '20px', opacity: activeGame ? 0.5 : 1 }}>
               <h2 className="section-title" style={{ marginTop: 0, marginBottom: '16px' }}>Clutch (Season)</h2>
@@ -257,11 +246,12 @@ export default function PlayerDashboard({ player, year }: { player: any, year: n
           )}
         </div>
 
+        {/* Shot Chart */}
         <div className="card" style={{ padding: '24px' }}>
           <ShotChart 
             year={year} 
             playerId={pid} 
-            teamName={player.team} // <-- ADD THIS
+            teamName={player.team}
             externalGameFilter={gameFilter}
             onGameFilterChange={setGameFilter}
           />

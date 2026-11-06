@@ -5,58 +5,49 @@ import BasketballRankingsTable from '../../components/BasketballRankingsTable.as
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-export const prerender = true; // 👈 Force this to be static
+export const prerender = true;
 
-// 1. Tell Astro to build a static page for every year
+// 1. Tell Astro which pages to build
 export async function getStaticPaths() {
+  let years: number[] = [];
   try {
     const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
     const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
-    const years = indexData.years || [];
-
-    return years.map((year: number) => ({
-      params: { year: String(year) },
-    }));
+    years = [...(indexData.years || [])].sort((a, b) => b - a);
   } catch (e) {
-    console.error("Failed to read index.json for getStaticPaths", e);
-    return [];
+    years = [2027]; // Fallback
   }
+
+  // This creates a page for /2024/, /2025/, /2026/, etc.
+  return years.map((year) => ({
+    params: { year: year.toString() },
+    props: { year, allYears: years }
+  }));
 }
 
-const { year } = Astro.params;
+// 2. Get the data for the specific page
+const { year, allYears } = Astro.props;
 const y = Number(year);
 
-// 2. Read the year's rankings directly from the filesystem
 let rankings = null;
 try {
-  const rankingsPath = join(process.cwd(), 'public', `data/basketball/${y}/rankings.json`);
+  const rankingsPath = join(process.cwd(), 'public', 'data', 'basketball', `${y}/rankings.json`);
   rankings = JSON.parse(readFileSync(rankingsPath, 'utf-8'));
 } catch (err) {
-  throw new Error(`Missing basketball data for ${year}`);
+  throw new Error(`Missing rankings.json for ${y}. Make sure the file exists at public/data/basketball/${y}/rankings.json`);
 }
+
+const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).filter(Boolean))].sort() as string[];
 
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const stateLabel = rankings.projected ? 'Preseason projection' : 'Final ratings';
-
-// 3. Read the years list directly for the dropdown navigation
-let years = [];
-try {
-  const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
-  const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
-  years = [...(indexData.years || [])].sort((a, b) => b - a); // sorted descending
-} catch (e) {
-  years = [y];
-}
-
-// 4. Compute conferences at build time
-const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).filter(Boolean))].sort();
 ---
-<Layout title={`Basketball ${seasonLabel}`} seasonLabel={seasonLabel} lastUpdate={rankings.generated_at}>
+
+<Layout title={`Team Rankings ${seasonLabel}`} seasonLabel={seasonLabel}>
   <div class="container">
     
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
-      
       <div class="tabs" style="margin-bottom: 0;">
         <a href="/basketball/" class="tab-btn active" style="text-decoration: none;">Team Rankings</a>
         <a href="/basketball/players/" class="tab-btn" style="text-decoration: none;">Player Leaderboard</a>
@@ -64,27 +55,47 @@ const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).fil
       </div>
     </div>
 
-    <div class="controls">
-      <select id="yearFilter">
-        {years.map(yr => (
+    <div style="margin-bottom: 24px;">
+      <h1 style="font-size: 2rem; margin: 0 0 4px 0; letter-spacing: -0.02em;">College Basketball Ratings</h1>
+      <p style="color: var(--text-muted); font-size: 1rem; margin: 0;">
+        Player-first RAPM ratings, opponent-adjusted for college basketball.
+      </p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls" style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; align-items: center; background: var(--surface-1); padding: 16px; border-radius: 8px; border: 1px solid var(--card-border);">
+      
+      <select id="yearFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
+        {allYears.map((yr: number) => (
           <option value={yr} selected={yr === y}>
-            {yr - 1}-{String(yr).slice(-2)}
+            {yr - 1}-{String(yr).slice(-2)} Season
           </option>
         ))}
       </select>
-      
-      <select id="confFilter">
+
+      <select id="confFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
         <option value="ALL">All Conferences</option>
         {conferences.map(c => (
           <option value={c}>{c}</option>
         ))}
       </select>
 
-      <input type="text" id="teamSearch" placeholder="Search teams..." style="margin-left: auto; width: 240px;">
+      <input 
+        type="text" 
+        id="teamSearch" 
+        placeholder="Search teams..." 
+        style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; outline: none; flex: 1; min-width: 200px; max-width: 300px;"
+      />
+      
     </div>
 
-    <BasketballRankingsTable teams={rankings.teams} projected={rankings.projected} year={y} />
-    
+    <BasketballRankingsTable 
+      teams={rankings.teams} 
+      year={y} 
+      limit={400} 
+      projected={rankings.projected} 
+    />
+
   </div>
 </Layout>
 
@@ -92,147 +103,50 @@ const conferences = [...new Set(rankings.teams.map((t: any) => t.conference).fil
   const yearSelect = document.getElementById('yearFilter') as HTMLSelectElement;
   const confSelect = document.getElementById('confFilter') as HTMLSelectElement;
   const searchInput = document.getElementById('teamSearch') as HTMLInputElement;
-  const tableBody = document.getElementById('bballTableBody');
+  const tableBody = document.getElementById('bballTeamsBody');
+  const limitNotice = document.getElementById('bballTeamsLimitNotice'); // NEW
 
-  let fullTeamsData: any[] = [];
-  let currentSortKey = 'adj_net';
-  let currentSortDir = -1;
-
-  const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-
-  async function getFullData() {
-    if (fullTeamsData.length > 0) return fullTeamsData;
-    const year = yearSelect?.value;
-    if (!year) return [];
-    const res = await fetch(`/data/basketball/${year}/rankings.json`);
-    const data = await res.json();
-    fullTeamsData = data.teams;
-    return fullTeamsData;
+  if (yearSelect) {
+    yearSelect.addEventListener('change', (e) => {
+      const selectedYear = (e.target as HTMLSelectElement).value;
+      window.location.href = `/basketball/${selectedYear}/`;
+    });
   }
 
-  async function applyFilterAndSort() {
-    const selectedConf = confSelect?.value || 'ALL';
-    const searchQuery = searchInput?.value.toLowerCase().trim() || '';
-    const all = await getFullData();
-    const currentYear = yearSelect?.value;
+  function filterTable() {
+    if (!tableBody) return;
+    
+    const search = searchInput?.value.toLowerCase().trim() || '';
+    const conf = confSelect?.value || 'ALL';
+    const rows = tableBody.querySelectorAll('tr');
+    
+    let visibleCount = 0;
 
-    // 1. Filter by Conference
-    let filtered = all.filter((t: any) => selectedConf === 'ALL' || (t.conference || 'None') === selectedConf);
-
-    // 2. Calculate Net Rating Rank FIRST (so it doesn't change when sorting by AdjOff)
-    const rankMap: Record<string, number> = {};
-    [...filtered]
-      .sort((a: any, b: any) => (b.adj_net || 0) - (a.adj_net || 0))
-      .forEach((t: any, index: number) => {
-        rankMap[t.team] = index + 1;
-      });
-
-    // 4. Sort by the currently clicked column
-    filtered.sort((a: any, b: any) => {
-      let valA = a[currentSortKey];
-      let valB = b[currentSortKey];
+    rows.forEach(row => {
+      const teamName = (row.getAttribute('data-team') || '').toLowerCase();
+      const teamConf = row.getAttribute('data-conf') || 'None';
       
-      if (currentSortKey === 'wins') {
-        valA = (a.wins != null && (a.wins + a.losses) > 0) ? a.wins / (a.wins + a.losses) : -1;
-        valB = (b.wins != null && (b.wins + b.losses) > 0) ? b.wins / (b.wins + b.losses) : -1;
-      } else if (typeof valA === 'string' && typeof valB === 'string') {
-        return valA.localeCompare(valB) * currentSortDir;
+      const matchSearch = teamName.includes(search);
+      const matchConf = conf === 'ALL' || teamConf === conf;
+      
+      if (matchSearch && matchConf) {
+        (row as HTMLElement).style.display = '';
+        visibleCount++;
+      } else {
+        (row as HTMLElement).style.display = 'none';
       }
-      
-      if (valA == null) valA = -999;
-      if (valB == null) valB = -999;
-      return (valA - valB) * currentSortDir;
     });
 
-    // 5. Filter by Search
-    if (searchQuery) {
-      filtered = filtered.filter((t: any) => t.team.toLowerCase().includes(searchQuery));
-    }
-
-    // 6. Render
-    const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-    const isProjected = document.querySelector('.wl-col')?.getAttribute('style')?.includes('none');
-
-    if (tableBody) {
-      if (filtered.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">No teams match your search.</td></tr>`;
+    // Hide the "Showing top X" text if actively filtering
+    if (limitNotice) {
+      if (search !== '' || conf !== 'ALL') {
+        limitNotice.style.display = 'none';
       } else {
-                tableBody.innerHTML = filtered.map((t: any) => {
-          const rapmRank = rankMap[t.team];
-          
-          return `
-          <tr class="bball-row" data-conf="${t.conference || 'None'}">
-            <td class="num">${rapmRank}</td>
-            <td><a href="/basketball/teams/${currentYear}/${slugifyTeam(t.team)}/" class="team-link"><strong>${t.team}</strong></a></td>
-            <td style="color: var(--text-muted)">${t.conference || '—'}</td>
-            
-            <td class="num wl-cell" style="${isProjected ? 'display: none;' : ''}">${t.wins != null ? `${t.wins}-${t.losses}` : '—'}</td>
-            
-            <td class="num">${fmt(t.adj_off)}</td>
-            <td class="num">${fmt(t.adj_def)}</td>
-            <td class="num rating">${fmt(t.adj_net)}</td>
-          </tr>
-        `}).join('');
+        limitNotice.style.display = 'block';
       }
     }
   }
 
-  searchInput?.addEventListener('input', applyFilterAndSort);
-  confSelect?.addEventListener('change', applyFilterAndSort);
-  
-  yearSelect?.addEventListener('change', async (e) => {
-    const year = (e.target as HTMLSelectElement).value;
-    const res = await fetch(`/data/basketball/${year}/rankings.json`);
-    const data = await res.json();
-    
-    fullTeamsData = data.teams;
-    if (searchInput) searchInput.value = '';
-    
-    const confs = [...new Set(data.teams.map((t: any) => t.conference).filter(Boolean))].sort() as string[];
-    if (confSelect) {
-      confSelect.innerHTML = '<option value="ALL">All Conferences</option>' + 
-        confs.map((c: string) => `<option value="${c}">${c}</option>`).join('');
-      if (!confs.includes(confSelect.value)) confSelect.value = 'ALL';
-    }
-    
-    document.querySelectorAll('.wl-col, .wl-cell').forEach(el => {
-      (el as HTMLElement).style.display = data.projected ? 'none' : '';
-    });
-    
-
-    if (data.projected && currentSortKey === 'wins') {
-      currentSortKey = 'adj_net';
-      currentSortDir = -1;
-    }
-    
-    applyFilterAndSort();
-  });
-
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const key = (th as HTMLElement).dataset.sort;
-      if (!key) return;
-
-      if (currentSortKey === key) {
-        currentSortDir *= -1;
-      } else {
-        currentSortKey = key;
-        currentSortDir = (key === 'team' || key === 'conference') ? 1 : -1;
-      }
-
-      document.querySelectorAll('th.sortable').forEach(el => {
-        el.classList.remove('active');
-        const icon = el.querySelector('.sort-icon');
-        if (icon) icon.textContent = '⇕';
-      });
-      th.classList.add('active');
-      const activeIcon = th.querySelector('.sort-icon');
-      if (activeIcon) activeIcon.textContent = currentSortDir === 1 ? '▲' : '▼';
-
-      applyFilterAndSort();
-    });
-  });
-
-  // Initial render
-  applyFilterAndSort();
+  if (searchInput) searchInput.addEventListener('input', filterTable);
+  if (confSelect) confSelect.addEventListener('change', filterTable);
 </script>

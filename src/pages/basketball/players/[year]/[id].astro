@@ -2,31 +2,49 @@
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
 import PlayerDashboard from '../../../../components/PlayerDashboard';
-// We no longer need listBasketballYears
-import { loadBasketballYear, fetchJson } from '../../../../lib/basketball'; 
+import fs from 'node:fs';
+import path from 'node:path';
 
 export const prerender = false;
 
 const { year, id } = Astro.params;
 const y = Number(year);
 
-// 1. Load the specific year's data
-const data = await loadBasketballYear(y, Astro);
-if (!data) throw new Error(`Missing data for ${year}`);
+// BULLETPROOF FIX: Read directly from the file system
+let playersDoc, rankingsDoc;
+try {
+  const playersPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'players.json');
+  const rankingsPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'rankings.json');
+  
+  playersDoc = JSON.parse(fs.readFileSync(playersPath, 'utf-8'));
+  rankingsDoc = JSON.parse(fs.readFileSync(rankingsPath, 'utf-8'));
+} catch (e) {
+  throw new Error(`Missing data for ${y}. Make sure players.json and rankings.json exist.`);
+}
 
-const { players } = data;
-const player = players.players.find((p: any) => String(p.player_id || p.id) === id);
-
+const player = playersDoc.players.find((p: any) => String(p.player_id || p.id) === id);
 if (!player) return Astro.redirect('/basketball/players/');
 
-// 2. Fetch the tiny index file instead of looping!
-const playerIndex = await fetchJson(Astro, '/data/basketball/player-index.json');
-const entry = playerIndex?.[id];
+const teamStats = rankingsDoc.teams.find((t: any) => t.team === player.team) || {};
+
+// Team Branding
+const pColor = teamStats.primaryColor || 'var(--accent-primary)';
+const sColor = teamStats.secondaryColor || 'var(--accent-info)';
+const teamGradient = `linear-gradient(135deg, ${pColor}, ${sColor})`;
+
+// Fetch player-index for the year selector
+let playerIndexRaw = null;
+try {
+  const indexPath = path.join(process.cwd(), 'public', 'data', 'basketball', 'player-index.json');
+  playerIndexRaw = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+} catch(e) {}
+
+const entry = playerIndexRaw?.[id];
 const validYears: number[] = entry?.teams
-  ? [...new Set(entry.teams.map((t: any) => t.year))].sort()
+  ? [...new Set(entry.teams.map((t: any) => Number(t.year)))].sort((a, b) => b - a)
   : [y];
 
-// 3. Keep the rest of your logic exactly the same
+// Helpers
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
 const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -45,9 +63,9 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
 
       {validYears.length > 1 && (
         <div class="controls" style="margin-bottom: 0; margin-left: auto; padding: 0; background: transparent; border: none; box-shadow: none;">
-          <select id="playerYearSelect" data-player-id={player.player_id || player.id} aria-label="Switch Year">
+          <select id="playerYearSelect" data-player-id={player.player_id || player.id} aria-label="Switch Year" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
             {validYears.map(yr => (
-              <option value={yr} selected={yr === y}>
+              <option value={yr} selected={yr === y ? true : undefined}>
                 {yr - 1}-{String(yr).slice(-2)} Season
               </option>
             ))}
@@ -56,40 +74,54 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
       )}
     </div>
 
-    <div class="card" style="margin-bottom: 24px; padding: 24px;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <h1 style="font-size: 2.5rem; margin-bottom: 8px;">
-            {player.name}
-            {player.jersey && <span style="font-size: 1.5rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">#{player.jersey}</span>}
-          </h1>
-          <p style="color: var(--text-muted); font-size: 1.1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <a href={`/basketball/teams/${y}/${slugify(player.team)}/`} style="color: var(--accent-primary); text-decoration: none; font-weight: 700;">
-              {player.team}
-            </a> 
-            · {player.conference} 
-            {player.class && <> · <span style="font-weight: 600;">{player.class}</span></>}
-            {player.position && <> · <span class="pill" style="padding: 2px 8px; font-size: 0.8rem; font-weight: 700; margin: 0;">{player.position}</span></>}
-            {player.height && <> · {Math.floor(player.height / 12)}'{player.height % 12}"</>}
-            {player.weight && <> · {player.weight} lbs</>}
-          </p>
-        </div>
-        
-        <div style="display: flex; gap: 24px; text-align: right;">
+    {/* ─────────── Hero ─────────── */}
+    <div class="card hero-card" style="margin-bottom: 24px; padding: 0; overflow: hidden; position: relative;">
+      <div style={`position: absolute; top: 0; left: 0; right: 0; height: 4px; background: ${teamGradient};`}></div>
+
+      <div style="padding: 28px 28px 24px 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+          
           <div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Rank</div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--text);">#{player.rank}</div>
-          </div>
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Net RAPM</div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--accent-primary);">{fmt(player.net_rating)}</div>
-          </div>
-          <div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">
-              {players.projected ? 'Proj. MPG' : 'MPG'}
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+              {teamStats.logo && <img src={teamStats.logo} alt={teamStats.team} class="logo-light" style="width: 36px; height: 36px; object-fit: contain;" />}
+              {teamStats.logo_dark && <img src={teamStats.logo_dark} alt={teamStats.team} class="logo-dark" style="width: 36px; height: 36px; object-fit: contain; display: none;" />}
+              
+              <h1 style="font-size: 2.5rem; margin: 0; letter-spacing: -0.02em;">
+                {player.name}
+                {player.jersey && <span style="font-size: 1.5rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">#{player.jersey}</span>}
+              </h1>
             </div>
-            <div style="font-size: 2rem; font-weight: 900; color: var(--text);">
-              {player.min_pg ? player.min_pg.toFixed(1) : fmt(player.minutes_share * 40)}
+            
+            <p style="color: var(--text-muted); font-size: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 0;">
+              <a href={`/basketball/teams/${y}/${slugify(player.team)}/`} style={`color: ${pColor}; text-decoration: none; font-weight: 800;`}>
+                {player.team}
+              </a> 
+              <span style="font-size: 0.85rem;">{teamStats.mascot || player.conference}</span>
+              {player.class && <> · <span style="font-weight: 600;">{player.class}</span></>}
+              {player.position && <> · <span class="pill" style="padding: 2px 8px; font-size: 0.8rem; font-weight: 700; margin: 0;">{player.position}</span></>}
+              {player.height && <> · {Math.floor(player.height / 12)}'{player.height % 12}"</>}
+              {player.weight && <> · {player.weight} lbs</>}
+            </p>
+          </div>
+          
+          <div style="display: flex; gap: 32px; text-align: right;">
+            <div>
+              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Rank</div>
+              <div style="font-size: 1.4rem; font-weight: 900; color: var(--text);">#{player.rank}</div>
+            </div>
+            <div>
+              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Net RAPM</div>
+              <div style={`font-size: 1.4rem; font-weight: 900; color: ${player.net_rating >= 5 ? 'var(--accent-success, #16a34a)' : player.net_rating <= 0 ? 'var(--accent-danger, #dc2626)' : 'var(--text)'};`}>
+                {player.net_rating > 0 ? '+' : ''}{fmt(player.net_rating)}
+              </div>
+            </div>
+            <div>
+              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">
+                {playersDoc.projected ? 'Proj. MPG' : 'MPG'}
+              </div>
+              <div style="font-size: 1.4rem; font-weight: 900; color: var(--text);">
+                {player.min_pg ? player.min_pg.toFixed(1) : fmt(player.minutes_share * 40)}
+              </div>
             </div>
           </div>
         </div>
@@ -101,7 +133,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
     <div id="gameLogContainer" style="display: none; margin-top: 32px;">
       <h2 class="section-title">Game Log</h2>
       <div class="table-container">
-        <table class="rank-table">
+        <table class="rank-table compact-table">
           <thead>
             <tr>
               <th>Date</th>
@@ -124,26 +156,23 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
   </div>
 </Layout>
 
-<script define:vars={{ playerId: String(player.player_id || player.id), year: y, isProjected: players.projected, team: player.team }}>
-  document.addEventListener('DOMContentLoaded', () => {
-    const yearSelect = document.getElementById('playerYearSelect');
-    if (yearSelect) {
-      yearSelect.addEventListener('change', (e) => {
-        const newYear = e.target.value;
-        const pid = yearSelect.dataset.playerId;
-        window.location.href = `/basketball/players/${newYear}/${pid}/`;
-      });
-    }
+<script define:vars={{ playerId: String(player.player_id || player.id), year: y, isProjected: playersDoc.projected, team: player.team }}>
+  const yearSelect = document.getElementById('playerYearSelect');
+  if (yearSelect) {
+    yearSelect.addEventListener('change', (e) => {
+      const newYear = e.target.value;
+      const pid = yearSelect.dataset.playerId;
+      window.location.href = `/basketball/players/${newYear}/${pid}/`;
+    });
+  }
 
-    const loadingEl = document.getElementById('gameLogLoading');
-    const containerEl = document.getElementById('gameLogContainer');
-    const bodyEl = document.getElementById('gameLogBody');
-    
-    if (isProjected) {
-      loadingEl.style.display = 'none';
-      return;
-    }
-
+  const loadingEl = document.getElementById('gameLogLoading');
+  const containerEl = document.getElementById('gameLogContainer');
+  const bodyEl = document.getElementById('gameLogBody');
+  
+  if (isProjected) {
+    loadingEl.style.display = 'none';
+  } else {
     (async () => {
       try {
         const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -182,10 +211,20 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
         loadingEl.textContent = 'No game-by-game data available.';
       }
     })();
-  });
+  }
 </script>
 
 <style is:global>
   .team-link { color: var(--text); text-decoration: none; transition: color 0.2s ease; }
   .team-link:hover { color: var(--accent-primary); text-decoration: underline; }
+  
+  .hero-card { transition: box-shadow 0.2s ease; }
+  .hero-card:hover { box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08); }
+  
+  .compact-table th { padding: 8px 6px !important; }
+  .compact-table td { padding: 6px 6px !important; font-size: 0.85rem; }
+  
+  .logo-dark { display: none !important; }
+  :global(.dark) .logo-light { display: none !important; }
+  :global(.dark) .logo-dark { display: block !important; }
 </style>

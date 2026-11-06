@@ -25,6 +25,12 @@ interface Team {
   tov_rate: number;
   orb_pct: number;
   ftr: number;
+  // New API Fields
+  primaryColor?: string | null;
+  secondaryColor?: string | null;
+  logo?: string | null;
+  logo_dark?: string | null;
+  mascot?: string | null;
 }
 
 interface ModelWeights {
@@ -217,7 +223,7 @@ export default function GamePreview({ year }: { year: number }) {
       h_opp_ppg: h_opp_ppg.toFixed(1),
       a_opp_ppg: a_opp_ppg.toFixed(1)
     };
-  }, [teams, model, effMu, homeTeam, awayTeam, isNeutralSite]);
+  }, [teams, model, effMu, homeTeam, awayTeam, isNeutralSite, year]);
 
   if (loading) return <div style={{ padding: '24px', color: 'var(--text-muted)' }}>Loading model...</div>;
   if (!model) return <div style={{ padding: '24px', color: 'var(--accent-danger)' }}>Model weights not found in JSON. Did you re-run the export?</div>;
@@ -225,31 +231,29 @@ export default function GamePreview({ year }: { year: number }) {
 
   const { home, away, homeFavored } = prediction;
 
+  const homeColor = home.primaryColor || 'var(--accent-primary)';
+  const awayColor = away.primaryColor || 'var(--accent-info)';
+
   // Tug-of-War Bar Row
-  const StatRow = ({ 
-    label, 
-    hVal, 
-    aVal, 
-    hRank, 
-    aRank, 
-    higherIsBetter = true, 
-    isPct = false 
+    const StatRow = ({ 
+    label, hVal, aVal, hRank, aRank, higherIsBetter = true, isPct = false 
   }: { 
-    label: string, 
-    hVal: string, 
-    aVal: string, 
-    hRank?: number, 
-    aRank?: number, 
-    higherIsBetter?: boolean, 
-    isPct?: boolean 
+    label: string, hVal: string, aVal: string, hRank?: number, aRank?: number, higherIsBetter?: boolean, isPct?: boolean 
   }) => {
     const nH = parseFloat(hVal);
     const nA = parseFloat(aVal);
-    const hBetter = higherIsBetter ? nH >= nA : nH <= nA;
-    const aBetter = higherIsBetter ? nA >= nH : nA <= nH;
     
-    const total = Math.abs(nH) + Math.abs(nA) || 1;
-    let hPct = (nH / total) * 100;
+    // Safe logic to avoid Astro < fragment bug
+    const hBetter = higherIsBetter ? nH >= nA : nA >= nH;
+    const aBetter = higherIsBetter ? nA >= nH : nH >= nA;
+    
+    // FIX: Shift values so the minimum is 0. This prevents negative numbers from inflating the bar.
+    const shift = Math.max(0, -Math.min(nH, nA));
+    const vH = nH + shift;
+    const vA = nA + shift;
+    
+    const total = vH + vA || 1;
+    let hPct = (vH / total) * 100;
     if (!higherIsBetter) hPct = 100 - hPct;
     hPct = Math.max(10, Math.min(90, hPct));
 
@@ -267,8 +271,8 @@ export default function GamePreview({ year }: { year: number }) {
             {label}
           </div>
           <div style={{ display: 'flex', height: '6px', borderRadius: '3px', overflow: 'hidden', background: 'var(--surface-3)' }}>
-            <div style={{ width: `${hPct}%`, background: hBetter ? 'var(--accent-primary)' : 'var(--surface-3)', opacity: hBetter ? 1 : 0.5, transition: 'all 0.3s ease' }}></div>
-            <div style={{ flex: 1, background: aBetter ? 'var(--accent-info)' : 'var(--surface-3)', opacity: aBetter ? 1 : 0.5, transition: 'all 0.3s ease' }}></div>
+            <div style={{ width: `${hPct}%`, background: homeColor, opacity: hBetter ? 1 : 0.3, transition: 'all 0.3s ease' }}></div>
+            <div style={{ flex: 1, background: awayColor, opacity: aBetter ? 1 : 0.3, transition: 'all 0.3s ease' }}></div>
           </div>
         </div>
 
@@ -324,14 +328,21 @@ export default function GamePreview({ year }: { year: number }) {
           
           {/* Home Team */}
           <div style={{ flex: 1, textAlign: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '4px' }}>
-              <span style={{ fontSize: '1.1rem', fontWeight: 800 }}>{home.team}</span>
-              <RankBadge rank={home.rank} />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8px' }}>
+              {home.logo && <img src={home.logo} alt={home.team} className="logo-light" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
+              {home.logo_dark && <img src={home.logo_dark} alt={home.team} className="logo-dark" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
+              
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>{home.team}</span>
+                <RankBadge rank={home.rank} />
+              </div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>{home.mascot}</div>
             </div>
-            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: homeFavored ? 'var(--accent-primary)' : 'var(--text)', lineHeight: 1 }}>
+            
+            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: homeFavored ? homeColor : 'var(--text)', lineHeight: 1 }}>
               {prediction.home_score}
             </div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>{home.conference} · {home.wins}-{home.losses}</div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600, marginTop: '4px' }}>{home.conference} · {home.wins}-{home.losses}</div>
           </div>
 
           {/* Center Info */}
@@ -347,14 +358,21 @@ export default function GamePreview({ year }: { year: number }) {
 
           {/* Away Team */}
           <div style={{ flex: 1, textAlign: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '4px' }}>
-              <span style={{ fontSize: '1.1rem', fontWeight: 800 }}>{away.team}</span>
-              <RankBadge rank={away.rank} />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8px' }}>
+              {away.logo && <img src={away.logo} alt={away.team} className="logo-light" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
+              {away.logo_dark && <img src={away.logo_dark} alt={away.team} className="logo-dark" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
+              
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>{away.team}</span>
+                <RankBadge rank={away.rank} />
+              </div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>{away.mascot}</div>
             </div>
-            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: !homeFavored ? 'var(--accent-primary)' : 'var(--text)', lineHeight: 1 }}>
+
+            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: !homeFavored ? awayColor : 'var(--text)', lineHeight: 1 }}>
               {prediction.away_score}
             </div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>{away.conference} · {away.wins}-{away.losses}</div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600, marginTop: '4px' }}>{away.conference} · {away.wins}-{away.losses}</div>
           </div>
         </div>
         
@@ -365,8 +383,8 @@ export default function GamePreview({ year }: { year: number }) {
             <span>{!homeFavored ? `Favored by ${prediction.margin}` : ''}</span>
           </div>
           <div style={{ display: 'flex', height: '10px', borderRadius: '5px', overflow: 'hidden', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.1)' }}>
-            <div style={{ width: `${prediction.win_prob}%`, background: homeFavored ? 'var(--accent-primary)' : 'var(--text-muted)', transition: 'width 0.3s ease' }}></div>
-            <div style={{ flex: 1, background: !homeFavored ? 'var(--accent-primary)' : 'var(--text-muted)', transition: 'width 0.3s ease' }}></div>
+            <div style={{ width: `${prediction.win_prob}%`, background: homeColor, transition: 'width 0.3s ease' }}></div>
+            <div style={{ flex: 1, background: awayColor, transition: 'width 0.3s ease' }}></div>
           </div>
         </div>
       </div>
@@ -381,13 +399,14 @@ export default function GamePreview({ year }: { year: number }) {
         <StatRow label="Adj. Defense" hVal={fmt(home.adj_def)} aVal={fmt(away.adj_def)} hRank={ranks[home.team]?.adj_def} aRank={ranks[away.team]?.adj_def} higherIsBetter={false} />
         <StatRow label="Team BPR" hVal={fmt(home.team_bpr_raw)} aVal={fmt(away.team_bpr_raw)} hRank={ranks[home.team]?.team_bpr_raw} aRank={ranks[away.team]?.team_bpr_raw} higherIsBetter={true} />
         
-        <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '24px', marginBottom: '8px' }}>
+                <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '24px', marginBottom: '8px' }}>
           Four Factors
         </h4>
-        <StatRow label="Effective FG%" hVal={fmt(home.efg)} aVal={fmt(away.efg)} hRank={ranks[home.team]?.efg} aRank={ranks[away.team]?.efg} higherIsBetter={true} isPct={true} />
-        <StatRow label="Turnover Rate" hVal={fmt(home.tov_rate)} aVal={fmt(away.tov_rate)} hRank={ranks[home.team]?.tov_rate} aRank={ranks[away.team]?.tov_rate} higherIsBetter={false} isPct={true} />
-        <StatRow label="Off. Rebound %" hVal={fmt(home.orb_pct)} aVal={fmt(away.orb_pct)} hRank={ranks[home.team]?.orb_pct} aRank={ranks[away.team]?.orb_pct} higherIsBetter={true} isPct={true} />
-        <StatRow label="Free Throw Rate" hVal={fmt(home.ftr)} aVal={fmt(away.ftr)} hRank={ranks[home.team]?.ftr} aRank={ranks[away.team]?.ftr} higherIsBetter={true} isPct={true} />
+        
+        <StatRow label="Effective FG%" hVal={fmt(num(home.efg, 0) * 100)} aVal={fmt(num(away.efg, 0) * 100)} hRank={ranks[home.team]?.efg} aRank={ranks[away.team]?.efg} higherIsBetter={true} isPct={true} />
+        <StatRow label="Turnover Rate" hVal={fmt(num(home.tov_rate, 0) * 100)} aVal={fmt(num(away.tov_rate, 0) * 100)} hRank={ranks[home.team]?.tov_rate} aRank={ranks[away.team]?.tov_rate} higherIsBetter={false} isPct={true} />
+        <StatRow label="Off. Rebound %" hVal={fmt(num(home.orb_pct, 0) * 100)} aVal={fmt(num(away.orb_pct, 0) * 100)} hRank={ranks[home.team]?.orb_pct} aRank={ranks[away.team]?.orb_pct} higherIsBetter={true} isPct={true} />
+        <StatRow label="Free Throw Rate" hVal={fmt(num(home.ftr, 0) * 100)} aVal={fmt(num(away.ftr, 0) * 100)} hRank={ranks[home.team]?.ftr} aRank={ranks[away.team]?.ftr} higherIsBetter={true} isPct={true} />
       </div>
 
     </div>

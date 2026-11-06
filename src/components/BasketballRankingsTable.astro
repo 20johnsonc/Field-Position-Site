@@ -1,79 +1,281 @@
 ---
 import type { BasketballTeam } from '../lib/basketball';
-interface Props { teams: BasketballTeam[]; projected: boolean; year: number; }
-const { teams, projected, year } = Astro.props;
+
+interface Props {
+  teams: BasketballTeam[];
+  year: number;
+  limit?: number;
+  projected?: boolean;
+}
+
+const { teams, year, limit = 100, projected = false } = Astro.props;
+const shown = teams.slice(0, limit);
+
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const slugify = (name: any) => String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+// Calculate SOS Rank (Highest SOS = Rank #1)
+const sosSorted = [...teams].sort((a, b) => (b.sos ?? -999) - (a.sos ?? -999));
+const sosRankMap: Record<string, number> = {};
+sosSorted.forEach((t, i) => { sosRankMap[t.team] = i + 1; });
+
+const getHeatColor = (val: number | null, min: number, max: number, invert = false) => {
+  if (val == null) return 'transparent';
+  let pct = (val - min) / (max - min);
+  if (invert) pct = 1 - pct;
+  pct = Math.max(0, Math.min(1, pct));
+  if (pct > 0.5) return `rgba(22, 163, 74, ${Math.min(0.5, (pct - 0.5) * 1.2)})`;
+  return `rgba(220, 38, 38, ${Math.min(0.5, (0.5 - pct) * 1.2)})`;
+};
+
+const getRankBadgeHtml = (rank: number) => {
+  if (rank <= 10) return `<span style="display:inline-block; background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff; font-weight:900; padding:1px 6px; border-radius:4px; box-shadow:0 2px 8px rgba(217,119,6,0.3);">${rank}</span>`;
+  if (rank <= 25) return `<span style="display:inline-block; background:linear-gradient(135deg,#94a3b8,#64748b); color:#fff; font-weight:900; padding:1px 6px; border-radius:4px;">${rank}</span>`;
+  return `<span style="color:var(--text-muted); font-weight:600;">${rank}</span>`;
+};
 ---
-<div class="table-container">
-  <table class="rank-table" id="bballTable">
+
+<div class="table-container" style="position: relative;">
+  <table class="rank-table compact-table" id="bballTeamsTable" style="width: 100%; table-layout: fixed;">
     <thead>
       <tr>
-        <th class="num">Rk</th>
-        <th class="sortable" data-sort="team">Team <span class="sort-icon">⇕</span></th>
-        <th class="sortable" data-sort="conference">Conf <span class="sort-icon">⇕</span></th>
-        <th class="sortable num wl-col" data-sort="wins" style={projected ? 'display: none;' : ''}>W-L <span class="sort-icon">⇕</span></th>
-        <th class="sortable num" data-sort="adj_off">AdjOff <span class="sort-icon">⇕</span></th>
-        <th class="sortable num" data-sort="adj_def">AdjDef <span class="sort-icon">⇕</span></th>
-        <th class="sortable num active" data-sort="adj_net">AdjNet <span class="sort-icon">▼</span></th>
+        <th class="num" style="width: 40px;">Rk</th>
+        <th class="sortable" data-sort="team" style="width: 190px;">Team <span class="sort-icon">⇕</span></th>
+        <th class="sortable" data-sort="conference" style="width: 70px; text-align: center;">Conf <span class="sort-icon">⇕</span></th>
+        
+        <!-- Hide W-L if projected -->
+        {!projected && (
+          <th class="sortable num" data-sort="wins" style="width: 60px; text-align: center;">W-L <span class="sort-icon">⇕</span></th>
+        )}
+        
+        <th class="sortable num" data-sort="adj_off" style="width: 65px;">
+          <div class="tooltip-container" data-tooltip="Adjusted Offensive Efficiency. Points scored per 100 possessions, adjusted for opponent strength.">
+            Adj O <span class="sort-icon">⇕</span>
+          </div>
+        </th>
+        <th class="sortable num" data-sort="adj_def" style="width: 65px;">
+          <div class="tooltip-container" data-tooltip="Adjusted Defensive Efficiency. Points allowed per 100 possessions, adjusted for opponent strength. Lower is better.">
+            Adj D <span class="sort-icon">⇕</span>
+          </div>
+        </th>
+        <th class="sortable num active" data-sort="adj_net" style="width: 75px;">
+          <div class="tooltip-container" data-tooltip="Adjusted Net Rating (Adj O - Adj D). The ultimate measure of a team's overall strength.">
+            Adj Net <span class="sort-icon">▼</span>
+          </div>
+        </th>
+        
+        <th class="sortable num" data-sort="tempo" style="width: 65px;">
+          <div class="tooltip-container" data-tooltip="Tempo. Estimated possessions per 40 minutes. Higher is faster.">
+            Tempo <span class="sort-icon">⇕</span>
+          </div>
+        </th>
+        <th class="sortable num" data-sort="sos_rank" style="width: 65px;">
+          <div class="tooltip-container" data-tooltip="Strength of Schedule Rank. #1 is the hardest schedule in the country.">
+            SOS <span class="sort-icon">⇕</span>
+          </div>
+        </th>
+        <th class="sortable num" data-sort="luck" style="width: 60px;">
+          <div class="tooltip-container" data-tooltip="Luck. Actual wins minus expected wins based on point differential.">
+            Luck <span class="sort-icon">⇕</span>
+          </div>
+        </th>
       </tr>
     </thead>
-    <tbody id="bballTableBody">
-      {teams.map(t => {
+    <tbody id="bballTeamsBody">
+      {shown.map((t, i) => {
+        const rank = i + 1;
+        
+        const offBg = getHeatColor(t.adj_off, 95, 125, false);
+        const defBg = getHeatColor(t.adj_def, 90, 115, true);
+        const netBg = getHeatColor(t.adj_net, -15, 30, false);
+
+        const rankHtml = getRankBadgeHtml(rank);
+        const luckStr = t.luck == null ? '—' : (t.luck > 0 ? '+' : '') + fmt(t.luck);
+        const sRank = sosRankMap[t.team];
+
         return (
-          <tr class="bball-row" data-conf={t.conference || 'None'}>
-            <td class="num">{t.rank}</td>
-            <td>
-              {p.team ? (
-                <a href={`/basketball/teams/${year}/${slugify(p.team)}/`} class="team-link">
-                  {p.team}
+          <tr class="team-row" 
+              data-team={t.team ? t.team.toLowerCase() : ''} 
+              data-conf={t.conference || ''}
+              style="transition: background-color 0.15s ease;">
+            
+            <td class="num" data-val={rank} set:html={rankHtml}></td>
+            
+            <td data-val={t.team}>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                {t.logo ? (
+                  <img src={t.logo} alt={t.team} class="logo-light" style="width: 20px; height: 20px; object-fit: contain; flex-shrink: 0;" />
+                ) : (
+                  <div class="logo-light" style={`width: 8px; height: 8px; border-radius: 50%; background: ${t.primaryColor || 'var(--text-muted)'}; flex-shrink: 0;`}></div>
+                )}
+                {t.logo_dark ? (
+                  <img src={t.logo_dark} alt={t.team} class="logo-dark" style="width: 20px; height: 20px; object-fit: contain; display: none; flex-shrink: 0;" />
+                ) : (
+                  <div class="logo-dark" style={`width: 8px; height: 8px; border-radius: 50%; background: ${t.primaryColor || 'var(--text-muted)'}; display: none; flex-shrink: 0;`}></div>
+                )}
+                
+                <a href={`/basketball/teams/${year}/${slugify(t.team)}/`} class="team-link" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  <div style="display: flex; flex-direction: column; line-height: 1.1;">
+                    <strong>{t.team}</strong>
+                    {t.mascot && <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">{t.mascot}</span>}
+                  </div>
                 </a>
-              ) : (
-                <span style="color: var(--text-muted)">—</span>
-              )}
+              </div>
             </td>
-            <td style="color: var(--text-muted)">{t.conference ?? '—'}</td>
-            <td class="num wl-cell" style={projected ? 'display: none;' : ''}>
-              {t.wins != null ? `${t.wins}-${t.losses}` : '—'}
-            </td>
-            <td class="num">{fmt(t.adj_off)}</td>
-            <td class="num">{fmt(t.adj_def)}</td>
-            <td class="num rating">{fmt(t.adj_net)}</td>
+
+            <td data-val={t.conference} style="color: var(--text-muted); font-size: 0.8rem; text-align: center;">{t.conference || '—'}</td>
+            
+            <!-- Hide W-L if projected -->
+            {!projected && (
+              <td class="num" data-val={t.wins} style="color: var(--text-muted); font-weight: 600; text-align: center;">
+                {t.wins ?? 0}-{t.losses ?? 0}
+              </td>
+            )}
+            
+            <td class="num" data-val={t.adj_off} style={`background: ${offBg};`}>{fmt(t.adj_off)}</td>
+            <td class="num" data-val={t.adj_def} style={`background: ${defBg};`}>{fmt(t.adj_def)}</td>
+            <td class="num rating" data-val={t.adj_net} style={`background: ${netBg}; font-weight: 800;`}>{fmt(t.adj_net)}</td>
+            
+            <td class="num" data-val={t.tempo} style="color: var(--text-muted);">{fmt(t.tempo)}</td>
+            <td class="num" data-val={sRank} style="color: var(--text-muted);">#{sRank}</td>
+            <td class="num" data-val={t.luck} style={`color: ${t.luck > 0 ? 'var(--accent-success)' : t.luck < 0 ? 'var(--accent-danger)' : 'var(--text-muted)'};`}>{luckStr}</td>
+            
           </tr>
         );
       })}
     </tbody>
   </table>
+  <div id="bballTeamsLimitNotice" style="padding: 12px; text-align: center; font-size: 0.875rem; color: var(--text-muted); border-top: 1px solid var(--card-border);">
+    Showing top {limit} of {teams.length} teams.
+  </div>
 </div>
 
+<script>
+  const table = document.getElementById('bballTeamsTable');
+  const tbody = document.getElementById('bballTeamsBody');
+
+  if (table && tbody) {
+    let currentSort = 'adj_net';
+    let currentDir = -1; // -1 = descending, 1 = ascending
+
+    function sortTable(key: string, dir: number) {
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const headers = Array.from(table.querySelectorAll('th'));
+      const colIndex = headers.findIndex(th => th.dataset.sort === key);
+      if (colIndex === -1) return;
+
+      rows.sort((a, b) => {
+        const aVal = (a.children[colIndex] as HTMLElement).dataset.val || '';
+        const bVal = (b.children[colIndex] as HTMLElement).dataset.val || '';
+        
+        const aNum = parseFloat(aVal);
+        const bNum = parseFloat(bVal);
+
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+          return (aNum - bNum) * dir;
+        }
+        return aVal.localeCompare(bVal) * dir;
+      });
+
+      rows.forEach(row => tbody.appendChild(row));
+
+      headers.forEach(th => {
+        th.classList.remove('active');
+        const icon = th.querySelector('.sort-icon');
+        if (icon) icon.textContent = '⇕';
+      });
+      const activeTh = headers[colIndex];
+      activeTh.classList.add('active');
+      const activeIcon = activeTh.querySelector('.sort-icon');
+      if (activeIcon) activeIcon.textContent = dir === 1 ? '▲' : '▼';
+    }
+
+    table.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = (th as HTMLElement).dataset.sort;
+        if (!key) return;
+
+        if (currentSort === key) {
+          currentDir *= -1;
+        } else {
+          currentSort = key;
+          currentDir = -1;
+        }
+        sortTable(currentSort, currentDir);
+      });
+    });
+  }
+</script>
+
 <style is:global>
-  /* RESTORED STYLES */
-  .team-link { 
-    color: var(--text); 
-    text-decoration: none; 
-    transition: color 0.2s ease; 
-  }
-  .team-link:hover { 
-    color: var(--accent-primary); 
-    text-decoration: underline; 
-  }
+  /* Force compact padding for this specific table */
+  .compact-table th { padding: 8px 6px !important; }
+  .compact-table td { padding: 6px 6px !important; }
+
+  .team-link { color: var(--text); text-decoration: none; transition: color 0.2s ease; }
+  .team-link:hover { color: var(--accent-primary); text-decoration: underline; }
   
-  th.sortable { 
-    cursor: pointer; 
-    user-select: none; 
-    transition: color 0.2s; 
+  th.sortable { cursor: pointer; user-select: none; transition: color 0.2s; font-weight: 700; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; color: var(--text-muted); }
+  th.sortable:hover { color: var(--accent-primary); }
+  th.sortable .sort-icon { display: inline-block; margin-left: 2px; opacity: 0.3; font-size: 0.8em; }
+  th.sortable.active .sort-icon { opacity: 1; color: var(--accent-primary); }
+  
+  .team-row:hover { background-color: var(--surface-2) !important; }
+  .rank-table td.num { font-variant-numeric: tabular-nums; font-size: 0.85rem; }
+
+  /* Hide the dark logos by default */
+  .logo-dark { display: none !important; }
+  
+  /* When dark mode is active, hide light logos and show dark ones */
+  :global(.dark) .logo-light { display: none !important; }
+  :global(.dark) .logo-dark { display: block !important; }
+
+  /* Tooltip CSS */
+  .tooltip-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+    border-bottom: 1px dotted var(--text-muted);
   }
-  th.sortable:hover { 
-    color: var(--accent-primary); 
+
+  .tooltip-container:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: var(--surface-1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+    white-space: normal;
+    width: max-content;
+    max-width: 200px;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
+    margin-top: 10px;
+    line-height: 1.4;
+    text-align: center;
   }
-  th.sortable .sort-icon { 
-    display: inline-block; 
-    margin-left: 4px; 
-    opacity: 0.3; 
-    font-size: 0.8em; 
-  }
-  th.sortable.active .sort-icon { 
-    opacity: 1; 
-    color: var(--accent-primary); 
+
+  .tooltip-container:hover::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--text) transparent;
+    z-index: 100;
+    pointer-events: none;
+    margin-top: 0px;
   }
 </style>

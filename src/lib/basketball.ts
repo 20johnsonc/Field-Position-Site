@@ -40,6 +40,13 @@ export interface BasketballTeam {
   inj_net?: number;
   inj_rank?: number;
   inj_relative_rating?: number;
+
+  primaryColor?: string | null;
+  secondaryColor?: string | null;
+  logo?: string | null;
+  logo_dark?: string | null; // ADD THIS
+  mascot?: string | null;
+  abbreviation?: string | null;
 }
 
 export interface BasketballPlayer {
@@ -136,18 +143,32 @@ export type ScheduleDoc = Record<string, ScheduleGame[]>;
 // Fetch helpers
 // ═══════════════════════════════════════════════════════════════════
 
-export async function fetchJson(ctx: any, path: string): Promise<any | null> {
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function fetchJson(ctx: any, urlPath: string): Promise<any | null> {
+  // 1. Try standard fetch (works in production and dev)
   try {
-    const url = new URL(path, ctx.url);
+    const url = new URL(urlPath, ctx.url);
     const env = ctx.locals?.runtime?.env;
-    const res = env?.ASSETS
-      ? await env.ASSETS.fetch(url)
-      : await fetch(url);
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
+    const res = env?.ASSETS ? await env.ASSETS.fetch(url) : await fetch(url);
+    if (res.ok) return await res.json();
+  } catch (e) {
+    // Ignore fetch errors, fall through to local file system check
   }
+
+  // 2. Fallback: Read directly from the local file system (fixes local dev 404s)
+  try {
+    const filePath = path.join(process.cwd(), 'public', urlPath);
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      return JSON.parse(content);
+    }
+  } catch (e) {
+    // Ignore fs errors
+  }
+
+  return null;
 }
 
 export async function loadBasketballYear(

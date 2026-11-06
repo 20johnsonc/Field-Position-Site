@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Shot {
   game_id: number;
@@ -10,29 +10,20 @@ interface Shot {
 
 interface Props {
   year: number;
-  playerId?: string; // Optional: if missing, aggregates all team shots
+  playerId?: string; 
   teamName: string;
   externalGameFilter?: string;
   onGameFilterChange?: (val: string) => void;
 }
 
-// ─────────────────────────────────────────────────────────────────
-// Court constants — 10 px = 1 ft
-//   width  : 50 ft → 500 px
-//   height : 36 ft (cropped to remove excessive half-court dead space) → 360 px
-// ─────────────────────────────────────────────────────────────────
 const COURT_LENGTH_FT = 36;
 const SVG_W = 500;
 const SVG_H = COURT_LENGTH_FT * 10;
 
-// ─────────────────────────────────────────────────────────────────
-// Coordinate helpers
-// ─────────────────────────────────────────────────────────────────
 function shotCoords(s: Shot): { cx: number; cy: number; xHalf: number; yHalf: number } {
   const xFt = s.x / 10;
   const yFt = s.y / 10;
 
-  // Normalize to left half-court (0 to 47 ft from baseline)
   const xHalf = xFt <= 47 ? xFt : 94 - xFt;
   const yHalf = xFt <= 47 ? yFt : 50 - yFt;
 
@@ -81,9 +72,6 @@ function formatRange(range: string | null | undefined): string {
   return range;
 }
 
-// ─────────────────────────────────────────────────────────────────
-// Component
-// ─────────────────────────────────────────────────────────────────
 export default function ShotChart({ 
   year, 
   playerId, 
@@ -117,17 +105,14 @@ export default function ShotChart({
         if (logsRes.ok) {
           const teamLogs = await logsRes.json();
           
-          // If playerId exists, get their logs. Otherwise, flatten all team logs.
           const logs = playerId ? (teamLogs[playerId] || []) : Object.values(teamLogs).flat() as any[];
           
-          // Deduplicate games (team view will have the same game 10+ times)
-          const uniqueGames = new Map();
+          const uniqueGamesMap = new Map();
           logs.forEach((g: any) => {
-            if (!uniqueGames.has(g.game_id)) uniqueGames.set(g.game_id, g);
+            if (!uniqueGamesMap.has(g.game_id)) uniqueGamesMap.set(g.game_id, g);
           });
 
-          // Sort by date ascending
-          const sortedLogs = Array.from(uniqueGames.values()).sort(
+          const sortedLogs = Array.from(uniqueGamesMap.values()).sort(
             (a: any, b: any) => new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
           );
 
@@ -145,8 +130,6 @@ export default function ShotChart({
         const shotsRes = await fetch(`/data/basketball/${year}/shots/${teamSlug}.json`);
         if (shotsRes.ok) {
           const teamShots = await shotsRes.json();
-          
-          // If playerId exists, get their shots. Otherwise, flatten all team shots.
           const allShots: Shot[] = playerId ? (teamShots[playerId] || []) : Object.values(teamShots).flat() as Shot[];
           
           setShots(allShots.filter((s) => {
@@ -160,15 +143,11 @@ export default function ShotChart({
         setLoading(false);
       }
     }
-    // Only check year and teamSlug, playerId is optional
     if (year && teamSlug) fetchData();
   }, [playerId, year, teamSlug]);
 
-  // Only show games that have non-FT shots on the chart
-  const uniqueGames = useMemo(() => {
-    const gamesWithShots = new Set(shots.map(s => String(s.game_id)));
-    return gameOptions.filter(g => gamesWithShots.has(g.id));
-  }, [gameOptions, shots]);
+  // Removed the filter: we want the dropdown to match the game logs exactly
+  const uniqueGames = gameOptions;
 
   const filteredShots = shots.filter(s => {
     if (resultFilter === 'makes' && !s.made) return false;
@@ -185,15 +164,11 @@ export default function ShotChart({
   });
 
   if (loading) return <div style={{ padding: '24px', color: 'var(--text-muted)' }}>Loading shots...</div>;
-  if (shots.length === 0) return <div style={{ padding: '24px', color: 'var(--text-muted)' }}>No shot data available.</div>;
 
-  // Hover context
   const hoveredCoords = hoveredShot ? shotCoords(hoveredShot) : null;
   const hoveredDist = hoveredShot ? shotDistance(hoveredShot) : null;
   const hoveredZone = hoveredShot ? shotZone(hoveredShot) : null;
-  const hoveredGame = hoveredShot
-    ? gameOptions.find(g => g.id === String(hoveredShot.game_id)) ?? null
-    : null;
+  const hoveredGame = hoveredShot ? gameOptions.find(g => g.id === String(hoveredShot.game_id)) : null;
 
   const tooltipPos: React.CSSProperties =
     hoveredCoords && hoveredCoords.cx < 250 && hoveredCoords.cy < 180
@@ -244,7 +219,7 @@ export default function ShotChart({
       </div>
 
       {/* Game Filter Dropdown */}
-      {uniqueGames.length > 1 && (
+      {uniqueGames.length > 0 && (
         <select
           value={activeGameFilter} onChange={(e) => handleGameFilterChange(e.target.value)}
           style={{
@@ -268,6 +243,19 @@ export default function ShotChart({
         overflow: 'hidden', border: '1px solid var(--card-border)',
       }}>
 
+        {/* No Shots Overlay */}
+        {filteredShots.length === 0 && (
+          <div style={{
+            position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            background: 'rgba(0,0,0,0.05)', zIndex: 5,
+            color: 'var(--text-muted)', fontWeight: 600, fontSize: '1rem',
+            backdropFilter: 'blur(2px)'
+          }}>
+            No shot data available for this selection.
+          </div>
+        )}
+
         {/* Tooltip */}
         {hoveredShot && (
           <div style={{
@@ -278,7 +266,6 @@ export default function ShotChart({
             fontSize: '0.85rem', pointerEvents: 'none', zIndex: 10,
             minWidth: '190px',
           }}>
-            {/* Line 1: make/miss + shot type */}
             <div style={{
               display: 'flex', alignItems: 'center', gap: '8px',
               marginBottom: '6px',
@@ -292,7 +279,6 @@ export default function ShotChart({
               </span>
             </div>
 
-            {/* Line 2: zone + distance */}
             <div style={{
               color: 'var(--text-muted)', fontSize: '0.8rem',
               display: 'flex', justifyContent: 'space-between', gap: '12px',
@@ -305,7 +291,6 @@ export default function ShotChart({
               )}
             </div>
 
-            {/* Line 3: game context */}
             {hoveredGame && activeGameFilter === 'all' && (
               <div style={{
                 color: 'var(--text-muted)', fontSize: '0.75rem',
@@ -318,40 +303,17 @@ export default function ShotChart({
         )}
 
         <svg viewBox={`0 0 ${SVG_W} ${SVG_H}`} style={{ width: '100%', height: 'auto', display: 'block' }}>
-
-          {/* Court Lines */}
           <rect x="0" y="0" width={SVG_W} height={SVG_H} fill="none" />
-
-          {/* Paint — 12 ft × 19 ft (NCAA) */}
-          <rect
-            x="190" y="170" width="120" height="190"
-            fill="var(--accent-primary)" opacity="0.05"
-            stroke="var(--card-border)" strokeWidth="2"
-          />
-
-          {/* Free throw circle */}
+          <rect x="190" y="170" width="120" height="190" fill="var(--accent-primary)" opacity="0.05" stroke="var(--card-border)" strokeWidth="2" />
           <path d="M 190 170 A 60 60 0 0 1 310 170" fill="none" stroke="var(--card-border)" strokeWidth="2" />
           <path d="M 190 170 A 60 60 0 0 0 310 170" fill="none" stroke="var(--card-border)" strokeWidth="2" strokeDasharray="4 4" />
-
-          {/* 3-point line */}
-          <path
-            d="M 30 360 L 30 282 A 221.5 221.5 0 0 1 470 282 L 470 360"
-            fill="none" stroke="var(--card-border)" strokeWidth="2"
-          />
-
-          {/* Restricted area */}
+          <path d="M 30 360 L 30 282 A 221.5 221.5 0 0 1 470 282 L 470 360" fill="none" stroke="var(--card-border)" strokeWidth="2" />
           <path d="M 210 307.5 A 40 40 0 0 1 290 307.5" fill="none" stroke="var(--card-border)" strokeWidth="2" />
-
-          {/* Backboard */}
           <line x1="220" y1="320" x2="280" y2="320" stroke="var(--text-muted)" strokeWidth="3" />
-
-          {/* Basket */}
           <circle cx="250" cy="307.5" r="7.5" fill="none" stroke="var(--accent-danger)" strokeWidth="2" />
 
-          {/* Shots */}
           {filteredShots.map((s, i) => {
             const { cx, cy } = shotCoords(s);
-            // Hide shots that are beyond the cropped 36ft view
             if (cx < 0 || cx > SVG_W || cy < 0 || cy > SVG_H) return null;
 
             const isHovered = hoveredShot === s;

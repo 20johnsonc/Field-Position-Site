@@ -2,17 +2,27 @@
 import Layout from '../../../../layouts/Layout.astro';
 import SportTabs from '../../../../components/SportTabs.astro';
 import ShotChart from '../../../../components/ShotChart';
-import { loadBasketballYear, fetchJson } from '../../../../lib/basketball';
+import { fetchJson } from '../../../../lib/basketball';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export const prerender = false; // SSR Mode
 
 const { year, team } = Astro.params;
 const y = Number(year);
 
-const data = await loadBasketballYear(y, Astro);
-if (!data) throw new Error(`Missing data for ${year}`);
+// BULLETPROOF FIX: Read directly from the file system
+let rankings, players;
+try {
+  const rankingsPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'rankings.json');
+  const playersPath = path.join(process.cwd(), 'public', 'data', 'basketball', `${y}`, 'players.json');
+  
+  rankings = JSON.parse(fs.readFileSync(rankingsPath, 'utf-8'));
+  players = JSON.parse(fs.readFileSync(playersPath, 'utf-8'));
+} catch (e) {
+  throw new Error(`Missing data for ${y}. Make sure rankings.json and players.json exist.`);
+}
 
-const { rankings, players } = data;
 const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 // Look up the team by slug
@@ -20,6 +30,16 @@ const teamStats = rankings.teams.find((t: any) => slugify(t.team) === team);
 if (!teamStats) return Astro.redirect('/basketball/');
 
 const actualTeamName = teamStats.team;
+
+// ─── Team Colors & Logo ─────────────────────────────────────────────
+// Ensure colors have a '#' prefix (just in case the Python export missed it)
+let pColor = teamStats.primaryColor || 'var(--accent-primary)';
+if (pColor !== 'var(--accent-primary)' && !pColor.startsWith('#')) pColor = `#${pColor}`;
+
+let sColor = teamStats.secondaryColor || 'var(--accent-info, #38bdf8)';
+if (sColor !== 'var(--accent-info, #38bdf8)' && !sColor.startsWith('#')) sColor = `#${sColor}`;
+
+const teamGradient = `linear-gradient(135deg, ${pColor}, ${sColor})`;
 
 // ─── Year selector ──────────────────────────────────────────────────
 const teamIndexRaw = await fetchJson(Astro, '/data/basketball/team-index.json');
@@ -173,28 +193,49 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 
     {/* ─────────── Hero ─────────── */}
     <div class="card hero-card" style="margin-bottom: 24px; padding: 0; overflow: hidden; position: relative;">
-      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent-primary), var(--accent-info, #38bdf8));"></div>
+      <div style={`position: absolute; top: 0; left: 0; right: 0; height: 4px; background: ${teamGradient};`}></div>
 
       <div style="padding: 28px 28px 24px 28px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+          
           <div style="display: flex; gap: 18px; align-items: center;">
-            <div style="
+            
+            {/* Rank Badge - Fixed Quotes */}
+            <div style={`
               width: 64px; height: 64px; border-radius: 16px; flex-shrink: 0;
               display: flex; align-items: center; justify-content: center;
               font-size: 1.25rem; font-weight: 900; letter-spacing: -0.03em;
               font-variant-numeric: tabular-nums;
-              background: linear-gradient(135deg, var(--accent-primary), var(--accent-info, #38bdf8));
+              background: ${teamGradient};
               color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
               padding: 0 6px;
-            ">
+            `}>
               #{teamStats?.rank}
             </div>
-            <div>
-              <h1 style="font-size: 2.25rem; margin: 0 0 6px 0; letter-spacing: -0.02em;">{actualTeamName}</h1>
-              <p style="color: var(--text-muted); font-size: 1rem; margin: 0;">
-                {teamStats?.conference}{rankings.projected ? ' · Preseason projection' : ''}
-              </p>
+
+            {/* Name & Logo Group */}
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div>
+                <h1 style="font-size: 2.25rem; margin: 0 0 4px 0; letter-spacing: -0.02em;">{actualTeamName}</h1>
+                {teamStats.mascot && (
+                  <p style="font-size: 1.1rem; color: var(--text-muted); margin: 0 0 6px 0; font-weight: 600;">
+                    {teamStats.mascot}
+                  </p>
+                )}
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
+                  {teamStats?.conference}{rankings.projected ? ' · Preseason projection' : ''}
+                </p>
+              </div>
+
+              {/* Team Logo (Moved to the right of the name) */}
+              {teamStats.logo && (
+                <img src={teamStats.logo} alt={actualTeamName} class="logo-light" style="width: 64px; height: 64px; object-fit: contain; flex-shrink: 0;" />
+              )}
+              {teamStats.logo_dark && (
+                <img src={teamStats.logo_dark} alt={actualTeamName} class="logo-dark" style="width: 64px; height: 64px; object-fit: contain; display: none; flex-shrink: 0;" />
+              )}
             </div>
+
           </div>
 
           <div style="display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap;">
@@ -220,17 +261,20 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
       <div style="display: flex; gap: 32px; padding: 18px 28px; border-top: 1px solid var(--card-border); background: var(--surface-2, #fafafa);">
         <!-- Adj O -->
         <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
-          <div style="
+          
+          {/* Adj O Badge - Fixed Quotes */}
+          <div style={`
             width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
             font-size: 1rem; font-weight: 900; letter-spacing: -0.03em;
             font-variant-numeric: tabular-nums;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent, #38bdf8));
+            background: ${teamGradient};
             color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             padding: 0 4px;
-          ">
+          `}>
             #{offRank}
           </div>
+          
           <div style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
               <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;">Adj. Offense</span>
@@ -244,17 +288,20 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 
         <!-- Adj D -->
         <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
-          <div style="
+          
+          {/* Adj D Badge - Fixed Quotes */}
+          <div style={`
             width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
             font-size: 1rem; font-weight: 900; letter-spacing: -0.03em;
             font-variant-numeric: tabular-nums;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent, #38bdf8));
+            background: ${teamGradient};
             color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             padding: 0 4px;
-          ">
+          `}>
             #{defRank}
           </div>
+          
           <div style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
               <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;">Adj. Defense</span>
@@ -399,21 +446,21 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 <script id="roster-data" data-year={y} type="application/json" set:html={JSON.stringify(roster).replace(/</g, '\\u003c')} />
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const yearSelect = document.getElementById('teamYearSelect') as HTMLSelectElement | null;
-    if (yearSelect) {
-      yearSelect.addEventListener('change', (e) => {
-        const newYear = (e.target as HTMLSelectElement).value;
-        const slug = yearSelect.dataset.slug;
-        if (!newYear || !slug) return;
-        window.location.href = `/basketball/teams/${newYear}/${slug}/`;
-      });
-    }
+  // Removed DOMContentLoaded wrapper to ensure execution
+  const yearSelect = document.getElementById('teamYearSelect') as HTMLSelectElement | null;
+  if (yearSelect) {
+    yearSelect.addEventListener('change', (e) => {
+      const newYear = (e.target as HTMLSelectElement).value;
+      const slug = yearSelect.dataset.slug;
+      if (!newYear || !slug) return;
+      window.location.href = `/basketball/teams/${newYear}/${slug}/`;
+    });
+  }
 
-    const dataEl = document.getElementById('roster-data');
-    const tableBody = document.getElementById('rosterBody');
-    if (!dataEl || !tableBody) return;
-
+  const dataEl = document.getElementById('roster-data');
+  const tableBody = document.getElementById('rosterBody');
+  
+  if (dataEl && tableBody) {
     const currentYear = dataEl.dataset.year;
     const rosterData = JSON.parse(dataEl.textContent || '[]');
     let currentSortKey = 'net_rating';
@@ -501,7 +548,7 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
         renderTable();
       });
     });
-  });
+  }
 </script>
 
 <style is:global>
@@ -521,4 +568,9 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 
   .rank-table td.num,
   .rank-table th.num { font-variant-numeric: tabular-nums; }
+
+  /* Logo Toggling for Dark Mode */
+  .logo-dark { display: none !important; }
+  :global(.dark) .logo-light { display: none !important; }
+  :global(.dark) .logo-dark { display: block !important; }
 </style>

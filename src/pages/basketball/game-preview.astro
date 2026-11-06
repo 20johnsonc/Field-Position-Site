@@ -5,14 +5,14 @@ import GamePreview from '../../components/GamePreview';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-export const prerender = true; // 👈 Force this to be static
+export const prerender = true; 
 
 // 1. Read the index file directly from the filesystem at build time
 let years = [];
 try {
   const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
   const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
-  years = [...(indexData.years || [])].sort((a, b) => b - a); // Sort descending
+  years = [...(indexData.years || [])].sort((a, b) => b - a); 
 } catch (e) {
   console.error("Failed to read index.json at build time", e);
 }
