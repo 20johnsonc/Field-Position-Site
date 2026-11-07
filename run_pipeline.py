@@ -315,12 +315,12 @@ def _unwrap(obj):
         if 'data' in obj and ('saved' in obj or 'live' in obj): return obj['data']
     return obj
 
-PBP, RAW_STATS, RAW_ROSTER, RAW_RECRUITS, RAW_DIRECTORY, RAW_GAMES, RAW_PORTAL = {}, {}, {}, {}, {}, {}, {}
+PBP, RAW_STATS, RAW_ROSTER, RAW_RECRUITS, RAW_DIRECTORY, RAW_GAMES, RAW_PORTAL, RAW_TEAMS = {}, {}, {}, {}, {}, {}, {}, {}
 for s in ALL_SEASONS:
     for name, store in [('cbb_light', PBP), ('cbb_player_season_v4', RAW_STATS),
                         ('cbb_roster_v2', RAW_ROSTER), ('cbb_recruits_v1', RAW_RECRUITS),
                         ('cbb_directory', RAW_DIRECTORY), ('cbb_games', RAW_GAMES),
-                        ('cbb_portal_v2', RAW_PORTAL)]:
+                        ('cbb_portal_v2', RAW_PORTAL), ('cbb_teams', RAW_TEAMS)]:
         p = CACHE_DIR / f'{name}_{s}.pkl'
         if p.exists():
             with open(p, 'rb') as f:
@@ -1005,7 +1005,50 @@ def export_season(season, out_dir=None, dry_run=True):
     if season in RAW_DIRECTORY and RAW_DIRECTORY[season]:
         cmap = {c['id']: c.get('abbreviation') or c.get('name') for c in (RAW_DIRECTORY[season].get('conferences') or [])}
         CONF_BY_YEAR = {t['school']: cmap.get(t.get('conferenceId')) for t in (RAW_DIRECTORY[season].get('teams') or [])}
-    td['conference'] = [CONF_BY_YEAR.get(t) for t in td.index]
+
+    TEAM_META = {}
+    if season in RAW_TEAMS:
+        for t in RAW_TEAMS[season]:
+            school = t.get('school')
+            if not school: continue
+
+            # Fix Colors
+            p_col = t.get('primaryColor')
+            if p_col and not p_col.startswith('#'): p_col = f"#{p_col}"
+            s_col = t.get('secondaryColor')
+            if s_col and not s_col.startswith('#'): s_col = f"#{s_col}"
+
+            # Helper to find the best logo size
+            def get_logo(is_dark):
+                target = 'cbb-logos-dark' if is_dark else 'cbb-logos'
+                logos = t.get('logos') or []
+                # Try to find 96 or 128px
+                for l in logos:
+                    if target in l and ('/96/' in l or '/128/' in l):
+                        return l
+                # Fallback to 500px if size not found
+                for l in logos:
+                    if target in l:
+                        return l
+                return None
+
+            TEAM_META[school] = {
+                'primaryColor': p_col,
+                'secondaryColor': s_col,
+                'logo': get_logo(is_dark=False),
+                'logo_dark': get_logo(is_dark=True),
+                'mascot': t.get('mascot'),
+                'abbreviation': t.get('abbreviation'),
+                'conference': t.get('conference')
+            }
+
+    td['conference'] = [TEAM_META.get(t, {}).get('conference') or CONF_BY_YEAR.get(t) for t in td.index]
+    td['primaryColor'] = [TEAM_META.get(t, {}).get('primaryColor') for t in td.index]
+    td['secondaryColor'] = [TEAM_META.get(t, {}).get('secondaryColor') for t in td.index]
+    td['logo'] = [TEAM_META.get(t, {}).get('logo') for t in td.index]
+    td['logo_dark'] = [TEAM_META.get(t, {}).get('logo_dark') for t in td.index] # NEW
+    td['mascot'] = [TEAM_META.get(t, {}).get('mascot') for t in td.index]
+    td['abbreviation'] = [TEAM_META.get(t, {}).get('abbreviation') for t in td.index]
 
     tempo_map = {}
     for t in td.index:
@@ -1108,7 +1151,7 @@ def export_season(season, out_dir=None, dry_run=True):
     r_dir = os.path.join(out_dir, 'public', 'data', 'basketball', str(season))
     os.makedirs(r_dir, exist_ok=True)
 
-    team_cols = [c for c in ['rank','team','conference','wins','losses','gp','adj_off','adj_def','net','adj_net','eff_off','eff_def','eff_net','o_rate','d_rate','relative_rating','tempo','direct_net','direct_net_f','rot_level','efg','tov_rate','orb_pct','ftr','opp_efg','opp_tov_rate','opp_orb_pct','opp_ftr','sos','pyth_w','luck','wab','q1_w','q1_l','q2_w','q2_l','q3_w','q3_l','q4_w','q4_l','play_types','team_bpr_raw','team_obpr','team_dbpr','n_players','total_poss'] if c in td.columns]
+    team_cols = [c for c in ['rank','team','conference','wins','losses','gp','adj_off','adj_def','net','adj_net','eff_off','eff_def','eff_net','o_rate','d_rate','relative_rating','tempo','direct_net','direct_net_f','rot_level','efg','tov_rate','orb_pct','ftr','opp_efg','opp_tov_rate','opp_orb_pct','opp_ftr','sos','pyth_w','luck','wab','q1_w','q1_l','q2_w','q2_l','q3_w','q3_l','q4_w','q4_l','play_types','team_bpr_raw','team_obpr','team_dbpr','n_players','total_poss', 'primaryColor','secondaryColor','logo','mascot','abbreviation',] if c in td.columns]
     team_recs = [{k: _clean_nan(v) for k, v in r.items()} for r in td[team_cols].round(2).to_dict('records')]
 
     mw = dict(features=list(MODEL_ACTIVE.features), betas=[float(b) for b in MODEL_ACTIVE.params], sigma=float(MODEL_ACTIVE.sigma)) if 'MODEL_ACTIVE' in globals() else {}
@@ -1260,6 +1303,7 @@ POST[PREDICTION_YEAR] = LIVE[PREDICTION_YEAR]
 for s in ALL_SEASONS:
     export_season(s, out_dir=SITE_EXPORT_DIR, dry_run=False)
 build_indexes(out_dir=SITE_EXPORT_DIR)
+
 
 PICKS_BASE = 'https://predictionsapi.collegebasketballdata.com'
 PICKS_DRY_RUN = False
