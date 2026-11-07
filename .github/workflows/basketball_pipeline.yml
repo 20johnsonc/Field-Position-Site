@@ -3,7 +3,7 @@ name: Daily Basketball BPR Pipeline
 on:
   schedule:
     # Runs at 13:00 UTC (8:00 AM EST) every day
-    - cron: '45 14 * * *'
+    - cron: '09 13 * * *'
   workflow_dispatch: # This adds a "Run workflow" button so you can test it manually
 
 # Give the action permission to push changes back to your repo
