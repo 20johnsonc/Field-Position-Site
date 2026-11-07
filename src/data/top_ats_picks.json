@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T18:50:59.903306+00:00",
+  "generated_at": "2026-11-07T13:27:57.199280+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
   "backtest_cover_rate": 0.4982,
   "picks_by_week": {
@@ -23,14 +23,14 @@
         "week": 10,
         "home_team": "Kansas State",
         "away_team": "Oklahoma State",
-        "market_spread": 6.5,
+        "market_spread": 7.0,
         "predicted_margin": -4.58,
         "pick": "Kansas State",
         "pick_side": "home",
-        "edge_pts": 11.1,
-        "cover_prob": 0.757,
-        "prob_edge": 0.257,
-        "kelly_fraction": 0.4896
+        "edge_pts": 11.6,
+        "cover_prob": 0.7667,
+        "prob_edge": 0.2667,
+        "kelly_fraction": 0.5101
       },
       {
         "game_id": 401862819,
@@ -51,28 +51,28 @@
         "week": 10,
         "home_team": "North Texas",
         "away_team": "Rice",
-        "market_spread": -17.0,
+        "market_spread": -15.5,
         "predicted_margin": -25.18,
         "pick": "North Texas",
         "pick_side": "home",
-        "edge_pts": 8.2,
-        "cover_prob": 0.6965,
-        "prob_edge": 0.1965,
-        "kelly_fraction": 0.3626
+        "edge_pts": 9.7,
+        "cover_prob": 0.7286,
+        "prob_edge": 0.2286,
+        "kelly_fraction": 0.4301
       },
       {
-        "game_id": 401870795,
+        "game_id": 401858512,
         "week": 10,
-        "home_team": "New Mexico State",
-        "away_team": "Liberty",
-        "market_spread": 16.5,
-        "predicted_margin": 23.5,
-        "pick": "Liberty",
+        "home_team": "Minnesota",
+        "away_team": "UCLA",
+        "market_spread": 4.0,
+        "predicted_margin": 12.43,
+        "pick": "UCLA",
         "pick_side": "away",
-        "edge_pts": 7.0,
-        "cover_prob": 0.6701,
-        "prob_edge": 0.1701,
-        "kelly_fraction": 0.3071
+        "edge_pts": 8.4,
+        "cover_prob": 0.7019,
+        "prob_edge": 0.2019,
+        "kelly_fraction": 0.3741
       }
     ],
     "11": [
@@ -154,13 +154,13 @@
         "home_team": "Miami",
         "away_team": "Virginia Tech",
         "market_spread": -16.5,
-        "predicted_margin": -23.04,
+        "predicted_margin": -24.84,
         "pick": "Miami",
         "pick_side": "home",
-        "edge_pts": 6.5,
-        "cover_prob": 0.6595,
-        "prob_edge": 0.1595,
-        "kelly_fraction": 0.285
+        "edge_pts": 8.3,
+        "cover_prob": 0.7,
+        "prob_edge": 0.2,
+        "kelly_fraction": 0.3699
       },
       {
         "game_id": 401856754,
@@ -177,20 +177,6 @@
         "kelly_fraction": 0.233
       },
       {
-        "game_id": 401858307,
-        "week": 12,
-        "home_team": "Notre Dame",
-        "away_team": "SMU",
-        "market_spread": -17.5,
-        "predicted_margin": -21.01,
-        "pick": "Notre Dame",
-        "pick_side": "home",
-        "edge_pts": 3.5,
-        "cover_prob": 0.5873,
-        "prob_edge": 0.0873,
-        "kelly_fraction": 0.1334
-      },
-      {
         "game_id": 401856752,
         "week": 12,
         "home_team": "Oklahoma",
@@ -203,6 +189,20 @@
         "cover_prob": 0.5785,
         "prob_edge": 0.0785,
         "kelly_fraction": 0.1148
+      },
+      {
+        "game_id": 401858307,
+        "week": 12,
+        "home_team": "Notre Dame",
+        "away_team": "SMU",
+        "market_spread": -17.5,
+        "predicted_margin": -20.64,
+        "pick": "Notre Dame",
+        "pick_side": "home",
+        "edge_pts": 3.1,
+        "cover_prob": 0.5782,
+        "prob_edge": 0.0782,
+        "kelly_fraction": 0.1143
       }
     ],
     "13": [
@@ -212,13 +212,13 @@
         "home_team": "Northwestern",
         "away_team": "Illinois",
         "market_spread": 3.5,
-        "predicted_margin": -10.54,
+        "predicted_margin": -9.96,
         "pick": "Northwestern",
         "pick_side": "home",
-        "edge_pts": 14.0,
-        "cover_prob": 0.8113,
-        "prob_edge": 0.3113,
-        "kelly_fraction": 0.6037
+        "edge_pts": 13.5,
+        "cover_prob": 0.8013,
+        "prob_edge": 0.3013,
+        "kelly_fraction": 0.5827
       },
       {
         "game_id": 401856757,
