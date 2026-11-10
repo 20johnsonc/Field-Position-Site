@@ -101,6 +101,16 @@ export interface BasketballPlayer {
   shot_profile?: Record<string, unknown>;
   play_types?: Record<string, unknown>;
   clutch_stats?: Record<string, unknown>;
+
+  // Skill Grades
+  scoring_grade?: number | null;
+  three_point_grade?: number | null;
+  playmaking_grade?: number | null;
+  rebounding_grade?: number | null;
+  rim_protection_grade?: number | null;
+  perimeter_defense_grade?: number | null;
+  ball_security_grade?: number | null;
+  free_throw_grade?: number | null;
 }
 
 export interface MarginModel {

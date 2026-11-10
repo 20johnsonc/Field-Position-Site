@@ -128,6 +128,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
             <tr>
               <th>Date</th>
               <th>Opponent</th>
+              <th class="num">GS</th>
               <th class="num">MIN</th>
               <th class="num">PTS</th>
               <th class="num">REB</th>
@@ -146,7 +147,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
   </div>
 </Layout>
 
-<script define:vars={{ playerId: String(player.player_id || player.id), year: y, isProjected: playersDoc.projected, team: player.team }}>
+<script define:vars={{ playerId: String(player.player_id || player.id), playerName: player.name, year: y, isProjected: playersDoc.projected, team: player.team }}>
   const yearSelect = document.getElementById('playerYearSelect');
   if (yearSelect) {
     yearSelect.addEventListener('change', (e) => {
@@ -166,14 +167,37 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
     (async () => {
       try {
         const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        const res = await fetch(`/data/basketball/${year}/game_logs/${slugify(team)}.json`);
-        if (!res.ok) throw new Error('No game logs found');
-
-        const data = await res.json();
+        
+        // Fetch both the logs and the game scores in parallel
+        const [logsRes, gsRes] = await Promise.all([
+          fetch(`/data/basketball/${year}/game_logs/${slugify(team)}.json`),
+          fetch(`/data/basketball/${year}/game_scores.json`)
+        ]);
+        
+        if (!logsRes.ok) throw new Error('No game logs found');
+        
+        const data = await logsRes.json();
+        const gsData = gsRes.ok ? await gsRes.json() : {};
+        
         const logs = data[playerId];
+        
+        // Create a lookup map for game scores
+        const playerGS = {};
+        if (gsData[team]) {
+          gsData[team].forEach(g => {
+            if (g.players) {
+              const p = g.players.find(x => x.name === playerName); 
+              if (p) playerGS[g.game_id] = p;
+            }
+          });
+        }
 
         if (logs && logs.length > 0) {
-          bodyEl.innerHTML = logs.map(g => `
+          bodyEl.innerHTML = logs.map(g => {
+            const gs = playerGS[g.game_id];
+            const scoreStr = gs ? gs.score.toFixed(1) : '—';
+            
+            return `
             <tr>
               <td>${new Date(g.start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
               <td>
@@ -182,6 +206,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
                   ${g.opponent}
                 </a>
               </td>
+              <td class="num" style="font-weight:700;">${scoreStr}</td>
               <td class="num">${g.minutes}</td>
               <td class="num">${g.points}</td>
               <td class="num">${g.rebounds}</td>
@@ -190,7 +215,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
               <td class="num">${g.blocks}</td>
               <td class="num">${g.turnovers}</td>
             </tr>
-          `).join('');
+          `}).join('');
           
           loadingEl.style.display = 'none';
           containerEl.style.display = 'block';
@@ -198,6 +223,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
           loadingEl.textContent = 'No game-by-game data available for this player.';
         }
       } catch (e) {
+        console.error(e);
         loadingEl.textContent = 'No game-by-game data available.';
       }
     })();

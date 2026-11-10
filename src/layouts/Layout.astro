@@ -139,3 +139,10 @@ const pageTitle = title ? `${title} | ${brand}` : brand;
     transition: color 0.2s ease;
   }
 </style>
+
+<style is:global>
+  /* Global Logo Toggling for Dark Mode */
+  .logo-dark { display: none !important; }
+  :global(.dark) .logo-light { display: none !important; }
+  :global(.dark) .logo-dark { display: block !important; }
+</style>

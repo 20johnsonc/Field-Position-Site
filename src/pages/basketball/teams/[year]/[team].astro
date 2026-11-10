@@ -27,7 +27,6 @@ if (!teamStats) return Astro.redirect('/basketball/');
 const actualTeamName = teamStats.team;
 
 // ─── Team Colors & Logo ─────────────────────────────────────────────
-// Ensure colors have a '#' prefix (just in case the Python export missed it)
 let pColor = teamStats.primaryColor || 'var(--accent-primary)';
 if (pColor !== 'var(--accent-primary)' && !pColor.startsWith('#')) pColor = `#${pColor}`;
 
@@ -86,7 +85,7 @@ const roster = players.players
   .filter((p: any) => p.team === actualTeamName)
   .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
 
-// ─── Schedule ───────────────────────────────────────────────────────
+// ─── Schedule & Game Scores ─────────────────────────────────────────
 let schedule = [];
 try {
   const schedUrl = new URL(`/data/basketball/${y}/schedule.json`, Astro.url);
@@ -96,9 +95,39 @@ try {
     const allSchedules = await res.json();
     schedule = allSchedules[actualTeamName] || [];
   }
-} catch (e) {
-  // Ignore if no schedule exists
-}
+} catch (e) {}
+
+// Fetch Game Scores to merge into Schedule
+try {
+  const gsUrl = new URL(`/data/basketball/${y}/game_scores.json`, Astro.url);
+  const assets = Astro.locals?.runtime?.env?.ASSETS;
+  const gsRes = assets ? await assets.fetch(gsUrl) : await fetch(gsUrl);
+  if (gsRes.ok) {
+    const gsData = await gsRes.json();
+    const teamScores = gsData[actualTeamName] || [];
+    const gsMap = {};
+    teamScores.forEach((gs: any) => { gsMap[gs.game_id] = gs; });
+
+    // Merge scores into existing schedule
+    schedule = schedule.map((g: any) => {
+      const gs = gsMap[g.game_id];
+      return { ...g, perf_score: gs ? gs.score : null, players: gs ? gs.players : [] };
+    });
+
+    // Add any missing games from game_scores
+    const scheduleGameIds = new Set(schedule.map((g: any) => g.game_id));
+    teamScores.forEach((gs: any) => {
+      if (!scheduleGameIds.has(gs.game_id)) {
+        schedule.push({
+          game_id: gs.game_id, date: gs.date, opponent: gs.opponent,
+          is_home: true, team_score: null, opp_score: null, result: '',
+          perf_score: gs.score, players: gs.players
+        });
+      }
+    });
+    schedule.sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  }
+} catch (e) {}
 
 // Calculate games played for per-game normalization
 let gamesPlayed = schedule.filter((g: any) => g.team_score !== null && g.opp_score !== null).length;
@@ -110,13 +139,11 @@ if (gamesPlayed === 0) {
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
 
-// Maps typical CBB Adj ratings (~90–125) to 0–100% bar width
 const barWidth = (v: number | null | undefined) => {
   if (v == null || !Number.isFinite(v)) return 0;
   return Math.min(100, Math.max(0, ((v - 90) / 35) * 100));
 };
 
-// Split MadeFreeThrow → "Made Free Throw"; Dunk_Shot → "Dunk Shot"
 const formatPlayType = (type: string) =>
   type
     .replace(/([a-z])([A-Z])/g, '$1 $2')
@@ -149,7 +176,6 @@ const teamPlayTypes = roster.reduce((acc: any, p: any) => {
   return acc;
 }, {});
 
-// Divide the total team frequency by the number of games played
 const sortedPlayTypes = Object.entries(teamPlayTypes)
   .map(([type, data]: [string, any]) => ({
     type, 
@@ -194,8 +220,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
           
           <div style="display: flex; gap: 18px; align-items: center;">
-            
-            {/* Rank Badge - Fixed Quotes */}
             <div style={`
               width: 64px; height: 64px; border-radius: 16px; flex-shrink: 0;
               display: flex; align-items: center; justify-content: center;
@@ -208,7 +232,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
               #{teamStats?.rank}
             </div>
 
-            {/* Name & Logo Group */}
             <div style="display: flex; align-items: center; gap: 16px;">
               <div>
                 <h1 style="font-size: 2.25rem; margin: 0 0 4px 0; letter-spacing: -0.02em;">{actualTeamName}</h1>
@@ -222,7 +245,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
                 </p>
               </div>
 
-              {/* Team Logo (Moved to the right of the name) */}
               {teamStats.logo && (
                 <img src={teamStats.logo} alt={actualTeamName} class="logo-light" style="width: 64px; height: 64px; object-fit: contain; flex-shrink: 0;" />
               )}
@@ -254,10 +276,7 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
       </div>
 
       <div style="display: flex; gap: 32px; padding: 18px 28px; border-top: 1px solid var(--card-border); background: var(--surface-2, #fafafa);">
-        <!-- Adj O -->
         <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
-          
-          {/* Adj O Badge - Fixed Quotes */}
           <div style={`
             width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
@@ -269,7 +288,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
           `}>
             #{offRank}
           </div>
-          
           <div style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
               <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;">Adj. Offense</span>
@@ -281,10 +299,7 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
           </div>
         </div>
 
-        <!-- Adj D -->
         <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
-          
-          {/* Adj D Badge - Fixed Quotes */}
           <div style={`
             width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
@@ -296,7 +311,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
           `}>
             #{defRank}
           </div>
-          
           <div style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
               <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;">Adj. Defense</span>
@@ -322,19 +336,18 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
             <th class="sortable num" data-sort="offensive_rating">Off RAPM <span class="sort-icon">⇕</span></th>
             <th class="sortable num" data-sort="defensive_rating">Def RAPM <span class="sort-icon">⇕</span></th>
             <th class="sortable num active" data-sort="net_rating">Net <span class="sort-icon">▼</span></th>
-            <th class="sortable num" data-sort="minutes_share">{rankings.projected ? 'Proj. MPG ' : 'MPG '} <span class="sort-icon">⇕</span></th>
           </tr>
         </thead>
         <tbody id="rosterBody"></tbody>
       </table>
     </div>
 
-    {/* ─────────── Schedule ─────────── */}
+    {/* ─────────── Schedule & Results (with Performance Rating) ─────────── */}
     {schedule.length > 0 && (
       <div style="margin-top: 32px;">
         <h2 class="section-title">Schedule & Results</h2>
         <div class="table-container">
-          <table class="rank-table">
+          <table class="rank-table compact-table" id="scheduleTable">
             <thead>
               <tr>
                 <th>Date</th>
@@ -343,38 +356,90 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
                 <th style="text-align: center;">Result</th>
                 <th class="num" style="text-align: right;">PF</th>
                 <th class="num" style="text-align: right;">PA</th>
+                <th class="num" style="text-align: right;">Performance</th>
               </tr>
             </thead>
             <tbody>
-              {schedule.map((g: any) => {
+              {schedule.map((g: any, i: number) => {
                 const isPlayed = g.team_score !== null && g.opp_score !== null;
+                const rowId = `schedule-details-${i}`;
+                
+                // Avoid <= in Astro markup
+                let scoreColor = 'var(--text-muted)';
+                if (g.perf_score !== null && g.perf_score !== undefined) {
+                  if (g.perf_score >= 80) scoreColor = 'var(--accent-success)';
+                  else if (g.perf_score < 30.1) scoreColor = 'var(--accent-danger)';
+                  else scoreColor = 'var(--text)';
+                }
+                
                 return (
-                  <tr style={!isPlayed ? 'opacity: 0.55; font-style: italic;' : ''}>
-                    <td>{new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
-                    <td>
-                      <a href={`/basketball/teams/${y}/${slugify(g.opponent)}/`} class="team-link">
-                        {g.opponent}
-                      </a>
-                    </td>
-                    <td style="text-align: center; color: var(--text-muted);">
-                      {g.neutral ? 'N' : (g.is_home ? 'vs' : '@')}
-                    </td>
-                    <td style="text-align: center;">
-                      {isPlayed ? (
-                        <span style={`display: inline-block; padding: 2px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 900; color: ${g.result === 'W' ? 'var(--accent-success, #16a34a)' : 'var(--accent-danger, #dc2626)'}; background: ${g.result === 'W' ? 'rgba(22, 163, 74, 0.12)' : 'rgba(220, 38, 38, 0.12)'};`}>
-                          {g.result}
-                        </span>
-                      ) : (
-                        <span style="color: var(--text-muted); font-size: 0.75rem;">—</span>
-                      )}
-                    </td>
-                    <td class="num" style="text-align: right; font-variant-numeric: tabular-nums; font-weight: 700;">
-                      {isPlayed ? g.team_score : '—'}
-                    </td>
-                    <td class="num" style="text-align: right; font-variant-numeric: tabular-nums; color: var(--text-muted);">
-                      {isPlayed ? g.opp_score : '—'}
-                    </td>
-                  </tr>
+                  <Fragment>
+                    <tr 
+                      class={g.players && g.players.length > 0 ? "expandable-row" : ""}
+                      onclick={g.players && g.players.length > 0 ? `document.getElementById('${rowId}').classList.toggle('hidden')` : undefined}
+                      style={!isPlayed ? 'opacity: 0.55; font-style: italic;' : ''}
+                    >
+                      <td>{new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
+                      <td>
+                        <a href={`/basketball/teams/${y}/${slugify(g.opponent)}/`} class="team-link">
+                          {g.opponent}
+                        </a>
+                      </td>
+                      <td style="text-align: center; color: var(--text-muted);">
+                        {g.neutral ? 'N' : (g.is_home ? 'vs' : '@')}
+                      </td>
+                      <td style="text-align: center;">
+                        {isPlayed ? (
+                          <span style={`display: inline-block; padding: 2px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 900; color: ${g.result === 'W' ? 'var(--accent-success, #16a34a)' : 'var(--accent-danger, #dc2626)'}; background: ${g.result === 'W' ? 'rgba(22, 163, 74, 0.12)' : 'rgba(220, 38, 38, 0.12)'};`}>
+                            {g.result}
+                          </span>
+                        ) : (
+                          <span style="color: var(--text-muted); font-size: 0.75rem;">—</span>
+                        )}
+                      </td>
+                      <td class="num" style="text-align: right; font-variant-numeric: tabular-nums; font-weight: 700;">
+                        {isPlayed ? g.team_score : '—'}
+                      </td>
+                      <td class="num" style="text-align: right; font-variant-numeric: tabular-nums; color: var(--text-muted);">
+                        {isPlayed ? g.opp_score : '—'}
+                      </td>
+                      <td class="num" style={`text-align: right; font-variant-numeric: tabular-nums; font-weight: 800; color: ${scoreColor};`}>
+                        {g.perf_score !== null && g.perf_score !== undefined ? g.perf_score.toFixed(1) : '—'}
+                      </td>
+                    </tr>
+                    
+                    {/* Expandable Player Breakdown */}
+                    {g.players && g.players.length > 0 && (
+                      <tr id={rowId} class="hidden">
+                        <td colspan="7" style="padding: 12px; background: var(--surface-2);">
+                          <table style="width: 100%; font-size: 0.85rem;">
+                            <thead>
+                              <tr style="color: var(--text-muted); border-bottom: 1px solid var(--card-border);">
+                                <th style="text-align:left; padding-bottom: 6px;">Player</th>
+                                <th style="text-align:right; padding-bottom: 6px;">Min</th>
+                                <th style="text-align:right; padding-bottom: 6px;">Game Score</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {g.players.map((p: any) => {
+                                let pScoreColor = 'var(--text)';
+                                if (p.score >= 80) pScoreColor = 'var(--accent-success)';
+                                else if (p.score < 30.1) pScoreColor = 'var(--accent-danger)';
+                                
+                                return (
+                                  <tr>
+                                    <td style="padding: 4px 0;">{p.name}</td>
+                                    <td class="num" style="color: var(--text-muted); padding: 4px 0;">{p.minutes}</td>
+                                    <td class="num" style={`font-weight:700; color:${pScoreColor}; padding: 4px 0;`}>{p.score.toFixed(1)}</td>
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    )}
+                  </Fragment>
                 );
               })}
             </tbody>
@@ -386,7 +451,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
     {/* ─────────── Offensive Identity & Shot Chart ─────────── */}
     <div style="display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 24px; align-items: start; margin-top: 32px;">
       
-      {/* Play Types */}
       {sortedPlayTypes.length > 0 && (
         <div class="card" style="padding: 20px;">
           <h2 class="section-title" style="margin-top: 0; margin-bottom: 16px;">Offensive Identity</h2>
@@ -423,7 +487,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
         </div>
       )}
 
-      {/* Shot Chart */}
       <div class="card" style="padding: 24px;">
         <h2 class="section-title" style="margin-top: 0; margin-bottom: 16px;">Team Shot Chart</h2>
         <ShotChart 
@@ -441,7 +504,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 <script id="roster-data" data-year={y} type="application/json" set:html={JSON.stringify(roster).replace(/</g, '\\u003c')} />
 
 <script>
-  // Removed DOMContentLoaded wrapper to ensure execution
   const yearSelect = document.getElementById('teamYearSelect') as HTMLSelectElement | null;
   if (yearSelect) {
     yearSelect.addEventListener('change', (e) => {
@@ -461,10 +523,27 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
     let currentSortKey = 'net_rating';
     let currentSortDir = -1;
 
-    const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
+    const fmt = (v: number | null, d = 1) => v == null ? '—' : Number(v).toFixed(d);
     const getMpg = (p: any) => {
       if (p.min_pg != null && p.min_pg > 0) return p.min_pg.toFixed(1);
       return ((p.minutes_share || 0) * 40).toFixed(1);
+    };
+
+    // ─── Visuals from Player Leaderboard ───
+    const getHeatColor = (val: number | null, min: number, max: number) => {
+      if (val == null) return 'transparent';
+      let pct = (val - min) / (max - min);
+      pct = Math.max(0, Math.min(1, pct));
+      if (pct > 0.5) return `rgba(22, 163, 74, ${Math.min(0.4, (pct - 0.5) * 1.0)})`;
+      return `rgba(220, 38, 38, ${Math.min(0.4, (0.5 - pct) * 1.0)})`;
+    };
+
+    const getRankBadgeHtml = (rank: number | null) => {
+      if (rank == null) return '—';
+      if (rank <= 10) return `<span style="display:inline-block; background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff; font-weight:900; padding:1px 6px; border-radius:4px; box-shadow:0 2px 8px rgba(217,119,6,0.3);">${rank}</span>`;
+      if (rank <= 25) return `<span style="display:inline-block; background:linear-gradient(135deg,#94a3b8,#64748b); color:#fff; font-weight:900; padding:1px 6px; border-radius:4px;">${rank}</span>`;
+      if (rank <= 50) return `<span style="display:inline-block; background:rgba(180,83,9,0.12); color:#b45309; font-weight:800; padding:1px 6px; border-radius:4px;">${rank}</span>`;
+      return `<span style="color:var(--text-muted); font-weight:600;">${rank}</span>`;
     };
 
     function renderTable() {
@@ -487,16 +566,12 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
         const pId = p.player_id || p.id;
         const rank = p.rank ?? null;
 
-        const rankStyle = rank == null
-          ? 'color: var(--text-muted); font-size: 0.8rem;'
-          : rank <= 10
-            ? 'color:#d97706; background:rgba(217,119,6,0.12); padding:2px 7px; border-radius:6px; font-weight:800; font-size:0.75rem; white-space:nowrap;'
-            : rank <= 25
-              ? 'color:#64748b; background:rgba(100,116,139,0.12); padding:2px 7px; border-radius:6px; font-weight:800; font-size:0.75rem; white-space:nowrap;'
-              : rank <= 50
-                ? 'color:#b45309; background:rgba(180,83,9,0.12); padding:2px 7px; border-radius:6px; font-weight:800; font-size:0.75rem; white-space:nowrap;'
-                : 'color: var(--text-muted); font-size: 0.8rem;';
+        // Heatmap backgrounds
+        const offBg = getHeatColor(p.offensive_rating, -1, 5);
+        const defBg = getHeatColor(p.defensive_rating, -1, 5);
+        const netBg = getHeatColor(p.net_rating, -2, 8);
 
+        // Net rating color
         const netVal = p.net_rating;
         const netColor = netVal == null
           ? 'var(--text)'
@@ -508,17 +583,16 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 
         return `
         <tr>
-          <td style="text-align: center;"><span style="${rankStyle}">${rank ?? '—'}</span></td>
+          <td style="text-align: center;">${getRankBadgeHtml(rank)}</td>
           <td>
             <a href="/basketball/players/${currentYear}/${pId}/" class="team-link">
               <strong>${p.name}</strong>
             </a>
           </td>
           <td style="color: var(--text-muted)">${p.position || '—'}</td>
-          <td class="num">${fmt(p.offensive_rating)}</td>
-          <td class="num">${fmt(p.defensive_rating)}</td>
-          <td class="num rating" style="color: ${netColor}; font-weight: 800;">${fmt(p.net_rating)}</td>
-          <td class="num">${getMpg(p)}</td>
+          <td class="num" style="background: ${offBg};">${fmt(p.offensive_rating)}</td>
+          <td class="num" style="background: ${defBg};">${fmt(p.defensive_rating)}</td>
+          <td class="num rating" style="background: ${netBg}; color: ${netColor}; font-weight: 800;">${fmt(p.net_rating)}</td>
         </tr>
       `}).join('');
     }
@@ -563,6 +637,11 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 
   .rank-table td.num,
   .rank-table th.num { font-variant-numeric: tabular-nums; }
+
+  /* Expandable schedule rows */
+  .expandable-row { cursor: pointer; transition: background-color 0.15s ease; }
+  .expandable-row:hover { background-color: var(--surface-2, #f8fafc); }
+  .hidden { display: none; }
 
   /* Logo Toggling for Dark Mode */
   .logo-dark { display: none !important; }

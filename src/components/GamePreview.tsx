@@ -329,9 +329,9 @@ export default function GamePreview({ year }: { year: number }) {
           {/* Home Team */}
           <div style={{ flex: 1, textAlign: 'center' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8px' }}>
-              {home.logo && <img src={home.logo} alt={home.team} className="logo-light" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
-              {home.logo_dark && <img src={home.logo_dark} alt={home.team} className="logo-dark" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
-              
+              {home.logo && <img src={home.logo} alt={home.team} className="logo-light" style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: '12px' }} />}
+              {home.logo_dark && <img src={home.logo_dark} alt={home.team} className="logo-dark" style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: '12px', display: 'none' }} />}
+
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                 <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>{home.team}</span>
                 <RankBadge rank={home.rank} />
@@ -359,8 +359,8 @@ export default function GamePreview({ year }: { year: number }) {
           {/* Away Team */}
           <div style={{ flex: 1, textAlign: 'center' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8px' }}>
-              {away.logo && <img src={away.logo} alt={away.team} className="logo-light" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
-              {away.logo_dark && <img src={away.logo_dark} alt={away.team} className="logo-dark" style={{ width: 56, height: 56, objectFit: 'contain', marginBottom: '8px' }} />}
+              {away.logo && <img src={away.logo} alt={away.team} className="logo-light" style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: '12px' }} />}
+              {away.logo_dark && <img src={away.logo_dark} alt={away.team} className="logo-dark" style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: '12px', display: 'none' }} />}
               
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                 <span style={{ fontSize: '1.2rem', fontWeight: 800 }}>{away.team}</span>
