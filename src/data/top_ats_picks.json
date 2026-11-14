@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-13T00:04:15.994245+00:00",
+  "generated_at": "2026-11-14T15:00:13.390123+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
-  "backtest_cover_rate": 0.5089,
+  "backtest_cover_rate": 0.5071,
   "picks_by_week": {
     "11": [
       {
@@ -33,6 +33,20 @@
         "kelly_fraction": 0.4335
       },
       {
+        "game_id": 401856889,
+        "week": 11,
+        "home_team": "Vanderbilt",
+        "away_team": "Alabama",
+        "market_spread": 14.0,
+        "predicted_margin": 22.94,
+        "pick": "Alabama",
+        "pick_side": "away",
+        "edge_pts": 8.9,
+        "cover_prob": 0.713,
+        "prob_edge": 0.213,
+        "kelly_fraction": 0.3972
+      },
+      {
         "game_id": 401858519,
         "week": 11,
         "home_team": "Iowa",
@@ -47,48 +61,48 @@
         "kelly_fraction": 0.3837
       },
       {
-        "game_id": 401856863,
+        "game_id": 401864538,
         "week": 11,
-        "home_team": "Oklahoma State",
-        "away_team": "Texas Tech",
-        "market_spread": -3.5,
-        "predicted_margin": 4.51,
-        "pick": "Texas Tech",
+        "home_team": "Air Force",
+        "away_team": "San Jos\u00e9 State",
+        "market_spread": -14.0,
+        "predicted_margin": -5.43,
+        "pick": "San Jos\u00e9 State",
         "pick_side": "away",
-        "edge_pts": 8.0,
-        "cover_prob": 0.6927,
-        "prob_edge": 0.1927,
-        "kelly_fraction": 0.3547
-      },
-      {
-        "game_id": 401869969,
-        "week": 11,
-        "home_team": "UL Monroe",
-        "away_team": "Louisiana",
-        "market_spread": 10.5,
-        "predicted_margin": 18.45,
-        "pick": "Louisiana",
-        "pick_side": "away",
-        "edge_pts": 7.9,
-        "cover_prob": 0.6914,
-        "prob_edge": 0.1914,
-        "kelly_fraction": 0.3519
+        "edge_pts": 8.6,
+        "cover_prob": 0.705,
+        "prob_edge": 0.205,
+        "kelly_fraction": 0.3805
       }
     ],
     "12": [
+      {
+        "game_id": 401856887,
+        "week": 12,
+        "home_team": "Oklahoma",
+        "away_team": "Ole Miss",
+        "market_spread": -3.0,
+        "predicted_margin": 5.25,
+        "pick": "Ole Miss",
+        "pick_side": "away",
+        "edge_pts": 8.2,
+        "cover_prob": 0.698,
+        "prob_edge": 0.198,
+        "kelly_fraction": 0.3658
+      },
       {
         "game_id": 401858528,
         "week": 12,
         "home_team": "Michigan",
         "away_team": "UCLA",
         "market_spread": 5.5,
-        "predicted_margin": -0.9,
+        "predicted_margin": -0.94,
         "pick": "Michigan",
         "pick_side": "home",
         "edge_pts": 6.4,
-        "cover_prob": 0.6563,
-        "prob_edge": 0.1563,
-        "kelly_fraction": 0.2782
+        "cover_prob": 0.6572,
+        "prob_edge": 0.1572,
+        "kelly_fraction": 0.2802
       },
       {
         "game_id": 401858302,
@@ -110,41 +124,27 @@
         "home_team": "Illinois",
         "away_team": "Iowa",
         "market_spread": 5.5,
-        "predicted_margin": 11.17,
+        "predicted_margin": 11.22,
         "pick": "Iowa",
         "pick_side": "away",
         "edge_pts": 5.7,
-        "cover_prob": 0.6393,
-        "prob_edge": 0.1393,
-        "kelly_fraction": 0.2424
-      },
-      {
-        "game_id": 401858531,
-        "week": 12,
-        "home_team": "Nebraska",
-        "away_team": "Ohio State",
-        "market_spread": 5.5,
-        "predicted_margin": 10.46,
-        "pick": "Ohio State",
-        "pick_side": "away",
-        "edge_pts": 5.0,
-        "cover_prob": 0.6224,
-        "prob_edge": 0.1224,
-        "kelly_fraction": 0.2071
+        "cover_prob": 0.6404,
+        "prob_edge": 0.1404,
+        "kelly_fraction": 0.2449
       },
       {
         "game_id": 401856753,
         "week": 12,
         "home_team": "South Carolina",
         "away_team": "Georgia",
-        "market_spread": 10.5,
+        "market_spread": 10.0,
         "predicted_margin": 14.99,
         "pick": "Georgia",
         "pick_side": "away",
-        "edge_pts": 4.5,
-        "cover_prob": 0.6111,
-        "prob_edge": 0.1111,
-        "kelly_fraction": 0.1834
+        "edge_pts": 5.0,
+        "cover_prob": 0.6231,
+        "prob_edge": 0.1231,
+        "kelly_fraction": 0.2086
       }
     ],
     "13": [
@@ -154,13 +154,13 @@
         "home_team": "Northwestern",
         "away_team": "Illinois",
         "market_spread": 3.5,
-        "predicted_margin": -9.01,
+        "predicted_margin": -9.05,
         "pick": "Northwestern",
         "pick_side": "home",
-        "edge_pts": 12.5,
-        "cover_prob": 0.7842,
-        "prob_edge": 0.2842,
-        "kelly_fraction": 0.5468
+        "edge_pts": 12.6,
+        "cover_prob": 0.7849,
+        "prob_edge": 0.2849,
+        "kelly_fraction": 0.5484
       },
       {
         "game_id": 401856757,
@@ -196,13 +196,13 @@
         "home_team": "UCLA",
         "away_team": "USC",
         "market_spread": 10.5,
-        "predicted_margin": -0.56,
+        "predicted_margin": -0.52,
         "pick": "UCLA",
         "pick_side": "home",
-        "edge_pts": 11.1,
-        "cover_prob": 0.7566,
-        "prob_edge": 0.2566,
-        "kelly_fraction": 0.4888
+        "edge_pts": 11.0,
+        "cover_prob": 0.7558,
+        "prob_edge": 0.2558,
+        "kelly_fraction": 0.4872
       },
       {
         "game_id": 401858313,
