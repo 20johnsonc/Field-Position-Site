@@ -1,32 +1,8 @@
 {
-  "generated_at": "2026-11-12T23:59:41.445827+00:00",
+  "generated_at": "2026-11-14T14:57:56.368331+00:00",
   "year": 2026,
   "week": 8,
   "games": [
-    {
-      "game_id": 401871055,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Florida International",
-      "away_team": "Middle Tennessee",
-      "start_date": "2026-10-20 23:00:00+00:00",
-      "home_conference": "Conference USA",
-      "away_conference": "Conference USA",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-20T23:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "CBSSN",
-      "tv_all": [
-        "CBSSN"
-      ],
-      "status": "completed",
-      "home_points": 23,
-      "away_points": 26,
-      "actual_margin": -3,
-      "actual_total": 49
-    },
     {
       "game_id": 401871069,
       "week": 8,
@@ -50,6 +26,30 @@
       "away_points": 38,
       "actual_margin": 23,
       "actual_total": 99
+    },
+    {
+      "game_id": 401871055,
+      "week": 8,
+      "year": 2026,
+      "home_team": "Florida International",
+      "away_team": "Middle Tennessee",
+      "start_date": "2026-10-20 23:00:00+00:00",
+      "home_conference": "Conference USA",
+      "away_conference": "Conference USA",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-20T23:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CBSSN",
+      "tv_all": [
+        "CBSSN"
+      ],
+      "status": "completed",
+      "home_points": 23,
+      "away_points": 26,
+      "actual_margin": -3,
+      "actual_total": 49
     },
     {
       "game_id": 401871092,
@@ -172,30 +172,6 @@
       "actual_total": 75
     },
     {
-      "game_id": 401861965,
-      "week": 8,
-      "year": 2026,
-      "home_team": "UConn",
-      "away_team": "Massachusetts",
-      "start_date": "2026-10-23 23:00:00+00:00",
-      "home_conference": "FBS Independents",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-23T23:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "CBSSN",
-      "tv_all": [
-        "CBSSN"
-      ],
-      "status": "completed",
-      "home_points": 35,
-      "away_points": 16,
-      "actual_margin": 19,
-      "actual_total": 51
-    },
-    {
       "game_id": 401858271,
       "week": 8,
       "year": 2026,
@@ -218,6 +194,30 @@
       "away_points": 19,
       "actual_margin": -3,
       "actual_total": 35
+    },
+    {
+      "game_id": 401861965,
+      "week": 8,
+      "year": 2026,
+      "home_team": "UConn",
+      "away_team": "Massachusetts",
+      "start_date": "2026-10-23 23:00:00+00:00",
+      "home_conference": "FBS Independents",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-23T23:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CBSSN",
+      "tv_all": [
+        "CBSSN"
+      ],
+      "status": "completed",
+      "home_points": 35,
+      "away_points": 16,
+      "actual_margin": 19,
+      "actual_total": 51
     },
     {
       "game_id": 401862808,
@@ -293,28 +293,28 @@
       "actual_total": 59
     },
     {
-      "game_id": 401858270,
+      "game_id": 401866450,
       "week": 8,
       "year": 2026,
-      "home_team": "SMU",
-      "away_team": "California",
+      "home_team": "Toledo",
+      "away_team": "Western Michigan",
       "start_date": "2026-10-24 16:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
       "kickoff_utc": "2026-10-24T16:00:00Z",
       "start_time_tbd": false,
-      "tv_channel": "CW",
+      "tv_channel": "CBSSN",
       "tv_all": [
-        "CW"
+        "CBSSN"
       ],
       "status": "completed",
-      "home_points": 59,
-      "away_points": 20,
-      "actual_margin": 39,
-      "actual_total": 79
+      "home_points": 45,
+      "away_points": 38,
+      "actual_margin": 7,
+      "actual_total": 83
     },
     {
       "game_id": 401862809,
@@ -341,28 +341,52 @@
       "actual_total": 100
     },
     {
-      "game_id": 401866450,
+      "game_id": 401858496,
       "week": 8,
       "year": 2026,
-      "home_team": "Toledo",
-      "away_team": "Western Michigan",
+      "home_team": "Michigan",
+      "away_team": "Indiana",
       "start_date": "2026-10-24 16:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
       "kickoff_utc": "2026-10-24T16:00:00Z",
       "start_time_tbd": false,
-      "tv_channel": "CBSSN",
+      "tv_channel": "Fox",
       "tv_all": [
-        "CBSSN"
+        "Fox"
       ],
       "status": "completed",
-      "home_points": 45,
-      "away_points": 38,
-      "actual_margin": 7,
-      "actual_total": 83
+      "home_points": 6,
+      "away_points": 13,
+      "actual_margin": -7,
+      "actual_total": 19
+    },
+    {
+      "game_id": 401858270,
+      "week": 8,
+      "year": 2026,
+      "home_team": "SMU",
+      "away_team": "California",
+      "start_date": "2026-10-24 16:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T16:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CW",
+      "tv_all": [
+        "CW"
+      ],
+      "status": "completed",
+      "home_points": 59,
+      "away_points": 20,
+      "actual_margin": 39,
+      "actual_total": 79
     },
     {
       "game_id": 401858498,
@@ -387,28 +411,28 @@
       "actual_total": 56
     },
     {
-      "game_id": 401858496,
+      "game_id": 401856840,
       "week": 8,
       "year": 2026,
-      "home_team": "Michigan",
-      "away_team": "Indiana",
+      "home_team": "Cincinnati",
+      "away_team": "Texas Tech",
       "start_date": "2026-10-24 16:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
       "kickoff_utc": "2026-10-24T16:00:00Z",
       "start_time_tbd": false,
-      "tv_channel": "Fox",
+      "tv_channel": "FS1",
       "tv_all": [
-        "Fox"
+        "FS1"
       ],
       "status": "completed",
-      "home_points": 6,
-      "away_points": 13,
-      "actual_margin": -7,
-      "actual_total": 19
+      "home_points": 37,
+      "away_points": 24,
+      "actual_margin": 13,
+      "actual_total": 61
     },
     {
       "game_id": 401858274,
@@ -483,28 +507,26 @@
       "actual_total": 44
     },
     {
-      "game_id": 401856840,
+      "game_id": 401866446,
       "week": 8,
       "year": 2026,
-      "home_team": "Cincinnati",
-      "away_team": "Texas Tech",
-      "start_date": "2026-10-24 16:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
+      "home_team": "Kent State",
+      "away_team": "Akron",
+      "start_date": "2026-10-24 17:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
-      "kickoff_utc": "2026-10-24T16:00:00Z",
+      "kickoff_utc": "2026-10-24T17:00:00Z",
       "start_time_tbd": false,
-      "tv_channel": "FS1",
-      "tv_all": [
-        "FS1"
-      ],
+      "tv_channel": null,
+      "tv_all": [],
       "status": "completed",
-      "home_points": 37,
-      "away_points": 24,
-      "actual_margin": 13,
-      "actual_total": 61
+      "home_points": 35,
+      "away_points": 20,
+      "actual_margin": 15,
+      "actual_total": 55
     },
     {
       "game_id": 401866476,
@@ -526,28 +548,6 @@
       "home_points": 27,
       "away_points": 28,
       "actual_margin": -1,
-      "actual_total": 55
-    },
-    {
-      "game_id": 401866446,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Kent State",
-      "away_team": "Akron",
-      "start_date": "2026-10-24 17:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T17:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": null,
-      "tv_all": [],
-      "status": "completed",
-      "home_points": 35,
-      "away_points": 20,
-      "actual_margin": 15,
       "actual_total": 55
     },
     {
@@ -599,28 +599,6 @@
       "actual_total": 31
     },
     {
-      "game_id": 401866447,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Ball State",
-      "away_team": "Sacramento State",
-      "start_date": "2026-10-24 19:30:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T19:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": null,
-      "tv_all": [],
-      "status": "completed",
-      "home_points": 34,
-      "away_points": 17,
-      "actual_margin": 17,
-      "actual_total": 51
-    },
-    {
       "game_id": 401856835,
       "week": 8,
       "year": 2026,
@@ -667,28 +645,28 @@
       "actual_total": 77
     },
     {
-      "game_id": 401858499,
+      "game_id": 401858273,
       "week": 8,
       "year": 2026,
-      "home_team": "UCLA",
-      "away_team": "Michigan State",
+      "home_team": "Georgia Tech",
+      "away_team": "Boston College",
       "start_date": "2026-10-24 19:30:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
       "kickoff_utc": "2026-10-24T19:30:00Z",
       "start_time_tbd": false,
-      "tv_channel": "CBS",
+      "tv_channel": "ACC Network",
       "tv_all": [
-        "CBS"
+        "ACC Network"
       ],
       "status": "completed",
-      "home_points": 28,
-      "away_points": 10,
-      "actual_margin": 18,
-      "actual_total": 38
+      "home_points": 27,
+      "away_points": 49,
+      "actual_margin": -22,
+      "actual_total": 76
     },
     {
       "game_id": 401856730,
@@ -715,11 +693,35 @@
       "actual_total": 38
     },
     {
-      "game_id": 401866448,
+      "game_id": 401862810,
       "week": 8,
       "year": 2026,
-      "home_team": "Buffalo",
-      "away_team": "Bowling Green",
+      "home_team": "Navy",
+      "away_team": "North Texas",
+      "start_date": "2026-10-24 19:30:00+00:00",
+      "home_conference": "American Athletic",
+      "away_conference": "American Athletic",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T19:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CBSSN",
+      "tv_all": [
+        "CBSSN"
+      ],
+      "status": "completed",
+      "home_points": 39,
+      "away_points": 49,
+      "actual_margin": -10,
+      "actual_total": 88
+    },
+    {
+      "game_id": 401866447,
+      "week": 8,
+      "year": 2026,
+      "home_team": "Ball State",
+      "away_team": "Sacramento State",
       "start_date": "2026-10-24 19:30:00+00:00",
       "home_conference": "Mid-American",
       "away_conference": "Mid-American",
@@ -731,10 +733,10 @@
       "tv_channel": null,
       "tv_all": [],
       "status": "completed",
-      "home_points": 31,
-      "away_points": 24,
-      "actual_margin": 7,
-      "actual_total": 55
+      "home_points": 34,
+      "away_points": 17,
+      "actual_margin": 17,
+      "actual_total": 51
     },
     {
       "game_id": 401858497,
@@ -761,6 +763,52 @@
       "actual_total": 23
     },
     {
+      "game_id": 401866448,
+      "week": 8,
+      "year": 2026,
+      "home_team": "Buffalo",
+      "away_team": "Bowling Green",
+      "start_date": "2026-10-24 19:30:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T19:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": null,
+      "tv_all": [],
+      "status": "completed",
+      "home_points": 31,
+      "away_points": 24,
+      "actual_margin": 7,
+      "actual_total": 55
+    },
+    {
+      "game_id": 401858499,
+      "week": 8,
+      "year": 2026,
+      "home_team": "UCLA",
+      "away_team": "Michigan State",
+      "start_date": "2026-10-24 19:30:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T19:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CBS",
+      "tv_all": [
+        "CBS"
+      ],
+      "status": "completed",
+      "home_points": 28,
+      "away_points": 10,
+      "actual_margin": 18,
+      "actual_total": 38
+    },
+    {
       "game_id": 401856731,
       "week": 8,
       "year": 2026,
@@ -783,30 +831,6 @@
       "away_points": 24,
       "actual_margin": 3,
       "actual_total": 51
-    },
-    {
-      "game_id": 401862810,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Navy",
-      "away_team": "North Texas",
-      "start_date": "2026-10-24 19:30:00+00:00",
-      "home_conference": "American Athletic",
-      "away_conference": "American Athletic",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T19:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "CBSSN",
-      "tv_all": [
-        "CBSSN"
-      ],
-      "status": "completed",
-      "home_points": 39,
-      "away_points": 49,
-      "actual_margin": -10,
-      "actual_total": 88
     },
     {
       "game_id": 401856727,
@@ -833,30 +857,6 @@
       "actual_total": 51
     },
     {
-      "game_id": 401858273,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Georgia Tech",
-      "away_team": "Boston College",
-      "start_date": "2026-10-24 19:30:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T19:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "ACC Network",
-      "tv_all": [
-        "ACC Network"
-      ],
-      "status": "completed",
-      "home_points": 27,
-      "away_points": 49,
-      "actual_margin": -22,
-      "actual_total": 76
-    },
-    {
       "game_id": 401856839,
       "week": 8,
       "year": 2026,
@@ -881,28 +881,6 @@
       "actual_total": 45
     },
     {
-      "game_id": 401871094,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Troy",
-      "away_team": "UL Monroe",
-      "start_date": "2026-10-24 20:00:00+00:00",
-      "home_conference": "Sun Belt",
-      "away_conference": "Sun Belt",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T20:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": null,
-      "tv_all": [],
-      "status": "completed",
-      "home_points": 14,
-      "away_points": 21,
-      "actual_margin": -7,
-      "actual_total": 35
-    },
-    {
       "game_id": 401866449,
       "week": 8,
       "year": 2026,
@@ -925,6 +903,28 @@
       "away_points": 20,
       "actual_margin": 4,
       "actual_total": 44
+    },
+    {
+      "game_id": 401871094,
+      "week": 8,
+      "year": 2026,
+      "home_team": "Troy",
+      "away_team": "UL Monroe",
+      "start_date": "2026-10-24 20:00:00+00:00",
+      "home_conference": "Sun Belt",
+      "away_conference": "Sun Belt",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T20:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": null,
+      "tv_all": [],
+      "status": "completed",
+      "home_points": 14,
+      "away_points": 21,
+      "actual_margin": -7,
+      "actual_total": 35
     },
     {
       "game_id": 401871093,
@@ -1042,6 +1042,30 @@
       "actual_total": 105
     },
     {
+      "game_id": 401856836,
+      "week": 8,
+      "year": 2026,
+      "home_team": "Oklahoma State",
+      "away_team": "Colorado",
+      "start_date": "2026-10-24 23:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T23:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "FS1",
+      "tv_all": [
+        "FS1"
+      ],
+      "status": "completed",
+      "home_points": 57,
+      "away_points": 24,
+      "actual_margin": 33,
+      "actual_total": 81
+    },
+    {
       "game_id": 401858276,
       "week": 8,
       "year": 2026,
@@ -1088,28 +1112,28 @@
       "actual_total": 70
     },
     {
-      "game_id": 401856836,
+      "game_id": 401858275,
       "week": 8,
       "year": 2026,
-      "home_team": "Oklahoma State",
-      "away_team": "Colorado",
-      "start_date": "2026-10-24 23:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
+      "home_team": "North Carolina",
+      "away_team": "Syracuse",
+      "start_date": "2026-10-24 23:30:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
-      "kickoff_utc": "2026-10-24T23:00:00Z",
+      "kickoff_utc": "2026-10-24T23:30:00Z",
       "start_time_tbd": false,
-      "tv_channel": "FS1",
+      "tv_channel": "ACC Network",
       "tv_all": [
-        "FS1"
+        "ACC Network"
       ],
       "status": "completed",
-      "home_points": 57,
-      "away_points": 24,
-      "actual_margin": 33,
-      "actual_total": 81
+      "home_points": 30,
+      "away_points": 31,
+      "actual_margin": -1,
+      "actual_total": 61
     },
     {
       "game_id": 401858500,
@@ -1134,30 +1158,6 @@
       "away_points": 7,
       "actual_margin": 17,
       "actual_total": 31
-    },
-    {
-      "game_id": 401858275,
-      "week": 8,
-      "year": 2026,
-      "home_team": "North Carolina",
-      "away_team": "Syracuse",
-      "start_date": "2026-10-24 23:30:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T23:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "ACC Network",
-      "tv_all": [
-        "ACC Network"
-      ],
-      "status": "completed",
-      "home_points": 30,
-      "away_points": 31,
-      "actual_margin": -1,
-      "actual_total": 61
     },
     {
       "game_id": 401860906,
@@ -1208,30 +1208,6 @@
       "actual_total": 61
     },
     {
-      "game_id": 401856729,
-      "week": 8,
-      "year": 2026,
-      "home_team": "Kentucky",
-      "away_team": "Vanderbilt",
-      "start_date": "2026-10-24 23:30:00+00:00",
-      "home_conference": "SEC",
-      "away_conference": "SEC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-10-24T23:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "SEC Network",
-      "tv_all": [
-        "SEC Network"
-      ],
-      "status": "completed",
-      "home_points": 34,
-      "away_points": 17,
-      "actual_margin": 17,
-      "actual_total": 51
-    },
-    {
       "game_id": 401856838,
       "week": 8,
       "year": 2026,
@@ -1254,6 +1230,30 @@
       "away_points": 3,
       "actual_margin": 36,
       "actual_total": 42
+    },
+    {
+      "game_id": 401856729,
+      "week": 8,
+      "year": 2026,
+      "home_team": "Kentucky",
+      "away_team": "Vanderbilt",
+      "start_date": "2026-10-24 23:30:00+00:00",
+      "home_conference": "SEC",
+      "away_conference": "SEC",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-10-24T23:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "SEC Network",
+      "tv_all": [
+        "SEC Network"
+      ],
+      "status": "completed",
+      "home_points": 34,
+      "away_points": 17,
+      "actual_margin": 17,
+      "actual_total": 51
     },
     {
       "game_id": 401862811,
