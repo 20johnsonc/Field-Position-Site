@@ -25,7 +25,6 @@ export async function getStaticPaths() {
 const { year } = Astro.params;
 const y = Number(year);
 
-// Read data directly from the filesystem
 let data = null;
 try {
   const playersPath = join(process.cwd(), 'public', `data/basketball/${y}/players.json`);
@@ -42,7 +41,7 @@ try {
 const { players } = data;
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
 
-let years = [];
+let years: number[] = [];
 try {
   const indexPath = join(process.cwd(), 'public', 'data', 'basketball', 'index.json');
   const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'));
@@ -50,6 +49,9 @@ try {
 } catch (e) {
   years = [y];
 }
+
+// ← the missing piece: latest season, used by the nav tabs
+const latest = years[0] ?? y;
 
 const conferences = [...new Set(players.players.map((p: any) => p.conference).filter(Boolean))].sort();
 ---
@@ -59,8 +61,8 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 24px;">
       <SportTabs />
       <div class="tabs" style="margin-bottom: 0;">
-        <a href="/basketball/" class="tab-btn" style="text-decoration: none;">Team Rankings</a>
-        <a href="/basketball/players/" class="tab-btn active" style="text-decoration: none;">Player Leaderboard</a>
+        <a href={`/basketball/${latest}/`} class="tab-btn" style="text-decoration: none;">Team Rankings</a>
+        <a href={`/basketball/players/${latest}/`} class="tab-btn active" style="text-decoration: none;">Player Leaderboard</a>
         <a href="/basketball/game-preview/" class="tab-btn" style="text-decoration: none;">Game Preview</a>
       </div>
     </div>
@@ -68,13 +70,13 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
     <!-- Controls -->
     <div class="controls" style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; align-items: center; background: var(--surface-1); padding: 16px; border-radius: 8px; border: 1px solid var(--card-border);">
       
-      <select id="yearFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
+      <select id="yearFilter" autocomplete="off" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
         {years.map(yr => (
           <option value={yr} selected={yr === y}>{yr - 1}-{String(yr).slice(-2)}</option>
         ))}
       </select>
       
-      <select id="confFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
+      <select id="confFilter" autocomplete="off" style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; font-weight: 600; outline: none; cursor: pointer;">
         <option value="ALL">All Conferences</option>
         {conferences.map(c => <option value={c}>{c}</option>)}
       </select>
@@ -83,71 +85,47 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
         type="text" 
         id="playerSearch" 
         placeholder="Search players or teams..." 
+        autocomplete="off"
         style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--surface-2); color: var(--text); font-size: 0.9rem; outline: none; flex: 1; min-width: 200px; max-width: 300px;"
       />
     </div>
 
-    <!-- ADDED limit={400} so all players are in the DOM and searchable -->
+    <!-- limit = default number of visible rows. Search/conf/poss bypass it. -->
     <BasketballPlayersTable 
       players={players.players} 
       projected={players.projected} 
       year={y} 
-      limit={400} 
+      limit={100} 
     />
   </div>
 </Layout>
 
 <script>
-  const yearSelect = document.getElementById('yearFilter') as HTMLSelectElement;
-  const confSelect = document.getElementById('confFilter') as HTMLSelectElement;
-  const searchInput = document.getElementById('playerSearch') as HTMLInputElement;
-  const tableBody = document.getElementById('bballPlayersBody');
-  const limitNotice = document.getElementById('bballPlayersLimitNotice');
-
-  // 1. Year Filter (Redirects to the correct page)
+  // Year dropdown → navigate (full page reload; data is per-season).
+  const yearSelect = document.getElementById('yearFilter') as HTMLSelectElement | null;
   if (yearSelect) {
-    yearSelect.addEventListener('change', (e) => {
-      const selectedYear = (e.target as HTMLSelectElement).value;
-      window.location.href = `/basketball/players/${selectedYear}/`;
+    yearSelect.addEventListener('change', () => {
+      window.location.href = `/basketball/players/${yearSelect.value}/`;
     });
   }
 
-  // 2. Search and Conference Filter (Hides/shows rows)
-  function filterTable() {
-    if (!tableBody) return;
-    
-    const search = searchInput ? searchInput.value.toLowerCase().trim() : '';
-    const conf = confSelect ? confSelect.value : 'ALL';
-    const rows = tableBody.querySelectorAll('tr');
-    
-    let visibleCount = 0;
+  const searchInput = document.getElementById('playerSearch') as HTMLInputElement | null;
+  const confSelect = document.getElementById('confFilter') as HTMLSelectElement | null;
 
-    rows.forEach(row => {
-      const playerName = (row.getAttribute('data-player') || '').toLowerCase();
-      const teamName = (row.getAttribute('data-team') || '').toLowerCase();
-      const playerConf = row.getAttribute('data-conf') || 'None';
-      
-      const matchSearch = playerName.includes(search) || teamName.includes(search);
-      const matchConf = conf === 'ALL' || playerConf === conf;
-      
-      if (matchSearch && matchConf) {
-        (row as HTMLElement).style.display = '';
-        visibleCount++;
-      } else {
-        (row as HTMLElement).style.display = 'none';
-      }
-    });
+  // Search/conf changes → filter visibility only; ranks are NOT recalculated.
+  const runFilter = () => {
+    const fn = (window as any).filterPlayersTable;
+    if (typeof fn === 'function') fn();
+  };
 
-    // Update the limit notice dynamically based on search
-    if (limitNotice) {
-      if (search !== '' || conf !== 'ALL') {
-        limitNotice.innerHTML = `Showing ${visibleCount} matching players.`;
-      } else {
-        limitNotice.innerHTML = `Showing all ${rows.length} players.`;
-      }
-    }
+  if (searchInput) searchInput.addEventListener('input', runFilter);
+  if (confSelect) confSelect.addEventListener('change', runFilter);
+
+  // Component script is a module that appears earlier in the DOM and has
+  // already run — but guard against ordering surprises anyway.
+  if ((window as any).filterPlayersTable) {
+    runFilter();
+  } else {
+    requestAnimationFrame(runFilter);
   }
-
-  if (searchInput) searchInput.addEventListener('input', filterTable);
-  if (confSelect) confSelect.addEventListener('change', filterTable);
 </script>

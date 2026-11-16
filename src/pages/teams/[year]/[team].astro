@@ -7,6 +7,7 @@ import TeamTrajectoryChart from '../../../components/TeamTrajectoryChart.tsx';
 import fs from 'node:fs';
 import path from 'node:path';
 import PassingRushingTab from '../../../components/PassingRushingTab.astro';
+import { getBrandingMap, teamKey } from '../../../lib/teamBranding';
 import gameHistoryRaw from '../../../data/game_history.json';
 import trajectoriesRaw from '../../../data/trajectories.json';
 import {
@@ -25,6 +26,20 @@ function loadJson(relPath: string, fallback: unknown = {}) {
     return JSON.parse(readFileSync(join(PUBLIC_DATA, relPath), 'utf-8'));
   } catch {
     return fallback;
+  }
+}
+
+// Basketball team data (logos, colors) from every season's rankings.json, newest season first so a
+// team's most recent branding wins. Only used for branding, so a missing folder just means no logos.
+function loadBasketballTeams(): any[] {
+  try {
+    const years = readdirSync(join(PUBLIC_DATA, 'basketball'), { withFileTypes: true })
+      .filter((d) => d.isDirectory() && /^\d{4}$/.test(d.name))
+      .map((d) => Number(d.name))
+      .sort((a, b) => b - a);
+    return years.flatMap((y) => loadJson(`basketball/${y}/rankings.json`, {})?.teams ?? []);
+  } catch {
+    return [];
   }
 }
 
@@ -148,6 +163,32 @@ export function getStaticPaths() {
 }
 
 const { row, ranks, totalTeams, teamMatchups, allRankings } = Astro.props;
+
+// Team branding from the basketball data (same gradient/logo treatment as the basketball player page)
+const brand = getBrandingMap(loadBasketballTeams).get(teamKey(row.team));
+const pColor = brand?.primaryColor || 'var(--accent-primary)';
+const sColor = brand?.secondaryColor || 'var(--accent-info, var(--accent-primary))';
+const hasBothLogos = !!(brand?.logo && brand?.logo_dark);
+
+// Rank badge: same team gradient, with white or near-black text, whichever reads better against
+// the two colors (picks the option with the best worst-case contrast). Teams without usable
+// hex colors keep the original badge.
+const luminance = (hex?: string): number | null => {
+  const m = /^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.exec((hex || '').trim());
+  if (!m) return null;
+  const h = m[1].length === 3 ? m[1].split('').map((c) => c + c).join('') : m[1];
+  const [r, g, b] = [0, 2, 4]
+    .map((i) => parseInt(h.slice(i, i + 2), 16) / 255)
+    .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+const badgeFrom = brand?.primaryColor;
+const badgeTo = brand?.secondaryColor || brand?.primaryColor;
+const badgeLums = [badgeFrom, badgeTo].map(luminance);
+const brandedBadge = badgeLums.every((l) => l !== null);
+const worstContrast = (textLum: number) =>
+  Math.min(...badgeLums.map((l) => (Math.max(l!, textLum) + 0.05) / (Math.min(l!, textLum) + 0.05)));
+const badgeText = brandedBadge && worstContrast(1) >= worstContrast(0.0088) ? '#ffffff' : '#0f172a'; // #0f172a ≈ 0.0088
 
 const gameHistory = gameHistoryRaw as GameHistoryData;
 const trajectories = trajectoriesRaw as TrajectoriesData;
@@ -290,12 +331,29 @@ try {
 <Layout title={`${row.team} — Team Page`} seasonLabel={`${row.year} Season`}>
   <a href="/" class="back-link" id="backLink">&larr; Return</a>
 
+  <div class="team-hero" style={`--team-primary: ${pColor}; --team-secondary: ${sColor};`}>
+  <div class="team-accent"></div>
   <div class="team-header">
-    <div class="rank-badge">#{ranks?.overallRank ?? '—'}</div>
+    <div
+      class:list={['rank-badge', { 'rank-badge-team': brandedBadge }]}
+      style={brandedBadge ? `--badge-from: ${badgeFrom}; --badge-to: ${badgeTo}; --badge-text: ${badgeText};` : undefined}
+    >#{ranks?.overallRank ?? '—'}</div>
     <div class="team-header-content">
 
       <div class="team-title-group">
-        <h1>{row.team}</h1>
+        <div class="team-name-row">
+          {brand && (
+            hasBothLogos ? (
+              <>
+                <img src={brand.logo} alt="" width="40" height="40" class="team-logo tl-light" />
+                <img src={brand.logo_dark} alt="" width="40" height="40" class="team-logo tl-dark" />
+              </>
+            ) : (
+              <img src={brand.logo || brand.logo_dark} alt="" width="40" height="40" class="team-logo" />
+            )
+          )}
+          <h1>{row.team}</h1>
+        </div>
 
         <div class="subtitle-row">
           <span class="subtitle">{row.conference} · Conf Rank #{ranks?.confRank ?? '—'} ·</span>
@@ -315,6 +373,7 @@ try {
 
       </div>
     </div>
+  </div>
   </div>
 
   <div class="stat-row">
@@ -608,6 +667,41 @@ try {
   /* =========================================================
      TEAM HEADER
      ========================================================= */
+
+  /* Team-color bar and logo, like the basketball player page hero.
+     --team-primary / --team-secondary are set inline on .team-hero. */
+  .team-accent {
+    height: 4px;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--team-primary), var(--team-secondary));
+  }
+
+  /* Rank badge in the team gradient (colors and text color are set inline on the badge) */
+  .rank-badge.rank-badge-team {
+    background: linear-gradient(135deg, var(--badge-from), var(--badge-to));
+    border-color: transparent;
+    color: var(--badge-text);
+  }
+
+  .team-name-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .team-logo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  /* Dark is the default theme: show the dark-background logo, swap under [data-theme="light"]. */
+  .tl-light { display: none; }
+  /* :global() is required: this <style> is scoped, and <html data-theme> never carries Astro's scope class. */
+  :global([data-theme="light"]) .tl-light { display: block; }
+  :global([data-theme="light"]) .tl-dark { display: none; }
 
   .team-header {
     display: flex;

@@ -1,12 +1,25 @@
 ---
 import type { Ranking } from '../lib/types';
 import { formatRating, slugifyTeam } from '../lib/data';
+import { buildBrandingMap, teamKey } from '../lib/teamBranding';
 
 interface Props {
   rankings: Ranking[];
+  // `teams` array from /data/basketball/<year>/rankings.json (needs team, logo, logo_dark). Optional.
+  basketballTeams?: any[];
 }
 
-const { rankings } = Astro.props;
+const { rankings, basketballTeams = [] } = Astro.props;
+
+// Logos from the basketball team data. Name matching (and the alias list) lives in lib/teamBranding.ts
+// so the team pages use exactly the same rules.
+const logoMap = buildBrandingMap(basketballTeams);
+
+// Dev-only heads-up: which football teams found no logo, so you know what to alias.
+if (import.meta.env.DEV && basketballTeams.length) {
+  const missing = [...new Set(rankings.map((r) => r.team))].filter((t) => !logoMap.has(teamKey(t)));
+  if (missing.length) console.warn(`[RankingsTable] ${missing.length} teams have no basketball logo: ${missing.join(', ')}`);
+}
 
 // Helper to convert "10-2" into a numeric value for accurate sorting
 const getRecordSortValue = (record: string) => {
@@ -47,6 +60,8 @@ const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
           const tags: string[] = row.tags ?? [];
           const shown = tags.slice(0, 3);
           const extra = tags.slice(3);
+          const t = logoMap.get(teamKey(row.team));
+          const hasBoth = !!(t?.logo && t?.logo_dark);
 
           return (
             <tr
@@ -65,6 +80,15 @@ const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
               </td>
               <td class="team">
                 <a href={`/teams/${row.year}/${slugifyTeam(row.team)}/`} class="team-link">
+                  {/* Logo slot keeps names aligned even when a team has no logo */}
+                  {t
+                    ? hasBoth
+                      ? <>
+                          <img src={t.logo} alt="" width="24" height="24" loading="lazy" class="rt-logo rt-logo-light" />
+                          <img src={t.logo_dark} alt="" width="24" height="24" loading="lazy" class="rt-logo rt-logo-dark" />
+                        </>
+                      : <img src={t.logo || t.logo_dark} alt="" width="24" height="24" loading="lazy" class="rt-logo" />
+                    : <span class="rt-logo rt-logo-empty" aria-hidden="true"></span>}
                   {row.team}
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;"><path d="m9 18 6-6-6-6"/></svg>
                   <div class="rank-wrapper">
@@ -160,6 +184,33 @@ const TAG_CLASSES = ['mini-offense', 'mini-defense', 'mini-neutral'];
   .team-link:hover {
     color: var(--accent-primary);
   }
+
+  /* Tighten the Rk -> Team gap. The Rk column is as wide as its "RK ⇕" header plus full
+     cell padding on both sides, so shrink the column to its content and trim the padding. */
+  #rankingsTable th:first-child,
+  #rankingsTable td.rank {
+    width: 1%;
+    white-space: nowrap;
+    padding-right: 8px;
+  }
+  #rankingsTable th:nth-child(2),
+  #rankingsTable td.team {
+    padding-left: 8px;
+  }
+
+  /* Team logos. Dark is the default theme here, so show the dark-background logo
+     and swap to the regular logo under [data-theme="light"]. */
+  .rt-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 6px;
+  }
+  .rt-logo-empty { display: inline-block; }
+  .rt-logo-light { display: none; }
+  [data-theme="light"] .rt-logo-light { display: block; }
+  [data-theme="light"] .rt-logo-dark { display: none; }
 
   .text-right {
     text-align: right;

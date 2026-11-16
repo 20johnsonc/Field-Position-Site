@@ -52,7 +52,7 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
     <div style="margin-bottom: 24px;">
       <h1 style="font-size: 2rem; margin: 0 0 4px 0; letter-spacing: -0.02em;">Player Leaderboard</h1>
       <p style="color: var(--text-muted); font-size: 1rem; margin: 0;">
-        Player-first RAPM ratings, opponent-adjusted for college basketball.
+        Player-first BPR (Bayesian Performance Rating), blending on-court RAPM, box score production, and pedigree.
       </p>
     </div>
 
@@ -104,7 +104,6 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
   }
 
   // 2. Filtering Logic
-  // We expose this globally so the sorting script in the component can re-trigger it
   (window as any).filterPlayersTable = function() {
     if (!tableBody) return;
     
@@ -124,7 +123,6 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
       const matchConf = conf === 'ALL' || playerConf === conf;
       
       if (search !== '' || conf !== 'ALL') {
-        // If searching/filtering, show all matches regardless of limit
         if (matchSearch && matchConf) {
           (row as HTMLElement).style.display = '';
           visibleCount++;
@@ -132,7 +130,6 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
           (row as HTMLElement).style.display = 'none';
         }
       } else {
-        // If not searching, enforce the 100 player limit
         if (i < LIMIT) {
           (row as HTMLElement).style.display = '';
           visibleCount++;
@@ -142,7 +139,6 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
       }
     });
 
-    // Update the limit notice dynamically
     if (limitNotice) {
       if (search !== '' || conf !== 'ALL') {
         limitNotice.innerHTML = `Showing ${visibleCount} matching players.`;
@@ -155,6 +151,5 @@ const conferences = [...new Set(players.players.map((p: any) => p.conference).fi
   if (searchInput) searchInput.addEventListener('input', (window as any).filterPlayersTable);
   if (confSelect) confSelect.addEventListener('change', (window as any).filterPlayersTable);
 
-  // Run once on page load to hide everyone past 100
   (window as any).filterPlayersTable();
 </script>

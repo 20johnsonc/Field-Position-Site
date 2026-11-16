@@ -100,7 +100,7 @@ export default function GamePreview({ year }: { year: number }) {
         
         if (sorted.length > 1) {
           setHomeTeam(sorted[0].team);
-          setAwayTeam(sorted[1].team);
+          setAwayTeam("Kansas State");
         }
       } catch (e) {
         console.error(e);

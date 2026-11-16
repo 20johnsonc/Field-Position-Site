@@ -100,7 +100,7 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
               <div style="font-size: 1.4rem; font-weight: 900; color: var(--text);">#{player.rank}</div>
             </div>
             <div>
-              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Net RAPM</div>
+              <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Overall BPR</div>
               <div style={`font-size: 1.4rem; font-weight: 900; color: ${player.net_rating >= 5 ? 'var(--accent-success, #16a34a)' : player.net_rating <= 0 ? 'var(--accent-danger, #dc2626)' : 'var(--text)'};`}>
                 {player.net_rating > 0 ? '+' : ''}{fmt(player.net_rating)}
               </div>
@@ -123,19 +123,19 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
     <div id="gameLogContainer" style="display: none; margin-top: 32px;">
       <h2 class="section-title">Game Log</h2>
       <div class="table-container">
-        <table class="rank-table compact-table">
+        <table class="rank-table compact-table" id="gameLogTable">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Opponent</th>
-              <th class="num">GS</th>
-              <th class="num">MIN</th>
-              <th class="num">PTS</th>
-              <th class="num">REB</th>
-              <th class="num">AST</th>
-              <th class="num">STL</th>
-              <th class="num">BLK</th>
-              <th class="num">TO</th>
+              <th class="sortable" data-sort="date">Date <span class="sort-icon">⇕</span></th>
+              <th class="sortable" data-sort="opponent">Opponent <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="score">GS <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="minutes">MIN <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="points">PTS <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="rebounds">REB <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="assists">AST <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="steals">STL <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="blocks">BLK <span class="sort-icon">⇕</span></th>
+              <th class="sortable num" data-sort="turnovers">TO <span class="sort-icon">⇕</span></th>
             </tr>
           </thead>
           <tbody id="gameLogBody"></tbody>
@@ -160,7 +160,13 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
   const loadingEl = document.getElementById('gameLogLoading');
   const containerEl = document.getElementById('gameLogContainer');
   const bodyEl = document.getElementById('gameLogBody');
-  
+  const tableEl = document.getElementById('gameLogTable');
+  let rawLogs = [];
+  let playerGS = {};
+
+  let currentSortKey = 'date';
+  let currentSortDir = -1;
+
   if (isProjected) {
     loadingEl.style.display = 'none';
   } else {
@@ -168,10 +174,9 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
       try {
         const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         
-        // Fetch both the logs and the game scores in parallel
         const [logsRes, gsRes] = await Promise.all([
-          fetch(`/data/basketball/${year}/game_logs/${slugify(team)}.json`),
-          fetch(`/data/basketball/${year}/game_scores.json`)
+          fetch(`/data/basketball/${year}/game_logs/${slugify(team)}.json?t=${Date.now()}`),
+          fetch(`/data/basketball/${year}/game_scores.json?t=${Date.now()}`)
         ]);
         
         if (!logsRes.ok) throw new Error('No game logs found');
@@ -179,10 +184,8 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
         const data = await logsRes.json();
         const gsData = gsRes.ok ? await gsRes.json() : {};
         
-        const logs = data[playerId];
+        rawLogs = data[playerId] || [];
         
-        // Create a lookup map for game scores
-        const playerGS = {};
         if (gsData[team]) {
           gsData[team].forEach(g => {
             if (g.players) {
@@ -192,41 +195,92 @@ const slugify = (name: string | null | undefined) => (name || '').toLowerCase().
           });
         }
 
-        if (logs && logs.length > 0) {
-          bodyEl.innerHTML = logs.map(g => {
-            const gs = playerGS[g.game_id];
-            const scoreStr = gs ? gs.score.toFixed(1) : '—';
-            
-            return `
-            <tr>
-              <td>${new Date(g.start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
-              <td>
-                ${g.is_home ? 'vs' : '@'} 
-                <a href="/basketball/teams/${year}/${slugify(g.opponent)}/" class="team-link">
-                  ${g.opponent}
-                </a>
-              </td>
-              <td class="num" style="font-weight:700;">${scoreStr}</td>
-              <td class="num">${g.minutes}</td>
-              <td class="num">${g.points}</td>
-              <td class="num">${g.rebounds}</td>
-              <td class="num">${g.assists}</td>
-              <td class="num">${g.steals}</td>
-              <td class="num">${g.blocks}</td>
-              <td class="num">${g.turnovers}</td>
-            </tr>
-          `}).join('');
-          
+        if (rawLogs.length > 0) {
+          renderLogs();
           loadingEl.style.display = 'none';
           containerEl.style.display = 'block';
         } else {
-          loadingEl.textContent = 'No game-by-game data available for this player.';
+          loadingEl.textContent = 'No game-by-game data available.';
         }
       } catch (e) {
         console.error(e);
         loadingEl.textContent = 'No game-by-game data available.';
       }
     })();
+  }
+
+  function renderLogs() {
+    if (!rawLogs || rawLogs.length === 0) return;
+    
+    const sorted = [...rawLogs].sort((a, b) => {
+      let valA = a[currentSortKey];
+      let valB = b[currentSortKey];
+      
+      // Handle mapped game score
+      if (currentSortKey === 'score') {
+        valA = playerGS[a.game_id]?.score || 0;
+        valB = playerGS[b.game_id]?.score || 0;
+      }
+      
+      if (currentSortKey === 'opponent') {
+        valA = valA || ''; valB = valB || '';
+        return valA.localeCompare(valB) * currentSortDir;
+      }
+      if (currentSortKey === 'date') {
+        return (new Date(valA).getTime() - new Date(valB).getTime()) * currentSortDir;
+      }
+      
+      valA = Number(valA) || 0;
+      valB = Number(valB) || 0;
+      return (valA - valB) * currentSortDir;
+    });
+
+    bodyEl.innerHTML = sorted.map(g => {
+      const gs = playerGS[g.game_id];
+      const scoreStr = gs ? gs.score.toFixed(1) : '—';
+      const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      
+      return `
+      <tr>
+        <td>${new Date(g.start_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
+        <td>
+          ${g.is_home ? 'vs' : '@'} 
+          <a href="/basketball/teams/${year}/${slugify(g.opponent)}/" class="team-link">
+            ${g.opponent}
+          </a>
+        </td>
+        <td class="num" style="font-weight:700;">${scoreStr}</td>
+        <td class="num">${g.minutes}</td>
+        <td class="num">${g.points}</td>
+        <td class="num">${g.rebounds}</td>
+        <td class="num">${g.assists}</td>
+        <td class="num">${g.steals}</td>
+        <td class="num">${g.blocks}</td>
+        <td class="num">${g.turnovers}</td>
+      </tr>
+    `}).join('');
+  }
+
+  // Add click listeners for sorting
+  if (tableEl) {
+    tableEl.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (currentSortKey === key) currentSortDir *= -1;
+        else { currentSortKey = key; currentSortDir = -1; }
+
+        tableEl.querySelectorAll('th.sortable').forEach(h => {
+          h.classList.remove('active');
+          const icon = h.querySelector('.sort-icon');
+          if (icon) icon.textContent = '⇕';
+        });
+        th.classList.add('active');
+        const activeIcon = th.querySelector('.sort-icon');
+        if (activeIcon) activeIcon.textContent = currentSortDir === 1 ? '▲' : '▼';
+
+        renderLogs();
+      });
+    });
   }
 </script>
 

@@ -154,7 +154,28 @@ export type ScheduleDoc = Record<string, ScheduleGame[]>;
 // ═══════════════════════════════════════════════════════════════════
 
 export async function fetchJson(ctx: any, urlPath: string): Promise<any | null> {
-  // 1. Try standard fetch (works in production SSR on Cloudflare)
+  // 1. In DEV mode, read directly from the filesystem FIRST to bypass Vite's memory cache
+  if (import.meta.env.DEV) {
+    try {
+      const fs = await import('node:fs');
+      const path = await import('node:path');
+      
+      // Clean up the path just in case there are query strings
+      const cleanPath = urlPath.split('?')[0];
+      const normalizedPath = cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath;
+      
+      const filePath = path.join(process.cwd(), 'public', normalizedPath);
+      
+      if (fs.existsSync(filePath)) {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(content);
+      }
+    } catch (e) {
+      console.warn(`Dev fs read failed for ${urlPath}, falling back to fetch:`, e);
+    }
+  }
+
+  // 2. Standard fetch (works in production SSR on Cloudflare)
   try {
     const url = new URL(urlPath, ctx.url);
     const env = ctx.locals?.runtime?.env;
@@ -162,23 +183,6 @@ export async function fetchJson(ctx: any, urlPath: string): Promise<any | null> 
     if (res.ok) return await res.json();
   } catch (e) {
     // Ignore fetch errors
-  }
-
-  // 2. Fallback: Read from local filesystem ONLY if running in local dev
-  if (import.meta.env.DEV) {
-    try {
-      // Dynamic import prevents Cloudflare Workers from crashing
-      const fs = await import('node:fs');
-      const path = await import('node:path');
-      
-      const filePath = path.join(process.cwd(), 'public', urlPath);
-      if (fs.existsSync(filePath)) {
-        const content = fs.readFileSync(filePath, 'utf-8');
-        return JSON.parse(content);
-      }
-    } catch (e) {
-      // Ignore fs errors
-    }
   }
 
   return null;

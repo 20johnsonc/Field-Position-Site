@@ -1,191 +1,419 @@
 ---
-import type { BasketballPlayer } from '../lib/basketball';
-
 interface Props {
-  players: BasketballPlayer[];
+  players: any[];
   projected: boolean;
   year: number;
   limit?: number;
 }
 
-const { players, projected, limit = 100, year } = Astro.props;
-// Render ALL players in the DOM, but hide the ones past the limit
-const shown = players; 
+const { players, projected, year, limit = 100 } = Astro.props;
 
-const fmt = (v: number | null, d = 1) => v == null ? '—' : v.toFixed(d);
-const slugify = (name: any) => String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const sortedPlayers = [...players].sort((a, b) => (b.BPR_blend ?? b.net_rating ?? -999) - (a.BPR_blend ?? a.net_rating ?? -999));
+const slugify = (name: string | null | undefined) => (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const fmt = (v: number | null, d = 1) => v == null ? '—' : Number(v).toFixed(d);
 
-const getHeatColor = (val: number | null, min: number, max: number, invert = false) => {
+const getHeatColor = (val: number | null, min: number, max: number) => {
   if (val == null) return 'transparent';
   let pct = (val - min) / (max - min);
-  if (invert) pct = 1 - pct;
   pct = Math.max(0, Math.min(1, pct));
   if (pct > 0.5) return `rgba(22, 163, 74, ${Math.min(0.4, (pct - 0.5) * 1.0)})`;
   return `rgba(220, 38, 38, ${Math.min(0.4, (0.5 - pct) * 1.0)})`;
 };
-
-const renderStatBadge = (rank: number | null | undefined) => {
-  if (!rank || rank > 50) return '';
-  let color = '#b45309'; 
-  let bg = 'rgba(180, 83, 9, 0.15)';
-  if (rank <= 10) { color = '#d97706'; bg = 'rgba(217, 119, 6, 0.15)'; }
-  else if (rank <= 25) { color = '#64748b'; bg = 'rgba(100, 116, 139, 0.15)'; }
-  return `<span style="font-size: 0.65rem; padding: 1px 4px; border-radius: 4px; margin-left: 4px; font-weight: 800; color: ${color}; background: ${bg}; vertical-align: middle;">#${rank}</span>`;
-};
-
-const getRankBadgeHtml = (rank: number) => {
-  if (rank <= 10) return `<span style="display:inline-block; background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff; font-weight:900; padding:1px 6px; border-radius:4px; box-shadow:0 2px 8px rgba(217,119,6,0.3);">${rank}</span>`;
-  if (rank <= 25) return `<span style="display:inline-block; background:linear-gradient(135deg,#94a3b8,#64748b); color:#fff; font-weight:900; padding:1px 6px; border-radius:4px;">${rank}</span>`;
-  return `<span style="color:var(--text-muted); font-weight:600;">${rank}</span>`;
-};
 ---
 
-<div class="table-container" style="position: relative;">
-  <table class="rank-table compact-table" id="bballPlayersTable" style="width: 100%; table-layout: fixed;">
+<div class="poss-filter">
+  <label for="possMin">Min possessions</label>
+  <input type="number" id="possMin" min="0" step="25" value="10" inputmode="numeric" autocomplete="off" />
+  <span class="poss-presets">
+    <button type="button" data-poss="0">All</button>
+    <button type="button" data-poss="100">100+</button>
+    <button type="button" data-poss="250">250+</button>
+    <button type="button" data-poss="500">500+</button>
+    <button type="button" data-poss="1000">1000+</button>
+  </span>
+  <span id="possCount" class="poss-count"></span>
+</div>
+
+<div class="table-container">
+  <table
+    class="rank-table"
+    id="bballPlayersTable"
+    data-year={year}
+    data-limit={limit}
+  >
     <thead>
       <tr>
-        <th class="num" style="width: 40px;">Rk</th>
-        <th class="sortable" data-sort="name" style="width: 170px;">Player <span class="sort-icon">⇕</span></th>
-        <th class="sortable" data-sort="team" style="width: 160px;">Team <span class="sort-icon">⇕</span></th>
-        
-        <th class="sortable num" data-sort="offensive_rating" style="width: 70px;">Off RAPM <span class="sort-icon">⇕</span></th>
-        <th class="sortable num" data-sort="defensive_rating" style="width: 70px;">Def RAPM <span class="sort-icon">⇕</span></th>
-        <th class="sortable num active" data-sort="net_rating" style="width: 70px;">Net RAPM <span class="sort-icon">▼</span></th>
-        
-        <th class="sortable num" data-sort="pts_pg" style="width: 65px;">PPG <span class="sort-icon">⇕</span></th>
-        <th class="sortable num" data-sort="reb_pg" style="width: 65px;">RPG <span class="sort-icon">⇕</span></th>
-        <th class="sortable num" data-sort="ast_pg" style="width: 65px;">APG <span class="sort-icon">⇕</span></th>
-        
-        <th class="sortable" data-sort="position" style="width: 60px; text-align: center;">Pos <span class="sort-icon">⇕</span></th>
+        <th class="col-rk">Rk</th>
+        <th class="sortable" data-sort="name">Player <span class="sort-icon">⇕</span></th>
+        <th class="sortable" data-sort="team">Team <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="OBPR_blend">Off BPR <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="DBPR_blend">Def BPR <span class="sort-icon">⇕</span></th>
+        <th class="sortable num active" data-sort="BPR_blend">Net BPR <span class="sort-icon">▼</span></th>
+        <th class="sortable num" data-sort="pts_pg">PPG <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="reb_pg">RPG <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="ast_pg">APG <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="stl_pg">SPG <span class="sort-icon">⇕</span></th>
+        <th class="sortable num" data-sort="blk_pg">BPG <span class="sort-icon">⇕</span></th>
       </tr>
     </thead>
     <tbody id="bballPlayersBody">
-      {shown.map((p, i) => {
-        const ptsHtml = `${fmt(p.pts_pg)}${renderStatBadge(p.pts_pg_rank)}`;
-        const rebHtml = `${fmt(p.reb_pg)}${renderStatBadge(p.reb_pg_rank)}`;
-        const astHtml = `${fmt(p.ast_pg)}${renderStatBadge(p.ast_pg_rank)}`;
+      {sortedPlayers.map((p, i) => {
+        const pId = p.player_id || p.id;
+        const rank = i + 1;
+        
+        const obpr = p.OBPR_blend ?? p.offensive_rating ?? 0;
+        const dbpr = p.DBPR_blend ?? p.defensive_rating ?? 0;
+        const bpr = p.BPR_blend ?? p.net_rating ?? 0;
 
-        const offBg = getHeatColor(p.offensive_rating, -1, 5, false);
-        const defBg = getHeatColor(p.defensive_rating, -1, 5, false);
-        const netBg = getHeatColor(p.net_rating, -2, 8, false);
-        const ptsBg = getHeatColor(p.pts_pg, 5, 20, false);
-        const rebBg = getHeatColor(p.reb_pg, 2, 10, false);
-        const astBg = getHeatColor(p.ast_pg, 1, 6, false);
+        const offBg = getHeatColor(obpr, -1, 5);
+        const defBg = getHeatColor(dbpr, -1, 5);
+        const netBg = getHeatColor(bpr, -2, 8);
 
+        let rankBadge = '';
+        if (rank === 1) rankBadge = 'background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff;';
+        else if (rank <= 5) rankBadge = 'background:linear-gradient(135deg,#94a3b8,#64748b); color:#fff;';
+        else if (rank <= 10) rankBadge = 'background:rgba(180,83,9,0.12); color:#b45309;';
+        
         return (
-          <tr class="bball-player-row" 
-              data-player={p.name ? p.name.toLowerCase() : ''} 
-              data-team={p.team ? p.team.toLowerCase() : ''}
-              data-conf={p.conference || 'None'}
-              style={`transition: background-color 0.15s ease; ${i >= limit ? 'display: none;' : ''}`}>
-            
-            <td class="num" data-val={p.rank} set:html={getRankBadgeHtml(p.rank)}></td>
-            
-            <td data-val={p.name}>
-              <a href={`/basketball/players/${year}/${p.player_id || p.id}/`} class="team-link" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">
+          <tr 
+            class:list={[{ 'row-hidden': i >= limit }]}
+            data-name={p.name} 
+            data-player={p.name}
+            data-team={p.team} 
+            data-obpr={obpr}
+            data-dbpr={dbpr}
+            data-bpr={bpr}
+            data-pts={p.pts_pg || 0}
+            data-reb={p.reb_pg || 0}
+            data-ast={p.ast_pg || 0}
+            data-poss={p.possessions ?? 0}
+            data-stl={p.stl_pg ?? p.spg ?? 0}
+            data-blk={p.blk_pg ?? p.bpg ?? 0}
+            data-conf={p.conference || 'None'}
+            data-pid={pId}
+          >
+            <td class="col-rk">
+              <span class={`rank-badge`} style={`display:inline-block; white-space:nowrap; font-weight:900; padding:2px 5px; border-radius:4px; font-size:0.75rem; ${rankBadge}`}>
+                {rank}
+              </span>
+            </td>
+            <td class="cell-clip">
+              <a href={`/basketball/players/${year}/${pId}/`} class="team-link">
                 <strong>{p.name}</strong>
               </a>
             </td>
-            
-            <td data-val={p.team} style="color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-              <a href={`/basketball/teams/${year}/${slugify(p.team)}/`} class="team-link">
+            <td class="cell-clip">
+              <a href={`/basketball/teams/${year}/${slugify(p.team)}/`} class="team-link" style="color: var(--text-muted);">
                 {p.team}
               </a>
             </td>
             
-            <td class="num" data-val={p.offensive_rating} style={`background: ${offBg};`}>{fmt(p.offensive_rating)}</td>
-            <td class="num" data-val={p.defensive_rating} style={`background: ${defBg};`}>{fmt(p.defensive_rating)}</td>
-            <td class="num rating" data-val={p.net_rating} style={`background: ${netBg}; font-weight: 800;`}>{fmt(p.net_rating)}</td>
+            <td class="num" style={`background: ${offBg}; font-weight: 700;`}>{fmt(obpr)}</td>
+            <td class="num" style={`background: ${defBg}; font-weight: 700;`}>{fmt(dbpr)}</td>
+            <td class="num" style={`background: ${netBg}; font-weight: 800; color: ${bpr >= 5 ? 'var(--accent-success)' : bpr <= 0 ? 'var(--accent-danger)' : 'var(--text)'};`}>
+              {fmt(bpr)}
+            </td>
             
-            <td class="num" data-val={p.pts_pg} style={`background: ${ptsBg};`} set:html={ptsHtml}></td>
-            <td class="num" data-val={p.reb_pg} style={`background: ${rebBg};`} set:html={rebHtml}></td>
-            <td class="num" data-val={p.ast_pg} style={`background: ${astBg};`} set:html={astHtml}></td>
-            
-            <td data-val={p.position} style="color: var(--text-muted); font-size: 0.8rem; text-align: center;">{p.position || '—'}</td>
+            <td class="num stat-pts" style="font-weight: 600;">{fmt(p.pts_pg)}</td>
+            <td class="num stat-reb">{fmt(p.reb_pg)}</td>
+            <td class="num stat-ast">{fmt(p.ast_pg)}</td>
+            <td class="num stat-stl">{fmt(p.stl_pg ?? p.spg)}</td>
+            <td class="num stat-blk">{fmt(p.blk_pg ?? p.bpg)}</td>
           </tr>
         );
       })}
     </tbody>
   </table>
-  <div id="bballPlayersLimitNotice" style="padding: 12px; text-align: center; font-size: 0.875rem; color: var(--text-muted); border-top: 1px solid var(--card-border);">
-    Showing top {limit} of {players.length} players.
+  
+  <div id="bballPlayersLimitNotice" style="text-align: center; padding: 16px; color: var(--text-muted); font-size: 0.9rem;">
+    Showing top {limit} of {sortedPlayers.length} players.
   </div>
 </div>
 
 <script>
-  const table = document.getElementById('bballPlayersTable');
-  const tbody = document.getElementById('bballPlayersBody');
-  
-  if (table && tbody) {
-    let currentSort = 'net_rating';
-    let currentDir = -1; // -1 = descending, 1 = ascending
+  const tableEl = document.getElementById('bballPlayersTable') as HTMLTableElement | null;
+  const bodyEl = document.getElementById('bballPlayersBody') as HTMLElement | null;
+  const limitNotice = document.getElementById('bballPlayersLimitNotice');
+  const searchInput = document.getElementById('playerSearch') as HTMLInputElement | null;
+  const confSelect = document.getElementById('confFilter') as HTMLSelectElement | null;
+  const possInput = document.getElementById('possMin') as HTMLInputElement | null;
+  const possCount = document.getElementById('possCount');
 
-    function sortTable(key: string, dir: number) {
-      const rows = Array.from(tbody.querySelectorAll('tr'));
-      const headers = Array.from(table.querySelectorAll('th'));
-      const colIndex = headers.findIndex(th => th.dataset.sort === key);
-      if (colIndex === -1) return;
+  if (tableEl && bodyEl) {
+    const table = tableEl;
+    const tbody = bodyEl;
+    const year = Number(table.dataset.year || 0);
+    const rawLimit = Number(table.dataset.limit);
+    const LIMIT = Number.isFinite(rawLimit) && rawLimit > 0 ? rawLimit : 100;
 
-      rows.sort((a, b) => {
-        const aVal = (a.children[colIndex] as HTMLElement).dataset.val || '';
-        const bVal = (b.children[colIndex] as HTMLElement).dataset.val || '';
-        
-        const aNum = parseFloat(aVal);
-        const bNum = parseFloat(bVal);
+    let currentSortKey = 'BPR_blend';
+    let currentSortDir = -1;
 
-        if (!isNaN(aNum) && !isNaN(bNum)) {
-          return (aNum - bNum) * dir;
-        }
-        return aVal.localeCompare(bVal) * dir;
+    const slugify = (s: string) =>
+      s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+    const getPossMin = () =>
+      Math.max(0, parseFloat(possInput?.value || '0') || 0);
+
+    const BADGE_BASE =
+      'display:inline-block; white-space:nowrap; font-weight:900; padding:2px 5px; border-radius:4px; font-size:0.75rem; ';
+    const badgeStyle = (rank: number): string => {
+      if (rank === 1) return BADGE_BASE + 'background:linear-gradient(135deg,#f59e0b,#d97706); color:#fff;';
+      if (rank <= 5) return BADGE_BASE + 'background:linear-gradient(135deg,#94a3b8,#64748b); color:#fff;';
+      if (rank <= 10) return BADGE_BASE + 'background:rgba(180,83,9,0.12); color:#b45309;';
+      return BADGE_BASE + 'background:transparent; color:var(--text-muted);';
+    };
+
+    // ─── RANKING ─────────────────────────────────────────────────────────────
+    // Rank = BPR position among players who pass the POSSESSION filter only.
+    // Search, conference, and sort do NOT affect rank.
+    // Called on: initial load, possession filter change.
+    function reRank() {
+      const possMin = getPossMin();
+      const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>('tr'));
+
+      // Fixed canonical order: BPR desc (independent of the current DOM sort)
+      const sortedByBpr = rows.slice().sort((a, b) => {
+        const av = parseFloat(a.getAttribute('data-bpr') || '0') || 0;
+        const bv = parseFloat(b.getAttribute('data-bpr') || '0') || 0;
+        return bv - av;
       });
 
-      rows.forEach(row => tbody.appendChild(row));
-
-      headers.forEach(th => {
-        th.classList.remove('active');
-        const icon = th.querySelector('.sort-icon');
-        if (icon) icon.textContent = '⇕';
-      });
-      const activeTh = headers[colIndex];
-      activeTh.classList.add('active');
-      const activeIcon = activeTh.querySelector('.sort-icon');
-      if (activeIcon) activeIcon.textContent = dir === 1 ? '▲' : '▼';
-
-      // NEW: Re-apply the search and limit after sorting
-      if (typeof (window as any).filterPlayersTable === 'function') {
-        (window as any).filterPlayersTable();
+      let rank = 1;
+      for (const row of sortedByBpr) {
+        const poss = parseFloat(row.getAttribute('data-poss') || '0') || 0;
+        if (poss < possMin) continue;
+        const badge = row.querySelector<HTMLElement>('.rank-badge');
+        if (!badge) continue;
+        badge.style.cssText = badgeStyle(rank);
+        badge.textContent = String(rank);
+        rank++;
       }
     }
 
-    table.querySelectorAll('th.sortable').forEach(th => {
-      th.addEventListener('click', () => {
-        const key = (th as HTMLElement).dataset.sort;
-        if (!key) return;
+    // ─── VISIBILITY (search + conf + possessions + limit) ────────────────────
+    // Does NOT touch rank badges. Search/conf/limit changes leave ranks as-is.
+    function applyFilters() {
+      const search = (searchInput?.value || '').toLowerCase().trim();
+      const conf = confSelect?.value || 'ALL';
+      const possMin = getPossMin();
+      const hasFilter = search !== '' || conf !== 'ALL' || possMin > 0;
 
-        if (currentSort === key) {
-          currentDir *= -1;
-        } else {
-          currentSort = key;
-          currentDir = -1;
+      const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>('tr'));
+      let visibleCount = 0;
+      let possMatches = 0;
+
+      rows.forEach((row, i) => {
+        const playerName = (row.getAttribute('data-player') || '').toLowerCase();
+        const teamName = (row.getAttribute('data-team') || '').toLowerCase();
+        const playerConf = row.getAttribute('data-conf') || 'None';
+        const poss = parseFloat(row.getAttribute('data-poss') || '0') || 0;
+
+        if (poss >= possMin) possMatches++;
+
+        const matchSearch = search === '' || playerName.includes(search) || teamName.includes(search);
+        const matchConf = conf === 'ALL' || playerConf === conf;
+        const matchPoss = poss >= possMin;
+        // Any active filter → show all matches. No filter → enforce the limit.
+        const withinLimit = hasFilter || i < LIMIT;
+
+        const show = matchSearch && matchConf && matchPoss && withinLimit;
+        row.classList.toggle('row-hidden', !show);
+        if (show) visibleCount++;
+      });
+
+      if (limitNotice) {
+        limitNotice.textContent = hasFilter
+          ? `Showing ${visibleCount} matching player${visibleCount === 1 ? '' : 's'}.`
+          : `Showing top ${Math.min(LIMIT, rows.length)} of ${rows.length} players.`;
+      }
+      if (possCount) {
+        possCount.textContent = possMin > 0 ? `${possMatches} of ${rows.length} players` : '';
+      }
+      document.querySelectorAll<HTMLButtonElement>('.poss-presets button').forEach((b) => {
+        b.classList.toggle('active', (parseFloat(b.dataset.poss || '0') || 0) === possMin);
+      });
+    }
+
+    // ─── SORTING ─────────────────────────────────────────────────────────────
+    const SORT_ATTR: Record<string, string> = {
+      name: 'data-name',
+      team: 'data-team',
+      OBPR_blend: 'data-obpr',
+      DBPR_blend: 'data-dbpr',
+      BPR_blend: 'data-bpr',
+      pts_pg: 'data-pts',
+      reb_pg: 'data-reb',
+      ast_pg: 'data-ast',
+      stl_pg: 'data-stl',
+      blk_pg: 'data-blk',
+    };
+
+    function sortRows(key: string, dir: number) {
+      const attr = SORT_ATTR[key];
+      if (!attr) return;
+      const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>('tr'));
+      const isText = key === 'name' || key === 'team';
+
+      rows.sort((a, b) => {
+        const va = a.getAttribute(attr) ?? '';
+        const vb = b.getAttribute(attr) ?? '';
+        if (isText) return va.localeCompare(vb) * dir;
+        let na = parseFloat(va);
+        let nb = parseFloat(vb);
+        if (isNaN(na)) na = -999;
+        if (isNaN(nb)) nb = -999;
+        return (na - nb) * dir;
+      });
+
+      rows.forEach((r) => tbody.appendChild(r));
+
+      table.querySelectorAll<HTMLTableCellElement>('th.sortable').forEach((h) => {
+        h.classList.remove('active');
+        const icon = h.querySelector('.sort-icon');
+        if (icon) icon.textContent = '⇕';
+      });
+      const th = table.querySelector<HTMLTableCellElement>(`th.sortable[data-sort="${key}"]`);
+      if (th) {
+        th.classList.add('active');
+        const icon = th.querySelector('.sort-icon');
+        if (icon) icon.textContent = dir === 1 ? '▲' : '▼';
+      }
+    }
+
+    table.querySelectorAll<HTMLTableCellElement>('th.sortable').forEach((th) => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (!key) return;
+        if (currentSortKey === key) currentSortDir *= -1;
+        else {
+          currentSortKey = key;
+          currentSortDir = key === 'name' || key === 'team' ? 1 : -1;
         }
-        sortTable(currentSort, currentDir);
+        sortRows(currentSortKey, currentSortDir);
+        // Sort re-orders visibility only; rank badges are NOT touched.
+        applyFilters();
       });
     });
+
+    // ─── POSSESSION FILTER (re-ranks on change) ──────────────────────────────
+    if (possInput) {
+      possInput.addEventListener('input', () => {
+        applyFilters();
+        reRank();
+      });
+    }
+    document.querySelectorAll<HTMLButtonElement>('.poss-presets button').forEach((b) => {
+      b.addEventListener('click', () => {
+        if (possInput) possInput.value = b.dataset.poss || '0';
+        applyFilters();
+        reRank();
+      });
+    });
+
+    // ─── STATS FROM GAME LOGS ────────────────────────────────────────────────
+    async function populateStats() {
+      const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>('tr'));
+      const teamSlugs = new Set<string>();
+      rows.forEach((row) => {
+        const team = row.getAttribute('data-team');
+        if (team) teamSlugs.add(slugify(team));
+      });
+
+      const teamLogs: Record<string, any> = {};
+      await Promise.all(
+        Array.from(teamSlugs).map(async (slug) => {
+          try {
+            const res = await fetch(`/data/basketball/${year}/game_logs/${slug}.json`);
+            if (res.ok) teamLogs[slug] = await res.json();
+          } catch {}
+        }),
+      );
+
+      rows.forEach((row) => {
+        const team = row.getAttribute('data-team');
+        const pid = row.getAttribute('data-pid');
+        if (!team || !pid) return;
+        const logs = teamLogs[slugify(team)]?.[pid];
+        if (!Array.isArray(logs) || logs.length === 0) return;
+
+        let pts = 0, reb = 0, ast = 0, stl = 0, blk = 0;
+        for (const g of logs) {
+          pts += g.points || 0;
+          reb += g.rebounds || 0;
+          ast += g.assists || 0;
+          stl += g.steals || 0;
+          blk += g.blocks || 0;
+        }
+        const gp = logs.length;
+        const stats: Record<string, string> = {
+          pts: (pts / gp).toFixed(1),
+          reb: (reb / gp).toFixed(1),
+          ast: (ast / gp).toFixed(1),
+          stl: (stl / gp).toFixed(1),
+          blk: (blk / gp).toFixed(1),
+        };
+
+        row.setAttribute('data-pts', stats.pts);
+        row.setAttribute('data-reb', stats.reb);
+        row.setAttribute('data-ast', stats.ast);
+        row.setAttribute('data-stl', stats.stl);
+        row.setAttribute('data-blk', stats.blk);
+
+        const cellFor: Record<string, string> = {
+          pts: '.stat-pts',
+          reb: '.stat-reb',
+          ast: '.stat-ast',
+          stl: '.stat-stl',
+          blk: '.stat-blk',
+        };
+        for (const k of Object.keys(cellFor)) {
+          const cell = row.querySelector(cellFor[k]);
+          if (cell) cell.textContent = stats[k];
+        }
+      });
+
+      // If the user already sorted by a stat column, re-apply that sort
+      // (visibility only — rank badges stay on the BPR canonical order).
+      sortRows(currentSortKey, currentSortDir);
+      applyFilters();
+    }
+
+    // Expose to page script. This only toggles visibility, never re-ranks.
+    (window as any).filterPlayersTable = applyFilters;
+
+    // Initial paint
+    applyFilters();
+    reRank();
+    populateStats();
   }
 </script>
 
 <style is:global>
-  .compact-table th { padding: 8px 6px !important; }
-  .compact-table td { padding: 6px 6px !important; }
-
   .team-link { color: var(--text); text-decoration: none; transition: color 0.2s ease; }
   .team-link:hover { color: var(--accent-primary); text-decoration: underline; }
   
-  th.sortable { cursor: pointer; user-select: none; transition: color 0.2s; font-weight: 700; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; color: var(--text-muted); }
+  th.sortable { cursor: pointer; user-select: none; transition: color 0.2s; }
   th.sortable:hover { color: var(--accent-primary); }
-  th.sortable .sort-icon { display: inline-block; margin-left: 2px; opacity: 0.3; font-size: 0.8em; }
+  th.sortable .sort-icon { display: inline-block; margin-left: 4px; opacity: 0.3; font-size: 0.8em; }
   th.sortable.active .sort-icon { opacity: 1; color: var(--accent-primary); }
-  
-  .bball-player-row:hover { background-color: var(--surface-2) !important; }
-  .rank-table td.num { font-variant-numeric: tabular-nums; font-size: 0.85rem; }
+
+  #bballPlayersTable th.col-rk { font-size: 0.7rem; }
+  #bballPlayersTable th.col-rk,
+  #bballPlayersTable td.col-rk { width: 0.1%; white-space: nowrap; text-align: center; padding-left: 6px; padding-right: 2px; }
+  #bballPlayersTable td.cell-clip { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* Class-based hiding — !important beats any stray tr { display } rule. */
+  #bballPlayersTable tbody tr.row-hidden { display: none !important; }
+
+  .poss-filter { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; font-size: 0.85rem; color: var(--text-muted); }
+  .poss-filter input { width: 80px; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--border, rgba(128,128,128,0.35)); background: var(--surface-2, transparent); color: var(--text); font: inherit; }
+  .poss-presets { display: inline-flex; gap: 4px; }
+  .poss-presets button { padding: 3px 9px; border-radius: 999px; border: 1px solid var(--border, rgba(128,128,128,0.35)); background: transparent; color: var(--text-muted); font: inherit; font-size: 0.8rem; cursor: pointer; }
+  .poss-presets button:hover { color: var(--accent-primary); border-color: var(--accent-primary); }
+  .poss-presets button.active { color: var(--accent-primary); border-color: var(--accent-primary); font-weight: 700; }
+  .poss-count { margin-left: 4px; }
+
+  #bballPlayersTable tbody tr { transition: background-color 0.15s ease; }
+  #bballPlayersTable tbody tr:hover { background: var(--surface-2); }
 </style>

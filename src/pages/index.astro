@@ -7,6 +7,9 @@ import RankingsTable from '../components/RankingsTable.astro';
 import PbpChartModal from '../components/PbpChartModal.tsx';
 import matchupsIndex from '../../public/data/matchups-index.json';
 import { buildTeamConferenceMap, normalizeMatchups, normalizeRankings } from '../lib/data';
+import { fetchJson } from '../lib/basketball';
+
+const bb = await fetchJson(Astro, `/data/basketball/2026/rankings.json`);
 
 const { default_year, default_week, years, weeks_by_year } = matchupsIndex;
 
@@ -51,7 +54,7 @@ function escapeForScript(json: string) {
     
     <!-- Wrapper allows our script to target the table body cleanly -->
     <div id="rankings-container" slot="rankings">
-      <RankingsTable rankings={rankings} />
+      <RankingsTable rankings={rankings} basketballTeams={bb?.teams ?? []} />
     </div>
     
     <MatchupGrid

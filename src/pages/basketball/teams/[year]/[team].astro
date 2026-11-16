@@ -11,7 +11,6 @@ const y = Number(year);
 
 const rankingsDoc = await fetchJson(Astro, `/data/basketball/${y}/rankings.json`);
 const playersDoc = await fetchJson(Astro, `/data/basketball/${y}/players.json`);
-// Aliases to match the rest of the template's variable names
 const rankings = rankingsDoc;
 const players = playersDoc;
 
@@ -45,8 +44,7 @@ const rawEntry =
   teamIndexRaw?.teams?.[team] ??
   teamIndexRaw?.teams?.[slugify(actualTeamName)];
 
-const toYear = (e: any): number =>
-  e && typeof e === 'object' ? Number(e.year) : Number(e);
+const toYear = (e: any): number => e && typeof e === 'object' ? Number(e.year) : Number(e);
 
 let indexedYears: number[] = [];
 if (Array.isArray(rawEntry)) {
@@ -58,12 +56,10 @@ if (Array.isArray(rawEntry)) {
 }
 indexedYears = indexedYears.filter((n) => Number.isFinite(n));
 
-// Fallback: probe every year in index.json for this team
 if (indexedYears.length === 0) {
   const globalIndex = await fetchJson(Astro, '/data/basketball/index.json');
   const candidateYears: number[] = Array.isArray(globalIndex?.years)
-    ? globalIndex.years.map(Number).filter(Number.isFinite)
-    : [];
+    ? globalIndex.years.map(Number).filter(Number.isFinite) : [];
   if (candidateYears.length > 0) {
     const hits = await Promise.all(
       candidateYears.map(async (yr) => {
@@ -76,45 +72,42 @@ if (indexedYears.length === 0) {
   }
 }
 
-const validYears: number[] = Array.from(
-  new Set([...indexedYears, y])
-).sort((a, b) => a - b);
+const validYears: number[] = Array.from(new Set([...indexedYears, y])).sort((a, b) => a - b);
 
 // ─── Roster ─────────────────────────────────────────────────────────
 const roster = players.players
   .filter((p: any) => p.team === actualTeamName)
-  .sort((a: any, b: any) => b.minutes_share - a.minutes_share);
+  .sort((a: any, b: any) => b.BPR_blend - a.BPR_blend);
+
+// Map names to IDs so we can link players in the box score
+const playerIdMap = roster.reduce((acc: any, p: any) => {
+  acc[p.name] = p.player_id || p.id;
+  return acc;
+}, {});
 
 // ─── Schedule & Game Scores ─────────────────────────────────────────
 let schedule = [];
 try {
-  const schedUrl = new URL(`/data/basketball/${y}/schedule.json`, Astro.url);
-  const assets = Astro.locals?.runtime?.env?.ASSETS;
-  const res = assets ? await assets.fetch(schedUrl) : await fetch(schedUrl);
-  if (res.ok) {
-    const allSchedules = await res.json();
+  // ✅ FIX: Use fetchJson to bypass Vite cache and get the Creighton game
+  const allSchedules = await fetchJson(Astro, `/data/basketball/${y}/schedule.json`);
+  if (allSchedules) {
     schedule = allSchedules[actualTeamName] || [];
   }
 } catch (e) {}
 
-// Fetch Game Scores to merge into Schedule
 try {
-  const gsUrl = new URL(`/data/basketball/${y}/game_scores.json`, Astro.url);
-  const assets = Astro.locals?.runtime?.env?.ASSETS;
-  const gsRes = assets ? await assets.fetch(gsUrl) : await fetch(gsUrl);
-  if (gsRes.ok) {
-    const gsData = await gsRes.json();
+  // ✅ FIX: Use fetchJson here as well
+  const gsData = await fetchJson(Astro, `/data/basketball/${y}/game_scores.json`);
+  if (gsData) {
     const teamScores = gsData[actualTeamName] || [];
     const gsMap = {};
     teamScores.forEach((gs: any) => { gsMap[gs.game_id] = gs; });
 
-    // Merge scores into existing schedule
     schedule = schedule.map((g: any) => {
       const gs = gsMap[g.game_id];
       return { ...g, perf_score: gs ? gs.score : null, players: gs ? gs.players : [] };
     });
 
-    // Add any missing games from game_scores
     const scheduleGameIds = new Set(schedule.map((g: any) => g.game_id));
     teamScores.forEach((gs: any) => {
       if (!scheduleGameIds.has(gs.game_id)) {
@@ -129,11 +122,8 @@ try {
   }
 } catch (e) {}
 
-// Calculate games played for per-game normalization
 let gamesPlayed = schedule.filter((g: any) => g.team_score !== null && g.opp_score !== null).length;
-if (gamesPlayed === 0) {
-  gamesPlayed = Math.max(1, (teamStats.wins || 0) + (teamStats.losses || 0));
-}
+if (gamesPlayed === 0) gamesPlayed = Math.max(1, (teamStats.wins || 0) + (teamStats.losses || 0));
 
 // ─── Helpers ────────────────────────────────────────────────────────
 const seasonLabel = `${y - 1}-${String(y).slice(-2)}`;
@@ -145,23 +135,12 @@ const barWidth = (v: number | null | undefined) => {
 };
 
 const formatPlayType = (type: string) =>
-  type
-    .replace(/([a-z])([A-Z])/g, '$1 $2')
-    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
-    .replace(/_/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+  type.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2').replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
 
-// ─── Adj O / Adj D rank among all teams ─────────────────────────────
 const allTeams = rankings.teams;
-const offRank = [...allTeams]
-  .sort((a: any, b: any) => (b.adj_off ?? -999) - (a.adj_off ?? -999))
-  .findIndex((t: any) => t.team === actualTeamName) + 1;
-const defRank = [...allTeams]
-  .sort((a: any, b: any) => (a.adj_def ?? -999) - (b.adj_def ?? -999))
-  .findIndex((t: any) => t.team === actualTeamName) + 1;
+const offRank = [...allTeams].sort((a: any, b: any) => (b.adj_off ?? -999) - (a.adj_off ?? -999)).findIndex((t: any) => t.team === actualTeamName) + 1;
+const defRank = [...allTeams].sort((a: any, b: any) => (a.adj_def ?? -999) - (b.adj_def ?? -999)).findIndex((t: any) => t.team === actualTeamName) + 1;
 
-// ─── Play types ─────────────────────────────────────────────────────
 const teamPlayTypes = roster.reduce((acc: any, p: any) => {
   if (p.play_types) {
     for (const [type, data] of Object.entries(p.play_types)) {
@@ -178,14 +157,15 @@ const teamPlayTypes = roster.reduce((acc: any, p: any) => {
 
 const sortedPlayTypes = Object.entries(teamPlayTypes)
   .map(([type, data]: [string, any]) => ({
-    type, 
-    freq: data.freq / gamesPlayed, 
-    ppp: data.freq > 0 ? data.pts / data.freq : 0
+    type, freq: data.freq / gamesPlayed, ppp: data.freq > 0 ? data.pts / data.freq : 0
   }))
-  .sort((a, b) => b.freq - a.freq)
-  .slice(0, 6);
+  .sort((a, b) => b.freq - a.freq).slice(0, 6);
 
 const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
+
+// Calculate PPG and Opp PPG for the new stats section
+const ppg = teamStats?.raw_off != null && teamStats?.tempo != null ? ((teamStats.raw_off * teamStats.tempo) / 100).toFixed(1) : '—';
+const oppPpg = teamStats?.raw_def != null && teamStats?.tempo != null ? ((teamStats.raw_def * teamStats.tempo) / 100).toFixed(1) : '—';
 ---
 
 <Layout title={`${actualTeamName} ${seasonLabel}`} seasonLabel={seasonLabel}>
@@ -252,7 +232,6 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
                 <img src={teamStats.logo_dark} alt={actualTeamName} class="logo-dark" style="width: 64px; height: 64px; object-fit: contain; display: none; flex-shrink: 0;" />
               )}
             </div>
-
           </div>
 
           <div style="display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap;">
@@ -264,10 +243,10 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
             </div>
             <div style="text-align: center;">
               <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px;">Net Rating</div>
-              <div style={`font-size: 1.4rem; font-weight: 900; line-height: 1; white-space: nowrap; color: ${
-                teamStats?.adj_net == null ? 'var(--text)' :
-                teamStats.adj_net >= 0 ? 'var(--accent-success, #16a34a)' : 'var(--accent-danger, #dc2626)'
-              };`}>
+              <div style={`
+                font-size: 1.4rem; font-weight: 900; line-height: 1; white-space: nowrap; 
+                color: ${teamStats?.adj_net == null ? 'var(--text)' : teamStats.adj_net >= 0 ? 'var(--accent-success, #16a34a)' : 'var(--accent-danger, #dc2626)'};
+              `}>
                 {teamStats?.adj_net != null && teamStats.adj_net > 0 ? '+' : ''}{fmt(teamStats?.adj_net)}
               </div>
             </div>
@@ -275,8 +254,8 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
         </div>
       </div>
 
-      <div style="display: flex; gap: 32px; padding: 18px 28px; border-top: 1px solid var(--card-border); background: var(--surface-2, #fafafa);">
-        <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
+      <div style="display: flex; gap: 32px; padding: 18px 28px; border-top: 1px solid var(--card-border); background: var(--surface-2, #fafafa); flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px; display: flex; align-items: center; gap: 16px;">
           <div style={`
             width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
@@ -299,7 +278,7 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
           </div>
         </div>
 
-        <div style="flex: 1; display: flex; align-items: center; gap: 16px;">
+        <div style="flex: 1; min-width: 200px; display: flex; align-items: center; gap: 16px;">
           <div style={`
             width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
@@ -324,8 +303,40 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
       </div>
     </div>
 
+    {/* ─────────── NEW: Team Profile & Stats ─────────── */}
+    <div class="card" style="margin-bottom: 24px; padding: 24px;">
+      <h2 class="section-title" style="margin-top: 0; margin-bottom: 16px;">Team Profile & Stats</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
+        
+        <div>
+          <h3 style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 0.05em; border-bottom: 1px solid var(--card-border); padding-bottom: 4px;">General</h3>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Tempo</span> <strong style="font-variant-numeric: tabular-nums;">{fmt(teamStats?.tempo, 1)}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Points / Game</span> <strong style="font-variant-numeric: tabular-nums;">{ppg}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Opp PPG</span> <strong style="font-variant-numeric: tabular-nums;">{oppPpg}</strong></div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 0.05em; border-bottom: 1px solid var(--card-border); padding-bottom: 4px;">Shooting</h3>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>True Shooting (TS%)</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.team_ts != null ? (teamStats.team_ts).toFixed(1) : '—'}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Effective FG% (eFG%)</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.efg != null ? (teamStats.efg * 100).toFixed(1) : '—'}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Free Throw Rate (FTR)</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.ftr != null ? (teamStats.ftr * 100).toFixed(1) : '—'}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Opp eFG%</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.opp_efg != null ? (teamStats.opp_efg * 100).toFixed(1) : '—'}</strong></div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 0.05em; border-bottom: 1px solid var(--card-border); padding-bottom: 4px;">Rebounding & Ball Control</h3>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Offensive Rebound %</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.orb_pct != null ? (teamStats.orb_pct * 100).toFixed(1) : '—'}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Turnover Rate</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.tov_rate != null ? (teamStats.tov_rate * 100).toFixed(1) : '—'}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Opp ORB%</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.opp_orb_pct != null ? (teamStats.opp_orb_pct * 100).toFixed(1) : '—'}</strong></div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;"><span>Opp TOV Rate</span> <strong style="font-variant-numeric: tabular-nums;">{teamStats?.opp_tov_rate != null ? (teamStats.opp_tov_rate * 100).toFixed(1) : '—'}</strong></div>
+        </div>
+
+      </div>
+    </div>
+
     {/* ─────────── Roster ─────────── */}
-    <h2 class="section-title">Roster & Player Ratings</h2>
+    <h2 class="section-title" style="margin-bottom: 12px;">Roster & Player Ratings</h2>
+
     <div class="table-container">
       <table class="rank-table" id="rosterTable">
         <thead>
@@ -333,9 +344,9 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
             <th style="width: 56px; text-align: center;">Rk</th>
             <th class="sortable" data-sort="name">Player <span class="sort-icon">⇕</span></th>
             <th class="sortable" data-sort="position">Pos <span class="sort-icon">⇕</span></th>
-            <th class="sortable num" data-sort="offensive_rating">Off RAPM <span class="sort-icon">⇕</span></th>
-            <th class="sortable num" data-sort="defensive_rating">Def RAPM <span class="sort-icon">⇕</span></th>
-            <th class="sortable num active" data-sort="net_rating">Net <span class="sort-icon">▼</span></th>
+            <th class="sortable num" data-sort="OBPR_blend">Off BPR <span class="sort-icon">⇕</span></th>
+            <th class="sortable num" data-sort="DBPR_blend">Def BPR <span class="sort-icon">⇕</span></th>
+            <th class="sortable num active" data-sort="BPR_blend">Overall BPR <span class="sort-icon">▼</span></th>
           </tr>
         </thead>
         <tbody id="rosterBody"></tbody>
@@ -357,14 +368,15 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
                 <th class="num" style="text-align: right;">PF</th>
                 <th class="num" style="text-align: right;">PA</th>
                 <th class="num" style="text-align: right;">Performance</th>
+                <th style="width: 32px;"></th>
               </tr>
             </thead>
             <tbody>
               {schedule.map((g: any, i: number) => {
                 const isPlayed = g.team_score !== null && g.opp_score !== null;
                 const rowId = `schedule-details-${i}`;
+                const isExpandable = g.players && g.players.length > 0;
                 
-                // Avoid <= in Astro markup
                 let scoreColor = 'var(--text-muted)';
                 if (g.perf_score !== null && g.perf_score !== undefined) {
                   if (g.perf_score >= 80) scoreColor = 'var(--accent-success)';
@@ -375,8 +387,8 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
                 return (
                   <Fragment>
                     <tr 
-                      class={g.players && g.players.length > 0 ? "expandable-row" : ""}
-                      onclick={g.players && g.players.length > 0 ? `document.getElementById('${rowId}').classList.toggle('hidden')` : undefined}
+                      class={isExpandable ? "expandable-row" : ""}
+                      data-target={isExpandable ? rowId : undefined}
                       style={!isPlayed ? 'opacity: 0.55; font-style: italic;' : ''}
                     >
                       <td>{new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}</td>
@@ -406,36 +418,46 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
                       <td class="num" style={`text-align: right; font-variant-numeric: tabular-nums; font-weight: 800; color: ${scoreColor};`}>
                         {g.perf_score !== null && g.perf_score !== undefined ? g.perf_score.toFixed(1) : '—'}
                       </td>
+                      <td style="text-align: center; color: var(--text-muted);">
+                        {isExpandable && <span class="expand-icon" style="font-size: 1.2rem; line-height: 1; font-weight: bold;">▸</span>}
+                      </td>
                     </tr>
                     
                     {/* Expandable Player Breakdown */}
-                    {g.players && g.players.length > 0 && (
+                    {isExpandable && (
                       <tr id={rowId} class="hidden">
-                        <td colspan="7" style="padding: 12px; background: var(--surface-2);">
-                          <table style="width: 100%; font-size: 0.85rem;">
-                            <thead>
-                              <tr style="color: var(--text-muted); border-bottom: 1px solid var(--card-border);">
-                                <th style="text-align:left; padding-bottom: 6px;">Player</th>
-                                <th style="text-align:right; padding-bottom: 6px;">Min</th>
-                                <th style="text-align:right; padding-bottom: 6px;">Game Score</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {g.players.map((p: any) => {
-                                let pScoreColor = 'var(--text)';
-                                if (p.score >= 80) pScoreColor = 'var(--accent-success)';
-                                else if (p.score < 30.1) pScoreColor = 'var(--accent-danger)';
-                                
-                                return (
-                                  <tr>
-                                    <td style="padding: 4px 0;">{p.name}</td>
-                                    <td class="num" style="color: var(--text-muted); padding: 4px 0;">{p.minutes}</td>
-                                    <td class="num" style={`font-weight:700; color:${pScoreColor}; padding: 4px 0;`}>{p.score.toFixed(1)}</td>
-                                  </tr>
-                                );
-                              })}
-                            </tbody>
-                          </table>
+                        <td colspan="8" style="padding: 0; background: var(--surface-2); border-bottom: 2px solid var(--card-border);">
+                          <div style="padding: 16px 24px;">
+                            <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse; border-left: none !important;">
+                              <thead>
+                                <tr style="color: var(--text-muted); border-bottom: 1px solid var(--card-border); border-left: none !important;">
+                                  <th style="text-align:left; padding-bottom: 8px; width: 60%; border-left: none !important;">Player</th>
+                                  <th style="text-align:right; padding-bottom: 8px; width: 20%; border-left: none !important;">Min</th>
+                                  <th style="text-align:right; padding-bottom: 8px; width: 20%; border-left: none !important;">Game Score</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {g.players.map((p: any) => {
+                                  let pScoreColor = 'var(--text)';
+                                  if (p.score >= 80) pScoreColor = 'var(--accent-success)';
+                                  else if (p.score < 30.1) pScoreColor = 'var(--accent-danger)';
+                                  
+                                  const pid = playerIdMap[p.name];
+                                  const href = pid ? `/basketball/players/${y}/${pid}/` : '#';
+                                  
+                                  return (
+                                    <tr style="border-bottom: 1px solid var(--card-border); border-left: none !important;">
+                                      <td style="padding: 8px 0; text-align: left; border-left: none !important;">
+                                        <a href={href} class="team-link"><strong>{p.name}</strong></a>
+                                      </td>
+                                      <td class="num" style="color: var(--text-muted); padding: 8px 0; text-align: right; border-left: none !important;">{p.minutes}</td>
+                                      <td class="num" style={`font-weight:700; color:${pScoreColor}; padding: 8px 0; text-align: right; border-left: none !important;`}>{p.score.toFixed(1)}</td>
+                                    </tr>
+                                  );
+                                })}
+                              </tbody>
+                            </table>
+                          </div>
                         </td>
                       </tr>
                     )}
@@ -489,11 +511,7 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
 
       <div class="card" style="padding: 24px;">
         <h2 class="section-title" style="margin-top: 0; margin-bottom: 16px;">Team Shot Chart</h2>
-        <ShotChart 
-          year={y} 
-          teamName={actualTeamName}
-          client:visible 
-        />
+        <ShotChart year={y} teamName={actualTeamName} client:visible />
       </div>
 
     </div>
@@ -514,22 +532,34 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
     });
   }
 
+  // ─── Expandable Schedule Rows ───
+  document.querySelectorAll('.expandable-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const targetId = row.getAttribute('data-target');
+      if (!targetId) return;
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const isHidden = targetEl.classList.toggle('hidden');
+        const icon = row.querySelector('.expand-icon');
+        if (icon) {
+          icon.textContent = isHidden ? '▸' : '▾';
+        }
+      }
+    });
+  });
+
+  // ─── Roster Table Logic ───
   const dataEl = document.getElementById('roster-data');
   const tableBody = document.getElementById('rosterBody');
   
   if (dataEl && tableBody) {
     const currentYear = dataEl.dataset.year;
     const rosterData = JSON.parse(dataEl.textContent || '[]');
-    let currentSortKey = 'net_rating';
+    let currentSortKey = 'BPR_blend';
     let currentSortDir = -1;
 
     const fmt = (v: number | null, d = 1) => v == null ? '—' : Number(v).toFixed(d);
-    const getMpg = (p: any) => {
-      if (p.min_pg != null && p.min_pg > 0) return p.min_pg.toFixed(1);
-      return ((p.minutes_share || 0) * 40).toFixed(1);
-    };
 
-    // ─── Visuals from Player Leaderboard ───
     const getHeatColor = (val: number | null, min: number, max: number) => {
       if (val == null) return 'transparent';
       let pct = (val - min) / (max - min);
@@ -550,10 +580,7 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
       const sorted = [...rosterData].sort((a, b) => {
         let valA = a[currentSortKey];
         let valB = b[currentSortKey];
-        if (currentSortKey === 'minutes_share') {
-          valA = a.min_pg || (a.minutes_share * 40);
-          valB = b.min_pg || (b.minutes_share * 40);
-        }
+        
         if (typeof valA === 'string' && typeof valB === 'string') {
           return valA.localeCompare(valB) * currentSortDir;
         }
@@ -566,20 +593,19 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
         const pId = p.player_id || p.id;
         const rank = p.rank ?? null;
 
-        // Heatmap backgrounds
-        const offBg = getHeatColor(p.offensive_rating, -1, 5);
-        const defBg = getHeatColor(p.defensive_rating, -1, 5);
-        const netBg = getHeatColor(p.net_rating, -2, 8);
+        const offVal = p.OBPR_blend;
+        const defVal = p.DBPR_blend;
+        const netVal = p.BPR_blend;
 
-        // Net rating color
-        const netVal = p.net_rating;
+        const offBg = getHeatColor(offVal, -2, 6);
+        const defBg = getHeatColor(defVal, -2, 6);
+        const netBg = getHeatColor(netVal, -4, 10);
+
         const netColor = netVal == null
           ? 'var(--text)'
-          : netVal >= 5
-            ? 'var(--accent-success, #16a34a)'
-            : netVal <= 0
-              ? 'var(--accent-danger, #dc2626)'
-              : 'var(--text)';
+          : netVal >= 5 ? 'var(--accent-success, #16a34a)'
+          : netVal <= 0 ? 'var(--accent-danger, #dc2626)'
+          : 'var(--text)';
 
         return `
         <tr>
@@ -590,9 +616,9 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
             </a>
           </td>
           <td style="color: var(--text-muted)">${p.position || '—'}</td>
-          <td class="num" style="background: ${offBg};">${fmt(p.offensive_rating)}</td>
-          <td class="num" style="background: ${defBg};">${fmt(p.defensive_rating)}</td>
-          <td class="num rating" style="background: ${netBg}; color: ${netColor}; font-weight: 800;">${fmt(p.net_rating)}</td>
+          <td class="num" style="background: ${offBg};">${fmt(offVal)}</td>
+          <td class="num" style="background: ${defBg};">${fmt(defVal)}</td>
+          <td class="num rating" style="background: ${netBg}; color: ${netColor}; font-weight: 800;">${fmt(netVal)}</td>
         </tr>
       `}).join('');
     }
@@ -641,9 +667,23 @@ const maxPlayTypeFreq = sortedPlayTypes[0]?.freq || 1;
   /* Expandable schedule rows */
   .expandable-row { cursor: pointer; transition: background-color 0.15s ease; }
   .expandable-row:hover { background-color: var(--surface-2, #f8fafc); }
-  .hidden { display: none; }
+  .expandable-row:hover .expand-icon { color: var(--accent-primary); }
+  
+  .expand-icon {
+    display: inline-block;
+    transition: transform 0.2s, color 0.2s;
+    color: var(--text-muted);
+  }
+  
+  .expandable-row[aria-expanded="true"] .expand-icon {
+    transform: rotate(90deg);
+  }
 
-  /* Logo Toggling for Dark Mode */
+  .hidden { display: none; }
+  
+  /* Prevent hover on the expanded details row from causing weird highlights */
+  #scheduleTable tbody tr.hidden:hover { background-color: transparent; }
+
   .logo-dark { display: none !important; }
   :global(.dark) .logo-light { display: none !important; }
   :global(.dark) .logo-dark { display: block !important; }
