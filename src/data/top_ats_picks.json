@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T20:39:00.027159+00:00",
+  "generated_at": "2026-11-17T17:58:01.728149+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
   "backtest_cover_rate": 0.5071,
   "picks_by_week": {
