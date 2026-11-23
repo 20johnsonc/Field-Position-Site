@@ -1,32 +1,8 @@
 {
-  "generated_at": "2026-11-19T23:11:19.562616+00:00",
+  "generated_at": "2026-11-23T00:18:57.755735+00:00",
   "year": 2026,
   "week": 11,
   "games": [
-    {
-      "game_id": 401866458,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Akron",
-      "away_team": "Western Michigan",
-      "start_date": "2026-11-11 00:00:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-11T00:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "CBSSN",
-      "tv_all": [
-        "CBSSN"
-      ],
-      "status": "completed",
-      "home_points": 14,
-      "away_points": 42,
-      "actual_margin": -28,
-      "actual_total": 56
-    },
     {
       "game_id": 401866459,
       "week": 11,
@@ -50,6 +26,30 @@
       "away_points": 28,
       "actual_margin": 5,
       "actual_total": 61
+    },
+    {
+      "game_id": 401866458,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Akron",
+      "away_team": "Western Michigan",
+      "start_date": "2026-11-11 00:00:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-11T00:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CBSSN",
+      "tv_all": [
+        "CBSSN"
+      ],
+      "status": "completed",
+      "home_points": 14,
+      "away_points": 42,
+      "actual_margin": -28,
+      "actual_total": 56
     },
     {
       "game_id": 401866460,
@@ -101,30 +101,6 @@
       "actual_total": 24
     },
     {
-      "game_id": 401866462,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Central Michigan",
-      "away_team": "Sacramento State",
-      "start_date": "2026-11-12 00:30:00+00:00",
-      "home_conference": "Mid-American",
-      "away_conference": "Mid-American",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-12T00:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "ESPNU",
-      "tv_all": [
-        "ESPNU"
-      ],
-      "status": "completed",
-      "home_points": 28,
-      "away_points": 7,
-      "actual_margin": 21,
-      "actual_total": 35
-    },
-    {
       "game_id": 401866461,
       "week": 11,
       "year": 2026,
@@ -146,6 +122,30 @@
       "home_points": 7,
       "away_points": 28,
       "actual_margin": -21,
+      "actual_total": 35
+    },
+    {
+      "game_id": 401866462,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Central Michigan",
+      "away_team": "Sacramento State",
+      "start_date": "2026-11-12 00:30:00+00:00",
+      "home_conference": "Mid-American",
+      "away_conference": "Mid-American",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-12T00:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "ESPNU",
+      "tv_all": [
+        "ESPNU"
+      ],
+      "status": "completed",
+      "home_points": 28,
+      "away_points": 7,
+      "actual_margin": 21,
       "actual_total": 35
     },
     {
@@ -270,78 +270,6 @@
       "actual_total": 74
     },
     {
-      "game_id": 401861967,
-      "week": 11,
-      "year": 2026,
-      "home_team": "UConn",
-      "away_team": "James Madison",
-      "start_date": "2026-11-14 17:00:00+00:00",
-      "home_conference": "FBS Independents",
-      "away_conference": "Sun Belt",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T17:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "CBSSN",
-      "tv_all": [
-        "CBSSN"
-      ],
-      "status": "completed",
-      "home_points": 46,
-      "away_points": 22,
-      "actual_margin": 24,
-      "actual_total": 68
-    },
-    {
-      "game_id": 401858296,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Miami",
-      "away_team": "Duke",
-      "start_date": "2026-11-14 17:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T17:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "ABC",
-      "tv_all": [
-        "ABC"
-      ],
-      "status": "completed",
-      "home_points": 36,
-      "away_points": 25,
-      "actual_margin": 11,
-      "actual_total": 61
-    },
-    {
-      "game_id": 401856859,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Iowa State",
-      "away_team": "Cincinnati",
-      "start_date": "2026-11-14 17:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T17:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "TNT",
-      "tv_all": [
-        "TNT"
-      ],
-      "status": "completed",
-      "home_points": 41,
-      "away_points": 13,
-      "actual_margin": 28,
-      "actual_total": 54
-    },
-    {
       "game_id": 401858300,
       "week": 11,
       "year": 2026,
@@ -390,28 +318,28 @@
       "actual_total": 56
     },
     {
-      "game_id": 401858520,
+      "game_id": 401861967,
       "week": 11,
       "year": 2026,
-      "home_team": "Maryland",
-      "away_team": "Wisconsin",
+      "home_team": "UConn",
+      "away_team": "James Madison",
       "start_date": "2026-11-14 17:00:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
+      "home_conference": "FBS Independents",
+      "away_conference": "Sun Belt",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
       "kickoff_utc": "2026-11-14T17:00:00Z",
       "start_time_tbd": false,
-      "tv_channel": "FS1",
+      "tv_channel": "CBSSN",
       "tv_all": [
-        "FS1"
+        "CBSSN"
       ],
       "status": "completed",
-      "home_points": 24,
-      "away_points": 21,
-      "actual_margin": 3,
-      "actual_total": 45
+      "home_points": 46,
+      "away_points": 22,
+      "actual_margin": 24,
+      "actual_total": 68
     },
     {
       "game_id": 401858522,
@@ -436,6 +364,78 @@
       "away_points": 19,
       "actual_margin": 9,
       "actual_total": 47
+    },
+    {
+      "game_id": 401858296,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Miami",
+      "away_team": "Duke",
+      "start_date": "2026-11-14 17:00:00+00:00",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T17:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "ABC",
+      "tv_all": [
+        "ABC"
+      ],
+      "status": "completed",
+      "home_points": 36,
+      "away_points": 25,
+      "actual_margin": 11,
+      "actual_total": 61
+    },
+    {
+      "game_id": 401858520,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Maryland",
+      "away_team": "Wisconsin",
+      "start_date": "2026-11-14 17:00:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T17:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "FS1",
+      "tv_all": [
+        "FS1"
+      ],
+      "status": "completed",
+      "home_points": 24,
+      "away_points": 21,
+      "actual_margin": 3,
+      "actual_total": 45
+    },
+    {
+      "game_id": 401856859,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Iowa State",
+      "away_team": "Cincinnati",
+      "start_date": "2026-11-14 17:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T17:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "TNT",
+      "tv_all": [
+        "TNT"
+      ],
+      "status": "completed",
+      "home_points": 41,
+      "away_points": 13,
+      "actual_margin": 28,
+      "actual_total": 54
     },
     {
       "game_id": 401858297,
@@ -690,6 +690,54 @@
       "actual_total": 40
     },
     {
+      "game_id": 401858294,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Notre Dame",
+      "away_team": "Boston College",
+      "start_date": "2026-11-14 20:30:00+00:00",
+      "home_conference": "FBS Independents",
+      "away_conference": "ACC",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T20:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "NBC",
+      "tv_all": [
+        "NBC"
+      ],
+      "status": "completed",
+      "home_points": 41,
+      "away_points": 7,
+      "actual_margin": 34,
+      "actual_total": 48
+    },
+    {
+      "game_id": 401871061,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Liberty",
+      "away_team": "Middle Tennessee",
+      "start_date": "2026-11-14 20:30:00+00:00",
+      "home_conference": "Conference USA",
+      "away_conference": "Conference USA",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T20:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "CBSSN",
+      "tv_all": [
+        "CBSSN"
+      ],
+      "status": "completed",
+      "home_points": 28,
+      "away_points": 23,
+      "actual_margin": 5,
+      "actual_total": 51
+    },
+    {
       "game_id": 401856883,
       "week": 11,
       "year": 2026,
@@ -738,30 +786,6 @@
       "actual_total": 51
     },
     {
-      "game_id": 401858294,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Notre Dame",
-      "away_team": "Boston College",
-      "start_date": "2026-11-14 20:30:00+00:00",
-      "home_conference": "FBS Independents",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T20:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "NBC",
-      "tv_all": [
-        "NBC"
-      ],
-      "status": "completed",
-      "home_points": 41,
-      "away_points": 7,
-      "actual_margin": 34,
-      "actual_total": 48
-    },
-    {
       "game_id": 401858518,
       "week": 11,
       "year": 2026,
@@ -784,6 +808,28 @@
       "away_points": 13,
       "actual_margin": 14,
       "actual_total": 40
+    },
+    {
+      "game_id": 401869952,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Georgia State",
+      "away_team": "Georgia Southern",
+      "start_date": "2026-11-14 20:30:00+00:00",
+      "home_conference": "Sun Belt",
+      "away_conference": "Sun Belt",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T20:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": null,
+      "tv_all": [],
+      "status": "completed",
+      "home_points": 17,
+      "away_points": 34,
+      "actual_margin": -17,
+      "actual_total": 51
     },
     {
       "game_id": 401858523,
@@ -810,14 +856,14 @@
       "actual_total": 38
     },
     {
-      "game_id": 401870752,
+      "game_id": 401864536,
       "week": 11,
       "year": 2026,
-      "home_team": "Western Kentucky",
-      "away_team": "Jacksonville State",
+      "home_team": "Northern Illinois",
+      "away_team": "Nevada",
       "start_date": "2026-11-14 20:30:00+00:00",
-      "home_conference": "Conference USA",
-      "away_conference": "Conference USA",
+      "home_conference": "Mountain West",
+      "away_conference": "Mountain West",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
@@ -826,10 +872,10 @@
       "tv_channel": null,
       "tv_all": [],
       "status": "completed",
-      "home_points": 34,
-      "away_points": 24,
-      "actual_margin": 10,
-      "actual_total": 58
+      "home_points": 7,
+      "away_points": 28,
+      "actual_margin": -21,
+      "actual_total": 35
     },
     {
       "game_id": 401858295,
@@ -856,11 +902,11 @@
       "actual_total": 43
     },
     {
-      "game_id": 401871061,
+      "game_id": 401870752,
       "week": 11,
       "year": 2026,
-      "home_team": "Liberty",
-      "away_team": "Middle Tennessee",
+      "home_team": "Western Kentucky",
+      "away_team": "Jacksonville State",
       "start_date": "2026-11-14 20:30:00+00:00",
       "home_conference": "Conference USA",
       "away_conference": "Conference USA",
@@ -869,59 +915,13 @@
       "bowl_name": null,
       "kickoff_utc": "2026-11-14T20:30:00Z",
       "start_time_tbd": false,
-      "tv_channel": "CBSSN",
-      "tv_all": [
-        "CBSSN"
-      ],
-      "status": "completed",
-      "home_points": 28,
-      "away_points": 23,
-      "actual_margin": 5,
-      "actual_total": 51
-    },
-    {
-      "game_id": 401864536,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Northern Illinois",
-      "away_team": "Nevada",
-      "start_date": "2026-11-14 20:30:00+00:00",
-      "home_conference": "Mountain West",
-      "away_conference": "Mountain West",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T20:30:00Z",
-      "start_time_tbd": false,
       "tv_channel": null,
       "tv_all": [],
       "status": "completed",
-      "home_points": 7,
-      "away_points": 28,
-      "actual_margin": -21,
-      "actual_total": 35
-    },
-    {
-      "game_id": 401869952,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Georgia State",
-      "away_team": "Georgia Southern",
-      "start_date": "2026-11-14 20:30:00+00:00",
-      "home_conference": "Sun Belt",
-      "away_conference": "Sun Belt",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T20:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": null,
-      "tv_all": [],
-      "status": "completed",
-      "home_points": 17,
-      "away_points": 34,
-      "actual_margin": -17,
-      "actual_total": 51
+      "home_points": 34,
+      "away_points": 24,
+      "actual_margin": 10,
+      "actual_total": 58
     },
     {
       "game_id": 401860916,
@@ -1016,30 +1016,6 @@
       "actual_total": 94
     },
     {
-      "game_id": 401858521,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Michigan State",
-      "away_team": "Washington",
-      "start_date": "2026-11-14 22:30:00+00:00",
-      "home_conference": "Big Ten",
-      "away_conference": "Big Ten",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-14T22:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "BTN",
-      "tv_all": [
-        "BTN"
-      ],
-      "status": "completed",
-      "home_points": 14,
-      "away_points": 21,
-      "actual_margin": -7,
-      "actual_total": 35
-    },
-    {
       "game_id": 401856857,
       "week": 11,
       "year": 2026,
@@ -1064,26 +1040,28 @@
       "actual_total": 39
     },
     {
-      "game_id": 401869928,
+      "game_id": 401858521,
       "week": 11,
       "year": 2026,
-      "home_team": "Marshall",
-      "away_team": "App State",
-      "start_date": "2026-11-14 23:00:00+00:00",
-      "home_conference": "Sun Belt",
-      "away_conference": "Sun Belt",
+      "home_team": "Michigan State",
+      "away_team": "Washington",
+      "start_date": "2026-11-14 22:30:00+00:00",
+      "home_conference": "Big Ten",
+      "away_conference": "Big Ten",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
-      "kickoff_utc": "2026-11-14T23:00:00Z",
+      "kickoff_utc": "2026-11-14T22:30:00Z",
       "start_time_tbd": false,
-      "tv_channel": null,
-      "tv_all": [],
+      "tv_channel": "BTN",
+      "tv_all": [
+        "BTN"
+      ],
       "status": "completed",
-      "home_points": 16,
-      "away_points": 20,
-      "actual_margin": -4,
-      "actual_total": 36
+      "home_points": 14,
+      "away_points": 21,
+      "actual_margin": -7,
+      "actual_total": 35
     },
     {
       "game_id": 401860914,
@@ -1110,6 +1088,28 @@
       "actual_total": 87
     },
     {
+      "game_id": 401869928,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Marshall",
+      "away_team": "App State",
+      "start_date": "2026-11-14 23:00:00+00:00",
+      "home_conference": "Sun Belt",
+      "away_conference": "Sun Belt",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-14T23:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": null,
+      "tv_all": [],
+      "status": "completed",
+      "home_points": 16,
+      "away_points": 20,
+      "actual_margin": -4,
+      "actual_total": 36
+    },
+    {
       "game_id": 401856884,
       "week": 11,
       "year": 2026,
@@ -1131,6 +1131,30 @@
       "home_points": 14,
       "away_points": 21,
       "actual_margin": -7,
+      "actual_total": 35
+    },
+    {
+      "game_id": 401856858,
+      "week": 11,
+      "year": 2026,
+      "home_team": "BYU",
+      "away_team": "Baylor",
+      "start_date": "2026-11-15 00:00:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-15T00:00:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "Fox",
+      "tv_all": [
+        "Fox"
+      ],
+      "status": "completed",
+      "home_points": 28,
+      "away_points": 7,
+      "actual_margin": 21,
       "actual_total": 35
     },
     {
@@ -1182,30 +1206,6 @@
       "actual_total": 56
     },
     {
-      "game_id": 401858298,
-      "week": 11,
-      "year": 2026,
-      "home_team": "North Carolina",
-      "away_team": "Louisville",
-      "start_date": "2026-11-15 00:00:00+00:00",
-      "home_conference": "ACC",
-      "away_conference": "ACC",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-15T00:00:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "ESPN2",
-      "tv_all": [
-        "ESPN2"
-      ],
-      "status": "completed",
-      "home_points": 14,
-      "away_points": 16,
-      "actual_margin": -2,
-      "actual_total": 30
-    },
-    {
       "game_id": 401871100,
       "week": 11,
       "year": 2026,
@@ -1228,28 +1228,28 @@
       "actual_total": 41
     },
     {
-      "game_id": 401856858,
+      "game_id": 401858298,
       "week": 11,
       "year": 2026,
-      "home_team": "BYU",
-      "away_team": "Baylor",
+      "home_team": "North Carolina",
+      "away_team": "Louisville",
       "start_date": "2026-11-15 00:00:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
+      "home_conference": "ACC",
+      "away_conference": "ACC",
       "is_playoff": false,
       "round_name": null,
       "bowl_name": null,
       "kickoff_utc": "2026-11-15T00:00:00Z",
       "start_time_tbd": false,
-      "tv_channel": "Fox",
+      "tv_channel": "ESPN2",
       "tv_all": [
-        "Fox"
+        "ESPN2"
       ],
       "status": "completed",
-      "home_points": 28,
-      "away_points": 7,
-      "actual_margin": 21,
-      "actual_total": 35
+      "home_points": 14,
+      "away_points": 16,
+      "actual_margin": -2,
+      "actual_total": 30
     },
     {
       "game_id": 401862826,
@@ -1490,30 +1490,6 @@
       "actual_total": 42
     },
     {
-      "game_id": 401856864,
-      "week": 11,
-      "year": 2026,
-      "home_team": "Arizona",
-      "away_team": "Utah",
-      "start_date": "2026-11-15 03:30:00+00:00",
-      "home_conference": "Big 12",
-      "away_conference": "Big 12",
-      "is_playoff": false,
-      "round_name": null,
-      "bowl_name": null,
-      "kickoff_utc": "2026-11-15T03:30:00Z",
-      "start_time_tbd": false,
-      "tv_channel": "Fox",
-      "tv_all": [
-        "Fox"
-      ],
-      "status": "completed",
-      "home_points": 39,
-      "away_points": 40,
-      "actual_margin": -1,
-      "actual_total": 79
-    },
-    {
       "game_id": 401860917,
       "week": 11,
       "year": 2026,
@@ -1536,6 +1512,30 @@
       "away_points": 7,
       "actual_margin": 66,
       "actual_total": 80
+    },
+    {
+      "game_id": 401856864,
+      "week": 11,
+      "year": 2026,
+      "home_team": "Arizona",
+      "away_team": "Utah",
+      "start_date": "2026-11-15 03:30:00+00:00",
+      "home_conference": "Big 12",
+      "away_conference": "Big 12",
+      "is_playoff": false,
+      "round_name": null,
+      "bowl_name": null,
+      "kickoff_utc": "2026-11-15T03:30:00Z",
+      "start_time_tbd": false,
+      "tv_channel": "Fox",
+      "tv_all": [
+        "Fox"
+      ],
+      "status": "completed",
+      "home_points": 39,
+      "away_points": 40,
+      "actual_margin": -1,
+      "actual_total": 79
     },
     {
       "game_id": 401864537,
