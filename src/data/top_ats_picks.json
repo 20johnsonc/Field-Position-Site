@@ -1,22 +1,36 @@
 {
-  "generated_at": "2026-11-23T00:21:15.674002+00:00",
+  "generated_at": "2026-11-24T20:13:19.534123+00:00",
   "method": "Rank upcoming, market-lined games by Kelly fraction of cover_prob = Phi(|predicted_margin - market_spread| / resid_std) at -110 odds. Only games with cover_prob at least 4 pts above the no-vig market probability qualify; take the top 5 per week.",
   "backtest_cover_rate": 0.5017,
   "picks_by_week": {
     "13": [
       {
-        "game_id": 401860929,
+        "game_id": 401858311,
         "week": 13,
-        "home_team": "Washington State",
-        "away_team": "San Diego State",
-        "market_spread": 2.5,
-        "predicted_margin": -8.33,
-        "pick": "Washington State",
+        "home_team": "Miami",
+        "away_team": "Boston College",
+        "market_spread": -25.0,
+        "predicted_margin": -34.6,
+        "pick": "Miami",
         "pick_side": "home",
-        "edge_pts": 10.8,
-        "cover_prob": 0.752,
-        "prob_edge": 0.252,
-        "kelly_fraction": 0.4793
+        "edge_pts": 9.6,
+        "cover_prob": 0.7269,
+        "prob_edge": 0.2269,
+        "kelly_fraction": 0.4265
+      },
+      {
+        "game_id": 401858540,
+        "week": 13,
+        "home_team": "Ohio State",
+        "away_team": "Michigan",
+        "market_spread": -10.0,
+        "predicted_margin": -19.47,
+        "pick": "Ohio State",
+        "pick_side": "home",
+        "edge_pts": 9.5,
+        "cover_prob": 0.7242,
+        "prob_edge": 0.2242,
+        "kelly_fraction": 0.4208
       },
       {
         "game_id": 401864546,
@@ -33,46 +47,32 @@
         "kelly_fraction": 0.4151
       },
       {
-        "game_id": 401858311,
+        "game_id": 401858544,
         "week": 13,
-        "home_team": "Miami",
-        "away_team": "Boston College",
-        "market_spread": -25.5,
-        "predicted_margin": -34.6,
-        "pick": "Miami",
+        "home_team": "Wisconsin",
+        "away_team": "Minnesota",
+        "market_spread": -7.0,
+        "predicted_margin": -16.09,
+        "pick": "Wisconsin",
         "pick_side": "home",
         "edge_pts": 9.1,
-        "cover_prob": 0.7164,
-        "prob_edge": 0.2164,
-        "kelly_fraction": 0.4044
+        "cover_prob": 0.7162,
+        "prob_edge": 0.2162,
+        "kelly_fraction": 0.4039
       },
       {
-        "game_id": 401858540,
+        "game_id": 401858543,
         "week": 13,
-        "home_team": "Ohio State",
-        "away_team": "Michigan",
-        "market_spread": -10.5,
-        "predicted_margin": -19.47,
-        "pick": "Ohio State",
+        "home_team": "UCLA",
+        "away_team": "USC",
+        "market_spread": 7.0,
+        "predicted_margin": -1.71,
+        "pick": "UCLA",
         "pick_side": "home",
-        "edge_pts": 9.0,
-        "cover_prob": 0.7136,
-        "prob_edge": 0.2136,
-        "kelly_fraction": 0.3986
-      },
-      {
-        "game_id": 401871063,
-        "week": 13,
-        "home_team": "Missouri State",
-        "away_team": "Liberty",
-        "market_spread": 15.5,
-        "predicted_margin": 24.23,
-        "pick": "Liberty",
-        "pick_side": "away",
         "edge_pts": 8.7,
-        "cover_prob": 0.7084,
-        "prob_edge": 0.2084,
-        "kelly_fraction": 0.3877
+        "cover_prob": 0.708,
+        "prob_edge": 0.208,
+        "kelly_fraction": 0.3868
       }
     ],
     "14": [
