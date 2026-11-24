@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T00:18:57.755735+00:00",
+  "generated_at": "2026-11-24T20:10:51.952724+00:00",
   "year": 2026,
   "week": 14,
   "games": [
@@ -92,8 +92,8 @@
       "home_win_prob": 0.672,
       "away_win_prob": 0.328,
       "market_spread": -2.5,
-      "market_total": 56.5,
-      "watchability_score": 94.8,
+      "market_total": 57.5,
+      "watchability_score": 95.3,
       "watchability_rank": 1
     }
   ]
